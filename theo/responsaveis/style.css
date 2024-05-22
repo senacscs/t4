@@ -1,0 +1,22 @@
+header {
+    background-color: hsl(0, 0%, 0%);
+    margin-top: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 35px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(122, 24, 214);
+}
+
+h1, h2 {
+    text-align: left;
+    padding-left: 1%;
+    padding-right: 60%;
+}
