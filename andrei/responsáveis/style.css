@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#e3bdbd
+}
+header {
+    background-color: #930101;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+h3 {
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+}
