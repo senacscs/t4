@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <link rel="stylesheet" href="familia.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(45deg, rgb(54, 54, 192), rgb(192, 47, 47));
+    }
+    div {
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 80px;
+      border-radius: 15px;
+      color: white;
+    }
+    input {
+      padding: 15px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+    .submit {
+      background-color: blue;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      color: white;
+      font-size: 15px;
+    }
+    .submit:hover {
+      background-color: deepskyblue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <form>
+    <h1>Login</h1>
+    <input type="text" placeholder="nome" id="login"><br><br>
+    <input type="password" placeholder="senha" id="senha"><br><br>
+    <input type="submit" onclick="logar(); return false" class="submit">
+  </form>
+</div>
+<script>
+  function logar() {
+    var login = document.getElementById('login').value;
+    var senha = document.getElementById('senha').value;
+    if (login == "Família Alves" && senha == "GSMcdma19?") {
+      alert('Sucesso');
+      location.href = "home.html";
+    } else {
+      alert('Usuário ou senha incorretos');
+    }
+  }
+</script>
+</body>
+</html>
