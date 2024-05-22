@@ -1,0 +1,52 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, rgb(210, 2, 2), rgb(244, 116, 116) );
+}
+div{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+
+}
+.submit{
+    background-color: rgb(211, 2, 2);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color:white;
+    font-size: 15px;
+}
+.submit:hover{
+    background-color: rgb(238, 110, 110);
+    cursor: pointer;
+}
+
+header {
+    background-color: darkred;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+footer {
+text-align: center;
+background-color: darkred;
+color: whitesmoke;
+position: absolute;
+padding: 20px;
+width: 95%;
+bottom: 0;
+border-radius: 10px 10px 0 0;
+}
