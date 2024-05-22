@@ -1,0 +1,36 @@
+body {
+   background-image: url()
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: antiquewhite;
+    padding: 10px;
+    
+}
+
+p {
+    background-color: black;
+    color: antiquewhite;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.familia {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+
+
+
