@@ -1,0 +1,26 @@
+.bigboy {
+    display: flex;
+    flex-direction: row;
+}
+div {
+    margin: 1cm;
+}
+h1, h2, p {
+    color: blue;
+    background-color: yellow;
+    align-self: center;
+    text-align: center;
+}
+body {
+    background-image: url("imagens/jesus\ meu\ coração\ é\ teu.jpg");
+    background-color: aliceblue;
+}
+#margin {
+    margin: 1cm;
+}
+.texto-grande {
+    font-size: larger;
+}
+.centro {
+    justify-content: center;
+}
