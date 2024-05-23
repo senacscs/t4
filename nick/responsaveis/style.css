@@ -1,8 +1,6 @@
 
  
  body { background-image: url("fundo2.jpg");
-   
-    background-color: url("");
     }
    
    h1,h2,h3 {
@@ -33,4 +31,39 @@
     width: 900px;
     margin-left: auto;
     margin-right: auto;
+   }
+   header{
+    background-color: rgb(37, 37, 37);
+   }
+   *{
+    margin: 0;
+    padding: 0;
+   }
+   .nav-list{
+    list-style: none;
+    display: flex;
+   }
+   .nav-list, li{
+    letter-spacing: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+   }
+   nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    color: white;
+   }
+   footer{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9px;
    }
