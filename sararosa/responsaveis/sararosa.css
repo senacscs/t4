@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    text-align: center;
+    background-color: olive;
+    color: rgb(8, 41, 8);
+    padding: 10px;
+}
+nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+main {
+    padding: 20px;
+}
+aside {
+    background-color: #eee;
+    padding: 10px;
+}
+footer {
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: olive;
+    color: rgb(8, 41, 8);
+}
+h1{
+    color: darkolivegreen;
+    text-align: center;
+}
+h2{
+    color:rgb(88, 168, 8);
+    text-align: center;}
+h3{
+    color: forestgreen;
+    text-align: center;
+}
+p{
+    color: darkgreen;
+    text-align: center;
+}
+body{
+    background-color:rgb(159, 179, 118) ;
+}
