@@ -1,0 +1,77 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: rgb(205, 21, 21);
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color:white;
+}
+
+h3 {
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background-color: #6f030;
+    color: #6f030;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #6f0303;
+    color: #600505;
+    text-align: center;
+    padding: 10px 0;
+
+    p {
+        color:white;
+    }
+}
