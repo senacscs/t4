@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: antiquewhite;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -40,7 +40,7 @@ body {
 
     h2{
         text-align: center;
-        color: white;
+        color: rgb(255, 255, 255);
     }
     
 
@@ -77,5 +77,27 @@ footer {
 
 h1{
    text-align: center; 
-   color: antiquewhite;
+   color: 
+   rgb(255, 255, 255);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px ;
+}
+h3{
+    color: rgb(6, 6, 6);
+    text-align: center;
+}
+section{
+    width: 750px;
+    height: 350px;
+    background-color: black;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
