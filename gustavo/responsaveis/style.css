@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: auto;
+}
+
+.principal {
+    margin-right: 20px;
+}
+
+.mensagem {
+    max-width: 600px;
+}
