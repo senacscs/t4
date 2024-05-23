@@ -1,0 +1,45 @@
+body {
+    background-color:rgb(133, 125, 243)
+}
+
+a:link, a:visited { text-decoration: none; } a:hover { text-decoration: underline; }
+
+h1{
+    color: rgb(10, 3, 71);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(10, 3, 71);
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: rgb(8, 3, 55)
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    text-align: center;
+    background-color: rgb(76, 68, 214);
+    color: rgb(16, 20, 103);
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(76, 68, 214);
+    color: rgb(16, 20, 103);
+
+}
