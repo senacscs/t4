@@ -1,65 +1,248 @@
 body {
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(238, 238, 238);
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
-    font-size: 15px;
 }
-.textoprincipal {
-    width: 600px;
-    height: 280px;
-    background-color: rgb(216, 216, 216);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-
+html {
+  scroll-behavior: smooth;
 }
-.imgpass {
+.navbar {
+    left: 0;
     width: 100%;
-    min-height: 200px;
-    background-color: palegoldenrod;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    height: 370px;
+    padding: 1px 0 1px 0;
+    background-color: rgb(0, 0, 0); 
+    transition: opacity 0.4s; 
+    position: relative;
+    z-index: 9999;
+}
+.navbar.scrolled {
+    opacity: 0;
+}
+.al h1 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 200px;
+}
+.al p {
+    color: white;
+    text-align: center;
+    margin-top: -30px;
+}
+header {
+    position: fixed;
     display: flex;
-    border-top: 5px;
-    border-bottom: 5px;
-    border-left: 0;
-    border-right: 0;
-    border-style: solid;
-    border-radius: 20px;
+    opacity: 0;
+    width: 100%;
+    height: 50px;
+    transition: background-color 0.3s;
+    z-index: 99;
 }
-.texto {
-    margin-top:15px;
-}
-.textoparaospais {
+header  h1{
+    font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
-
 }
-.imgpsdd {
-    width: 300px;
-    height: 190px;
-    border: 2px;
-    border-style: solid;
-    border-radius: 10px;
-    margin: 10px;
+.test.scrolled {
+    background-color: #c0c0c0;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    z-index: 99999;
 }
-header, footer {
+.d2 {
+    margin: auto 50px auto 50px;    
+}
+.dal {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+#barra-progresso {
+    position: fixed;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: black; 
+    transition: width 0.1s ease; 
+    border-radius: 40px;
+  }
+.abs {
+    width: 100%;
+    height: 800px;
+    background-color: rgb(0, 0, 0);
+    margin-top: -31px;
+}
+.carta {
+    width: 520px;
+    height: 440px;
+    background-color: #c0c0c0;
+    border-radius: 20px;
     text-align: center;
-    background-color: black;
-    box-shadow: 0 0 20px;
+    padding: 0 20px 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
 }
-header strong, p {
-    color: white;
+.carta h2 {
     font-size: 30px;
 }
-p {
-    font-size: 20px;
-    margin-top: 12px;
+.carta hr {
+    width: 90%;
+    background-color: white;
+    margin-top: -10px;
 }
+.carta div {
+    height: 2px;
+}
+.carta p {
+    font-size: 21px;
+}
+.imagenslateral {
+    display: flex;
+    margin-top: -390px;
+}
+.imagenslateral div img {
+    width: 200px;
+    height: 270px;
+    border-radius: 2px;
+    z-index: -1;
+}
+.ila1 {
+    margin-left: auto;
+    transform: rotate(7deg);
+}
+.ila2 {
+    margin-right: auto;
+    transform: rotate(-5deg);
+}
+.es {
+    width: 680px;
+}
+.imgla {
+    background-color: rgb(255, 255, 255);
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 50px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 2px;
+}
+  .add {
+    position: relative; 
+  }
+  
+  .add::after {
+    content: ''; 
+    position: absolute; 
+    top: 90%; 
+    left: 0; 
+    width: 0; 
+    height: 3px; 
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s ease; 
+  }
+  
+  .add:hover::after {
+    width: 100%; 
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  marquee img {
+    width: 270px;
+    height:200px;
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  .pasas {
+    margin-top: 75px;
+  }
+  .passador {
+    background-color: rgb(206, 206, 206);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 200px;
+    border-style: solid;
+    border-width: 5px 0 5px 0;
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    font-size: 15px;
+  }
+  .a1 {
+    width: 96%;
+  }
+  .a2 {
+    width: 10%;
+    margin: -5px auto -10px auto;
+  }
+  .fotos {
+    display: flex;
+    position: relative;
+    height: 870px;  
+    
+  }
+  .parallax-container {
+    background-image: url(imgs/horizontalimg6.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 700px;
+    box-shadow: 0 0 20px;
+  }
+  .parallax-content {
+    padding: 50px;
+    color: white;
+    text-align: center;
+  }
+  .vertical {
+    position: absolute;
+    padding: 5px 5px 30px 5px;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 225px;
+    height: 300px;
+    background-color: white;
+  }
+  .horizontal {
+    position: absolute;
+    padding: 5px 5px 30px 5px;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 300px;
+    height: 220px;
+    background-color: white;
+  }
+  .vertical img {
+    width: 225px;
+    height: 300px;
+    border-radius: 2px;
+  }
+  .horizontal img {
+    width: 300px;
+    height: 220px;
+    border-radius: 2px; 
+  }
+  .titi {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  .titi hr {
+    width: 50%;
+    margin-top: -20px;
+  }
+  
+  
