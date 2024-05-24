@@ -1,114 +1,101 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pai</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html> 
+<html lang="PT-br"> 
+<head> 
+    <link rel="stylesheet" href="familia.css"> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login</title>
+    <style> 
+        body{ 
+           font-family: Arial, Helvetica, sans-serif;
+           background-image: url(imgs/background.jpg);
+           background-size: cover;
+           background-repeat: no-repeat;
+        } 
+        .sla div{ 
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            height: 330px;
+            padding: 80px; 
+            border-radius: 15px; 
+            color: white;
+           align-content: center;
+           text-align: center;
+           margin: 70px auto 0 auto;
+        } 
+        input{
+            padding: 15px;
+            border: none;
+            outline: none; 
+            font-size: 15px; 
+            background: transparent;
+            border-bottom-style: solid;
+            border-width: 2px;
+            border-color: #162938;
+            
+        } 
+        #login {
+            margin-top: 50px;
+        }
+        .submit{
+             background-color: #162938; 
+             padding: 15px; 
+             border: none; 
+             border-radius: 10px; 
+             width: 100%; 
+             color:#f0f0f0; 
+             font-size: 15px; 
+             margin-top: 50px;             
+            transition: 0.5s;
+        } 
+        .submit:hover{
+            background-color: #bebebe; 
+            cursor: pointer;
+            color: #162938;
+        } 
+        form h1 {
+            text-align: center;
+            margin: -20px 0 0 0;
+            color: #162938;
+            font-size: 40px;
+            margin: 20 auto 0 auto;
+            transition: 0.5s;
+        }
+        .sla {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+        .aa {
+            color: #162938;
+        }
+    </style>
 </head>
-<body>
-    <header class="test" id="te">
-        <div class="dal">
-            <h1 class="add d1"><a href="#ini">Início</a></h1>
-            <h1 class="add d2"><a href="#galeria">Galeria</a></h1>
-            <h1 class="add d3"><a href="formulario.html">Formulario</a></h1>
-        </div>
-        <div id="barra-progresso"></div>
-    </header>
-    <div id="ini"></div>
-    <div class="navbar" id="nav">
-        <div class="al">
-            <h1>Esse é um site feito especialmente <br> para o meu pai</h1>
-            <p>Role para baixo :D</p>
-        </div>
-        <div class="abs"></div>
+<body> 
+    <div class="sla">
+        <div> 
+        <form> 
+            <h1>Login</h1> 
+            <input type="text" placeholder="Usuário" id="login" checked> <ion-icon name="person-outline" class="aa"></ion-icon>
+            <br><br> 
+            <input type="password" placeholder="Senha" id="senha" checked> <ion-icon name="lock-closed-outline" class="aa"></ion-icon>
+            <br><br> 
+            <input type="submit" onclick="logar(); return false" class="submit"> 
+        </form> 
+        </div> 
     </div>
-    <main>
-        <div class="carta">
-            <div></div>
-            <h2>Cartinha</h2>
-            <hr>
-            <p>
-                Pai, você é uma pessoa muito importante para mim. Sempre me deu todo o carinho do mundo e nunca me deixou faltar nada, principalmente quando se trata de estudo, e sou muito grato por me dar a oportunidade de estudar aqui no Senac.
-                <br>
-                Também quero agradecer por todos os momentos bons que tivemos juntos. E, estranhamente, também quero agradecer aos xingões que me fizeram melhorar como pessoa.
-                <br>
-                Em resumo, você é uma pessoa muito especial que eu amo muito. E, apesar de parecer que não, eu adoro sua companhia e sou muito grato por tudo o que você já fez por mim.
-            </p>
-        </div>
-        <section class="imagenslateral">
-            <div class="imgla ila1"><img src="imgs/verticalimg2.png"></div>
-            <div class="es"></div>
-            <div class="imgla ila2"><img src="imgs/verticalimg1.png"></div>
-        </section>
-        <section class="pasas">
-            <div class="passador">
-                <marquee >
-                    <img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass"><img src="imgs/horizontalimg1.png" class="ipass"><img src="imgs/horizontalimg4.png" class="ipass"><img src="imgs/horizontalimg7.png" class="ipass"><img src="imgs/horizontalimg9.png" class="ipass"><img src="imgs/horizontalimg8.png" class="ipass"><img src="imgs/horizontalimg3.png" class="ipass"><img src="imgs/horizontalimg10.png" class="ipass">
-                </marquee>
-                <div id="galeria"></div>
-            </div>
-        </section>
-        <div class="titi">
-            <h1>Galeria</h1>
-            <hr>
-        </div>
-        <div class="fotos">
-            <div class="horizontal" style="transform: rotate(3deg); margin-left: 4%; margin-top: 10px;"><img src="imgs/horizontalimg7.png"></div>
-            <div class="vertical" style="transform: rotate(-2deg); margin-left: 29%; margin-top: 15px;"><img src="imgs/verticalimg1.png"></div>
-            <div class="vertical" style="transform: rotate(4deg); margin-left: 49%; margin-top: 20px;"><img src="imgs/IMG_2766.JPG"></div>
-            <div class="horizontal" style="transform: rotate(-5deg); margin-left: 69%; margin-top: 20px;"><img src="imgs/horizontalimg10.png"></div>
-            <div class="vertical" style="transform: rotate(-4deg); margin-left: 4%; margin-top: 270px;"><img src="imgs/verticalimg2.png"></div>
-            <div class="horizontal" style="transform: rotate(5deg); margin-left: 24%; margin-top: 350px;"><img src="imgs/IMG_8093.JPG"></div>
-            <div class="horizontal" style="transform: rotate(-2deg); margin-left: 69%; margin-top: 270px;"><img src="imgs/IMG_4354.JPG"></div>
-            <div class="vertical" style="transform: rotate(-4deg); margin-left: 50%; margin-top: 330px;"><img src="imgs/verticalimg3.png"></div>
-            <div class="horizontal" style="transform: rotate(-2deg); margin-left: 4%; margin-top: 580px;"><img src="imgs/horizontalimg8.png"></div>
-            <div class="horizontal" style="transform: rotate(1deg); margin-left: 27%; margin-top: 580px;"><img src="imgs/IMG_0546.JPG"></div>
-            <div class="vertical" style="transform: rotate(-4deg); margin-left: 76%; margin-top: 500px;"><img src="imgs/62be7216-f40f-46ac-91a1-0984d2b2d7c7.jpg"></div>
-            <div class="horizontal" style="transform: rotate(-3deg); margin-left: 53%; margin-top: 580px;"><img src="imgs/IMG_5956.JPG"></div>
-         </div>
-         <div class="parallax-container">
-             <div class="parallax-content">
-             </div>
-         </div>
-    </main>
-    <footer>
-        <hr class="a1">
-        <p>Pai, você sabe que sou péssimo com textos e sentimentalismo, mas saiba que me esforcei e deu um bom trabalho <br> para fazer esse site, espero tenha gostado ^-^</p>
-        <hr class="a2">
-        <p>25/05/2024</p>
-    </footer>
-    
-    <script>
-        const navbar = document.getElementById('nav');
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 250) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        const test = document.getElementById('te');
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 250) {
-                test.classList.add('scrolled');
-            }
-            else {
-                test.classList.remove('scrolled');
-            }
-        });
-        
-        const alturaTotal = document.documentElement.scrollHeight;
-        const barraProgresso = document.getElementById('barra-progresso');
-
-function atualizarBarraProgresso() {
-  const alturaVisivel = window.innerHeight;
-  const posicaoAtual = window.scrollY;
-  const porcentagemRolagem = (posicaoAtual / (alturaTotal - alturaVisivel)) * 100;
-  barraProgresso.style.width = `${porcentagemRolagem}%`;
-}
-
-window.addEventListener('scroll', atualizarBarraProgresso);
-    </script>
+    <script> function logar(){ var login = document.getElementById('login').value;
+     var senha = document.getElementById('senha').value; 
+     if(login == "Pai" && senha =="Chase"){
+      location.href = "home.html"; }else{ alert('Usuario ou senha incorretos'); } } 
+    </script> 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+</body> 
 </html>
