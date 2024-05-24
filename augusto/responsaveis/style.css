@@ -1,0 +1,61 @@
+body {
+    font-family: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap';
+    background: linear-gradient(45deg, rgb(255, 0, 166), rgb(255, 0, 0));
+    margin: 0;
+    padding: 0;
+}
+.login-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 20px rgb(255, 0, 0);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.login-container:hover {
+    box-shadow: 0 0 30px rgb(255, 0, 0);
+
+}
+input {
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.submit {
+    background-color: blue;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+}
+.submit:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+h1 {
+    font-size: 15px;
+}
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    width: 98.65%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}

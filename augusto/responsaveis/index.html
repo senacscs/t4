@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+    </head>
+    <body>
+        <header>Para o meu querido pai</header>
+        <div class="login-container">
+            <form>
+                <h1>Login</h1>
+                <input type="text" placeholder="nome" id="login"><br><br>
+                <input type="password" placeholder="senha" id="senha"><br><br>
+                <h1>Senha: nome do filho favorito</h1>
+                <input type="submit" onclick="logar(); return false"
+                    class="submit">
+            </form>
+        </div>
+        <script>
+       function logar() {
+           var login = document.getElementById('login').value;
+           var senha = document.getElementById('senha').value;
+           if (login == "Paulo" && senha == "Augusto") {
+               alert('Sucesso');
+               location.href = "home.html";
+           } else {
+               alert('Usuario ou senha incorretos');
+           }
+       }
+</script>
+        <footer>Feito por: Augusto</footer>
+    </body>
+</html>
