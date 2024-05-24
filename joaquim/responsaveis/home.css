@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #888484;
+}
+
+header {
+    background-color: rgba(1, 1, 1, 0.9);
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 14.95px;
+    text-align: justify;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 80px;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+
+
+.fotocora {
+    width: 20px;
+}
+
+.fotojogo {
+    position: absolute;
+    left: 3%;
+    top: 28.5%;
+    border-radius: 30px;
+    padding: 5px;
+    width: 400px;
+}
+
+.fotorj {
+    position: absolute;
+    right: 3%;
+    top: 28.5%;
+    border-radius: 30px;
+    padding: 5px;
+    width: 400px;
+}
+
+/* .fotospassar img {
+    margin-top: 800px;;
+    margin-left:5px;
+    border-radius:30px;
+    width: 100%;
+    z-index: -3;
+} */
+
+marquee img {
+    border-radius: 30px;
+    height: 300px;
+    margin-top: 350px;
+}
+
+
+footer {
+    background-color: rgba(1, 1, 1, 0.9);
+    color: white;
+    padding: 15px;
+    ;
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    text-align: right;
+    font-size: 12px;
+}
