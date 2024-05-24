@@ -4,11 +4,11 @@
         var login = document.getElementById('login').value;
         var senha= document.getElementById('senha').value;
        
-        if(login == "Familia Dalke" && senha =="09052008"){
-    alert('boa mãe');
+        if(login == "familia franck" && senha =="04052004"){
+    alert('boa pai');
     location.href = "inicio.html";
         }else{
-            alert('tenta de novo mãe');
+            alert('tenta de novo pai');
         }
  
 }

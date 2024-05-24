@@ -1,8 +1,16 @@
-body{
+body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(45deg, rgb(210, 2, 2), rgb(244, 116, 116) );
+    /* background: rgb(156, 179, 181); */
+    background: radial-gradient(circle, rgba(156, 179, 181, 1) 0%, rgba(36, 25, 113, 1) 100%);
 }
-div{
+
+.login {
+    background-color: blue;
+}
+
+.login-container {
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 50%;
@@ -11,42 +19,72 @@ div{
     padding: 80px;
     border-radius: 15px;
     color: rgb(255, 255, 255);
+    box-shadow: 0 0 21px rgb(255, 255, 255);
+    transition: box-shadow 0.3s ease-in-out;
 
 }
-input{
+
+.login-container:hover {
+    box-shadow: 0 0 31px rgba(0, gr0een, rgb(94, 92, 140), alpha)
+}
+
+input {
     padding: 15px;
     border: none;
     outline: none;
     font-size: 15px;
 
 }
-.submit{
-    background-color: rgb(211, 2, 2);
+
+.submit {
+    background-color: rgb(34, 1, 87);
     padding: 15px;
     border: none;
     border-radius: 10px;
     width: 100%;
-    color:white;
+    color: white;
     font-size: 15px;
 }
-.submit:hover{
-    background-color: rgb(238, 110, 110);
+
+.submit:hover {
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
 header {
-    background-color: darkred;
+    background-color: rgb(3, 5, 121);
     color: whitesmoke;
     padding: 20px;
     text-align: center;
 }
+
 footer {
-text-align: center;
-background-color: darkred;
-color: whitesmoke;
-position: absolute;
-padding: 20px;
-width: 95%;
-bottom: 0;
-border-radius: 10px 10px 0 0;
+    text-align: center;
+    background-color: rgb(25, 12, 103);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 20px;
+    width: 99%;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+img {
+    border-radius: 50%;
+    width: 400px;
+    margin-top: -390px;
+    margin-left: 12px;
+    border-radius: 3px;
+    border: solid rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: right;
+    margin-left: 450px;
+    margin-right: 50px;
 }
