@@ -1,5 +1,5 @@
 head, body {
-    background-image: url(https://i.pinimg.com/originals/21/5c/2c/215c2c328e72da8a6169a0215420c29a.jpg);
+    background-image: url(../fotos/vermelho2.png);
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
@@ -7,16 +7,18 @@ head, body {
 }
 
 h1 {
-    color: rgb(36, 84, 29);
+    color: rgb(75, 15, 15);
     text-align: center;
-    font-style: italic;
+    font-style:italic;
     font-size: 50px;
 }
 
 p {
     color: rgb(236, 235, 196);
     width: 25%;
-    background-color: rgb(36, 84, 29);;
+    background-color: rgb(75, 15, 15);
+    padding: 10px;
+    border-radius: 10px;
     font-style: italic;
     font-size: 25px; 
     text-align: center;   
@@ -24,6 +26,8 @@ p {
 
 img {
     width: 500px;
+    border: 10px rgb(84, 29, 29);
+    border-radius: 15px;
 }
 
 img, p {
@@ -33,7 +37,9 @@ img, p {
 
 header, footer {
     text-align: center;
-    background-color: rgb(36, 84, 29);
+    background-color: rgb(84, 29, 29);
     color: rgb(236, 235, 196);
     font-size: 25px;
 }
+
+
