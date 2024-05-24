@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(th.jpg);
     background-size: cover;
-    background-color: rgb(255, 77, 77);
+    background: linear-gradient(46deg, rgb(0, 255, 38) , rgb(0, 179, 255));
     margin: 0;
     padding: 0;
 }
@@ -69,4 +69,8 @@ footer {
     border-radius: 10px 10px 0 0 ;
 
 
+}
+p {
+    text-align: center;
+    
 }
