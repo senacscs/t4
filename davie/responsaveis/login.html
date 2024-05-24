@@ -12,13 +12,13 @@
         }
         div {
             background-color: rgba(0, 0, 0, 0.8);
-            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 80px;
             border-radius: 15px;
             color: white;
+            position: absolute;
         }
         form {
             width: 300px;
@@ -34,6 +34,9 @@
             margin: 10px auto;
             width: 250px;
             height: 30px;
+        }
+        h3 {
+            color: white;
         }
         button {
             background-color: dodgerblue;
@@ -67,11 +70,12 @@
             var senha = document.getElementById('senha').value;
             if(login == "PaieMae" && senha == "familia"){
                 alert('Bem Vindo ao site de seu filho!');
-                location.href = "final.html"
+                location.href = "index.html"
             }else{
                 alert('Usuário ou senha incorretos.')
             }
         }
     </script>
+    <h3>Vocês foram os que criaram ele e fizeram um cara desse jeito, ele ama vocês e espera que vocês gostem do site que ele fez à vocês.</h3>
 </body>
 </html>
