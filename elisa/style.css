@@ -1,8 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    background-image: linear-gradient(#FFF8DC, #DC143c, #FFF8DC);
 }
 header {
     background-color: #333;

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    width: 400px;
+    padding: 20px;
+    border: solid 10px black;
+}
+
+form {
+  padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+}
+h1 {
+  font-size: 24px;
+}
+.barra-horizontal {
+  background-color: #f87842;
+  height: 5px;
+  width: 210px;
+}
+.campo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lembrar-me{
+  display: flex;
+  gap: 5px;
+}
+form {
+  background-color: white;
+  padding: 50px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+button {
+  padding: 10px;
+  align-self: center;
+  width: 160px;
+  border-radius: 30px;
+  background-image: linear-gradient(#256a8a, #3393c1);
+  border: solid 1px #256a8a;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1f1;
+}
+a {
+  color: rgb(0, 174, 255);
+  font-weight: 500;
+}
+body{
+  font-family: "Montserrat";
+  color: #404040;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  background-image: url(imagem-fundo.png);
+  background-size: cover;
+  background-position: 50%;
+  padding: 20px;
+}
+.esqueceu-senha {
+  text-align: center;
+}
