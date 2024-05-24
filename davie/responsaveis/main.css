@@ -1,0 +1,9 @@
+body {
+    background-image: linear-gradient(180deg, #ff0000, #ff00d4,  #ffa500, #ffff00);
+}
+.feliz {
+    color: white;
+}
+h2 {
+    background-image: linear-gradient(90deg, red, #ff009d);
+}
