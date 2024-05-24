@@ -1,0 +1,15 @@
+body {
+    background-image: url("colorido.jpg");
+    border: none;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

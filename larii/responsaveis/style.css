@@ -1,0 +1,29 @@
+body {
+    background-image: url("pdp.jpeg");
+}
+h1 {
+    background-color: rgba(243, 196, 196, 0.667);
+    color: rgb(181, 23, 23);
+    font-style: italic;
+    text-align: center;
+}
+h2 {
+    background-color: rgba(243, 196, 196, 0.667);
+    color:rgb(181, 23, 23);
+    text-align: center;
+    position: relative;
+    /* top: -200px;
+    Right: 200%; */
+    width: 47%;
+    display: inline-flex;
+    vertical-align: top;
+    margin-top: 7%;
+    
+}
+
+img { 
+    /* left: 100%;
+    top: -200%; */
+    display: inline-flex;
+
+}
