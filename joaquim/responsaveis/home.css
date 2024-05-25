@@ -70,10 +70,9 @@ footer {
     background-color: rgba(1, 1, 1, 0.9);
     color: white;
     padding: 15px;
-    ;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
-    width: 98%;
-    text-align: right;
+    width: 100%;
+    text-align: left;
     font-size: 12px;
 }
