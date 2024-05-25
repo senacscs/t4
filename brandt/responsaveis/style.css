@@ -24,6 +24,10 @@ p {
     text-align: center;   
 }
 
+p:hover{
+    width: 30%;
+}
+
 img {
     width: 500px;
     border: 10px rgb(84, 29, 29);
@@ -35,6 +39,9 @@ img, p {
     margin-inline-start: 10%;
 }
 
+img:hover {
+    width: 550px;
+}
 header, footer {
     text-align: center;
     background-color: rgb(84, 29, 29);
