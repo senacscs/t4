@@ -1,0 +1,61 @@
+body{
+    background-image: url(imagens/fotofamilia.jpg);
+  
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    color: white;
+ }
+ .nav-list{
+     list-style: none;
+     display: flex;
+ }
+ .nav-list, li{
+     letter-spacing: 3px;
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+ header{
+     background-color: rgb(37, 37, 37);
+     
+ }
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ a{
+     color: white;
+     text-decoration: none;
+ 
+ }
+ a:hover{
+     opacity: 0.8;
+ }
+ .txt{
+    width: 300px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 79%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+font-size: 30px;
+}
+footer {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9px;
+}
