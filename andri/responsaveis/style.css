@@ -4,6 +4,10 @@
   
   }
   
+  iframe {
+    text-align: center;
+    margin: 0 auto;
+  }
   main {
     height: 150px;
     display: flex;
