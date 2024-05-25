@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: rgb(241, 37, 70);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+aside {
+    background-color: #eee;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgb(241, 37, 70);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+main img {
+    display: block;
+    margin: 0 auto;
+    align-items:   center;
+}
+h1, p1{
+    font-family: cooper black;
+    display: inline;
+}
+.familia{
+    width: 23%;
+    background-color: rgb(247, 29, 84);
+    padding: 20px;
+    max-width: 500px;
+    margin-block: 20px;
+    border-radius: 20px;
+}
+p3{
+    margin: 5px;
+    font-size: 20px;
+    font-family: Mongolian Baiti;
+}
+.fotos{
+    width: 80%;
+    background-color: rgb(247, 29, 84);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 655px;
+    border-radius: 20px;
+}
+.um, .dois, .tres, .quatro, .cinco, .seis, .sete, .oito{
+    width: 160px;
+	display: inline-block;
+}
