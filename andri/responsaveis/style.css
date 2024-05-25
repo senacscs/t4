@@ -10,6 +10,11 @@
     justify-content:left;
     align-items:normal;
   }
+
+  .coluna{
+    display: flex;
+    flex-direction: column;
+  }
   
   header h1 {
     font-family: Arial, Helvetica, sans-serif;
@@ -91,3 +96,4 @@
  span{
   color: #b51212;
  }
+ 
