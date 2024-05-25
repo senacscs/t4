@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+background: linear-gradient(90deg, rgba(224, 157, 248, 0.952), rgb(255, 255, 255), rgb(224, 157, 248, 0.952))
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+  margin:auto;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.container {
+
+text-align: center;
+font-family: Arial, sans-serif;
+
+}
+h1, h2,p {
+font-family: initial;
+color: rgb(168, 0, 104);
+}
