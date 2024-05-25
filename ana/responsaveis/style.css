@@ -1,0 +1,9 @@
+body {
+    background-image: url("fundo.jpg");
+}
+h1,h2,p,a {
+    font-family: 'constantia';
+}
+h1,h2,a {
+    text-align: center;
+}

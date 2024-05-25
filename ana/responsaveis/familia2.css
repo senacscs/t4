@@ -1,0 +1,42 @@
+body {
+    background-image: url("fundo.jpg");
+}
+h1,h2,p,a {
+    font-family: 'constantia';
+}
+h1,h2,a {
+    text-align: center;
+}
+
+header {
+    border-width: 2px bottom;
+}
+
+.texto1 {
+    font-size: 30px;
+    background-color: rgb(81, 81, 248);
+    width: 305px;
+    position: relative;
+    left: 500px;
+    top: 150px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.texto2 {
+    font-size: 30px;
+    background-color: rgb(81, 81, 248);
+    width: 600px;
+    position: relative;
+    left: 500px;
+    top: 290px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.texto3 {
+    font-size: 20px;
+    background-color: rgb(81, 81, 248);
+    border-style: solid;
+    border-radius: 10px;
+}

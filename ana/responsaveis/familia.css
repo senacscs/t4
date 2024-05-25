@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, rgb(142, 228, 252), rgb(142, 228, 252) );
+}
+div{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.submit{
+    background-color: #97e3ff;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color:white;
+    font-size: 15px;
+}
+.submit:hover{
+    background-color: rgb(142, 228, 252);
+    cursor: pointer;
+}
