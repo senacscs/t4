@@ -1,0 +1,29 @@
+body {
+    background-image: url(https://th.bing.com/th/id/R.aab78d1e2f81d6d9485df4a1bb164cba?rik=Gn%2bDi0PqizZrxg&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
+    color: antiquewhite;
+    }
+
+div {
+    text-align: center;
+}
+
+
+h2 {
+    border-style: solid;
+    background-color: black;
+    border-style: solid;
+    border-radius: 50px;
+}
+
+a {
+    color: antiquewhite;
+}
+
+header {
+    text-align: center;
+    border-style: solid;
+    border-radius: 50px;
+    background-color: black;
+    align-items: center;
+}
