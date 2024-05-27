@@ -11,6 +11,10 @@ h1, h2, p {
     align-self: center;
     text-align: center;
 }
+p {
+    padding: 10px;
+    text-align: justify;
+}
 body {
     background-image: url("imagens/jesus\ meu\ coração\ é\ teu.jpg");
     background-color: aliceblue;
