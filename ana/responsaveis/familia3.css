@@ -1,3 +1,10 @@
 body {
     background-image: url("fundo.jpg");
 }
+a{
+    font-family: 'constantia';
+    font-size: 20px;
+    background-color: rgb(81, 81, 248);
+    border-style: solid;
+    border-radius: 10px;
+}
