@@ -1,6 +1,6 @@
 body {
     font-family: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap';
-    background: linear-gradient(45deg, rgb(255, 0, 166), rgb(255, 0, 0));
+    background: linear-gradient(100deg, rgb(256, 0, 0), rgb(99, 0, 0));
     margin: 0;
     padding: 0;
 }
@@ -14,11 +14,10 @@ body {
     border-radius: 15px;
     color: white;
     box-shadow: 0 0 20px rgb(255, 0, 0);
-    transition: box-shadow 0.3s ease-in-out;
 }
 .login-container:hover {
-    box-shadow: 0 0 30px rgb(255, 0, 0);
-
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    transition: box-shadow 0.3s ease-in-out;
 }
 input {
     padding: 15px;
@@ -26,8 +25,9 @@ input {
     outline: none;
     font-size: 15px;
 }
+
 .submit {
-    background-color: blue;
+    background-color: rgb(255, 204, 0);
     padding: 15px;
     border: none;
     border-radius: 10px;
