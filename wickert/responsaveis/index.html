@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html lang="PT-br"> 
+<head> 
+    <link rel="stylesheet" href="familia.css"> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login</title>
+    <style> 
+        body{ 
+           font-family: Arial, Helvetica, sans-serif;
+           background-image: url(imgs/background.jpg);
+           background-size: cover;
+           background-repeat: no-repeat;
+        } 
+        .sla div{ 
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            height: 330px;
+            padding: 80px; 
+            border-radius: 15px; 
+            color: white;
+           align-content: center;
+           text-align: center;
+           margin: 70px auto 0 auto;
+        } 
+        input{
+            padding: 15px;
+            border: none;
+            outline: none; 
+            font-size: 15px; 
+            background: transparent;
+            border-bottom-style: solid;
+            border-width: 2px;
+            border-color: #162938;
+            
+        } 
+        #login {
+            margin-top: 50px;
+        }
+        .submit{
+             background-color: #162938; 
+             padding: 15px; 
+             border: none; 
+             border-radius: 10px; 
+             width: 100%; 
+             color:#f0f0f0; 
+             font-size: 15px; 
+             margin-top: 50px;             
+            transition: 0.5s;
+        } 
+        .submit:hover{
+            background-color: #bebebe; 
+            cursor: pointer;
+            color: #162938;
+        } 
+        form h1 {
+            text-align: center;
+            margin: -20px 0 0 0;
+            color: #162938;
+            font-size: 40px;
+            margin: 20 auto 0 auto;
+            transition: 0.5s;
+        }
+        .sla {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+        .aa {
+            color: #162938;
+        }
+    </style>
+</head>
+<body> 
+    <div class="sla">
+        <div> 
+        <form> 
+            <h1>Login</h1> 
+            <input type="text" placeholder="Usuário" id="login" checked> <ion-icon name="person-outline" class="aa"></ion-icon>
+            <br><br> 
+            <input type="password" placeholder="Senha" id="senha" checked> <ion-icon name="lock-closed-outline" class="aa"></ion-icon>
+            <br><br> 
+            <input type="submit" onclick="logar(); return false" class="submit"> 
+        </form> 
+        </div> 
+    </div>
+    <script> function logar(){ var login = document.getElementById('login').value;
+     var senha = document.getElementById('senha').value; 
+     if(login == "Pai" && senha =="Iuri"){
+      location.href = "home.html"; }else{ alert('Usuario ou senha incorretos'); } } 
+    </script> 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</body> 
+</html>
