@@ -1,0 +1,19 @@
+body {
+    background-image: url(https://th.bing.com/th/id/OIP.Bsr2oJPJJwC6LHzuLRuaXwAAAA?rs=1&pid=ImgDetMain);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+    }
+    h1 { 
+        color:red;
+        text-align: center;
+    }
+    h2 {
+        color: blueviolet ; 
+        text-align:  left;
+    }
+    img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
