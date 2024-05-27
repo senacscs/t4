@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    background-image: url(fundo.jpg);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+p {
+    color: rgb(167, 167, 167);
+}
+
+h1 {
+    color: #214CE5;
+}
+
+h2 {
+    color: #214CE5;
+}
+
+.back {
+    width: 80%;
+      background-color: #00003D;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+}
+
+iframe {
+    border-radius: 20px;
+}
