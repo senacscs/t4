@@ -1,0 +1,60 @@
+body {
+    background-image: url(th\ \(1\).jpg);
+}
+
+h1 {
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3, h2 {
+    text-align: center;
+}
+
+img, iframe {
+    border-radius: 20px;
+    border: solid 3px; color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h4 {
+    text-align:center;
+}
+p {
+    text-align: center;
+}
+iframe {
+    border-radius: 20px;
+    border: solid 3px;
+}
+section {
+    width: 90%;
+    margin: 30px;
+    border: solid 4px white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alin {
+    align-items: center;
+    width: 60%;
+}
+section {
+    background-color: rgb(35, 72, 167);
+    width: 70%;
+    margin: 30px;
+    border: solid 4px white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.linen {
+    display: flex;
+    size: 600px;
+}
