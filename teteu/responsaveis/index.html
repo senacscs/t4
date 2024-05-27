@@ -2,7 +2,7 @@
 <html lang="PT-br">
 
 <head>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <footer>25/05/2024</footer>
     <div>
         <form>
            
@@ -28,16 +29,26 @@
         function logar() {
 
           
-            var senha = document.getElementById('senha').value;
+            var senha = "0000";//document.getElementById('senha').value;
+            senha.value = "";
+            
+           // document.getElementById('senha').cloneNode
+            senha = document.getElementById('senha').value;
+            
 
             if (  senha == "27062008") {
                 alert('Sucesso');
-                alert('Usuario ou senha incorretos');
-                location.href = "index2.html";
+                
+                location.href = "inicio.html";
+                senha = "0000";
                 
             }
+            else{
 
-        }
+                alert(' senha incorreta');
+            }
+
+        }  
     </script>
 </body>
 

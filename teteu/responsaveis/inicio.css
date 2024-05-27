@@ -1,0 +1,37 @@
+  body{
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    font-style: oblique;
+    font-size: x-large;
+    color: antiquewhite;
+  }
+  iframe{
+    margin: auto;
+    display: block;
+  }
+  img{
+   width: 350px;
+   height: 250px;
+   border-radius: 20px;
+   border-bottom: 20px;
+   border-color: red;
+   border-spacing: 10px;
+   border-inline-color: red;
+  }
+  
+  .img1{
+    margin-right: auto;
+  }
+
+  p{
+  color: blueviolet; 
+  
+  }
+  h1, h2{
+
+ color: aquamarine;
+ font-size: medium;
+ font-family: 'Times New Roman', Times, serif;
+
+
+  }
