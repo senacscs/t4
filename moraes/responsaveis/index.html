@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="place.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <form>
+            <h1>Login</h1>
+            <br><br>
+            <input type="password" placeholder="senha" id="senha">
+            <br><br>
+            <input type="checkbox" id="showPassword"> Mostrar senha
+            <br><br>
+            <input type="submit" onclick="logar(); return false" class="submit">
+        </form>
+        <p><span class="highlight">senha</span> = meu aniversário <br>
+            Espero que gostem desta webpage
+        </p>
+    </div>
+    <script>
+        function logar() {
+            var senha = document.getElementById('senha').value;
+            if (senha === "10/06/2008") {
+                alert('Login realizado com sucesso!');
+                window.location.href = "conteudo.html"; //  página de conteúdo
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+        document.getElementById('showPassword').addEventListener('change', function () {
+            var senhaField = document.getElementById('senha');
+            if (this.checked) {
+                senhaField.type = "text";
+            } else {
+                senhaField.type = "password";
+            }
+        });
+    </script>
+</body>
+
+</html>

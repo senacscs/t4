@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu-h {
+    background-color: rgb(0, 0, 0);
+}
+
+#menu-h ul {
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#menu-h ul li {
+    display: inline;
+}
+
+#menu-h ul li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.4s;
+}
+
+#menu-h ul li a:hover {
+    background-color: rgb(71, 40, 4);
+}
+
+#menu-h ul li.left {
+    margin-right: 20px;
+}
+
+#menu-h ul li.right a {
+    background-color: rgb(214, 131, 64);
+    float: left;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    margin-bottom: 50%;
+}
+
+.hero-slider {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.hero-slider img {
+    width: 30%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+
+}
+
+.destination {
+    padding: 50px;
+    text-align: left;
+}
+
+.destination h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.destination p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.destination video {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: rgb(192, 161, 115);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    width: 98.65%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #92643e;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+}
+
+iframe {
+    padding: 2%;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+}
+
+.title {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.highlight {
+    color: rgb(87, 55, 18);
+}
+
+ul {
+    font-size: large;
+}
+
+.obrigado {
+    font-size: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4b290e;
+    text-align: center;
+    padding: 100px;
+}
+img {
+    margin-left: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 650px;
+
+    
+}
+.img2 {
+    margin-left: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 650px;
+}
+h1 {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+p {
+    margin-top: 10px;
+    margin-left: 35px;
+}
