@@ -73,7 +73,13 @@ body {
     figcaption{color: plum;
         text-align:center;
     }
-  img {display:block;
+  img {
+    display:block;
   margin-left:auto;
   margin-right:auto;
+  width: 60%;
+  }
+  
+  img:hover {
+    width: 70%;
   }
