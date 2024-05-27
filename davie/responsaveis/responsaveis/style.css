@@ -12,9 +12,6 @@ ul {
     font-family:'Courier New', Courier, monospace;
     margin-left: auto;
 }
-.photo {
-       width: 400px;
-}
 .tech {
     text-align: center;
 
@@ -56,6 +53,7 @@ ul {
 }
 .resumo {
     font-size: larger;
+    padding-left: 5%;
 }
 .container {
     color: #ffffff;
@@ -83,4 +81,23 @@ input[type="submit"] {
     padding: 20px;
     text-align: center;
     box-shadow: #000000;
+}
+.galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.fota {
+    width: 300px;
+}
+.texto {
+    color:orange;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
