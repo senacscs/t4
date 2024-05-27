@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.105);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,14 +10,15 @@ body {
     padding: 0%;
     box-sizing: border-box;
     }
+
     nav{
-        background-color: black;
+        background-color: rgb(12, 12, 12);
     }
     nav li{
         display: inline-block;
     }
     nav li a{
-        color: rgb(0, 0, 0);
+        color: rgb(252, 249, 249);
         text-decoration: none;
         padding: 15px;
         display: inline-block;
@@ -38,6 +39,13 @@ body {
         display: block;
     }
 
+    img{
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
     h2{
         text-align: center;
         color: white;
@@ -52,7 +60,7 @@ header {
 }
 
 nav {
-    background-color: #ddd;
+    background-color: #000000;
     padding: 10px;
 }
 
@@ -64,30 +72,22 @@ aside {
     background-color: #eee;
     padding: 10px;
 }
-
-footer {
-    background-color: #333;
-    color: white;
+section{
+    width: 250px;
+    height: 200px;
+    background-color: rgb(7, 7, 7);
+    border-radius: 30px;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-h1{
-   text-align: center; 
-   color: antiquewhite;
-}
-
-img{
-    display: block;
+    box-shadow: 0 0 20px;
     margin-left: auto;
     margin-right: auto;
-    width:400px ;
-    border-radius: 4px;
+    padding: 4px;
 }
-h3{
-    color: antiquewhite;
-    text-align: center;
+
+p{
+    color:white ;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-top: 4px;
+
 }

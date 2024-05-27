@@ -1,5 +1,5 @@
 body {
-    background-color: antiquewhite;
+    background-color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -101,6 +101,7 @@ section{
     box-shadow: 0 0 20px;
     margin-left: auto;
     margin-right: auto;
+    padding: 4px;
 }
 
 .blink {
@@ -120,3 +121,8 @@ section{
 
 }
 
+h2 {
+    margin-top: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
