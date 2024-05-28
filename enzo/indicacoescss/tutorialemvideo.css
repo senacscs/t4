@@ -1,0 +1,55 @@
+body {
+    background-color: #1465bb;
+}
+
+h1 {
+    text-align: center;
+}
+
+.titulo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    margin: 0;
+
+}
+
+.menu {
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    padding: 20px;
+    max-width: 500px;
+    background-color: grey;
+}
+
+p {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    position: relative;
+    top: 30px;
+    right: 100px;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+iframe {
+    width: 510px;
+    border-radius: 50px;
+}
