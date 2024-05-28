@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+    background-color: rgb(3, 3, 86);
+}
+    h1 {
+        color: whitesmoke;
+        text-align: center;
+    }
+    
+    h2 {color: whitesmoke;}
+    p {color: whitesmoke;}
+   img {
+    height:300 ;
+    width:600 ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   p {color: whitesmoke;}}
+.back  {
+  width: 80%;
+      background-color: rgb(16, 14, 14);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+}
+
