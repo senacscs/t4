@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(112, 9, 9);
+    background-image: url("estrelapreta.jpg");
+}
+h2,h1 {
+color: aliceblue;
+justify-self: center;
+font-family: 'High Tower Text';
+background-color: rgba(142, 41, 41, 0.833);
+text-align: center;
+}
+a {
+    color: aliceblue;
+    justify-self: center;
+    font-family: 'High Tower Text';
+    background-color: rgba(142, 41, 41, 0.836);
+    text-align: center;
+    font-size: x-large;
+    }
