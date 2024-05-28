@@ -1,0 +1,13 @@
+body {
+    background-color: blueviolet
+}
+h1,h2,p {
+    color:aliceblue;
+    margin: 1cm
+}
+h1,h2 {
+    font-family: 'Monotype Corsiva';
+}
+p,a {
+    font-family: 'Bodoni MT';
+}

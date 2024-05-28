@@ -1,0 +1,139 @@
+body {
+    background-image: url(fundolaranja.jpg);
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+    color: chocolate;
+}
+
+hr {
+    color: orange;
+    border-color: orange;
+    height: 2px;
+    background-color: orange;
+    position: relative;
+    bottom: 30px;
+}
+
+.texto1 {
+    margin: auto;
+    margin-left: 500px;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    left: 40px;
+    background-color: rgb(228, 164, 80);
+    color: white;
+    font-style: italic;
+    border-radius: 20px;
+}
+
+.texto2 {
+    margin-left: 550px;
+    position: relative;
+    top: 480px;
+    text-align: center;
+    right: 50px;
+    background-color: rgb(228, 164, 80);
+    color: white;
+right: 530px;
+font-style: italic;
+border-radius: 20px;
+}
+
+.imagem1 {
+position: relative;
+bottom: 550px;
+width: 350px;
+border-radius: 20px;
+right: 257px;
+}
+
+.imagem2 {
+    position: relative;
+    bottom: 80px;
+    width: 350px;
+    left: 750px;
+    border-radius: 20px;
+}
+
+.imagem3 {
+    position: relative;
+    top: 400px;
+    right: 670px;
+    width: 420px;
+    border-radius: 20px;
+}
+
+.texto3 {
+    position: relative;
+    top: 850px;
+    text-align: center;
+    margin-left: 500px;
+    background-color: rgb(228, 164, 80);
+    color: white;
+    right: 10px;
+    font-style: italic;
+    border-radius: 20px;
+}
+
+.imagem4 {
+width: 450px;
+border-radius: 20px;
+position: relative;
+top: 450px;
+left: 730px;
+}
+
+.texto4 {
+    position: relative;
+    top: 1200px;
+    text-align: center;
+    margin-left: 500px;
+    background-color: rgb(228, 164, 80);
+    color: white;
+    right: 490px;
+    font-style: italic;
+    border-radius: 20px;
+}
+
+.menu {
+    width: 90%;
+}
+
+p {
+ color:chocolate;
+ position: relative;
+ font-style: italic;
+ text-align: center;
+ top: 450px;
+
+}
+iframe {
+    justify-content: center;
+    margin: 450px 15% 0 15%;
+    border-radius: 10px;
+}
+
+.imagem5 {
+    width: 450px;
+    border-radius: 20px;
+    position: relative;
+    top: 1150px;
+    right: 70px;
+}
+
+.texto5 {
+    text-align: center;
+    margin-right: 5px;
+    background-color: rgb(228, 164, 80);
+    color: white;
+    font-style: italic;
+    border-radius: 20px;
+    bottom: 30px;
+}
