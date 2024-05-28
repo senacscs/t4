@@ -1,0 +1,84 @@
+.cabe{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-radius: 20px;
+    
+    font-family:"Hammersmith One", sans-serif;
+}
+body{
+    background: linear-gradient(90deg, rgb(0, 21, 255), black, rgb(255, 0, 179));
+}
+.text{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    width: 49%;
+    margin-right: auto;
+    color: white;
+    display: flex;
+    border-radius: 20px;
+    display: inline-block;
+   
+}
+
+.text2{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    margin-left: auto;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    width: 100%;
+    
+}
+.sitetext{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    width: 49%;
+    margin-right:auto;
+    color: #ffff;
+    border-radius: 20px;
+    display: flex;
+    display: inline-block;
+}
+section{
+    margin: 3px;
+}
+iframe{
+    margin-right: auto;
+    margin-left: auto;
+}
+img{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+}
+h1{
+    display: inline-block;
+}
+.video {
+    border-radius: 19px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    width:  500px;
+}
+.geral {
+display: flex;
+    gap: 2px;
+    height: 170px;
+    width: 45%;
+    background-color:rgb(37, 37, 37);
+    margin: auto;
+    border-radius: 20px;
+    padding: 6px;
+    border-width: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: 10px;
+    margin-bottom: 5px;
+}
