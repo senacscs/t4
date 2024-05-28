@@ -1,0 +1,93 @@
+.logo_mdn{
+    height: 20vh;
+    background-color: rgb(25, 29, 31);
+    padding: 2%;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+.logo_mdn .logo-text{
+    fill:rgb(201, 189, 173);
+    transition: fill .5s linear;
+}
+.logo-m{
+    fill: rgb(140, 180, 255);
+    transition: fill .5s linear;
+}
+
+.logo_mdn:active{
+    transform: scale(1.05);
+}
+
+img{
+    transition: all .5s ease;
+    width: 300px;
+}
+img:active{
+    transform: scale(1.05);
+}
+
+
+.logo_mdn:hover .logo-text{
+    fill: #fff
+}
+.logo_mdn:hover .logo-m{
+    fill: rgb(122, 146, 189)
+}
+
+body{
+    background-color: rgb(35, 49, 65);
+}
+h1,h2,p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-wrap: wrap;
+
+}
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+}
+h2{
+    font-size: 25px;
+}
+p{
+    font-size: 15px;
+}
+
+header{
+    text-align: center;
+    background-color: rgb(5, 24, 45);
+    padding: 1cm;
+}
+header h1{
+    color: aliceblue;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1cm;
+}
+main h1, h2, p{
+    color: antiquewhite;
+}
+
+.sugestao {
+    padding: 1cm;
+    margin: 0.5cm;
+    background-color: rgb(32, 33, 44);
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    transition: all .5s ease;
+    width:min-content;
+}
+.sugestao:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 5px rgba(0,0,0,0.5);
+}
+
+hr {
+    margin: 10px
+}
