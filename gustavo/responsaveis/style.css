@@ -1,8 +1,9 @@
 .container {
     display: flex;
     align-items: flex-start;
-    max-width: 800px;
+    max-width: 600px; /* Aumentar max-width para caber conteúdo */
     margin: auto;
+    flex-wrap: wrap; /* Adicionar flex-wrap para responsividade */
 }
 
 .principal {
@@ -11,4 +12,5 @@
 
 .mensagem {
     max-width: 600px;
+    flex: 1; /* Adicionar flex: 1 para ocupar o espaço restante */
 }
