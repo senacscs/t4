@@ -5,7 +5,7 @@
    
    h1,h2,h3 {
        font-style:italic;
-       color:rgb(255, 8, 152);
+       color:rgb(255, 0, 128);
    }
    section{
        text-align: center;
@@ -67,3 +67,4 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 9px;
    }
+  
