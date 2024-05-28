@@ -1,47 +1,21 @@
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    background-image: url(praia-tropical-com-areia-branca-scaled.webp);
+    background-color: white;
 }
 
 header {
     background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav {
-    background-color: #ddd;
-    padding: 10px;
-}
-
-main {
+    color:white;
     padding: 20px;
-}
-
-aside {
-    background-color: #eee;
-    padding: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
-
 
 main img {
     display: block;
-    margin: 0 auto 0 0;
-    align-items:   center;
-    width: 250px; 
-    height: 320px; 
-}
+    margin:0 auto 0 0;
+    align-items: center;
+    width: 150px;
+    height: 200px;
+} 
