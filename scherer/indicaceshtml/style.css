@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+a {
+    color: blue;
+    text-align: right;
+}
+
+img {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-size: large;
+    color: antiquewhite;
+    text-align: center;
+}
+
+p {
+    color: aliceblue;
+    font-size: larger;
+}
+
+@keyframes rgb {
+    0% {
+        text-shadow: 0px 0px 5px red;
+    }
+
+    20% {
+        text-shadow: 0px 0px 5px orange;
+    }
+
+    40% {
+        text-shadow: 0px 0px 5px yellow;
+    }
+
+    60% {
+        text-shadow: 0px 0px 5px green;
+    }
+
+    80% {
+        text-shadow: 0px 0px 5px blue;
+    }
+
+    100% {
+        text-shadow: 0px 0px 5px rgb(181, 0, 181);
+    }
+}
+
+.rgb-title {
+    font-size: 36px;
+    animation: rgb 2s infinite;
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.secao {
+    text-align: center;
+    border: solid 4px;
+    border-radius: 40px;
+    margin: 50px;
+    color: rgb(243, 219, 4);
+}
+li{
+    color: aliceblue;
+}
