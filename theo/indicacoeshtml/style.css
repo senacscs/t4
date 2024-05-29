@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    background-image: url(fuundo.jpg);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+p {
+    color: rgb(167, 167, 167);
+}
+
+h1 {
+    color: #E34E26;
+}
+
+h2 {
+    color: #E34E26;
+}
+
+.back {
+    width: 80%;
+      background-color: rgb(21, 20, 60);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+}
+
+iframe {
+    border-radius: 20px;
+}
