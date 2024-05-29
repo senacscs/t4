@@ -1,0 +1,19 @@
+body {
+    background-image: url("https://img.freepik.com/fotos-gratis/fundo-de-programacao-com-texto-html_23-2150040419.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+    }
+    h1 { 
+        color:red;
+        text-align: center;
+    }
+    h2 {
+        color: blueviolet ; 
+        text-align:  left;
+    }
+    img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
