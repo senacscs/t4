@@ -1,0 +1,30 @@
+body
+{
+    background-color: black;
+}
+h1{
+    color: antiquewhite;
+    text-align: center;
+
+}
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+h3{
+    color: antiquewhite;
+}
+p{
+    color: antiquewhite;
+}
+    h4{
+        color: white;
+    }
+    label{
+        color: antiquewhite;
+    }
+    a{
+        color: antiquewhite;
+    }
