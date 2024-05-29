@@ -1,0 +1,27 @@
+    body {
+        background-image: url("ye.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        color: purple;
+        text-align: center;
+    }
+
+    h2 {
+        color: blueviolet;
+        text-align: center;
+    }
+
+    p {
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
