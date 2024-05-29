@@ -1,0 +1,35 @@
+h1 { 
+    text-align: center;
+    font-style: italic;
+    color: #7b2424;;
+    font-size: 50px;
+}
+head, body { 
+    background-image: url(../download\ \(6\).jpg);
+}
+h2 { 
+    font-style: italic;
+    color: #7b2424;
+    width: 75%;
+    text-align: left;
+    font-size: 35px;
+    margin-left: 15%;
+}
+a { 
+    color:rgb(209, 79, 79);
+    margin-left: 20%;
+    
+}
+.description { 
+    color: #74193c;
+    width: 25%;
+    background-color: rgb(254, 194, 221);
+    font-style: italic;
+    text-align: right  ;
+    font-size: 20px; 
+    margin-left: 60%;
+}
+iframe {
+    margin-left: 20%;
+}
+
