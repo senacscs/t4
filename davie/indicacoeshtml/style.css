@@ -1,0 +1,67 @@
+body {
+    background-image: url("https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg");
+}
+h1 {
+    text-align: center;
+    color: #000000;
+    background-color: #00ff1a;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2 {
+    text-align: center;
+    background-color: #00ff1a;
+    color: #000000;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+}
+h3 {
+    background-color: black;
+    color:#00ff1a;
+    font-family: 'Courier New', Courier, monospace;
+}
+p {
+    background-color: black;
+    color: #7a6a4f;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.computer {
+    background-color: #000000;
+    color:#00ff1a;
+    font-family: 'Courier New', Courier, monospace;
+}
+li {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.hack {
+    background-color: #000000;
+    color: #00ff1a;
+    font-family: 'Courier New', Courier, monospace
+}
+.cap {
+    background-color: #000000;
+    color:#00ff1a;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.hacker {
+    color: #00ff1a;
+    background-color: #000000;
+}
+.html {
+    text-align: center;
+    background-color: #00ff1a;
+    color:#000000;
+}
+
+.coisa{
+    color: #00ff1a;
+    background-color: #000000;
+}
+.tech {
+    background-color: #00ff1a;
+    color: #000000;
+    text-align:center;
+}
