@@ -1,0 +1,4 @@
+<html> --> abertura do site e termina
+<head> --> tag contendo metadados do site
+<body> --> o que vai ter no site
+<
