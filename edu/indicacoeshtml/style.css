@@ -1,0 +1,32 @@
+ body {
+    background-image: url("https://th.bing.com/th/id/R.8245bd1f26b8bc175b1a9c09edd4aa1e?rik=esBIfFq9HCaO2A&pid=ImgRaw&r=0") 
+   }
+
+ h1 {
+     text-align: center;
+     background-color: palevioletred;
+ }
+ 
+
+ h2 {
+    text-align: center;
+    background-color: palevioletred;
+ }
+ 
+
+ p {
+    text-align: center;
+    background-color: palevioletred;
+ }
+
+ img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
