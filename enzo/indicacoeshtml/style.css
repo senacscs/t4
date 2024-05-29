@@ -1,0 +1,33 @@
+body {
+    background-image: url("imagemdefundoparaosite.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+
+   img {
+    display: block;
+    margin-left: auto;     
+    margin-right: auto;
+   }
+    iframe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section {
+        background-color: gray;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    }
+
+   
