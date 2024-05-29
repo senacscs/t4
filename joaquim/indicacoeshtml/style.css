@@ -1,0 +1,49 @@
+.img1 {
+ height: 256px;
+ width: 256px;
+}
+
+.img2 {
+    height: 123px;
+    width: 123px;
+    border-radius: 20px;
+}
+
+h1, h2, p {
+    font-family: 'Courier New';
+    color: #f0ecec;
+}
+
+body {
+    background-color: #666666;
+}
+
+a:visited {
+    color: #282424;
+}
+
+.x {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+iframe {
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.texto1 {
+    text-align: center;
+    width: 40%;
+    border: solid 4px black;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto2 {
+    display: flex;
+    padding-right: 15%;
+    padding-left: 15%;
+}
