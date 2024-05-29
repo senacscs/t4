@@ -1,0 +1,52 @@
+body {
+    background-image: url(https://th.bing.com/th/id/OIP.UHqn4UEWFSyEsU_qlLD-MgAAAA?w=225&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7);
+}
+
+h1, h3, h2 {
+    text-align: center;
+}
+
+img, iframe {
+    border-radius: 20px;
+    border: solid 3px; color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h4 {
+    text-align:center;
+}
+p {
+    text-align: center;
+}
+iframe {
+    border-radius: 20px;
+    border: solid 3px;
+}
+section {
+    width: 90%;
+    margin: 30px;
+    border: solid 4px white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alin {
+    align-items: center;
+    width: 60%;
+}
+section {
+    background-color: rgb(3, 129, 3);
+    width: 90%;
+    margin: 30px;
+    border: solid 4px white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.linen {
+    display: flex;
+    size: 600px;
+}
