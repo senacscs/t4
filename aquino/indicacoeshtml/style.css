@@ -1,0 +1,47 @@
+
+body {
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+}
+h1 {
+    color:white;
+    text-align: center;
+}
+p {
+    color: white;
+    text-align: center;
+}
+h2 {
+    color:white;
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    color: rgb(30, 236, 58);
+    text-align: center;
+}
+section {
+    background-color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+li {
+    color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+ul {
+    text-align: center;
+}
+iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
