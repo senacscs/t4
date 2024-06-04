@@ -1,0 +1,24 @@
+body {
+    background-image:url(fundo.jpg)
+}
+
+ h1{
+
+    color: darkmagenta;
+    text-align: center;
+ }
+
+ h2{
+    color: rgb(60, 145, 179);
+    text-align: left;
+ }
+
+ h2{
+    color: rgb(60, 145, 179);
+    text-align: left;
+ }
+ 
+ p{
+    color: rgb(231, 217, 217);
+    text-align: left;
+ }

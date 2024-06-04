@@ -1,0 +1,42 @@
+body {
+    background-image:url(fundo.html)
+}
+
+ h1{
+
+    color: rgba(38, 33, 36, 0.961);
+    text-align:start
+ }
+
+ h2{
+    color: rgba(184, 59, 140, 0.961);
+    text-align:start
+ }
+
+ h2{
+    color: rgb(16, 16, 15);
+    text-align:start
+ }
+ 
+ p{
+    color: rgb(18, 17, 18);
+    text-align:start
+ }
+ iframe {
+   align-self: center;
+ }
+
+.meio {
+   text-align: center;
+}
+.fonte-personalizada {
+   font-family: 'Times New Roman', Times, serif, 'Times New Roman', serif, sans-serif; /
+}
+
+section {
+   background-color: pink;
+   width: fit-content;
+   border-radius: 15px;
+   margin-left: auto;
+   margin-right: auto;
+}
