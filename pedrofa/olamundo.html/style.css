@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(255, 0, 0);
+}
+h1 {
+    color: black;
+text-align: center;
+}
+h2 {
+    color: black;
+    text-align: center;
+}
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+h2 {
+    color: black;
+    text-align: center;
+}
