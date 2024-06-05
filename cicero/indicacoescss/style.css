@@ -53,12 +53,12 @@ p{
     font-size: 15px;
 }
 
-header{
+.header{
     text-align: center;
     background-color: rgb(5, 24, 45);
     padding: 1cm;
 }
-header h1{
+.header h1{
     color: aliceblue;
 }
 
@@ -90,4 +90,11 @@ main h1, h2, p{
 
 hr {
     margin: 10px
+}
+
+.hub {
+    width: 100vw;
+    height:min-content;
+    margin:0;
+    border: none;
 }
