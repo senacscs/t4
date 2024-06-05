@@ -1,0 +1,27 @@
+body {
+        background-image: url(background\ \(1247\ x\ 636\ px\)\ \(1\).jpg);
+    }
+
+h1 {
+    color:#FED89B;
+    text-align:center
+   
+}
+
+
+h2 {
+    color:firebrick;
+    text-size-adjust: 21;
+    text-align: center;
+   
+}
+
+a {
+    color: bisque;
+    text-align: center;
+    text-size-adjust: 24;
+}
+
+img {
+    border-image: auto;
+}

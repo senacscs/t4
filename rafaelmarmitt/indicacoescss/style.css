@@ -1,0 +1,165 @@
+
+body {
+
+    background-color: rgb(238, 238, 238);
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    font-family: sans-serif;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+  .navbar {
+
+      left: 0;
+
+      width: 100%;
+
+      height: 370px;
+
+      padding: 1px 0 1px 0;
+
+      background-color: rgb(0, 0, 0);
+
+      transition: opacity 0.4s;
+
+      position: relative;
+
+      z-index: 9999;
+
+  }
+
+  .navbar.scrolled {
+
+      opacity: 0;
+
+}
+
+.al h1 {
+
+    color: white;
+
+    font-size: 60px;
+
+    text-align: center;
+
+    margin-top: 200px;
+
+}
+
+.al p {
+
+    color: white;
+
+    text-align: center;
+
+    margin-top: -30px;
+
+}
+
+.test.scrolled {
+
+    background-color: #c0c0c0;
+
+    color: rgb(0, 0, 0);
+
+    opacity: 1;
+
+    z-index: 99999;
+
+}
+
+
+.dal {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    display: flex;
+
+}
+
+
+.abs {
+
+    width: 100%;
+
+    height: 800px;
+
+    background-color: rgb(0, 0, 0);
+
+    margin-top: -32px;
+}
+
+.titulo {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+
+}
+
+.subtitulo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center
+}
+
+.logocss {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+hr {
+    background-color: black;
+    border-color: black;
+    
+}
+
+.frcdcmp {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tutorial {
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    font-size: large;
+
+}
+
+.li {
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    font-size: large;
+}
+
+.video {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.podcast {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 70%;
+}
