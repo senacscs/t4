@@ -1,0 +1,42 @@
+p{
+   color: black;
+   text-align: center; 
+   font-size: xx-large;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+
+
+}
+body{
+
+background-color: darkcyan;
+text-align: center;
+font-size: xx-large;
+   font-family:'Times New Roman', Times, serif 
+
+
+}
+
+  
+   
+
+
+h1,h2{
+ color: black;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: small;
+
+
+
+}
+
+hr{
+
+   height: 20px;
+}
+section{
+
+color: black;
+
+
+}
