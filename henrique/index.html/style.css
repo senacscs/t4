@@ -1,0 +1,20 @@
+body {
+    background-image: url("wallpaper.jpeg");
+    background-position: center;
+    background-attachment: fixed;
+}
+ 
+h1{
+    color: black;
+    text-align: center;
+}
+
+h2{
+    color: black;
+    text-align: center;
+}
+
+h3{
+    color: black;
+    text-align: center;
+}
