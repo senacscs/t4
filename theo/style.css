@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:    rgb(122, 24, 214);
+}
+
+header {
+    background-color: rgba(1, 1, 1, 0.9);
+    color: white;
+    padding: 1px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+h1{
+    font-size: 24px;
+}
+
+a {
+    color: darkgray;
+  }
+ 
+  a:visited {
+    color: darkgray;
+  }
+ 
+  a:hover {
+    color: darkgray;
+  }
+ 
+  a:active {
+    color: darkgray;
+  }
+  
+  button {
+    background-color: darkgray;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
