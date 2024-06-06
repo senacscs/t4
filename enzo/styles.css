@@ -1,0 +1,49 @@
+header {
+    background-image: url("imagemdefundodesite.jpg");
+    background-size: 1280px;
+    text-align: center;
+    color: white;
+    font-family: impact, serif;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-size: 35px;
+}
+
+body {
+    background-image: url("fundodesitebranco.jpg");
+    background-size: 1280px;
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.container {
+    width: 30%;
+    background-color: gray;
+    position: relative;
+    top: 90px;
+    left: 440px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 blue;
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+}
