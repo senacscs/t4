@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+.titulo {
+    background-color: blueviolet;
+    border: solid 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    border-color: aliceblue;
+    animation: infinite 2s blink;
+}
+
+.introducao {
+    text-align: center;
+}
+
+section {
+    border: solid 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: blueviolet;
+    height: 50vh;
+    margin-left: 50px;
+    margin-right: 50px;
+}
