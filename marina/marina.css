@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    color:rgba(3, 3, 95, 0.6);
+    font-size: 60px;
+    font-style:oblique;
+
+}
+li,a {
+    text-align: center;
+    color: rgb(3, 3, 95);
+    list-style-type: none;
+    font-style:oblique;
+    font-size: 45px;
+}
+body {
+    background-color: rgb(123, 114, 250);
+}
+a:link, a:visited { text-decoration: none; } a:hover { text-decoration: underline; }
