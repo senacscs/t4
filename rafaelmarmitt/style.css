@@ -1,0 +1,43 @@
+button {
+    background-color: gray;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
+
+.menu {
+    background-color: darkslategrey;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: gray;
+  }
+  
+  a:visited {
+    color: gray;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+  
+  a:active {
+    color: gray;
+  }
+
+  header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 70px;
+    padding: 1px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
+
