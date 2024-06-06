@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    
+    background: linear-gradient(90deg, rgb(255, 251, 0) , rgb(0, 179, 255));
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+a:hover{
+    color:blue
+}
+h1{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(44, 153, 255);border-radius: 40px ; width: 800px ; box-shadow: 0 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
