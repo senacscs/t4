@@ -1,5 +1,4 @@
 body {
-  font-family: fantasy;
   margin: 0;
   padding: 0;
   background-color:rgb(0, 111, 128);
@@ -20,8 +19,9 @@ aside {
 header {
   background-color: #333;
   color: red;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
+  font-family: fantasy;
 }
 
 footer {
@@ -41,30 +41,30 @@ main img {
 }
 
 a{
-  color: red;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
 h1 {
-  color: red;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 h2{
-  color: red;
+  color: rgb(255, 255, 255);
   text-align:center;
 }
-p{color:red;
+p{color:rgb(255, 255, 255);
   text-align:center;
 }
-a{color:red;
+a{color:rgb(255, 255, 255);
 }
-ol{color: red;
+ol{color: rgb(255, 255, 255);
   text-align:center;
   }
-   li{color:red;
+   li{color:rgb(255, 255, 255);
       text-align:center;
   }
-  figcaption{color: red;
+  figcaption{color: rgb(255, 255, 255);
       text-align:center;
   }
 img {
