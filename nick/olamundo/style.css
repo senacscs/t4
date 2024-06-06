@@ -1,0 +1,13 @@
+body {
+    background-image: url("fundo.avif")
+}
+
+h1 {
+    color:blue;
+    text-align: center;
+}
+
+h2 {
+    color:yellow;
+    text-align: left;
+}

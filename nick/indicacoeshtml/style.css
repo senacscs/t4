@@ -1,0 +1,30 @@
+
+ 
+ body { background-image: url("https://i.pinimg.com/564x/3d/ad/08/3dad08206eadb0724240561208f44e30.jpg");
+   
+ background-color: url("");
+ }
+
+h1,h2,h3 {
+    font-style:italic;
+    color:rgb(12, 80, 141);
+}
+section{
+    text-align: center;
+}
+iframe {
+    border-radius: 20px; 
+}
+.cen {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 3px black;
+    border-radius: 20px;
+    height: 50px;
+
+}
+img{
+    border: 15px;
+    border-radius: 1cm;
+}
