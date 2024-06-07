@@ -1,0 +1,34 @@
+h1{
+    border: 2px solid rgb(164, 28, 89);
+    text-align: center;
+    background-color: aliceblue;
+    width: 60%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    text-align: center
+    
+}
+div{
+    height: 20px;
+    left: 10px;
+    background-color: rgb(255, 148, 208);
+    width: 250px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;
+    
+}
+p{
+    text-align: center;
+}
+a{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+body{
+    background-color: rgb(201, 117, 140);
+}
