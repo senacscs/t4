@@ -1,0 +1,17 @@
+body {
+    background-image: url(fundo.azul.brawl.jpeg);
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+h2 {color: whitesmoke;}
+p {color: whitesmoke;}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
