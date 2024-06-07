@@ -1,0 +1,26 @@
+body {
+    background-image: url(mago.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: larger;
+}
+
+i {
+    color: blanchedalmond;
+    text-align: center;
+}
+
+h1 {
+    color: blanchedalmond;
+    text-align: center;
+}
+
+h2 {
+    color: blanchedalmond;
+    text-align: center;
+}
+
+p {
+    color: blanchedalmond;
+    text-align: center;
+}
