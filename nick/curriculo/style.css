@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+    body{
+        background-color: rgb(83, 147, 207);
+        font-size:large;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        background-color: rgb(231, 95, 163);
+    }
+}
+section{
+    color: black;
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+}
