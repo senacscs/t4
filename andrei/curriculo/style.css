@@ -17,15 +17,16 @@
 }
 @media (max-width: 768px) {
     body {
-        background-color: rgba(151, 0, 0, 0.518);
+        background-color: rgb(41, 40, 40);
     }
     h1 {
         text-align: center;
         font-size: 22px;
-        background-color: rgb(41, 40, 40);
-        color: white;
+        background-color: rgb(193, 191, 191);
+        color: rgb(0, 0, 0);
     }
     h2 {
         font-size: 15px;
+        color: white;
     }
 }
