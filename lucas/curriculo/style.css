@@ -1,0 +1,21 @@
+body {
+    background-color: pink;
+}
+
+hr {
+    background-color: white;
+    border-color: white;
+    height: 5px;
+}
+
+h1 {
+    color: rgb(245, 6, 138);
+}
+
+h2 {
+    color: white;
+}
+
+li {
+    color: white;
+}
