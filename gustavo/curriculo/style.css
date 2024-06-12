@@ -1,0 +1,14 @@
+/* aparência em tela grande */
+@media (min-width: 768px) {
+    body {
+        background-color: aqua;
+        font-size: xx-large;
+    }
+}
+
+/* para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
