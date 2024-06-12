@@ -76,3 +76,7 @@ header{
   .nomes:hover {
     animation: animacao-rgb 3s infinite;
   }
+  a{
+    text-decoration: none;
+    color: black;
+  }
