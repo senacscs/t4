@@ -1,0 +1,35 @@
+
+
+
+
+
+body{
+
+    
+    background-color:yellowgreen ;
+    
+}
+@media(max-width:768px){
+
+  body{
+    background-color:red;
+    font-size: xx-large;
+  }
+
+
+}
+@media(max-width:768px){
+
+    body{
+      background-color:aqua
+    }
+  
+  
+  }
+  h1,h2,h3{
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: medium;
+  }
+  
