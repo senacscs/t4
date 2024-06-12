@@ -1,0 +1,51 @@
+/* aparência em tela grande */
+@media (min-width: 768px) {
+}
+body {
+   background-color: white;
+   font-family: Arial, sans-serif;
+ 
+}
+
+*{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+   }
+   nav{
+       background-color: grey;
+   }
+   nav li{
+       display: inline-block;
+   }
+   nav li a{
+       color: black;
+       text-decoration: none;
+       padding: 15px;
+       display: inline-block;
+       font-size: 30px;
+   }
+   nav li a:hover{
+       background-color: yellow;
+   }
+   .dropdown-menu a{
+       display: block;
+       color: white;
+    }
+    section {
+        padding: 40px;
+    }
+    
+
+/* para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+
+
+
+   
+    
