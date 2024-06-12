@@ -1,0 +1,46 @@
+
+/*aparência de tela grande*/
+@media (min-width:768px){
+    body{
+        background-color:rgb(188, 127, 246);
+        font-size: xx-large;
+    }
+}
+
+/*aparência de tela pequena*/
+@media (max-width:768px){
+    body{
+        background-color:rgb(244, 127, 240);
+    }
+}
+
+main{
+    text-align: justify;
+}
+
+section {
+    color: rgb(46, 13, 77);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+}
+
+a:link, a:visited { text-decoration: none; } a:hover { text-decoration: underline; }
+
+a {
+    color:rgb(46, 13, 77);
+}
+
+li,a{
+    list-style-type: none;
+}
