@@ -1,0 +1,22 @@
+body{
+    background-image: url("Fundo.png");
+}
+h3,h2,h1{
+    background-image: url("Fundo2.png");
+}
+h1, h2, h3{
+    color:white
+}
+h1,h2,h3{
+    text-align: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+{ background-image: url("OIP.jpg");
+    bacground-size: cover;
+    background-repeat: no-repeat;
+    background-position:left;
+}
