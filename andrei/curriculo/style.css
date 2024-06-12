@@ -1,7 +1,31 @@
-body {
-    text-align: center;
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(193, 191, 191);
+        background-image: url("https://media.istockphoto.com/photos/grey-gradient-background-picture-id696817108?k=20&m=696817108&s=170667a&w=0&h=YFM-x4ZEIkz5kvsjugcXfFFvW8EYt_lOB3kRF2ZXghg=");
+        background-size: 1300px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 32px;
+        background-color: rgb(41, 40, 40);
+        color: white;
+    }
+    h2 {
+        margin-left: 80px;
+        font-size: 20px;
+    }
 }
-header {
-    background-color: black;
-    color: white;
+@media (max-width: 768px) {
+    body {
+        background-color: rgba(151, 0, 0, 0.518);
+    }
+    h1 {
+        text-align: center;
+        font-size: 22px;
+        background-color: rgb(41, 40, 40);
+        color: white;
+    }
+    h2 {
+        font-size: 15px;
+    }
 }
