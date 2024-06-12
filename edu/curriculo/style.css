@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(48, 41, 41);
+    color: antiquewhite;
+}
+
+header {
+    border: solid 5px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.titulo {
+    border: solid 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.rainbow {
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite
+}
+
+@keyframes rainbow {
+
+    100%,
+    0% {
+        color: rgb(255, 0, 0);
+    }
+
+    8% {
+        color: rgb(255, 127, 0);
+    }
+
+    16% {
+        color: rgb(255, 255, 0);
+    }
+
+    25% {
+        color: rgb(127, 255, 0);
+    }
+
+    33% {
+        color: rgb(0, 255, 0);
+    }
+
+    41% {
+        color: rgb(0, 255, 127);
+    }
+
+    50% {
+        color: rgb(0, 255, 255);
+    }
+
+    58% {
+        color: rgb(0, 127, 255);
+    }
+
+    66% {
+        color: rgb(0, 0, 255);
+    }
+
+    75% {
+        color: rgb(127, 0, 255);
+    }
+
+    83% {
+        color: rgb(255, 0, 255);
+    }
+
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+a {
+    color: white;
+    font-style: italic;
+}
+
+.um {
+    border: solid 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.dois {
+    border: solid 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.tres {
+    border: solid 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.dados {
+    text-align: center;
+}
+
+.basico {
+    text-align: center;
+}
+
+.complementar {
+    text-align: center;
+}
+
+main {
+    font-family: 'Times New Roman', Times, serif;
+}
+/* aparência em tela grande*/
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(64, 53, 53)
+        }
+}
+/*aparência em tela pequena*/
+@media (max-width: 768px) {
+    body {
+        background-color: black
+        }
+}
