@@ -1,0 +1,104 @@
+@media (min-width:768px) {
+    header {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        height: 70px;
+        padding: 1px;
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-size: x-large;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color:khaki;
+    }
+    
+    a {
+        color: gray;
+      }
+      
+      a:visited {
+        color: gray;
+      }
+      
+      a:hover {
+        color: gray;
+      }
+      
+      a:active {
+        color: gray;
+      }
+    
+    h2 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    }
+    
+    hr {
+        background-color: black;
+        border-color: black;
+        height: 2px;
+    }
+    
+    
+}
+
+@media (max-width:768px) {
+    header {
+        background-color:beige;
+        color: black;
+        height: 90px;
+        padding: 1px;
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-size: x-large;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: blanchedalmond;
+    }
+    
+    a {
+        color: black;
+      }
+      
+      a:visited {
+        color: black;
+      }
+      
+      a:hover {
+        color: black;
+      }
+      
+      a:active {
+        color: black;
+      }
+    
+    h2 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    }
+    
+    hr {
+        background-color: black;
+        border-color: black;
+        height: 2px;
+    }
+    
+    
+}
