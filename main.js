@@ -25,7 +25,7 @@ const lista = document.getElementById('lista');
 for (i = 0; i < alunos.length; i++) {
     const p = criarElem('p', [[]]);
     const div = criarElem('div',[["class","nomes"]]);
-    const a = criarElem('a',[["href","./"+alunos[i].pasta]]);
+    const a = criarElem('a',[["href","./"+alunos[i].pasta],["target","_blank"]]);
 
     p.appendChild(document.createTextNode(alunos[i].nome));
 

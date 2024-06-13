@@ -133,7 +133,7 @@ alunos = [
     },
     {
         "nome": "Matheus B.",
-        "pasta": "Teteu"
+        "pasta": "teteu"
     },
     {
         "nome": "Theo",
