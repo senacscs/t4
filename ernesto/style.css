@@ -1,0 +1,52 @@
+body{
+    background-image: url(minecraft.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    color: white;
+ }
+ .nav-list{
+     list-style: none;
+     display: flex;
+ }
+ .nav-list{
+     letter-spacing: 3px;
+      margin-right: 1;
+ }
+ header{
+     background-color: rgb(37, 37, 37);
+     color: white;
+ }
+ .dbl{
+   background-image: url(mine.jpg);
+    width: 120px;
+    height: 120px;
+    color: black;
+    margin: 15px;
+    text-align: center;
+    border-radius: 3px;
+    display:inline-flex;
+    font-size: 10px;
+    justify-content: space-around;
+ }
+ section{
+    margin-right: 35vw;
+    margin-top: 20px;
+    margin-left: 30vw;
+    height:100%;
+    width: 400px;
+    backdrop-filter: blur(20px);
+    border-color: black 5px;
+    border-style: solid;
+    border-radius: 5px;
+    justify-content: space-around;
+    display: inline-block;
+ }
+
+ 
