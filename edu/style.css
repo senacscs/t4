@@ -10,7 +10,7 @@ body {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    border-color: lightseagreen;   
+    border-color: white;   
 }
 
 .rainbow {
@@ -75,12 +75,14 @@ body {
 }
 
 section {
-    border: solid 20px;
-    border-radius: 20px;
+    border: solid 5px;
+    border-radius: 10px;
     color: antiquewhite;
     background-color: grey;
     text-align: center;
     border-bottom: 20px;
+    padding: 10px;
+    border-color: white;
 }
 
 a {
