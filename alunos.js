@@ -8,7 +8,7 @@ alunos = [
         "pasta": "andrei"
     },
     {
-        "nome": "Andrielen",
+        "nome": "Andri",
         "pasta": "andri"
     },
     {
