@@ -75,15 +75,15 @@ body {
 }
 
 section {
-    border: solid 5px;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: blueviolet;
-    height: 50vh;
-    margin-left: 50px;
-    margin-right: 50px;
+    border: solid 20px;
+    border-radius: 20px;
+    color: antiquewhite;
+    background-color: grey;
+    text-align: center;
+    border-bottom: 20px;
 }
 
 a {
     text-align: center;
+    color: blue;
 }
