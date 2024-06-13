@@ -9,7 +9,7 @@ body {
 }
 
 /* Estilo para o cabeçalho principal */
-h1 {
+h1,h2 {
     background-color: #4CAF50;
     color: white;
     padding: 20px;
@@ -18,7 +18,7 @@ h1 {
 }
 
 /* Estilo para os cabeçalhos secundários */
-h2, h3, h4, h5 {
+ h3, h4, h5,h6,h7{
     background-color: #555;
     color: white;
     padding: 10px;
