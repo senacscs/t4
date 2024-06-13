@@ -1,0 +1,61 @@
+@media (min-width: 768px) {
+    body {
+        background-image: linear-gradient(90deg, black, gray, white);
+        color: white;
+        font-size: large;
+    }
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        color: white;
+        background-color: black;
+        font-feature-settings: "ital";
+    }
+    h2 {
+        color: white;
+        font-style: italic;
+        margin-left: auto;
+        font-size: large;
+    }
+    .items {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+    }
+    .info {
+        background-color: black;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: white;
+        color: black;
+        font-size: large;
+    }
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        color: black;
+        background-color: white;
+        font-feature-settings: "ital";
+    }
+    h2 {
+        color: black;
+        font-style: italic;
+        margin-left: auto;
+        font-size: large;
+    }
+    .items {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        text-align: center;
+    }
+    .info {
+        background-color: white;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
