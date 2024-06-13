@@ -1,0 +1,21 @@
+/* aparência em tela grande */
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(185, 176, 231);
+        background-image: url(fundo.jpg);
+    }
+}
+/* para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(227, 209, 244);
+    }
+}
+h1 {
+    font-style: italic;
+    font-size: 350%;
+    background-color: rgba(159, 128, 189, 0.393);
+}
+li { 
+    text-align: center;
+}
