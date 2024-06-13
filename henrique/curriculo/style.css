@@ -1,40 +1,30 @@
-@media(min-width: 768px){
-    body{
-        background-color:white
-    }
+@media (min-width: 768px) {
+    body {
+        background-color:lightgreen;
+        margin: 0;
 }
-@media(min-width: 768px){
-    body{
-        background-color:palegreen
-    }
-}
-body {
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-  
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-  
-section {
-    margin-bottom: 30px;
-}
-  
-h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-align: center;
-    color: palevioletred;
-}
-  
+
 h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+        font-style: oblique;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+        background-color:white;
+        margin: 0;
 }
-  
-p {
-    margin-bottom: 5px;
+    
+h1 {
+        font-style: oblique;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+        background-color:white;
+}
+    
+header {
+        background-color:cornflowerblue;
+        text-align: center;
+}
+
+a { 
+    color:lightsalmon;
+}
 }

@@ -1,20 +1,37 @@
-body {
-    background-image: url("wallpaper.jpeg");
-    background-position: center;
-    background-attachment: fixed;
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
 }
- 
+
 h1{
-    color: black;
     text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    font-size: 40px;
 }
-
+.titulo{
+    background-color:lightsalmon;
+    width: 50%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site1, .site2, .site3, .site4, .site5{
+    background-color:lightgreen;
+    width: 50%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
 h2{
-    color: black;
     text-align: center;
-}
-
-h3{
-    color: black;
-    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
 }
