@@ -23,6 +23,14 @@
 
 /*para telas pequenas*/
 @media (max-width: 768px) {
+    section {
+        color: forestgreen;
+        margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    }
     h2{
         font-style:italic ;
         text-align: left;
