@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(112, 9, 9);
+    background-image: url("mirrorball.jpeg");
+}
+a,h2,h1 {
+color: aliceblue;
+justify-self: center;
+font-family: 'High Tower Text';
+}
