@@ -1,13 +1,13 @@
 @media(min-width: 768px){
     body {
-        background-color: rgb(110, 152, 220);
+        background-color: rgb(7, 7, 7);
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     header {
-        color: #0d3edf;
+        color: #960258;
         text-align: center;
         padding: 20px 0;
     }
@@ -21,6 +21,10 @@
     }
     .section {
         margin-bottom: 20px;
+        text-align: center;
+        background-color: rgba(153, 157, 169, 0.758);
+        margin: 20px;
+        margin-right: auto; 
     }
     .section h2 {
         margin-top: 0;
@@ -32,14 +36,14 @@
 
 @media(max-width: 768px){
     body {
-        background-color: rgb(165, 83, 224);
+        background-color: rgb(164, 116, 159);
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     header {
-        color: #340345;
+        color: #64086aa6;
         text-align: center;
         padding: 20px 0;
     }
@@ -53,6 +57,8 @@
     }
     .section {
         margin-bottom: 20px;
+        text-align: center;
+        background-color: #7c1db893;
     }
     .section h2 {
         margin-top: 0;
