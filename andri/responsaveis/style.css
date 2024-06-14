@@ -95,9 +95,16 @@
   }
 .textinho{ 
   background-color: #b51212;
-  margin: 20px;
+  margin: 20;
 }
  span{
   color: #b51212;
  }
- 
+
+ .amei{
+    background-color: #b51212a5;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    
+ }
