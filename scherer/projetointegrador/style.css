@@ -36,6 +36,9 @@ body {
     h2{
         color: aliceblue;
     }
-    
+    img{
+        width: 100%;
+        height: 500px;
+    }
 
     
