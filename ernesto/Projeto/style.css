@@ -1,0 +1,12 @@
+* 
+header {
+    height: 30px;
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+    color: snow;
+}
+
+body {
+    background-color: aliceblue;
+}
