@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(102, 4, 4);
+}
+header{ 
+    background-color: rgb(71, 1, 29);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+header{
+    background-color: rgb(71, 1, 29);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+h2{
+    text-align: center;
+}
+li, a{
+    color:black;
+}
+.itens, .educaçao, .complementar, .carro, .ar, .sul{
+    width: 30%;
+    background-color: rgb(71, 1, 29);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    margin-block: 20px;
+    border-radius: 20px;
+}
+h3, p2{
+    display: inline;
+}
+h3, p3{
+    display: inline;
+}
+h3, p4{
+    display: inline;
+}
+h3, p6{
+    display: inline;
+}
+h3, p7{
+    display: inline;
+}
+h3, p8{
+    display: inline;
+}
+h3, p9{
+    display: inline;
+}
+h3, p10{
+    display: inline;
+}
+h3, p11{
+    display: inline;
+}
+h4, p5{
+    display: inline;
+}
+h4, h1, p1, p8, p11, p12, p14, p15, p, a, li{
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(71, 1, 29);
+}
+
+a {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    font-size: 20px;
+}
