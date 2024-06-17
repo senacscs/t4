@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(193, 191, 191);
+        background-image: url("https://th.bing.com/th/id/R.9a8cebd1439731de2d1c30acc635a89d?rik=wZURRdVOFh5lEw&pid=ImgRaw&r=0");
+        background-size: 4500px;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: 32px;
+        background-color: rgb(41, 40, 40);
+        color: white;
+    }
+    h2 {
+        margin-left: 80px;
+        margin-right: 80px;
+        font-size: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.537);
+    }
+    ul {
+        font-size: 20px;
+        text-align: center;
+        color: brown;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(193, 191, 191);
+        background-image: url("https://th.bing.com/th/id/R.9a8cebd1439731de2d1c30acc635a89d?rik=wZURRdVOFh5lEw&pid=ImgRaw&r=0");
+        background-size: 2250px;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: 22px;
+        background-color: rgb(41, 40, 40);
+        color: white;
+    }
+    h2 {
+        margin-left: 70px;
+        margin-right: 70px;
+        font-size: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.537);
+    }
+    ul {
+        font-size: 10px;
+        text-align: center;
+        color: brown;
+    }
+    }
