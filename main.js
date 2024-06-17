@@ -21,6 +21,10 @@ alunos.sort(function(a,b){
 console.log(alunos)
 
 const lista = document.getElementById('lista');
+const erro = document.getElementById('erro');
+
+erro.remove()
+
 
 for (i = 0; i < alunos.length; i++) {
     const p = criarElem('p', [[]]);
