@@ -1,0 +1,84 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    background-image: url('https://th.bing.com/th/id/OIP.xx4_GVy81AqABwSB53w93wAAAA?w=450&h=450&rs=1&pid=ImgDetMain');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+/* Estilos para links */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Estilos para conteúdo principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+/* Estilos para vídeo */
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Layout flexível para conteúdo secundário */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-container div {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 10px;
+    font-size: large;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    border-radius: 8px;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+
+    .flex-container div {
+        flex: 1 1 100%;
+    }
+}
+/* Centralizar a imagem dentro do article */
+article {
+    text-align: center;
+}
+
+/* Definir estilo para a imagem */
+.principal {
+    width: 560px;
+    max-width: 100%; /* Garantir que a imagem seja responsiva */
+    height: auto; /* Manter a proporção da imagem */
+}
