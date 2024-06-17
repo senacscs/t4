@@ -21,7 +21,7 @@
     ul {
         font-size: 20px;
         text-align: center;
-        color: brown;
+        color: rgb(255, 255, 255);
     }
 }
 @media (max-width: 768px) {
