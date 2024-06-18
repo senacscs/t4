@@ -73,6 +73,31 @@ header {
     text-align: center;
 
 }
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: gray;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+  
+  a:active {
+    color: gray;
+  } 
+  
+ul {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+p {
+    text-align: center;
+}
 }
 
 
@@ -147,4 +172,28 @@ header {
     
         text-align: center;
     
+}
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: gray;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+  
+  a:active {
+    color: gray;
+  }
+
+ul {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    text-align: center;
 }
