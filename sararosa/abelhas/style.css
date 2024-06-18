@@ -1,0 +1,42 @@
+body{
+    background-color:  #eee5c4;
+}
+hr{
+    height: 20px;
+    background-color:#453615;
+    border-color:#453615;
+}
+h5{ 
+    background-color: #453615;
+}
+h1{
+    color: #eee5c4;
+    text-align: center;
+    background-color: #453615;
+}
+img{ 
+    background-attachment: fixed;
+    background-color: #453615;
+    display: block;
+
+}
+strong{
+    color: #180809;
+}
+h2{
+color: #b0721e;
+text-align: center;
+}
+p{
+    color: #0c0000;
+}
+header{
+    background-color: #453615;
+    background-attachment: fixed;
+}
+.ods {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    pointer-events: none;
+}
