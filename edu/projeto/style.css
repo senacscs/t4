@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(15, 15, 68);
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+    font-style: italic;
+}
+
+.ods {
+    border: solid;
+    border-color: black;
+    block-size: auto;
+}
+
+.icone {
+    border-radius: 10px;
+
+}
+
+a {
+    color: whitesmoke
+}
+
+.referencias {
+    font-style: italic;
+    border: solid;
+    border-color: black;
+    margin-top: 5px;
+}
+
+iframe {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.celular {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.problema {
+    font-style: italic;
+}
+
+.pesquisa {
+    border: solid;
+    border-color: black;
+}
+
+.solucoes {
+    border: solid;
+    border-color: black;
+    margin-top: 5px;
+}
+
+.objetivo {
+    border: solid;
+    border-color: black;
+    margin-top: 10px;
+}
+
+.rodape {
+    background-color: black;
+    font-style: italic;
+}
