@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+}
+@media (min-width: 768px) {
+    body{
+        background-color: rgb(83, 147, 207);
+        font-size:large;
+    }
+}
+
+    body{
+        background-color: rgb(231, 95, 163);
+    }
+
+
+body{
+    background-color: rgb(185, 102, 102);
+}
+h1{
+ color: rgb(88, 3, 37);
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+section{
+    color: rgb(88, 3, 37);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255); 
+
+}
+h2,p{
+    color: white;
+    text-align: center;
+}
+h3{
+    color: rgb(88, 3, 37);
+    text-align: center;
+}
+
+h5{
+text-align: center;
+}
+a{
+    color: rgb(88, 3, 37);
+}
+footer{
+    background-color: rgb(141, 24, 63);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9px;
+   }
+   header{
+    background-color: rgb(141, 24, 63);
+    color: white;
+    font-family: Agency FB;
+    
+   }
+
+   @media (max-width: 768px) {
+    body{
+        background-color: rgb(83, 147, 207);
+        font-size:large;
+    }
+}
+
+    body{
+        background-color: rgb(231, 95, 163);
+    }
+
+
+body{
+    background-color: rgb(185, 102, 102);
+}
+h1{
+ color: rgb(88, 3, 37);
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+section{
+    color: rgb(88, 3, 37);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255); 
+
+}
+h2,p{
+    color: white;
+    text-align: center;
+}
+h3{
+    color: rgb(88, 3, 37);
+    text-align: center;
+}
+
+h5{
+text-align: center;
+}
+a{
+    color: rgb(88, 3, 37);
+}
+footer{
+    background-color: rgb(141, 24, 45);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9px;
+   }
+   header{
+    background-color: rgb(141, 24, 63);
+    color: white;
+    font-family: Agency FB;
+    
+   }
+
+  
