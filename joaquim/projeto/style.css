@@ -3,6 +3,7 @@ body {
     margin: 0;
     color: black;
     font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
 header {
@@ -26,7 +27,7 @@ a:hover, a:active, a:visited, a:link {
 }
 
 .texto {
-    width: 92%;
+    width: 97%;
     margin-left: 15px;
     text-align: justify;
 }
@@ -35,23 +36,27 @@ a:hover, a:active, a:visited, a:link {
     background-color: rgb(85, 137, 102);
     border-radius: 30px;
     margin-top: 15px;
-    width: 95%;
+    width: 50%;
     text-align: justify;
     /* display: inline-block; */
     margin-right: auto;
     margin-left: auto;
     border-style: solid;
-    border-color:black; 
+    border-color: black;
 }
 
 p {
-    margin-top: -18px;
+    margin-top: -20px;
+}
+
+h4 {
+    font-size: x-large;
 }
 
 .ladoalado {
-    display:flex;
-    justify-content: space-around;
- }
+    display: flex;
+    justify-content:center;
+}
 
 .fotos {
     max-height: 180px;
@@ -59,4 +64,6 @@ p {
     margin-top: 15px;
     border-radius: 15px;
     border-style: solid;
+    margin-left: 100px;
+    margin-right: 100px;
 }
