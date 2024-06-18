@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Meu projeto</title>
+</head>
+
+<body>
+    <ion-icon name="compass-outline" class="ope" id="ope"></ion-icon>
+    <header id="header">
+        <img src="imgs/Logo.png" alt="LOGO ODS &">
+        <nav>
+            <h2><a href="#inic">Inicio</a></h2>
+            <h2><a href="#prob">Problema</a></h2>
+            <h2><a href="#solu">Soluções</a></h2>
+            <h2><a href="#obje">Objetivo</a></h2>
+        </nav>
+        <ion-icon name="close-outline" class="clo" id="clo"></ion-icon>
+    </header>
+    <main>
+        <div class="ini" id="inic">
+            <div class="quaseh1"><a href="https://www.ipea.gov.br/ods/ods7.html" target="_blank"><b>ODS 7 ENERGIA LIMPA
+                        E ACESSÍVEL</b></a></div>
+            <div class="quaseh2">Meta 7.2: Até 2030, aumentar substancialmente a participação de <br> energias
+                renováveis na matriz energética global.</div>
+        </div>
+        <div class="problema card card1">
+            <div class="contp" id="prob">
+                <h1>Problema de pesquisa</h1>
+                <h3>Qual tipo de energia sustentável é mais eficiente e barata, para cada região e como acelerar a
+                    substituição de fontes energias não renováveis?</h3>
+            </div>
+        </div>
+        <div class="solucao card card2">
+            <div class="refs">
+                <a href="https://www.bing.com/chat?q=ideias+de+solu%c3%a7oes+para+o+ODS+7+meta+7.2&sendquery=1&FORM=SCCODX" target="_blank"><h1>Algumas solução existente</h1></a>
+                <div class="refeli">
+                    <p>01. Investimento em Energias Renováveis: Promover investimentos em fontes de energia limpa, como solar, eólica, hidrelétrica e biomassa. Isso inclui incentivar a instalação de painéis solares em residências, parques eólicos e usinas de biomassa. <br>
+                    02. Eficiência Energética: Melhorar a eficiência no uso da energia. Isso pode ser feito por meio de programas de conscientização, regulamentações para edifícios mais eficientes e incentivos para a adoção de tecnologias de economia de energia. <br>
+                    03. Eletrificação Rural com Energias Renováveis: Investir em eletrificação descentralizada em áreas rurais, utilizando fontes renováveis como mini-hidrelétricas, painéis solares e sistemas de biogás. Isso ajudaria a levar energia limpa a regiões isoladas2
+                    </p>
+                </div>
+            </div>
+            <div class="conts" id="solu">
+                <h1>Soluções Existentes</h1>
+                <h3>Ja existem diversas soluções semelhantes que provavelmente posso vir a usalas como fonte de
+                    informações, algumas delas são:</h3>
+            </div>
+        </div>
+        <div class="objetivo card card3">
+            <div class="conto" id="obje">
+                <h1>Objetivo do Projeto</h1>
+                <h3>Criar um site que mostre onde construir uma fonte de energia sustentável para ter maior eficiência e
+                    mostrar seus custos e benefícios. A fim de incentivar e facilitar a substituição para fontes de
+                    energia limpa.</h3>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <h2>Sites que eu usei de referencia:</h2>
+        <ul>
+            <li><a href="https://www.ipea.gov.br/ods/ods7.html" target="_blank">Ipea.gov.br</a></li>
+            <li><a href="https://www.bing.com/chat?q=ideias+de+solu%c3%a7oes+para+o+ODS+7+meta+7.2&sendquery=1&FORM=SCCODX" target="_blank">Copilot</a></li>
+        </ul>  
+    </footer>
+    <!-- ------------------------JAVA-SCRIPT------------------------ -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById("ope").addEventListener("click", function () {
+            document.getElementById("header").style.opacity = "1";
+            document.getElementById("header").style.display = "flex";
+            document.getElementById("ope").style.zIndex = "0";
+        });
+        document.getElementById("clo").addEventListener("click", function () {
+            document.getElementById("header").style.opacity = "0";
+            document.getElementById("header").style.display = "none";
+            ocument.getElementById("ope").style.zIndex = "9999";
+        });
+    </script>
+</body>
+
+</html>
