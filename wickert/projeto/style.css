@@ -37,7 +37,7 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0px; /* Ajuste conforme necessário */
+    bottom: 5px; /* Ajuste conforme necessário */
     width: 0;
     height: 2px;
     background-color: rgb(255, 255, 255); /* Cor do sublinhado */
@@ -132,7 +132,8 @@ nav h2 a:visited{
     text-align: left;
 }
 .contp {
-    width: 800px;
+    width: 50%;
+    min-width: 600px;
     margin-left: 50px;
     margin-right: auto;
 }
@@ -149,7 +150,8 @@ nav h2 a:visited{
     text-align: right;
 }
 .conts {
-    width: 500px;
+    width: 40%;
+    min-width: 300px;
     margin-left: auto;
     margin-right: 50px;
     margin-top: auto;
@@ -164,8 +166,9 @@ nav h2 a:visited{
     top: 0;
 }
 .conto {
-    width: 800px;
+    width: 50%;
     margin-left: 50px;
+    min-width: 600px;
     margin-right: auto;
     text-align: left;
 }
@@ -187,18 +190,18 @@ nav h2 a:visited{
     top: 32%;
 }
 .refeli {
-    width: 500px;
+    width: 100%;
     height: 200px;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 2px solid black;
     margin: auto 0 0 0;
     overflow-y: scroll;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgba(255, 196, 0, 0.384);
 }
 .refs {
     height: 250px;
-    width: 500px;
+    width: 50%;
     background-color: rgba(33, 33, 33, 0);
     border-radius: 15px;
     border: 2px solid black;
@@ -207,10 +210,12 @@ nav h2 a:visited{
     flex-wrap: wrap;
     backdrop-filter: blur(20px);
     justify-content: center;
+    min-width: 300px;
 }
 .refs a h1 {
     line-height: 2px;
     color: black;
+    font-size: 150%;
     transition: 0.5s;
 }
 .refs a {
@@ -225,5 +230,89 @@ hr {
 }
 footer {
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    .quaseh1 {
+        margin: 0 auto 0 auto;
+        text-align: center;
+        font-size: 7vw;
+        width: 80%;
+        line-height: 7vw;
+    }
+    .quaseh2 {
+        margin: 0 auto 0 auto;
+        text-align: center;
+        font-size: 3.5vw;
+        width: 80%;
+    }
+    #header {
+        width: 200px;
+        height: 220px;
+        display: block;
+        border-radius: 0 0 10px 0;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+    .clo {
+        margin: auto 0 0 auto;
+        border-radius: 10px;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+    }
+    nav {
+        display: block;
+        margin-left: 0;
+    }
+    nav h2, nav h2 a {
+        margin-right: auto;
+        text-align: left;
+        margin-top: 35px;
+        margin-left: -20px;
+        line-height: 5px;
+    }
+    .resp {
+        margin-top: 70px;
+    }
+    nav h2::before {
+        left: -19px;
+        bottom: -10px; /* Ajuste conforme necessário */
+        height: 3px;
+    }
+    .contp {
+        width: calc(100% - 10px);
+        margin-left: 10px;
+        min-width: 0;
+        margin-right: auto;
+    }
+    .conts {
+        width: 90%;
+        min-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -500px;
+        margin-bottom: auto;
+        text-align: center;
+    }
+    .solucao {
+        height: 600px;
+        display: block;
+        top: 0;
+    }
+    .conts h1, .conts h3 {
+        text-align: center;
+    }
+    .conto {
+        width: calc(100% - 10px);
+        margin-left: 10px;
+        min-width: 0;
+        margin-right: auto;
+    }
+    .refs a h1 {
+        font-size: 140%;
+    }
+    .refs {
+        width: 90%;
+    }
 }
 
