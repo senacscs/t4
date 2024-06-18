@@ -1,5 +1,5 @@
 body {
-    background-color: pink;
+    background-color: rgb(119, 119, 119);
 }
 
 hr {
@@ -9,13 +9,13 @@ hr {
 }
 
 h1 {
-    color: rgb(245, 6, 138);
+    color: rgb(0, 0, 0);
 }
 
 h2 {
     color: white;
 }
 
-li,a {
+li, a{
     color: white;
 }
