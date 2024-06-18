@@ -1,0 +1,146 @@
+body{
+    background-color: rgb(207, 207, 207);
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding: 15px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(38, 38, 38);
+    z-index: 1;
+    top: 0;
+}
+
+.ul {
+    list-style: none;
+    text-align: center;
+}
+.li {
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-top: -15px;
+    font-size: 30px;
+    padding: 2px 10px;
+    display: inline-block;
+    letter-spacing: 3px;
+}
+a:hover {
+    color: rgb(88, 189, 98);
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+.con{
+    /* width: 100%; */
+    flex-wrap: wrap;
+    display: inline-flex;
+    background-color:rgb(88, 189, 98);
+}
+.p1{
+    width: 40%;
+    margin-right: auto;
+    text-align: center; 
+    padding: 40px;
+    font-size: 30px;
+    /* transform: translateY(15%); */
+}
+.p2{
+    width: 40%;
+    margin-left: auto;
+    text-align: center;
+    padding: 40px 60px 40px 0;
+    font-size: 30px;
+}
+.s1{
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vw;
+    font-size: 30px;
+
+}
+.h{
+text-align: center;
+font-size: 40px;
+letter-spacing: 1px;
+padding-top: 4vw;
+}
+
+iframe{
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+.vid{
+    background-color: rgb(88, 189, 98);
+}
+li{
+   text-align: center;
+   font-size: 30px;
+   width: 40%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.hh{
+    text-align: initial;
+    width: 40%;
+    letter-spacing: 1px;
+    padding-top: 4vw;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hipoteses{
+    background-color: rgb(207, 207, 207);
+    font-size: 30px;
+    
+}
+P{
+    text-align: center;
+    
+}
+.obj{
+    background-color: rgb(88, 189, 98);
+    font-size: 30px;
+    text-align: center;
+}
+.pp{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hhh{
+    text-align: center;
+}
+footer{
+    background-color: rgb(38, 38, 38);
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
