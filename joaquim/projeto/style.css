@@ -15,7 +15,6 @@ header {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border-bottom-style: solid;
-    
 }
 
 nav {
@@ -55,12 +54,12 @@ a:hover, a:active, a:visited, a:link {
     border-color: black;
 }
 
-p {
+/* p {
     margin-top: -15px;
-}
+} */
 
 h4 {
-    margin-top: -15px;
+    margin-bottom: -15px;
     font-size: x-large;
 }
 
@@ -86,4 +85,15 @@ iframe {
     border-style: solid;
     margin-left: 140px;
     margin-right: 140px;
+}
+
+footer {
+        background-color: rgb(85, 137, 102);
+        width: 100%;
+        padding: 1px;
+        text-align: center;
+        border-top-style: solid;
+        margin-top: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
 }
