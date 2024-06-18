@@ -16,6 +16,7 @@ h1 {
     background-color: rgb(0, 0, 0);
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: auto;
 }
 h2 {
     text-align: center;
@@ -24,6 +25,7 @@ h2 {
     background-color: rgb(0, 0, 0);
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: auto;
 }
 h3 {
     text-align: center;
@@ -32,6 +34,7 @@ h3 {
     background-color: rgb(0, 0, 0);
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: auto;
 }
 h4 {
     text-align: center;
@@ -40,6 +43,7 @@ h4 {
     background-color: rgb(0, 0, 0);
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: auto;
 }
 h5 {
     text-align: center;
@@ -48,6 +52,7 @@ h5 {
     background-color: rgb(0, 0, 0);
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: auto;
 }
 h6 {
     text-align: center;
@@ -56,4 +61,5 @@ h6 {
     background-color: rgb(0, 0, 0);
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: auto;
 }
