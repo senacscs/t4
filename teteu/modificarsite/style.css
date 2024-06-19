@@ -1,0 +1,61 @@
+body{
+
+
+background-color: blue;
+background-repeat: no-repeat;
+background-size: cover;
+
+
+}
+p{
+
+ text-align: center;
+ font-size: xx-large;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+
+ 
+ section{
+     text-align: center;
+        border: solid 4px;
+        border-radius: 40px;
+        margin: 50px;
+       color: white ;
+       background-image: url(charlottelogo.jpg);
+      
+      
+
+}
+img{border-style: inset;
+    border-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 250px;
+    }
+    
+    p{
+
+
+        color:wheat
+    }
+    h2{
+
+
+        color: black;
+    } 
+    iframe{
+
+    margin-left: 325px;
+ 
+
+
+    }
+    a{
+        text-align: center;
+         margin-right: 150px;
+        color: aqua;
+    }
