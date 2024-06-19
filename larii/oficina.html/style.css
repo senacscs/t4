@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(138, 0, 0);
+   
+
+}
+
+h1 {
+    color: rgb(37, 102, 116);      
+    text-align: center;
+   font-style: italic;
+
+}
+
+h2 {
+    color: rgb(140, 169, 169);
+
+}
+
+p {
+    color: black;
+
+}
