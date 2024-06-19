@@ -52,7 +52,10 @@ a:visited {
     color: black;
 }
 .ex3, .ex4 {
-    margin-top: -140px;
+    margin-top: 20px;
+}
+.ex5 {
+    margin-top: 40px;
 }
 .ex:hover {
     background-color: rgb(149, 149, 149);
