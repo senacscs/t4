@@ -1,0 +1,335 @@
+@media (max-width: 768px) {
+
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url(fundo.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    header {
+        color: white;
+        text-align: center;
+        padding: 5px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 0 0 10px 10px;
+        padding: 60px;
+        background-position: center;
+        background-size: cover;
+        font-size: 55px;
+    }
+
+    @keyframes texto1 {
+        from {
+            transform: translateX(-900px);
+        }
+
+        to {
+            tranform: translateX (0);
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-item-left {
+        flex: 50%;
+    }
+
+    .flex-item-right {
+        flex: 50%;
+    }
+
+
+    .texto1 {
+        font-size: 25px;
+        margin: 0;
+        margin-top: 100px;
+        text-align: center;
+        padding: 20px 20px 30px 10px;
+        width: 30%;
+        margin-left: 50px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto1;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-900px);
+    }
+
+    @keyframes texto2 {
+        from {
+            transform: translateX(-300px);
+        }
+
+        to {
+            tranform: translateX (0px);
+        }
+    }
+
+    .texto2 {
+        font-size: 25px;
+        margin-left: 50px;
+        text-align: center;
+        padding: 20px 20px 30px 10px;
+        width: 40%;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto2;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-300px);
+    }
+
+    @keyframes texto3 {
+        from {
+            transform: translateX(-1800px);
+        }
+
+        to {
+            tranform: translateX (-900px);
+        }
+    }
+
+    .texto3 {
+        font-size: 25px;
+        margin-left: 500px;
+        text-align: center;
+        width: 50%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto3;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-900px);
+    }
+
+    @keyframes texto4 {
+        from {
+            transform: translateX(-1800px);
+        }
+
+        to {
+            tranform: translateX (-900px);
+        }
+    }
+
+    .texto4 {
+        font-size: 25px;
+        margin-left: 500px;
+        margin-bottom: 70px;
+        text-align: center;
+        width: 50%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto4;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-900px);
+    }
+
+    iframe {
+        margin-left: 450px;
+        margin-bottom: 30px;
+        border: 4px solid #000000;
+        border-radius: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        width: 98.65%;
+        bottom: 0;
+        background-color: rgb(12, 153, 31);
+        color: white;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url(fundo.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    header {
+        color: white;
+        text-align: center;
+        padding: 5px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 0 0 10px 10px;
+        padding: 60px;
+        background-position: center;
+        background-size: cover;
+        font-size: 55px;
+    }
+
+    @keyframes texto1 {
+        from {
+            transform: translateX(-900px);
+        }
+
+        to {
+            tranform: translateX (0);
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-item-left {
+        flex: 50%;
+    }
+
+    .flex-item-right {
+        flex: 50%;
+    }
+
+
+    .texto1 {
+        font-size: 25px;
+        margin: 0;
+        margin-top: 100px;
+        text-align: center;
+        padding: 20px 20px 30px 10px;
+        width: 30%;
+        margin-left: 50px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto1;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-900px);
+    }
+
+    @keyframes texto2 {
+        from {
+            transform: translateX(-300px);
+        }
+
+        to {
+            tranform: translateX (0px);
+        }
+    }
+
+    .texto2 {
+        font-size: 25px;
+        margin-left: 50px;
+        text-align: center;
+        padding: 20px 20px 30px 10px;
+        width: 40%;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto2;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-300px);
+    }
+
+    @keyframes texto3 {
+        from {
+            transform: translateX(-1800px);
+        }
+
+        to {
+            tranform: translateX (-900px);
+        }
+    }
+
+    .texto3 {
+        font-size: 25px;
+        margin-left: 500px;
+        text-align: center;
+        width: 50%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto3;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-900px);
+    }
+
+    @keyframes texto4 {
+        from {
+            transform: translateX(-1800px);
+        }
+
+        to {
+            tranform: translateX (-900px);
+        }
+    }
+
+    .texto4 {
+        font-size: 25px;
+        margin-left: 500px;
+        margin-bottom: 70px;
+        text-align: center;
+        width: 50%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(12, 153, 31);
+        border-radius: 20px;
+        animation-name: texto4;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal transform translateX(-900px);
+    }
+
+    iframe {
+        margin-left: 450px;
+        margin-bottom: 30px;
+        border: 4px solid #000000;
+        border-radius: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        width: 98.65%;
+        bottom: 0;
+        background-color: rgb(12, 153, 31);
+        color: white;
+        border-radius: 10px 10px 0 0;
+    }
+}
