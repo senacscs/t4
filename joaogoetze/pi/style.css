@@ -23,11 +23,10 @@
     border: 2px solid white;
     width: 80%;
     min-height: 150px;
-    margin: 10px; 
+    margin-left: auto;
+    margin-right: auto;
 
   }
-
-
     main {
       padding: 20px;
     }
@@ -44,7 +43,7 @@
       text-align: center;
       font-family: fantasy;
       position: relative;
-      width: 10%;
+      width: 25%;
     }
 
     footer {
@@ -53,11 +52,11 @@
       text-align: center;
       padding: 0%;
       position: fixed;
+      right: 0;
       bottom: 0;
       width: 5%;
       display: block;
     }
-
     .imagens {
       width: 150px;
     }
