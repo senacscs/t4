@@ -1,0 +1,30 @@
+body {
+    background-image: url("wallpaperbanana.jpg");
+    background-size: 1200px;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+
+img {
+    display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(71, 1, 29);
+}
+
+.banana {
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    margin-block: 20px;
+    border-radius: 20px;
+}
