@@ -1,0 +1,16 @@
+body {
+    background-image: url("img/esqueleto.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    margin: 10px;
+}
+
+h1,h2,p {
+   color: antiquewhite;
+
+}
