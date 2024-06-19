@@ -144,3 +144,12 @@ footer{
     letter-spacing: 2px;
     text-align: center;
 }
+@media (max-width: 650px){
+    iframe{
+        width: 450px;
+        height: 200px;
+    }
+    .nav{
+        font-size: 10px;
+    }
+}
