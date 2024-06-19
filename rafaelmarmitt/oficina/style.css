@@ -1,0 +1,98 @@
+body { 
+    margin:0px; padding:0px; 
+    background-color: beige;
+}
+
+header {
+    height: 200px;
+    z-index: 10;
+    top: 0;
+    position: sticky;
+}
+.header-banner {
+    background-color: #333;
+    background-image: url(banner-gato.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+header h1 {
+    background-color: rgb(11, 28, 43);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem; 
+    left: 2rem;
+}
+
+.fixed-header {
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: #292f36;
+    position: fixed;
+    z-index: 10;
+}
+
+nav div {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    visibility: hidden;
+}
+.visible-title {
+    visibility: visible;
+}
+
+nav ul { 
+    list-style-type: none;
+    margin: 0 2% auto 0;
+    padding-left: 0;
+    text-align: right;
+    max-width: 100%;
+}
+nav ul li { 
+    display: inline-block; 
+    line-height: 90px;
+    margin-left: 10px;
+}
+nav ul li a {
+    text-decoration: none; 
+    color: #a9abae;
+}
+
+/* demo content */
+body { 
+    color: #09203a;
+    font-family: helvetica;
+    line-height: 1.6;
+    text-align: center;
+}
+
+hr {
+   background-color: #292f36;
+   height: 100px;
+
+}
+
+li {
+    font-size: 20px;
+}
+
+img {
+    border-radius: 20px;
+    border-color:rgb(11, 28, 43);
+    border-style: solid;
+}
