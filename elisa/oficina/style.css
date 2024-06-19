@@ -86,16 +86,3 @@ h1, h2 {
 .pp, .cai{
     color: rgb(3, 2, 2);
 }
-p{
-    color: white;
-    font-family: French Script MT;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h2{
-    color: white;
-    font-family: French Script MT;
-    margin-left: auto;
-    margin-right: auto;
-}
