@@ -1,0 +1,79 @@
+.cabeçalho {
+    text-align: center;
+    font-size: 30px;
+    height: 35px;
+    color: black;
+    font-family: impact, serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(159, 234, 116);
+    border-radius: 10px;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    right: 9px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("verde.jpg");
+    background-size: 1260px;
+}
+
+.texto {
+    position: relative;
+    top: 150px;
+    left: 120px;
+    text-align: center;
+    background-color: rgb(150, 230, 96);
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.texto:hover {
+box-shadow: 0 0 30px 0 greenyellow;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h2 {
+    position: relative;
+    bottom: 20px;
+}
+
+.linkobjetivos {
+    position: relative;
+    bottom: 25px;
+}
+
+.link1 {
+    position: relative;
+    right: 300px;
+}
+
+.link2 {
+    position: relative;
+    right: 200px;
+}
+
+.link3 {
+    position: relative;
+    left: 300px;
+}
+
+.link4 {
+    position: relative;
+    right: 00px;
+}

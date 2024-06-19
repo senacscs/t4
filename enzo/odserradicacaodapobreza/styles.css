@@ -1,0 +1,81 @@
+body {
+    background-image: url("image.png");
+    background-size: 1260px;
+}
+
+.cabeçalho {
+    text-align: center;
+    font-size: 30px;
+    height: 35px;
+    color: black;
+    font-family: impact, serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    right: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.home {
+    font-size: 20px;
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    
+}
+
+h2 {
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-style: italic;
+}
+
+.Hometext {
+    position: relative;
+    top: 80px;
+}
+
+img {
+ width: 500px;   
+ height: 300px;
+ position: relative;
+ left: 350px;
+}
+
+.link1 {
+    position: relative;
+    right: 300px;
+}
+
+.link2 {
+    position: relative;
+    right: 200px;
+}
+
+.link3 {
+    position: relative;
+    left: 300px;
+}
+
+.link4 {
+    position: relative;
+    right: 00px;
+}

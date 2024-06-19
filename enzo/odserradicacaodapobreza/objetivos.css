@@ -1,0 +1,106 @@
+.cabeçalho {
+    text-align: center;
+    font-size: 30px;
+    height: 35px;
+    color: black;
+    font-family: impact, serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(300, 30, 0);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    right: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("fundositevermelho.jpg");
+    background-size: 1260px;
+}
+
+.texto {
+    position: relative;
+    top: 60px;
+    left: 120px;
+    text-align: center;
+    background-color: rgb(300, 30, 0);
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 20px 0 black;
+
+}
+
+.texto:hover {
+box-shadow: 0 0 30px 0 red;
+}
+
+h2 {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.prob1 {
+    position: relative;
+    bottom: 30px;
+}
+
+.prob2 {
+    position: relative;
+    bottom: 30px;
+}
+
+.prob3 {
+    position: relative;
+    bottom: 30px;
+}
+
+.prob4 {
+    position: relative;
+    bottom: 30px;
+}
+
+.prob5 {
+    position: relative;
+    bottom: 30px;
+}
+
+.link1 {
+    position: relative;
+    right: 300px;
+}
+
+.link2 {
+    position: relative;
+    right: 200px;
+}
+
+.link3 {
+    position: relative;
+    left: 300px;
+}
+
+.link4 {
+    position: relative;
+    right: 00px;
+}
