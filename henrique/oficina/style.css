@@ -1,0 +1,31 @@
+body{
+        background-color:aquamarine;
+}
+    
+h1 {
+        color: violet;
+        background-color: gainsboro;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    
+h2 {
+        color:chartreuse;
+        background-color: azure;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3{
+        color: darkorange;
+        background-color: azure;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    
+p {
+        color: crimson;
+        background-color: white;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
