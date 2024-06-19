@@ -1,5 +1,5 @@
 p{
-   color: black;
+   color: whitesmoke;
    text-align: center; 
    font-size: xx-large;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -9,11 +9,10 @@ p{
 }
 body{
 
-background-color: darkcyan;
+background-color:black;
 text-align: center;
 font-size: xx-large;
    font-family:'Times New Roman', Times, serif 
-
 
 }
 
@@ -34,9 +33,13 @@ hr{
 
    height: 20px;
 }
+
 section{
 
-color: black;
-
-
+   text-align: center;
+   border: solid 4px;
+   border-radius: 40px;
+   margin: 50px;
+  color: white;
+ 
 }
