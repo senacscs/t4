@@ -1,0 +1,90 @@
+body {
+    background-color: orangered;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ 
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+    nav{
+        background-color: orange;
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+    }
+    nav li a{
+        color: orangered;
+        text-decoration: none;
+        padding: 15px;
+        display: inline-block;
+    }
+    nav li a:hover{
+        background-color: rgb(7, 228, 40);
+    }
+    .dropdown-menu a{
+        display: block;
+        color: green;
+    }
+    p{
+        color: whitesmoke;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: xx-large;
+    }
+    h1{
+
+   color: whitesmoke;
+   font-size: xx-large;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   p{
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    }
+
+ }
+
+img{
+border-style: inset;
+border-bottom: 10px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+height: 150px;
+width: 150px;
+
+
+
+
+}
+section{
+  text-align: center;
+  border: solid 4px;
+  border-radius: 40px;
+  margin: 50px;
+ color: white ;
+
+
+}
+h2{
+ color: white;
+ text-align: center;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-size: xx-large;
+
+
+}
+.fl {
+    display: flex;
+    margin: auto;
+}
+.fl1 {
+    margin-right: 5px;
+}
+.fl2 {
+    margin-left: 5px;
+}
