@@ -1,0 +1,118 @@
+body {
+    background-image: url(https://img.freepik.com/fotos-premium/fundo-de-marmore-branco-da-textura-textura-de-marmore-abstrata-testes-padroes-naturais-para-o-projeto_41389-491.jpg);
+    color: rgba(56, 38, 38, 0.902);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+  }
+  .center {
+    text-align: center;
+    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJCUiJyUtJTI1Mj8oKSo0NTY3OD9AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQED/2wBDARUXFx4aHjshITs0NT0+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj5/wAARCAECAAYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcIB//xAAWAQEBAQAAAAAAAAAAAAAAAAACAwT/xAAaEQEBAAICAQUAAAAAAAAAAAABAAIDERIxQVFxgZGh8P/aAAwDAQACEQMRAD8Ayv5BRFCjUCvuhd6SApWDZwtT/LVVVxTSi39zItVZ5C1RRRVUKxlRRRWB//9k=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2d1e24;
+  }
+  h1, h2, h3{ 
+  padding-top: 5px; 
+  font-size: 25pt;  
+  }
+  h1:hover, h2:hover, h3:hover {
+  text-shadow: 2px 2px 10px  #2d1e24
+  }
+  h1, h2 {
+  background-color:  rgb(55, 44, 51);
+  font-size: 20pt;
+  }
+  img {
+  margin: auto;
+  display: block;
+  }
+  p {
+  font-family: monospace;
+  font-size: 14pt;
+  }
+  h3 {
+  font-size: 20pt;
+  font-family: cursive;   
+  }
+  ol {
+  font-family: monospace;  
+  font-size: 14pt;
+  }
+  ul {
+  font-family: monospace;  
+  font-size: 14pt; 
+  }
+  .imagem-redonda {
+    border-radius: 50%;
+  }
+  h3 {
+    border: 2px solid rgb(34, 17, 29);
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .expli{
+    text-align: right;
+    width: 400px;
+    display: flex;
+  }
+
+  @media(max-width: 200px){}
+    body {
+      background-image: url(https://img.freepik.com/fotos-premium/fundo-de-marmore-branco-da-textura-textura-de-marmore-abstrata-testes-padroes-naturais-para-o-projeto_41389-491.jpg);
+      color: rgb(44, 13, 13);
+      font-family: 'Courier New', Courier, monospace;
+      padding: 30px;
+    }
+    .center {
+      text-align: center;
+      background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJCUiJyUtJTI1Mj8oKSo0NTY3OD9AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQED/2wBDARUXFx4aHjshITs0NT0+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj5/wAARCAECAAYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcIB//xAAWAQEBAQAAAAAAAAAAAAAAAAACAwT/xAAaEQEBAAICAQUAAAAAAAAAAAABAAIDERIxQVFxgZGh8P/aAAwDAQACEQMRAD8Ayv5BRFCjUCvuhd6SApWDZwtT/LVVVxTSi39zItVZ5C1RRRVUKxlRRRWB//9k=);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #e3146e92
+    }
+    h1, h2, h3{ 
+    padding-top: 5px; 
+    font-size: 25pt;  
+    }
+    h1:hover, h2:hover, h3:hover {
+    text-shadow: 2px 2px 10px  #dc146b
+    }
+    h1, h2 {
+    background-color:  rgba(246, 88, 185, 0.411);
+    font-size: 20pt;
+    }
+    img {
+    margin: auto;
+    display: block;
+    }
+    p {
+    font-family: monospace;
+    font-size: 14pt;
+    }
+    h3 {
+    font-size: 20pt;
+    font-family: cursive;   
+    }
+    ol {
+    font-family: monospace;  
+    font-size: 14pt;
+    }
+    ul {
+    font-family: monospace;  
+    font-size: 14pt; 
+    }
+    .imagem-redonda {
+      border-radius: 50%;
+    }
+    h3 {
+      border: 2px solid rgb(255, 5, 176);
+      padding: 5px;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .expli{
+      text-align: right;
+      width: 400px;
+      display: flex;
+    }
