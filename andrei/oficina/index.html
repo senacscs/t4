@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gato</title><!--Mude o "Hello Word" para trocar o titulo da página-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body{
+    text-align: center;
+  }
+
+</style>
+ 
+<body>
+ 
+    <h1>GATO</h1>
+    <!--MUDE O TEXTO DA TAG H1 PARA "Esse é meu site"-->
+ 
+    <img src="https://i0.statig.com.br/bancodeimagens/71/n7/7f/71n77fjiwo437zctuazsc6ob0.jpg"
+        alt="Gato filhote listrado branco e cinza sentado olhando para a frente">
+    <!--TROQUE O LINK DAS ASPAS DO SRC COLOQUE UMA NOVA IMAGEM DA INTERNET COPIANDO O ENDEREÇO DA IMAGEM-->
+    <!--E NA TAG ALT DESCREVA O QUE VOCÊ VÊ NA IMAGEM-->
+ 
+    <p>Este site foi feito na aula do Ensino Médio Senac Santa Cruz do Sul</p>
+    <!--SE QUISER PODE MODIFICAR-->
+ 
+    <h2>Site feito por
+        Andrei Gustavo Kohls
+    </h2>
+ 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+ 
+</html>

@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    background-color: rgb(196, 193, 193);
+    background-image: url("https://th.bing.com/th/id/R.a41c51e22f976f094b7916d657a0daeb?rik=FC3rFN7FjFgHlw&pid=ImgRaw&r=0");
+    background-size: 1000px;
+}
+h1 {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+img {
+    margin: 20px; 
+    background-color: black; 
+    padding: 50px;
+}
+h2 {
+    background-color: black;
+    color: white;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+p {
+    background-color: black;
+    color: white;
+    margin-left: 300px;
+    margin-right: 300px;
+}
