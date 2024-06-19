@@ -1,0 +1,58 @@
+body {
+    background-image: url(imagens/fundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 30%;
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+.carta {
+    width: 90%;
+    height: 600px;
+    background-color: black;
+    border-radius: 30px;
+    box-shadow: 0 0 20px;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
