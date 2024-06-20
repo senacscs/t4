@@ -44,8 +44,12 @@ a:hover {
     left: 440px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 20px 0 blue;
+    box-shadow: 0 0 30px 0 blue; 
     background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+}
+
+.container:hover {
+    box-shadow: 0 0 40px 0 purple;
 }
 
 .ods {
@@ -56,4 +60,33 @@ a:hover {
 .indicacoeshtml {
     position: relative;
     bottom: 10px;
+}
+
+.olamundo {
+    position: relative;
+    bottom: 10px;
+}
+
+.indicacoescss {
+    position: relative;
+    bottom: 25px;
+}
+
+.indicacoeshtml {
+    position: relative;
+    bottom: 35px;
+}
+
+.ods {
+    position: relative;
+    bottom: 25px;
+}
+
+.curriculo {
+    position: relative;
+    bottom: 10px;
+}
+
+.oficina {
+    position: relative;
 }
