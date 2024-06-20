@@ -10,10 +10,11 @@ header {
     top: 0;
     z-index: 1000;
     font-size: 35px;
+    border-radius: 10px;
 }
 
 body {
-    background-image: url("fundodesitebranco.jpg");
+    background-image: url("image.png");
     background-size: 1280px;
 }
 
@@ -21,6 +22,7 @@ h1 {
     position: relative;
     top: 50px;
     text-align: center;
+    color: white;
 }
 
 a {
@@ -40,16 +42,16 @@ a:hover {
     width: 30%;
     background-color: gray;
     position: relative;
-    top: 90px;
-    left: 440px;
+    top: 100px;
+    left: 360px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 30px 0 blue; 
+    box-shadow: 0 0 40px 0 black; 
     background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
 }
 
 .container:hover {
-    box-shadow: 0 0 40px 0 purple;
+    box-shadow: 0 0 50px 0 blue;
 }
 
 .ods {
@@ -89,4 +91,17 @@ a:hover {
 
 .oficina {
     position: relative;
+}
+
+.fundo {
+    position: relative;
+    top: 90px;
+    background-color: blue;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
 }
