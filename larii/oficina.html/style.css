@@ -20,3 +20,7 @@ p {
     color: black;
 
 }
+
+img:hover {
+    width: 330px;
+}
