@@ -1,0 +1,70 @@
+img {
+    width: 200px;
+}
+
+head, body {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, p {
+    font-style: italic;
+    text-align: center;
+}
+
+body { 
+    background-image: url("wallpaperdisney.jpeg");
+    background-size: 1550px;
+}
+
+h1 {
+    margin-top: 30px;
+    color: rgb(37, 172, 24);
+}
+
+h2 {
+    color: rgb(143, 161, 177);
+    font-size: 30px;
+    background-color: rgba(21, 102, 168, 0.555);
+    margin-top: 0;
+}
+
+a{
+    color: rgb(255, 255, 255);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: rgb(41, 101, 143);
+    color: rgb(154, 171, 186);
+    padding: 30px ;
+    text-align: center;
+    font-size: 50px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(246, 246, 246);
+    text-decoration: none;
+    padding: 0 10px;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+}
