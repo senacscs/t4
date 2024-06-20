@@ -62,12 +62,59 @@ body {
     display: flex;
   }
 
+  .menu{
+    color: #f20069ad;
+  }
+  
+  .menu a:hover {
+    color: rgb(234, 81, 158);
+  }
+  
+  .menu a:active {
+    color: rgb(210, 122, 187);
+  }
+
+  .menu a:visited {
+    color: rgb(211, 7, 85);
+  }
+  
+ .menu a:link {
+    text-decoration: none;
+  }
+  
+  .menu a:visited {
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu a:active {
+    text-decoration: underline;
+  }
+
+  .sobre-projeto{
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        text-align: start;
+ 
+    }
+  
+
+    
+
   @media(max-width: 728px){}
     body {
       background-image: url(https://img.freepik.com/fotos-premium/fundo-de-marmore-branco-da-textura-textura-de-marmore-abstrata-testes-padroes-naturais-para-o-projeto_41389-491.jpg);
-      color: rgb(44, 13, 13);
+      color: rgb(11, 3, 3);
       font-family: 'Courier New', Courier, monospace;
       padding: 30px;
+    }
+    .image{
+      width: 200px;
+      position: relative;
     }
     .center {
       text-align: center;
@@ -119,8 +166,8 @@ body {
         display: inline-block;
         vertical-align: top;
         width: 30%;
-        text-align: start;
- 
+      text-align: start;
+        
     }
 
     .menu{
