@@ -1,7 +1,7 @@
 h1{
-    border: 2px solid rgb(232, 21, 162);
+    border: 2px solid rgb(241, 68, 184);
     text-align: center;
-    background-color: rgb(249, 38, 137);
+    background-color: rgb(221, 69, 140);
     width: 60%;
     border-radius: 15px;
     margin-left: auto;
@@ -12,10 +12,10 @@ h3{
     
 }
 div{
-    height: 20px;
-    left: 10px;
-    background-color: rgb(246, 24, 135);
-    width: 250px;
+    height: 110px;
+    left: 180px;
+    background-color: rgb(255, 83, 169);
+    width: 400px;
     margin: 10px auto 10px auto;
     border-radius: 10px;
     
@@ -31,4 +31,9 @@ a:visited{
 }
 body{
     background-color: rgb(156, 10, 61);
+}
+header{
+    background-color: rgb(226, 43, 171);
+    color: white;
+    font-family: Agency FB;
 }
