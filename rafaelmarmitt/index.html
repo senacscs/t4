@@ -1,25 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link href="style.css" rel="stylesheet"/>
-</head>
-<body class="menu">
-    <header class="title"><br>Index dos sites do primeiro ano<p class="subtitulo">Rafael Brochier Marmitt</p></header>
-    <div class="back">
-    <br>
-    <br>
-    <a  type="_self" href="indicacoeshtml/"><button>Indicações HTML</button></a>
-    <br><br>
-    <a  type="_self" href="indicacoescss/"><button>Indicações CSS</button></a>
-    <br><br>
-    <a  type="_self" href="olamundo/"><button>Olá Mundo</button></a>
-    <br><br>
-    <a  type="_self" href="responsaveis/"><button>Responsáveis</button></a>
-    <br><br>
-    <a  type="_self" href="pi/"><button>Site projeto PI</button></a>
-</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=aktura@400&display=swap" rel="stylesheet">
+
+<body>
+ <div class="activity"></div>
+ <div class="vignette"></div>
+
+ <h3 class="nav-title _1" ><a href="#hello">PRIMEIRO ANO DO ENSINO MÉDIO</a></h3>
+ <h3 class="nav-title _2" ><a href="#studio">PROJETOS</a></h3>
+ <h3 class="nav-title _3" ><a href="#contact">CONTATOS</a></h3>
+ <div class="cursor"></div>
+
+ <div id="toggle-theme">
+  <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.384"></g><g> <path d="M3.5 13L3.29592 12.0476C2.62895 8.93509 5.00172 6 8.18494 6H19M19 6L16 9M19 6L16 3M20.5 11L20.7041 11.9524C21.3711 15.0649 18.9983 18 15.8151 18H5M5 18L8 15M5 18L8 21" stroke="#000000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+ </div>
+
+ <div class='btn-fullscreen' id='fullscreen-mode'>
+  <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1.4em' height='1.4em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 17 17'>
+   <g fill='' fill-rule='evenodd'>
+    <path d='M3 5h12v8H3z'/>
+    <path d='M3.918 14.938H1v-2.876h1v1.98h1.918v.896z'/>
+    <path d='M17 14.938h-2.938v-.896H16v-1.984h1v2.88z'/>
+    <path d='M17 5.917h-1v-1.95h-1.943v-.946H17v2.896z'/>
+    <path d='M2 5.938H1V3h2.938v.938H2v2z'/>
+   </g>
+  </svg>
+ </div>
+
+
+ <section id="hello">
+  <div class="section-content">
+   <h2 class="title">SENAC SANTA-CRUZ</h2>
+   <h3 class="headline centered">INDEX RAFAEL</h3>
+   <svg id="svg-globe" class="" height="256px" width="256px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <path class="svg-globe-path" d="M511.878,247.973l-21.488,0.672l21.488-0.68c-2.168-69.219-31.732-131.348-77.876-175.949 C387.882,27.377,324.93-0.004,256.13,0.004c-2.718,0-5.443,0.046-8.176,0.13h0.016C178.743,2.294,116.622,31.858,72.013,78.002 C27.382,124.122,0,187.074,0,255.874c0,2.709,0.046,5.435,0.13,8.16c2.168,69.22,31.732,131.347,77.875,175.949 c46.113,44.632,109.065,72.02,177.865,72.013c2.694,0,5.42-0.038,8.16-0.13c69.227-2.16,131.355-31.724,175.957-77.876 c44.64-46.121,72.021-109.065,72.013-177.857C512,253.416,511.962,250.699,511.878,247.973z M102.921,107.894 c19.64-20.29,43.274-36.647,69.67-47.891c-10.961,15.77-20.336,34.426-28.045,55.304H96.089 C98.303,112.779,100.585,110.306,102.921,107.894z M75.692,142.664h60.112c-8.282,30.212-13.327,63.906-14.365,99.661H43.472 C45.77,205.914,57.243,171.938,75.692,142.664z M75.647,369.344c-18.351-29.121-29.808-63.044-32.144-99.661h78.028 c1.046,35.732,5.954,69.471,14.236,99.661H75.647z M107.898,409.083c-4.091-3.962-7.984-8.114-11.748-12.381h48.442 c4.099,11.091,8.579,21.67,13.594,31.396c4.405,8.518,9.16,16.487,14.252,23.847C148.37,441.654,126.523,427.082,107.898,409.083z M242.329,468.524c-5.931-0.374-11.809-0.946-17.603-1.801c-2.404-1.573-4.809-3.282-7.213-5.236 c-16.381-13.313-31.778-35.831-43.694-64.784h68.51V468.524z M242.329,369.344h-78.15c-8.794-29.411-14.267-63.365-15.381-99.661 h93.531V369.344z M242.329,242.325h-93.448c1.115-36.327,6.618-70.235,15.42-99.661h78.028V242.325z M242.329,115.306h-68.433 c2.71-6.588,5.542-12.954,8.595-18.84c10.298-19.969,22.404-35.647,35.022-45.945c2.366-1.924,4.732-3.604,7.099-5.16 c5.832-0.862,11.74-1.48,17.717-1.863V115.306z M436.369,142.664c18.351,29.128,29.8,63.044,32.136,99.661h-78.02 c-1.046-35.732-5.954-69.471-14.236-99.661H436.369z M404.11,102.917c4.092,3.961,7.985,8.114,11.756,12.389h-48.441 c-4.099-11.092-8.58-21.672-13.596-31.396c-4.412-8.527-9.167-16.496-14.267-23.847C363.63,70.353,385.484,84.918,404.11,102.917z M269.687,43.476c5.924,0.374,11.801,0.954,17.587,1.802c2.412,1.58,4.824,3.282,7.229,5.244 c16.381,13.32,31.778,35.823,43.686,64.784h-68.502V43.476z M269.687,142.664h78.15c8.794,29.411,14.267,63.364,15.381,99.661 h-93.531V142.664z M269.687,269.683h93.448c-1.114,36.327-6.618,70.242-15.42,99.661h-78.028V269.683z M329.525,415.534 c-10.297,19.976-22.412,35.655-35.022,45.953c-2.359,1.924-4.725,3.595-7.091,5.152c-5.832,0.863-11.74,1.481-17.725,1.862v-71.799 h68.426C335.402,403.289,332.57,409.648,329.525,415.534z M409.087,404.106c-19.64,20.29-43.266,36.64-69.655,47.884 c10.962-15.771,20.328-34.419,28.037-55.288h48.449C413.698,399.22,411.423,401.694,409.087,404.106z M436.308,369.344h-60.105 c8.29-30.206,13.336-63.906,14.374-99.661h77.952C466.23,306.086,454.757,340.07,436.308,369.344z"></path> </g> </g></svg>  </div>
+  <div id="img-bkg"></div>
+ </section>
+
+ <section id="studio">
+  <div class="section-content">
+   <h2 class="title">ESTÚDIO</h2>
+   <h2 class="subtitle">PROJETOS</h2>
+<!--   <h3 class="headline centered">STUDIO</h3> -->
+   <div class="cards-container">
+
+     <div class="card">
+      <h2>Indicações HTML</h2>
+      <p>Site para aprender a base da linguagem HTML.
+      </p>
+      <h3 class="btn-more" ><a target="_blank" href="/indicacoeshtml/">+ ACESSO</a></h3>
+     </div>
+
+     <div class="card">
+      <h2>Indicações CSS</h2>   
+      <p>Site para aprender a base da linguagem CSS
+      <p>
+      <h3 class="btn-more" ><a target="_blank" href="/indicacoescss/">+ ACESSO</a></h3>
+     </div>
+
+     <div class="card">
+      <h2>Site Hello World</h2>
+      <p>Primeiro site feito por mim, é muito gratificante ver minha evolução rápida neste ano
+      <p>
+      <h3 class="btn-more" ><a target="_blank" href="/olamundo/">+ ACESSO</a></h3>
+     </div>
+
+     <div class="card">
+      <h2>Site dos Responsáveis</h2>
+      <p>Site feito para meus famíliares, objetivo de mostrar momentos importantes nossos
+      <p>
+      <h3 class="btn-more" ><a target="_blank" href="/responsaveis/">+ ACESSO</a></h3>
+     </div>
+
+     <div class="card">
+      <h2>Projeto</h2>
+      <p>Site feito para mostrar nosso projeto de pesquisa, do componente Projeto Integrador, meu projeto é sobre um APP para melhorar a triagem de um centro de Idosos, minha criação.
+      <p>
+      <h3 class="btn-more" ><a target="_blank" href="/pi/">+ ACESSO</a></h3>
+     </div>
+
+     <div class="card">
+      <h2>Site oficina da zoeira</h2>   
+      <p>Site feito como uma brincadeira na aula de técnico, o objetivo era customizar o máximo possível um mesmo arquivo simples, fiz uma página de curiosidades de gatos com uma galeria de fotos
+      <p>
+      <h3 class="btn-more" ><a target="_blank" href="/oficina/">+ ACESSO</a></h3>
+     </div>
+
+
+<!-- QUEBREI O CÓDIGO PARA NÃO APARECER ENQUANTO NÃO TIVER CONTEÚDO PARA AS OUTRAS ABAS-->
+     <div class="card>
+      <h2></h2>
+      <p>
+      <p>
+      <h3 class="btn-more ><a href="#">+ MORE</a></h3>
+     </div>
+
+     <div class="card>
+      <h2>EXTRA</h2>
+      <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!
+      <p>
+      <h3 class="btn-more ><a href="#">+ MORE</a></h3>
+     </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <div class="section-content">
+   <h2 class="title">CONTATOS</h2>
+   <p>Email: marmittrb@gmail.com</p>
+   <p>Whatsapp: (51)999237493</p>
+   <h3 class="headline centered">CONTATOS</h3>
+  </div> 
+
+  <svg width="0" height="0">
+   <defs id="defs1">
+    <filter id="turbulence-effect">
+     <feTurbulence type="fractalNoise" baseFrequency="0.002" numOctaves="1" seed="1" result="noise">
+      <animate attributeName="baseFrequency" values="0.002;0.01;0.002" dur="20s" repeatCount="indefinite"/>
+     </feTurbulence>
+     <feDisplacementMap in="SourceGraphic" in2="noise" scale="80"> 
+      <animate attributeName="scale" values="80; 120; 80" dur="10s" repeatCount="indefinite" />
+     </feDisplacementMap>
+    </filter>
+
+
+    <filter id="pixelate-effect" x="0" y="0">
+     <feFlood x="4" y="4" height="2" width="2"/>    
+     <feComposite width="12" height="16"/>
+     <feTile x="0" y="0" width="1080" height="1080"  result="c"/>
+     <feComposite in="SourceGraphic" in2="c" operator="in"/>
+     <feMorphology operator="dilate" radius="3"/>
+     <feMorphology operator="dilate" radius="1"/>
+     
+    </filter>
+
+    <filter id="pixelate-effect-sm" x="0" y="0">
+     <feFlood x="4" y="4" height="1" width="1"/>    
+     <feComposite width="4" height="4"/>
+     <feTile x="0" y="0" width="108" height="108"  result="c"/>
+     <feComposite in="SourceGraphic" in2="c" operator="in"/>
+     <feMorphology operator="dilate" radius="1"/>
+    </filter>    
+
+    <filter style="color-interpolation-filters:sRGB" id="lines-effect">
+     <feConvolveMatrix in="SourceGraphic" kernelMatrix="0 250 0 250 -1338 250 0 250 0" order="3 3" result="convolve" id="feConvolveMatrix296" />
+     <feBlend in="convolve" in2="SourceGraphic" mode="multiply" result="blend" id="feBlend296" />
+     <feTurbulence
+                   type="turbulence"
+                   baseFrequency="0.25 0.0"
+                   numOctaves="1"
+                   seed="6"
+                   result="turbulence"
+                   id="feTurbulence296">
+      <animate attributeName="baseFrequency"                       
+               values="0.23 0.0; 0.1 0.0; 0.25 0.0; 0.2 0.0';"
+               dur="1s" 
+               repeatCount="indefinite" />
+     </feTurbulence>
+     <feColorMatrix
+                    in="blend"
+                    type="luminanceToAlpha"
+                    result="colormatrix1"
+                    id="feColorMatrix296" />
+     <feComposite in="turbulence" in2="colormatrix1" k1="5.75851" k2="0.835913" k4="0.0853659" operator="arithmetic" result="composite1" id="feComposite296" k3="0" />
+     <feColorMatrix in="composite1" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -9 " result="colormatrix2" id="feColorMatrix297" />
+     <feGaussianBlur stdDeviation="0.0" result="blur" id="feGaussianBlur297" />
+     <feFlood flood-color="rgb(0,0,0)" flood-opacity="1" result="flood1" id="feFlood297" />
+     <feComposite in="flood1" in2="blur" operator="out" result="composite2" id="feComposite297" />
+     <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="flood2" id="feFlood298" />
+     <feComposite in="flood2" in2="blur" operator="in" result="composite3" id="feComposite298" />
+     <feComposite in="composite3" in2="composite2" k2="1" k3="1" operator="arithmetic" result="composite4" id="feComposite299" k1="0" k4="0"/>
+     <feComposite in2="SourceGraphic" operator="in" result="composite5" id="feComposite300" /></filter>
+
+
+   </defs></svg>
+
+  <footer><h2 id="year"></h2></footer>
+
+ </section>
 </body>
-</html>
