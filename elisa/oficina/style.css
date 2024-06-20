@@ -7,10 +7,6 @@ body {
 
 }
 
-p{
-    color:rgb(121, 204, 253)
-}
-
 .tit{
     background-color: white;
     width: 100%;
@@ -28,6 +24,8 @@ h1, h2 {
     background-color: white;
     text-align: center;
     padding: 12px;
+    font-family: Lucida Handwriting;
+    color: rgb(121, 204, 253);
 
 }
 
