@@ -24,7 +24,7 @@ body {
         display: inline-block;
     }
     nav li a:hover{
-        background-color: rgb(7, 228, 40);
+        background-color: rgb(3, 57, 181);
     }
     .dropdown-menu a{
         display: block;
@@ -35,10 +35,11 @@ body {
     }
     h2{
         color: aliceblue;
+        text-align: center;
     }
     img{
         width: 100%;
-        height: 500px;
+        height: 350px;
     }
     section{
         text-align: center;
@@ -47,6 +48,12 @@ body {
         margin: 50px;
         color: rgb(17, 223, 238);
         background-color: blue;
+    }
+    a{
+        color: antiquewhite;
+    }
+    ul{
+        color: white;
     }
 
     
