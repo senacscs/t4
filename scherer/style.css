@@ -1,7 +1,21 @@
 body{
-    background-color: black;
+    background-color: rgb(248, 246, 246);
 }
 h1{
     color: beige;
 }
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+}
+a{
+    text-align: center;
+    color: black;
+}
+
+
+
 
