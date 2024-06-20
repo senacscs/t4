@@ -19,6 +19,12 @@
     <div class="cont" id="conte">
         <section class="foto">
             <img src="img/eu2.png" alt="Foto de Iuri Machado Wickert" class="perfil">
+
+            <div class="veja">
+                <a href="img/eu2.png" target="_blank">
+                    <h2>Me analise melhor.</h2>
+                </a>
+            </div>
             <div class="redes">
                 <a href="https://www.instagram.com/iuri.m.w/?next=%2F" target="_blank">
                     <div class="soci soci1">
@@ -130,27 +136,13 @@
         </div>
         <div class="expe">
             <h1><ion-icon name="briefcase-outline" class="tititi"></ion-icon> | Experiência Profissional</h1>
-            <div class="expe1" id="expe1">
-
+            <div class="expe1">
                 <h2>Loja Arccas Materiais de Construção </h2>
                 <h3>Atendente e ajudante geral (sem vínculo empregatício)</h3>
-
             </div>
         </div>
-        <div class="ativ">
-            <h1><ion-icon name="school-outline" class="tititi"></ion-icon> | Atividades</h1>
-            <hr class="aaa">
-            <div class="poro">
-                <h2>Projeto de Robótica</h2>
-                <h3>Quando ainda estudava no EMEF Luiz Schroeder, participei de uma equipe em um projeto de robótica,
-                    participamos de varias competições, uma delas aconteceu em Porto Alegre, que foi o Festival Marista
-                    De Robótica. <br> Obs: Os robos eram feitos com os kits de robótica da Lego, e eles tinham que fazer
-                    missões com um tema, junto, tinhamos que desenvolver projetos, normalmente voltados a
-                    sustentabilidade.</h3>
-            </div>
+        <ion-icon name="school-outline" class="tititi"></ion-icon>
 
-
-        </div>
     </main>
 
     <!-- ---------------------------------- -->
@@ -159,45 +151,16 @@
     <script>
         document.getElementById("ope").addEventListener("click", function () {
             document.getElementById("conte").style.marginLeft = "0px";
-            document.getElementById("clo").style.display = "block";
+            document.getElementById("clo").style.marginLeft = "300px";
+            document.getElementById("ope").style.marginLeft = "-50px";
+            document.getElementById("blr").style.display = "none";
         });
         document.getElementById("clo").addEventListener("click", function () {
             document.getElementById("conte").style.marginLeft = "-310px";
-            document.getElementById("clo").style.display = "none";
+            document.getElementById("clo").style.marginLeft = "-10px";
+            document.getElementById("ope").style.marginLeft = "310px";
+            document.getElementById("blr").style.display = "absolute";
         });
-        // Função para verificar o tamanho da tela e aplicar a regra de estilo
-        function applyMediaQuery() {
-            const screenWidth = window.innerWidth;
-            const targetElement = document.getElementById("clo");
-
-            if (screenWidth > 700) {
-                targetElement.style.display = "none";
-            }
-        }
-
-        // Execute a função quando a página carregar e quando a janela for redimensionada
-        window.addEventListener("load", applyMediaQuery);
-        window.addEventListener("resize", applyMediaQuery);
-    </script>
-    <script>
-        function applyMediaQuery() {
-            const screenWidth = window.innerWidth;
-            const targetElement = document.getElementsByClassName("cont");
-
-            if (screenWidth > 700) {
-                targetElement.style.marginLeft = "0px";
-            }
-        }
-    </script>
-    <script>
-        function applyMediaQuery() {
-            const screenWidth = window.innerWidth;
-            const targetElement = document.getElementsByClassName("cont");
-
-            if (screenWidth < 700) {
-                targetElement.style.marginLeft = "-320px";
-            }
-        }
     </script>
 </body>
 

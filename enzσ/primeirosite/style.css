@@ -5,11 +5,11 @@ body {
     background-position: center;
    }
    h1 {
-    color: red;
+    color: rgb(255, 0, 149);
     text-align: center;
    }
    h2 {
-    color: blue;
+    color: rgb(255, 0, 200);
     text-align: left;
    }
    img {
