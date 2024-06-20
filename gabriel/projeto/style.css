@@ -1,0 +1,37 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(103, 156, 255);
+}
+
+header {
+    background-color: #96b2ff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+section{
+    color: rgb(3, 14, 88);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+h2{
+    color: rgb(8, 19, 103);
+}
+li,p{
+    color: white;
+}
