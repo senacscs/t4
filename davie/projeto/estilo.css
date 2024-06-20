@@ -1,3 +1,4 @@
+@media (min-width:720px) {
 body {
     background-image: url(fundo_escuro.jpg);
     background-repeat: no-repeat;
@@ -39,12 +40,14 @@ li {
 div.gallery {
     margin: 5px;
     width: 300px;
+    padding: 15px;
 }
 div.gallery img {
     width: 300px;
     height: auto;
     align-items: center;
     text-align: center;
+    padding: 15px   ;
 }
 div.desc {
     padding: 15px;
@@ -65,4 +68,77 @@ img {
     padding: 15px;
     margin: 30px;
     width: 500px;
+    align-items: center;
+    text-align: center;
+}
+}
+@media (max-width:720px) {
+    body {
+        background-image: url(fundo_escuro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+    }
+    .ods {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+    }
+    h1 {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    p {
+        font-size: 9px;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    li {
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    div.gallery {
+        margin: 2.5px;
+        width: 150px;
+    }
+    div.gallery img {
+        width: 150px;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+    div.desc {
+        padding: 7.5px;
+        color: #000;
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        align-items: center;
+    }
+    .hp {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .ref {
+        color:#fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+        padding: 7.5px;
+        margin: 15px;
+        width: 250px;
+    }
 }
