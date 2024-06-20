@@ -25,7 +25,7 @@ h1, h2 {
     background-color: white;
     text-align: center;
     padding: 12px;
-    font-family: Lucida Handwriting;
+    font-family: French Script MT;
     color: rgb(121, 204, 253);
 
 }
@@ -87,7 +87,10 @@ h1, h2 {
     padding: 12px;
 }
 .pp, .cai{
-    color: rgb(3, 2, 2);
+    color: rgb(1, 53, 21);
+}
+.pp, .lm, .her{
+    font-family: French Script MT;
 }
 }
 
@@ -118,7 +121,7 @@ h1, h2 {
     background-color: white;
     text-align: center;
     padding: 12px;
-    font-family: Lucida Handwriting;
+    font-family: French Script MT;
     color: rgb(121, 204, 253);
 
 }
@@ -181,5 +184,8 @@ h1, h2 {
 }
 .pp, .cai{
     color: rgb(3, 2, 2);
+}
+.pp, .lm, .her{
+    font-family: French Script MT;
 }
 }
