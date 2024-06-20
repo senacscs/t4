@@ -1,9 +1,9 @@
 body {
-    background-image: url(imagens/fundo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
+    background-color: rgba(5, 4, 83, 0.991);
 }
 
 h1 {
@@ -32,7 +32,8 @@ p {
 .carta {
     width: 90%;
     height: 600px;
-    background-color: rgb(179, 111, 53);
+    background-image: url("teste1.jpg");
+    background-size: 1110px;
     border-radius: 30px;
     box-shadow: 0 0 20px;
     padding: 8px;
