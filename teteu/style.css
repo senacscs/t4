@@ -1,9 +1,8 @@
 p{
    color: whitesmoke;
    text-align: center; 
-   font-size: xx-large;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
+ font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
 
 
 }
@@ -42,4 +41,11 @@ section{
    margin: 50px;
   color: white;
  
+}
+a{
+color: blueviolet;
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+
 }
