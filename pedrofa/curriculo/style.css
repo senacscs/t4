@@ -41,6 +41,10 @@
     section {
         padding: 40px;
     }
+
+    ul .dados:hover {
+        color: aqua;
+    }
 }
 
 /* para telas pequenas */
