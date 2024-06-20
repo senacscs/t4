@@ -1,17 +1,17 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #99caf3;
     margin: 0;
     padding: 0;
 }
 header{
-    background-color: #420056;
+    background-color: #120d3f;
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 nav{
-    background-color: #ab00d6;
+    background-color: #99caf3;
     padding: 10px 0;
     text-align: center;
 }
