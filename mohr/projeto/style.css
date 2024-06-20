@@ -12,7 +12,7 @@ head, body {
     background-color: rgb(255, 192, 192)
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     font-style: italic;
     text-align: center;
 }
@@ -34,6 +34,11 @@ h2 {
     background-color: rgba(255, 121, 121, 0.742);
     margin-top: 0;
 }
+h3{
+    margin-left: 160px;
+    margin-right: 160px;
+    text-align: center;
+}
 
 
 header {
@@ -45,5 +50,13 @@ header {
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
+a{
+    position: relative;
+    left: 562px;
+    color: rgb(138, 15, 15);
+}
 
-
+.problema{
+    position: relative;
+    top:15px;
+}
