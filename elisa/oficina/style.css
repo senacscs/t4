@@ -7,6 +7,10 @@ body {
 
 }
 
+p{
+    color:rgb(121, 204, 253)
+}
+
 .tit{
     background-color: white;
     width: 100%;
