@@ -67,3 +67,7 @@ nav a:hover {
 .content {
     padding: 20px;
 }
+
+a {
+    font-size: 100px;
+}
