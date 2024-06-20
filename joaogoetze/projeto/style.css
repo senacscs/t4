@@ -111,7 +111,7 @@
 
 
   /* para telas medias */
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) and (max-width: 1199px){
     body {
       margin: 0;
       padding: 0;
@@ -135,11 +135,10 @@
       border: 2px solid white;
       width: 80%;
       min-height: 150px;
-      margin: 10px; 
+      margin-left: auto;
+      margin-right: auto;
   
     }
-  
-  
       main {
         padding: 20px;
       }
@@ -156,7 +155,7 @@
         text-align: center;
         font-family: fantasy;
         position: relative;
-        width: 50%;
+        width: 55%;
       }
   
       footer {
@@ -165,11 +164,11 @@
         text-align: center;
         padding: 0%;
         position: fixed;
+        right: 0;
         bottom: 0;
         width: 5%;
         display: block;
       }
-  
       .imagens {
         width: 150px;
       }
@@ -243,11 +242,10 @@
         border: 2px solid white;
         width: 80%;
         min-height: 150px;
-        margin: 10px; 
+        margin-left: auto;
+        margin-right: auto;
     
       }
-    
-    
         main {
           padding: 20px;
         }
@@ -273,11 +271,11 @@
           text-align: center;
           padding: 0%;
           position: fixed;
+          right: 0;
           bottom: 0;
           width: 5%;
           display: block;
         }
-    
         .imagens {
           width: 150px;
         }
@@ -315,4 +313,4 @@
           margin-right: auto;
           width: 60px;
         }
-    }
+      } 
