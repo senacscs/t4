@@ -1,3 +1,4 @@
+@media (min-width: 768px) {
 * {
     margin: 0;
 }
@@ -151,4 +152,162 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+}
+
+@media (max-width:768px){
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(2, 88, 16);
+}
+
+header{
+    background-color: rgb(15, 148, 37);
+    color: white;
+    padding: 0px;
+    font-family: Agency FB;
+    width: 100%;
+}
+
+h1{
+    margin-left: 7px;
+}
+
+img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+hr{
+    width: 50%;
+    padding: 1px;
+    background-color: white;
+     margin-left: 325px;
+}
+
+.referencias1{
+    font-family: agency FB;
+    color: white;
+    text-align: center;
+}
+
+.problema{
+    font-family: agency FB;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.referencias{
+    background-color: rgb(15, 148, 37);
+    font-family: agency FB;
+    color: white;
+    width: 65%;
+    text-align: center;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.roda{
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 160px;
+    margin-right: 180px;
+}
+
+.ods{
+    background-color: rgb(15, 148, 37);
+    display: flex;
+    align-items: center;
+}
+
+h5{
+    font-size: 25px;
+    margin-right: 180px;
+    font-family: Agency FB;
+    color: white;
+
+}
+
+.roda, h5{
+    display: inline-block
+}
+
+.rotary{
+    width: 40%;
+}
+
+a{
+    color: white;
+}
+
+.sus{
+    background-color: rgba(28, 28, 250, 0.721);
+    font-family: agency FB;
+    color: white;
+    width: 98%;
+    text-align: center;
+    font-size: 30px;
+    padding: 12px;;
+}
+.sau{
+    margin-top: 10px;
+}
+.img2{
+    width: 100%;
+    margin-bottom: -4px;
+    margin-top: 5px;
+}
+
+.logo{
+    background-color: white;
+    font-family: agency FB;
+    color: rgb(28, 102, 250);
+    width: 98%;
+    text-align: center;
+    font-size: 30px;
+    padding: 12px;;
+}
+
+.gavi{
+    width: 30%;
+}
+
+.ali{
+    margin-top: 10px;
+    color: rgb(28, 102, 250)
+}
+
+.obj{
+    background-color: rgb(15, 148, 37);
+    font-family: agency FB;
+    color: white;
+    width: 65%;
+    text-align: center;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+footer{
+    background-color: rgb(15, 148, 37);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 }

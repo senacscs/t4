@@ -1,3 +1,4 @@
+@media (min-width: 768px) {
 *{
     margin: 0;
 }
@@ -87,4 +88,98 @@ h1, h2 {
 }
 .pp, .cai{
     color: rgb(3, 2, 2);
+}
+}
+
+@media (max-width:768px){
+*{
+    margin: 0;
+}
+
+body {
+    background-color: rgb(121, 204, 253);
+
+}
+
+.tit{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+
+}
+h1, h2 {
+    font-family: Lucida Handwriting;
+    color:rgb(121, 204, 253)
+
+}
+
+.gre{
+    width: 98%;
+    background-color: white;
+    text-align: center;
+    padding: 12px;
+    font-family: Lucida Handwriting;
+    color: rgb(121, 204, 253);
+
+}
+
+.his{
+    color:rgb(121, 204, 253);
+    font-family: French Script MT;
+    font-size: 25px;
+}
+
+.len{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.conteudo1{
+    width: 98%;
+    background-color: rgb(16, 145, 87);
+    color: rgb(5, 86, 50);
+    text-align: center;
+    padding: 12px;
+}
+
+.he{
+    color: rgb(5, 86, 50);;
+}
+.her{
+    font-family: French Script MT;
+    font-size: 25px;
+    color: rgb(5, 86, 50);
+}
+
+.hc, .mm{
+    width: 15%;
+}
+
+.her, .hc{
+    display: inline-block;
+}
+
+.lab{
+    width: 98%;
+    background-color: rgb(158, 90, 22);
+    color: rgb(86, 51, 5);
+    text-align: center;
+    padding: 12px;
+}
+.min, .lm{
+    color: rgb(86, 51, 5);
+}
+
+.pan{
+    width: 98%;
+    background-color: rgb(7, 92, 45);
+    color: rgb(5, 3, 1);
+    text-align: center;
+    padding: 12px;
+}
+.pp, .cai{
+    color: rgb(3, 2, 2);
+}
 }

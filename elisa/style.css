@@ -1,3 +1,4 @@
+@media (min-width: 768px){
 body{
     margin: 0;
     padding: 0;
@@ -47,3 +48,56 @@ p{
     font-size: 15px;
 
 }
+}
+
+@media (max-width: 768px){
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 127, 202);
+    }
+    header {
+        background-color: rgb(254, 60, 151);
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+        color: white;
+        font-family: cooper black;
+        padding: 20px;
+        font-size: 40px;
+    }
+    .titulo{
+        background-color: rgb(254, 60, 151);
+        width: 50%;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .site1, .site2, .site3, .site4, .site5, .site6, .site7{
+        background-color: rgb(254, 60, 151);
+        width: 50%;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    h2{
+        text-align: center;
+        color: white;
+        font-family: cooper black;
+        font-size: 30px;
+    }
+    p{
+        text-align: center;
+        color: white;
+        font-family: cooper black;
+        font-size: 15px;
+    
+    }
+    }

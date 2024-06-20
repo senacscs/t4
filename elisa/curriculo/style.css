@@ -1,3 +1,4 @@
+@media (min-width: 768px) {
 body{
     background-color: rgb(255, 195, 212);
 }
@@ -53,3 +54,62 @@ h3, p11{
 h4, p5{
     display: inline;
 }
+}
+
+@media (max-width:768px){
+    body{
+        background-color: rgb(255, 195, 212);
+    }
+    header{ 
+        background-color: rgb(253, 119, 157);
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    li, a{
+        color:black;
+    }
+    .itens, .educaçao, .complementar{
+        width: 80%;
+        background-color: rgb(253, 119, 157);
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        margin-block: 20px;
+        border-radius: 20px;
+    }
+    h3, p1{
+        display: inline;
+    }
+    h3, p2{
+        display: inline;
+    }
+    h3, p3{
+        display: inline;
+    }
+    h3, p4{
+        display: inline;
+    }
+    h3, p6{
+        display: inline;
+    }
+    h3, p7{
+        display: inline;
+    }
+    h3, p8{
+        display: inline;
+    }
+    h3, p9{
+        display: inline;
+    }
+    h3, p10{
+        display: inline;
+    }
+    h3, p11{
+        display: inline;
+    }
+    h4, p5{
+        display: inline;
+    }
+    }
