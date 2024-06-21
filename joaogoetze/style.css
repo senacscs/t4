@@ -10,6 +10,23 @@ body {
   width: 3%;
   display: block;
 }
+.container {
+  border: 3px solid white;
+  width: 100%; 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  align-items:center;
+  justify-content: center;
+}
+
+.itens {
+  border: 2px solid white;
+  width: 80%;
+  min-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 main {
