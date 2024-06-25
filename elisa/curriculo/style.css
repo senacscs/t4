@@ -69,7 +69,7 @@ h4, p5{
     li, a{
         color:black;
     }
-    .itens, .educaçao, .complementar{
+    .itens, .educaçao, .complementar, .pdf{
         width: 80%;
         background-color: rgb(253, 119, 157);
         padding: 20px;
