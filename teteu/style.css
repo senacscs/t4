@@ -1,5 +1,5 @@
 p{
-   color: whitesmoke;
+   color: #000;
    text-align: center; 
  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: xx-large;
@@ -8,7 +8,7 @@ p{
 }
 body{
 
-background-color:black;
+background-color:goldenrod;
 text-align: center;
 font-size: xx-large;
    font-family:'Times New Roman', Times, serif 
@@ -39,13 +39,14 @@ section{
    border: solid 4px;
    border-radius: 40px;
    margin: 50px;
-  color: white;
+  color: black;
+  border-style: double;
  
 }
 a{
-color: blueviolet;
+color: black;
 font-family: Georgia, 'Times New Roman', Times, serif;
-
+font-size: xx-large;
 
 
 }
