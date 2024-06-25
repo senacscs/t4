@@ -1,70 +1,99 @@
-@media(min-width: 768px){
+@media(min-width: 768px) {
     body {
-        background-color: rgb(7, 7, 7);
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+        background-color: rgba(137, 43, 226, 0.317);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0%;
+        padding: 0%;
         box-sizing: border-box;
-    }
-    header {
-        color: #960258;
-        text-align: center;
-        padding: 20px 0;
-    }
-    h1 {
-        margin: 0;
-    }
-    .container {
-        width: 80%;
-        margin: auto;
-        padding: 20px;
-    }
-    .section {
-        margin-bottom: 20px;
-        text-align: center;
-        background-color: rgba(153, 157, 169, 0.758);
-        margin: 20px;
-        margin-right: auto; 
-    }
-    .section h2 {
-        margin-top: 0;
-    }
-    .section p {
-        margin-top: 5px;
     }
 }
 
-@media(max-width: 768px){
+header {
+    color: rgba(92, 13, 129, 0.557);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(55, 21, 105, 0.543);
+    margin: 20px;
+    margin-right: auto;
+}
+
+.section h2 {
+    margin-top: 0%;
+}
+
+.section p {
+    margin-top: 5px;
+}
+
+@media (max-width 768px) {
     body {
-        background-color: rgb(164, 116, 159);
-        font-family: Arial, sans-serif;
-        margin: 0;
+        background-color: rgba(4, 49, 147, 0.699);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0%;
         padding: 0;
         box-sizing: border-box;
     }
-    header {
-        color: #64086aa6;
-        text-align: center;
-        padding: 20px 0;
-    }
-    h1 {
-        margin: 0;
-    }
-    .container {
-        width: 80%;
-        margin: auto;
-        padding: 20px;
-    }
-    .section {
-        margin-bottom: 20px;
-        text-align: center;
-        background-color: #7c1db893;
-    }
-    .section h2 {
-        margin-top: 0;
-    }
-    .section p {
-        margin-top: 5px;
-    }
 }
 
+header {
+    color: rgba(90, 16, 237, 0.628);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(55, 21, 105, 0.543);
+    margin: 20px;
+    margin-right: auto;
+}
+
+.section h2 {
+    margin-top: 0%;
+}
+
+.section p {
+    margin-top: 5px;
+}
+
+.section pdf{
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(55, 21, 105, 0.543);
+    margin: 20px;
+    margin-right: auto;
+}
+
+.section idiomas{
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(55, 21, 105, 0.543);
+    margin: 20px;
+    margin-right: auto; 
+}
