@@ -1,24 +1,41 @@
 @media (min-width: 768px) {
     body{
-        background-color: rgb(83, 147, 207);
+        background-color: rgb(237, 110, 154);
         font-size:large;
     }
 }
 
 @media (max-width: 768px) {
     body{
-        background-color: rgb(231, 95, 163);
+        background-color: rgb(237, 111, 162);
     }
 }
 section{
-    color: black;
+    color: rgb(167, 3, 101);
     margin: 20px;
     border: solid 2px;
     padding: 10px;
     border-radius: 10px;
     font-style:normal;
     font-size: 20px;
+    background-color: rgb(138, 6, 72);
 }
 h1{
     text-align: center;
+    color: rgb(241, 112, 155)
+}
+body{
+    color:rgb(255, 255, 255)
+}
+h2{
+    color:rgb(255, 255, 255)
+}
+p{
+    color:rgb(255, 253, 253)
+}
+h5{
+    text-align: center;
+}
+a{
+    color: white;
 }
