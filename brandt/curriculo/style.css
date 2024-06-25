@@ -1,26 +1,25 @@
 @media (min-width: 768px) {
     body {
-        background-color:
-        rgb(176, 176, 176);
+        background-color:rgb(251, 223, 162);
         margin: 0;
         }
     h2 {
             font-style: oblique;
-            color: rgb(19, 18, 91);
-            background-color: rgba(123, 133, 159, 0.368);
+            color: rgb(69, 34, 22);
+            background-color: rgba(120, 55, 25, 0.368);
             margin: 0;
         }
     h1 {
             font-style: oblique;
-            color: rgb(187, 193, 206);
-            background-color: rgba(90, 102, 132, 0.368);
+            color: rgb(251, 223, 162);
+            background-color: rgba(120, 55, 25, 0.368);
         }
     header {
-                background-color: rgb(19, 18, 91);
+                background-color: rgb(69, 34, 22);
                 text-align: center;
             }
     a { 
-                color:rgb(187, 193, 206);
+                color:rgb(251, 223, 162);
             }
 }
 
