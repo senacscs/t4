@@ -1,8 +1,9 @@
 /* aparência em tela grande */
 @media (min-width: 768px) {
     body {
-        background-color: rgb(185, 176, 231);
+        /* background-color: rgb(185, 176, 231); */
         background-image: url(fundo.jpg);
+        background-size: cover;
     }
 }
 /* para telas pequenas */
