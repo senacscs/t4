@@ -10,15 +10,21 @@
     nav ul li {
         align-content: center;
         display: inline-block;
+        padding: 5px;
     }
     
     a {
         color:black;
-        margin-right: 20px;
+  
     }
     
     h1 {
-        font-size:x-large;
+        font-size:xx-large;
+        margin-bottom: -8px;
+    }
+
+    p {
+        font-size: large;
     }
     
     a:hover {
@@ -31,6 +37,16 @@
         color: black;
         font-family: 'Times New Roman', Times, serif;
     }
+
+    .ladoalado {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .imagens {
+        max-height: 250px;
+    }
     
     .texto {
         margin-right: auto;
@@ -42,17 +58,24 @@
         background-color: darkgray;
         border-radius: 30px;
         margin-top: 15px;
-        width: 50%;
+        width: 70%;
         text-align: center;
         margin-left:auto;
         margin-right:auto;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: black;
+    }
 }
 
 @media (max-width: 768px) {
     header {
-        background-color: black;
+        background-color: rgb(35, 34, 34);
         width: 100%;
         padding: 1px;
         text-align: center;
@@ -80,8 +103,18 @@
         color: white;
     }
 
+    .ladoalado {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .imagens {
+        max-height: 250px;
+    }
+
     .contorno {
-        background-color: black;
+        background-color: rgb(35, 34, 34);
         border-radius: 30px;
         margin-top: 15px;
         width: 90%;
@@ -89,5 +122,12 @@
         margin-left:auto;
         margin-right:auto;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: white;
     }
 }
