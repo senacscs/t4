@@ -1,46 +1,92 @@
 @media (min-width: 768px) {
+  header {
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+
+  }
+
   body {
     background-image: url(fundobranco.jpg);
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
 
-    a {
-      color: rgb(31, 28, 28);
-    }
+  a {
+    color: rgb(31, 28, 28);
+  }
 
-    a:visited {
-      color: rgb(31, 28, 28);
-    }
+  a:visited {
+    color: rgb(31, 28, 28);
+  }
 
-    a:hover {
-      color: rgb(31, 28, 28);
-    }
+  a:hover {
+    color: rgb(31, 28, 28);
+  }
 
-    a:active {
-      color: rgb(31, 28, 28);
-    }
+  a:active {
+    color: rgb(31, 28, 28);
+  }
+
+  p {
+    color: black;
+    font-size: 19px;
+  }
+
+  nav ul li {
+    align-content: center;
+    display: inline-block;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
+
 @media (max-width: 768px) {
+
+  header {
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+
+  }
+  
   body {
     background-image: url(fundo.jpg);
     font-family: 'Courier New', Courier, monospace;
     color: rgb(122, 118, 118);
-    
-    a {
-      color: rgb(163, 152, 152);
-    }
+    text-align: center;
+  }
 
-    a:visited {
-      color: rgb(163, 152, 152);
-    }
+  a {
+    color: rgb(163, 152, 152);
+  }
 
-    a:hover {
-      color: rgb(163, 152, 152);
-    }
+  a:visited {
+    color: rgb(163, 152, 152);
+  }
 
-    a:active {
-      color: rgb(163, 152, 152);
-    }
+  a:hover {
+    color: rgb(163, 152, 152);
+  }
+
+  a:active {
+    color: rgb(163, 152, 152);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  p {
+    font-size: 19px;
+  }
+
+  nav ul li {
+    align-content: center;
+    display: inline-block;
   }
 }
+
