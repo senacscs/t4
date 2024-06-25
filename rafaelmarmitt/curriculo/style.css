@@ -47,6 +47,10 @@
         height: 2px;
     }
     
+    .cv {
+      text-align: center;
+      font-size: 30px;
+    }
     
 }
 
@@ -99,6 +103,12 @@
         border-color: black;
         height: 2px;
     }
+
+    .cv {
+      text-align: center;
+      font-size: 30px;
+    }
+    
     
     
 }
