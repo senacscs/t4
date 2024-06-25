@@ -1,3 +1,9 @@
+/* para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
 /* aparência em tela grande */
 @media (min-width: 768px) {
     body {
@@ -5,10 +11,19 @@
         font-size: xx-large;
     }
 }
+.container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 600px; /* Aumentar max-width para caber conteúdo */
+    margin: auto;
+    flex-wrap: wrap; /* Adicionar flex-wrap para responsividade */
+}
 
-/* para telas pequenas */
-@media (max-width: 768px) {
-    body {
-        background-color: red;
-    }
+.principal {
+    margin-right: 20px;
+}
+
+.mensagem {
+    max-width: 600px;
+    flex: 1; /* Adicionar flex: 1 para ocupar o espaço restante */
 }
