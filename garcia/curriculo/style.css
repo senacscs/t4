@@ -51,3 +51,6 @@ a{
 .FDC{
     display: inline-block;
 }
+html{
+    scroll-behavior: smooth;
+}
