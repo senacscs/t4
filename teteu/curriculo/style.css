@@ -1,0 +1,33 @@
+body{
+
+
+
+    background-color: black;
+
+}
+h2{
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: x-large;
+  color: whitesmoke;
+}
+a{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    color: whitesmoke;
+
+
+}
+section{
+
+    text-align: center;
+    border: solid 4px;
+    border-radius: 40px;
+    margin: 50px;
+   color: white ;
+  
+
+
+
+}
