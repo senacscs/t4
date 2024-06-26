@@ -74,3 +74,16 @@ a {
     font-size: large;
     background-color: rgba(54, 120, 177, 0.852);
 }
+
+@media (min-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media (max-width: 768px) {
+body {
+    background-color: aqua;
+    font-size: xx-large;
+}
+}
