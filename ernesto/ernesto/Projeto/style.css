@@ -1,0 +1,28 @@
+* 
+header {
+    height: 30px;
+    width: 100%;
+    background-color: green;
+    text-align: center;
+    color: snow;
+    padding:30px;
+    font-size: 50px;
+    margin: 0%;
+}
+.R{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    margin-top: 2%;
+}
+.pdf{
+    height: 50px;
+    margin-left: block;
+    margin-right: auto;
+    display: block;
+}
+body {
+    background-color: rgb(130, 246, 130);
+    margin:0px;
+}

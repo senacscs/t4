@@ -4,9 +4,6 @@ body{
     margin: 0;
     padding: 0;
 }
-h1{
-    color: white;
-}
 nav{
     display: flex;
     justify-content: space-around;
@@ -39,9 +36,8 @@ nav{
     justify-content: space-around;
  }
  section{
-    margin-right: 35vw;
     margin-top: 20px;
-    margin-left: 30vw;
+    margin-left: 450px;
     height:100%;
     width: 400px;
     backdrop-filter: blur(20px);
@@ -50,6 +46,9 @@ nav{
     border-radius: 5px;
     justify-content: space-around;
     display: inline-block;
+ }
+ h1{
+    color:snow
  }
 
  
