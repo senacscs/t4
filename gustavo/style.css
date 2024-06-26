@@ -18,7 +18,7 @@ h1,h2 {
 }
 
 /* Estilo para os cabeçalhos secundários */
- h3, h4, h5,h6,h7,h8{
+ h3, h4, h5,h6,h7,h8,h9,h10{
     background-color: #555;
     color: white;
     padding: 10px;
