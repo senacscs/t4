@@ -1,0 +1,20 @@
+body { 
+    background-image: url("https://i.pinimg.com/originals/6a/30/f9/6a30f9fe570456ba2d43db7ee283af10.gif");
+background-size: 1200px;
+}
+
+p {
+    font-style: italic;
+    color: aliceblue;
+}
+
+iframe {
+    position: relative;
+    top: 340px;
+    right: 570px;
+}
+
+h1 {
+    font-size: 300%;
+    color: aliceblue;
+}
