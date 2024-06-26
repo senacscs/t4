@@ -1,5 +1,6 @@
 body {
     background-image: url("fundo.jpeg");
+    background-size: cover;
     font-style: italic;
     background-color: #f0f0f0;
     margin: 0;
@@ -7,14 +8,14 @@ body {
     font-size: larger;
 }
 header {
-    background-color: #150a51;
-    color: #6f6eb5;
+    background-color: #8c84b3;
+    color: #0e0d3f;
     padding: 10px 0;
     text-align: center;
     font-style: italic;
 }
 nav {
-    background-color: #47398fa6;
+    background-color: #1b0d61a6;
     padding: 10px 0;
     text-align: center;
 }
