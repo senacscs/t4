@@ -3,8 +3,9 @@
 }
 
 body {
-    background-color: black;
+    background-image: url(tomie.jpeg);
     color: aliceblue;
+    background-repeat: no-repeat;
 }
 
 .titulo {
@@ -82,4 +83,5 @@ a {
 
 h1 {
     text-align: center;
+    color: white
 }
