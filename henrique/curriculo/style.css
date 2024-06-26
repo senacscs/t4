@@ -28,3 +28,33 @@ a {
     color:lightsalmon;
 }
 }
+@media (min-width: 768px) {
+        body {
+            background-color:lightgreen;
+            margin: 0;
+    }
+    
+    h2 {
+            font-style: oblique;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:black;
+            background-color:white;
+            margin: 0;
+    }
+        
+    h1 {
+            font-style: oblique;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:black;
+            background-color:white;
+    }
+        
+    header {
+            background-color:cornflowerblue;
+            text-align: center;
+    }
+    
+    a { 
+        color:lightsalmon;
+    }
+    }
