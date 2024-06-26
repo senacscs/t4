@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(tomie.jpeg);
+    background-image: url("tomie.jpeg");
     color: aliceblue;
     background-repeat: no-repeat;
 }
@@ -74,14 +74,11 @@ body {
     text-align: center;
 }
 
-
+h1 {
+    text-align: center;
+}
 
 a {
     text-align: center;
     color: white;
-}
-
-h1 {
-    text-align: center;
-    color: white
 }
