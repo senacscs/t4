@@ -1,3 +1,4 @@
+@media (min-width:768px) {
 body {
     background-image: linear-gradient(black, white);
 }
@@ -11,9 +12,6 @@ ul {
     color: black;
     font-family:'Courier New', Courier, monospace;
     margin-left: auto;
-}
-.photo {
-       width: 400px;
 }
 .tech {
     text-align: center;
@@ -34,7 +32,7 @@ ul {
     text-align: center;
 }
 .forms {
-    color: #ffffff;
+    color: #000000;
 }
 .opa {
     background-color: #000000;
@@ -56,6 +54,7 @@ ul {
 }
 .resumo {
     font-size: larger;
+    padding-left: 5%;
 }
 .container {
     color: #ffffff;
@@ -83,4 +82,130 @@ input[type="submit"] {
     padding: 20px;
     text-align: center;
     box-shadow: #000000;
+}
+.galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.fota {
+    width: 300px;
+}
+.texto {
+    color:orange;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+}
+
+@media (max-width:768px) {
+    body {
+        background-image: linear-gradient(black, white);
+    }
+    header {
+        background-color: #000000;
+        color: white;
+        font-family:'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    ul {
+        color: black;
+        font-family:'Courier New', Courier, monospace;
+        margin-left: auto;
+    }
+    .tech {
+        text-align: center;
+    
+    }
+    .gosto {
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .cap {
+        color:#4e4b4b;
+        font-family:'Courier New', Courier, monospace;
+    }
+    .family {
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    .forms {
+        color: #000000;
+    }
+    .opa {
+        background-color: #000000;
+        color: white;
+        font-family:'Courier New', Courier, monospace;
+    }
+    .foto {
+        color:black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .height {
+        color:#000000;
+    }
+    .data {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .resumo {
+        font-size: larger;
+        padding-left: 5%;
+    }
+    .container {
+        color: #ffffff;
+        padding: 15px;
+        text-align: left;
+        display: flex;
+    }
+    input[type="submit"] {
+        display: block;
+        width: 30%;
+        margin: 1em auto;
+        height: 2em;
+        font-size: 1.1rem;
+        background-color: #3b3b4f;
+        border-color: white;
+        min-width: 200px;
+    }
+    .fala {
+        margin: auto;
+        color:black;
+        text-align: center;
+    }
+    .olhe {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: #000000;
+    }
+    .galeria {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 10px;
+    }
+    .fota {
+        width: 300px;
+    }
+    .texto {
+        color:orange;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    } 
 }
