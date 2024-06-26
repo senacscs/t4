@@ -1,0 +1,33 @@
+h1 {
+    font-family:"Castellar";
+}
+body {
+    background-color: rgb(225, 118, 182);
+}
+hr {
+    background-color: rgb(178, 66, 126);
+    border-color: rgb(178, 66, 126);
+}
+h2 {
+    font-size: 19px;
+    font-family:"Corbel";
+}
+a {
+    color:blueviolet
+}
+p {
+    font-size: 13px;
+    font-family: Arial;
+}
+.linketo {
+    position: relative;
+    bottom: 10px;
+}
+.linketo2 {
+    position: relative;
+    bottom: 10px;
+}
+.letori {
+    position: relative;
+    bottom: 10px;
+}
