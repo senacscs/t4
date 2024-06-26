@@ -47,4 +47,5 @@ projetos = [
     { "nome": "Site pros responsáveis", "url": "responsaveis" },
     { "nome": "Currículo", "url": "curriculo" },
     { "nome": "Olá Mundo", "url": "olamundo" },
+    { "nome": "Projeto PI", "url": "projeto" },
 ]
