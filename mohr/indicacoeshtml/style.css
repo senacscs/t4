@@ -11,3 +11,16 @@ h1,h2 {
 p,a {
     font-family: 'Bodoni MT';
 }
+
+@media (min-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media (max-width: 768px) {
+body {
+    background-color: aqua;
+    font-size: xx-large;
+}
+}

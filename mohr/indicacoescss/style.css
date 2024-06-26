@@ -31,3 +31,16 @@ p {
     position: relative;
     bottom: 10px;
 }
+
+@media (min-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media (max-width: 768px) {
+body {
+    background-color: aqua;
+    font-size: xx-large;
+}
+}

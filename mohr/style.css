@@ -77,7 +77,7 @@ a {
 
 @media (min-width: 768px) {
     body {
-        background-color: red;
+        background-color: rgb(54, 120, 177, 0.852);
     }
 }
 
