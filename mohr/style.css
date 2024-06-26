@@ -83,7 +83,7 @@ a {
 
 @media (max-width: 768px) {
 body {
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     font-size: xx-large;
 }
 }
