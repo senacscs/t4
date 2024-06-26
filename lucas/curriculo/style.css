@@ -19,3 +19,14 @@ h2 {
 li, a{
     color: white;
 }
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h4 {
+    text-align:center;
+    font-size: 25px;
+    color: white
+}
