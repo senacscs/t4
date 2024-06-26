@@ -1,16 +1,15 @@
+* {
+    margin: 0;
+}
+
 body {
-    background-color: grey;
+    background-color: black;
     color: aliceblue;
 }
 
 .titulo {
     background-color: grey;
-    border: solid 5px;
     border-radius: 10px;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    border-color: white;   
 }
 
 .rainbow {
@@ -74,21 +73,11 @@ body {
     text-align: center;
 }
 
-section {
-    border: solid 5px;
-    border-radius: 10px;
-    color: antiquewhite;
-    background-color: grey;
-    text-align: center;
-    border-bottom: 20px;
-    padding: 10px;
-    border-color: white;
-    margin-top: 20px;
-}
+
 
 a {
     text-align: center;
-    color: blue;
+    color: white;
 }
 
 h1 {
