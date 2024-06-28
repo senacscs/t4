@@ -66,9 +66,7 @@ img {
 }
 
 @media (min-width: 768px) {
-    body {
-        background-color: red;
-    }
+
 }
 
 @media (max-width: 768px) {

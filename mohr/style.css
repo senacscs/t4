@@ -26,8 +26,8 @@ h1 {
 
 h2 {
     color: rgb(41, 103, 156);
-    font-size: 30px;
-    background-color: rgba(200, 212, 222, 0.555);
+    font-size: 40px;
+    background-color: rgba(200, 212, 222, 0.573);
     margin-top: 0;
 }
 
@@ -71,19 +71,16 @@ nav a:hover {
 }
 
 a {
-    font-size: large;
-    background-color: rgba(54, 120, 177, 0.852);
+    font-size: xx-large;
+    background-color: rgba(54, 120, 177, 0.676);
 }
 
 @media (min-width: 768px) {
-    body {
-        background-color: rgb(54, 120, 177, 0.852);
-    }
+    
 }
 
 @media (max-width: 768px) {
 body {
-    background-color: rgb(255, 255, 255);
     font-size: xx-large;
 }
 }
