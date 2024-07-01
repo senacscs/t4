@@ -12,10 +12,16 @@ header{
     border-radius: 35px;
 }
 a{
-    text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
+section{
+    text-align: center;
+    padding: 7px;
+    background-color: #333;
+    border-radius: 30px ;
 
+
+}
 
 
 
