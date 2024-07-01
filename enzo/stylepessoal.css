@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(pretofundosite.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.8s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.corpo {
+    position: relative;
+    top: 250px;
+    left: 200px;
+}
+
+.olamundo {
+    font-size: 25px;
+}
+
+.indicacoeshtml {
+    font-size: 25px;
+}
+
+.indicacoescss {
+    font-size: 25px;
+}
+
+.responsaveis {
+    font-size: 25px;
+}
+
+.ods {
+    font-size: 25px;
+}
+
+.oficina {
+    font-size: 25px;
+}
