@@ -1,124 +1,152 @@
 <!DOCTYPE html>
-    <html lang="pt-BR">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <style>
-            /* Adicione seu CSS aqui */
-            .itens {
-                display: none;
-            }
-            .active {
-                display: block;
-            }
-        </style>
-    </head>
-    <!-- 8:55 -->
-    <body>
-        <!-- aqui começa o cabeçalho do site-->
-        <header>
-            <!-- o nav é o navigator do site-->
-            <nav>
-                <div class="container">
-                    <img class="principal" src="Fotogustavo.jpg" width="300" height="186"alt="Foto de Gustavo">
-                <ul>
-                    <li><a href="#sobremim" class="nav-link">Sobre mim</a></li>
-                    <li><a href="#dados" class="nav-link">Dados</a></li>
-                    <li><a href="#basica" class="nav-link">Educação Básica</a></li>
-                    <li><a href="#complementar" class="nav-link">Educação Complementar</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                    <li><a href="#projeto" class="nav-link">Projeto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h3>Gustavo Florisbal Tatsch</h3>
-            <section class="itens" id="sobremim">
-                <h1>Sobre mim</h1>
-                <p>Sou um estudante no Ensino Médio que ama tecnologia e que está estudando curso técnico Técnico em Informática para a Internet</p>
-            </section>
-            <section class="itens" id="dados">
-                <h1>Dados de Identificação</h1>
-                <h2>Nome:</h2>
-                <p>Gustavo Florisbal Tatsch</p>
-                <h2>Cidade:</h2>
-                <p>Santa Cruz do Sul</p>
-                <h2>Estado:</h2>
-                <p>Rio Grande do Sul</p>
-                <h2>e-mail:</h2>
-                <p>Gustavoflorisbaltatsch@gmail.com</p>
-                <h2>Rede Social:</h2>
-                <p>Instagram: GustavoFlorisbalTatschh</p>
-                <h2>Perfil FreeCodeCamp:</h2>
-                <p><a target="_blank" href="https://www.freecodecamp.org/GustavoFlorisbalTatsch">freecodecamp.org/GustavoFlorisbalTatsch</a></p>
-                <h2>Perfil Github:</h2>
-                <p><a target="_blank" href="https://github.com/GustavoFlorisbalTatsch">github.com/GustavoFlorisbalTatsch</a></p>
-            </section>
-            <section class="itens" id="basica">
-                <h1>Educação Básica:</h1>
-                <h2>Curso Técnico:</h2>
-                <p>Técnico em Informática para a Internet - Senac Santa Cruz do Sul</p>
-                <h2>Ensino Médio:</h2>
-                <p>Ensino Médio Técnico Senac Santa Cruz do Sul</p>
-                <h2>Ensino Fundamental:</h2>
-                <p>Escola Gaspar Bartholomay</p>
-            </section>
-            <section class="itens" id="complementar">
-                <h1>Educação Complementar</h1>
-                <p>Curso FreeCodeCamp - Design responsivo para a web (em andamento)</p>
-                <p>Curso de Inglês Basico na Wizard(em andamento)</p>
-            </section>
-            <section class="itens" id="contato">
-                <h1>Contato</h1>
-                <h2>Número de telefone:</h2>
-                <p>+51 8474-4452</p>
-                <h2>Número do Whats:</h2>
-                <p>051 8474-4452</p>
-                <h2>Perfil rede social Instagram:</h2>
-                <p>GustavoFlorisbalTatschh</p>
-            </section>
-            <section class="itens" id="projeto">
-                <h1>Projetos</h1>
-                <h2>Meus projetos no curso técnico:</h2>
-                <h2>Olamundo</h2>
-                <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/olamundo/">senacscs.github.io/t4/gustavo/olamundo</a></p>
-                <h2>indicaçoeshtml</h2>
-                <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/indicacoeshtml/">senacscs.github.io/t4/gustavo/indicacoeshtml</a></p>
-                <h2>Indicacoescss</h2>
-                <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/indicacoescss/">senacscs.github.io/t4/gustavo/indicacoescss</a></p>
-                <h2>Responsaveis</h2>
-                <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/responsaveis/">senacscs.github.io/t4/gustavo/responsaveis</a></p>
-            </section>
-        </main>
-        <a href="curriculo.pdf" target="_blank">Baixe meu Currículo</a>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const links = document.querySelectorAll('.nav-link');
-                const sections = document.querySelectorAll('.itens');
-    
-                links.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const targetId = link.getAttribute('href').substring(1);
-    
-                        sections.forEach(section => {
-                            section.classList.remove('active');
-                        });
-    
-                        document.getElementById(targetId).classList.add('active');
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Adicione seu CSS aqui */
+        .itens {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        header {
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- aqui começa o cabeçalho do site-->
+    <header>
+        <!-- o nav é o navigator do site-->
+        <nav class="center-content">
+            <img class="principal" src="Fotogustavo.jpg" width="300" height="186" alt="Foto de Gustavo">
+            <a href="curriculo.pdf" target="_blank">Baixe meu Currículo</a>
+            <ul>
+                <li><a href="#sobremim" class="nav-link">Sobre mim</a></li>
+                <li><a href="#dados" class="nav-link">Dados</a></li>
+                <li><a href="#basica" class="nav-link">Educação Básica</a></li>
+                <li><a href="#complementar" class="nav-link">Educação Complementar</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="#projeto" class="nav-link">Projeto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h3>Gustavo Florisbal Tatsch</h3>
+        <section class="itens" id="sobremim">
+            <h1>Sobre mim</h1>
+            <p>Sou um estudante no Ensino Médio que ama tecnologia e que está estudando curso técnico Técnico em Informática para a Internet</p>
+        </section>
+        <section class="itens" id="dados">
+            <h1>Dados de Identificação</h1>
+            <h2>Nome:</h2>
+            <p>Gustavo Florisbal Tatsch</p>
+            <h2>Cidade:</h2>
+            <p>Santa Cruz do Sul</p>
+            <h2>Estado:</h2>
+            <p>Rio Grande do Sul</p>
+            <h2>e-mail:</h2>
+            <p>Gustavoflorisbaltatsch@gmail.com</p>
+            <h2>Rede Social:</h2>
+            <p>Instagram: GustavoFlorisbalTatschh</p>
+            <h2>Perfil FreeCodeCamp:</h2>
+            <p><a target="_blank" href="https://www.freecodecamp.org/GustavoFlorisbalTatsch">freecodecamp.org/GustavoFlorisbalTatsch</a></p>
+            <h2>Perfil Github:</h2>
+            <p><a target="_blank" href="https://github.com/GustavoFlorisbalTatsch">github.com/GustavoFlorisbalTatsch</a></p>
+        </section>
+        <section class="itens" id="basica">
+            <h1>Educação Básica:</h1>
+            <h2>Curso Técnico:</h2>
+            <p>Técnico em Informática para a Internet - Senac Santa Cruz do Sul</p>
+            <h2>Ensino Médio:</h2>
+            <p>Ensino Médio Técnico Senac Santa Cruz do Sul</p>
+            <h2>Ensino Fundamental:</h2>
+            <p>Escola Gaspar Bartholomay</p>
+        </section>
+        <section class="itens" id="complementar">
+            <h1>Educação Complementar</h1>
+            <p>Curso FreeCodeCamp - Design responsivo para a web (em andamento)</p>
+            <p>Curso de Inglês Basico na Wizard(em andamento)</p>
+        </section>
+        <section class="itens" id="contato">
+            <h1>Contato</h1>
+            <h2>Número de telefone:</h2>
+            <p>+51 8474-4452</p>
+            <h2>Número do Whats:</h2>
+            <p>051 8474-4452</p>
+            <h2>Perfil rede social Instagram:</h2>
+            <p>GustavoFlorisbalTatschh</p>
+        </section>
+        <section class="itens" id="projeto">
+            <h1>Projetos</h1>
+            <h2>Meus projetos no curso técnico:</h2>
+            <h2>Olamundo</h2>
+            <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/olamundo/">senacscs.github.io/t4/gustavo/olamundo</a></p>
+            <h2>indicaçoeshtml</h2>
+            <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/indicacoeshtml/">senacscs.github.io/t4/gustavo/indicacoeshtml</a></p>
+            <h2>Indicacoescss</h2>
+            <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/indicacoescss/">senacscs.github.io/t4/gustavo/indicacoescss</a></p>
+            <h2>Responsaveis</h2>
+            <p><a target="_blank" href="https://senacscs.github.io/t4/gustavo/responsaveis/">senacscs.github.io/t4/gustavo/responsaveis</a></p>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.itens');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+
+                    sections.forEach(section => {
+                        section.classList.remove('active');
                     });
+
+                    document.getElementById(targetId).classList.add('active');
                 });
-    
-                // Exibir a primeira seção por padrão
-                if (sections.length > 0) {
-                    sections[0].classList.add('active');
-                }
             });
-        </script>
-    </body>
-    
-    </html>
+
+            // Exibir a primeira seção por padrão
+            if (sections.length > 0) {
+                sections[0].classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
