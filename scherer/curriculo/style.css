@@ -38,9 +38,12 @@
             h1{
                 color: white;
             }
+            a{
+                color: white;
+            }
     }
-body {
-    background-color: black;
+body {  
+    background-image: linear-gradient(90deg, black, rgb(116, 109, 109));
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -52,20 +55,20 @@ body {
     box-sizing: border-box;
     }
     nav{
-        background-color: rgb(255, 255, 255);
-        text-align: center;
+        background-image:linear-gradient(150deg, black, rgb(255, 254, 254))
+        
     }
     nav li{
         display: inline-block;
     }
     nav li a{
-        color: rgb(0, 0, 0);
+        color: rgb(255, 254, 254);
         text-decoration: none;
         padding: 15px;
         display: inline-block;
     }
     nav li a:hover{
-        background-color: rgb(7, 228, 40);
+        background-color: rgb(0, 0, 0);
     }
     .dropdown-menu a{
         display: block;
@@ -77,6 +80,7 @@ body {
     }
     h1{
         color: white;
+        text-align: center;
     }
     body {
     background-color: black;
@@ -98,13 +102,13 @@ body {
         display: inline-block;
     }
     nav li a{
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         padding: 15px;
         display: inline-block;
     }
     nav li a:hover{
-        background-color: rgb(7, 228, 40);
+        background-color: rgb(0, 0, 0);
     }
     .dropdown-menu a{
         display: block;
@@ -115,6 +119,9 @@ body {
         color: white;
     }
     h1{
+        color: white;
+    }
+    a{
         color: white;
     }
     @media (max-width: 720px) {
@@ -194,6 +201,9 @@ body {
                 color: white;
             }
             h1{
+                color: white;
+            }
+            a{
                 color: white;
             }
     }
