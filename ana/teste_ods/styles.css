@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #999999; /* Corrigido de #+9+9+9 para #999999 */
+}
+
+header {
+    background-color: #4ca950; /* Corrigido de #4ca+50 para #4ca950 */
+    color: white;
+    padding: 10px 0;
+    text-align: center; /* Corrigido de text-aling para text-align */
+}
+
+header h1 { /* Corrigido de header 1 para header h1 */
+    margin: 0;
+    font-size: 2em; /* Corrigido de font size:zem para font-size: 2em */
+}
+
+header p {
+    margin: 5px 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    color: #333;
+    margin-bottom: 10px; /* Corrigido de margin: bottom 10px para margin-bottom: 10px */
+}
+
+main p {
+    margin-bottom: 20px; /* Corrigido de margin: bottom 20px para margin-bottom: 20px */
+}
