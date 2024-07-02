@@ -1,0 +1,10 @@
+h1, h2, p, hr{
+    color: white;
+}
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: black;
+}
