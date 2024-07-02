@@ -1,0 +1,13 @@
+body { 
+    background-color: white;
+    color: black; /* n é font-color >:( */
+    font-weight: bold; /*font-family é pra tipo de fonte*/
+    /*-------*/
+    text-align: center;
+    align-items: center;
+}
+
+object {
+    width: 300px;
+    height: 300px;
+}
