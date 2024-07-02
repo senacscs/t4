@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    animation: SLA 0.55 linear infitiny;
+    /* background-color: blue;  adicionei */
+}
+
+@keyframe SLA {
+    0% {background: green;}
+    25% {background: red;}
+    50% {background: blue;}
+    75% {background: pink}
+    100% {background: green}
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+nav a {
+    margin-left: 40px;
+}
+
+main {
+    text-align:center;
+    align-items: center;
+    align-content: center;
+}
+
+h1, h3 {
+    text-align: center;
+}
