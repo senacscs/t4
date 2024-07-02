@@ -21,8 +21,8 @@ a {
 }
 
 a:hover {
-    color: white;
-    text-decoration: underline;
+    color: #ff6347;
+    transition: color 1s;
 }
 
 body {
@@ -38,12 +38,12 @@ body {
     background-color: gray;
     border-radius: 10px;
     width: 80%;
-    box-shadow: 0 0 20px 0 black;
+    box-shadow: 0 0 10px 0 black;
 
 }
 
 .texto:hover {
-box-shadow: 0 0 30px 0 red;
+box-shadow: 0 0 20px 0 black;
 }
 
 h2 {

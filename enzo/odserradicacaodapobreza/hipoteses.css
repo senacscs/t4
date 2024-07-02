@@ -20,8 +20,8 @@ a {
 }
 
 a:hover {
-    color: white;
-    text-decoration: underline;
+    color: #ff6347;
+    transition: color 1s;
 }
 
 body {
