@@ -1,0 +1,21 @@
+body{
+    font-family: Arial;
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: purple;
+    padding: 20px;
+    text-align: center;
+}
+section{
+    margin-bottom: 20px;
+}
+footer{
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    position:fixed;
+    width: 100px;
+}
