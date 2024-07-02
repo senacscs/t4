@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color:    rgb(122, 24, 214);
+    background-color:rgb(241, 172, 193);
 }
 
 header {
-    background-color: rgba(1, 1, 1, 0.9);
-    color: white;
+    background-color: rgba(181, 117, 157, 0.9);
+    color: black;
     padding: 1px;
     text-align: center;
     width: 100%;
@@ -19,23 +19,23 @@ h1{
 }
 
 a {
-    color: darkgray;
+    color: rgba(181, 117, 157, 0.9);
   }
  
   a:visited {
-    color: darkgray;
+    color: rgba(181, 117, 157, 0.9);
   }
  
   a:hover {
-    color: darkgray;
+    color: rgba(181, 117, 157, 0.9);
   }
  
   a:active {
-    color: darkgray;
+    color: rgba(181, 117, 157, 0.9);
   }
   
   button {
-    background-color: darkgray;
+    background-color: rgba(181, 117, 157, 0.9);
     border: none;
     padding: 15px;
     border-radius: 10px;
@@ -43,4 +43,14 @@ a {
     font-size: 15px;
     display: block;
     margin: auto;
+}
+
+button:hover {
+  color: purple;
+  transition: color 1s;
+}
+
+.simbolos {
+  margin-right: -90%;
+  margin-top: -35px;
 }
