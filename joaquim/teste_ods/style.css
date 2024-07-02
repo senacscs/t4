@@ -1,0 +1,192 @@
+@media (min-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+        background-color: rgb(111, 165, 129);
+    }
+
+    header {
+        background-color: rgb(85, 137, 102);
+        width: 100%;
+        padding: 1px;
+        text-align: center;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-style: solid;
+    }
+
+    nav ul li {
+        align-content: center;
+        display: inline-block;
+        margin-left: 15px;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: black;
+    }
+
+    .texto {
+        width: 93%;
+        margin-left: 15px;
+        text-align: justify;
+    }
+
+    .contorno {
+        background-color: rgb(85, 137, 102);
+        border-radius: 15px;
+        margin-top: 15px;
+        width: 71%;
+        text-align: justify;
+        /* display: inline-block; */
+        margin-right: auto;
+        margin-left: auto;
+        border-style: solid;
+        border-color: black;
+    }
+
+    /* p {
+    margin-top: -15px;
+    } */
+
+    h4 {
+        margin-bottom: -15px;
+        font-size: x-large;
+    }
+
+    .ladoalado2 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .ladoalado {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    iframe {
+        width: 250px;
+        height: 180px;
+        border-radius: 15px;
+        margin-top: 15px;
+        margin-right: -15%;
+        margin-left: -16%;
+    }
+
+    .imagens {
+        max-height: 180px;
+        max-width: 180px;
+        margin-top: 15px;
+        border-radius: 15px;
+        border-style: solid;
+        margin-left: -16%;
+        margin-right: -15%;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        background-color: rgb(111, 165, 129);
+    }
+
+    header {
+        background-color: rgb(85, 137, 102);
+        width: 100%;
+        padding: 1px;
+        text-align: center;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-style: solid;
+    }
+
+    nav ul li {
+        width: 95%;
+        text-align: center;
+        margin-left: 2px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: black;
+    }
+
+    .texto {
+        width: 93%;
+        margin-left: 15px;
+        text-align: justify;
+    }
+
+    .contorno {
+        background-color: rgb(85, 137, 102);
+        border-radius: 15px;
+        margin-top: 15px;
+        width: 71%;
+        text-align: justify;
+        /* display: inline-block; */
+        margin-right: auto;
+        margin-left: auto;
+        border-style: solid;
+        border-color: black;
+    }
+
+    /* p {
+        margin-top: -15px;
+        } */
+
+    h4 {
+        margin-bottom: -15px;
+        /* font-size: x-large; */
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .ladoalado {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .ladoalado2 {
+        padding-left: 29%;
+        padding-right: 29%;
+    }
+
+    iframe {
+        width: 200px;
+        height: 140px;
+        /* margin-left: -15%;
+        margin-right: -16%; */
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+
+    .imagens {
+        max-height: 110px;
+        max-width: 110px;
+        margin-top: 15px;
+        border-radius: 15px;
+        border-style: solid;
+        /* margin-left: 50px;
+        margin-right: 50px; */
+    }
+}
