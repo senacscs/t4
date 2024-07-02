@@ -1,0 +1,57 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(167, 254, 164);
+    overflow: hidden;
+}
+
+.contorno {
+    background-color: rgb(76, 159, 56);
+    border-radius: 30px;
+    margin-top: 15px;
+    width: 50%;
+    text-align: center;
+    margin-left: 295px;
+    margin-right: 295px;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    box-shadow: 0 0 10px black;
+}
+
+.contorno :hover {
+    box-shadow: 0 0 40px rgb(76, 159, 56);
+}
+
+footer {
+    margin-bottom: 0px;
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+    width: 98.35%;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    letter-spacing: 2px;
+}
+
+footer:hover {
+    color: #ff6347;
+    transition: color 0.8s;
+}
+
+.feito {
+    position: relative;
+    top: 257px;
+    left: 1130px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.feito:hover {
+    text-decoration: underline;
+    color: blue;
+    transition: color 1s;
+}
