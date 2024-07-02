@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(159, 234, 116);
+    background-color: gray;
     border-radius: 10px;
 }
 
@@ -25,7 +25,7 @@ a:hover {
 }
 
 body {
-    background-image: url("verde.jpg");
+    background-image: url("image.png");
     background-size: 1260px;
 }
 
@@ -34,7 +34,7 @@ body {
     top: 150px;
     left: 120px;
     text-align: center;
-    background-color: rgb(150, 230, 96);
+    background-color: gray;
     border-radius: 10px;
     width: 80%;
     box-shadow: 0 0 20px 0 black;

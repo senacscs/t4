@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(300, 30, 0);
+    background-color: gray;
     border-radius: 10px;
     z-index: 1000;
 }
@@ -26,7 +26,7 @@ a:hover {
 }
 
 body {
-    background-image: url("fundositevermelho.jpg");
+    background-image: url("image.png");
     background-size: 1260px;
 }
 
@@ -35,7 +35,7 @@ body {
     top: 60px;
     left: 120px;
     text-align: center;
-    background-color: rgb(300, 30, 0);
+    background-color: gray;
     border-radius: 10px;
     width: 80%;
     box-shadow: 0 0 20px 0 black;
