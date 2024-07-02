@@ -1,16 +1,16 @@
 body {
     margin: 0;
     padding: 0;
-    animation: SLA 0.55 linear infitiny;
+    animation: SLA 0.5s linear infinite;
     /* background-color: blue;  adicionei */
 }
 
-@keyframe SLA {
-    0% {background: green;}
-    25% {background: red;}
-    50% {background: blue;}
-    75% {background: pink}
-    100% {background: green}
+@keyframes SLA {
+    0% {background-color: green;}
+    25% {background-color: red;}
+    50% {background-color: blue;}
+    75% {background-color: pink}
+    100% {background-color: green}
 }
 
 nav {
