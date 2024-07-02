@@ -41,7 +41,7 @@ body {
 }
 
 .texto:hover {
-box-shadow: 0 0 30px 0 blue;
+box-shadow: 0 0 30px 0 black;
 }
 
 h2 {
