@@ -1,0 +1,46 @@
+body {
+    margin:0;
+    background-color: white;
+    color: blue;
+}
+
+.cabeçalho {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.explicação {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.exemplo {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.rodapé {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    /* modificação */
+    font-size: 20px;
+    text-align: center;
+}
+
+/* modificações */
+
+p {
+    font-size: 30px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
