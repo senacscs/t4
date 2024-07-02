@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    /*complementação*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    font-weight: normal;
+    /*alteração para a cor branca, a cor de fundo e a cor da letra não devem ter a mesma cor*/
+    text-align: center;
+}
+
+p {
+    color: black;
+    text-align: center;
+}
+
+li {
+    text-align: center;
+}
+
+header {
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+}
