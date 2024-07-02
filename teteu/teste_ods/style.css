@@ -1,0 +1,29 @@
+/* body{
+    background-color: red;
+}
+h1{
+    color: white;
+    font-family: arial;
+    font-size: small;
+    text-align: center;
+}
+img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+} */
+body{
+    background-color:rgb(255, 0, 0);
+}
+h1{
+    color: white;
+    font-family: arial;
+    font-size: small;
+    text-align: center;
+}
+.principal{
+    position: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 2%;
+}
