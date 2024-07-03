@@ -1,0 +1,38 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+
+.contorno {
+    background-color: green;
+    margin-top: 15px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+header {
+    background-color: green;
+    width: 100%;        
+    padding: 1px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    align-content: center;
+}
+
+.texto {
+    width: 93%;
+    margin-left: 15px;
+    text-align: justify;
+}
+
+.imagem {
+    max-width: 200px;
+    display: inline-block;
+    align-content: center;
+}
