@@ -1,19 +1,35 @@
+header{
+  background-color: #162a22;
+}
 h1{
  font-style:italic ;
  text-align: center;
- color: darkolivegreen;
+ color: #333d29;
  font-size: 45px;
 }
 li,a {
     a:link, a:visited { text-decoration: none; } 
-    a:hover { text-decoration: underline; }
+    a:hover { text-decoration: none; }
   font-style:italic ;
-  text-align:center;
-  color: chocolate;
+  color: #c2c5aa;
   list-style-type: none;
   font-size: x-large;
-
 }
 body{
-    background-color:rgb(231, 255, 170);
+  background-image: url("imagemfundo.jpg");
+}
+header {
+  background-color: #a68a64;
+  color: #333d29;
+  padding: 10px ;
+  text-align: center;
+  font-size: 20px;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+nav{
+  margin-left: 230px;
+
+}
+a{
+  background-color: #936639;
 }
