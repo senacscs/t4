@@ -1,0 +1,33 @@
+.titulo{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    text-align: center;
+    font-family: sans,Times New Roman,arial;
+    color:rgb(255,255, 255);
+}
+.conteudo{
+    background-color: rgb(255, 255,255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: sans,Times,arial;
+}
+h1{
+    font-size: 30px;
+}
+p{
+    font-size: large;
+}
+hr{
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+}
+footer{
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+img{
+    width: 500px;
+}
