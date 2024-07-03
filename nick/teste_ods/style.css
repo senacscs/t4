@@ -1,0 +1,43 @@
+body{
+    background-color: blue;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
+section{
+    color: white;
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style: italic;
+    background-color: black;
+}
+
+h3{
+    text-align: center;
+    color: white;
+}
+
+p{
+    text-align: center;
+    color: white;
+}
+
+header{
+    background-color: white;
+    color: black;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    text-align: center;
+}
