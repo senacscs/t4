@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(222, 29, 32);
+}
+ 
+header {
+    background-color: #e61a1a;
+    color: #e8ece4;
+    padding: 10px 0;
+    text-align: center;
+}
+section{
+    color: rgb(62, 36, 231);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+h2{
+    color: rgb(3, 3, 3);
+}
+li,p{
+    color: rgb(3, 3, 3);
+}
