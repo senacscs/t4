@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(195, 57, 57);
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    /* Adicionando bordas arredondadas */
+    margin: 20px auto;
+    /* Centralizando horizontalmente com margem automática */
+    max-width: 30%;
+    /* Limitando a largura máxima do h1 */
+    background-color: black;
+    /* Cor de fundo para a faixa */
+    color: red;
+}
+
+
+.Box {
+    background-color: black; /* Cor de fundo da caixa */
+    border: 1px solid black; /* Borda da caixa */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Margem externa, auto para centralizar */
+    width: 1200px; /* Largura máxima da caixa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 10px;
+}
+h2 {
+    color: white; /* Cor do texto */
+    border-bottom: 1px solid #ccc; /* Linha separadora abaixo do título */
+    padding-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 30px;
+}
+p {
+    line-height: 1.6; /* Espaçamento entre linhas */
+    font-size: 25px;
+    color: white;
+}
+figure {
+    margin-bottom: 20px; /* Espaçamento entre figuras */
+    text-align: center; /* Centraliza as figuras */
+    color: white;
+}
+legend {
+    font-style: italic; /* Fonte em itálico */
+    color: white;
+}
+footer {
+    margin-top: 20px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto */
+    color: white; /* Cor do texto */
+}
+nav {
+    font-size: 20px;
+}
