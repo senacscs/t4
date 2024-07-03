@@ -88,3 +88,9 @@ h2{
 .fl2 {
     margin-left: 5px;
 }
+@media(max-width: 768px){
+    body{
+      background-color: red;
+    }
+     
+  }

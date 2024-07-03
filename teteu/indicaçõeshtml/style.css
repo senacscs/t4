@@ -17,4 +17,9 @@ body {
     background-image: url(fundo.jpg);
 }
  
- 
+@media(max-width: 768px){
+    body{
+      background-color: red;
+    }
+     
+  }
