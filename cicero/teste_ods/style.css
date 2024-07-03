@@ -24,6 +24,7 @@ div.ods {
   div.ods img {
     width: 100%;
     height: auto;
+    align-items: center;
   }
   
   div.desc {
