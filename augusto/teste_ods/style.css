@@ -1,0 +1,45 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(fundo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(12, 153, 31);
+    border-radius: 0 0 10px 10px;
+    padding: 60px;
+    background-position: center;
+    background-size: cover;
+    font-size: 55px;
+}
+
+.texto1 {
+    font-size: 25px;
+    margin: 0;
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px 20px 30px 10px;
+    width: 30%;
+    margin-left: 400px;
+    background-color: rgb(12, 153, 31);
+    border-radius: 20px;
+}
+iframe {
+    margin-left: 300px;
+    margin-top: 40px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    width: 98.65%;
+    bottom: 0;
+    background-color: rgb(12, 153, 31);
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
