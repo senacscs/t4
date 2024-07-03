@@ -40,18 +40,3 @@ footer:hover {
     color: #ff6347;
     transition: color 0.8s;
 }
-
-.feito {
-    position: relative;
-    top: 257px;
-    left: 1130px;
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-}
-
-.feito:hover {
-    text-decoration: underline;
-    color: blue;
-    transition: color 1s;
-}
