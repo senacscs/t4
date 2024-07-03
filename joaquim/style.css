@@ -37,3 +37,12 @@ p {
     margin-right: auto;
     margin-left: auto;
 }
+
+.icones {
+    position:absolute;
+    right: 0;
+    top:0;
+    margin:0;
+    margin-right: 15px;
+    margin-top: 30px;
+}
