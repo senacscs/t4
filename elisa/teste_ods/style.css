@@ -20,11 +20,6 @@ header {
     text-align: center;
 }
 
-nav ul li {
-    display: inline-block;
-    align-content: center;
-}
-
 .texto {
     width: 93%;
     margin-left: 15px;
@@ -33,6 +28,8 @@ nav ul li {
 
 .imagem {
     max-width: 200px;
-    display: inline-block;
-    align-content: center;
+    border-style: solid;
+    border-radius:110px;
+    display: block;
+    margin:auto;
 }
