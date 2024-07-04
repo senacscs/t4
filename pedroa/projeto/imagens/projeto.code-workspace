@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "projeto",
+			"path": ".."
+		},
+		{
+			"name": "imagens",
+			"path": "../../../../Desktop/pedroarthur/site.projetointegrador/imagens"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projeto",
+		"liveServer.settings.port": 5501
+	}
+}

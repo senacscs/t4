@@ -1,0 +1,23 @@
+@media (min-width: 768) {
+    body {
+        background-color: aquamarine;
+    }
+}    
+
+@media (max-width: 768px) {
+    body {
+        background-color: white;
+    }
+}    
+
+ body {
+    background-color: whitesmoke;
+ }
+
+.itens {
+    color: black;
+    text-align: unset;
+    font-size:smaller;
+    font-weight: 100;
+}
+
