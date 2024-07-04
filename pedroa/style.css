@@ -1,0 +1,51 @@
+p {
+    color: #000;
+    text-align: center;
+    font-family: monocraft;
+    font-size: xx-large;
+
+
+}
+
+body {
+
+    background-color: aquamarine;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+h1,
+h2 {
+    color: black;
+    font-family:monocraft;
+    font-size: small;
+
+
+
+}
+
+hr {
+
+    height: 20px;
+}
+
+section {
+
+    text-align: center;
+    border: solid 4px;
+    border-radius: 10px;
+    margin: 40px;
+    color: yellow;
+    border-style: outset;
+
+}
+
+a {
+    color: purple;
+    font-family: monocraft;
+}
