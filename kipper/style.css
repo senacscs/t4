@@ -1,0 +1,23 @@
+body{
+    background: linear-gradient(90deg, rgb(50, 107, 173), rgb(89, 189, 59));
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+a:hover{
+    color:blue;
+}
+h1{
+    text-align: center;
+    font-size: 90px;
+}
+p{
+    text-align: center;
+
+}
+ul{
+   text-align: center;
+}
