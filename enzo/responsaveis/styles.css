@@ -1,0 +1,107 @@
+
+body {
+    background-image: url("fundobrancopais.jpg");
+    background-size: 1260px;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 15px;
+    color: white;
+}
+
+hr {
+    color: black;
+    border-color: black;
+    position: relative;
+    bottom: 35px;
+    width: 1400px;
+    right: 15px;
+}
+
+.container {
+    background-image: url("cabecariositepais.jpg");
+    width: 1260px;
+    position: relative;
+    right: 20px;
+    height: 70px;
+    bottom: 25px;
+}
+
+.imagem1 {
+    width: 450px;
+    position: relative;
+    margin-right: 400px;
+    margin-left: 400px;
+    border-radius: 50px;
+    bottom: 180px;
+    right: 390px;
+}
+
+.texto1 {
+    border-radius: 10px;
+    max-width: 100%;
+    background-color: gray;
+    width: 600px;
+    position: relative;
+    left: 500px;
+    text-align: center;
+    top: 50px;
+}
+
+.imagem2 {
+    width: 500px;
+    border-radius: 50px;
+    position: relative;
+    left: 700px;
+    bottom: 300px;
+}
+
+.texto2 {
+    position: relative;
+    text-align: center;
+    margin-left: 600px;
+    right: 550px;
+    background-color: gray;
+    border-radius: 10px;
+    width: 600px;
+    bottom: 90px;
+}
+
+.texto3 {
+    background-color: gray;
+    border-radius: 10px;
+    margin-right: 200px;
+    margin-left: 200px;
+    position: relative;
+    text-align: center;
+    bottom: 280px;
+}
+
+.musica {
+    position: relative;
+    bottom: 370px;
+    width: 500px;
+    height: 200px;
+    left: 350px;
+}
+
+.fotopaissenac {
+    width: 400px;
+    border-radius: 50px;
+    position: relative;
+    bottom: 90px;
+    right: 100px;
+}
+
+.texto4 {
+    background-color: gray;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 500px;
+    margin-left: 100px;
+    position: relative;
+    left: 200px;
+    bottom: 113px;
+}
