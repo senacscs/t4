@@ -26,11 +26,11 @@ h1 {
     color: #333;
 }
 
-.question {
+.questao {
     text-align: center;
 }
 
-.question img {
+.questao da img {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -38,45 +38,18 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.question-text {
+.questao do texto {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #333;
 }
 
-.options {
+.opcoes {
     list-style-type: none;
     padding: 0;
 }
 
-.options li {
+.opcoes li {
     margin-bottom: 10px;
 }
-
-.options input[type="radio"] {
-    display: none;
-}
-
-.options label {
-    display: block;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.options label:hover {
-    background-color: #e0e0e0;
-}
-
-#result {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-
 
