@@ -1,0 +1,51 @@
+body {
+    background-image: url(arvres.jpg);
+    background-size: cover;
+    margin: 0;
+    font-weight: bold
+}
+
+h1 {
+    text-align: center;
+    color: rgb(50, 149, 35);
+    font-size: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    color: rgb(43, 130, 30);
+    font-size: 30px;
+  }
+
+ul {
+    list-style-type: none;
+    padding: 5;
+    text-align: center;
+  }
+
+li {
+    margin-bottom: 10px;
+    color: rgb(29, 88, 20);
+  }
+
+input[type="text"] {
+    width: 50px;
+    color: rgb(29, 88, 20);
+  }
+
+#resultado {
+    color: green;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(153, 234, 78);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0px 300px 40px 300px;
+  }
+
+footer {
+    color: rgb(29, 88, 20);
+    background-color: rgb(153, 234, 78);
+    text-align: center;
+    align-items: end;
+}
