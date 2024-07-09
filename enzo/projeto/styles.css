@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(204, 11, 11);
+}
+
+.cabeçalho {
+    text-align: center;
+    font-size: 30px;
+    height: 35px;
+    color: black;
+    font-family: impact, serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    right: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #23c8e6;
+    transition: color 1s;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #0073ff;
+    transition: width 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.home {
+    font-size: 20px;
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    
+}
+
+h2 {
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-style: italic;
+}
+
+img {
+ width: 20%;
+ position: relative;
+ left: 500px;
+ border-radius: 50px;
+ box-shadow: 0 0 20px 0;
+}
+
+.link1 {
+    position: relative;
+    right: 300px;
+}
+
+.link2 {
+    position: relative;
+    right: 200px;
+}
+
+.link3 {
+    position: relative;
+    left: 300px;
+}
+
+.link4 {
+    position: relative;
+    right: 00px;
+}
+
+.container1 {
+    width: 50%;
+    position: relative;
+    background-color: rgb(255, 70, 70);
+    border-radius: 20px;
+    bottom: 100px;
+    left: 315px;
+    box-shadow: 0 0 10px 0;
+}
