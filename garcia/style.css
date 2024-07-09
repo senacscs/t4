@@ -1,48 +1,149 @@
-body{
-    background: linear-gradient(180deg, rgb(0, 255, 255), rgb(0,0,0));
-    height: 100vh;
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
 }
-*{
-    margin: 0;
-    padding: 0;
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 8vh;
-    color: white;
- }
- .nav-list{
-     list-style: none;
-     display: flex;
- }
- .nav-list{
-     letter-spacing: 3px;
-      margin-right: 1;
- }
- header{
-     background-color: rgb(37, 37, 37);
-     color: white;
- }
- div{
-    background-color: rgb(37, 37, 37);
-    width: 180px;
-    height: 90px;
-    color: white;
-    display: inline-block;
- }
- section{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
- }
- p{
-    text-align: center;
-    margin-top: 15%;
-    font-size: 30px;
-    
- }
+.container {
+  margin-left: auto;
+  display: inline-block;
+}
+
+.p1 {
+  margin-right: auto;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.nome h1 {
+  text-align: center;
+  font-size: 14vw;
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 8px;
+  padding-bottom: 300px;
+  padding-top: 15vh;
+}
+main{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.proj {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Italiana", sans-serif;
+  letter-spacing: 2px;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+hr {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.proj h2:hover {
+  color: rgb(169, 169, 169);
+  transition: linear 0.3s;
+  transform: scale(1.1);
+  text-align: center;
+}
+p{
+  text-align: center;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.menu {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.menu .menu-lines {
+  position: fixed;
+  z-index: 999;
+  width: 35px;
+  height: 35px;
+
+}
+
+.menu-lines span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: rgb(169, 169, 169);
+  border-radius: 3px;
+  transition: all ease .2s;
+}
+
+.menu .menu-fake {
+  position:fixed;
+  z-index: 1000;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.menu .menu-fake:checked~.menu-lines span:nth-child(1) {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg)scaleX(1.25);
+}
+
+.menu .menu-fake:checked~.menu-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu .menu-fake:checked~.menu-lines span:nth-child(3) {
+  transform: rotate(-45deg)scaleX(1.25);
+  transform-origin: 0% 100%;
+}
+
+.menu ul {
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  width: 300px;
+  background-color: rgb(19, 19, 19);
+  height: 100vh;
+  padding-top: 100px;
+  margin-left: -300px;
+  transition: all ease .4s;
+}
+
+.menu .menu-fake:checked~ul {
+  margin-left: 0;
+}
+
+.menu ul li {
+  padding: 10px 30px;
+
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  margin-top: 300px;
+  letter-spacing: 2px;
+}
+
+.menu ul li a:hover {
+  color: rgb(169, 169, 169);
+  transition: all ease .3s;
+}
