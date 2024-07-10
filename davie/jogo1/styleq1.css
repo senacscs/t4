@@ -1,0 +1,33 @@
+body {
+    background-image: url(matemática1.jpg);
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+img {
+    width: 1200px;
+    height: 350px;
+}
+header {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+a:link, a:visited {
+    background-color: rgb(234, 219, 13);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 9vh;
+}
+a:hover, a:active {
+    background-color: rgb(97, 91, 6);
+}

@@ -1,0 +1,43 @@
+body {
+    background-image: url(matemática1.jpg);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+form {
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+}
+.enigma {
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    color: white;
+    position:absolute;
+}
+input {
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+}
+button {
+    background-color: black;
+    border: none;
+    padding: 15px;
+    width: 40%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: grey;
+}

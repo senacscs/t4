@@ -1,0 +1,40 @@
+body {
+    background-image: url(matemática1.jpg);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.titulo {
+    font-size: 100px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:link, a:visited {
+    background-color: #5f36f4;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10vh;
+}
+a:hover, a:active {
+    background-color: red;
+    font-size: 1vh;
+    padding: 1px 1px;
+}
+.bruh {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bruh:hover{
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    text-align: center;
+}
