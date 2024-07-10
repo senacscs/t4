@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    align-content: center;
+    background-color: black;
+    font-family: sans-serif;
+}
+main {
+    width: 1200px;
+    height: 570px;
+    margin: auto;
+    
+}
+.imgp {
+    width: 100%;
+    height: 100%;
+    background-image: url(fases/imges/1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(22, 22, 22); 
+    position: relative;
+    border-radius: 10px;
+    box-shadow: inset 0 0 30px 10px rgba(0, 0, 0, 0);
+}
+.triangulo1 {
+    width: 0;
+    height: 0;
+    border-left: 190px solid transparent;
+    border-right: 190px solid transparent;
+    border-bottom: 200px solid rgba(81, 81, 81, 0);
+    position: relative;
+    left: 280px;
+    top: 270px;
+    transition: 0.5s;
+}
+.triangulo1:hover {
+    border-bottom: 200px solid rgba(0, 0, 0, 0);
+}
+.triangulo2 {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 170px solid rgba(165, 165, 165, 0);
+    position: absolute;
+    left: 620px;
+    top: 300px;
+    transition: 0.5s;
+}
+.triangulo2:hover {
+    border-bottom: 170px solid rgba(0, 0, 0, 0);
+}
+.triangulo1::before {
+    content: "";
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: rgb(228, 167, 0);
+    border-radius: 15px;
+    transition: 0.5s;
+    top: 200px;
+    left: 0px;
+}
+.triangulo1:hover::before {
+    content: "Priamide maior: Aqui você terá que resolver algumas funções para liberar a porta da Esfinge";
+    width: 300px;
+    height: 50px;
+    left: -150px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    border: 2px solid black;
+}
+.triangulo2::before {
+    content: "";
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-radius: 15px;
+    transition: 0.5s;
+    top: 170px;
+    left: 0px;
+    background-image: url(fases/imges/5.png);
+    background-position: center;
+    background-size: 150%;
+    filter: contrast(90%);
+}
+.triangulo2:hover::before {
+    content: "Priamide menor: Aqui você terá que resolver algumas funções os valores da função nessesaria para libertar a Esfinge";
+    width: 300px;
+    height: 70px;
+    left: -150px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    border: 2px solid black;
+    text-shadow: 0 0 10px white;
+}
+a {
+    color: black;
+}
+a:visited {
+    color: black;
+}
