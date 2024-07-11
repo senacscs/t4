@@ -1,0 +1,265 @@
+/* CSS Reset & General */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lora', serif;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+*::selection {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Center content */
+body,
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+fieldset {
+    border: none;
+    margin: 20px auto;
+}
+
+.form-check {
+    text-align: left;
+    font-size: 20px;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 0%;
+}
+
+.form-check-label {
+    margin: 0;
+    padding: 0;
+}
+
+.form-label {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: #fff;
+    color: #000;
+    width: 80%;
+}
+
+/* Backgrounds */
+.img-bg {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+
+#home-bg {
+    background-image: url(https://i.pinimg.com/originals/05/1b/61/051b6199d99364a851b82feefcbb34ae.gif);
+}
+
+#inicio-bg {
+    background-image: url(../img/sunset.png);
+}
+
+#vitoria-bg {
+    background-image: url(../img/candles.jpg);
+}
+
+/* Titles & Texts */
+h1 {
+    font-size: 85px;
+    margin-bottom: 20px;
+    background-color: #72288629;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    margin-top: 20%;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+p, 
+legend{
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 80%;
+    padding: 10px;
+    color: #fff;
+    background-color: #7128866e;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+/* Start Button */
+.start-btn {
+    background-color: #20032c9f;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.start-btn:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+a .start-btn:hover  {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Choice Buttons */
+.choices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.choice-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 200px;
+    width: 100%;
+
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 15px;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.choice-btn:hover {
+    background-color: #6b7a26;
+}
+
+/* Try Again Button */
+.choices a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 200px;
+    width: 100%;
+    margin: 0px 10px;
+}
+
+.try-again-btn,
+.give-up-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 200px;
+    width: 100%;
+
+    background-color: #000;
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 15px;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.try-again-btn:hover {
+    background-color: #489e16;
+}
+
+.give-up-btn:hover {
+    background-color: #c72020;
+}
+
+/* Success Button */
+.btn-success {
+    background-color: #fff;
+    color: #000;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Input */
+input {
+    background-color: #000;
+    color: #fff;
+    line-height: 200%;
+    border: none;
+    border-radius: 10px;
+}
+
+.img-option {
+    width: 100%;
+}
+
+
+@media screen and (min-width: 700px) {
+    body {
+        max-width: 1000px;
+    }
+}
