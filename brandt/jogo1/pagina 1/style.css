@@ -1,0 +1,108 @@
+
+body {
+    background-image: url(icon.webp);
+    background-size:contain;
+}
+
+body,
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+    background-color: #a10904b3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    margin-top: 20%;
+}
+
+.pergunta{
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 80%;
+    padding: 10px;
+    color: #fff;
+    background-color: #4a18186e;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.proposta{
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 80%;
+    padding: 10px;
+    color: #fff;
+    background-color: #6215156e;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    font-family: 'Lora', serif;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #600202e4;
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+fieldset{
+    background-color: #5c15156e;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 15px;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+legend {
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #4f04046e;
+    border: none;
+    border-radius: 10px;
+}
