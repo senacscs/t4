@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+body {
+ background-image: url(porta.gif);
+ background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+
+h1 {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 140px;
+    backdrop-filter: blur(20px);
+    width: 1000px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px white;
+    }
