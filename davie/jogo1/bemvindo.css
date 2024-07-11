@@ -1,0 +1,21 @@
+body {
+    background-image: url(matemática1.jpg);
+}
+h1, h2, h3 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.comecar:link, .comecar:visited {
+    background-color: #790404;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10vh;
+}
+.comecar:hover, .comecar:active {
+    background-color: #ea0b0b;
+    font-size: 11vh;
+    padding: 14px 25px;
+}

@@ -1,5 +1,5 @@
 body {
-    background-image: url(matemática1.jpg);
+    background-image: url(Macabro.jpg);
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -30,4 +30,9 @@ a:link, a:visited {
 }
 a:hover, a:active {
     background-color: rgb(97, 91, 6);
+}
+.calculo {
+    font-size: 180px;
+    color: red;
+    text-align: center;
 }

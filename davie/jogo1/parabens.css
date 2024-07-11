@@ -1,0 +1,21 @@
+body {
+    background-image: url(matemática1.jpg);
+}
+.fim {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.voltar:link, .voltar:visited {
+    background-color: #3a3a3d;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10vh;
+}
+.voltar:hover, .voltar:active {
+    background-color: rgb(0, 0, 0);
+    font-size: 11vh;
+    padding: 14px 25px;
+}

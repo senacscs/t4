@@ -1,15 +1,17 @@
 body {
-    background-image: url(matemática1.jpg);
-    font-family: 'Times New Roman', Times, serif;
+    background-image: url(cemitério\ do\ carai.jpg);
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
-form {
-    width: 400px;
-    margin: 100px auto;
+header {
+    background-image: linear-gradient(90deg, black, grey, white);
+    padding: 10px;
+    margin: 0;
+    align-items:center;
     text-align: center;
 }
-.enigma {
+div {
     background-color: rgba(0, 0, 0, 0.8);
     top: 50%;
     left: 50%;
@@ -17,6 +19,11 @@ form {
     border-radius: 15px;
     color: white;
     position:absolute;
+}
+form {
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
 }
 input {
     padding: 15px;
@@ -29,7 +36,7 @@ input {
     height: 30px;
 }
 button {
-    background-color: black;
+    background-color: dodgerblue;
     border: none;
     padding: 15px;
     width: 40%;
@@ -39,5 +46,5 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: grey;
+    background-color: blue;
 }
