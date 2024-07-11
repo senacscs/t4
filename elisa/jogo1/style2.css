@@ -1,0 +1,33 @@
+body {
+    min-height: 100vh;
+    font-family: cooper black;
+    font-weight: 300;
+    font-size: 30px;
+    background-image: radial-gradient(circle, rgb(255, 98, 0), rgb(160, 13, 245) );
+    text-align: center;
+  }
+  
+h1{
+    color: white;
+}
+
+.quest1{
+    background-color: white;
+    color: #ee6352;
+    /* margin-top: auto; */
+    margin-left: auto;
+    margin-bottom: 2px;
+    margin-right: auto;
+    font-size: 70px;
+    width: 40%;
+}
+
+.res{
+    display: inline-flex;
+    align-items: top;
+}
+
+img{
+    width: 90%;
+    margin: auto;
+}

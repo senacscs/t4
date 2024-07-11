@@ -1,0 +1,41 @@
+body {
+    min-height: 100vh;
+    font-family: cooper black;
+    font-weight: 300;
+    font-size: 30px;
+    background-image: radial-gradient(circle, rgb(255, 98, 0), rgb(160, 13, 245) );
+    text-align: center;
+  }
+
+  button{
+    padding: 20px 40px;
+    background-color: #ee6352;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cooper black;
+    font-size: 20px;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+    color: white;
+    /* border-color: #ee6352; */
+}
+
+button:hover{
+    box-shadow: 0 10px 18px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+
+}
+
+a{
+    margin-left: auto;
+    margin-right: auto;
+}
+.parab{
+    background-color: white;
+    color: #ee6352;
+    margin-top: 100px;
+    font-size: 50px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}

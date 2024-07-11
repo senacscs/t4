@@ -1,0 +1,12 @@
+body {
+    min-height: 100vh;
+    font-family: cooper black;
+    font-weight: 300;
+    font-size: 30px;
+    background-image: radial-gradient(circle, rgb(255, 98, 0), rgb(160, 13, 245) );
+    text-align: center;
+  }
+
+.parab{
+    color: white;
+}
