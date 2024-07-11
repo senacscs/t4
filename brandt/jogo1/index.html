@@ -1,175 +1,21 @@
-<html>
-  <!DOCTYPE html>
-  <html lang="port">
-  <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Jogo dos Enigmas</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="shortcut icon" href="fotor-202407098926.png">
-  </head>
-<body>
-  <div id="container">
-    <h1>Jogo dos Enigmas</h1>
-    <h2>Equações de Primeiro Grau</h2>
-    <ul>
-      <li>Qual o valor de x na equação: x + 3 = 7?</li>
-      <input type="text" id="resposta1">
-      <button onclick="verificarResposta1()">Verificar</button>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-      <li>Qual o valor de y na equação: 2y - 5 = 11?</li>
-      <input type="text" id="resposta2">
-      <button onclick="verificarResposta2()">Verificar</button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape das Series</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="pics/image-removebg-preview (6).png:~]">
+</head>
 
-      <li>Qual o valor de z na equação: 3z + 2 = 17?</li>
-      <input type="text" id="resposta3">
-      <button onclick="verificarResposta3()">Verificar</button>
+<body class="img-bg" id="home-bg">
+    <h1 class="title">Você está Preso!</h1>
 
-      <li>Qual o valor de w na equação: 4w - 7 = 9?</li>
-      <input type="text" id="resposta4">
-      <button onclick="verificarResposta4()">Verificar</button>
-    </ul>
-    </div>
+    <p class="text">Oh não! Você foi acidentalmente teletransportado para a sua televisão e agora deve passar pelas suas 8 séries favoritas para escapar. Para retornar ao seu sofá, você precisa responder corretamente 8 perguntas matemáticas dentro do universo do seriado.</p>
 
-    <div>
-  <h2>Equações de Segundo Grau</h2>
-  <ul>
-    <li>Qual os valores de x na equação: x² + 2x - 3 = 0?</li>
-    <input type="text" id="resposta5">
-    <button onclick="verificarResposta5()">Verificar</button>
-    <input type="text" id="resposta6">
-    <button onclick="verificarResposta6()">Verificar</button>
-
-    <li>Qual os valores de y na equação: y² - 5y + 6 = 0?</li>
-    <input type="text" id="resposta7">
-    <button onclick="verificarResposta7()">Verificar</button>
-    <input type="text" id="resposta8">
-    <button onclick="verificarResposta8()">Verificar</button>
-
-    <li>Qual os valores de z na equação: 2z² - 7z + 5 = 0</li>
-    <input type="text" id="resposta9">
-    <button onclick="verificarResposta9()">Verificar</button>
-    <input type="text" id="resposta10">
-    <button onclick="verificarResposta10()">Verificar</button>
-
-    <li>Qual os valores de w na equação: 3w² + 4w - 7 = 0?</li>
-    <input type="text" id="resposta11">
-    <button onclick="verificarResposta11()">Verificar</button>
-    <input type="text" id="resposta12">
-    <button onclick="verificarResposta12()">Verificar</button>
-  </ul>
-    <div id="resultado"></div>
-  </div>
-  <footer>Feito por Andrielen, Henrique, Larissa e Thom.</footer>
-
-  <script>
-    function verificarResposta1() {
-      const resposta = document.getElementById('resposta1').value;
-      if (resposta == 4) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta2() {
-      const resposta = document.getElementById('resposta2').value;
-      if (resposta == 8) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta3() {
-      const resposta = document.getElementById('resposta3').value;
-      if (resposta == 5) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta4() {
-      const resposta = document.getElementById('resposta4').value;
-      if (resposta == 4) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta5() {
-      const resposta = document.getElementById('resposta5').value;
-      if (resposta == 1) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta6() {
-      const resposta = document.getElementById('resposta6').value;
-      if (resposta == -3) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta7() {
-      const resposta = document.getElementById('resposta7').value;
-      if (resposta == 2) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta8() {
-      const resposta = document.getElementById('resposta8').value;
-      if (resposta == 3) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta9() {
-      const resposta = document.getElementById('resposta9').value;
-      if (resposta == 1) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta10() {
-      const resposta = document.getElementById('resposta10').value;
-      if (resposta == 5/2) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta11() {
-      const resposta = document.getElementById('resposta11').value;
-      if (resposta == 1) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-
-    function verificarResposta12() {
-      const resposta = document.getElementById('resposta12').value;
-      if (resposta == -7/3) {
-        document.getElementById('resultado').innerHTML = 'Resposta correta!';
-      } else {
-        document.getElementById('resultado').innerHTML = 'Resposta incorreta. Continue tentando!';
-      }
-    }
-  </script>
+        <a href="quiz.html"><button class="start-btn">Iniciar</button></a>
 </body>
+
 </html>
