@@ -1,3 +1,9 @@
+body {
+    background-image: url(https://i.ytimg.com/vi/xpv-SWbDUr8/maxresdefault.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
 /* Reset de Estilos Básico */
 * {
     margin: 0;
@@ -10,19 +16,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-.imagem_de_fundo1{
-        background-image: url("https://th.bing.com/th/id/OIP.dhFzt5dR8fiodoHmdq9zSAHaJj?rs=1&pid=ImgDetMain");
-        background-repeat:no-repeat;
-        background-attachment:fixed;
-        background-size:cover;
-    }/* feito por João G. */
-
-    .imagem_de_fundo2{
-        background-image: url("https://th.bing.com/th/id/OIP.7fRJnHRRScswPT9NiqcvvQHaGV?rs=1&pid=ImgDetMain");
-        background-repeat:no-repeat;
-        background-attachment:fixed;
-        background-size:cover;
-    } /* feito por João G. */
 
 .container {
     max-width: 800px;
@@ -39,11 +32,11 @@ h1 {
     color: #333;
 }
 
-.questao {
+.question {
     text-align: center;
 }
 
-.questao da img {
+.question img {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -51,22 +44,42 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-div{
-    background-color: rgba(255, 255, 255, 0.7); 
-}
-
-.questao do texto {
+.question-text {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #333;
 }
 
-.opcoes {
+.options {
     list-style-type: none;
     padding: 0;
 }
 
-.opcoes li {
+.options li {
     margin-bottom: 10px;
 }
 
+.options input[type="radio"] {
+    display: none;
+}
+
+.questao {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options label:hover {
+    background-color: #e0e0e0;
+}
+
+#result {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
