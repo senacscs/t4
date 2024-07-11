@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+  }
+  
+  .marquee {
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    border: 2px solid #ab0a0a;
+    background-color: #383636;
+  }
+  
+  .marquee-content {
+    display: flex;
+    flex-direction: column;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .marquee-content p {
+    margin: 0;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: #383636;
+    border-bottom: 1px solid #ccc;
+  }
+
+  p {
+    font-size: 30px;
+    color: white;
+    font-family: "Roboto Mono", monospace;;
+  }

@@ -21,8 +21,10 @@ h1 {
     width: 25%;
     text-align: center;
     position: relative;
-    top: 420px;
-    left: 450px;
+    margin-top: 35%;
+    margin-left: 36%;
+    margin-bottom: 35%;
+    margin-right: 30%;
 }
 
 h1 a {

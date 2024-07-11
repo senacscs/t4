@@ -10,7 +10,7 @@ p {
 }
 @media (min-width: 768px) {
     body {
-        background-color: red;
+        background-color: rgb(34, 0, 255);
     }
 }
 

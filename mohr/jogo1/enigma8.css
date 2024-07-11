@@ -42,7 +42,7 @@ box-shadow: 0 0 10px white;
 }
 
 .question-a:active{
-    box-shadow: 0 0 5px red;
+    box-shadow: 0 0 5px green;
     position: relative;
 }
 
@@ -61,7 +61,7 @@ box-shadow: 0 0 10px white;
 }
 
 .question-b:active{
-    box-shadow: 0 0 5px green;
+    box-shadow: 0 0 5px red;
 }
 
 a {
