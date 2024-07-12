@@ -2,15 +2,26 @@
   margin: 0;
   padding: 0;
 }
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
-.container {
-  margin-left: auto;
-  display: inline-block;
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: rgb(0, 44, 241);
 }
 
-.p1 {
-  margin-right: auto;
-}
+.star:before {
+  position: fixed;
+  content: '\2726';
+  color: inherit;
+  inset: 0;
+  box-shadow: 0 0 1em .5em rgb(0, 166, 243);
+  filter: drop-shadow(0 0 .5em rgb(163, 98, 248));
+  text-shadow: 0 0 .8em rgb(255, 255, 255);
+} */
+
 
 body {
   background-color: black;
@@ -27,6 +38,33 @@ body {
   padding-bottom: 300px;
   padding-top: 15vh;
 }
+h2 {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  max-width: 60%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: rgb(180, 180, 180);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+h2:hover::after {
+  transform: scaleX(1);
+}
+
 main{
   width: 80%;
   margin-left: auto;
@@ -57,10 +95,15 @@ hr {
   transition: linear 0.3s;
   transform: scale(1.1);
   text-align: center;
+
 }
 p{
   text-align: center;
   color: white;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3vh;
 }
 html {
   scroll-behavior: smooth;
@@ -146,4 +189,19 @@ html {
 .menu ul li a:hover {
   color: rgb(169, 169, 169);
   transition: all ease .3s;
+}
+
+img{
+  display: block;
+  margin-left: calc(100vw - 6vw);
+  width: 3vw;
+  height: 3vw;
+  position: fixed;
+}
+
+@keyframes giro {
+  100% {transform: rotate(360deg);}
+}
+img{
+  animation: giro 2s infinite;
 }
