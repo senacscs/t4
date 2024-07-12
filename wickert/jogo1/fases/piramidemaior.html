@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            align-content: center;
+            background-color: black;
+            font-family: sans-serif;
+        }
+
+        main {
+            width: 1200px;
+            height: 570px;
+            margin: auto;
+
+        }
+
+        .imgp {
+            width: 100%;
+            height: 100%;
+            background-image: url(imges/6.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: rgb(22, 22, 22);
+            position: relative;
+            border-radius: 10px;
+            box-shadow: inset 0 0 30px 10px rgba(0, 0, 0, 0);
+            overflow-y: hidden;
+        }
+
+        .per1 {
+            width: 80px;
+            height: 140px;
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+            left: 90px;
+            top: 300px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .per a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .per a:visited {
+            color: black;
+        }
+
+        .per1res {
+            color: rgb(0, 0, 0);
+            width: 90%;
+            background-color: rgb(137, 46, 0);
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            transition: 0.5s;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .per1res:hover {
+            transform: scale(1.1);
+        }
+
+        .per1:hover {
+            opacity: 1;
+        }
+
+        .per1::after {
+            position: absolute;
+            content: "Qual é o valor de (x) na equação (h(x) = 3x^2 - 6x + 9), se (h(x) = 12)?";
+            width: 138px;
+            height: 70px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background-color: rgba(211, 99, 34, 0.783);
+            top: -70%;
+            left: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .per1res2::after {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 0;
+            left: 0;
+            transition: 0.5s;
+            background-color: rgb(0, 207, 0);
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .per1res2:active::after {
+            content: "H=5";
+            border: 2px solid black;
+            left: 110%;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* a */
+        .per2 {
+            width: 80px;
+            height: 140px;
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+            left: 405px;
+            top: 270px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .per2res {
+            color: rgb(0, 0, 0);
+            width: 90%;
+            background-color: rgb(137, 46, 0);
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            transition: 0.5s;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .per2res:hover {
+            transform: scale(1.1);
+        }
+
+        .per2:hover {
+            opacity: 1;
+        }
+
+        .per2::after {
+            position: absolute;
+            content: "Qual é o vértice da parábola representada pela função (g(x) = x^2 + 4x - 5)?";
+            width: 138px;
+            height: 70px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background-color: rgba(211, 99, 34, 0.783);
+            top: -70%;
+            left: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .per2res2::after {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 0;
+            left: 0;
+            transition: 0.5s;
+            background-color: rgb(0, 207, 0);
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .per2res2:active::after {
+            content: "G=6";
+            border: 2px solid black;
+            left: 110%;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* a */
+        .per3 {
+            width: 80px;
+            height: 140px;
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+            left: 690px;
+            top: 270px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .per3res {
+            color: rgb(0, 0, 0);
+            width: 90%;
+            background-color: rgb(137, 46, 0);
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            transition: 0.5s;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .per3res:hover {
+            transform: scale(1.1);
+        }
+
+        .per3:hover {
+            opacity: 1;
+        }
+
+        .per3::after {
+            position: absolute;
+            content: "Qual é o valor de (x) na equação (f(x) = 2x^2 - 5x + 3), se (f(x) = 7)?";
+            width: 138px;
+            height: 70px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background-color: rgba(211, 99, 34, 0.783);
+            top: -70%;
+            left: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .per3res2::after {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 0;
+            left: 0;
+            transition: 0.5s;
+            background-color: rgb(0, 207, 0);
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .per3res2:active::after {
+            content: "D=9";
+            border: 2px solid black;
+            left: 110%;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* a */
+        .per4 {
+            width: 80px;
+            height: 140px;
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+            left: 1000px;
+            top: 300px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .per4res {
+            color: rgb(0, 0, 0);
+            width: 90%;
+            background-color: rgb(147, 46, 0);
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            transition: 0.5s;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .per4res:hover {
+            transform: scale(1.1);
+        }
+
+        .per4:hover {
+            opacity: 1;
+        }
+
+        .per4::after {
+            position: absolute;
+            content: "Qual é o coeficiente angular da reta representada pela função (g(x)= -3x + 5)";
+            width: 138px;
+            height: 70px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background-color: rgba(211, 99, 34, 0.783);
+            top: -70%;
+            left: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .per4res2::after {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 0;
+            left: 0;
+            transition: 0.5s;
+            background-color: rgb(0, 207, 0);
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .per4res2:active::after {
+            content: "C=3";
+            border: 2px solid black;
+            left: 110%;
+            width: 40px;
+            text-align: center;
+        }
+        .voltar {
+            width: 100px;
+            height: 20px;
+            background-color: red;
+            text-align: center;
+            margin-left: -10px;
+            border-radius: 0 0 10px 0;
+            font-weight: 700;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        input {
+            top: 90%;
+            position: absolute;
+            text-align: center;
+            width: 100px;
+            margin-left: calc(50% - 50px);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="imgp">
+            <a href="index2.html">
+                <div class="voltar">Voltar</div>
+            </a>
+            <div class="per per1">
+                <a href="../index.html">
+                    <div class="per1res per1res1">1</div>
+                </a>
+                <a href="../index.html">
+                    <div class="per1res per1res3">2</div>
+                </a>
+                <div class="per1res per1res2">3</div>
+            </div>
+            <div class="per per2">
+                <a href="../index.html">
+                    <div class="per2res per2res1">(-2, -1)</div>
+                </a>
+                <div class="per2res per2res2">(-2, 1)</div>
+                <a href="../index.html">
+                    <div class="per2res per2res3">(2, 1)</div>
+                </a>
+            </div>
+            <div class="per per3">
+                <a href="../index.html">
+                    <div class="per3res per3res1">1</div>
+                </a>
+                <div class="per3res per3res2">2</div>
+                <a href="../index.html">
+                    <div class="per3res per3res3">3</div>
+                </a>
+            </div>
+            <div class="per per4">
+                <div class="per4res per4res2">-3</div>
+                <a href="../index.html">
+                    <div class="per4res per4res1">3</div>
+                </a>
+                <a href="../index.html">
+                    <div class="per4res per4res3">2</div>
+                </a>
+            </div>
+            <input id="senha" type="number" placeholder="A - D - C - E"><button onclick="checarSenha()">Checar Senha</button>
+        </div>
+    </main>
+    <script>
+        let senha = document.getElementById("senha");
+        function checarSenha(){
+            if(senha.value == 2938) {
+                window.location.replace("./imges/8.png")
+            }
+            else{
+                window.location.replace("../index.html")
+            }
+        }
+    </script>
+</body>
+
+</html>
