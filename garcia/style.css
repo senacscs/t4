@@ -56,7 +56,7 @@ h2::after {
   height: 2px;
   width: 100%;
   left: 0;
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(169, 169, 169);
   transition: 1s;
   transition-timing-function: ease-in-out;
   transform: scaleX(0);
