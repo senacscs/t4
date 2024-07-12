@@ -1,0 +1,37 @@
+.btn {
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 80px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.welcome {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color:aqua;
+}
+
+.custom-font-size {
+    font-size: 50px;
+}
+
+body {
+    background-image:url("imagens/imagemdefundo.jpg") ; 
+}
