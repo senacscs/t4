@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-color: #2b124c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color:#dfb6b2;
+
+}
+
+body {
+    background-color:#fbe4d8
+}
+
+h1 {
+    text-align: center;
+    color:#dfb6b2;
+}
+
+h2{
+    text-align: center;
+    color:#522b5b ;
+}
+
+.imagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ods {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.video {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,115 @@
+
+h1 {
+    text-align: center;
+    color:rgba(3, 3, 95, 0.6);
+    font-size: 60px;
+    font-style:italic;
+
+}
+a {
+    text-align: center;
+    color: rgb(3, 3, 95);
+    list-style-type: none;
+    font-style:italic;
+    font-size: 45px;
+}
+body {
+    background-color: rgb(150, 143, 240);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+a:link, a:visited { text-decoration: none; } a:hover { text-decoration: underline; }
+
+h2{
+  text-align: center;
+  color:rgba(3, 3, 95, 0.6);
+  font-size: 60px;
+  font-style:italic;
+}
+
+div{
+    height: 110px;
+    left: 180px;
+    background-color: rgb(150, 143, 240);
+    width: 500px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;   
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --color-red: #ec1840;
+  --color-purple: #7a18ec;
+  --color-white: #fff;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #444;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  transition: var(--speed-normal);
+  border: 1px solid var(--color-red);
+}
+a:hover {
+  border: 1px solid transparent;
+  background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+  transition-delay: 0.8s;
+  background-size: 180px;
+  -webkit-animation: animate var(--speed-fast) steps(8) forwards;
+          animation: animate var(--speed-fast) steps(8) forwards;
+}
+a:last-of-type {
+  border: 1px solid var(--color-purple);
+}
+a:last-of-type:hover {
+  background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
