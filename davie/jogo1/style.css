@@ -15,14 +15,12 @@ body {
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 10vh;
 }
 /* .jogar:hover, .jogar:active {
     background-color: red;
     font-size: 11vh;
     padding: 14px 25px;
-    animation-name: tente;
     animation-name: tente;
     animation-duration: 5s;
     animation-iteration-count: 3;

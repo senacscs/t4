@@ -2,6 +2,7 @@ body {
     background-image: url(matemática1.jpg);
 }
 h1, h2, h3 {
+    background-image: linear-gradient(90deg, black, grey);
     color: white;
     font-family: 'Times New Roman', Times, serif;
 }
