@@ -79,7 +79,7 @@ main {
 }
 
 .triangulo1:hover::before {
-    content: "Priamide maior: Aqui você terá que resolver algumas funções para liberar a porta da Esfinge";
+    content: "Piramide maior: Aqui você terá que resolver algumas funções para liberar a porta da Esfinge";
     width: 300px;
     height: 50px;
     left: -150px;
@@ -106,7 +106,7 @@ main {
 }
 
 .triangulo2:hover::before {
-    content: "Priamide menor: Aqui você terá que resolver algumas funções os valores da função nessesaria para libertar a Esfinge";
+    content: "Piramide menor: Aqui você terá que resolver algumas funções os valores da função nessesaria para libertar a Esfinge";
     width: 300px;
     height: 70px;
     left: -150px;
@@ -130,7 +130,7 @@ a:visited {
     margin-left: 34px;
 }
 .slaa::after {
-    content: "vejo que você está em busca de um tesouro, e eu quero te ajudar a encontrar um. Para você conseguir encontrar o tesouro, explore a piramide pequena e responda os enigmas para ganhar a primeira parte do codigo nessesário para abrir a sala do tesouro. Na piramide maior, voce também tera que reponder a alguns enigmais para ganhar a segunda parte da senha, e la você também poderar testar para ver se a senha está correta.";
+    content: "vejo que você está em busca de um tesouro, e eu quero te ajudar a encontrar um. Para você conseguir encontrar o tesouro, explore a piramide pequena e responda os enigmas para ganhar a primeira parte do codigo nessesário para abrir a sala do tesouro. Na piramide maior, voce também tera que reponder a alguns enigmas para ganhar a segunda parte da senha, e lá você também podera testar para ver se a senha está correta.";
     position: absolute;
     width: 60%;
     height: 20%;

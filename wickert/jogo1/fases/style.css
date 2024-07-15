@@ -71,7 +71,7 @@ main {
     left: 0px;
 }
 .triangulo1:hover::before {
-    content: "Priamide maior: Aqui você terá que resolver algumas funções para liberar a porta da Esfinge";
+    content: "Piramide maior: Aqui você terá que resolver algumas funções para liberar a porta da Esfinge";
     width: 300px;
     height: 50px;
     left: -150px;
@@ -96,7 +96,7 @@ main {
     filter: contrast(90%);
 }
 .triangulo2:hover::before {
-    content: "Priamide menor: Aqui você terá que resolver algumas funções os valores da função nessesaria para libertar a Esfinge";
+    content: "Piramide menor: Aqui você terá que resolver algumas funções. Os valores da função serão necessárias para libertar a Esfinge";
     width: 300px;
     height: 70px;
     left: -150px;
