@@ -1,48 +1,126 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    /* background-color: #888484; */
+@import "https://unpkg.com/open-props@1.6.17/easings.min.css";
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
+}
+
+[anim="sheen"]:not(.toggled)::after {
+    animation: sheen var(--ease-elastic-in-1) 2.5s infinite;
+}
+
+[anim="sheen"]::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: var(--red-sheen);
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
 }
 
 header {
-    background-color: #303d42;
-    border-bottom-style: solid;
-    border-color: black;
     padding: 1px;
     text-align: center;
     width: 100%;
 }
 
-a:hover, a:active, a:visited, a:link {
-    color: black;
+:root {
+    --black: hsl(0, 0%, 13%);
+    --dark: hsl(12, 32%, 2%);
+    --gray: hsl(0, 0%, 70%);
+    --white: hsl(0, 0%, 96%);
+    --red: hsl(12, 90%, 63%);
+    --red-shadow: hsl(12, 100%, 60%);
+    --red-sheen: linear-gradient(to bottom,
+            hsl(12, 90%, 43%),
+            hsla(12, 40%, 70%, 0.5) 50%,
+            hsl(12, 93%, 23%));
+}
+
+html,
+body {
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    font-family: "aglet-mono-variable", sans-serif;
+    width: 99.9%;
+}
+
+div:has(h2 + p) {
+    display: grid;
+    gap: 8px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--white);
 }
 
 p {
+    text-transform: uppercase;
+    color: var(--gray);
+    letter-spacing: 0.06em;
+    font-size: 0.875rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+main {
+    max-width: 880px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    position: relative;
+    padding-block: 32px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-basis: 180px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.ladoalado {
-    justify-content: space-evenly;
-    display: flex;
+section {
+    color: var(--white);
+    font-family: "aglet-mono-variable", sans-serif;
 }
 
-.contorno {
-    background-color: #303d42;
-    border-radius: 15px;
-    width: 80%;
-    margin-top: 15px;
-    border-style: solid;
-    border-color: black;
-    margin-right: auto;
-    margin-left: auto;
+button {
+    all: unset;
+    background-color: var(--black);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    border: 1px solid var(--red);
+    box-shadow: 0 0 4px var(--red-shadow);
+    cursor: pointer;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
 }
 
-.icones {
-    position:absolute;
-    right: 0;
-    top:0;
-    margin:0;
-    margin-right: 15px;
-    margin-top: 30px;
+a:hover, a:active, a:visited, a:link {
+    color: white;
+    text-decoration: none;
 }
