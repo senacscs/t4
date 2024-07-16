@@ -2,7 +2,7 @@ function check2(){
     var resposta = document.getElementById('resposta').value;
     if(resposta == "-5"){
         location.href = "questao3.html"
-        alert('0 vezes porque ele faz duas vértices no eixo x e não y.');
+        alert('Próximo enigma!');
     }else{
         location.href = "perdeu.html"
     }
