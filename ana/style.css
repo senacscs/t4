@@ -16,7 +16,7 @@ h1, h2, p {
 
 body { 
     background-image: url("fundoficial.jpg");
-    background-size: 1260px;
+    background-size: cover;
 }
 
 h1 {
