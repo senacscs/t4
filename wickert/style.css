@@ -503,7 +503,7 @@ nav a:visited {
     position: relative;
 }
 .cont-auto::before {
-    content: "Talvez embreve";
+    content: "Talvez em breve";
     width: 95%;
     height: 104%;
     border: 3px solid black;
@@ -536,7 +536,7 @@ nav a:visited {
     margin: auto;
 }
 .cont-mail {
-    width: 48%;
+    width: 45%;
     height: 33px;
     border: 2px solid black;
     margin-top: 5px;
@@ -547,7 +547,7 @@ nav a:visited {
     background-color: rgb(244, 244, 255);
 }
 .cont-fone {
-    width: 48%;
+    width: 45%;
     height: 33px;
     border: 2px solid black;
     margin-top: 5px;
@@ -611,12 +611,12 @@ nav a:visited {
 
 }
 .hr::before {
-    content: "---------------------------------------------------";
+    content: "-------------------------------------";
     color: rgb(131, 134, 152);
     letter-spacing: -2px;
 }
 .hr::after {
-    content: "---------------------------------------------------";
+    content: "-------------------------------------";
     color: rgb(131, 134, 152);
     letter-spacing: -2px;
 }
