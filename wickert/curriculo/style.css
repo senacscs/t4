@@ -118,11 +118,11 @@ a {
     border-radius: 10px;
 }
 a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 a:visited {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .ope {
     height: 43px;
