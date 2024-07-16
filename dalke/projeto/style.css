@@ -1,0 +1,136 @@
+@media (max-width:768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(2, 53, 0);
+    }
+
+    h1 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    section {
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        border: solid 2px;
+        padding: 10px;
+        border-radius: 10px;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(255, 255, 255);
+
+    }
+
+    h2,
+    p {
+        color: white;
+    }
+
+    h3 {
+        color: rgb(88, 3, 37);
+    }
+
+    header {
+        padding: 20px;
+        background-color: darkolivegreen;
+        width: 97.37;
+        border-radius: 0 0 20px 20px;
+    }
+}
+@media (min-width:768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(2, 53, 0);
+    }
+
+    h1 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    section {
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        border: solid 2px;
+        padding: 10px;
+        border-radius: 10px;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(255, 255, 255);
+        margin-top: 40px;
+
+    }
+
+    h2,
+    p {
+        color: white;
+    }
+
+    h3 {
+        color: rgb(255, 255, 255);
+    }
+
+    header {
+        background-color: rgb(85, 158, 71);
+        color: #ffff;
+        width: 100%;
+    }
+ 
+    header h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+ 
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 0 0 20px 20px;
+    }
+ 
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+    }
+ 
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 15px;
+    }
+    
+    .ladoalado {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+}   
+
