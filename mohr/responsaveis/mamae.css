@@ -48,7 +48,7 @@ border-radius: 20px;
 
 .imagem1 {
 position: relative;
-bottom: 550px;
+bottom: 500px;
 width: 350px;
 border-radius: 20px;
 right: 257px;
@@ -58,7 +58,7 @@ right: 257px;
     position: relative;
     bottom: 80px;
     width: 350px;
-    left: 750px;
+    left: 1000px;
     border-radius: 20px;
 }
 
@@ -87,7 +87,7 @@ width: 450px;
 border-radius: 20px;
 position: relative;
 top: 450px;
-left: 730px;
+left: 1050px;
 }
 
 .texto4 {
@@ -125,7 +125,7 @@ iframe {
     border-radius: 20px;
     position: relative;
     top: 1150px;
-    right: 70px;
+    left: 100px;
 }
 
 .texto5 {
