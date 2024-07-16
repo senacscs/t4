@@ -19,8 +19,11 @@
 }
 
 body {
+  max-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0;
-  min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
   color: #F9F6EF;
   display: grid;
@@ -46,7 +49,7 @@ h2::after {
   height: 2px;
   width: 100%;
   left: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   transition: 1s;
   transition-timing-function: ease-in-out;
   transform: scaleX(0);
