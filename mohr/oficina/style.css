@@ -38,7 +38,7 @@ p {
     width: 90%;
     height: 600px;
     background-image: url("teste1.jpg");
-    background-size: 1110px;
+    background-size: cover;
     border-radius: 30px;
     box-shadow: 0 0 20px white;
     padding: 8px;
