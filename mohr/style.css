@@ -1,9 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: #57296d;
+    background-image: url(fundoroxo.jpg);
     font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
   }
   
   #content {
