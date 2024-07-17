@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(19, 45, 15);
+}
+img { 
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+label {
+
+    color: white;
+}
+h3 {
+
+    color: white;
+}
+p {
+    color: white;
+}
+h4 {
+
+    color: white;
+}
+h5 {
+    color: white;
+}
+h4 {
+    color: white;
+}
