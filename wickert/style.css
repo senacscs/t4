@@ -34,7 +34,7 @@ body {
 }
 
 html {
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
 
@@ -464,7 +464,7 @@ nav a:visited {
 }
 .snap-contatos {
     position: absolute;
-    margin-top: -6%;
+    margin-top: -5%;
     scroll-snap-align: start;
 }
 .contato {
@@ -501,9 +501,12 @@ nav a:visited {
     width: 80%;
     text-align: center;
     position: relative;
+    transform: scale(0.9);
+    margin-bottom: -5px;
+    margin-top: -30px;
 }
 .cont-auto::before {
-    content: "Talvez em breve";
+    content: "Talvez embreve";
     width: 95%;
     height: 104%;
     border: 3px solid black;
