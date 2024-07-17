@@ -188,5 +188,6 @@ h1, h2 {
 }
 .pp, .lm, .her{
     font-family: French Script MT;
+    font-size: 25px;
 }
 }
