@@ -39,25 +39,29 @@ h2 {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255); 
+  margin-left: auto;
+  margin-right: auto;
+  width: 1;  
 }
 
 h2::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -1px;
   height: 2px;
   width: 100%;
   left: 0;
-  background-color: black;
-  transition: 1s;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
   transition-timing-function: ease-in-out;
   transform: scaleX(0);
+  border-radius: 20px;
 }
 h2:hover::after {
   transform: scaleX(1);
 }
 a{
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
