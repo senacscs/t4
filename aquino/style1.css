@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(90deg, rgb(0, 0, 0) , rgb(17, 0, 15) , rgb(23, 0, 11));
+
+   
+   
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 1.5em;
+    width: 45em;
+}
+figure {
+    float: left;
+    height: 6em;
+    margin: 1.5em;
+    width: 12em;
+    -webkit-transform: perspective(500);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: .5s;
+}
+figure:hover {
+    -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
+}
+img {
+    background-color: #ffffff;
+    
+    display: block;
+    height: 100%;
+    -webkit-transition: .5s;
+}
+figure:hover img {
+    box-shadow: none;
+}
+figcaption {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 1.5em;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 100% 0;
+    -webkit-transition: .5s;
+}
+figure:hover figcaption {
+   
+}
+h3 {
+    font-weight: bold;
+    color: #000000;
+}​
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+section{
+  color: white;
+  text-align: center;
+}
+.mundo{
+    width: 40px;
+    height: 45px;
+    border-left: 75px solid #ffffff;
+    border-right: 75px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 28px solid #ffffff;
+    margin: auto;
+      
+}
+.html{
+    width: 50px;
+    height: 50px;
+    border-left: 70px solid #ffffff;
+    border-right: 70px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 25px solid #ffffff;
+    margin: auto;
+}
+.responsaveis{
+    width: 40px;
+    height: 45px;
+    border-left: 75px solid #ffffff;
+    border-right: 75px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 28px solid #ffffff;
+    margin: auto;
+}
+.css{
+    width: 40px;
+    height: 50px;
+    border-left: 75px solid #ffffff;
+    border-right: 75px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 22px solid #ffffff;
+    margin: auto;
+    
+}
+a{
+    text-decoration: none;
+    color: black
+}                       
+a:hover{
+    color: blue;
+}
+.curriculo{
+    width: 40px;
+    height: 45px;
+    border-left: 75px solid #ffffff;
+    border-right: 75px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 25px solid #ffffff;
+    margin: auto;
+}
+.jogo{
+    width: 40px;
+    height: 45px;
+    border-left: 75px solid #ffffff;
+    border-right: 75px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 25px solid #ffffff;
+    margin: auto;
+}
+.ods{
+    width: 40px;
+    height: 45px;
+    border-left: 75px solid #ffffff;
+    border-right: 75px solid #ffffff;
+    border-top: 25px solid #ffffff;
+    border-bottom: 25px solid #ffffff;
+    margin: auto; 
+}

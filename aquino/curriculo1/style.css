@@ -1,0 +1,208 @@
+
+ 
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,700,900');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+}
+
+.esquerda{
+  width: 60vw;
+}
+
+header{
+  padding: 15px 25px;
+}
+
+header h1{
+  align-item: center;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+header h1 > i{
+  margin-right: 0.4rem;
+}
+
+#nome{
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase; 
+}
+
+#formacao{
+  color: rgba(150, 0, 0, 0.9);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#informacoes-principais{
+  margin: 40px 0;
+}
+
+.secao{
+  border-top: solid 1px  rgb(200, 0, 0);  
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.secao > h1{
+  background: #EEE;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 5px 20px;
+  margin-bottom: 2rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.container-experiencia{
+  text-align: right;
+}
+
+#informacoes-pessoais p{
+  line-height: 1.3rem;
+  padding: 10px 20px 15px 25px;
+}
+
+#experiencia p{ 
+  line-height: 1;
+}
+
+#informacoes-pessoais p,
+#experiencia p{
+  font-size: 0.8rem;
+  padding-right: 20px;
+}
+
+.titulo-experiencia{
+  font-size: 1rem;
+  font-weight: 700;
+  padding-right: 20px;
+}   
+
+.cargo-experiencia{
+  color: rgba(150, 0, 0, 0.9);
+  text-transform: uppercase;
+}
+
+.data-experiencia{
+  color: rgba(0,0,0,0.4);  
+  margin-bottom: 1rem;
+}
+
+.descricao-experiencia{
+  padding-left: 25px;
+}
+
+.container-experiencia{
+  margin-bottom: 2rem;    
+}
+
+.negrito{
+  font-weight: bold;
+}
+
+/* Aside */
+
+aside{
+  background: #EDEDED;
+  box-shadow: -3px 0 15px rgba(0,0,0,0.5);
+  width: 40vw;
+}
+
+.imagem-perfil{
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.imagem-perfil img{
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out .3s;
+}
+
+.imagem-perfil img:hover{
+  transform: scale(1.25);
+}
+
+/* Informações gerais - após a foto */
+
+.info-line{
+  align-items: stretch;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  height: 3rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.info-line:hover{
+  box-shadow: 0 20px 20px -10px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.info-line i{
+  line-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.info-line > span{
+  flex: 1;
+  line-height: 3rem;
+  padding-left: 1rem;
+}
+
+.info-line a{
+  color: inherit;
+  text-decoration: none;
+}
+
+#info-endereco i{
+  background: rgb(40, 40, 40);
+  box-shadow: -10px 0 20px -10px rgba(0,0,0,0.8) inset;
+}
+
+#info-endereco span{
+  background: rgba(40, 40, 40, 0.9);
+}
+
+#info-telefone i{
+  background: rgb(113, 0, 0);
+  box-shadow: -10px 0 20px -10px rgba(0,0,0,0.8) inset;
+}
+
+#info-telefone span{
+  background: rgba(113, 0, 0, 0.9);
+}
+
+#info-site i{
+  background: rgb(166, 60, 6);
+  box-shadow: -10px 0 20px -10px rgba(0,0,0,0.8) inset;
+}
+
+#info-site span{
+  background: rgba(166, 60, 6, 0.9);
+}
+
+#info-mail i{
+  background: rgb(195, 111, 9);
+  box-shadow: -10px 0 20px -10px rgba(0,0,0,0.8) inset;
+}
+
+#info-mail span{
+  background: rgba(195, 111, 9, 0.9);
+}
