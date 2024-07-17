@@ -91,6 +91,7 @@ h1, h2 {
 }
 .pp, .lm, .her{
     font-family: French Script MT;
+    font-size: 25px;
 }
 }
 
@@ -123,13 +124,13 @@ h1, h2 {
     padding: 12px;
     font-family: French Script MT;
     color: rgb(121, 204, 253);
-
+    
 }
 
 .his{
     color:rgb(121, 204, 253);
     font-family: French Script MT;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .len{
