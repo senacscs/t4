@@ -42,6 +42,8 @@ h1{
     margin-block: 10px;
     border-radius: 20px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 a{
     font-family: Goudy Old Style;
@@ -151,6 +153,10 @@ footer {
         position: fixed;
         bottom: 0;
         width: 100%;
+    }
+    .rap{
+        margin-left: auto;
+        margin-right: auto;
     }
     }
     
