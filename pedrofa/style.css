@@ -1,20 +1,100 @@
 body {
-    background-color: blue;
-}
-.alin {
-    width: 70%;
-    margin: 35px;
-    border: solid 4px black;
-    border-radius: 1px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    background-color: white;
+    background-color: rgba(141, 140, 140, 0.989);
 }
+
+header {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    width: 800px;
+}
+
 h1 {
-    color: blue;
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
 }
-li {
-    text-align: center;
+
+.caixa {
+    height: 1100px;
+    width: 820px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    margin: 20px auto;
+    background-image: url(fundoindex.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 6px solid black; /* Adicionando borda preta */
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+button {
+    background-color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+    color: rgb(0, 2, 144);
+    transition: color 0.8s;
+}
+
+a:hover {
+    color: blue;
+    transition: color 1s;
+}
+
+.imagens {
+    position: absolute;
+    top: 20px; /* Ajuste a posição conforme necessário */
+    left: 20px; /* Ajuste a posição conforme necessário */
+    text-align: right; /* Alinha as imagens à direita dentro da div */
+}
+
+.imagens img {
+    width: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+.imagenas {
+    position: absolute;
+    top: 20px; /* Ajuste a posição conforme necessário */
+    left: 130px; /* Ajuste a posição conforme necessário */
+    text-align: right; /* Alinha as imagens à direita dentro da div */
+}
+
+.imagenas img {
+    width: 140px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+p {
+    font-size: 24px;
 }
