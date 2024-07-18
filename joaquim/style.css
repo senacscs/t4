@@ -7,7 +7,7 @@
 }
 
 [anim="sheen"]:not(.toggled)::after {
-    animation: sheen var(--ease-elastic-in-1) 2.5s infinite;
+    animation: sheen var(--ease-elastic-in-1) 2.8s infinite;
 }
 
 [anim="sheen"]::after {
@@ -35,9 +35,9 @@ header {
     --red: hsl(12, 90%, 63%);
     --red-shadow: hsl(12, 100%, 60%);
     --red-sheen: linear-gradient(to bottom,
-            hsl(12, 90%, 43%),
-            hsla(12, 40%, 70%, 0.5) 50%,
-            hsl(12, 93%, 23%));
+    hsla(0, 0%, 13%, 0.5),   
+    hsla(0, 0%, 70%, 0.5),
+    hsla(0, 0%, 96%, 0.5));
 }
 
 html,
@@ -51,7 +51,7 @@ body {
 
 div:has(h2 + p) {
     display: grid;
-    gap: 8px;
+    gap: 4px;
 }
 
 h1 {
@@ -109,18 +109,50 @@ button {
     all: unset;
     background-color: var(--black);
     padding: 6px 12px;
-    border-radius: 6px;
     font-size: 0.875rem;
     text-transform: uppercase;
-    border: 1px solid var(--red);
-    box-shadow: 0 0 4px var(--red-shadow);
+    border: 1px solid;
     cursor: pointer;
     perspective: 1000px;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 
-a:hover, a:active, a:visited, a:link {
+a:hover,
+a:active,
+a:visited,
+a:link {
     color: white;
     text-decoration: none;
+}
+
+.curri {
+    border: 1px solid;
+    background-color: rgba(0, 0, 0, 0.226);
+    max-width: 180px;
+    margin: auto;
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 8px 8px 30px black;
+    transition: 0.5s;
+}
+
+.curri a,
+.curri a:visited {
+    color: var(--red);
+    transition: 0.5s;
+}
+
+.curri:hover {
+    transform: scale(1.22);
+    color: var(--gray);
+    box-shadow: 8px 8px 30px rgb(36, 26, 22);
+}
+
+a:hover,
+.a:hover:visited {
+    color: var(--red);
 }
