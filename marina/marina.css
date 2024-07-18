@@ -24,12 +24,13 @@ body {
 }
 a:link, a:visited { text-decoration: none; } a:hover { text-decoration: underline; }
 
-h2{
+h3{
   text-align: center;
   color:rgba(3, 3, 95, 0.6);
-  font-size: 60px;
   font-style:italic;
 }
+
+
 
 div{
     height: 110px;
@@ -37,7 +38,8 @@ div{
     background-color: rgb(150, 143, 240);
     width: 500px;
     margin: 10px auto 10px auto;
-    border-radius: 10px;   
+    border-radius: 10px;
+    text-align: center   
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
