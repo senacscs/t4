@@ -54,7 +54,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.8s;
+    transition: color 1s;
 }
 
 nav ul li a:hover {
