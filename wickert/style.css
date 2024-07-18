@@ -519,7 +519,7 @@ nav a:visited {
 }
 
 .cont-auto::before {
-    content: "Talvez embreve";
+    content: "Talvez em breve";
     width: 95%;
     height: 104%;
     border: 3px solid black;
