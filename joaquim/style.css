@@ -17,7 +17,7 @@
     right: -50%;
     bottom: -50%;
     left: -50%;
-    background: var(--red-sheen);
+    background: var(--gray-sheen);
     transform: rotateZ(60deg) translate(-5em, 7.5em);
 }
 
@@ -34,7 +34,7 @@ header {
     --white: hsl(0, 0%, 96%);
     --red: hsl(12, 90%, 63%);
     --red-shadow: hsl(12, 100%, 60%);
-    --red-sheen: linear-gradient(to bottom,
+    --gray-sheen: linear-gradient(to bottom,
     hsla(0, 0%, 13%, 0.5),   
     hsla(0, 0%, 70%, 0.5),
     hsla(0, 0%, 96%, 0.5));
@@ -98,9 +98,6 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-section {
     color: var(--white);
     font-family: "aglet-mono-variable", sans-serif;
 }
@@ -113,7 +110,6 @@ button {
     text-transform: uppercase;
     border: 1px solid;
     cursor: pointer;
-    perspective: 1000px;
     position: relative;
     overflow: hidden;
     transition: 0.5s;
@@ -136,23 +132,17 @@ a:link {
     border-radius: 10px;
     color: white;
     font-size: 18px;
-    box-shadow: 8px 8px 30px black;
+    box-shadow: 8px 8px 15px black;
     transition: 0.5s;
+    
 }
 
 .curri a,
 .curri a:visited {
-    color: var(--red);
     transition: 0.5s;
 }
 
 .curri:hover {
     transform: scale(1.22);
     color: var(--gray);
-    box-shadow: 8px 8px 30px rgb(36, 26, 22);
-}
-
-a:hover,
-.a:hover:visited {
-    color: var(--red);
 }
