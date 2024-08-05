@@ -1,0 +1,25 @@
+body{
+    background-color: #acacac;
+}
+h1{
+    text-align: center;
+    color: #3c3c3c;
+}
+img{
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: justify;
+    text-transform:inherit;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+iframe{
+    display: block;
+    margin: auto;
+}
