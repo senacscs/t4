@@ -23,3 +23,8 @@ iframe{
     display: block;
     margin: auto;
 }
+hr{
+    color: #3c3c3c;
+    border: #3c3c3c;
+    size: 4px;
+}
