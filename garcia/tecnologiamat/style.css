@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(241, 248, 145);
+}
+
+main{
+    background-color: rgb(234, 234, 234);
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+
+h2, p{
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+p{
+    font-size: 22px;
+    padding-bottom: 5%;
+}
+h2{
+    font-size: 30px;
+}
+iframe{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 50%;
+    height: 40%;
+    margin-bottom: 8%;
+}
+
+.menu {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  
+  .menu .menu-lines {
+    position: fixed;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+  
+  }
+  
+  .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(169, 169, 169);
+    border-radius: 3px;
+    transition: all ease .2s;
+  }
+  
+  .menu .menu-fake {
+    position:fixed;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .menu .menu-fake:checked~.menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg)scaleX(1.25);
+  }
+  
+  .menu .menu-fake:checked~.menu-lines span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu .menu-fake:checked~.menu-lines span:nth-child(3) {
+    transform: rotate(-45deg)scaleX(1.25);
+    transform-origin: 0% 100%;
+  }
+  
+  .menu ul {
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 300px;
+    background-color: rgb(19, 19, 19);
+    height: 100vh;
+    padding-top: 100px;
+    margin-left: -300px;
+    transition: all ease .4s;
+  }
+  
+  .menu .menu-fake:checked~ul {
+    margin-left: 0;
+  }
+  
+  .menu ul li {
+    padding: 10px 30px;
+  
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 300px;
+    letter-spacing: 2px;
+  }
+  
+  .menu ul li a:hover {
+    color: rgb(169, 169, 169);
+    transition: all ease .3s;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
