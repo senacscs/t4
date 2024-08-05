@@ -55,7 +55,9 @@ header h1 > i{
 .secao{
   border-top: solid 1px  rgb(200, 0, 0);  
   margin-top: 2rem;
-  text-align: right;
+  text-align: left;
+  font-size: large;
+  
 }
 
 .secao > h1{
