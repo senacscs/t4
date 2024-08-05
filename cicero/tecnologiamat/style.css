@@ -1,0 +1,33 @@
+body {
+    font-family: 'Comic Sans MS';
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+.doodad {
+    display: flex;
+    flex-direction: column;
+}
+
+.doohickey {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: center;
+    padding: 5px
+}
+
+.thingamabob {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+}
+
+img {
+    border-radius: 5px;
+}
