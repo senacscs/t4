@@ -1,0 +1,312 @@
+/* aparencia tela grande */
+@media (min-width: 1200px) {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(0, 0, 0);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+ 
+ 
+    main {
+      padding: 20px;
+    }
+ 
+    aside {
+      background-color: #eee;
+      padding: 10px;
+    }
+ 
+    header {
+      background-color: #333;
+      color: red;
+      padding: 5;
+      text-align: center;
+      font-family: fantasy;
+      position:relative;
+      width: 25%;
+    }
+ 
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+ 
+    main img {
+      display: block;
+      margin: 0 auto;
+      align-items: center;
+    }
+ 
+    /* a {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    } */
+ 
+    h1,a {
+        color: cadetblue;
+        text-align: center;
+      }
+ 
+    h2 {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    p {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    a {
+      color: rgb(255, 255, 255);
+    }
+ 
+    ol {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    li {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    ul {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    figcaption {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+    }
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* para telas medias */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(0, 0, 0);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+ 
+    main {
+      padding: 20px;
+    }
+ 
+    aside {
+      background-color: #eee;
+      padding: 10px;
+    }
+ 
+    header {
+      background-color: #333;
+      color: red;
+      padding: 5;
+      text-align: center;
+      font-family: fantasy;
+      position:relative ;
+      width: 55%;
+    }
+ 
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+ 
+    main img {
+      display: block;
+      margin: 0 auto;
+      align-items: center;
+    }
+ 
+    /* a {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    } */
+ 
+    h1,a {
+        color: cadetblue;
+        text-align: center;
+      }
+ 
+    h2 {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    p {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    a {
+      color: rgb(255, 255, 255);
+    }
+ 
+    ol {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    li {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    ul {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    figcaption {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+    }
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* aparencia telas pequenas */
+  @media (max-width: 991px) {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(0, 0, 0);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+ 
+    main {
+      padding: 20px;
+    }
+ 
+    aside {
+      background-color: #eee;
+      padding: 10px;
+    }
+ 
+    header {
+      background-color: #333;
+      color: red;
+      padding: 5;
+      text-align: center;
+      font-family: fantasy;
+      position: relative;
+      width: 100%;
+    }
+ 
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+ 
+    main img {
+      display: block;
+      margin: 0 auto;
+      align-items: center;
+    }
+ 
+    /* a {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    } */
+ 
+    h1,a {
+      color: cadetblue;
+      text-align: center;
+    }
+ 
+    h2 {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    p {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    /* a {
+      color: rgb(255, 255, 255);
+    } */
+ 
+    ol {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    li {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    ul {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      display: inline;
+    }
+ 
+    figcaption {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+ 
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+    }
+  }
