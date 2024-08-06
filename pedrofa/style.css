@@ -1,3 +1,4 @@
+@media (min-width: 768px) {
 body {
     margin: 0;
     padding: 0;
@@ -23,7 +24,7 @@ h1 {
 }
 
 .caixa {
-    height: 1100px;
+    height: 400px;
     width: 820px;
     background-color: white;
     border-radius: 30px;
@@ -35,6 +36,7 @@ h1 {
     background-position: center;
     background-size: cover;
     border: 6px solid black; /* Adicionando borda preta */
+    overflow-y: scroll;
 }
 
 a {
@@ -97,4 +99,112 @@ a:hover {
 
 p {
     font-size: 24px;
+}
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: rgba(141, 140, 140, 0.989);
+    }
+    
+    header {
+        text-align: center;
+        font-size: 18px;
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 30px;
+        margin: 20px auto;
+        background-color: black;
+        color: white;
+        width: 380px;
+    }
+    
+    h1 {
+        font-size: 40px;
+        color: white;
+    }
+    
+    .caixa {
+        height: 400px;
+        width: 400px;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        padding: 8px;
+        margin: 20px auto;
+        background-image: url(fundoindex.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 6px solid black; /* Adicionando borda preta */
+        overflow-y: scroll;
+    }
+    
+    a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: white;
+    }
+    
+    a:active {
+        color: white;
+    }
+    
+    button {
+        background-color: black;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 25px;
+        display: block;
+        margin: auto;
+    }
+    
+    button:hover {
+        color: rgb(0, 2, 144);
+        transition: color 0.8s;
+    }
+    
+    a:hover {
+        color: blue;
+        transition: color 1s;
+    }
+    
+    .imagens {
+        position: absolute;
+        top: 20px; /* Ajuste a posição conforme necessário */
+        left: 20px; /* Ajuste a posição conforme necessário */
+        text-align: right; /* Alinha as imagens à direita dentro da div */
+    }
+    
+    .imagens img {
+        width: 60px; /* Ajuste o tamanho das imagens conforme necessário */
+        margin-bottom: 10px; /* Espaçamento entre as imagens */
+    }
+    
+    .imagenas {
+        position: absolute;
+        top: 20px; /* Ajuste a posição conforme necessário */
+        left: 130px; /* Ajuste a posição conforme necessário */
+        text-align: right; /* Alinha as imagens à direita dentro da div */
+    }
+    
+    .imagenas img {
+        width: 80px; /* Ajuste o tamanho das imagens conforme necessário */
+        margin-bottom: 10px; /* Espaçamento entre as imagens */
+    }
+    
+    p {
+        font-size: 24px;
+    }
+}
+footer {
+    Color: black
 }
