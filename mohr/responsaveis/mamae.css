@@ -48,24 +48,25 @@ border-radius: 20px;
 
 .imagem1 {
 position: relative;
-bottom: 500px;
+bottom: 900px;
+margin-left: 100px;
 width: 350px;
 border-radius: 20px;
-right: 257px;
+display: flex;
 }
 
 .imagem2 {
     position: relative;
     bottom: 80px;
     width: 350px;
-    left: 1000px;
+    left: 770px;
     border-radius: 20px;
 }
 
 .imagem3 {
     position: relative;
-    top: 400px;
-    right: 670px;
+    bottom: 400px;
+    left: 40px;
     width: 420px;
     border-radius: 20px;
 }
@@ -86,8 +87,8 @@ right: 257px;
 width: 450px;
 border-radius: 20px;
 position: relative;
-top: 450px;
-left: 1050px;
+top: 50px;
+left: 310px;
 }
 
 .texto4 {
@@ -111,21 +112,23 @@ p {
  position: relative;
  font-style: italic;
  text-align: center;
- top: 450px;
-
+ bottom: 300px;
 }
+
 iframe {
     justify-content: center;
     margin: 450px 15% 0 15%;
-    border-radius: 10px;
+    border-radius: 40px;
+    position: relative;
+    bottom: 700px;
 }
 
 .imagem5 {
     width: 450px;
     border-radius: 20px;
     position: relative;
-    top: 1150px;
-    left: 100px;
+    top: 500px;
+    left: 380px;
 }
 
 .texto5 {
@@ -135,5 +138,7 @@ iframe {
     color: white;
     font-style: italic;
     border-radius: 20px;
-    bottom: 30px;
+    position: relative;
+    bottom: 680px;
 }
+
