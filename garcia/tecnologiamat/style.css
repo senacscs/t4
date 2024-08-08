@@ -19,6 +19,9 @@ h2, p{
     margin-left: 5%;
     margin-bottom: 5%;
 }
+a{
+  color: rgb(138, 138, 0);
+}
 p{
     font-size: 22px;
     padding-bottom: 5%;
@@ -120,3 +123,33 @@ iframe{
   html{
     scroll-behavior: smooth;
   }
+
+  #valor {
+      padding: 15px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      border-radius: 15px;
+      color: black;
+      margin-left: 30%;
+      /* margin-right: 50%;
+      display: inline-block; */
+  }
+
+  button{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 15px;
+    color: black;
+    
+    /* display: inline-block; */
+    }
+    #resultado{
+      color: rgb(138, 138, 0);
+      margin-left: 25%;
+      margin-top: 2%;
+      font-size: 23px;
+    }
+  
