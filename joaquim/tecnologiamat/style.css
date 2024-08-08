@@ -1,0 +1,167 @@
+@media (min-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        color: var(--white);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+        background-color: var(--black);
+        width: 99.9%;
+    }
+
+    header {
+        background-color: var(--black);
+        width: 99.89%;
+        padding: 1px;
+        text-align: center;
+    }
+
+    :root {
+        --black: hsl(0, 0%, 13%);
+        --dark: hsl(12, 32%, 2%);
+        --gray: hsl(0, 0%, 70%);
+        --white: hsl(0, 0%, 96%);
+        --red: hsl(12, 90%, 63%);
+        --red-shadow: hsl(12, 100%, 60%);
+    }
+
+    nav ul li {
+        align-content: center;
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    .texto {
+        width: 93%;
+        margin-left: 15px;
+        text-align: justify;
+    }
+
+    .contorno {
+        margin-top: 15px;
+        width: 71%;
+        text-align: justify;
+        /* display: inline-block; */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ladoalado2 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .ladoalado {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    iframe {
+        height: 165px;
+        width: 300px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+
+    .imagens {
+        max-width: 350px;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        color: var(--white);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        background-color: var(--black);
+    }
+
+    header {
+        background-color: var(--black);
+        width: 100%;
+        padding: 1px;
+        text-align: center;
+    }
+
+    :root {
+        --black: hsl(0, 0%, 13%);
+        --dark: hsl(12, 32%, 2%);
+        --gray: hsl(0, 0%, 70%);
+        --white: hsl(0, 0%, 96%);
+        --red: hsl(12, 90%, 63%);
+        --red-shadow: hsl(12, 100%, 60%);
+    }
+
+    nav ul li {
+        width: 95%;
+        text-align: center;
+        margin-left: 2px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    .texto {
+        width: 93%;
+        margin-left: 15px;
+        text-align: justify;
+    }
+
+    .contorno {
+        background-color: var(--black);
+        border-radius: 15px;
+        margin-top: 15px;
+        width: 71%;
+        text-align: justify;
+        /* display: inline-block; */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .ladoalado {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .ladoalado2 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    iframe {
+        width: 200px;
+        height: 140px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+
+    .imagens {
+        max-width: 200px;
+    }
+}
