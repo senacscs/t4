@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+  
+  ul {
+	list-style: none;
+  }
+  
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  header {
+	background-color: #df2f75d5;
+	padding: 20px 0;
+  }
+  
+  h1 {
+	color: #ffffff;
+	font-size: 2rem;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+  }
+  
+  .nav-header {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 10px;
+  }
+  
+  .nav-header a {
+	color: #ffffff;
+	font-size: 1.125rem;
+	transition: color 0.3s;
+  }
+  
+  .nav-header a:hover {
+	color: #7676e7;
+  }
+  
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .ladoalado {
+	display: inline-flex;
+  }
+  
+  img{
+	margin-left: 10%;
+	width: 43%;
+  }
+
+  .grid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	flex-direction: column;
+  }
+  
+  .texto {
+	max-width: 800px;
+  }
+  
+  .texto h2 {
+	font-size: 2.5rem;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 20px;
+  }
+  
+  .texto p, .texto ul {
+	font-size: 1.125rem;
+	margin-bottom: 20px;
+	line-height: 1.6;
+  }
+  
+  .texto h4 {
+	font-size: 1.5rem;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 10px;
+  }
+  
+  section {
+	padding: 50px 0;
+  }
+  
+  .site-bg {
+	background-color: #5bd29d;
+  }
+  
+  .video-bg {
+	background-color: #2a8d79;
+  }
+  
+  .influenciador-bg {
+	background-color: #5282d4;
+  }
+  
+  .tutorial-bg {
+	background-color: #ff9ff3;
+  }
+  
+  .podcast-bg {
+	background-color: #e09635;
+  }
+  
+  .diferenciais-bg {
+	background: linear-gradient(to bottom right, #ff9ff3, #feca57);
+	color: #641c1c;
+  }
+  
+  .cards {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+  }
+  
+  .card {
+	background: #ffffff;
+	border-radius: 10px;
+	padding: 20px;
+	flex: 1;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+  }
+  
+  .card h3 {
+	font-size: 1.5rem;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 10px;
+  }
+  
+  .faq-bg {
+	background: linear-gradient(to bottom right, #e09635, #ff9ff3);
+  }
+  
+  .faq-item {
+	margin-bottom: 20px;
+  }
+  
+  .faq-item h4 {
+	font-size: 1.25rem;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 10px;
+  }
+
+  
+  
+  @media (max-width: 768px) {
+	.nav-header {
+		flex-direction: column;
+	}
+	.grid {
+		padding: 20px;
+	}
+	.texto p, .texto ul {
+		font-size: 1rem;
+	}
+	.texto h2 {
+		font-size: 2rem;
+	}
+	.texto h4 {
+		font-size: 1.25rem;
+	}
+	.cards {
+		flex-direction: column;
+	}
+  }
