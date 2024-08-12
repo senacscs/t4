@@ -50,6 +50,8 @@ header {
 }
 
 .interactive-element {
+    position: relative;
+    left: 30px;
     margin: 10px;
     padding: 10px 20px;
     background-color: #555;
