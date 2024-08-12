@@ -1,0 +1,106 @@
+html {
+    cursor: none;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-image: url(drone.mp4);
+    overflow-x: hidden;
+}
+
+.custom-cursor {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s ease, height 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+    z-index: 1000;
+}
+
+header {
+    text-align: center;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+.menu {
+    width: 80%;
+    background-color: white;    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 20px;
+    opacity: 60%;
+    border-top: 0.3rem solid blue;
+    border-bottom: 0.3rem solid blue;
+    border-right: 0.3rem solid yellow;
+    border-left: 0.3rem solid yellow;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;   
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    position: relative;
+    left: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul li {
+    position: relative;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    list-style: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+      width: 100%; 
+        }
+        h1 {
+            position: relative;
+            left: 50px;
+        }
+        .menu {
+            background-color: black;
+            color: white;
+        }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+      width: 90%; 
+    }
+  }
+  
