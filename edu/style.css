@@ -9,7 +9,7 @@ body {
 }
 
 .titulo {
-    background-color: rgb(77, 77, 174);
+    background: linear-gradient(to right, #A3C5F1, #0C121D);
     margin-bottom: 50px; 
 }
 
@@ -95,3 +95,69 @@ a {
 section {
     text-align: center;
 }
+
+.zero {
+    padding: 20px;
+    background-color:  #A3C5F1;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.um {
+    padding: 20px;
+    background-color:  #83A2CD;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.dois {
+    padding: 20px;
+    background-color:  #6582AA;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.três {
+    padding: 20px;
+    background-color:  #4B6387;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.quatro {
+    padding: 20px;
+    background-color:  #334663;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.cinco {
+    padding: 20px;
+    background-color:  #1E2B40;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.seis {
+    padding: 20px;
+    background-color:  #0C121D;
+    border-radius: 20px;
+    border: solid 5px black;
+    color: #6582AA;
+}
+
+.sete {
+    padding: 20px;
+    background-color:  #030406;
+    border-radius: 20px;
+    border: solid 5px black;
+    color: #A3C5F1;
+}
+
+button {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
