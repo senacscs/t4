@@ -1,0 +1,26 @@
+body {
+    background-color: #98879c;   
+}
+
+.contorno {
+    background-color: #76607d;
+    border-radius: 30px;
+    margin-top: 15px;
+    width: 50%;
+    text-align: center;
+    margin-left: 295px;
+    margin-right: 295px;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    align-content: center;
+    align-self: center; 
+}
+
+iframe {
+    margin: 40px;
+}
+
+img {
+    margin-top: 40px;
+}
