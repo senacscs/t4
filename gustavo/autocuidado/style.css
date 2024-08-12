@@ -1,0 +1,97 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    background-image: url('https://www.bing.com/images/search?view=detailV2&ccid=%2fD6trZTQ&id=23FCA9BDC4ACC7965A954C06DCE78CE39B56857D&thid=OIP._D6trZTQdoKPxR4fLyF0KAHaEK&mediaurl=https%3a%2f%2flifeacademy.com.co%2fwp-content%2fuploads%2f2021%2f09%2fself-care-health-concept.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fc3eadad94d076828fc51e1f2f217428%3frik%3dfYVWm%252bOM59wGTA%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1920&q=autpcuidado&simid=608024712630386918&FORM=IRPRST&ck=1934BA41FD8D5D972158594576C4A450&selectedIndex=1&itb=0&ajaxhist=0&ajaxserp=0');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+/* Estilos para links */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Estilos para conteúdo principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+/* Estilos para vídeo */
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Layout flexível para conteúdo secundário */
+.flex-container {
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-container div {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 10px;
+    font-size: large;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    border-radius: 8px;
+}
+
+
+/* para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        background-color: lightgray;
+    }
+}
+/* aparência em tela grande */
+@media (min-width: 768px) {
+    body {
+        background-color: lightgray;
+        font-size: xx-large;
+    }
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
