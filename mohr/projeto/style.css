@@ -1,7 +1,7 @@
 img {
     width: 800px;
     position: relative;
-    left: 360px;
+    left: 220px;
 }
 
 head, body {
@@ -9,7 +9,7 @@ head, body {
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 0;
-    background-color: rgb(255, 192, 192)
+    background-color: rgb(255, 192, 192);
 }
 
 h1, h2, h3, p {
@@ -61,13 +61,31 @@ a{
     top:15px;
 }
 
-@media (min-width: 768px) {
-   
-}
-
 @media (max-width: 768px) {
-body {
-    background-color: aqua;
+ .sidebar {
+        display: none;
+    }
+
+    body {
+    background-color: rgb(255, 192, 192);
     font-size: xx-large;
 }
+.navbar {
+    flex-direction: column;
 }
+
+img {
+    width: 600px;
+}
+
+.fotoods {
+    position: relative;
+    margin-right: 200px;
+}
+
+a {
+    margin-right: 100px;
+}
+}
+
+ 
