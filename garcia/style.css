@@ -2,26 +2,6 @@
   margin: 0;
   padding: 0;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-
-.star {
-  transform-style: preserve-3d;
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  color: rgb(0, 44, 241);
-}
-
-.star:before {
-  position: fixed;
-  content: '\2726';
-  color: inherit;
-  inset: 0;
-  box-shadow: 0 0 1em .5em rgb(0, 166, 243);
-  filter: drop-shadow(0 0 .5em rgb(163, 98, 248));
-  text-shadow: 0 0 .8em rgb(255, 255, 255);
-} */
-
 
 body {
   background-color: black;
@@ -39,7 +19,6 @@ body {
   padding-top: 15vh;
 }
 h2 {
-  position: relative;
   cursor: pointer;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -47,23 +26,28 @@ h2 {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  font-size: 1.6vw;
 }
 
-h2::after {
+/* h2::before{
   content: "";
   position: absolute;
   bottom: -5px;
   height: 2px;
-  width: 100%;
-  left: 0;
-  background-color: rgb(169, 169, 169);
+  left: 17vw;
+  background-color: rgb(180, 180, 180);
   transition: 1s;
   transition-timing-function: ease-in-out;
   transform: scaleX(0);
+  width: 28%;
 }
-h2:hover::after {
+h2:hover::before {
   transform: scaleX(1);
-}
+
+} */
 
 main{
   width: 80%;
@@ -72,11 +56,13 @@ main{
 }
 .proj {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  width: 50%;
+  /* margin: auto;
+  position: relative; */
   font-family: "Italiana", sans-serif;
   letter-spacing: 2px;
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -84,27 +70,39 @@ a {
   color: white;
 }
 
-hr {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.proj h2:hover {
+/* .proj h2:hover {
   color: rgb(169, 169, 169);
   transition: linear 0.3s;
   transform: scale(1.1);
   text-align: center;
 
-}
-p{
-  text-align: center;
+} */
+.acs{
+  text-align: end;
   color: white;
-  max-width: 60%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3vh;
+  justify-content: center;
+  font-size: 1.6vw;
 }
+.acs::before{
+  content: '';
+  height: 3px;
+  width: 0;
+  margin-left: 50%;
+  top: 20px;
+  transition: 0.3s;
+  background-color: white;
+  /* position: absolute; */
+}
+.acs:hover::before{
+  width: 100%;
+  margin-left: 0;
+  content: '';
+
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -140,7 +138,6 @@ html {
   opacity: 0;
   cursor: pointer;
 }
-
 
 .menu .menu-fake:checked~.menu-lines span:nth-child(1) {
   transform-origin: 0% 0%;
@@ -190,18 +187,105 @@ html {
   color: rgb(169, 169, 169);
   transition: all ease .3s;
 }
-
-img{
-  display: block;
-  margin-left: calc(100vw - 6vw);
+.logo3{
+  width: 4vw;
+  height: 4vw;
+}
+.logo2{
   width: 3vw;
+  height: 4vw;
+}
+.logo1{
+  width: 6vw;
   height: 3vw;
-  position: fixed;
+}
+.logos{
+  width: 60%;
+  justify-content:  center;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-@keyframes giro {
-  100% {transform: rotate(360deg);}
+@property --eyelid {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
 }
-img{
-  animation: giro 2s infinite;
+@property --eyelid2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+.eyes {
+  width: 15vw;
+  padding-block: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  
+  div {
+    position: relative;
+    width: 5vw;
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 116%;
+      height: 165%;
+      left: 50%;
+      animation: eyelid 5s ease-in-out infinite;
+      z-index: 1;
+    }
+    &:before {
+      top: 0;
+      border-radius: 0% 0% 40% 40%;
+      transform: translateY(var(--eyelid)) translateX(-50%);
+      border-bottom: 40px solid black;
+    }
+    &:after {
+      bottom: 0;
+      border-radius: 40% 40% 0% 0%;
+      transform: translateY(var(--eyelid2)) translateX(-50%);
+      border-top: 40px solid black;
+    }
+    i {
+      position: absolute;
+      width: 3.5vw;
+      aspect-ratio: inherit;
+      background: black;
+      border-radius: inherit;
+    }
+  }
+}
+
+@keyframes eyelid {
+  0% {
+    --eyelid: -50%;
+    --eyelid2: 50%;
+  }
+  3% {
+    --eyelid: 0%;
+    --eyelid2: 0%;
+  }
+  6% {
+    --eyelid: -50%;
+    --eyelid2: 50%;
+  }
+  9%,100% {
+    --eyelid: 0%;
+    --eyelid2: 0%;
+  }
+}
+.zoio{
+  position: fixed;
+  margin-left: calc(82vw - 5px);
 }
