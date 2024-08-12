@@ -1,89 +1,10 @@
 @media (min-width: 768px) {
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-header {
-    background-color: rgb(0, 96, 98);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
-    font-family: Berlin Sans FB;
-}
-.css{
-    width: 30%;
-    background-color: rgb(83, 132, 240);
-    padding: 20px;
-    max-width: 500px;
-    margin-block: 10px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-p{
-    font-size:20px;
-    font-family: Goudy Old Style;
-}
-hr{
-    border: 2px solid rgb(59, 86, 241);
-    width: 250px;
-}
-h1{
-    font-family: Goudy Old Style;
-    text-align: center;
-}
-.conteudos{
-    width: 30%;
-    background-color: rgb(83, 132, 240);
-    padding: 20px;
-    max-width: 500px;
-    margin-block: 10px;
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-a{
-    font-family: Goudy Old Style;
-    color:black;
-}
-.w3b{
-    width: 30%;
-    background-color: rgb(83, 132, 240);
-    padding: 20px;
-    max-width: 500px;
-    margin-block: 10px;
-    border-radius: 20px;
-    margin: auto;
-}
-.video{
-    width: 800;
-    background-color: rgb(83, 132, 240);
-    padding: 20px;
-    max-width: 500px;
-    margin-block: 10px;
-    border-radius: 20px;
-    margin: auto;
-}
-footer {
-    background-color: rgb(0, 96, 98);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-}
-
-@media (max-width:768px){
-    body{
+    body {
         margin: 0;
         padding: 0;
         background-color: #f0f0f0;
     }
+
     header {
         background-color: rgb(0, 96, 98);
         color: white;
@@ -92,7 +13,8 @@ footer {
         font-size: 30px;
         font-family: Berlin Sans FB;
     }
-    .css{
+
+    .css {
         width: 30%;
         background-color: rgb(83, 132, 240);
         padding: 20px;
@@ -102,19 +24,23 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-    p{
-        font-size:20px;
+
+    p {
+        font-size: 20px;
         font-family: Goudy Old Style;
     }
-    hr{
+
+    hr {
         border: 2px solid rgb(59, 86, 241);
         width: 250px;
     }
-    h1{
+
+    h1 {
         font-family: Goudy Old Style;
         text-align: center;
     }
-    .conteudos{
+
+    .conteudos {
         width: 30%;
         background-color: rgb(83, 132, 240);
         padding: 20px;
@@ -122,12 +48,16 @@ footer {
         margin-block: 10px;
         border-radius: 20px;
         margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
-    a{
+
+    a {
         font-family: Goudy Old Style;
-        color:black;
+        color: black;
     }
-    .w3b{
+
+    .w3b {
         width: 30%;
         background-color: rgb(83, 132, 240);
         padding: 20px;
@@ -136,7 +66,8 @@ footer {
         border-radius: 20px;
         margin: auto;
     }
-    .video{
+
+    .video {
         width: 800;
         background-color: rgb(83, 132, 240);
         padding: 20px;
@@ -145,6 +76,7 @@ footer {
         border-radius: 20px;
         margin: auto;
     }
+
     footer {
         background-color: rgb(0, 96, 98);
         color: white;
@@ -154,9 +86,97 @@ footer {
         bottom: 0;
         width: 100%;
     }
-    .rap{
+}
+
+@media (max-width:768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    header {
+        background-color: rgb(0, 96, 98);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-family: Berlin Sans FB;
+    }
+
+    .css {
+        width: 30%;
+        background-color: rgb(83, 132, 240);
+        padding: 20px;
+        max-width: 500px;
+        margin-block: 10px;
+        border-radius: 20px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    p {
+        font-size: 20px;
+        font-family: Goudy Old Style;
     }
-    
+
+    hr {
+        border: 2px solid rgb(59, 86, 241);
+        width: 250px;
+    }
+
+    h1 {
+        font-family: Goudy Old Style;
+        text-align: center;
+    }
+
+    .conteudos {
+        width: 30%;
+        background-color: rgb(83, 132, 240);
+        padding: 20px;
+        max-width: 500px;
+        margin-block: 10px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    a {
+        font-family: Goudy Old Style;
+        color: black;
+    }
+
+    .w3b {
+        width: 30%;
+        background-color: rgb(83, 132, 240);
+        padding: 20px;
+        max-width: 500px;
+        margin-block: 10px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    .video {
+        width: 800;
+        background-color: rgb(83, 132, 240);
+        padding: 20px;
+        max-width: 500px;
+        margin-block: 10px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    footer {
+        background-color: rgb(0, 96, 98);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .rap {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

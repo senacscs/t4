@@ -1,193 +1,217 @@
 @media (min-width: 768px) {
-*{
-    margin: 0;
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: rgb(121, 204, 253);
+
+    }
+
+    .tit {
+        background-color: white;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    h1,
+    h2 {
+        font-family: Lucida Handwriting;
+        color: rgb(121, 204, 253)
+    }
+
+    .gre {
+        width: 98%;
+        background-color: white;
+        text-align: center;
+        padding: 12px;
+        font-family: French Script MT;
+        color: rgb(121, 204, 253);
+
+    }
+
+    .his {
+        color: rgb(121, 204, 253);
+        font-family: French Script MT;
+        font-size: 25px;
+    }
+
+    .len {
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .conteudo1 {
+        width: 98%;
+        background-color: rgb(16, 145, 87);
+        color: rgb(5, 86, 50);
+        text-align: center;
+        padding: 12px;
+    }
+
+    .he {
+        color: rgb(5, 86, 50);
+        ;
+    }
+
+    .her {
+        font-family: French Script MT;
+        font-size: 25px;
+        color: rgb(5, 86, 50);
+    }
+
+    .hc,
+    .mm {
+        width: 15%;
+    }
+
+    .her,
+    .hc {
+        display: inline-block;
+    }
+
+    .lab {
+        width: 98%;
+        background-color: rgb(158, 90, 22);
+        color: rgb(86, 51, 5);
+        text-align: center;
+        padding: 12px;
+    }
+
+    .min,
+    .lm {
+        color: rgb(86, 51, 5);
+    }
+
+    .pan {
+        width: 98%;
+        background-color: rgb(7, 92, 45);
+        color: rgb(5, 3, 1);
+        text-align: center;
+        padding: 12px;
+    }
+
+    .pp,
+    .cai {
+        color: rgb(1, 53, 21);
+    }
+
+    .pp,
+    .lm,
+    .her {
+        font-family: French Script MT;
+        font-size: 25px;
+    }
 }
 
-body {
-    background-color: rgb(121, 204, 253);
+@media (max-width:768px) {
+    * {
+        margin: 0;
+    }
 
-}
+    body {
+        background-color: rgb(121, 204, 253);
 
-.tit{
-    background-color: white;
-    width: 100%;
-    text-align: center;
+    }
 
-}
-h1, h2 {
-    font-family: Lucida Handwriting;
-    color:rgb(121, 204, 253)
+    .tit {
+        background-color: white;
+        width: 100%;
+        text-align: center;
 
-}
+    }
 
-.gre{
-    width: 98%;
-    background-color: white;
-    text-align: center;
-    padding: 12px;
-    font-family: French Script MT;
-    color: rgb(121, 204, 253);
+    h1,
+    h2 {
+        font-family: Lucida Handwriting;
+        color: rgb(121, 204, 253)
+    }
 
-}
+    .gre {
+        width: 98%;
+        background-color: white;
+        text-align: center;
+        padding: 12px;
+        font-family: French Script MT;
+        color: rgb(121, 204, 253);
 
-.his{
-    color:rgb(121, 204, 253);
-    font-family: French Script MT;
-    font-size: 25px;
-}
+    }
 
-.len{
-    background-color: white;
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-}
+    .his {
+        color: rgb(121, 204, 253);
+        font-family: French Script MT;
+        font-size: 35px;
+    }
 
-.conteudo1{
-    width: 98%;
-    background-color: rgb(16, 145, 87);
-    color: rgb(5, 86, 50);
-    text-align: center;
-    padding: 12px;
-}
+    .len {
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
 
-.he{
-    color: rgb(5, 86, 50);;
-}
-.her{
-    font-family: French Script MT;
-    font-size: 25px;
-    color: rgb(5, 86, 50);
-}
+    .conteudo1 {
+        width: 98%;
+        background-color: rgb(16, 145, 87);
+        color: rgb(5, 86, 50);
+        text-align: center;
+        padding: 12px;
+    }
 
-.hc, .mm{
-    width: 15%;
-}
+    .he {
+        color: rgb(5, 86, 50);
+        ;
+    }
 
-.her, .hc{
-    display: inline-block;
-}
+    .her {
+        font-family: French Script MT;
+        font-size: 25px;
+        color: rgb(5, 86, 50);
+    }
 
-.lab{
-    width: 98%;
-    background-color: rgb(158, 90, 22);
-    color: rgb(86, 51, 5);
-    text-align: center;
-    padding: 12px;
-}
-.min, .lm{
-    color: rgb(86, 51, 5);
-}
+    .hc,
+    .mm {
+        width: 15%;
+    }
 
-.pan{
-    width: 98%;
-    background-color: rgb(7, 92, 45);
-    color: rgb(5, 3, 1);
-    text-align: center;
-    padding: 12px;
-}
-.pp, .cai{
-    color: rgb(1, 53, 21);
-}
-.pp, .lm, .her{
-    font-family: French Script MT;
-    font-size: 25px;
-}
-}
+    .her,
+    .hc {
+        display: inline-block;
+    }
 
-@media (max-width:768px){
-*{
-    margin: 0;
-}
+    .lab {
+        width: 98%;
+        background-color: rgb(158, 90, 22);
+        color: rgb(86, 51, 5);
+        text-align: center;
+        padding: 12px;
+    }
 
-body {
-    background-color: rgb(121, 204, 253);
+    .min,
+    .lm {
+        color: rgb(86, 51, 5);
+    }
 
-}
+    .pan {
+        width: 98%;
+        background-color: rgb(7, 92, 45);
+        color: rgb(5, 3, 1);
+        text-align: center;
+        padding: 12px;
+    }
 
-.tit{
-    background-color: white;
-    width: 100%;
-    text-align: center;
+    .pp,
+    .cai {
+        color: rgb(3, 2, 2);
+    }
 
-}
-h1, h2 {
-    font-family: Lucida Handwriting;
-    color:rgb(121, 204, 253)
-
-}
-
-.gre{
-    width: 98%;
-    background-color: white;
-    text-align: center;
-    padding: 12px;
-    font-family: French Script MT;
-    color: rgb(121, 204, 253);
-    
-}
-
-.his{
-    color:rgb(121, 204, 253);
-    font-family: French Script MT;
-    font-size: 35px;
-}
-
-.len{
-    background-color: white;
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.conteudo1{
-    width: 98%;
-    background-color: rgb(16, 145, 87);
-    color: rgb(5, 86, 50);
-    text-align: center;
-    padding: 12px;
-}
-
-.he{
-    color: rgb(5, 86, 50);;
-}
-.her{
-    font-family: French Script MT;
-    font-size: 25px;
-    color: rgb(5, 86, 50);
-}
-
-.hc, .mm{
-    width: 15%;
-}
-
-.her, .hc{
-    display: inline-block;
-}
-
-.lab{
-    width: 98%;
-    background-color: rgb(158, 90, 22);
-    color: rgb(86, 51, 5);
-    text-align: center;
-    padding: 12px;
-}
-.min, .lm{
-    color: rgb(86, 51, 5);
-}
-
-.pan{
-    width: 98%;
-    background-color: rgb(7, 92, 45);
-    color: rgb(5, 3, 1);
-    text-align: center;
-    padding: 12px;
-}
-.pp, .cai{
-    color: rgb(3, 2, 2);
-}
-.pp, .lm, .her{
-    font-family: French Script MT;
-    font-size: 25px;
-}
+    .pp,
+    .lm,
+    .her {
+        font-family: French Script MT;
+        font-size: 25px;
+    }
 }

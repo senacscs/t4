@@ -1,43 +1,63 @@
 @media (min-width: 768px) {
-body {
-    background-image: url("planoazul.jpg");
-}
-h1,h2,p,a{
-    color:white
-}
-h1,h2{
-    font-family:"Lucida Handwriting";
-}
-p,a{
-    font-family:"Sitka Display";
-}
-
-h1,h2{
-    text-align: center;
-}
-hr{
-    color:blueviolet;
-}
-}
-
-@media (max-width:768px){
     body {
         background-image: url("planoazul.jpg");
     }
-    h1,h2,p,a{
-        color:white
+
+    h1,
+    h2,
+    p,
+    a {
+        color: white
     }
-    h1,h2{
-        font-family:"Lucida Handwriting";
+
+    h1,
+    h2 {
+        font-family: "Lucida Handwriting";
     }
-    p,a{
-        font-family:"Sitka Display";
+
+    p,
+    a {
+        font-family: "Sitka Display";
     }
-    
-    h1,h2{
+
+    h1,
+    h2 {
         text-align: center;
     }
-    hr{
-        color:blueviolet;
+
+    hr {
+        color: blueviolet;
     }
+}
+
+@media (max-width:768px) {
+    body {
+        background-image: url("planoazul.jpg");
     }
+
+    h1,
+    h2,
+    p,
+    a {
+        color: white
+    }
+
+    h1,
+    h2 {
+        font-family: "Lucida Handwriting";
+    }
+
+    p,
+    a {
+        font-family: "Sitka Display";
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    hr {
+        color: blueviolet;
+    }
+}
