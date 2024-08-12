@@ -1,0 +1,121 @@
+@media (min-width: 768px) {
+    * {
+        margin: 0;
+    }
+ 
+    body {
+        background-color: rgb(41, 37, 37);
+        color: white;
+        text-align: center;
+    }
+ 
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 30%;
+        background-color: black;
+        box-shadow: 0 0 20px;
+    }
+ 
+    nav {
+        background-color: grey;
+    }
+ 
+    nav li {
+        display: inline-block;
+    }
+ 
+    nav li a {
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+        display: inline-block;
+        font-size: 30px;
+    }
+ 
+    nav li a:hover {
+        background-color: purple;
+    }
+ 
+    .dropdown-menu a {
+        display: block;
+        color: white;
+    }
+ 
+    .titulo {
+        font-style: italic;
+    }
+ 
+    h2 {
+        color: white;
+    }
+ 
+    .caixa {
+        width: 1500px;
+        height: 1200px;
+        background-color: black;
+        border-radius: 30px;
+        box-shadow: 0 0 20px;
+        padding: 8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+ 
+    .container>div {
+        flex: 1;
+        margin-right: 20px;
+    }
+ 
+    .contato h3,
+    .links-adicionais h3,
+    .copyright p {
+        margin-top: 0;
+    }
+ 
+    .contato p,
+    .links-adicionais ul,
+    .links-adicionais ul li,
+    .copyright p {
+        margin-bottom: 10px;
+    }
+ 
+    .descentralizar ul li {
+        text-align: left;
+    }
+ 
+    p {
+        font-size: 22px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+ 
+    .left {
+        text-align: center;
+    }
+ 
+    .video {
+        display: flex;
+        align-items: center;
+        margin-left: 2px;
+        margin-right: 2px;
+        border: none;
+        justify-content: center;
+    }
+}
+ 
+@media (max-width: 768px) {
+   
+}
