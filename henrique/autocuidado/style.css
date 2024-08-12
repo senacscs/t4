@@ -35,20 +35,8 @@ header h1 {
     font-size: 2rem;
 }
 
-nav {
-    display: flex;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0 15px;
-    font-size: 1rem;
-    line-height: 2.5rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
+a{
+    color:#4CAF50;
 }
 
 .content {
