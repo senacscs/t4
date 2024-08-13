@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+body {
+    background-color: rgb(149, 30, 70);
+    color: black;
+}
+
+.cabecalho {
+    background-color: rgb(255, 91, 118);
+    border-radius: 5px;
+    text-align: center;
+    color: aliceblue;
+} 
+
+.borda1 {
+    background-color: rgb(255, 91, 118);
+    border-radius: 5px;
+    color: aliceblue;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.meditacao {
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 20px;
+    border: solid 2px pink;
+}
+
+span {
+    color: black;
+}
+
+.rotina {
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 20px;
+    border: solid 2px pink;
+}
+
+a {
+    text-align: center;
+    color: white;
+    display: block;
+    text-align: center;
+}
