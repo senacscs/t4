@@ -1,0 +1,230 @@
+
+ .logo{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #a2a2a2;
+    background-color: #ada6a6ed;
+    line-height: 1.6;
+    align-items: center;
+}
+
+header {
+    background-color: #B3CDE0; 
+    color: #FFFFFF;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100px; 
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+header nav ul li a:hover {
+    background-color: #A4D8E2;
+    align-items: center;
+}
+
+.banner {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 20px 50px;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFB6C1; 
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffecef;
+    align-items: center;
+
+}
+
+.cta-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color: #FF69B4;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+.cta-button:hover {
+    background-color: #FFB6C1; 
+    align-items: center;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color:#b04545;
+    align-items: center;
+
+}
+
+.text-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E6A8B1; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+    align-items: center;
+}
+
+.text-box:hover {
+    transform: translateY(-10px);
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    align-items: center;
+}
+
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tip-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E6A8B1; 
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    align-items: center;
+}
+
+.tip-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.blog-post {
+    background-color: #FFFFFF;
+    border: 1px solid #E6A8B1; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E6A8B1; 
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #FF69B4;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FFB6C1; 
+}
+
+footer {
+    background-color: #B3CDE0; 
+    color: #D3D3D3;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #D3D3D3;
+}
+
+footer .social-link {
+    color: #E6A8B1;
+    margin: 0 10px;
+}
+
+footer .social-link:hover {
+    color:#c16472
+}
+
+div.box {
+    width: 150px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+.h2{
+align-items: center;
+}
