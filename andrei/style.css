@@ -8,6 +8,7 @@ body {
     background-color: rgb(52, 52, 52);
     background-image: url("https://th.bing.com/th/id/R.45de7ae85be3ae6eab89fdba4b35b4ea?rik=SBxJyIxRXaKtRA&pid=ImgRaw&r=0");
     background-size: 2000px;
+    border-radius: 50px;
 }
 h1 {
     text-align: center;
