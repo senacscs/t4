@@ -21,6 +21,28 @@
     justify-content: center;
   } */
   
+
+  /* iframe{ 
+    border: 2px solid white;
+    width: 100px;
+    height: 500px;
+    min-height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  } */
+
+  iframe {
+    border: 2px solid white;
+    width: 100px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+
   }
   .subir{
     width: 7%;
@@ -42,6 +64,8 @@
     min-height: 150px;
     margin-left: auto;
     margin-right: auto;
+    align-items:   center;
+
   }
   
   main {
@@ -81,7 +105,6 @@
   main img {
     display: block;
     margin: 0 auto;
-    align-items:   center;
   }
   
   a{
