@@ -154,6 +154,14 @@ section {
     color: #A3C5F1;
 }
 
+.oito {
+    padding: 20px;
+    background-color:  #030406;
+    border-radius: 20px;
+    border: solid 5px black;
+    color: #A3C5F1;
+}
+
 button {
     width: 200px;
     text-align: center;
