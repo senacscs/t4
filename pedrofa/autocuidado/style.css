@@ -1,0 +1,314 @@
+/* Estilos para telas maiores (desktop) */
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(41, 37, 37);
+        color: white;
+        text-align: center;
+        background-image: url(natures.jpg);
+        background-size: cover; /* Faz a imagem cobrir todo o fundo */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita a repetição da imagem */
+        background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa quando se rola a página */
+    }
+
+    nav {
+        background-color: black;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%; /* Faz com que a navegação ocupe toda a largura da tela */
+        color: white; /* Cor do texto */
+        padding: -1px; /* Espaçamento interno */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar a navegação */
+        z-index: 1000; /* Garante que a nav fique acima de outros elementos */
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav li a.active {
+        color: black; /* Cor do texto do link ativo */
+    }
+
+    h2.active {
+        background-color: white; /* Cor de fundo para o título ativo */
+        color: black; /* Cor do texto para o título ativo */
+        padding: 10px; /* Adicione algum padding para melhor visualização */
+        border-radius: 5px; /* Opcional: adicionar bordas arredondadas */
+    }
+
+    nav li a {
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    nav li a:hover {
+        background-color: white;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 30%;
+        background-color: black;
+        color: white;
+        margin-top: 110px;
+    }
+
+    .titulo {
+        font-style: italic;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .caixa {
+        width: 1000px;
+        height: 1600px;
+        background-color: black;
+        border-radius: 20px;
+        padding: 8px;
+        margin: 10px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .container>div {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .contato h3,
+    .links-adicionais h3,
+    .copyright p {
+        margin-top: 0;
+    }
+
+    .contato p,
+    .links-adicionais ul,
+    .links-adicionais ul li,
+    .copyright p {
+        margin-bottom: 10px;
+    }
+
+    .descentralizar ul li {
+        text-align: left;
+    }
+
+    p {
+        font-size: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: white;
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .video {
+        display: flex;
+        justify-content: flex-end; /* Alinha as imagens à direita */
+        align-items: flex-start; /* Alinha as imagens ao topo do contêiner */
+        gap: 10px; /* Adiciona um espaço entre as imagens */
+        position: absolute;
+        top: 200px; /* Ajuste a posição conforme necessário */
+        right: 160px; /* Ajuste a posição conforme necessário */
+        text-align: right; /* Alinha as imagens à direita dentro da div */
+        flex-direction: column;
+    }
+
+    .video img,
+    .video iframe {
+        margin-top: 20px; /* Ajusta a posição das imagens para cima */
+        width: 500px;
+        height: 300px;
+    }
+
+    .lefit {
+        text-align: left;
+        font-size: 20px;
+    }
+    .pdf {
+        width: 470px;
+        height: 50px;
+        background-color: black;
+        border-radius: 20px;
+        padding: 8px;
+        margin: 10px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    body {
+        color: white;
+        text-align: center;
+        background-image: url(natures.jpg);
+        background-size: cover; /* Faz a imagem cobrir todo o fundo */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita a repetição da imagem */
+        background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa quando se rola a página */
+    }
+
+    nav {
+        background-color: black;
+        position: fixed; 
+        width: 100%; /* Faz com que a navegação ocupe toda a largura da tela */
+        color: white; /* Cor do texto */
+        padding: -1px; /* Espaçamento interno */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar a navegação */
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav li a.active {
+        color: black; /* Cor do texto do link ativo */
+    }
+
+    h2.active {
+        background-color: white; /* Cor de fundo para o título ativo */
+        color: black; /* Cor do texto para o título ativo */
+        padding: 10px; /* Adicione algum padding para melhor visualização */
+        border-radius: 5px; /* Opcional: adicionar bordas arredondadas */
+    }
+
+    nav li a {
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    nav li a:hover {
+        background-color: white;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin-top: 200px;
+        width: 200px;
+        height: 110;
+        background-color: black;
+        color: white;
+    }
+
+    .titulo {
+        font-style: italic;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .caixa {
+        width: 1000px;
+        height: 1600px;
+        background-color: black;
+        border-radius: 20px;
+        padding: 8px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .container>div {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .contato h3,
+    .links-adicionais h3,
+    .copyright p {
+        margin-top: 0;
+    }
+
+    .contato p,
+    .links-adicionais ul,
+    .links-adicionais ul li,
+    .copyright p {
+        margin-bottom: 10px;
+    }
+
+    .descentralizar ul li {
+        text-align: left;
+    }
+
+    p {
+        font-size: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: white;
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .video {
+        display: flex;
+        justify-content: flex-end; /* Alinha as imagens à direita */
+        align-items: flex-start; /* Alinha as imagens ao topo do contêiner */
+        gap: 10px; /* Adiciona um espaço entre as imagens */
+        position: absolute;
+        top: 200px; /* Ajuste a posição conforme necessário */
+        right: 160px; /* Ajuste a posição conforme necessário */
+        text-align: right; /* Alinha as imagens à direita dentro da div */
+        flex-direction: column;
+    }
+
+    .video img,
+    .video iframe {
+        margin-top: 20px; /* Ajusta a posição das imagens para cima */
+        width: 500px;
+        height: 300px;
+    }
+
+    .lefit {
+        text-align: left;
+        font-size: 20px;
+    }
+}
