@@ -1,0 +1,355 @@
+.custom-cursor {     position: absolute;     width: 8px;     height: 8px;     background-color: #fff;     border-radius: 50%;     pointer-events: none;     transform: translate(-50%, -50%);     transition: width 0.15s ease, height 0.15s ease, background-color 0.15s ease, transform 0.15s ease; z-index: 1000; }
+
+*{
+    margin: auto;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(6, 6, 50);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.interactive-element {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    cursor: none;
+    list-style: none;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    box-shadow: 0 0 10px blue;
+}
+ 
+.interactive-element:hover {
+    background-color: #777;
+    cursor: none;
+    color: black;
+    box-shadow: 0 0 30px blue;
+    transition: box-shadow 1s;
+}
+ 
+.interactive-element::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.8s ease;
+}
+ 
+.interactive-element:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+ 
+.interactive-element:hover ~ .custom-cursor {
+    width: 12px;
+    height: 12px;
+    background-color: #ff6347;
+    cursor: none;
+}
+
+html {
+    cursor: none;
+}
+
+body:not(img) {
+    z-index: 1000;
+}
+
+body {
+ overflow-x: hidden;
+}
+
+.titulo {
+    color: rgba(255, 255, 255, 0.765);
+    font-size: 200px;
+    position: absolute;
+    bottom: 200px;
+    left: 70px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow:
+    1px 1px 0 rgb(0, 166, 255),
+    -1px 1px 0 rgb(0, 166, 255),
+    1px -1px 0 rgb(0, 166, 255),
+    -1px -1px 0 rgb(0, 166, 255),
+    0 1px 0 rgb(0, 166, 255),
+    0 -1px 0 rgb(0, 166, 255),
+    1px 0 0 rgb(0, 166, 255),
+    -1px 0 0 rgb(0, 166, 255);
+}
+
+.texto1{
+    position: relative;
+    bottom: 1400px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+    font-size: 25px;
+}
+
+.texto2 {
+    position: relative;
+    bottom: 1300px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+}
+
+.titulo1{
+    color: white;
+    position: relative;
+    bottom: 1640px;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+    font-weight: bold;
+    text-shadow:
+                1px 1px 0 rgb(23, 7, 128),
+                -1px 1px 0  rgb(23, 7, 128),
+                1px -1px 0  rgb(23, 7, 128),
+                -1px -1px 0  rgb(23, 7, 128);
+}
+
+.titulo2 {
+   color: white;
+   font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+    position: relative;
+    bottom: 1150px;
+   font-weight: bold;
+    text-shadow:
+                1px 1px 0 rgb(23, 7, 128),
+                -1px 1px 0  rgb(23, 7, 128),
+                1px -1px 0  rgb(23, 7, 128),
+                -1px -1px 0  rgb(23, 7, 128);
+}
+
+
+
+
+.borbo {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.lua {
+    width: 80%;
+    position: relative;
+    bottom: 10px;
+    left: 120px;
+}
+
+.estrelas {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.linha {
+    background-color: white;
+    border-color: transparent;
+    bottom: 1670px;
+    height: 30px;
+    position: relative;
+    filter: blur(3px);
+    opacity: 30%;
+}
+
+.auto {
+    font-family: "Bahnschrift Condensed";
+    font-size: 80px;
+}
+
+p {
+    font-family: "Bahnschrift Condensed";
+    font-size: 20px;
+    position: relative;
+    color: white;
+    bottom: 1000px;
+}
+
+.tipos {
+    text-align: center;
+    font-family: "Bahnschrift Condensed";
+    font-size: 25px;
+    padding: 4%;
+    position: relative;
+    color: white;
+    bottom: 300px;
+}
+
+.auto1,
+.auto2 {
+    display: inline-flex;
+    align-items: start;
+    color: white;
+    position: relative;
+}
+
+.tipo {
+    width: 30%;
+    font-family: "Bahnschrift Condensed";
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+
+
+.auto2 {
+    margin-top: 5%;
+}
+
+h2 {
+    position: relative;
+    bottom: 700px;
+}
+
+.mental, .emocional, .fisico, .social, .espiritual {
+    position: relative;
+    bottom: 1000px;
+}
+
+.linha2 {
+    background-color: white;
+    border-color: transparent;
+    bottom: 740px;
+    height: 30px;
+    position: relative;
+    filter: blur(3px);
+    opacity: 30%;
+}
+
+.linha3 {
+    background-color: white;
+    border-color: transparent;
+    bottom: 425px;
+    height: 30px;
+    position: relative;
+    filter: blur(3px);
+    opacity: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
