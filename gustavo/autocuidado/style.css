@@ -1,8 +1,15 @@
-/* Reset padrão */
+Reset padrão
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinha verticalmente ao centro */
 }
 
 /* Estilos globais */
