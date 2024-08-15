@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgb(37, 37, 37);
+    height: 6vw;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+a{
+    cursor: pointer;
+}
+
+header nav {
+
+    letter-spacing: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav ul {
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    font-size: 2vw;
+    margin-top: 2%;
+    color: rgb(138, 138, 255);
+}
+
+.b1 {
+    height: 50vw;
+    width: 50svw;
+    border-radius: 25vw;
+    background-color: rgb(167, 84, 244);
+    position: absolute;
+    margin-left: 80vw;
+    margin-top: -10vw;
+    z-index: 999;
+}
+
+.QQ {
+    background-color: rgb(255, 230, 88);
+    height: 100vh;
+    display: block;
+}
+
+.QQ h1 {
+    font-size: 7vw;
+    padding-top: 5vw;
+    font-family: "Barlow Condensed";
+    letter-spacing: 4px;
+    padding-left: 4vw;
+    z-index: 5;
+    position: relative;
+}
+
+.importancia {
+    background-color: rgb(138, 189, 255);
+    height: 100vh;
+    position: relative;
+
+}
+
+.b2 {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 25vw;
+    background-color: rgb(246, 149, 255);
+    position: absolute;
+    margin-left: -28vw;
+    margin-top: 30vw;
+    z-index: 2;
+}
+
+.tipos {
+    background-color: rgb(167, 84, 244);
+    height: 100vh;
+    position: relative;
+    z-index: 4;
+}
+
+.QQ p {
+    width: 40vw;
+    margin-left: 25vw;
+    padding-top: 7vw;
+    font-size: 3vw;
+    position: relative;
+    z-index: 5;
+}
+
+.importancia h1 {
+    text-align: end;
+    padding-right: 5vw;
+    font-family: "Barlow Condensed";
+    font-size: 7vw;
+    letter-spacing: 4px;
+}
+
+.importancia p {
+    text-align: left;
+    width: 40vw;
+    margin-left: 25vw;
+    padding-top: 9vw;
+    font-size: 3vw;
+    position: relative;
+    z-index: 5;
+
+}
+
+.b3 {
+    background-color: rgb(255, 230, 88);
+    border-radius: 20vw;
+    width: 40vw;
+    height: 40vw;
+    margin-left: 80vw;
+    z-index: 5;
+    position: absolute;
+}
+
+.q1 {
+    width: 40vw;
+    height: 20vw;
+    background-color: gold;
+    position: absolute;
+    z-index: 12;
+    border-radius: 2vw;
+    margin-left: 2vw
+
+}
+
+.tipos h1 {
+    text-align: left;
+    padding-right: 5vw;
+    font-family: "Barlow Condensed";
+    font-size: 7vw;
+    letter-spacing: 4px;
+    margin-left: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw
+}
+
+.tipos h2 {
+    font-size: 4vw;
+    padding-left: 2vw;
+
+}
+
+.tipos p{
+    padding-left: 2vw;
+    font-size: 1.7vw;
+}
+
+.q2{
+    width: 40vw;
+    height: 20vw;
+    background-color: rgb(138, 189, 255);
+    position: absolute;
+    z-index: 12;
+    border-radius: 2vw;
+    margin-left: calc(100vw - 42vw);
+   margin-top: 10%;
+}
+
+footer{
+    background-color: rgb(37, 37, 37);
+    height: 4vh;
+    position: relative;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    align-content: center;
+    z-index: 1000;
+}
