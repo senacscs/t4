@@ -186,7 +186,7 @@ body {
 .linha {
     background-color: white;
     border-color: transparent;
-    bottom: 1670px;
+    bottom: 1610px;
     height: 30px;
     position: relative;
     filter: blur(3px);
@@ -208,12 +208,23 @@ p {
 
 .tipos {
     text-align: center;
-    font-family: "Bahnschrift Condensed";
     font-size: 25px;
     padding: 4%;
     position: relative;
-    color: white;
     bottom: 300px;
+    color: white;
+    font-family: 'Italiana';
+    width: 80%;
+    font-weight: bold;
+    text-shadow:
+    1px 1px 0 rgb(63, 138, 170),
+    -1px 1px 0 rgb(63, 138, 170),
+    1px -1px 0 rgb(63, 138, 170),
+    -1px -1px 0 rgb(199, 238, 255),
+    0 1px 0 rgb(199, 238, 255),
+    0 -1px 0 rgb(199, 238, 255),
+    1px 0 0 rgb(199, 238, 255),
+    -1px 0 0 rgb(199, 238, 255);
 }
 
 .auto1,
@@ -242,7 +253,7 @@ h2 {
     bottom: 700px;
 }
 
-.mental, .emocional, .fisico, .social, .espiritual {
+.mental, .emocional, .fisico {
     position: relative;
     bottom: 1000px;
 }
@@ -250,7 +261,7 @@ h2 {
 .linha2 {
     background-color: white;
     border-color: transparent;
-    bottom: 740px;
+    bottom: 720px;
     height: 30px;
     position: relative;
     filter: blur(3px);
@@ -260,11 +271,40 @@ h2 {
 .linha3 {
     background-color: white;
     border-color: transparent;
-    bottom: 425px;
+    bottom: 455px;
     height: 30px;
     position: relative;
     filter: blur(3px);
     opacity: 30%;
+}
+
+.social {
+    position: relative;
+    bottom: 1000px;
+    left: 100px;
+}
+
+.socialtext {
+    position: relative;
+    left: 100px;
+}
+
+.espiritual {
+    position: relative;
+    bottom: 1000px;
+    left: 350px;
+}
+
+.espiritualtext {
+    position: relative;
+    left: 350px;
+}
+
+iframe {
+    position: relative;
+    border-radius: 10px;
+    bottom: 750px;
+    right: 340px;
 }
 
 
