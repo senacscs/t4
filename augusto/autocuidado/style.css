@@ -1,0 +1,725 @@
+@media (max-width: 768px) {
+    @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    
+    :root {
+      --c: 238, 199, 99;
+      --t: 204, 204, 204;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #000;
+      margin: 0;
+      font-family: "Jura";
+      color: rgb(var(--t));
+      position: relative;
+    }
+    
+    h1,
+    h2,
+    h3,
+    p {
+      font-weight: normal;
+    }
+    
+    h1 {
+      font-size: 5rem;
+      margin: 0 0 3rem 0;
+      text-align: center;
+    }
+    
+    p {
+      line-height: 200%;
+      margin-bottom: 3rem;
+    }
+    
+    .scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.2rem;
+      gap: 1rem;
+      position: fixed;
+      bottom: 3rem;
+      right: 3rem;
+      cursor: pointer;
+      transition: all ease 0.3s;
+    }
+    
+    .text {
+      text-shadow: 0 0 20px 1px rgb(var(--c), 1);
+      color: rgb(var(--c));
+      font-family: "Jura";
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+    
+    .rectangle {
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(20px);
+      box-shadow: 0 0 200px 5px rgb(var(--c), 1), 0 0 20px 1px rgb(var(--c), 0.3);
+    }
+    
+    .rectangle:first-child {
+      opacity: 1;
+      transform: translateY(0);
+      background-color: rgba(var(--c), 1);
+    }
+    
+    .scroll:hover .rectangle:not(:first-child) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .rectangle:nth-child(1) {
+      width: 100px;
+      height: 15px;
+    }
+    .rectangle:nth-child(2) {
+      width: 70px;
+      height: 12px;
+      transition-delay: 0.05s;
+      background-color: rgba(var(--c), 0.9);
+    }
+    .rectangle:nth-child(3) {
+      width: 50px;
+      height: 9px;
+      transition-delay: 0.1s;
+      background-color: rgba(var(--c), 0.8);
+    }
+    .rectangle:nth-child(4) {
+      width: 40px;
+      height: 7px;
+      transition-delay: 0.15s;
+      background-color: rgba(var(--c), 0.7);
+    }
+    .rectangle:nth-child(5) {
+      width: 32px;
+      height: 6px;
+      transition-delay: 0.2s;
+      background-color: rgba(var(--c), 0.6);
+    }
+    .rectangle:nth-child(6) {
+      width: 28px;
+      height: 5px;
+      transition-delay: 0.25s;
+      background-color: rgba(var(--c), 0.5);
+    }
+    .rectangle:nth-child(7) {
+      width: 25px;
+      height: 4px;
+      transition-delay: 0.3s;
+      background-color: rgba(var(--c), 0.4);
+    }
+    .rectangle:nth-child(8) {
+      width: 22px;
+      height: 3px;
+      transition-delay: 0.35s;
+      background-color: rgba(var(--c), 0.3);
+    }
+    .scroll:not(:hover) .rectangle:nth-child(2) {
+      transition-delay: 0.35s;
+    }
+    .scroll:not(:hover) .rectangle:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+    .scroll:not(:hover) .rectangle:nth-child(4) {
+      transition-delay: 0.25s;
+    }
+    .scroll:not(:hover) .rectangle:nth-child(5) {
+      transition-delay: 0.2s;
+    }
+    .scroll:not(:hover) .rectangle:nth-child(6) {
+      transition-delay: 0.15s;
+    }
+    .scroll:not(:hover) .rectangle:nth-child(7) {
+      transition-delay: 0.05s;
+    }
+    .scroll:not(:hover) .rectangle:nth-child(8) {
+      transition-delay: 0s;
+    }
+    
+    main {
+      border-style: solid;
+      border-color: rgb(var(--t), 0.2);
+      border-width: 0 1px 0 1px;
+      width: 60%;
+      height: auto;
+      margin: 0 15rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    .line {
+      width: 100%;
+      height: 1px;
+      position: relative;
+      background-color: rgb(var(--t), 0.2);
+    }
+    
+    .top {
+      top: 5rem;
+    }
+    
+    .bottom {
+      bottom: 5rem;
+    }
+    
+    article {
+      position: relative;
+      margin: 10rem 4rem;
+    }
+    
+    a {
+      color: rgb(var(--c));
+      text-decoration: none;
+    }
+    
+    @media screen and (max-width: 850px) {
+      main {
+        width: 100%;
+        margin: 0 5rem;
+      }
+      
+      .ruler {
+        left: 0rem !important;
+      }
+    }
+    
+    
+    .ruler {
+      width: 2rem;
+      height: 100%;
+      position: absolute;
+      left: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    
+    .lines {
+      width: 1px;
+      height: 100%;
+      background-color: rgb(var(--c), 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+    }
+    
+    .lines span {
+      width: 1rem;
+      background-color: rgb(var(--c), 0.4);
+      height: 1px;
+      position: absolute;
+    }
+    
+    .mask {
+      position: fixed;
+      height: 10%;
+      width: 1rem;
+      background-color: #000;
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      color: rgb(var(--c));
+    }
+    
+    .one {
+      top: 0;
+      border-width: 0 0 1px 0;
+      border-color: rgb(var(--c));
+      border-style: solid;
+      
+    }
+    .two {
+      bottom: 0;
+      border-width: 1px 0 0px 0;
+      border-color: rgb(var(--c));
+      border-style: solid;
+    }
+    
+    .lines span:nth-child(1) {
+      top: 4%;
+    }
+    
+    .lines span:nth-child(2) {
+      top: 8%;
+    }
+    
+    .lines span:nth-child(3) {
+      top: 12%;
+    }
+    
+    .lines span:nth-child(4) {
+      top: 16%;
+    }
+    
+    .lines span:nth-child(5) {
+      top: 20%;
+    }
+    
+    .lines span:nth-child(6) {
+      top: 24%;
+    }
+    
+    .lines span:nth-child(7) {
+      top: 28%;
+    }
+    
+    .lines span:nth-child(8) {
+      top: 32%;
+    }
+    
+    .lines span:nth-child(9) {
+      top: 36%;
+    }
+    
+    .lines span:nth-child(10) {
+      top: 40%;
+    }
+    
+    .lines span:nth-child(11) {
+      top: 44%;
+    }
+    
+    .lines span:nth-child(12) {
+      top: 48%;
+    }
+    
+    .lines span:nth-child(13) {
+      top: 52%;
+    }
+    
+    .lines span:nth-child(14) {
+      top: 56%;
+    }
+    
+    .lines span:nth-child(15) {
+      top: 60%;
+    }
+    
+    .lines span:nth-child(16) {
+      top: 64%;
+    }
+    
+    .lines span:nth-child(17) {
+      top: 68%;
+    }
+    
+    .lines span:nth-child(18) {
+      top: 72%;
+    }
+    
+    .lines span:nth-child(19) {
+      top: 76%;
+    }
+    
+    .lines span:nth-child(20) {
+      top: 80%;
+    }
+    
+    .lines span:nth-child(21) {
+      top: 84%;
+    }
+    
+    .lines span:nth-child(22) {
+      top: 88%;
+    }
+    
+    .lines span:nth-child(23) {
+      top: 92%;
+    }
+    
+    .lines span:nth-child(24) {
+      top: 96%;
+    }
+    
+    .lines span:nth-child(25) {
+      top: 100%;
+    }
+    }
+    @media (min-width: 768px) {
+        @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --c: 238, 199, 99;
+  --t: 204, 204, 204;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #000;
+  margin: 0;
+  font-family: "Jura";
+  color: rgb(var(--t));
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0 0 3rem 0;
+  text-align: center;
+}
+
+p {
+  line-height: 200%;
+  margin-bottom: 3rem;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.text {
+  text-shadow: 0 0 20px 1px rgb(var(--c), 1);
+  color: rgb(var(--c));
+  font-family: "Jura";
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.rectangle {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  box-shadow: 0 0 200px 5px rgb(var(--c), 1), 0 0 20px 1px rgb(var(--c), 0.3);
+}
+
+.rectangle:first-child {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: rgba(var(--c), 1);
+}
+
+.scroll:hover .rectangle:not(:first-child) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rectangle:nth-child(1) {
+  width: 100px;
+  height: 15px;
+}
+.rectangle:nth-child(2) {
+  width: 70px;
+  height: 12px;
+  transition-delay: 0.05s;
+  background-color: rgba(var(--c), 0.9);
+}
+.rectangle:nth-child(3) {
+  width: 50px;
+  height: 9px;
+  transition-delay: 0.1s;
+  background-color: rgba(var(--c), 0.8);
+}
+.rectangle:nth-child(4) {
+  width: 40px;
+  height: 7px;
+  transition-delay: 0.15s;
+  background-color: rgba(var(--c), 0.7);
+}
+.rectangle:nth-child(5) {
+  width: 32px;
+  height: 6px;
+  transition-delay: 0.2s;
+  background-color: rgba(var(--c), 0.6);
+}
+.rectangle:nth-child(6) {
+  width: 28px;
+  height: 5px;
+  transition-delay: 0.25s;
+  background-color: rgba(var(--c), 0.5);
+}
+.rectangle:nth-child(7) {
+  width: 25px;
+  height: 4px;
+  transition-delay: 0.3s;
+  background-color: rgba(var(--c), 0.4);
+}
+.rectangle:nth-child(8) {
+  width: 22px;
+  height: 3px;
+  transition-delay: 0.35s;
+  background-color: rgba(var(--c), 0.3);
+}
+.scroll:not(:hover) .rectangle:nth-child(2) {
+  transition-delay: 0.35s;
+}
+.scroll:not(:hover) .rectangle:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.scroll:not(:hover) .rectangle:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.scroll:not(:hover) .rectangle:nth-child(5) {
+  transition-delay: 0.2s;
+}
+.scroll:not(:hover) .rectangle:nth-child(6) {
+  transition-delay: 0.15s;
+}
+.scroll:not(:hover) .rectangle:nth-child(7) {
+  transition-delay: 0.05s;
+}
+.scroll:not(:hover) .rectangle:nth-child(8) {
+  transition-delay: 0s;
+}
+
+main {
+  border-style: solid;
+  border-color: rgb(var(--t), 0.2);
+  border-width: 0 1px 0 1px;
+  width: 60%;
+  height: auto;
+  margin: 0 15rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background-color: rgb(var(--t), 0.2);
+}
+
+.top {
+  top: 5rem;
+}
+
+.bottom {
+  bottom: 5rem;
+}
+
+article {
+  position: relative;
+  margin: 10rem 4rem;
+}
+
+a {
+  color: rgb(var(--c));
+  text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    width: 100%;
+    margin: 0 5rem;
+  }
+  
+  .ruler {
+    left: 0rem !important;
+  }
+}
+
+
+.ruler {
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+  left: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.lines {
+  width: 1px;
+  height: 100%;
+  background-color: rgb(var(--c), 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.lines span {
+  width: 1rem;
+  background-color: rgb(var(--c), 0.4);
+  height: 1px;
+  position: absolute;
+}
+
+.mask {
+  position: fixed;
+  height: 10%;
+  width: 1rem;
+  background-color: #000;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: rgb(var(--c));
+}
+
+.one {
+  top: 0;
+  border-width: 0 0 1px 0;
+  border-color: rgb(var(--c));
+  border-style: solid;
+  
+}
+.two {
+  bottom: 0;
+  border-width: 1px 0 0px 0;
+  border-color: rgb(var(--c));
+  border-style: solid;
+}
+
+.lines span:nth-child(1) {
+  top: 4%;
+}
+
+.lines span:nth-child(2) {
+  top: 8%;
+}
+
+.lines span:nth-child(3) {
+  top: 12%;
+}
+
+.lines span:nth-child(4) {
+  top: 16%;
+}
+
+.lines span:nth-child(5) {
+  top: 20%;
+}
+
+.lines span:nth-child(6) {
+  top: 24%;
+}
+
+.lines span:nth-child(7) {
+  top: 28%;
+}
+
+.lines span:nth-child(8) {
+  top: 32%;
+}
+
+.lines span:nth-child(9) {
+  top: 36%;
+}
+
+.lines span:nth-child(10) {
+  top: 40%;
+}
+
+.lines span:nth-child(11) {
+  top: 44%;
+}
+
+.lines span:nth-child(12) {
+  top: 48%;
+}
+
+.lines span:nth-child(13) {
+  top: 52%;
+}
+
+.lines span:nth-child(14) {
+  top: 56%;
+}
+
+.lines span:nth-child(15) {
+  top: 60%;
+}
+
+.lines span:nth-child(16) {
+  top: 64%;
+}
+
+.lines span:nth-child(17) {
+  top: 68%;
+}
+
+.lines span:nth-child(18) {
+  top: 72%;
+}
+
+.lines span:nth-child(19) {
+  top: 76%;
+}
+
+.lines span:nth-child(20) {
+  top: 80%;
+}
+
+.lines span:nth-child(21) {
+  top: 84%;
+}
+
+.lines span:nth-child(22) {
+  top: 88%;
+}
+
+.lines span:nth-child(23) {
+  top: 92%;
+}
+
+.lines span:nth-child(24) {
+  top: 96%;
+}
+
+.lines span:nth-child(25) {
+  top: 100%;
+}
+
+    }
