@@ -22,7 +22,7 @@ a {
 
 a:hover {
     color: #23c8e6;
-    transition: color 1s;
+    transition: color 0.8s;
 }
 
 a::after {
@@ -33,7 +33,7 @@ a::after {
     width: 0;
     height: 2px;
     background: #0073ff;
-    transition: width 0.3s;
+    transition: width 0.8s;
 }
 
 a:hover::after {
