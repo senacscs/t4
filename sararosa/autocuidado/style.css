@@ -1,0 +1,156 @@
+body{
+    background-color: #ffe4c4;
+}
+.primeira-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #ffe4c4;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+hr{
+    color: #ffe4c4;
+    border-color: #ffe4c4;
+    size: 900px;
+}
+img{
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    margin: 0;
+}
+h1{
+    font-size: 100px;
+    font-style: italic;
+    color: #ca9ded;
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #ca9ded;
+    background-color: #6c4f87;
+    border-radius: 90px;
+    text-decoration: none;
+    font-size: 25px;
+}
+.segunda-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #6c4f87;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.pur{
+    background-color: #6c4f87;
+
+}
+.box{
+    background-color: #ffe4c4;
+    color: #6c4f87;
+    border-radius: 90px;
+    width: 80%;
+    height: 60vh;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+h2{
+    font-size: 50px;
+    font-style: italic;
+    color: #ca9ded;
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-size: 15px;
+    left: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.terceira-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #ffe4c4;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.wbox{
+    background-color: #6c4f87;
+    color: #ffe4c4;
+    border-radius: 90px;
+    width: 80%;
+    height: 60vh;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+li{
+    text-decoration: none;
+    text-decoration: #ffe4c4;
+    list-style-type: none;
+    font-size: 50px;
+}
+.quarta-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #6c4f87;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.quinta-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #ffe4c4;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.sexta-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #6c4f87;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.setima-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #ffe4c4;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.oitava-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #6c4f87;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.nona-tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 250vh;
+    background-color: #ffe4c4;
+    box-shadow: 0 0 40px #68566e;
+    text-align: center;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
