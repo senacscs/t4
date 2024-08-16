@@ -1,0 +1,256 @@
+@media (min-width: 768px){
+
+body {
+    background-color: rgba(230, 106, 244, 0.922);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+    nav{
+        background-color: black;
+    }
+    nav li{
+        display: inline-block;
+    }
+    nav li a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 15px;
+        display: inline-block;
+    }
+    nav li a:hover{
+        background-color: rgba(118, 34, 220, 0.838);
+
+    }
+    .dropdown-menu{
+        position: absolute;
+        border: 1px solid black;
+        display: none;
+    }
+    .dropdown-menu a{
+        display: block;
+        color: white;
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+
+    h2{
+        text-align: center;
+        color: white;
+    }
+    
+
+header {
+    background-color: #ae08a6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+aside {
+    background-color: #eee;
+    padding: 10px;
+}
+
+footer {
+    background-color: #ae08a6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: cursive;
+}
+
+h1{
+   text-align: center; 
+   color: rgb(0, 0, 0);
+   font-family: cursive;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px ;
+    border-radius: 4px;
+}
+h3{
+    color: antiquewhite;
+    text-align: center;
+    font-family: cursive;
+}
+p{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+}
+section{
+    text-align: center;
+    padding: 7px;
+    background-color: #333;
+    border-radius: 30px ;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: cursive;
+}
+.autocuidado{
+    color:rgb(0, 0, 0);
+    font-family:cursive;
+}
+.link{
+    color: black;
+    font-family: cursive;
+}
+iframe{
+    margin-left: 400px;
+}
+a{
+    color:black;
+    text-align: center;
+}
+
+}
+@media (max-width: 768px){
+    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+    nav{
+        background-color: black;
+    }
+    nav li{
+        display: inline-block;
+    }
+    nav li a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 15px;
+        display: inline-block;
+    }
+    .dropdown-menu{
+        position: absolute;
+        border: 1px solid black;
+        display: none;
+    }
+    .dropdown-menu a{
+        display: block;
+        color: white;
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+
+    h2{
+        text-align: center;
+        color: white;
+    }
+    
+
+header {
+    background-color: #ae08a6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+aside {
+    background-color: #eee;
+    padding: 10px;
+}
+
+footer {
+    background-color: #ae08a6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: cursive;
+}
+
+h1{
+   text-align: center; 
+   color: rgb(0, 0, 0);
+   font-family: cursive;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px ;
+    border-radius: 4px;
+}
+h3{
+    color: antiquewhite;
+    text-align: center;
+    font-family: cursive;
+}
+p{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+}
+section{
+    text-align: center;
+    padding: 7px;
+    background-color: #333;
+    border-radius: 30px ;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: cursive;
+}
+.autocuidado{
+    color:rgb(0, 0, 0);
+    font-family:cursive;
+}
+.link{
+    color: black;
+    font-family: cursive;
+}
+iframe{
+    margin-left: 400px;
+}
+a{
+    color:black;
+    text-align: center;
+}
+
+
+}
