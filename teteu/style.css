@@ -1,5 +1,5 @@
 p{
-   color: whitesmoke;
+   color: black;
    text-align: center; 
   font-family: initial;
   font-size: xx-large;
@@ -36,16 +36,20 @@ hr{
 section{
 
    text-align: center;
-
-  
-    color: rgb(64, 52, 52);
-     border-style: double;
-     box-shadow: 0 0 10px whitesmoke;
+    background-color:aquamarine;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px whitesmoke;
+    border-style: double;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
      
  
 }
 a{
-color:whitesmoke;
+color:black;
 font-family: initial;
 font-size: smaller;
 
