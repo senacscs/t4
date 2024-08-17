@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Hanken%20Grotesk:700|Hanken%20Grotesk:400");
+
+:root {
+  --text: #bdbdbd;
+  --background: #3c544f;
+  --secondary: #344340;
+  --hover: #595f5d;
+  --accent: #494969;
+}
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.75rem;
+  line-height: 175%;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk";
+  font-size: 1rem;
+  transition: all ease 0.1s;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  opacity: 0;
+  text-wrap: nowrap;
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  gap: 5%;
+}
+
+#sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 20%;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.progress-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px solid var(--secondary);
+  border-radius: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  max-width: 50%;
+  padding: 0;
+  
+}
+
+.section {
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+}
+
+li:hover {
+  background-color: var(--hover);
+}
+
+.progress-bar:hover li {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+
+li.active {
+  background-color: var(--accent);
+}
+
+.progress-bar:hover a {
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  #sidebar {
+    display: none;
+  }
+  .content {
+    max-width: 100%;
+  }
+  main {
+    padding: 0 5%;
+  }
+  .section {
+    height: auto;
+  }
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:  500px;
+    height: 500px;
+}
+.autocuidado{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:  650px;
+    height: 500px;
+}
