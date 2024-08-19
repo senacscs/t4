@@ -90,57 +90,81 @@ h3 {
     color: white;
     text-align: center;
 
-    .conteudo{
+    .conteudo {
         width: 85%;
         margin-top: -2%;
     }
 }
-.como1, .como2{
+
+.como1,
+.como2 {
     text-align: center;
     margin-top: 5%;
     display: inline-flex;
 
-    h3{
+    h3 {
         font-size: 25px;
     }
 
-    .men{
+    .men {
         width: 30%;
         text-align: center;
     }
 
 }
 
-.a2{
+.a2 {
     width: 50%;
 }
-.a3{
+
+.a3 {
     width: 45%;
 }
-.a4{
+
+.a4 {
     width: 55%;
 }
-.sla{
+
+.sla {
     display: inline-block;
     text-align: center;
     width: 30%;
 }
-.a7{
+
+.a7 {
     width: 60%;
     margin-top: -5%;
 }
-.a6{
+
+.a6 {
     width: 85%;
     margin-top: -5%;
 }
-.rotina{
+
+.rotina {
     background-color: rgb(152, 114, 132);
     color: white;
     padding: 2%;
     text-align: center;
 
-    a{
+    a {
         color: white;
         font-family: "Bahnschrift Condensed";
+    }
+}
+
+.vdos{
+    background-color: rgb(249, 181, 172);
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+    font-family: "Bahnschrift Condensed";
+    color: white;
+    font-size: 25px;
+
+    iframe{
+        width: 40%;
+        height: 315;
+        border-radius: 10%;
     }
 }
