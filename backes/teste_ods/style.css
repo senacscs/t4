@@ -1,36 +1,30 @@
-* {
-    margin: 0;
-    /*complementação*/
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: grey;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    color: white;
-    font-weight: normal;
-    /*alteração para a cor branca, a cor de fundo e a cor da letra não devem ter a mesma cor*/
+    background-color: #f0f0f0;
+    padding: 20px;
     text-align: center;
+    background-color: rgb(222, 29, 32);
 }
-
-p {
-    color: black;
-    text-align: center;
-}
-
-li {
-    text-align: center;
-}
-
+ 
 header {
-    background-color: black;
-}
-
-h2 {
+    background-color: #e61a1a;
+    color: #e8ece4;
+    padding: 10px 0;
     text-align: center;
+}
+section{
+    color: rgb(62, 36, 231);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+h2{
+    color: rgb(3, 3, 3);
+}
+li,p{
+    color: rgb(3, 3, 3);
 }
