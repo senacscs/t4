@@ -10,11 +10,11 @@ header {
     background-color: rgb(238, 118, 116);
     color: white;
     text-align: center;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    height: 100vh;
     position: sticky;
     top: -94vh;
     scroll-snap-align: start;
+    align-content: center;
 }
 
 nav {
