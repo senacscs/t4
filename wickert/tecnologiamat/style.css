@@ -75,7 +75,7 @@ header h1 {
     height: 200px;
     width: 400px;
     border: 3px inset black;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .mat {
     width: 100%;
@@ -122,4 +122,13 @@ nav a {
 }
 nav a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.534);
+}
+.re {
+    scroll-snap-align: end;
+    background-color: black;
+    display: block;
+    color: white;
+}
+.re a {
+    color: white;
 }
