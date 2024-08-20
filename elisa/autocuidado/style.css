@@ -1,170 +1,350 @@
-* {
-    margin: auto;
-}
+@media (min-width: 768px) {
+    * {
+        margin: auto;
+    }
 
-/* html {
+    /* html {
     scroll-behavior: smooth;    
     scroll-snap-type: y mandatory;
 } */
-header {
-    background-color: rgb(238, 118, 116);
-    color: white;
-    text-align: center;
-    height: 100vh;
-    position: sticky;
-    top: -94vh;
-    scroll-snap-align: start;
-    align-content: center;
-}
-
-nav {
-    top: 95vh;
-    /* position: absolute; */
-    font-family: "Bahnschrift Condensed";
-    text-align: center;
-    position: absolute;
-}
-
-nav a {
-    margin-left: 20px;
-    color: white;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.auto {
-    font-family: "Bahnschrift Condensed";
-    font-size: 80px;
-}
-
-p {
-    font-family: "Bahnschrift Condensed";
-    font-size: 20px;
-}
-
-.tipos {
-    text-align: center;
-    /* padding-top: 3%; */
-    font-family: "Bahnschrift Condensed";
-    font-size: 25px;
-    padding: 4%;
-    /* margin-top: 10%; */
-}
-
-.auto1,
-.auto2 {
-    display: inline-flex;
-    align-items: start;
-}
-
-.tipo {
-    width: 30%;
-    font-family: "Bahnschrift Condensed";
-    font-size: 20px;
-    margin-top: 2%;
-}
-
-.a1 {
-    width: 7%;
-}
-
-img,
-h3 {
-    display: inline;
-}
-
-.tipos2 {
-    background-color: white;
-    /* margin-bottom: 10%; */
-
-}
-
-.auto2 {
-    margin-top: 5%;
-}
-
-.como {
-    background-color: rgb(117, 167, 190);
-    font-family: "Bahnschrift Condensed";
-    margin-top: 5%;
-    color: white;
-    text-align: center;
-
-    .conteudo {
-        width: 85%;
-        margin-top: -2%;
-    }
-}
-
-.como1,
-.como2 {
-    text-align: center;
-    margin-top: 5%;
-    display: inline-flex;
-
-    h3 {
-        font-size: 25px;
-    }
-
-    .men {
-        width: 30%;
-        text-align: center;
-    }
-
-}
-
-.a2 {
-    width: 50%;
-}
-
-.a3 {
-    width: 45%;
-}
-
-.a4 {
-    width: 55%;
-}
-
-.sla {
-    display: inline-block;
-    text-align: center;
-    width: 30%;
-}
-
-.a7 {
-    width: 60%;
-    margin-top: -5%;
-}
-
-.a6 {
-    width: 85%;
-    margin-top: -5%;
-}
-
-.rotina {
-    background-color: rgb(152, 114, 132);
-    color: white;
-    padding: 2%;
-    text-align: center;
-
-    a {
+    header {
+        background-color: rgb(238, 118, 116);
         color: white;
+        text-align: center;
+        height: 100vh;
+        position: sticky;
+        top: -94vh;
+        scroll-snap-align: start;
+        align-content: center;
+    }
+
+    nav {
+        top: 95vh;
+        /* position: absolute; */
         font-family: "Bahnschrift Condensed";
+        text-align: center;
+        position: absolute;
+    }
+
+    nav a {
+        margin-left: 20px;
+        color: white;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    .auto {
+        font-family: "Bahnschrift Condensed";
+        font-size: 80px;
+    }
+
+    p {
+        font-family: "Bahnschrift Condensed";
+        font-size: 20px;
+    }
+
+    .tipos {
+        text-align: center;
+        /* padding-top: 3%; */
+        font-family: "Bahnschrift Condensed";
+        font-size: 25px;
+        padding: 4%;
+        /* margin-top: 10%; */
+    }
+
+    .auto1,
+    .auto2 {
+        display: inline-flex;
+        align-items: start;
+    }
+
+    .tipo {
+        width: 30%;
+        font-family: "Bahnschrift Condensed";
+        font-size: 20px;
+        margin-top: 2%;
+    }
+
+    .a1 {
+        width: 7%;
+    }
+
+    img,
+    h3 {
+        display: inline;
+    }
+
+    .tipos2 {
+        background-color: white;
+        /* margin-bottom: 10%; */
+
+    }
+
+    .auto2 {
+        margin-top: 5%;
+    }
+
+    .como {
+        background-color: rgb(117, 167, 190);
+        font-family: "Bahnschrift Condensed";
+        margin-top: 5%;
+        color: white;
+        text-align: center;
+
+        .conteudo {
+            width: 85%;
+            margin-top: -2%;
+        }
+    }
+
+    .como1,
+    .como2 {
+        text-align: center;
+        margin-top: 5%;
+        display: inline-flex;
+
+        h3 {
+            font-size: 25px;
+        }
+
+        .men {
+            width: 30%;
+            text-align: center;
+        }
+
+    }
+
+    .a2 {
+        width: 50%;
+    }
+
+    .a3 {
+        width: 45%;
+    }
+
+    .a4 {
+        width: 55%;
+    }
+
+    .sla {
+        display: inline-block;
+        text-align: center;
+        width: 30%;
+    }
+
+    .a7 {
+        width: 60%;
+        margin-top: -5%;
+    }
+
+    .a6 {
+        width: 85%;
+        margin-top: -5%;
+    }
+
+    .rotina {
+        background-color: rgb(152, 114, 132);
+        color: white;
+        padding: 2%;
+        text-align: center;
+
+        a {
+            color: white;
+            font-family: "Bahnschrift Condensed";
+        }
+    }
+
+    .vdos {
+        background-color: rgb(249, 181, 172);
+        margin: auto;
+        text-align: center;
+        padding: 5%;
+        font-family: "Bahnschrift Condensed";
+        color: white;
+        font-size: 25px;
+
+        iframe {
+            width: 40%;
+            height: 315;
+            border-radius: 10%;
+        }
     }
 }
 
-.vdos{
-    background-color: rgb(249, 181, 172);
-    margin: auto;
-    text-align: center;
-    padding: 5%;
-    font-family: "Bahnschrift Condensed";
-    color: white;
-    font-size: 25px;
-
-    iframe{
-        width: 40%;
-        height: 315;
-        border-radius: 10%;
+@media (max-width:768px) {
+    * {
+        margin: auto;
     }
+
+    /* html {
+scroll-behavior: smooth;    
+scroll-snap-type: y mandatory;
+} */
+    header {
+        background-color: rgb(238, 118, 116);
+        color: white;
+        text-align: center;
+        height: 100%;
+        position: sticky;
+        top: -94vh;
+        scroll-snap-align: start;
+        align-content: center;
+    }
+
+    nav {
+        top: 95vh;
+        /* position: absolute; */
+        font-family: "Bahnschrift Condensed";
+        text-align: center;
+        position: absolute;
+    }
+
+    nav a {
+        margin-left: 20px;
+        color: white;
+        font-size: 10.5px;
+        transition: 0.3s;
+    }
+
+    .auto {
+        font-family: "Bahnschrift Condensed";
+        font-size: 45px;
+    }
+
+    .au {
+        font-family: "Bahnschrift Condensed";
+        font-size: 15px;
+        width: 80%;
+    }
+
+    .tipos {
+        text-align: center;
+        /* padding-top: 3%; */
+        font-family: "Bahnschrift Condensed";
+        font-size: 25px;
+        padding: 4%;
+        /* margin-top: 10%; */
+    }
+
+    .auto1,
+    .auto2 {
+        /* display: inline-flex; */
+        align-items: start;
+    }
+
+    .tipo {
+        width: 70%;
+        font-family: "Bahnschrift Condensed";
+        font-size: 20px;
+        margin-top: 2%;
+    }
+
+    .a1 {
+        width: 7%;
+    }
+
+    img,
+    h3 {
+        display: inline;
+    }
+
+    .tipos2 {
+        background-color: white;
+        /* margin-bottom: 10%; */
+
+    }
+
+    .auto2 {
+        margin-top: 5%;
+    }
+
+    .como {
+        background-color: rgb(117, 167, 190);
+        font-family: "Bahnschrift Condensed";
+        margin-top: 5%;
+        color: white;
+        text-align: center;
+
+        .conteudo {
+            width: 85%;
+            margin-top: -2%;
+        }
+    }
+
+    .como1,
+    .como2 {
+        /* text-align: center; */
+        margin-top: 5%;
+        /* display: inline-flex; */
+
+        h3 {
+            font-size: 25px;
+        }
+
+        .men {
+            width: 80%;
+            text-align: center;
+            
+        }
+
+    }
+
+    .a2 {
+        width: 50%;
+    }
+
+    .a3 {
+        width: 45%;
+    }
+
+    .a4 {
+        width: 55%;
+    }
+
+    .sla {
+        display: inline-block;
+        text-align: center;
+        width: 30%;
+    }
+
+    .a7 {
+        width: 60%;
+        margin-top: -5%;
+    }
+
+    .a6 {
+        width: 85%;
+        margin-top: -5%;
+    }
+
+    .rotina {
+        background-color: rgb(152, 114, 132);
+        color: white;
+        padding: 2%;
+        text-align: center;
+
+        a {
+            color: white;
+            font-family: "Bahnschrift Condensed";
+        }
+    }
+
+    .vdos {
+        background-color: rgb(249, 181, 172);
+        margin: auto;
+        text-align: center;
+        padding: 5%;
+        font-family: "Bahnschrift Condensed";
+        color: white;
+        font-size: 25px;
+
+        iframe {
+            width: 100%;
+            height: 315;
+            border-radius: 10%;
+            margin-bottom: 2%;
+        }
+    }
+
+    
 }
