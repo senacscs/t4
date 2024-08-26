@@ -48,4 +48,5 @@ projetos = [
     { "nome": "Currículo", "url": "curriculo" },
     { "nome": "Olá Mundo", "url": "olamundo" },
     { "nome": "Projeto PI", "url": "projeto" },
+    { "nome": "Autocuidado", "url": "autocuidado"}
 ]
