@@ -34,7 +34,7 @@ alunos = [
     { "nome": "Arthur", "pasta": "scherer" },
     { "nome": "Matheus B.", "pasta": "teteu" },
     { "nome": "Theo", "pasta": "theo" },
-    { "nome": "Iuri🌵", "pasta": "wickert" },
+    { "nome": "Iuri", "pasta": "wickert" },
     { "nome": "Matheus F.", "pasta": "" }
 ];
 
