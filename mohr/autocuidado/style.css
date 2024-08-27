@@ -303,8 +303,18 @@ h2 {
 iframe {
     position: relative;
     border-radius: 10px;
-    bottom: 750px;
-    right: 340px;
+    bottom: 830px;
+    right: 1150px;
+}
+
+.planer {
+    position: relative;
+    right: 450px;
+    bottom: 300px;
+    border-top: 0.4rem solid rgb(91, 129, 187);
+    border-bottom: 0.4rem solid rgb(91, 129, 187);
+    border-left: 0.4rem solid rgb(91, 129, 187);
+    border-right: 0.4rem solid rgb(91, 129, 187);
 }
 
 
