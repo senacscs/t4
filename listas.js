@@ -22,7 +22,7 @@ alunos = [
     { "nome": "Joaquim", "pasta": "joaquim" },
     { "nome": "Guilherme K.", "pasta": "kipper" },
     { "nome": "Larissa", "pasta": "larii" },
-    { "nome": "Lucas", "pasta": "lucas" },
+    { "nome": "Lucas💋", "pasta": "lucas" },
     { "nome": "Marina", "pasta": "marina" },
     { "nome": "Manuela", "pasta": "mohr" },
     { "nome": "Eduardo M.", "pasta": "moraes" },
