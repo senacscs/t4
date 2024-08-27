@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    background-color: #926d98
+}
+
+.inicio {
+    background-color: #48484d;
+    color: #fff;
+    text-align: center;
+    font-family: monospace;
+    position: relative;
+    bottom: 40px;
+}
+
+h1 {
+    font-size: 55px;
+    font-family: monospace;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: monospace;
+}
+
+p {
+    font-family: monospace;
+    text-align: center;
+}
+
+.oque {
+    text-align: center;
+    color: #48484d;
+}
+
+.oque p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.oque h2 {
+    font-size: 35px;
+}
+
+#primeiro {
+    padding: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    background-color: #48484d;
+    color: #fff;
+    font-family: monospace;
+}
+
+#primeiro h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#primeiro p {
+    font-weight: 100;
+    line-height: 150%;
+    width: 70%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+#primeiro .fisico {
+    width: 90%;
+    float: left;
+}
+
+#primeiro .img img {
+    height: 350px;
+}
+
+#segundo {
+    padding: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    background-color: #8e7692;
+    color: #fff;
+    font-family: monospace;
+    align-self: start;
+}
+
+#segundo h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: auto;
+    text-align: end;
+}
+
+#segundo p {
+    font-weight: 100;
+    line-height: 150%;
+    width: 70%;
+    text-align: justify;
+    font-size: 20px;
+    margin-left: auto;
+    
+}
+
+#segundo .img img {
+    height: 300px;
+}
+
+#atividade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #48484d;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-family: monospace;
+    font-size: 20px;
+}
