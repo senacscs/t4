@@ -15,7 +15,7 @@ alunos = [
     { "nome": "Enzo", "pasta": "enzo" },
     { "nome": "João E.", "pasta": "ernesto" },
     { "nome": "Gabriel Ludwig", "pasta": "Ludwig" },
-    { "nome": "Garcia🦬🐂🐃🐒🦄🫏🫎🤘🪱", "pasta": "garcia" },
+    { "nome": "Garcia🧃", "pasta": "garcia" },
     { "nome": "Gustavo", "pasta": "gustavo" },
     { "nome": "Henrique", "pasta": "henrique" },
     { "nome": "João G.", "pasta": "joaogoetze" },
@@ -34,7 +34,7 @@ alunos = [
     { "nome": "Arthur", "pasta": "scherer" },
     { "nome": "Matheus B.", "pasta": "teteu" },
     { "nome": "Theo", "pasta": "theo" },
-    { "nome": "Iuri", "pasta": "wickert" },
+    { "nome": "Iuri🧃", "pasta": "wickert" },
     { "nome": "Matheus F.", "pasta": "" }
 ];
 
