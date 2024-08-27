@@ -13,7 +13,7 @@ alunos = [
     { "nome": "Eduardo D.", "pasta": "edu" },
     { "nome": "Ana E.", "pasta": "elisa" },
     { "nome": "Enzo", "pasta": "enzo" },
-    { "nome": "João E.", "pasta": "ernesto" },
+    { "nome": "João E.🍔", "pasta": "ernesto" },
     { "nome": "Gabriel Ludwig", "pasta": "Ludwig" },
     { "nome": "Garcia🧃", "pasta": "garcia" },
     { "nome": "Gustavo", "pasta": "gustavo" },

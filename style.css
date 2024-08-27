@@ -49,8 +49,7 @@ nav{
      margin-right: 910px;
 }
 header{
-    background-color: rgba(37, 37, 37, 0.9);
-    
+    background-color: rgba(37, 37, 37, 1);
 }
 
 .alunos {
@@ -68,7 +67,7 @@ header{
     border-radius: 3px;
     border: 1px solid rgb(6, 1, 46);
 }
-.filter{
+#filter{
     color: white;
 }
 @keyframes animacao-rgb {
