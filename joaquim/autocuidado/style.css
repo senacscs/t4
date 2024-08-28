@@ -15,12 +15,12 @@ header {
     padding: 2em 4em;
     color: #fff;
     height: 100%;
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 h1 {
     margin: 0;
-    font-size: 2.4em;
+    font-size: 2.0em;
 }
 
 header p {
@@ -31,7 +31,7 @@ header p {
 
 body {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.5em;
     background: #7bffbb;
     color: #222222;
 }
@@ -58,8 +58,8 @@ body {
 
 iframe {
     border-radius: 15px;
-    width: 27vw;
-    height: 30vh;
+    width: 40.5vw;
+    height: 45vh;
 }
 
 img {
