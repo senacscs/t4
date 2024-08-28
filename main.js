@@ -14,7 +14,7 @@ function criarElem(tag, atrib = null) {
 const filtros = document.getElementById('filters');
 
 for (i = 0; i < projetos.length; i++) {
-    const span = criarElem('span');
+    const span = criarElem('span', [["class","branco"]]);
     const input = criarElem('input',[["type","radio"],["name","filter-param"],["class","filter"],["value",projetos[i].url]]);
 
     span.appendChild(document.createTextNode(projetos[i].nome));
