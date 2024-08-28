@@ -1,48 +1,219 @@
-body{
- background-color: black;
- 
-
-
+@media (min-width: 720px) {
+    body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        }
+        nav{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        nav li{
+            display: inline-block;
+        }
+        nav li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px;
+            display: inline-block;
+        }
+        nav li a:hover{
+            background-color: rgb(7, 228, 40);
+        }
+        .dropdown-menu a{
+            display: block;
+            color: white;
+        }
+    
+        h2{
+            color: white;
+            font-size:medium;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1{
+            color: white;
+            font-size: xx-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        a{
+            color: white;
+        }
 }
-p{
-    color: whitesmoke;
-    text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: xx-large;
+body {  
+background-image: linear-gradient(90deg, black, rgb(116, 109, 109));
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
 }
-h1{
-   
-    color: whitesmoke;
-    text-align: center;
-    font-size:medium;
-    font-family:Arial, Helvetica, sans-serif;
+
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+nav{
+    background-image:linear-gradient(150deg, black, rgb(255, 254, 254))
     
 }
-section{
-    text-align: center;
-    border: solid 4px;
-    border-radius: 40px;
-    margin: 50px;
-   color: white ;
-   background-color: blueviolet;
-  
+nav li{
+    display: inline-block;
 }
-img{
-    margin-left: auto;
-    margin-right: auto;
+nav li a{
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+nav li a:hover{
+    background-color: rgb(0, 0, 0);
+}
+.dropdown-menu a{
     display: block;
-    width: 400px;
-    height: 350px;
-    border: solid 4px;
-    border-radius: 40px;
-    color: purple;
-   
+    color: white;
+}
+
+h2{
+    color: white;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+body {
+background-color: black;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+}
+nav li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+nav li a:hover{
+    background-color: rgb(0, 0, 0);
+}
+.dropdown-menu a{
+    display: block;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+h1{
+    color: white;
+}
+a{
+    color: white;
+}
+@media (max-width: 720px) {
+    body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        }
+        nav{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        nav li{
+            display: inline-block;
+        }
+        nav li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px;
+            display: inline-block;
+        }
+        nav li a:hover{
+            background-color: rgb(7, 228, 40);
+        }
+        .dropdown-menu a{
+            display: block;
+            color: white;
+        }
+    
+        h2{
+            color: white;
+        }
+        h1{
+            color: white;
+        }
+        body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        }
+        nav{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        nav li{
+            display: inline-block;
+        }
+        nav li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px;
+            display: inline-block;
+        }
+        nav li a:hover{
+            background-color: rgb(7, 228, 40);
+        }
+        .dropdown-menu a{
+            display: block;
+            color: white;
+        }
+    
+        h2{
+            color: white;
+        }
+        h1{
+            color: white;
+        }
+        a{
+            color: white;
+        }
 }
 iframe{
     margin: auto;
     display: block;
-}
-a{
+ 
 
-    text-align: center;
 }
