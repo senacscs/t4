@@ -1,29 +1,130 @@
+/* Estilo geral da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    padding: 20px;
-    background-color: #c08b8b;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Estilos para o título principal */
-h1 {
+/* Estilo do cabeçalho */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 1.5rem 1rem;
     text-align: center;
-    margin-bottom: 20px;
+    border-bottom: 4px solid #0056b3;
 }
 
-/* Estilos para os links */
-a {
-    display: block; /* Transforma os links em blocos para ocupar toda a largura disponível */
-    padding: 20px;
-    text-decoration: none; /* Remove sublinhado padrão dos links */
-    color: #faf5f5; /* Cor do texto dos links */
-    background-color: #050000; /* Cor de fundo dos links */
-    border: 1px solid #000000; /* Borda dos links */
-    border-radius: 5px; /* Borda arredondada */
-    margin-bottom: 10px; /* Espaçamento entre os links */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-a:hover {
-    background-color: #dcd0d0ec; /* Mudança de cor de fundo ao passar o mouse */
+/* Estilo da área principal */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Estilo da seção de links */
+section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Estilo dos links */
+.link {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.link:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Estilo da navegação */
+nav {
+    margin-top: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Estilo do rodapé */
+footer {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 4px solid #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .link, nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
 }
