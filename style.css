@@ -67,7 +67,7 @@ header{
     border-radius: 3px;
     border: 1px solid rgb(6, 1, 46);
 }
-#filter input span{
+span{
     color: white;
     padding-bottom: 1vw;
     display: flex;
