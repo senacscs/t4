@@ -10,12 +10,12 @@
 
 .star:before {
   position: absolute;
-  content: '\2726';
+  content: "\2726";
   color: inherit;
   inset: 0;
-  box-shadow: 0 0 1em .5em #a3c2;
-  filter: drop-shadow(0 0 .5em white);
-  text-shadow: 0 0 .8em #fff5;
+  box-shadow: 0 0 1em 0.5em #a3c2;
+  filter: drop-shadow(0 0 0.5em white);
+  text-shadow: 0 0 0.8em #fff5;
 }
 
 body {
@@ -24,14 +24,11 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: #F9F6EF;
+  font-family: "Montserrat", sans-serif;
+  color: #f9f6ef;
   display: grid;
   place-content: center;
-  background-image:
-    radial-gradient(circle at 50% 50%,
-      #2f3040,
-      #1f2020);
+  background-image: radial-gradient(circle at 50% 50%, #2f3040, #1f2020);
   text-align: center;
 }
 
@@ -39,10 +36,10 @@ h2 {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
   margin-left: auto;
   margin-right: auto;
-  width: 1;  
+  width: 1;
 }
 
 h2::after {
@@ -61,7 +58,17 @@ h2::after {
 h2:hover::after {
   transform: scaleX(1);
 }
-a{
+a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
