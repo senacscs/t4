@@ -186,7 +186,7 @@ scroll-snap-type: y mandatory;
         text-align: center;
         height: 100%;
         position: sticky;
-        /* top: -94vh; */
+        top: -94vh;
         scroll-snap-align: start;
         align-content: center;
     }
