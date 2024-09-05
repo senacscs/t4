@@ -7,7 +7,7 @@ body {
     background-color: rgb(70, 37, 37);
     background: url("./img/elevador.bmp");
     background-size: 100vw 100vh;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -225,6 +225,7 @@ body {
                     img {
                         width: 100%;
                         margin-top: 3px;
+                        max-height: 200px;
                     }
                 }
             }

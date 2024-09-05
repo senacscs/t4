@@ -100,24 +100,25 @@ let TRABALHOS = [
     {
         nome: "LAYER 1: BESTEIRAS",
         content: [
-            { nome: "SITE DA OFICINA", url: "oficina" },
-            { nome: "SITE PRA MAMÃE", url: "responsaveis" },
-            { nome: "PRIMEIRO SITE", url: "olamundo" },
-            { nome: "SITE NO PAPEL", url: "teste_ods" },
+            { nome: "SITE DA OFICINA", url: "oficina", img: "esqueleto.jpg" },
+            { nome: "PRIMEIRO SITE", url: "olamundo", img: "grug.jpg" },
+            { nome: "SITE NO PAPEL", url: "teste_ods", img: "emoji.jpg"},
+            { nome: "TABELA PERIÓDICA 3.0", url: "tabela-periodica-3", img: "ciencia.jpg" },
         ]
     },
     {
         nome: "LAYER 2: MATEMÁTICA",
         content: [
-            { nome: "4-1: SLAVES TO POWER", url: "jogo1" },
-            { nome: "polia", url: "tecnologiamat" },
+            { nome: "4-1: SLAVES TO POWER", url: "jogo1", img: "egito.jpg" },
+            { nome: "polia", url: "tecnologiamat", img: "polia.bmp" },
         ]
     },
     {
         nome: "LAYER 3: TÉCNICO",
         content: [
-            { nome: "INDICAÇÕES HTML", url: "indicacoeshtml" },
-            { nome: "INDICAÇÕES CSS", url: "indicacoescss" },
+            { nome: "INDICAÇÕES HTML", url: "indicacoeshtml", img: "design.webp" },
+            { nome: "INDICAÇÕES CSS", url: "indicacoescss", img: "design.jpg" },
+            { nome: "SITE PRA MAMÃE", url: "responsaveis", img: "ursinho.gif" },
         ]
     },
     {
@@ -135,7 +136,7 @@ function criarLevel(lista){
     let p = criarElem("p");
     p.innerHTML = lista.nome;
     let a = criarElem("a", null, atrib = [["href","../"+lista.url], ["target","_blank"]])
-    let img = criarElem("img", null, atrib = [["src","./img/ha/kratos.gif"]]);
+    let img = criarElem("img", null, atrib = [["src",lista.img ? "./img/level/"+lista.img : "./img/ha/kratos.gif"]]);
 
     a.appendChild(img)
     level.appendChild(p);
