@@ -1,0 +1,509 @@
+/* aparencia tela grande */
+@media (min-width: 1200px) {
+    /* Reset de Estilos Básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilos Gerais */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        /* width: 60px; *//*nao ta funcionado carinha triste*/
+    }
+    
+    .imagem_de_fundo0{
+        background-image: url("https://cdn.discordapp.com/discovery-splashes/1113635623333527585/876a09e7bc6901dfba211b8eb2030f5d.jpg?size=2048");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }/* feito por João G. */
+    
+    .imagem_de_fundo1{
+        background-image: url("https://th.bing.com/th/id/OIP.dhFzt5dR8fiodoHmdq9zSAHaJj?rs=1&pid=ImgDetMain");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }/* feito por João G. */
+    
+    .imagem_de_fundo2{
+        background-image: url("https://th.bing.com/th/id/OIP.7fRJnHRRScswPT9NiqcvvQHaGV?rs=1&pid=ImgDetMain");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    } /* feito por João G. */
+    
+    .imagem_de_fundo3{
+        background-image: url("https://audienciadatv.net/wp-content/uploads/2022/04/Lula-Molusco-Bonitao-830x450.jpeg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }/* feito por João G. */
+    
+        .imagem_de_fundo4{
+            background-image: url("https://th.bing.com/th/id/R.cc094a9e9121dc51512fc498d8ec11a4?rik=4aF2iiVNaIsuvw&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f12%2fMuscular-Sheldon-J.Plankton-Looking-Angry-yb503.png&ehk=OEAyhnwVZqKX9pBpNsfXf0V%2fYrMezc2dAe0F4U4%2b2Vc%3d&risl=&pid=ImgRaw&r=0");
+            /* background-repeat:no-repeat; */
+            background-attachment:fixed;
+            background-size:auto;
+        } /* feito por João G. */
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5); 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.0);
+    }
+    
+    h1,h2,a,p{
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .questao {
+        text-align: center;
+    }
+    
+    .questao da img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.902);
+    }
+    
+    div{
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+    
+    .questao do texto {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .opcoes {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .opcoes li {
+        margin-bottom: 10px;
+    }
+    
+    img {
+        opacity: 0.6;
+    }
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* para telas medias */
+    @media (min-width: 992px) and (max-width: 1199px){
+        /* Reset de Estilos Básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilos Gerais */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        /* width: 60px; *//*nao ta funcionado carinha triste*/
+    }
+    
+    .imagem_de_fundo0{
+        background-image: url("https://cdn.discordapp.com/discovery-splashes/1113635623333527585/876a09e7bc6901dfba211b8eb2030f5d.jpg?size=2048");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }/* feito por João G. */
+    
+    .imagem_de_fundo1{
+        background-image: url("https://th.bing.com/th/id/OIP.dhFzt5dR8fiodoHmdq9zSAHaJj?rs=1&pid=ImgDetMain");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }/* feito por João G. */
+    
+    .imagem_de_fundo2{
+        background-image: url("https://th.bing.com/th/id/OIP.7fRJnHRRScswPT9NiqcvvQHaGV?rs=1&pid=ImgDetMain");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    } /* feito por João G. */
+    
+    .imagem_de_fundo3{
+        background-image: url("https://audienciadatv.net/wp-content/uploads/2022/04/Lula-Molusco-Bonitao-830x450.jpeg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }/* feito por João G. */
+    
+        .imagem_de_fundo4{
+            background-image: url("https://th.bing.com/th/id/R.cc094a9e9121dc51512fc498d8ec11a4?rik=4aF2iiVNaIsuvw&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f12%2fMuscular-Sheldon-J.Plankton-Looking-Angry-yb503.png&ehk=OEAyhnwVZqKX9pBpNsfXf0V%2fYrMezc2dAe0F4U4%2b2Vc%3d&risl=&pid=ImgRaw&r=0");
+            /* background-repeat:no-repeat; */
+            background-attachment:fixed;
+            background-size:auto;
+        } /* feito por João G. */
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5); 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.0);
+    }
+    
+    h1,h2,a,p{
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .questao {
+        text-align: center;
+    }
+    
+    .questao da img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.902);
+    }
+    
+    div{
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+    
+    .questao do texto {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .opcoes {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .opcoes li {
+        margin-bottom: 10px;
+    }
+    
+    img {
+        opacity: 0.6;
+    }
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* aparencia telas pequenas */
+    @media (max-width: 991px) {
+            /* Reset de Estilos Básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Estilos Gerais */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        /* width: 60px; *//*nao ta funcionado carinha triste*/
+    }
+    
+    .imagem_de_fundo0{
+        background-image: url("https://cdn.discordapp.com/discovery-splashes/1113635623333527585/876a09e7bc6901dfba211b8eb2030f5d.jpg?size=2048");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size: 160%;
+
+    }/* feito por João G. */
+    
+    .imagem_de_fundo1{
+        background-image: url("https://th.bing.com/th/id/OIP.dhFzt5dR8fiodoHmdq9zSAHaJj?rs=1&pid=ImgDetMain");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size: 130%;
+    }/* feito por João G. */
+    
+    .imagem_de_fundo2{
+        background-image: url("https://th.bing.com/th/id/OIP.7fRJnHRRScswPT9NiqcvvQHaGV?rs=1&pid=ImgDetMain");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size: 125%;
+        background-position: 14%;
+    } /* feito por João G. */
+    
+    .imagem_de_fundo3{
+        background-image: url("https://audienciadatv.net/wp-content/uploads/2022/04/Lula-Molusco-Bonitao-830x450.jpeg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size: 160%;
+        /* width: 60%; */
+    }/* feito por João G. */
+    
+        .imagem_de_fundo4{
+            background-image: url("https://th.bing.com/th/id/R.cc094a9e9121dc51512fc498d8ec11a4?rik=4aF2iiVNaIsuvw&riu=http%3a%2f%2fwww.cartoonbucket.com%2fwp-content%2fuploads%2f2015%2f12%2fMuscular-Sheldon-J.Plankton-Looking-Angry-yb503.png&ehk=OEAyhnwVZqKX9pBpNsfXf0V%2fYrMezc2dAe0F4U4%2b2Vc%3d&risl=&pid=ImgRaw&r=0");
+            /* background-repeat:no-repeat; */
+            background-attachment:fixed;
+            background-size: 50%;
+        } /* feito por João G. */
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5); 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgb(208, 255, 0);
+    }
+    
+    h1,h2,a,p{
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .questao {
+        text-align: center;
+    }
+    
+    .questao da img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.902);
+    }
+    
+    div{
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+    
+    .questao do texto {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .opcoes {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .opcoes li {
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        opacity: 0.6;
+    }
+
+
+    
+    }
