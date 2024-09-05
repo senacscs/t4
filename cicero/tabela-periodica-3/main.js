@@ -1,5 +1,3 @@
-//EXTRAINDO COISA DA TABELA
-
 let elementos = [];
 let tabelaObj = [[], [], [], [], [], [], [], [], []];
 data.map(item => {
@@ -100,6 +98,13 @@ function criarElemento(data) {
     return elem;
 }
 
+function criarReboco(len, pai){
+    for(i = 0; i < len; i++){
+        let reboco = criarElem("div","reboco");
+        pai.appendChild(reboco)
+    }
+}
+
 function criarInfo(info, dado) {
     let p = criarElem("p");
     let bold = criarElem("span", "bold");
@@ -114,6 +119,13 @@ function criarInfo(info, dado) {
 
 periodos.forEach(linha => {
     linha[1].forEach(elem => {
+        switch (elem.simbolo) {
+            case "He": criarReboco(16,linha[0]); break;
+            case "B": case "Al": criarReboco(10,linha[0]); break;
+            case "Ce": case "Th": criarReboco(2,linha[0]); break;
+        
+            default: break;
+        }
         linha[0].appendChild(criarElemento(elem));
     });
 });
