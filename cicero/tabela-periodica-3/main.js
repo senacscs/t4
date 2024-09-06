@@ -14,6 +14,7 @@ data.map(item => {
         ano: item.yearDiscovered === "Ancient" ? "Antigo" : item.yearDiscovered,
         densidade: item.density == "" ? "***" : item.density,
         camadas: item.electronicConfiguration,
+        eletroneg: item.electronegativity === "" ? "N/A" : item.electronegativity,
     });
 });
 elementos.map(elementos => {
@@ -152,6 +153,7 @@ function mostrarElem(elem) {
 
     criarInfo("Número Atômico", info.num);
     criarInfo("Massa Atômica", typeof info.massa === "string" ? info.massa : `(${info.massa})`);
+    criarInfo("Eletronegatividade", info.eletroneg);
     criarInfo("Tipo", info.tipo);
     criarInfo("Ano Descoberto", info.ano);
     criarInfo("Estado", info.estado);
