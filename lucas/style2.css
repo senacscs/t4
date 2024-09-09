@@ -157,6 +157,7 @@ h6 {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+    color: darkred;
 }
 abbr[data-bs-original-title],
 abbr[title] {
@@ -224,7 +225,7 @@ sup {
     top: -0.5em;
 }
 a {
-    color: #6fd9d9;
+    color: darkred;
     text-decoration: underline;
 
 }
@@ -7178,7 +7179,7 @@ fieldset:disabled .btn {
 }
 .bg-dark {
     --bs-bg-opacity: 1;
-    background-color: #0dcaf0 !important;
+    background-color: darkred !important;
 
 .bg-black {
     --bs-bg-opacity: 1;
