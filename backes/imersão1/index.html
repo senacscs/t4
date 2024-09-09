@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre informações sobre atletas brasileiros nas Olimpíadas. Pesquise por nome ou esporte e veja os resultados.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Adiciona um favicon -->
+    <title>Atletas do Brasil</title>
+</head>
+
+<body>
+    <header>
+        <h1>Atletas do Brasil</h1>
+    </header>
+    
+    <main>
+        <section>
+            <input type="text" placeholder="Digite o nome do atleta ou esporte" id="campo-pesquisa" aria-label="Campo de pesquisa">
+            <button onclick="pesquisar()" aria-label="Pesquisar">Pesquisar</button>
+        </section>
+        
+        <section class="resultados-pesquisa" id="resultados-pesquisa" aria-labelledby="resultados-titulo">
+            <h2 id="resultados-titulo" class="visually-hidden">Resultados da Pesquisa</h2> <!-- Adiciona um título para leitores de tela -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 - Atletas do Brasil. Todos os direitos reservados.</p>
+        <p>Entre em contato pelo e-mail: <a href="mailto:guilherme@atletas.com.br">guilherme@atletas.com.br</a></p>
+    </footer>
+    
+    <script src="dados.js" defer></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
