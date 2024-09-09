@@ -15,25 +15,16 @@ img {
 .caixa {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center
 }
 header {
     background-color: #fff;
     padding: 20px;
     text-align: center;
 }
-.box {
-    background-color: black;
-    color: white;
-    border: 100px;
-    border-color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 600px;
-    height: auto;
-    align-items: center;
+footer {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    margin-left: 29%;
-    margin-right: 29%;
 }
 .button {
     background-image: linear-gradient(90deg, black, white);
@@ -64,4 +55,9 @@ a {
     text-decoration: none;
     text-align: center;
     align-items: center;
+}
+.p {
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
 }
