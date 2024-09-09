@@ -3,16 +3,17 @@ body{
 }
 a{
     text-decoration: none;
-    color: black;
-    font-size: larger;
+    color: rgb(255, 255, 255);
+    font-size: large;
     font-family: 'Times New Roman', Times, serif;
 }
 a:hover{
-    color:blue;
+    color:rgb(76, 76, 81);
 }
 h1{
     text-align: center;
-    font-size: 90px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
 p{
     text-align: center;
@@ -37,7 +38,7 @@ ul{
   
 }
 body {
-  background-color: #141516;
+  background-color: #2378cd;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,14 +52,15 @@ button {
   position: relative;
   color: #F3F3F3;
   font-family: 'Space Grotesk';
-  font-size: var(--m);
+  font-size: large;
   border-radius: calc(0.7 * var(--m));
-  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  padding: 10px;
   display: flex;
   justify-content: center;
   cursor: pointer;
+
   
-  background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(76, 76, 196, 0.6) 80%, rgba(34, 34, 167, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
   background-origin: border-box;
   background-clip: padding-box, border-box, border-box;
   background-size: 100%;
