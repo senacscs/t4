@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jogos</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Digite o nome do jogo" id="campo-pesquisa">
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+        </section>
+    </main>
+    <footer>
+        <!-- <p>2024 - Atletas do Brasil. Todos os direitos reservados</p>
+        <p>Entre em contato pelo email: guilherme@atletas.com.br</p> -->
+    </footer>
+    
+    <script>
+
+let dados = [
+    {
+        titulo: "The Legend of Zelda: Breath of the Wild",
+        descricao: " Um jogo de mundo aberto onde o jogador controla Link, explorando o reino de Hyrule para derrotar o vilão Calamity Ganon.",
+        estilo: "Ação-aventura",
+        tags: "zelda Zelda Ação Aventura offline"
+    },
+    {
+        titulo: "Minecraft",
+        descricao: "Um jogo onde os jogadores podem construir e explorar mundos feitos de blocos, enfrentando criaturas e coletando recursos.",
+        estilo: "Sandbox sobrevivência",
+        tags: "Mine Minecraft mundo aberto sandbox sobrevivência online offline"
+    },
+    {
+        titulo: "Fortnite",
+        descricao: "Um jogo onde 100 jogadores competem para ser o último sobrevivente em uma ilha, construindo estruturas e coletando armas.",
+        estilo: "Battle Royale sobrevivência tiro",
+        tags: "Fort Fortnite battle royale sobrevivência tiro online",
+    },
+    {
+        titulo: "Grand Theft Auto V",
+        descricao: " Um jogo de mundo aberto onde os jogadores podem explorar a cidade fictícia de Los Santos, completando missões e participando de atividades diversas, tanto no modo história quanto no modo online.",
+        estilo: "Ação tiro",
+        tags: "ação tiro corrida GTA gta grand theft auto online offline"
+    },
+    {
+        titulo: "Overwatch",
+        descricao: "Um jogo de tiro em equipe onde os jogadores escolhem heróis com habilidades únicas para competir em partidas objetivas, promovendo trabalho em equipe e estratégia.",
+        estilo: "Tiro em primeira pessoa",
+        tags: "tiro primeira pessoa equipe online overwatch"
+    },
+];
+
+// ===========================================================================================
+
+        function pesquisar() {
+    // Obtém a seção HTML onde os resultados serão exibidos
+    let section = document.getElementById("resultados-pesquisa");
+
+    let campoPesquisa = document.getElementById("campo-pesquisa").value
+
+    // se campoPesquisa for uma string sem nada
+    if (!campoPesquisa) {
+        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar o nome de um atleta ou esporte</p>"
+        return 
+    }
+
+    campoPesquisa = campoPesquisa.toLowerCase()
+
+    // Inicializa uma string vazia para armazenar os resultados
+    let resultados = "";
+    let titulo = ""; 
+    let descricao = "";
+    let estilo = "";
+    let tags = "";
+
+    // Itera sobre cada dado da lista de dados
+    for (let dado of dados) {
+        titulo = dado.titulo.toLowerCase()
+        descricao = dado.descricao.toLowerCase()
+        tags = dado.tags.toLowerCase()
+        // se titulo includes campoPesquisa
+        if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || estilo.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
+            // cria um novo elemento
+            resultados += `
+            <div class="item-resultado">
+                <h2>
+                    <a href="#" target="_blank">${dado.titulo}</a>
+                </h2>
+                <p class="descricao-meta">${dado.descricao}</p>
+                <a href=${dado.estilo} target="_blank">Mais informações</a>
+            </div>
+        `;
+        }
+    }
+
+    if (!resultados) {
+        resultados = "<p>Nada foi encontrado</p>"
+    }
+
+    // Atribui os resultados gerados à seção HTML
+    section.innerHTML = resultados;
+}
+    </script>
+</body>
+
+</html>
