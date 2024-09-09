@@ -241,5 +241,23 @@ let dados = [
     descricao: "EA Sports FC 24 é o primeiro jogo da série após a mudança de nome de FIFA. Lançado em 2023, o jogo mantém a fórmula de sucesso com novas inovações em jogabilidade, gráficos e modos de jogo.",
     link: "https://www.ea.com/games/ea-sports-fc/ea-sports-fc-24",
     tags: "futebol EA Sports nova era"
+},
+{
+    titulo: "League of Legends",
+    descricao: "League of Legends é um dos maiores jogos de MOBAs do mundo, onde duas equipes de cinco jogadores se enfrentam em um campo de batalha estratégico. Lançado em 2009, o jogo continua a evoluir com novos campeões, atualizações e eventos, mantendo sua popularidade através de um equilíbrio refinado e uma comunidade vibrante.",
+    link: "https://www.leagueoflegends.com",
+    tags: "MOBA, estratégia, campeões, eSports"
+},
+{
+    titulo: "Overwatch",
+    descricao: "Overwatch é um jogo de tiro em equipe lançado em 2016, que combina ação rápida com uma rica variedade de heróis, cada um com habilidades únicas. O jogo é conhecido por seus mapas dinâmicos e modos de jogo variados, proporcionando uma experiência multiplayer altamente colaborativa e envolvente.",
+    link: "https://playoverwatch.com",
+    tags: "FPS, heróis, ação, multiplayer"
+},
+{
+    titulo: "Bloons TD 6",
+    descricao: "Bloons TD 6 é a mais recente adição à popular série de defesa de torres, oferecendo um desafio estratégico divertido e envolvente. Lançado em 2018, o jogo apresenta novas torres, mapas e modos, permitindo aos jogadores enfrentar ondas cada vez mais difíceis de bloons com uma variedade de estratégias e melhorias.",
+    link: "https://www.ninjakiwi.com/Games/Tower-Defense/Bloons-TD-6",
+    tags: "estratégia, defesa de torres, bloons, diversão"
 }
 ];
