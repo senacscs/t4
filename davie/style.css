@@ -34,10 +34,35 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     }
+    .buton {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+    }
     .button2:hover {
     box-shadow: 0 12px 16px 0 rgb(236, 5, 5),0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-color: #555555;
     color: white;
+    }
+    .button3:hover {
+        box-shadow: 0 12px 16px 0 rgb(71, 69, 70),0 17px 50px 0 rgba(209, 206, 206, 0.19);
+        background-color: black;
+        color: white;
+    }
+    .div {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
     }
     a {
         color: white;
