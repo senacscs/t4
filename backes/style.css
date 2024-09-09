@@ -1,142 +1,130 @@
+/* Estilo geral da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f8f8f8;
+    background-color: #f4f4f4;
 }
 
+/* Estilo do cabeçalho */
 header {
-    background-color: #222;
+    background: #007bff;
     color: #fff;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid #0056b3;
 }
 
-header h1 {
+h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Estilo da área principal */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Estilo da seção de links */
+section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Estilo dos links */
+.link {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.link:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Estilo da navegação */
+nav {
+    margin-top: 2rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
 }
 
-nav ul li {
-    margin-right: 20px;
+nav li {
+    margin: 0;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    margin-top: 80px; /* Space for fixed header */
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-section h1 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-ul {
-    padding-left: 20px;
-}
-
-.cta {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.cta h2 {
-    margin-top: 0;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.contact-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.contact-form input, .contact-form textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    color: #007bff;
+    border: 2px solid #007bff;
     border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
 
-.contact-form button {
+nav a:hover {
     background-color: #007bff;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
+    transform: translateY(-2px);
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
+/* Estilo do rodapé */
+footer {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 4px solid #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .link, nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
 }
