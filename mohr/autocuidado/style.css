@@ -86,8 +86,8 @@ body {
     color: rgba(255, 255, 255, 0.765);
     font-size: 200px;
     position: absolute;
-    bottom: 200px;
-    left: 70px;
+    bottom: 150px;
+    left: 35px;
     font-style: italic;
     font-weight: bold;
     text-shadow:
@@ -103,7 +103,7 @@ body {
 
 .texto1{
     position: relative;
-    bottom: 1400px;
+    bottom: 1350px;
     left: 20px;
     color: rgb(255, 255, 255);
     backdrop-filter: blur(50px);
@@ -117,7 +117,7 @@ body {
 
 .texto2 {
     position: relative;
-    bottom: 1300px;
+    bottom: 1250px;
     left: 20px;
     color: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
@@ -152,7 +152,7 @@ body {
     text-align: center;
     width: 80%;
     position: relative;
-    bottom: 1100px;
+    bottom: 1030px;
    font-weight: bold;
     text-shadow:
                 1px 1px 0 rgb(23, 7, 128),
@@ -186,7 +186,7 @@ body {
 .linha {
     background-color: white;
     border-color: transparent;
-    bottom: 1610px;
+    bottom: 1467px;
     height: 30px;
     position: relative;
     filter: blur(3px);
@@ -203,7 +203,7 @@ p {
     font-size: 20px;
     position: relative;
     color: white;
-    bottom: 1000px;
+    bottom: 1050px;
 }
 
 .tipos {
@@ -211,7 +211,7 @@ p {
     font-size: 25px;
     padding: 4%;
     position: relative;
-    bottom: 300px;
+    bottom: 350px;
     color: white;
     font-family: 'Italiana';
     width: 80%;
@@ -242,8 +242,6 @@ p {
     margin-top: 2%;
 }
 
-
-
 .auto2 {
     margin-top: 5%;
 }
@@ -255,13 +253,13 @@ h2 {
 
 .mental, .emocional, .fisico {
     position: relative;
-    bottom: 1000px;
+    bottom: 1050px;
 }
 
 .linha2 {
     background-color: white;
     border-color: transparent;
-    bottom: 720px;
+    bottom: 665px;
     height: 30px;
     position: relative;
     filter: blur(3px);
@@ -271,7 +269,7 @@ h2 {
 .linha3 {
     background-color: white;
     border-color: transparent;
-    bottom: 455px;
+    bottom: 490px;
     height: 30px;
     position: relative;
     filter: blur(3px);
@@ -280,7 +278,7 @@ h2 {
 
 .social {
     position: relative;
-    bottom: 1000px;
+    bottom: 1050px;
     left: 100px;
 }
 
@@ -291,7 +289,7 @@ h2 {
 
 .espiritual {
     position: relative;
-    bottom: 1000px;
+    bottom: 1050px;
     left: 350px;
 }
 
@@ -303,13 +301,13 @@ h2 {
 iframe {
     position: relative;
     border-radius: 10px;
-    bottom: 830px;
-    right: 1150px;
+    bottom: 880px;
+    right: 1230px;
 }
 
 .planer {
     position: relative;
-    right: 450px;
+    right: 530px;
     bottom: 300px;
     border-top: 0.4rem solid rgb(91, 129, 187);
     border-bottom: 0.4rem solid rgb(91, 129, 187);
