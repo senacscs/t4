@@ -1,0 +1,74 @@
+img {
+    width: 200px;
+}
+
+head, body {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+body { 
+    background-image: url("fotodefundosim.png");
+    background-size: 1488px;
+
+    ;
+   
+}
+
+h1 {
+    margin-top: 30px;
+    color: rgb(255, 0, 149);
+}
+
+h2 {
+    color: rgb(48, 0, 25);
+    font-size: 30px;
+    background-color: rgba(255, 0, 111, 0.555);
+    margin-top: 0;
+}
+
+a{
+    color: #434343;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: rgba(255, 86, 179, 0.671);
+    color: rgb(55, 0, 21);
+    padding: 30px ;
+    text-align: center;
+    font-size: 50px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(246, 246, 246);
+    text-decoration: none;
+    padding: 0 10px;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+}
+

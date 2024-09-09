@@ -1,74 +1,194 @@
-img {
-    width: 200px;
+body {
+  color: #2f4f4f;
+  font-family: 'Roboto', Arial;
+  font-size: 87.5%;
+  line-height: 1.5;
+  text-align: left;
 }
 
-head, body {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+.body {
+  margin: 0 auto;
+  width: 80%;
+  clear: both;
 }
 
-h1, h2, p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+a {
+  text-decoration: none;
+  color: #2f4f4f;
 }
 
-body { 
-    background-image: url("fotodefundosim.png");
-    background-size: 1488px;
-
-    ;
-   
+ul {
+  list-style: none;
 }
 
-h1 {
-    margin-top: 30px;
-    color: rgb(255, 0, 149);
+.mainHeader {
+  text-align: center;
+  position: relative;
+  margin:20px;
 }
 
-h2 {
-    color: rgb(48, 0, 25);
-    font-size: 30px;
-    background-color: rgba(255, 0, 111, 0.555);
-    margin-top: 0;
-}
-
-a{
-    color: #434343;
-}
-
-.image {
-    display: flex;
-    justify-content: center;
-}
-
-header {
-    background-color: rgba(255, 86, 179, 0.671);
-    color: rgb(55, 0, 21);
-    padding: 30px ;
-    text-align: center;
-    font-size: 50px;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+.mainHeader img {
+  width: 70px;
+  height: auto;
 }
 
 nav {
-    padding: 10px 0;
-    text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid lightgray;
 }
 
-nav a {
-    color: rgb(246, 246, 246);
-    text-decoration: none;
-    padding: 0 10px;
-    text-align: center;
+nav ul {
+  padding: 0px;
+  display: inline-block;
+  margin: 0px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li {
+  display: inline-block;
 }
 
-.content {
-    padding: 20px;
+nav ul li a {
+  font-weight: bold;
+  display: block;
+  padding: 15px 40px;
 }
 
+nav ul li a:hover {
+  background-color: #FFE9EC;
+  border-radius: 10px;
+}
+
+#headerText {
+  color: #DEA5A4;
+  font-size: 470%;
+  margin: 0 auto;
+}
+
+#headerList {
+  display: inline;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  margin-top:70px;
+}
+
+#photos img {
+  
+  display:flex;
+  justify-content: space-between;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#photo-gallery {
+  display:flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  padding: 10px;
+  max-width: 100%;
+  height: auto;
+
+}
+
+#photo-gallery img {
+  width: 250px;
+  height: 250px;
+}
+
+
+.about{
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  margin-top: 70px;
+  margin-bottom:30px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+}
+
+.paragraph {
+  width: 680px;
+  margin: 0px auto;
+  text-align: justify;
+  padding: 0 30px;
+}
+
+p {
+  margin-bottom: 34px;
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 300;
+  letter-spacing: .6px;
+}
+
+.footer{
+	background-color: #DEA5A4;
+	height: 80px;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  
+}
+.footer p{
+  margin: 0;
+	font-size: 13px;
+	color: #000;
+	line-height: 80px;
+  text-align: center;
+}
+.insta{
+  height: 15px;
+  width: auto;
+}
+
+body after {
+  content: url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/close.png) url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/loading.gif) url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/prev.png) url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/next.png);
+  display: none;
+}
+
+
+
+#contact {
+  position: relative;
+  margin: 100px 0 10px 0;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+#block {
+  width: 680px;
+  margin: 50px auto 100px auto;
+}
+
+
+.inst {
+  max-width: 80px;
+}
+
+.email {
+  max-width: 90px;
+}
+
+.freecdcmp {
+  max-width: 80px;
+}
+
+.github {
+  max-width: 70px;
+}
+
+.cont {
+  text-align: center;
+  margin: 0;
+  display: block;
+}
