@@ -1,39 +1,159 @@
-h1{
-    border: 2px solid rgb(241, 68, 184);
-    text-align: center;
-    background-color: rgb(221, 69, 140);
-    width: 60%;
-    border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
+
+body {background-color: rgb(238, 113, 165);
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
 }
-h3,h2{
-    text-align: center
-    
+   h1, li {
+   text-align: center;
+   color: white;
+   list-style: none;
+   }
+
+   .titulo {
+     font-size: 3.0rem;
+     text-align: center;
+     margin-left: 5%;
+     font-style: oblique;
+     
+   }
+
+ img {
+   width: 300px;
+   margin-left: 7%;
+   margin-bottom: 5%;
+   border-radius: 20px;
+   height: 400px;
+   filter: grayscale(100%);
+ }  
+
+ img:hover {
+  width: 300px;
+  margin-left: 7%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  height: 400px;
+  filter: grayscale(0%);
+ }
+
+ .display{
+   margin-left: 2em;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-right: 2em;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
+   gap: 0,8em;
+ }
+.box1 {
+ display: block;
+ background-color: rgb(0, 0, 0);
+ margin-top: 1em;
+ border-radius: 20px;
+ margin-right: auto;
+ width: 350px;
+ height: 500px;
+ margin-left: auto;
+ color: ghostwhite;
 }
-div{
-    height: 110px;
-    left: 180px;
-    background-color: rgb(255, 83, 169);
-    width: 400px;
-    margin: 10px auto 10px auto;
-    border-radius: 10px;
-    
+
+.box1:hover {
+ background-color: white;
+ color: black;
 }
-p{
-    text-align: center;
+
+h2 {
+ text-align: center;
+ 
 }
-a{
-    color: black;
+.frontend { 
+ color: black;
+ margin-right: 50%;
+ margin-left: 40%;
+ width: 10%;
 }
-a:visited{
-    color: black;
+
+.header {
+ background: #000000;
+   display: flex;
+   flex-wrap: wrap; /*quando a tela estiver pequena faz um item ir abaixo do outro */
+   justify-content: space-between;
+   align-items:center;
+   padding: 1;
+   width: 100%;
+   margin: 0;
 }
-body{
-    background-color: rgb(156, 10, 61);
+.menu{
+ display: flex;
+ text-align: center;
+ 
 }
-header{
-    background-color: rgb(226, 43, 171);
-    color: white;
-    font-family: Agency FB;
+
+
+.menu li a {
+ display: block;
+ padding: 30px;
 }
+
+.links {
+ color: white;
+ text-decoration: none;
+   border: 2px solid white;
+   border-radius: 50px;
+   font-weight: 10px;
+   background-color: darkgrey;
+   text-align: center;
+   font-size: 0.8rem;
+}
+.meuindex{
+ color: #000000;
+ 
+}
+.linha{
+ margin-left: 33em;
+ margin-right: 33em;
+ background-color: black;
+}
+.button {
+ text-decoration: none;
+   border: 2px solid rgb(35, 35, 35);
+   border-radius: 5px;
+   font-weight: 100;
+   background-color: darkgrey;
+   text-align: center;
+   margin-left: 45%;
+   width: 150px;
+   height: 150px;
+   color: #000000;
+   font-size: 1.2rem;
+}
+.insta {
+ 
+ margin-right: 1em;
+ width: 120px;
+ height: 90px;
+ 
+}
+
+.insta:hover {
+ 
+  margin-right: 1em;
+  width: 120px;
+  height: 90px;
+  
+ }
+
+.podepa {
+gap: 0,5em;
+ margin-right: 5px;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+}
+
+.text{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
