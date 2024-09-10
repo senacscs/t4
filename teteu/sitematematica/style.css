@@ -1,0 +1,44 @@
+body {  
+background-image: linear-gradient(90deg, black, rgb(116, 109, 109));
+
+
+}
+h2{
+color: white;
+font-size: large;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+h1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: x-large;
+text-align: center;
+color: white;
+
+
+}
+h3{
+color: white;
+font-size: medium;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section{
+text-align: center;
+border: solid 4px;
+border-radius: 40px;
+margin: 50px;
+color: black ;
+  
+  
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
