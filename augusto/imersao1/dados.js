@@ -259,35 +259,5 @@ let dados = [
     descricao: "Bloons TD 6 é a mais recente adição à popular série de defesa de torres, oferecendo um desafio estratégico divertido e envolvente. Lançado em 2018, o jogo apresenta novas torres, mapas e modos, permitindo aos jogadores enfrentar ondas cada vez mais difíceis de bloons com uma variedade de estratégias e melhorias.",
     link: "https://www.ninjakiwi.com/Games/Tower-Defense/Bloons-TD-6",
     tags: "estratégia, defesa de torres, bloons, diversão"
-},
-{
-    titulo: "Dead Cells",
-    descricao: "Dead Cells é um jogo de ação e aventura com elementos de roguelike e Metroidvania. Lançado em 2018, o jogo é conhecido por sua jogabilidade fluida, mundo gerado proceduralmente e combate intenso, oferecendo uma experiência desafiadora e envolvente.",
-    link: "https://deadcells.com",
-    tags: "ação, roguelike, Metroidvania, indie"
-},
-{
-    titulo: "Celeste",
-    descricao: "Celeste é um jogo de plataforma lançado em 2018, que combina uma história comovente sobre superação pessoal com mecânicas de jogo desafiadoras. O jogo é aclamado por seus controles precisos e trilha sonora envolvente, além de abordar temas de saúde mental e autoaceitação.",
-    link: "https://www.celestegame.com",
-    tags: "plataforma, indie, história, desafios"
-},
-{
-    titulo: "Terraria",
-    descricao: "Terraria é um jogo de sandbox e aventura lançado em 2011. Com uma vasta quantidade de itens, monstros e biomas, o jogo permite aos jogadores explorar, construir e combater em um mundo 2D gerado aleatoriamente. É conhecido por sua profundidade e grande variedade de conteúdos.",
-    link: "https://terraria.org",
-    tags: "sandbox, aventura, construção, exploração"
-},
-{
-    titulo: "Grand Theft Auto V",
-    descricao: "Grand Theft Auto V, lançado em 2013, é um jogo de ação e aventura em mundo aberto desenvolvido pela Rockstar Games. O jogo se passa na fictícia cidade de Los Santos e segue três protagonistas jogáveis em uma trama de crime e intriga. É conhecido por seu vasto mundo aberto, narrativa envolvente e detalhada, e um modo online expansivo.",
-    link: "https://www.rockstargames.com/V",
-    tags: "ação, aventura, mundo aberto, crime"
-},
-{
-    titulo: "Grand Theft Auto: San Andreas",
-    descricao: "Grand Theft Auto: San Andreas, lançado em 2004, é um jogo de ação e aventura em mundo aberto que se passa no estado fictício de San Andreas. O jogo segue a história de CJ, um gangster que retorna à sua cidade natal para recuperar seu antigo território e enfrentar diversas ameaças. É aclamado por sua vasta área de jogo, variedade de missões e personalização de personagens.",
-    link: "https://www.rockstargames.com/sanandreas",
-    tags: "ação, aventura, mundo aberto, gangster"
 }
 ];
