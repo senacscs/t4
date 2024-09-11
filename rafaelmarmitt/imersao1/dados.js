@@ -259,5 +259,17 @@ let dados = [
     descricao: "Bloons TD 6 é a mais recente adição à popular série de defesa de torres, oferecendo um desafio estratégico divertido e envolvente. Lançado em 2018, o jogo apresenta novas torres, mapas e modos, permitindo aos jogadores enfrentar ondas cada vez mais difíceis de bloons com uma variedade de estratégias e melhorias.",
     link: "https://www.ninjakiwi.com/Games/Tower-Defense/Bloons-TD-6",
     tags: "estratégia, defesa de torres, bloons, diversão"
+},
+{
+    titulo: "Grand Theft Auto V",
+    descricao: "Grand Theft Auto V, lançado em 2013, é um jogo de ação e aventura em mundo aberto desenvolvido pela Rockstar Games. O jogo se passa na fictícia cidade de Los Santos e segue três protagonistas jogáveis em uma trama de crime e intriga. É conhecido por seu vasto mundo aberto, narrativa envolvente e detalhada, e um modo online expansivo.",
+    link: "https://www.rockstargames.com/V",
+    tags: "ação, aventura, mundo aberto, crime"
+},
+{
+    titulo: "Grand Theft Auto: San Andreas",
+    descricao: "Grand Theft Auto: San Andreas, lançado em 2004, é um jogo de ação e aventura em mundo aberto que se passa no estado fictício de San Andreas. O jogo segue a história de CJ, um gangster que retorna à sua cidade natal para recuperar seu antigo território e enfrentar diversas ameaças. É aclamado por sua vasta área de jogo, variedade de missões e personalização de personagens.",
+    link: "https://www.rockstargames.com/sanandreas",
+    tags: "ação, aventura, mundo aberto, gangster"
 }
 ];
