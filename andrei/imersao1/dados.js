@@ -16,7 +16,7 @@ let dados = [
         descricao: "Paulo Roberto Falcão é um dos maiores jogadores de futebol da história do Brasil. Conhecido por sua elegância, visão de jogo e inteligência tática, Falcão deixou sua marca tanto no Sport Club Internacional quanto na Seleção Brasileira.",
         link: "https://pt.wikipedia.org/wiki/Paulo_Roberto_Falc%C3%A3o",
         tags: "inter idolo volante meia brasileiro brasil destro falcão"
-    }
+    },
     {
         titulo: "Elías Ricardo Figueroa Brander",
         descricao: "Elías Ricardo Figueroa Brander é considerado um dos maiores zagueiros da história do futebol, e um dos maiores atletas chilenos de todos os tempos. Sua classe, elegância e liderança em campo o transformaram em um verdadeiro ídolo, tanto no Chile quanto no Brasil.",
