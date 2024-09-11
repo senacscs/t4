@@ -13,13 +13,14 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("https://s2-ge.glbimg.com/xG6kS9xer8uowA-giE2v0VwYOn4=/1200x/smart/filters:cover():strip_icc()/s.glbimg.com/es/ge/f/original/2019/09/18/beira.png");
-    background-size: 1400px;
+    background-size: 1500px;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem; /* Tamanho da fonte */
     color: #ffffff; /* Cor do texto */
+    text-shadow: #360000;
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
