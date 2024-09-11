@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #000000; /* Cor de fundo da página */
+    background-color: #ffffff; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -17,7 +17,7 @@ body {
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.4rem; /* Tamanho da fonte */
-    color: #ffffff; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
@@ -95,7 +95,7 @@ section button {
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 img {
-    width: 200px;   
+    width: 250px;   
     height: auto;
     display: flex;
     float: left;
