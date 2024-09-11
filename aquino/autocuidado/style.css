@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Hanken%20Grotesk:700|Hanken%20Grotesk:400");
 
+body{
+  scale: 67%;
+}
 :root {
   --text: #bdbdbd;
   --background: #3c544f;

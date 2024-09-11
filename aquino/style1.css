@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(90deg, rgb(0, 0, 0) , rgb(17, 0, 15) , rgb(23, 0, 11));
+    background: linear-gradient(90deg, rgb(0, 0, 0) , rgb(17, 0, 15) , rgb(8, 0, 44));
 
-   
+   scale: 75%;
    
     font-family: sans-serif;
     font-size: 100%;
