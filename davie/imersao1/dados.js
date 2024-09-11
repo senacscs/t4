@@ -22,7 +22,7 @@ let dados = [
     },
     {
         titulo: "MC Ryan SP",
-        descricao: "Ryan Santana dos Santos, mais conhecido como MC Ryan SP, é um cantor brasileiro de funk paulista, carioca e do trap.",
+        descricao: "Ryan Santana dos Santos, mais conhecido como MC Ryan SP, é um cantor brasileiro de funk paulista, carioca e do trap. icou conhecido por seus principais sucessos 'Revoada Sem Você', 'Favela' e 'Vergonha Pra Mídia', com participações especiais de MC Kevin e Salvador da Rima.",
         link: "https://pt.wikipedia.org/wiki/MC_Ryan_SP",
         imagem: "https://p2.trrsf.com.br/image/fget/cf/540/960/smart/images.terra.com/2023/05/18/card1-reproducao-facebookmc-ryan-sp-sof4n63n6v6u.png",
         tags: "funk mc trap"
@@ -54,5 +54,19 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/L7nnon",
         imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/L7nnon_at_Rock_in_Rio_in_September_2022.png/345px-L7nnon_at_Rock_in_Rio_in_September_2022.png",
         tags: "funk brasa lennon ladin"
+    },
+    {
+        titulo: "MC Daniel",
+        descricao: "Daniel Amorim Nicola, mais conhecido como MC Daniel, é um cantor brasileiro de funk paulista e do carioca. MC Daniel começou sua carreira, emplacando alguns hit's que fortaleceram sua imagem em meio algumas críticas por já ser considerado 'MC sem música', um dos seus primeiros lançamentos foi a música 'Revoada', logo em seguida 'Balmain'.",
+        link: "https://pt.wikipedia.org/wiki/MC_Daniel",
+        imagem: "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/10/09/92216177-mc-daniel-1.jpg",
+        tags: "funk brasil mc"
+    },
+    {
+        titulo: "MC IG",
+        descricao: "Guilherme Sérgio Ramos de Souza mais conhecido pelo seu nome artístico MC IG, é um cantor, compositor e empresário brasileiro. Ele ficou conhecido pelos seus singles “3 Dias Virados”, “Goodnigth menina” e pela canção “Let's go 4” lançado em 2023.",
+        link: "https://pt.wikipedia.org/wiki/MC_IG",
+        imagem: "https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2023/12/27/2084283332-design-sem-nome-5-5.png",
+        tags: "funk rico negro"
     }
 ];
