@@ -4,7 +4,7 @@ let dados = [
         descricao: "Marshall Bruce Mathers III, mais conhecido pelo seu nome artístico Eminem, é um rapper, compositor, produtor musical e ator estadunidense. Adquiriu rápida popularidade em 1999 com o lançamento do disco The Slim Shady LP, o qual venceu o Grammy Award de Melhor Álbum de Rap do ano.",
         link: "https://pt.wikipedia.org/wiki/Eminem",
         imagem: "https://img.odcdn.com.br/cdn-cgi/image/width=1280,height=720,fit=cover/wp-content/uploads/2024/02/Eminem.png",
-        tags: "goat rap"
+        tags: "goat rap god afiado"
     },
     {
         titulo: "Jay-Z",
@@ -68,5 +68,19 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Tupac_Shakur",
         imagem: "https://rollingstone.com.br/media/uploads/legacy/2017/img-1043597-tupac-shakur.jpg",
         tags: "rap eua morto negro"
+    },
+    {
+        titulo: "Kendrick Lamar",
+        descricao: "Kendrick Lamar Duckworth, mais conhecido como Kendrick Lamar, é um rapper, compositor e produtor musical norte-americano, ele é vencedor de 17 prêmios Grammy e único músico fora da música clássica e de jazz a a receber o Prémio Pulitzer, sendo considerado como um dos artistas mais influentes de sua geração, além de um dos maiores rappers e letristas de todos os tempos.",
+        link: "https://pt.wikipedia.org/wiki/Kendrink_Lamar",
+        imagem: "https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2020/10/kmb9.jpg?fit=750%2C480&ssl=1",
+        tags: "rap negro afiado"
+    },
+    {
+        titulo: "J. Cole",
+        descricao: "Jermaine Lamarr Cole, mais conhecido simplesmente como J. Cole, é um rapper e produtor norte-americano nascido na Alemanha. Nasceu no hospital da base geral do Exército dos Estados Unidos em Frankfurt, na Alemanha, aos 8 meses de idade, ele e sua mãe se mudaram para Fayetteville, Carolina do Norte.",
+        link: "https://pt.wikipedia.org/wiki/J._Cole",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjGIqJUSg-Iiu3rl1KuqUvzli6Fmum43jaGg&s",
+        tags: "branco rap afiado"
     }
 ];
