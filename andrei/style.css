@@ -5,15 +5,16 @@ header {
     color: white;
 }
 body {
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(14, 59, 1);
     background-image: url("https://th.bing.com/th/id/R.45de7ae85be3ae6eab89fdba4b35b4ea?rik=SBxJyIxRXaKtRA&pid=ImgRaw&r=0");
     background-size: 2000px;
+    color: white;
 }
 h1 {
     text-align: center;
     font-size: 50px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 59, 1);
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 50px;
@@ -23,7 +24,7 @@ h2 {
     text-align: center;
     font-size: 50px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 59, 1);
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 50px;
@@ -33,7 +34,7 @@ h3 {
     text-align: center;
     font-size: 50px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 59, 1);
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 50px;
@@ -43,7 +44,7 @@ h4 {
     text-align: center;
     font-size: 50px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 59, 1);
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 50px;
@@ -54,7 +55,7 @@ h5 {
     text-align: center;
     font-size: 50px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 59, 1);
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 50px;
@@ -65,7 +66,7 @@ h6 {
     text-align: center;
     font-size: 50px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 59, 1);
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 50px;
