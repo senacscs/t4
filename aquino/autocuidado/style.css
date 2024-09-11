@@ -120,7 +120,7 @@ li.active {
   opacity: 1;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   #sidebar {
     display: none;
   }
@@ -132,8 +132,8 @@ li.active {
   }
   .section {
     height: auto;
-  }
-}
+  } */
+
 img{
     margin-left: auto;
     margin-right: auto;
