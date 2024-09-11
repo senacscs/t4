@@ -3,8 +3,8 @@
 
 /* Estiliza o corpo da página */
 body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #f46363; /* Cor de fundo da página */
+    font-family: "Chakra Petch", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f18383; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
