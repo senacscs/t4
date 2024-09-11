@@ -22,5 +22,11 @@ let dados = [
         descricao: "Elías Ricardo Figueroa Brander é considerado um dos maiores zagueiros da história do futebol, e um dos maiores atletas chilenos de todos os tempos. Sua classe, elegância e liderança em campo o transformaram em um verdadeiro ídolo, tanto no Chile quanto no Brasil.",
         link: "https://pt.wikipedia.org/wiki/El%C3%ADas_Figueroa",
         tags: "inter idolo zagueiro chileno chile figueroa"
-    }
+    },
+    {
+        titulo: "Marcos Antônio de Lima",
+        descricao: "Marcos Antônio de Lima, mais conhecido como Índio, é um dos maiores ídolos da história do Internacional. Sua trajetória no clube gaúcho foi marcada por títulos, paixão e uma identificação única com a torcida colorada.",
+        link: "https://pt.wikipedia.org/wiki/Marcos_Ant%C3%B4nio_de_Lima",
+        tags: "inter idolo zagueiro brasileiro brasil indio"
+    },
 ];
