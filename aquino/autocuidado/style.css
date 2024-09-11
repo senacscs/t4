@@ -137,14 +137,14 @@ li.active {
 img{
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: flex;
     width:  500px;
     height: 500px;
 }
 .autocuidado{
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: flex;
     width:  650px;
     height: 500px;
 }
