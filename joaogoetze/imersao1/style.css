@@ -30,6 +30,14 @@ section {
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
 }
 
+div {
+     width: 80%;
+}
+
+/* img {
+    width: 100%; nao consigo botar a imagem dos gatos :9
+} */
+
 /* Estiliza os inputs dentro das seções */
 section input {
     width: 30rem; /* Largura dos inputs */
@@ -102,7 +110,7 @@ footer {
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
+    position: absolute;  /*Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
 }

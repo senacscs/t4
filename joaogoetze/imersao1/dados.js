@@ -1,44 +1,58 @@
 let dados = [
     {
-        titulo: "Rayssa Leal",
-        descricao: "Rayssa Leal, a Fadinha, é uma skatista brasileira que conquistou o mundo com seu talento e carisma. Aos poucos anos, ela já coleciona títulos e inspira milhões de jovens.",
-        link: "https://pt.wikipedia.org/wiki/Rayssa_Leal",
-        tags: "Skate Fada Fadinha Sk8 Rayssa Todos skate fada fadinha sk8 rayssa todos"
+        titulo: "Siamês",
+        descricao: "Conhecido por seus olhos azuis intensos e pelagem clara com extremidades escuras. São elegantes e têm um temperamento imprevisível, podendo ser tanto tranquilos quanto ativos.",
+        link: "https://pt.wikipedia.org/wiki/Siamês",
+        tags: "Gato Siamês Olhos Azuis Pelagem Clara Tranquilo Ativo",
+        foto: "OIP.jpg",
     },
     {
-        titulo: "Beatriz Souza",
-        descricao: "Beatriz Souza é uma judoca brasileira que se destacou nos Jogos Olímpicos de Paris 2024, conquistando a medalha de ouro e inspirando novas gerações de atletas.",
-        link: "https://pt.wikipedia.org/wiki/Beatriz_Souza",
-        tags: "Judô Judo Judoca Judoka Beatriz Todos judô judo judoca judoka beatriz todos"
+        titulo: "Persa",
+        descricao: "Famoso por sua pelagem longa e focinho achatado. São gatos tranquilos e amáveis, ideais para quem tem outros pets ou crianças.",
+        link: "https://pt.wikipedia.org/wiki/Persa",
+        tags: "Gato Persa Pelagem Longa Focinho Achatado Tranquilo Amável",
+        foto: "baixados.jpg",
     },
     {
-        titulo: "Rebeca Andrade",
-        descricao: "Rebeca Andrade é uma ginasta brasileira que conquistou o mundo com suas acrobacias e força. Aos poucos anos, ela já coleciona títulos e é considerada uma das maiores ginastas da história do Brasil.",
-        link: "https://pt.wikipedia.org/wiki/Rebeca_Andrade",
-        tags: "Ginástica Ginastica Ouro Rebeca  Todos ginástica ginastica ouro rebeca todos"
+        titulo: "Maine Coon",
+        descricao: "Uma das maiores raças de gatos domésticos. São conhecidos por sua pelagem densa e personalidade amigável. São ótimos companheiros e se dão bem com outros animais.",
+        link: "https://pt.wikipedia.org/wiki/Maine_Coon",
+        tags: "Gato Maine Coon Pelagem Densa Amigável Companheiro",
+        foto: "baixados (1).jpg",
     },
     {
-        "titulo": "Isaquias Queiroz",
-        "descricao": "Isaquias Queiroz é um canoísta brasileiro que já conquistou várias medalhas olímpicas. Ele é conhecido por sua determinação e habilidade nas competições de canoagem.",
-        "link": "https://pt.wikipedia.org/wiki/Isaquias_Queiroz",
-        "tags": "Canoagem Canoe Isaquias Queiroz Todos canoagem canoe isaquias queiroz todos"
+        titulo: "Scottish Fold",
+        descricao: "Reconhecível por suas orelhas dobradas para a frente. São gatos tranquilos e carinhosos, populares entre celebridades.",
+        link: "https://pt.wikipedia.org/wiki/Scottish_Fold",
+        tags: "Gato Scottish Fold Orelhas Dobradas Tranquilo Carinhoso",
+        foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Scottish_Fold_-_CFF_cat_show_Heinola_2008-05-03_IMG_7882.JPG/300px-Scottish_Fold_-_CFF_cat_show_Heinola_2008-05-03_IMG_7882.JPG"
     },
     {
-        "titulo": "Ana Marcela Cunha",
-        "descricao": "Ana Marcela Cunha é uma nadadora brasileira especializada em maratonas aquáticas. Ela é uma das principais atletas do mundo em sua modalidade.",
-        "link": "https://pt.wikipedia.org/wiki/Ana_Marcela_Cunha",
-        "tags": "Natação Natacao Maratona Ana Marcela Cunha Todos natação natacao maratona ana marcela cunha todos"
+        titulo: "Sphynx",
+        descricao: "Conhecido por sua falta de pelo, o que lhe dá uma aparência única. São gatos muito afetuosos e adoram a companhia humana.",
+        link: "https://pt.wikipedia.org/wiki/Sphynx",
+        tags: "Gato Sphynx Sem Pelo Afetuoso Companhia Humana",
+        foto: "OIP (1).jpg",
     },
     {
-        "titulo": "Alison dos Santos",
-        "descricao": "Alison dos Santos, também conhecido como 'Piu', é um atleta brasileiro especializado nos 400 metros com barreiras. Ele é um dos principais nomes do atletismo brasileiro.",
-        "link": "https://pt.wikipedia.org/wiki/Alison_dos_Santos",
-        "tags": "Atletismo Atletismo 400m Barreiras Alison dos Santos Todos atletismo atletismo 400m barreiras alison dos santos todos"
+        titulo: "Bengal",
+        descricao: "Tem uma aparência selvagem com manchas que lembram um leopardo. São ativos e inteligentes, adoram brincar e explorar.",
+        link: "https://pt.wikipedia.org/wiki/Bengal",
+        tags: "Gato Bengal Aparência Selvagem Manchas Ativo Inteligente",
+        foto: "OIP (2).jpg"
     },
     {
-        "titulo": "Gabriel Medina",
-        "descricao": "Gabriel Medina é um surfista brasileiro que já conquistou vários títulos mundiais. Ele é um dos maiores nomes do surfe mundial.",
-        "link": "https://pt.wikipedia.org/wiki/Gabriel_Medina",
-        "tags": "Surfe Surf Gabriel Medina Todos surfe surf gabriel medina todos"
+        titulo: "Ragdoll",
+        descricao: "Conhecido por sua natureza dócil e pelagem macia. Eles tendem a relaxar completamente quando são pegos no colo, daí o nome 'Ragdoll' (boneca de pano).",
+        link: "https://pt.wikipedia.org/wiki/Ragdoll",
+        tags: "Gato Ragdoll Dócil Pelagem Macia Relaxado",
+        foto: "OIP (3).jpg"
+    },
+    {
+        titulo: "Devon Rex",
+        descricao: "Tem uma pelagem curta e encaracolada e grandes orelhas. São gatos brincalhões e adoram a companhia de seus tutores.",
+        link: "https://pt.wikipedia.org/wiki/Devon_Rex",
+        tags: "Gato Devon Rex Pelagem Curta Encaracolada Brincalhão Companhia",
+        foto: "OIP (4).jpg"
     }
 ];
