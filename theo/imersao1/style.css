@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #ff832b; /* Cor de fundo da página */
+    background-color: #003A7B; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -17,7 +17,7 @@ body {
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
@@ -46,7 +46,7 @@ section button {
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #435cdb; /* Cor de fundo do botão */
+    background-color: #F77D0C; /* Cor de fundo do botão */
     color: #000000; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -64,7 +64,7 @@ section button {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-    background: #435cdb; /* Cor de fundo dos itens */
+    background: #F77D0C; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
@@ -96,8 +96,8 @@ section button {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #ff832b; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
+    background-color: #003A7B; /* Cor de fundo do rodapé */
+    color: #ffffff; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
