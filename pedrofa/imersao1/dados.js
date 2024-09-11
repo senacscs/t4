@@ -1,23 +1,93 @@
 let dados = [
     {
-        titulo: "Rayssa Leal",
-        descricao: "Rayssa Leal, a Fadinha, é uma skatista brasileira que conquistou o mundo com seu talento e carisma. Aos poucos anos, ela já coleciona títulos e inspira milhões de jovens.",
-        link: "https://pt.wikipedia.org/wiki/Rayssa_Leal",
-        tags: "skate fada sk8",
-        imagem: "https://th.bing.com/th/id/OIP.jJV-jcEKO6aoq0ZRChTq9QAAAA?w=245&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" // Adicione o URL da imagem aqui
+        titulo: "Maçã",
+        descricao: "A maçã é uma fruta redonda e suculenta, com casca fina que varia de verde a vermelha, e sabor doce ou levemente ácido.",
+        link: "https://brasilescola.uol.com.br/frutas/maca.htm",
+        tags: "Maça",
+        imagem: "" // URL da imagem da maçã
     },
     {
-        titulo: "Beatriz Souza",
-        descricao: "Beatriz Souza é uma judoca brasileira que se destacou nos Jogos Olímpicos de Paris 2024, conquistando a medalha de ouro e inspirando novas gerações de atletas.",
-        link: "https://pt.wikipedia.org/wiki/Beatriz_Souza",
-        tags: "judô judo judoca judoka",
-        imagem: "" // Adicione o URL da imagem aqui
+        titulo: "Banana",
+        descricao: "A banana é uma fruta alongada e macia, com casca amarela quando madura, sabor doce e textura cremosa.",
+        link: "https://brasilescola.uol.com.br/frutas/banana.htm",
+        tags: "Banana",
+        imagem: "" // URL da imagem da maçã
     },
     {
-        titulo: "Rebeca Andrade",
-        descricao: "Rebeca Andrade é uma ginasta brasileira que conquistou o mundo com suas acrobacias e força. Aos poucos anos, ela já coleciona títulos e é considerada uma das maiores ginastas da história do Brasil.",
-        link: "https://pt.wikipedia.org/wiki/Rebeca_Andrade",
-        tags: "ginástica ginastica ouro",
-        imagem: "" // Adicione o URL da imagem aqui
+        titulo: "Melancia",
+        descricao: "A melancia é uma fruta grande e redonda com casca verde, polpa vermelha suculenta e sementes pretas, conhecida por seu sabor doce e refrescante.",
+        link: "",
+        tags: "Melancia",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Pera",
+        descricao: "A pera é uma fruta suculenta com formato arredondado e alongado, casca fina que varia do verde ao amarelo, e polpa macia e doce.",
+        link: "https://brasilescola.uol.com.br/frutas/pera.htm",
+        tags: "Pera",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Manga",
+        descricao: "A manga é uma fruta tropical suculenta, com casca variando de verde a vermelho, polpa amarelo-alaranjada doce e aromática, e um grande caroço no centro.",
+        link: "https://brasilescola.uol.com.br/frutas/manga.htm",
+        tags: "Manga",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Mamão",
+        descricao: "O mamão é uma fruta tropical de casca fina e alaranjada, polpa macia, doce e suculenta, com pequenas sementes pretas no centro.",
+        link: "https://brasilescola.uol.com.br/frutas/mamao.htm",
+        tags: "Mamão",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Morango",
+        descricao: "O morango é uma fruta pequena e suculenta, de cor vermelha viva, com sementes na superfície, sabor doce e levemente ácido.",
+        link: "https://brasilescola.uol.com.br/frutas/morango.htm",
+        tags: "Morango",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Kiwi",
+        descricao: "O kiwi é uma fruta pequena e peluda, com casca marrom e polpa verde vibrante salpicada de pequenas sementes pretas, oferecendo um sabor doce e levemente ácido.",
+        link: "https://brasilescola.uol.com.br/frutas/kiwi.htm",
+        tags: "Kiwi",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Abacaxi",
+        descricao: "O abacaxi é uma fruta tropical de casca áspera e escamosa, polpa amarela, suculenta e doce, com sabor ácido refrescante.",
+        link: "https://brasilescola.uol.com.br/frutas/abacaxi.htm",
+        tags: "Abacaxi",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Pêssego",
+        descricao: "O pêssego é uma fruta suculenta e arredondada, com casca aveludada e cor que varia do amarelo ao vermelho, e polpa doce e macia.",
+        link: "https://brasilescola.uol.com.br/frutas/pessego.htm",
+        tags: "Pêssego",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Pitaya",
+        descricao: "A pitaya, ou fruta do dragão, é uma fruta exótica com casca espinhosa e vibrante, polpa branca ou vermelha salpicada de pequenas sementes, e sabor suave e doce.",
+        link: "https://pt.wikipedia.org/wiki/Pitaia",
+        tags: "Pitaya",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Bergamota",
+        descricao: "A bergamota é uma fruta cítrica de casca fina e laranja, com polpa suculenta e sabor agridoce, amplamente utilizada para aromatizar e em preparações culinárias.",
+        link: "https://www.tuasaude.com/bergamota/",
+        tags: "Bergamota",
+        imagem: "" // URL da imagem da maçã
+    },
+    {
+        titulo: "Uva",
+        descricao: "A uva é uma fruta pequena e redonda, com casca fina que varia de verde a roxa, polpa suculenta e sabor doce ou levemente ácido, consumida fresca ou em vinhos.",
+        link: "https://brasilescola.uol.com.br/frutas/uva.htm",
+        tags: "Uva",
+        imagem: "" // URL da imagem da maçã
     }
 ];
