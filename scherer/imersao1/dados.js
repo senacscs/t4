@@ -1,20 +1,27 @@
 let dados = [
     {
-        titulo: "Rayssa Leal",
-        descricao: "Rayssa Leal, a Fadinha, é uma skatista brasileira que conquistou o mundo com seu talento e carisma. Aos poucos anos, ela já coleciona títulos e inspira milhões de jovens.",
-        link: "https://pt.wikipedia.org/wiki/Rayssa_Leal",
-        tags: "skate fada sk8"
+      titulo: "Bitcoin",
+      descricao: "É a criptomoeda mais famosa e a primeira a ser criada. Muitas pessoas a consideram como o ouro digital.",
+      tags: "bitcoin"
     },
     {
-        titulo: "Beatriz Souza",
-        descricao: "Beatriz Souza é uma judoca brasileira que se destacou nos Jogos Olímpicos de Paris 2024, conquistando a medalha de ouro e inspirando novas gerações de atletas.",
-        link: "https://pt.wikipedia.org/wiki/Beatriz_Souza",
-        tags: "judô judo judoca judoka"
+      titulo: "Ethereum (ETH)",
+      descricao: "Além de ser uma moeda, o Ethereum é uma plataforma que permite a criação de outras criptomoedas e aplicativos descentralizados.",
+      tags: "ethereum, eth"
     },
     {
-        titulo: "Rebeca Andrade",
-        descricao: "Rebeca Andrade é uma ginasta brasileira que conquistou o mundo com suas acrobacias e força. Aos poucos anos, ela já coleciona títulos e é considerada uma das maiores ginastas da história do Brasil.",
-        link: "https://pt.wikipedia.org/wiki/Rebeca_Andrade",
-        tags: "ginástica ginastica ouro"
+      titulo: "Binance Coin (BNB)",
+      descricao: "É a criptomoeda da plataforma de exchange Binance, uma das maiores do mundo.",
+      tags: "binance, bnb"
+    },
+    {
+      titulo: "Cardano (ADA)",
+      descricao: "Conhecida por sua abordagem científica e sustentável, o Cardano busca resolver alguns dos problemas do Ethereum.",
+      tags: "cardano, ada"
+    },
+    {
+      titulo: "Solana (SOL)",
+      descricao: "Uma plataforma de blockchain de alto desempenho, com foco em contratos inteligentes e aplicativos descentralizados.",
+      tags: "solana, sol"
     }
-];
+  ];
