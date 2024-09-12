@@ -71,6 +71,7 @@ section button {
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 70%;
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
@@ -96,18 +97,12 @@ section button {
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
-/* Estiliza a área da imagem da fruta */
-#imagem-fruta {
-    text-align: center; /* Alinha a imagem ao centro */
-    margin-top: 2rem; /* Espaço acima da área da imagem */
-}
-
-/* Estiliza a imagem da fruta */
-.imagem-fruta {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 0.6rem; /* Adiciona bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra leve */
+.item-resultado img {
+    margin-top: 20px; /* Move a imagem 20px para baixo */
+    width: 200px; /* Garante que a imagem não exceda a largura do contêiner */
+    display: block; /* Faz com que a imagem se comporte como um bloco */
+    margin-left: auto; /* Centraliza a imagem horizontalmente */
+    margin-right: auto; /* Centraliza a imagem horizontalmente */
 }
 
 /* Estiliza o rodapé da página */
