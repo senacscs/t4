@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    cursor: none;
+  }
+  
+    body {
+      position: relative;
+      width: 100%;
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: .875rem;
+      color: #292927;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    header {
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; /* Ocupa toda a altura da viewport inicialmente */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 10;
+      transition: height 0.5s ease; /* Transição suave de altura */
+      box-shadow: 0 0 10px 0 white;
+      border-bottom: 0.1rem solid white;
+
+    }
+    
+    header.scrolled {
+      height: 100px; /* Reduz a altura quando a página é rolada */
+    }
+    
+    h1 {
+      font-size: 40px;
+      transition: font-size 0.5s ease; /* Animação para o tamanho do texto */
+    }
+    
+    header.scrolled h1 {
+      font-size: 24px; /* Tamanho do texto ao rolar a página */
+    }
+    
+  .blocos-indicacoes-html {
+    background-color: black;
+    position: relative;
+    top: 150px;
+    left: 100px;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  h2, p {
+    position: relative;
+    left: 10px;
+  }
+
+  .blocos-olamundo {
+    position: relative;
+    left: 460px;
+    top: 240px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+  
+  .blocos-indicacoes-css {
+    position: relative;
+    left: 850px;
+    top: 50px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-projeto {
+    position: relative;
+    left: 100px;
+    top: 70px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-responsaveis {
+    position: relative;
+    left: 460px;
+    bottom: 50px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-oficina {
+    position: relative;
+    left: 850px;
+    bottom: 160px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-teste-ods {
+    position: relative;
+    left: 100px;
+    bottom: 120px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-imersao1 {
+      position: relative;
+      left: 460px;
+      bottom: 250px;
+      background-color: black;
+      position: relative;
+      color: white;
+      border: 0.1rem solid white;
+      width: 310px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 0 white;
+      max-width: 350px;
+  }
+
+  .content {
+    position: relative;
+    top: 600px;
+    right: 15px;
+  }
+
+
+
+
+  
+  body,html  {
+    background-color: #000;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .scroll-downs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    width :34px;
+    height: 55px;
+  }
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+    position: relative;
+    left: 500px;
+  }
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
+
+
+
+
+
+
+
