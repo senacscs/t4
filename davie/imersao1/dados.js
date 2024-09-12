@@ -243,5 +243,19 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Harry_Styles",
         imagem: "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2019/12/13130609/adore2.jpg",
         tags: "estilo pop direction"
+    },
+    {
+        titulo: "Ariana Grande",
+        descricao: "Ariana Grande-Butera é uma cantora, compositora, produtora musical, atriz e empresária norte-americana. Considerada um ícone pop e uma figura influente na música popular, ela é conhecida por seu alcance vocal de quatro oitavas e seu uso característico do registro de apito.",
+        link: "https://pt.wikipedia.org/wiki/Ariana_Grande",
+        imagem: "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2024/01/13151246/GettyImages-1202144628.jpg",
+        tags: "famosa atriz pop"
+    },
+    {
+        titulo: "Michael Jackson",
+        descricao: "Michael Joseph Jackson foi um cantor, compositor e dançarino estadunidense. Apelidado de 'Rei do Pop', foi um dos ícones culturais mais importantes e influentes de todos os tempos e um dos maiores artistas da história da música.",
+        link: "https://pt.wikipedia.org/wiki/Michael_Jackson",
+        imagem: "https://midias.em.com.br/_midias/jpg/2024/05/27/1200x720/1_michael_jackson___epic_records-37454700.jpg",
+        tags: "pop god goat rei"
     }
 ];
