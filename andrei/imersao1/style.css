@@ -101,6 +101,7 @@ section button {
 img {
     display: block;
     width: 400px;
+    height: 400px
 }
 /* Estiliza o rodapé da página */
 footer {
