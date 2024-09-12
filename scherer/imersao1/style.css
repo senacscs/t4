@@ -65,17 +65,18 @@ section button {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-    background: #eff621; /* Cor de fundo dos itens */
+    background: #ffffff; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    border:blue 2px solid;
+    border:rgb(255, 208, 0) 4px solid;
+    text-align: center;
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
+    font-size: 10rem; /* Tamanho da fonte */
     color: #222831; /* Cor do texto */
 }
 
@@ -83,11 +84,14 @@ section button {
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
     color: #30475E; /* Cor do texto dos links */
+    text-align: center;
+    font-size: 10ren ;
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
 .item-resultado a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-align: center;
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
@@ -114,4 +118,12 @@ footer {
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+}
+img{
+    float: left;
+    border: transparent thin solid;
+    padding:5px;
+    margin: 0px 10px 10px 0px;
+    width: 15%;
+    
 }
