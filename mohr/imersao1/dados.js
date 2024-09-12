@@ -61,7 +61,26 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Karen_(SpongeBob_SquarePants)",
         imagem: "karen.png",
         tags: "karen computador"
+    },
+    {
+        titulo: "Larry",
+        descricao: "Larry, a Lagosta, um personagem forte e musculoso que frequenta a academia na Fenda do Biquíni. Ele aparece em alguns episódios onde eles têm interações divertidas.",
+        link: "https://pt.wikipedia.org/wiki/Larry_(SpongeBob_SquarePants)",
+        imagem: "larry.png",
+        tags: "Larry"
+    },
+    {
+        titulo: "Mexilhãozinho",
+        descricao: "Mexilhãozinho é fofo e inofensivo, mas acaba causando muitos problemas ao devorar a comida do restaurante e causar confusão. ",
+        link: "https://pt.wikipedia.org/wiki/Larry_(SpongeBob_SquarePants)",
+        imagem: "mexilhaozinho.png",
+        tags: "mexilhaozinho"
+    },
+    {
+        titulo: "Homem-Seria",
+        descricao: "Apesar de sua idade avançada, o Homem-Sereia ainda tenta lutar contra o mal, embora muitas vezes ele fique atrapalhado, esquecendo-se de suas próprias habilidades e da realidade ao seu redor. Ele costuma usar seu cinto com poderes especiais e gritar seu bordão ao ataque!",
+        link: "https://pt.wikipedia.org/wiki/Homemsereia_(SpongeBob_SquarePants)",
+        imagem: "homemsereia.png",
+        tags: "homemsereia"
     }
-    
-    
 ];
