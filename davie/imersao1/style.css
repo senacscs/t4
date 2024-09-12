@@ -4,18 +4,20 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #ffffff; /* Cor de fundo da página */
+    background-image: url(https://i0.wp.com/www.sabra.org.br/site/wp-content/uploads/2020/11/conheca-mais-sobre-o-surgimento-do-hip-hop-20200904142853.jpg.jpg?fit=800%2C533&ssl=1); /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
     height: 100vh; /* Preenche a altura total da viewport */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.4rem; /* Tamanho da fonte */
-    color: #000000; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
