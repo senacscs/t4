@@ -100,9 +100,7 @@ section button {
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50px;
+    width: 400px;
 }
 /* Estiliza o rodapé da página */
 footer {
