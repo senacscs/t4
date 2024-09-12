@@ -42,12 +42,12 @@ let dados = [
     },
     {
         titulo: "Natalia",
-        descricao: "",
-        tags: "Física ",
+        descricao: "Natalia é a nova professora de Física",
+        tags: "Física fis",
     },
     {
         titulo: "Alana",
-        descricao: "",
+        descricao: "Alana é a nova professora de artes. Bem tranquila e parece gostar da nossa turma",
         tags: "Artes",
     },
 ];
