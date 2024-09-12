@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(Hollow-Knight-Ambience-10h-Greenpath-Bass-waterfall.jpg);
+    
 }
 
 /* Estiliza os títulos h1 */
@@ -106,4 +107,13 @@ footer {
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+}
+
+img.capas{
+    float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 100px 100px 100px 50;
+    width: 100px;
+    border-radius: 10px;
 }
