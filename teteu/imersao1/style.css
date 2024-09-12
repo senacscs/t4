@@ -105,4 +105,11 @@ footer {
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+    position:fixed;
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 200px;
 }
