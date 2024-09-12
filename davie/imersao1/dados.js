@@ -236,5 +236,12 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Machine_Gun_Kelly",
         imagem: "https://media.9news.com/assets/ETONLINE/images/59f3c5d3-0160-417d-8e2f-3b211cf6a737/59f3c5d3-0160-417d-8e2f-3b211cf6a737_1140x641.jpg",
         tags: "rock tatuado famoso pegador rap"
+    },
+    {
+        titulo: "Harry Styles",
+        descricao: "Harry Edward Styles é um cantor, compositor e ator britânico. Sua carreira musical começou em 2010 como concorrente solo na série britânica de competição de música The X Factor. Após sua eliminação, ele foi trazido de volta para se juntar à boy band One Direction, que se tornou uma das boy bands mais vendidas de todos os tempos antes de entrar em um hiato indefinido em 2016.",
+        link: "https://pt.wikipedia.org/wiki/Harry_Styles",
+        imagem: "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2019/12/13130609/adore2.jpg",
+        tags: "estilo pop direction"
     }
 ];
