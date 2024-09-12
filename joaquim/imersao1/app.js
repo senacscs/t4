@@ -28,6 +28,7 @@ function pesquisar() {
             // cria um novo elemento
             resultados += `
             <div class="item-resultado">
+                <img src=${dado.imagem} alt=${dado.titulo}>
                 <h2>
                     <a href="#" target="_blank">${dado.titulo}</a>
                 </h2>

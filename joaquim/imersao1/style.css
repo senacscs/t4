@@ -95,6 +95,15 @@ section button {
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
+img {
+    float: left;
+   
+    margin: 0 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 0.9em;
+}
+
 /* Estiliza o rodapé da página */
 footer {
     background-color: #9f3939; /* Cor de fundo do rodapé */
