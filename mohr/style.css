@@ -1,432 +1,66 @@
 body {
-    background: linear-gradient(50deg, #262626 50%, #161616 50%);
-    overflow-y: hidden;
-    overflow-x: hidden;
-    font-family: sans-serif;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    animation: mua 0.1s linear infinite;
+}
+@keyframes mua {
+    0% {
+        background-color: cadetblue;
+    }
+    10% {
+        background-color: rebeccapurple;
+    }
+    20% {
+        background-color: red;
+    }
+    30% {
+        background-color: black;
+    }
+    40% {
+        background-color: aqua;
+    }
+    50% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: greenyellow;
+    }
+    70% {
+        background-color: rgb(255, 0, 136);
+    }
+    80% {
+        background-color: blue;
+    }
+    90% {
+        background-color: crimson;
+    }
+    100% {
+        background-color: darkorange;
+    }
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    transform: scale(1.00);
-    margin-top: -3.5vh;
-}
-
-.display {
-    position: absolute;
-    background: linear-gradient(50deg, #a8acb0 50%, #abb1af 50%);
-    height: 420px;
-    width: 720px;
-    border-radius: 2px;
-    background-image: url(planodefundo.png);
-    background-size: cover;
-    background-position: bottom;
-}
-
-.border {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: #000000;
-    height: 465px;
-    width: 770px;
-    border: 5px rgb(169, 169, 179) solid;
-}
-
-.bottom {
-    margin-top: 500px;
-    position: absolute;
-    height: 33px;
-    width: 925px;
-    border-radius: 3px;
-    background-color: rgb(162, 162, 166);
-}
-
-.bottom::before {
-    content: '';
-    position: absolute;
-    background-color: #9a9ea1;
-    height: 15px;
-    width: 925px;
-    margin-top: 30px;
-    border-bottom-right-radius: 7.5rem 2.5rem;
-    border-bottom-left-radius: 7.5rem 2.5rem;
-}
-
-.bottom::after {
-    content: '';
-    position: absolute;
-    background-color: #606067;
-    height: 10px;
-    width: 125px;
-    margin-left: 400px;
-    border-radius: 0 0 .25rem .25rem
-}
-
-.barra-de-tarefas {
-    width: 100%;
-    height: 30px;
-    backdrop-filter: blur(30px);
-    margin-top: calc(420px - 30px);
-    border-top: 1px solid rgba(18, 18, 18, 0.27);
-    align-content: center;
-}
-
-.tarefas {
-    width: 300px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0);
+.dis {
+    width: 800px;
+    height: 400px;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tarefas img {
-    height: 23px;
-    width: 23px;
-    padding: 2.5px;
-    border-radius: 4px;
-    transition: 0.2s;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.redesw {    
-    height: 23px;
-    width: 23px;
-    padding: 2.5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.redesw img {
-    height: 23px;
-    width: 23px;
-}
-.abaredes {
-    width: 0px;
-    height: 20px;
-    margin-top: -60px;
-    background-color: rgba(255, 255, 255, 0.562);
-    position: absolute;
-    transition: 0.3s ease-in-out;
-    border-radius: 6px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-.redesw:hover .abaredes {
-    border: 1px solid rgb(0, 0, 0);
-    padding: 5px;
-    width: 100px;
-}
-.tarefas img:hover, .redesw img:hover {
-    background-color: #9a9ea171;
-}
-.abaredes a ion-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 3px;
-    margin-right: 3px;
-    transition: 0.2s;
-}
-.abaredes :nth-child(1) ion-icon:hover {
-    color: rgb(21, 255, 0);
-}
-.abaredes :nth-child(2) ion-icon:hover {
-    color: rgb(129, 17, 235);
-}
-.abaredes :nth-child(3) ion-icon:hover {
-    color: rgb(245, 17, 253);
-}
-.abaredes :nth-child(4) ion-icon:hover {
-    color: rgb(0, 2, 83);
-}
-.abaredes a, .abaredes a:visited {
-    text-decoration: none;
-    color: #000000;
-}
-
-.hora {
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    color: rgb(208, 208, 208);
-    letter-spacing: 1px;
-    margin-top: 12px;
-}
-
-.data {
-    width: 100px;
-    height: 30px;
-    margin-top: -40px;
-    text-align: end;
-    background-color: rgba(255, 0, 0, 0);
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.data p {
-    position: absolute;
-    color: rgb(208, 208, 208);
-    top: 0;
-    font-size: 13px;
-    margin-left: 26px;
-    margin-top: 15px;
-    letter-spacing: 1px;
-}
-
-.app {
-    width: 93%;
-    height: 350px;
-    margin-left: calc((100% / 2) - (93% / 2));
-    margin-top: 20px;
-    position: absolute;
+    background-color: rgb(122, 122, 122);
+    border: 5px solid black;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    background-image: url(Sem\ título.png);
 }
-
-.app a ion-icon {
-    width: 30px;
-    height: 30px;
-    color: rgb(16, 0, 106);
-    background-color: rgb(220, 221, 235);
-    padding: 3px;
-    border-radius: 4px;
-    transition: 0.3s;
+.bas {
+    width: 900px;
+    height: 150px;
+    background-color: rgb(122, 122, 122);
+    margin: auto;
 }
-
-.app a:hover::before {
-    background-color: #a3a3a394;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.229);
-    color: rgb(255, 255, 255);
-}
-
-.app a {
-    width: 40px;
-    height: 60px;
-    transition: 0.3s;
-}
-
-.app a::before {
-    position: absolute;
-    width: 40px;
-    text-align: center;
-    color: rgb(238, 238, 238);
-    top: 40px;
-    transition: 0.3s;    
-    transform: translate(-5px, -44px);    
-    padding: 44px 3px 3px 3px;    
-    border-radius: 5px;
-}
-
-.mun::before {
-    content: "Olá Mundo";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.inh::before {
-    content: "Indicações HTML";
-    text-shadow: 
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.inc::before {
-    content: "Indicações CSS";
-    text-shadow: 
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.res::before {
-    content: "Respon- sáveis";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px; 
-}
-
-.pro::before {
-    content: "Projeto PI";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.cur::before {
-    content: "Currículo";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.ofi::before {
-    content: "Oficina";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.tod::before {
-    content: "Test ODS";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.jog::before {
-    content: "Jogo 1";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.data2 {
-    font-size: 24px;
-    font-weight: bold;
+.p {
+    width: 50px;
+    height: 50px;
+    background-color: black;
     color: white;
+    margin-right: 100px;
 }
-
-.cuidado::before {
-    content: "Autocuida- do";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
+.p:hover {
+    width: 200px;
+    height: 200px;
 }
-
-.cuidado {
-    position: relative;
-    bottom: 120px;
-}
-
-.tecnologia::before {
-    content: "Tecnologia /mat";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.tecnologia {
-    position: relative;
-    bottom: 120px;
-}
-
-.imersao::before {
-    content: "Imersão";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.imersao {
-    position: relative;
-    bottom: 120px;
-}
-.embreve::before {
-    content: "Em Breve";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.embreve {
-    position: relative;
-    bottom: 120px;
-}
-
-
-
-
-
