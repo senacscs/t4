@@ -12,16 +12,19 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
+    background-image: url(bkgd.jpg);
+    background-size:cover;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    margin-top: 20%;
+    font-size: 3rem; /* Tamanho da fonte */
+    color: #DDDDDD; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    text-shadow: 0 0 20px #ff00c8;
 }
-
 /* Estiliza as seções da página */
 section {
     display: flex; /* Usa Flexbox para layout */
@@ -40,6 +43,7 @@ section input {
     color: #45474B; /* Cor do texto */
     font-size: 1rem; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui padding e border na largura total */
+    box-shadow: 0 0 15px #DDDDDD;
 }
 
 /* Estiliza os botões dentro das seções */
@@ -47,7 +51,7 @@ section button {
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #30475E; /* Cor de fundo do botão */
+    background-color: #620969; /* Cor de fundo do botão */
     color: #F5F7F8; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -75,13 +79,13 @@ section button {
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    color: #61094e; /* Cor do texto */
 }
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+    color: #61094e; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
@@ -102,7 +106,7 @@ footer {
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+    margin-bottom: 0;
 }

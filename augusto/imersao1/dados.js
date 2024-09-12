@@ -19,12 +19,13 @@ let dados = [
       "Counter-Strike: Global Offensive (CS:GO) é um jogo de tiro em primeira pessoa desenvolvido pela Valve e Hidden Path Entertainment. Lançado em 2012, é a quarta edição da série Counter-Strike e é conhecido por seu jogo competitivo e altamente estratégico.",
     link: "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
     tags: "FPS competitivo Valve estratégia",
+    cate: "fps"
   },
   {
     titulo: "Dead by Daylight",
     descricao: "Dead by Daylight é um jogo de terror e sobrevivência multiplayer assimétrico desenvolvido pela Behaviour Interactive. Lançado em 2016, o jogo coloca um grupo de sobreviventes contra um assassino controlado por outro jogador, oferecendo uma experiência tensa e imprevisível.",
     link: "https://www.deadbydaylight.com/",
-    tags: "horror multiplayer sobrevivência"
+    tags: "terror multiplayer sobrevivência"
 },
 {
     titulo: "Fortnite",

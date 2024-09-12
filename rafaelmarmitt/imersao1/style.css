@@ -51,7 +51,7 @@ section button {
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #30475E; /* Cor de fundo do botão */
+    background-color: #620969; /* Cor de fundo do botão */
     color: #F5F7F8; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -110,21 +110,3 @@ footer {
     font-size: 1rem; /* Tamanho da fonte */
     margin-bottom: 0;
 }
-
-nav ul {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Transforma a lista em um flex container */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-}
-
-nav li {
-    margin: 0 10px; /* Adiciona um espaço de 10px entre os itens */
-}
-
-nav a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    /* Adicione aqui outras propriedades de estilo para os links, como cor, fonte, etc. */
-    color: white;
-}
-
