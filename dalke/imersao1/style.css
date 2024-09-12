@@ -12,12 +12,15 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
@@ -107,11 +110,26 @@ footer {
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
 } 
-img.capas{
+/* img.capas{
     float: left;
     border: transparent thin solid;
     padding: 5px;
     margin: 0px 10px 10px 0;
     width: 30%;
     height: 190px;
+    border-radius: 14px;
+} */
+
+.resultado-flex {
+    display: flex;
+    align-items: center;
+}
+
+.dados-animal {
+    margin-left: 20px;
+}
+
+.imagem {
+    width: 200px;
+    height: 200px;
 }

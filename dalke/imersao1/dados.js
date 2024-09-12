@@ -19,7 +19,7 @@ const racas = [
         pelagem: "preta",
         adaptabilidade: "clima temperado",
         descricao: "Raça bovina britânica, conhecida por sua carne de alta qualidade, marmoreio e precocidade sexual. Animais precoces, com carcaça pesada e bem conformada. Pelagem curta, densa e brilhante.",
-        imagem: "angus.jpg"
+        imagem: "imagens/angus.jpg"
     },
     {
         raça: "Jersey",
@@ -132,7 +132,7 @@ const racas = [
     raça: "Simental",
     nomeCientifico: "Bos taurus taurus",
     origem: "Suíça",
-    aptidao: "Dupla aptidão (leite e corte)",
+    aptidao: "Dupla aptidão (corte e leite)",
     pesoMedio: "800-1000 kg",
     pelagem: "Variada (vermelha, branca, pintada)",
     adaptabilidade: "Clima temperado",
@@ -144,11 +144,74 @@ const racas = [
     raça: "Guzerá",
     nomeCientifico: "Bos indicus",
     origem: "Índia",
-    aptidao: "Corte e leite",
+    aptidao: "Dupla aptidão (corte e leite)",
     pesoMedio: "500-700 kg",
     pelagem: "Cinza ou branca",
     adaptabilidade: "Clima tropical",
     descricao: "Raça zebuína de grande porte, com boa produção de leite e carne.",
     imagem: "guzera.jpg"
 },
+    // ... seu array existente ...
+
+{
+    raça: "Brown Swiss",
+    nomeCientifico: "Bos taurus",
+    origem: "Suíça",
+    aptidao: "Leiteira",
+    pesoMedio: "600-800 kg",
+    pelagem: "Cinza ou marrom",
+    adaptabilidade: "Clima temperado",
+    descricao: "Raça leiteira de grande porte, conhecida por sua alta produção de leite e temperamento dócil. Os animais apresentam uma excelente conversão alimentar e são valorizados por sua longevidade produtiva.",
+    imagem: "brown_swiss.jpeg"
+},
+
+{
+    raça: "Limousin",
+    nomeCientifico: "Bos taurus",
+    origem: "França",
+    aptidao: "Corte",
+    pesoMedio: "800-1000 kg",
+    pelagem: "Vermelha",
+    adaptabilidade: "Clima temperado",
+    descricao: "Raça de corte conhecida por sua excelente qualidade de carne, com alto marmoreio e bom rendimento de carcaça. Apresenta crescimento rápido e boa conformação muscular.",
+    imagem: "limousin.jpeg"
+},
+
+{
+    raça: "Shorthorn",
+    nomeCientifico: "Bos taurus",
+    origem: "Inglaterra",
+    aptidao: "Dupla aptidão (leite e corte)",
+    pesoMedio: "800-1000 kg",
+    pelagem: "Vermelha, roxa, ou branca",
+    adaptabilidade: "Clima temperado",
+    descricao: "Raça de dupla aptidão, com boa produção de leite e carne de qualidade. É valorizada por sua rusticidade e adaptabilidade a diferentes sistemas de produção.",
+    imagem: "shorthorn.jpg"
+},
+
+{
+    raça: "Dexter",
+    nomeCientifico: "Bos taurus",
+    origem: "Irlanda",
+    aptidao: "Dupla aptidão",
+    pesoMedio: "300-400 kg",
+    pelagem: "Vermelha, roxa, ou branca",
+    adaptabilidade: "Clima temperado",
+    descricao: "Raça de pequeno porte, de dupla aptidão, ideal para pequenas propriedades e sistemas de produção extensivos. É conhecida por sua rusticidade e facilidade de manejo.",
+    imagem: "dexter.jpg"
+},
+
+{
+    raça: "Marchigiana",
+    nomeCientifico: "Bos taurus",
+    origem: "Itália",
+    aptidao: "Corte",
+    pesoMedio: "800-1000 kg",
+    pelagem: "Cinza ocre",
+    adaptabilidade: "Clima temperado",
+    descricao: "Raça de corte de origem italiana, conhecida por sua excelente qualidade de carne e rusticidade. Apresenta boa conformação muscular e é adaptada a diferentes sistemas de produção.",
+    imagem: "marchigiana.jpg"
+},
+
+// ... continue adicionando mais raças ...
 ]
