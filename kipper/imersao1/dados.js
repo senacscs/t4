@@ -118,23 +118,23 @@ let dados = [
     },
     {
         titulo: "G.A",
-        descricao: "Nascido em Itapevi, Zona Oeste de São Paulo, G.A é uma das novas promessas da cena de música urbana de São Paulo. De 2016 a 2020, inicia sua trajetória como MC de batalhas de rima, sendo destaque nas conceituadas Batalha da Aldeia e Batalha do Vila. Em 2021, G.A assina com a gravadora Supernova Ent., conhecida por revelar o fenômeno do trap Veigh.",
+        descricao: "Nascido em Itapevi, Zona Oeste de São Paulo, G.A é uma das novas promessas da cena de música urbana de São Paulo. De 2016 a 2020, inicia sua trajetória como MC de batalhas de rima, sendo destaque nas conceituadas Batalha da Aldeia e Batalha do Vila. Em 2021, G.A assina com a gravadora Supernova Ent.",
         link: "https://www.rapdab.com.br/2024/05/21/quem-e-g-a-aposta-da-spnv-artista-bate-20-milhoes-de-plays-em-seu-primeiro-ep-sua-vez-de-escutar/",
         imagem:"ga.png",
         tags: "hip hop rap trap r&b  ga g.a super nova supernova"
     },
     {
-        titulo: "Djonga",
-        descricao: "Gustavo Pereira Marques (Belo Horizonte, 4 de junho de 1994), mais conhecido pelo nome artístico Djonga, é um rapper, escritor e compositor brasileiro. Considerado um dos nomes mais influentes do rap na atualidade, o artista chama a atenção por suas letras diretas e agressivas, com fortes críticas sociais.",
-        link: "https://pt.wikipedia.org/wiki/Djonga",
-        imagem:"djonga.png",
-        tags: "hip hop rap trap Djonga"
+        titulo: "Kyan",
+        descricao: "Renan Mesquita da Silva (Praia Grande, São Paulo) Kyan primeiramente cantava funk brasileiro, sues numeros não foram ótimos então em 2019 com o clipe mandrake ele entrou na cena do trap, no dia 6 de novembro de 2019,",
+        link: "https://volumemorto.com.br/kyan-e-o-caldeirao-musical-do-hip-hop/#:~:text=Renan%20MC%20cresceu%20na%20Praia,Charmes%20e%20Neguinho%20do%20Kaxeta.",
+        imagem:"kyan.png",
+        tags: "hip hop rap trap funk brasileiro kyan"
     },
     {
-        titulo: "Djonga",
-        descricao: "Gustavo Pereira Marques (Belo Horizonte, 4 de junho de 1994), mais conhecido pelo nome artístico Djonga, é um rapper, escritor e compositor brasileiro. Considerado um dos nomes mais influentes do rap na atualidade, o artista chama a atenção por suas letras diretas e agressivas, com fortes críticas sociais.",
-        link: "https://pt.wikipedia.org/wiki/Djonga",
-        imagem:"djonga.png",
-        tags: "hip hop rap trap Djonga"
+        titulo: "KayBlack",
+        descricao: "Kaique Menezes (São Paulo, 12 de março de 2000), cujo nome artístico é KayBlack, é uma cantor brasileiro que canta uma mistura de funk e rap. Em abril de 2023, o artista se torna o segundo mais escutado do Spotify no Brasil.",
+        link: "https://pt.wikipedia.org/wiki/Khttps://oglobo.globo.com/cultura/musica/noticia/2023/04/conheca-kayblack-o-rapper-que-fala-de-amor-e-esta-com-quatro-musicas-no-top-50-brasil.ghtmlayBlack",
+        imagem:"kayblack.png",
+        tags: "funk nacional trap hip hop rap kayblack"
     },
 ];
