@@ -4,7 +4,7 @@ let dados = [
         descricao: "Matuê - O Rei da Sofrência Trap. Matheus Brasileiro Aguiar (Fortaleza, 11 de outubro de 1993), mais conhecido pelo nome artístico Matuê, é um rapper, cantor, compositor e guitarrista brasileiro. Ficou conhecido com o single Anos Luz, lançado em 2017 e pelo álbum Máquina do Tempo lançado em 2020. É considerado um dos símbolos do trap brasileiro.",
         link: "https://pt.wikipedia.org/wiki/Matuê",
         imagem: "matue.png",
-        tags: "hip hop trap reggae pop rap musica psicodelica 30praum"
+        tags: "matue hip hop trap reggae pop rap musica psicodelica 30praum"
     },
     {
         titulo: "Teto",
@@ -108,6 +108,27 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Sidoka",
         imagem:"sidoka.png",
         tags: "hip hop funk brasileiro pop eletronica rap trap sidoka"
+    },
+    {
+        titulo: "Djonga",
+        descricao: "Gustavo Pereira Marques (Belo Horizonte, 4 de junho de 1994), mais conhecido pelo nome artístico Djonga, é um rapper, escritor e compositor brasileiro. Considerado um dos nomes mais influentes do rap na atualidade, o artista chama a atenção por suas letras diretas e agressivas, com fortes críticas sociais.",
+        link: "https://pt.wikipedia.org/wiki/Djonga",
+        imagem:"djonga.png",
+        tags: "hip hop rap trap Djonga"
+    },
+    {
+        titulo: "G.A",
+        descricao: "Nascido em Itapevi, Zona Oeste de São Paulo, G.A é uma das novas promessas da cena de música urbana de São Paulo. De 2016 a 2020, inicia sua trajetória como MC de batalhas de rima, sendo destaque nas conceituadas Batalha da Aldeia e Batalha do Vila. Em 2021, G.A assina com a gravadora Supernova Ent., conhecida por revelar o fenômeno do trap Veigh.",
+        link: "https://www.rapdab.com.br/2024/05/21/quem-e-g-a-aposta-da-spnv-artista-bate-20-milhoes-de-plays-em-seu-primeiro-ep-sua-vez-de-escutar/",
+        imagem:"ga.png",
+        tags: "hip hop rap trap r&b  ga g.a super nova supernova"
+    },
+    {
+        titulo: "Djonga",
+        descricao: "Gustavo Pereira Marques (Belo Horizonte, 4 de junho de 1994), mais conhecido pelo nome artístico Djonga, é um rapper, escritor e compositor brasileiro. Considerado um dos nomes mais influentes do rap na atualidade, o artista chama a atenção por suas letras diretas e agressivas, com fortes críticas sociais.",
+        link: "https://pt.wikipedia.org/wiki/Djonga",
+        imagem:"djonga.png",
+        tags: "hip hop rap trap Djonga"
     },
     {
         titulo: "Djonga",

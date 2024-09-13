@@ -71,7 +71,7 @@ section button {
     background: #F5F7F8; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 3rem; /* Espaçamento abaixo dos itens */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
@@ -107,7 +107,7 @@ footer {
     width: 100%; /* Largura total da página */
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
-    font-size: 0.8rem; /* Tamanho da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
 }
 
 img.capas {
