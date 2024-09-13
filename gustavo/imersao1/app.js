@@ -1,38 +1,48 @@
 function pesquisar() {
-    const input = document.getElementById('campo-pesquisa').value.toLowerCase();
-    const resultados = document.getElementById('resultados-pesquisa');
-    resultados.innerHTML = ''; // Limpa os resultados anteriores
-
-    const atletasFiltrados = atletas.filter(atleta => 
-        atleta.nome.toLowerCase().includes(input) || atleta.esporte.toLowerCase().includes(input)
-    );
-
-    if (atletasFiltrados.length === 0) {
-        resultados.innerHTML = '<p>Nenhum atleta encontrado.</p>';
-        return;
+    // Obtém a seção HTML onde os resultados serão exibidos
+    let section = document.getElementById("resultados-pesquisa");
+ 
+    let campoPesquisa = document.getElementById("campo-pesquisa").value
+ 
+    // se campoPesquisa for uma string sem nada
+    if (!campoPesquisa) {
+        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar o nome de um Battle royale e open-world</p>"
+        return
     }
-
-    atletasFiltrados.forEach(atleta => {
-        const atletaElement = document.createElement('div');
-        atletaElement.classList.add('atleta');
-        
-        const nomeElement = document.createElement('h2');
-        nomeElement.textContent = atleta.nome;
-
-        const esporteElement = document.createElement('p');
-        esporteElement.textContent = `Esporte: ${atleta.esporte}`;
-
-        const titulosElement = document.createElement('ul');
-        atleta.titulos.forEach(titulo => {
-            const tituloElement = document.createElement('li');
-            tituloElement.textContent = titulo;
-            titulosElement.appendChild(tituloElement);
-        });
-
-        atletaElement.appendChild(nomeElement);
-        atletaElement.appendChild(esporteElement);
-        atletaElement.appendChild(titulosElement);
-
-        resultados.appendChild(atletaElement);
-    });
+ 
+    campoPesquisa = campoPesquisa.toLowerCase()
+ 
+    // Inicializa uma string vazia para armazenar os resultados
+    let resultados = "";
+    let titulo = "";
+    let descricao = "";
+    let tags = "";
+ 
+    // Itera sobre cada dado da lista de dados
+    for (let dado of dados) {
+        titulo = dado.titulo.toLowerCase()
+        descricao = dado.descricao.toLowerCase()
+        tags = dado.tags.toLowerCase()
+        // se titulo includes campoPesquisa
+        if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
+            // cria um novo elemento
+            resultados += `
+            <div class="item-resultado">
+            <img class="capas" aling="left" src=${dado.imagem}>
+                <h2>
+                    <a href="#" target="_blank">${dado.titulo}</a>
+                </h2>
+                <p class="descricao-meta">${dado.descricao}</p>
+                <a href=${dado.link} target="_blank">Mais informações</a>
+            </div>
+        `;
+        }
+    }
+ 
+    if (!resultados) {
+        resultados = "<p>Nada foi encontrado</p>"
+    }
+ 
+    // Atribui os resultados gerados à seção HTML
+    section.innerHTML = resultados;
 }
