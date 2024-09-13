@@ -61,6 +61,8 @@ section button {
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
+    position: relative;
+    bottom: 10px;
 }
 
 /* Estiliza cada item de resultado */
@@ -105,4 +107,13 @@ footer {
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+}
+
+img.capas {
+    float:left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 10px 0px;
+    width: 20%;
+    border-radius: 25px;
 }
