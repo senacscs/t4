@@ -29,21 +29,21 @@ let dados = [
     },
     {
         titulo: "TZ da Coronel",
-        descricao:"Matheus de Araújo Santos (Cabo Frio, Rio de Janeiro, 6 de julho de 2001) Também conhecido como TZ da Coronel, é um dos nomes em ascensão no trap nacional. Oriundo do Rio de Janeiro, ele se destaca pelo seu estilo cru e autêntico, com letras que retratam a realidade da periferia e suas vivências pessoais. Sua música tem forte apelo nas plataformas digitais, conquistando uma legião de fãs.",
+        descricao:"Matheus de Araújo Santos (Cabo Frio, Rio de Janeiro, 6 de julho de 2001). Também conhecido como TZ da Coronel, é um dos nomes em ascensão no trap nacional. Oriundo do Rio de Janeiro, ele se destaca pelo seu estilo cru e autêntico, com letras que retratam a realidade da periferia e suas vivências pessoais. Sua música tem forte apelo nas plataformas digitais, conquistando uma legião de fãs.",
         link: "https://pt.wikipedia.org/wiki/TZ_da_Coronel",
         imagem: "tz.png",
         tags: "trap rap TZ TZ da coronel"
     },
     {
         titulo: "Yunk Vino",
-        descricao: "Marcos Vinícius Albano(Carapicuíba, São Paulo, 7 de junho de 1997) Yunk Vino é um dos representantes da nova geração do trap brasileiro, conhecido por seu estilo irreverente e suas músicas que combinam beats modernos com letras que abordam festas, estilo de vida e conquistas. Sua personalidade vibrante e flow único o destacam na cena musical urbana do Brasil.",
+        descricao: "Marcos Vinícius Albano(Carapicuíba, São Paulo, 7 de junho de 1997). Yunk Vino é um dos representantes da nova geração do trap brasileiro, conhecido por seu estilo irreverente e suas músicas que combinam beats modernos com letras que abordam festas, estilo de vida e conquistas. Sua personalidade vibrante e flow único o destacam na cena musical urbana do Brasil.",
         link: "https://www.last.fm/pt/music/Yunk+Vino/+wiki",
         imagem:"yunkvino.png",
         tags: "rap trap yunk vino"
     },
     {
         titulo: "Derek",
-        descricao: "Derek Luccas da Silva(São Paulo, 13 de março de 1998) Derek é um dos maiores expoentes do Trap Nacional. Fundador da Label TRAP THE FATO e um dos principais líderes do coletivo Recayd Mob, juntos somam mais de 140 milhões de views em um único clipe no Youtube.",
+        descricao: "Derek Luccas da Silva(São Paulo, 13 de março de 1998). Derek é um dos maiores expoentes do Trap Nacional. Fundador da Label TRAP THE FATO e um dos principais líderes do coletivo Recayd Mob, juntos somam mais de 140 milhões de views em um único clipe no Youtube.",
         link: "https://genius.com/artists/Aka-rasta",
         imagem:"derek.png",
         tags: "rap trap Derek"
@@ -76,8 +76,8 @@ let dados = [
     },
     {
         titulo: "Nagalli",
-        descricao: "André Nagalli(Piracicaba, São Paulo,",
-        link: "https://aminoapps.com/c/rapislife/page/blog/mc-igu-biografia/zY4N_w8Uxu8MG5ePmVob0ZoBrMoQnZPnWz",
+        descricao: "André Nagalli(Piracicaba, São Paulo, 21 de dezembro de 1995). André Nagalli era apenas uma criança, em Piracicaba (SP), quando começou a tocar bateria. Ganhou um disco do Charlie Brown Jr., se interessou por rock, teve uma banda na adolescência, mas foi ao ganhar um programa de produção musical do pai que descobriu um talento. No dia seguinte, já tinha composto 20 beats, as batidas que são a base para a criação de músicas de rap e trap. Não demorou e ele estava improvisando um estúdio em casa para produzir fenômenos do rap e trap nacional.",
+        link: "https://g1.globo.com/sp/piracicaba-regiao/noticia/2024/05/18/quem-e-nagalli-fenomeno-do-rap-que-emplacou-album-na-lista-de-estreias-mais-ouvidas-do-mundo.ghtml",
         imagem:"nagalli.png",
         tags: "rap trap nagalli"
     },
