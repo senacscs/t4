@@ -270,7 +270,7 @@ let dados = [
         descricao: "Seus grandes olhos são usados para encantar o inimigo. Depois, canta uma bela melodia que coloca o adversário para dormir. Ele pode inflar o corpo como um balão e sair flutuando. Possui um alcance vocal que ultrapassa 12 oitavas, mas a habilidade de canto de cada indivíduo depende de seu próprio esforço. Tem uma capacidade pulmonar excelente. Gravações das canções de ninar de Jigglypuff podem ser compradas em lojas de departamentos.    ",
         link: "https://www.pokemon.com/us/pokedex/jigglypuff",
         tags: "jigglypuff normal fada 039 39",
-        imagem: "archives/0038.webp"
+        imagem: "archives/0039.webp"
     },
     {
         titulo: "Wigglypuff",
