@@ -134,8 +134,8 @@ let dados = [
     },
     {
         titulo: "Raticate",
-        descricao: "https://www.pokemon.com/us/pokedex/raticate",
-        link: "Para assustar os adversários, ele posiciona-se de pé e mostra as presas de sua boca. Seus dentes são fortes, capazes até mesmo de roer uma parede de concreto. Suas patas traseiras são palmadas, então é um nadador forte. Pode atravessar rios e às vezes até oceanos. Não importa o quão amigável você seja, ele ficará zangado e o morderá se você tocar em seus bigodes.",
+        descricao: "Para assustar os adversários, ele posiciona-se de pé e mostra as presas de sua boca. Seus dentes são fortes, capazes até mesmo de roer uma parede de concreto. Suas patas traseiras são palmadas, então é um nadador forte. Pode atravessar rios e às vezes até oceanos. Não importa o quão amigável você seja, ele ficará zangado e o morderá se você tocar em seus bigodes.",
+        link: "https://www.pokemon.com/us/pokedex/raticate",
         tags: "raticate 020 20 normal",
         imagem: "archives/0020.webp"
     },
@@ -291,7 +291,7 @@ let dados = [
         descricao: "Com os dentes bastante afiados, morde suas vítimas para sugar o sangue. Ele não irá parar de drenar a energia da vítima até estar satisfeito. Se chupa muito sangue, fica pesado e voa desajeitadamente. Dizem que, se encontrar um dos seus passando fome, compartilha o sangue que coletou. Eles podem sugar mais de 300 gramas de sangue de uma só vez. Seus dentes são ocos como canudos, tornando-os inesperadamente frágeis",
         link: "https://www.pokemon.com/us/pokedex/golbat",
         tags: "golbat veneno voador 042 42",
-        imagem: "archives/0041.webp"
+        imagem: "archives/0042.webp"
     },
     {
         titulo: "Oddish",
