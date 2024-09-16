@@ -28,7 +28,7 @@ let dados = [
         foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Scottish_Fold_-_CFF_cat_show_Heinola_2008-05-03_IMG_7882.JPG/300px-Scottish_Fold_-_CFF_cat_show_Heinola_2008-05-03_IMG_7882.JPG"
     },
     {
-        tituloo: "Sphynx",
+        titulo: "Sphynx",
         descricao: "Conhecido por sua falta de pelo, o que lhe dá uma aparência única. São gatos muito afetuosos e adoram a companhia humana.",
         link: "https://pt.wikipedia.org/wiki/Sphynx",
         tags: "Gato Sphynx Sem Pelo Afetuoso Companhia Humana",
