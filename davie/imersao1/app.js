@@ -6,7 +6,7 @@ function pesquisar() {
 
   // se campoPesquisa for uma string sem nada
   if (!campoPesquisa) {
-      section.innerHTML = "<p>Nada foi encontrado. Digite o apelido ou nome do rapper.</p>"
+      section.innerHTML = "<p class='fundo'>Nada foi encontrado. Digite o apelido ou nome do cantor, mas estadunidense.</p>"
       return 
   }
 
@@ -35,7 +35,7 @@ function pesquisar() {
               </h2>
               <img src=${dado.imagem}>
               <p class="descricao-meta">${dado.descricao}</p>
-              <a href=${dado.link} target="_blank">Mais informações</a>
+              <a href=${dado.link} target="_blank">Veja mais sobre:</a>
           </div>
       `;
       }

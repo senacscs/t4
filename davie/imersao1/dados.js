@@ -271,5 +271,61 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Tina_Turner",
         imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTULVm156zydEn6yTLQG5vqwjJhJrLIOqEhWw&s",
         tags: "suica rainha morta idosa"
+    },
+    {
+        titulo: "Elvis Presley",
+        descricao: "Elvis Aaron Presley foi um cantor, músico e ator estadunidense. Apelidado de 'Rei do Rock and Roll' ou simplesmente 'O Rei', é considerado um dos ícones culturais mais significativos do século XX.",
+        link: "https://pt.wikipedia.org/wiki/Elvis_Presley",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuSS9afEi4HSDHxA_Y9up3pN1Vnm7qBt9x9w&s",
+        tags: "god king eua rock"
+    },
+    {
+        titulo: "Katy Perry",
+        descricao: "Katheryn Elizabeth Hudson, conhecida pelo nome artístico Katy Perry, é uma cantora, empresária, e personalidade de televisão estadunidense. Conhecida por sua influência na música pop moderna e seu estilo exagerado, ela foi chamada de 'Rainha do Camp' pela revista Vogue.",
+        link: "https://pt.wikipedia.org/wiki/Katy_Perry",
+        imagem: "https://biografiaresumida.com.br/wp-content/uploads/2017/12/Katy-Perry-1.jpg",
+        tags: "eua pop queen"
+    },
+    {
+        titulo: "Beyoncé",
+        descricao: "Beyoncé Giselle Knowles-Carter, é uma cantora, compositora, atriz, modelo, dançarina, empresária, estilista, produtora, diretora e roteirista americana. Referida como 'Queen Bey', ela tem sido amplamente reconhecida por seu talento artístico, voz e apresentações ao vivo.",
+        link: "https://pt.wikipedia.org/wiki/Beyoncé",
+        imagem: "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2023/08/21164924/Beyonce-denunciada-filha-6-anos.jpg",
+        tags: "pop queen eua"
+    },
+    {
+        titulo: "Selena Gomez",
+        descricao: "Selena Marie Gomez é uma cantora, atriz, compositora, empresária, produtora e apresentadora norte-americana. Tendo iniciado sua carreira na infância, é uma das artistas mais célebres e sucedidas atualmente, já tendo sido indicada ao Globo de Ouro, Emmy, Grammy, AMAs e VMAs.",
+        link: "https://pt.wikipedia.org/wiki/Selena_Gomez",
+        imagem: "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/06/selena-gomez-e1718906928259.jpg?w=1200&h=1200&crop=1",
+        tags: "pop eua"
+    },
+    {
+        titulo: "Lady Gaga",
+        descricao: "Stefani Joanne Angelina Germanotta, mais conhecida pelo nome artístico Lady Gaga, é uma cantora, compositora, instrumentista, atriz, produtora musical e empresária estadunidense.",
+        link: "https://pt.wikipedia.org/wiki/Lady_Gaga",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTANAwtsCbvExxMi9GlesKVGv32WHpb-fKVpA&s",
+        tags: "queen pop eua"
+    },
+    {
+        titulo: "Lana Del Rey",
+        descricao: "Elizabeth Woolridge Grant, mais conhecida como Lana Del Rey, é uma cantora, compositora, modelo e poetisa norte-americana.",
+        link: "https://pt.wikipedia.org/wiki/Lana_Del_Rey",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRut6d5AcBu6YFwfpFcDB3Gd0QLshruHVdU6w&s",
+        tags: "pop famosa eua queen"
+    },
+    {
+        titulo: "Justin Bieber",
+        descricao: "Justin Drew Bieber é um cantor, compositor e ator canadense. Em 2007, seus vídeos em que cantava covers foram vistos no YouTube por Scooter Braun, que se tornou seu agente e o levou para a cidade de Atlanta, para reunir-se com o cantor Usher.",
+        link: "https://pt.wikipedia.org/wiki/Justin_Bieber",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAwK3_iSETroooQLdw-4kXpLRsIYQkQr-Xmw&s",
+        tags: "famoso kid pop eua goat"
+    },
+    {
+        titulo: "Rihanna",
+        descricao: "Robyn Rihanna Fenty, mais conhecida como Rihanna, é uma cantora, compositora, filantropa, atriz, empresária, modelo, estilista, produtora e heroína barbadense. Uma das maiores e mais influentes artistas femininas da história.",
+        link: "https://pt.wikipedia.org/wiki/Rihanna",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ftmPyjVHCnYDdrl8J1dCFoWvcBS5PckuxA&s",
+        tags: "pop queen eua"
     }
 ];
