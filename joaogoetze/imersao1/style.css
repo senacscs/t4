@@ -34,9 +34,23 @@ div {
      width: 80%;
 }
 
-/* img {
-    width: 100%; nao consigo botar a imagem dos gatos :9
-} */
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .container img {
+            margin-right: 20px;
+        }
+
+a,p,h2 {
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Estiliza os inputs dentro das seções */
 section input {
@@ -101,6 +115,16 @@ section button {
 .descricao-meta {
     color: #45474B; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
+    display: flex;
+    align-items: center;
+}
+
+img.capas{
+    float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 10px 0;
+    width: 15%;
 }
 
 /* Estiliza o rodapé da página */
