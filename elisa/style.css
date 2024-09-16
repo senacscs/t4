@@ -1,124 +1,278 @@
-@media (min-width: 768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(255, 127, 202);
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bahnschrift Condensed";
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* align-items: center; */
+}
+
+/* Estilo da tela de introdução */
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 17, 82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s ease-in-out;
+    z-index: 1000;
+    font-family: "Bahnschrift Condensed";
+}
+
+.intro h1 {
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+    font-family: "Bahnschrift Condensed";
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    padding: 20px;
+    height: 200vh;
+    /* Para ter bastante espaço e testar o scroll */
+    background-color: #f0f0f0;
+}
+
+/* Quando a tela de introdução some */
+.hidden {
+    transform: translateY(-100%);
+}
+
+html,
+body {
+    font-family: "Bahnschrift Condensed";
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    align-items: center;
+    text-align: center;
+}
+
+.text-container {
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    /* align-items: center; */
+    /* font-size: 96px; */
+    /* color: white; */
+    opacity: 0.8;
+    user-select: none;
+    /* text-shadow: 1px 1px rgba(0, 0, 0, 0.1); */
+    /* align-items: center; */
+    /* padding: 100px 0; */
+    /* text-align: center; */
+}
+
+:root {
+    --color-bg1: rgb(5, 60, 211);
+    --color-bg2: rgb(0, 17, 82);
+    --color1: 18, 113, 255;
+    --color2: 39, 74, 255;
+    --color3: 50, 220, 255;
+    --color4: 31, 50, 232;
+    --color5: 43, 28, 125;
+    --color-interactive: 255, 255, 255;
+    --circle-size: 10%;
+    --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
     }
 
-    header {
-        background-color: rgb(254, 60, 151);
-        color: white;
-        padding: 15px;
-        text-align: center;
+    50% {
+        transform: rotate(180deg);
     }
 
-    h1 {
-        text-align: center;
-        color: white;
-        font-family: cooper black;
-        padding: 20px;
-        font-size: 40px;
-    }
-
-    .titulo {
-        background-color: rgb(254, 60, 151);
-        width: 50%;
-        border-radius: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .site1,
-    .site2,
-    .site3,
-    .site4,
-    .site5,
-    .site6,
-    .site7,
-    .site8 {
-        background-color: rgb(254, 60, 151);
-        width: 50%;
-        border-radius: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    h2 {
-        text-align: center;
-        color: white;
-        font-family: cooper black;
-        font-size: 30px;
-    }
-
-    p {
-        text-align: center;
-        color: white;
-        font-family: cooper black;
-        font-size: 15px;
-
+    100% {
+        transform: rotate(360deg);
     }
 }
 
-@media (max-width: 768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(255, 127, 202);
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
     }
 
-    header {
-        background-color: rgb(254, 60, 151);
-        color: white;
-        padding: 15px;
-        text-align: center;
+    50% {
+        transform: translateY(50%);
     }
 
-    h1 {
-        text-align: center;
-        color: white;
-        font-family: cooper black;
-        padding: 20px;
-        font-size: 40px;
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
     }
 
-    .titulo {
-        background-color: rgb(254, 60, 151);
-        width: 50%;
-        border-radius: 20px;
-        margin-left: auto;
-        margin-right: auto;
+    50% {
+        transform: translateX(50%) translateY(10%);
     }
 
-    .site {
-        background-color: rgb(254, 60, 151);
-        width: 50%;
-        border-radius: 20px;
-        margin-left: auto;
-        margin-right: auto;
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    /* top: 0;
+    left: 0; */
+    margin: 0%;
+
+    svg {
+        display: none;
     }
 
-    a {
-        text-decoration: none;
-        color: white;
+
+    .gradients-container {
+        filter: url(#goo) blur(40px);
+        width: 100%;
+        height: 100vh;
     }
 
-    h2 {
-        text-align: center;
-        color: white;
-        font-family: cooper black;
-        font-size: 30px;
+    .g1 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        transform-origin: center center;
+        animation: moveVertical 30s ease infinite;
+
+        opacity: 1;
     }
 
-    p {
-        text-align: center;
-        color: white;
-        font-family: cooper black;
-        font-size: 15px;
+    .g2 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
 
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        transform-origin: calc(50% - 400px);
+        animation: moveInCircle 20s reverse infinite;
+
+        opacity: 1;
     }
+
+    .g3 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2 + 200px);
+        left: calc(50% - var(--circle-size) / 2 - 500px);
+
+        transform-origin: calc(50% + 400px);
+        animation: moveInCircle 40s linear infinite;
+
+        opacity: 1;
+    }
+
+    .g4 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        transform-origin: calc(50% - 200px);
+        animation: moveHorizontal 40s ease infinite;
+
+        opacity: 0.7;
+    }
+
+    .g5 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: calc(var(--circle-size) * 2);
+        height: calc(var(--circle-size) * 2);
+        top: calc(50% - var(--circle-size));
+        left: calc(50% - var(--circle-size));
+
+        transform-origin: calc(50% - 800px) calc(50% + 200px);
+        animation: moveInCircle 20s ease infinite;
+
+        opacity: 1;
+    }
+
+    .interactive {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+        width: 100%;
+        height: 100%;
+        top: -50%;
+        left: -50%;
+
+        opacity: 0.7;
+    }
+}
+
+.site {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.meus{
+    color: white;
+    font-size: 45px;
+    margin: auto;
+}
+a{
+    color: black;
 }

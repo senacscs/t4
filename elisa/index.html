@@ -1,69 +1,99 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="simbolo.i.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="simbolo.i.png">
+    <link rel="stylesheet" href="style.css">
     <title>Index Elisa</title>
 </head>
 
 <body>
-    <header></header>
+    <section class="intro">
+        <img class="star" src="estrela.png">
+        <h1>INDEX ELISA</h1>
+    </section>
     <main>
-        <div class="titulo">
-            <h1>INDEX ELISA</h1>
+        <section class="text-container" id="text-container">
+            <h2 class="meus">Meus Projetos</h2>
+            <div class="grid">
+                <div class="site">
+                    <h2><a href="curriculo/" target="_blank">Currículo</a></h2>
+                    <p>Conheça meu currículo</p>
+                </div>
+                <div class="site">
+                    <h2><a href="olamundo/" target="_blank">Olá Mundo</a></h2>
+                    <p>Primeira webpage desenvolvida em aula e posteriormente postada como site.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="indicacoeshtml/" target="_blank">Indicações HTML</a></h2>
+                    <p>Site com conteudos relacionados a aprender a programar em HTML.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="indicacoescss/" target="_blank">Indicações CSS</a></h2>
+                    <p>Site com conteudos relacionados a aprender a programar em CSS.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="responsaveis/" target="_blank">Responsáveis</a></h2>
+                    <p>Site feito para o sábado letivo do dia 25/05/2024 e apresentado aos pais como forma de mostrar o
+                        que é
+                        desenvolvido no ensino técnico. </p>
+                </div>
+                <div class="site">
+                    <h2><a href="projeto/" target="_blank">Projeto</a></h2>
+                    <p>Site sobre o trabalho de Projeto Integrador e as ODS do trabalho.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="oficina/" target="_blank">Oficina</a></h2>
+                    <p>Site feito com modelo base da turma T1.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="teste_ods/" target="_blank">Teste ODS</a></h2>
+                    <p>Site codado pelo colega Joaquim usando um codigo feito no papel por mim.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="jogo1/" target="_blank">Jogo de Matemática</a></h2>
+                    <p>Jogo de equação de 2° Grau de Matemática. Feito junto com Analice Werner e clara Dick</p>
+                </div>
+                <div class="site">
+                    <h2><a href="https://senacscs.github.io/t4/wickert/tecnologiamat/" target="_blank">Tecnologia
+                            Matemática</a></h2>
+                    <p>Site em que escolhemos uma técnologia e falamos a ligação com a Matemática. Feito com Iuri
+                        Wickert.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="autocuidado/" target="_blank">Autocuidado</a></h2>
+                    <p>Site feito junto com Projeto de Vida com conteúdos sobre autocuidado.</p>
+                </div>
+                <div class="site">
+                    <h2><a href="imersao1/" target="_blank">Imersão Dev Alura</a></h2>
+                    <p>Modificação do código que foi feito durante a Imersão Dev Alura com Google Gemini. </p>
+                </div>
+            </div>
+        </section>
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+                <div class="interactive"></div>
+            </div>
         </div>
-        <div class="site">
-            <h2><a href="curriculo/" target="_blank">Currículo</a></h2>
-            <p>Conheça meu currículo</p>
-        </div>
-        <div class="site">
-            <h2><a href="olamundo/" target="_blank">Olá Mundo</a></h2>
-            <p>Primeira webpage desenvolvida em aula e posteriormente postada como site.</p>
-        </div>
-        <div class="site">
-            <h2><a href="indicacoeshtml/" target="_blank">Indicações HTML</a></h2>
-            <p>Site com conteudos relacionados a aprender a programar em HTML.</p>
-        </div>
-        <div class="site">
-            <h2><a href="indicacoescss/" target="_blank">Indicações CSS</a></h2>
-            <p>Site com conteudos relacionados a aprender a programar em CSS.</p>
-        </div>
-        <div class="site">
-            <h2><a href="responsaveis/" target="_blank">Responsáveis</a></h2>
-            <p>Site feito para o sábado letivo do dia 25/05/2024 e apresentado aos pais como forma de mostrar o que é
-                desenvolvido no ensino técnico. </p>
-        </div>
-        <div class="site">
-            <h2><a href="projeto/" target="_blank">Projeto</a></h2>
-            <p>Site sobre o trabalho de Projeto Integrador e as ODS do trabalho.</p>
-        </div>
-        <div class="site">
-            <h2><a href="oficina/" target="_blank">Oficina</a></h2>
-            <p>Site feito com modelo base da turma T1.</p>
-        </div>
-        <div class="site">
-            <h2><a href="teste_ods/" target="_blank">Teste ODS</a></h2>
-            <p>Site codado pelo colega Joaquim usando um codigo feito no papel por mim.</p>
-        </div>
-        <div class="site">
-            <h2><a href="jogo1/" target="_blank">Jogo de Matemática</a></h2>
-            <p>Jogo de equação de 2° Grau de Matemática. Feito junto com Analice Werner e clara Dick</p>
-        </div>
-        <div class="site">
-            <h2><a href="https://senacscs.github.io/t4/wickert/tecnologiamat/" target="_blank">Tecnologia Matemática</a></h2>
-            <p>Site em que escolhemos uma técnologia e falamos a ligação com a Matemática. Feito com Iuri Wickert.</p>
-        </div>
-        <div class="site">
-            <h2><a href="autocuidado/" target="_blank">Autocuidado</a></h2>
-            <p>Site feito junto com Projeto de Vida com conteúdos sobre autocuidado.</p>
-        </div>
-        <div class="site">
-            <h2><a href="imersao1/" target="_blank">Imersão Dev Alura</a></h2>
-            <p>Modificação do código que foi feito durante a Imersão Dev Alura com Google Gemini. </p>
-        </div>
-
     </main>
+    <script src="efeitos.js"></script>
 </body>
+
+</html>
