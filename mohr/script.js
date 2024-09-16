@@ -25,6 +25,7 @@ function atualizarData() {
 
 // Atualizar a data imediatamente
 atualizarData();
+window.location.href = "/wickert/indexsla/index.html";
 
 // Atualizar a data a cada 1 segundo
 setInterval(atualizarData, 1000);
