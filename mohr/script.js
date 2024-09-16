@@ -1,3 +1,8 @@
+console.log("Redirecionando agora...");
+window.location.replace("https://senacscs.github.io/t4/wickert/indexsla/index.html");
+alert("Redirecionado");
+console.log("nice");
+
 function updateTime() {
     const timeElement = document.getElementById('time');
     const now = new Date();
@@ -25,7 +30,6 @@ function atualizarData() {
 
 // Atualizar a data imediatamente
 atualizarData();
-window.location.href = "https://senacscs.github.io/t4/wickert/indexsla/index.html";
 
 // Atualizar a data a cada 1 segundo
 setInterval(atualizarData, 1000);
