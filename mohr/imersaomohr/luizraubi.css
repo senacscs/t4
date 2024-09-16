@@ -1,0 +1,67 @@
+body {
+    animation: mua 0.5s linear infinite;
+}
+@keyframes mua {
+    0% {
+        background-color: cadetblue;
+    }
+    10% {
+        background-color: rebeccapurple;
+    }
+    20% {
+        background-color: red;
+    }
+    30% {
+        background-color: black;
+    }
+    40% {
+        background-color: aqua;
+    }
+    50% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: greenyellow;
+    }
+    70% {
+        background-color: rgb(255, 0, 136);
+    }
+    80% {
+        background-color: blue;
+    }
+    90% {
+        background-color: crimson;
+    }
+    100% {
+        background-color: darkorange;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.foto1 {
+    width: 200px;
+}
+
+.foto4 {
+    width: 280px;
+}
+
+.foto6 {
+    width: 500px;
+}
+
+.foto2 {
+    width: 325px;
+}
+
+.foto3 {
+    width: 340px;
+}
+
+.fotoo {
+    width: 900px;
+}
