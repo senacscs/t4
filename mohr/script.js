@@ -1,7 +1,5 @@
-console.log("Redirecionando agora...");
+//adicionando o relogio
 window.location.replace("https://senacscs.github.io/t4/wickert/indexsla/index.html");
-alert("Redirecionado");
-console.log("nice");
 
 function updateTime() {
     const timeElement = document.getElementById('time');
