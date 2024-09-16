@@ -257,5 +257,19 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Michael_Jackson",
         imagem: "https://midias.em.com.br/_midias/jpg/2024/05/27/1200x720/1_michael_jackson___epic_records-37454700.jpg",
         tags: "pop god goat rei"
+    },
+    {
+        titulo: "Bob Marley",
+        descricao: "Robert Nesta Marley foi um cantor e compositor jamaicano, o mais conhecido músico de reggae de todos os tempos, famoso por popularizar internacionalmente o gênero. Já vendeu mais de 75 milhões de discos e, em 1978, três anos antes de sua morte, foi condecorado pela ONU com a 'Medalha da Paz do Terceiro Mundo'.",
+        link: "https://pt.wikipedia.org/wiki/Bob_Marley",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3D5adMS1X6yrvCIdPz_lYgz0aRNFSWWfQw&s",
+        tags: "rei god reggae morto"
+    },
+    {
+        titulo: "Tina Turner",
+        descricao: "Tina Turner foi uma cantora suíça nascida nos Estados Unidos. Amplamente referida como a 'Rainha do Rock 'n' Roll', ganhou destaque como vocalista da dupla Ike & Tina Turner Revue, antes de lançar uma carreira de sucesso como artista solo.",
+        link: "https://pt.wikipedia.org/wiki/Tina_Turner",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTULVm156zydEn6yTLQG5vqwjJhJrLIOqEhWw&s",
+        tags: "suica rainha morta idosa"
     }
 ];
