@@ -1,5 +1,5 @@
 body {
-    animation: mua 0.5s linear infinite;
+    animation: mua 0.4s linear infinite;
 }
 @keyframes mua {
     0% {
