@@ -24,11 +24,12 @@ function pesquisar() {
         descricao = dado.descricao.toLowerCase()
         tags = dado.tags.toLowerCase()
         // se titulo includes campoPesquisa
-        if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
+        if (titulo.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
             // cria um novo elemento
             resultados += `
             <div class="item-resultado">
-            <img class="capas" aling="left" src=${dado.imagem}>
+            <img src=${dado.imagem}>
+            
                 <h2>
                     <a href="#" target="_blank">${dado.titulo}</a>
                 </h2>
@@ -37,6 +38,7 @@ function pesquisar() {
             </div>
         `;
         }
+        
     }
 
     if (!resultados) {
