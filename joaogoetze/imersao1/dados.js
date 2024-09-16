@@ -4,7 +4,7 @@ let dados = [
         descricao: "Conhecido por seus olhos azuis intensos e pelagem clara com extremidades escuras. São elegantes e têm um temperamento imprevisível, podendo ser tanto tranquilos quanto ativos.",
         link: "https://pt.wikipedia.org/wiki/Siamês",
         tags: "Gato Siamês Olhos Azuis Pelagem Clara Tranquilo Ativo",
-        foto: "siames.jpeg",
+        foto: "Siames.jpeg",
     },
     {
         titulo: "Persa",
