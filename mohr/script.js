@@ -12,6 +12,7 @@ setInterval(updateTime, 1000);
 updateTime();
 
 function atualizarData() {
+    //modificação para commit
     // Obter a data e hora atuais
     const agora = new Date();
     
