@@ -143,3 +143,18 @@ img{
     border-radius: 20px;
 }
  
+
+
+  
+  #imagemPula {
+    width: 100px; /* Tamanho da imagem, ajuste conforme necessário */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .luiz {
+    max-height: 70px;
+    max-width: 70px;
+    border-radius: 50px;
+  }
