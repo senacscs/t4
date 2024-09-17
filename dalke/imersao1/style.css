@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-image: url(pastowallpaper.jpeg); /* Cor de fundo da página */
+    background-image: url(imagens/pastowallpaper.jpeg); /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -110,15 +110,7 @@ footer {
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
 } 
-/* img.capas{
-    float: left;
-    border: transparent thin solid;
-    padding: 5px;
-    margin: 0px 10px 10px 0;
-    width: 30%;
-    height: 190px;
-    border-radius: 14px;
-} */
+
 
 .resultado-flex {
     display: flex;
@@ -131,5 +123,6 @@ footer {
 
 .imagem {
     width: 200px;
-    height: 200px;
+    height: 180px;
+    border-radius: 15px;
 }
