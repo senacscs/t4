@@ -23,8 +23,6 @@ function atualizarData() {
     const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
     const dataFormatada = agora.toLocaleDateString('pt-BR', opcoes);
 
-    // Atualizar o conteúdo do elemento com a data formatada
-    document.getElementById('data2').textContent = `Data Atual: ${dataFormatada}`;
 }
 
 // Atualizar a data imediatamente
