@@ -1,5 +1,6 @@
-//adicionando o relogio
-window.location.replace("https://senacscs.github.io/t4/wickert/indexsla/index.html");
+console.log("Redirecionando agora...");
+alert("Redirecionado");
+console.log("nice");
 
 function updateTime() {
     const timeElement = document.getElementById('time');
@@ -17,11 +18,11 @@ updateTime();
 function atualizarData() {
     // Obter a data e hora atuais
     const agora = new Date();
-    
+
     // Formatar a data como dia/mês/ano
     const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
     const dataFormatada = agora.toLocaleDateString('pt-BR', opcoes);
-    
+
     // Atualizar o conteúdo do elemento com a data formatada
     document.getElementById('data2').textContent = `Data Atual: ${dataFormatada}`;
 }
