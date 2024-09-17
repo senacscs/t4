@@ -180,17 +180,45 @@ let dados = [
         tags: "trap hip hop rap bk"
     },
     {
-        titulo: "MC Cabelinho",
-        descricao: "Victor Hugo Oliveira do Nascimento (Rio de Janeiro, 28 de janeiro de 1996) mais conhecido como MC Cabelinho é um cantor, compositor e ator brasileiro. Em 2019, estreou na atuação interpretando Farula, na telenovela Amor de Mãe.",
-        link: "https://pt.wikipedia.org/wiki/MC_Cabelinho",
-        imagem:"mccabelinho.png",
-        tags: "trap hip hop rap mc cabelinho"
+        titulo: "Baco Exu dos Blues",
+        descricao: "Diogo Álvaro Ferreira Moncorvo (Salvador, 11 de janeiro de 1996), mais conhecido como Baco Exu do Blues, é um rapper, cantor e compositor brasileiro. Dentre as principais características de Baco estão suas fortes metáforas com letras cruas e poéticas, que falam sobre amor, sexo, poder, religião e sociedade.",
+        link: "https://pt.wikipedia.org/wiki/Baco_Exu_do_Blues",
+        imagem:"baco.png",
+        tags: "trap hip hop rap bacoexudosblues baco exu dos blues"
     },
     {
-        titulo: "MC Cabelinho",
-        descricao: "Victor Hugo Oliveira do Nascimento (Rio de Janeiro, 28 de janeiro de 1996) mais conhecido como MC Cabelinho é um cantor, compositor e ator brasileiro. Em 2019, estreou na atuação interpretando Farula, na telenovela Amor de Mãe.",
-        link: "https://pt.wikipedia.org/wiki/MC_Cabelinho",
-        imagem:"mccabelinho.png",
-        tags: "trap hip hop rap mc cabelinho"
+        titulo: "Borges",
+        descricao: "Luiz Felipe Borges Campos (Rio de Janeiro, 29 de junho de 2000), mais conhecido pelo seu nome artístico Borges, é um rapper, compositor e músico brasileiro. Ficou conhecido nacionalmente pelas canções AKA do Flamengo, Iphone Branco, e Loucura. Atualmente o artista se encontra entre os maiores nomes do subgênero trap no Brasil.",
+        link: "https://pt.wikipedia.org/wiki/Borges_(cantor)",
+        imagem:"borges.png",
+        tags: "trap hip hop rap borges"
+    },
+    {
+        titulo: "Orochi",
+        descricao: "Flávio Cesar Costa de Castro (São Gonçalo, 24 de março de 1999), mais conhecido pelo nome artístico Orochi, é um rapper, cantor, compositor e empresário brasileiro. Orochi cantava rap nas Batalhas do Tanque até 2016, quando levou um esculacho do Jhony MC que disse que ele so ganhava por panelinha, fazendo ele esquecer das batalhas de rima e comecar no trap-funk.",
+        link: "https://pt.wikipedia.org/wiki/Orochi_(rapper)",
+        imagem:"orochi.png",
+        tags: "trap hip hop rap orochi funk brasileiro"
+    },
+    {
+        titulo: "Brocasito",
+        descricao: "Ivo Luiz Alcântara da Silva ( Juazeiro, 3 de setembro de 2003) Conhecido como Brocasiti, ficou famoso por seu EP de 2021 chamado Rest In Peace, que possui mais de 20 milhões de reproduções no Spotify. Ele se destaca por sua mescla de batida com estilo melódico e letras agressivas. Começou a fazer rap aos 16 anos, quando gravava canções no celular e as publicava no SoundCloud.",
+        link: "https://pt.famousbirthdays.com/people/brocasito.html",
+        imagem:"brocasito.png",
+        tags: "trap hip hop rap brocasito plugg "
+    },
+    {
+        titulo: "Brandão085",
+        descricao: "Gabriel Brandão (Fortaleza, 2001) conhecido como Brandão/Brandão085 dês de pequeno foi fascinado pela música, se mudou do Ceará para Fortaleza em 2013, que fez abrir  caminhos para ele e começar sua vida na música. Brandão ficou conhecido primeiramente em sua participação em Trap The Fato, e, por ser o mais novo contratado da 30praum, gravadora do rapper Matuê, e cantar o novo album do Matuê junto com ele no Rock in Rio 2024.",
+        link: "https://billboard.com.br/como-brandao085-que-canta-com-matue-no-rock-in-rio-superou-a-violencia/",
+        imagem:"brandao.png",
+        tags: "trap hip hop rap brandao brandão brandão085 brandao085"
+    },
+    {
+        titulo: "",
+        descricao: "",
+        link: "",
+        imagem:".png",
+        tags: "trap hip hop rap "
     },
 ];
