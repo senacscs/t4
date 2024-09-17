@@ -36,9 +36,16 @@ let dados = [
     },
     {
         titulo: "Valdomiro Vaz Franco",
-        descricao: "Marcos Antônio de Lima, mais conhecido como Índio, é um dos maiores ídolos da história do Internacional. Sua trajetória no clube gaúcho foi marcada por títulos, paixão e uma identificação única com a torcida colorada.",
-        link: "https://pt.wikipedia.org/wiki/Marcos_Ant%C3%B4nio_de_Lima",
+        descricao: "Valdomiro Vaz Franco é uma lenda viva do Sport Club Internacional. Com mais de 800 jogos, ele é o jogador que mais vezes vestiu a camisa colorada. Sua paixão pelo clube e sua liderança dentro de campo foram fundamentais para a conquista de diversos títulos, como os tricampeonatos brasileiros e os octacampeonatos gaúchos.",
+        link: "https://pt.wikipedia.org/wiki/Valdomiro_Vaz_Franco",
         tags: "inter idolo atacante ponta direita destro brasileiro brasil valdomiro",
         imagem: "imagens/valdomiro.jpg"
+    },
+    {
+        titulo: "Osmar Fortes Barcellos",
+        descricao: "Osmar Fortes Barcellos, mais conhecido como Tesourinha, é um nome que ecoa com força na história do futebol gaúcho e, especialmente, do Sport Club Internacional. Nascido em Porto Alegre em 3 de outubro de 1921, Tesourinha se destacou como um dos maiores atacantes da história do futebol brasileiro.",
+        link: "https://pt.wikipedia.org/wiki/Tesourinha_(futebolista)",
+        tags: "inter idolo atacante ponta direita destro brasileiro brasil tesourinha",
+        imagem: "imagens/tesourinha.jpg"
     },
 ];
