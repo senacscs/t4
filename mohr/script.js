@@ -1,6 +1,3 @@
-console.log("Redirecionando agora...");
-alert("Prazer Manuela... Sou caloteira e estou devendo 30 conto para que fez essa index linda.");
-console.log("nice");
 
 function updateTime() {
     const timeElement = document.getElementById('time');
