@@ -56,7 +56,7 @@ let dados = [
         tags: "hip hop rap pop r&b soul reggae funk brasileiro eletronica musica regional brasileira trap Aka Rasta"
     },    {
         titulo: "Matheus Barros (Teteu)",
-        descricao: "Matheus Barros, tem um ranço enorme pelo mano chico, e seu coração pertence a varias mulheres, as martina, as maria, as gabriela. Seu passatempo predileto é resenhar com os guris e pensar nas suas amadas.",
+        descricao: "Matheus Barros, tem um ranço enorme pelo mano chico, e seu coração pertence a varias mulheres, as martina, as maria, as gabriela. Seu passatempo predileto é resenhar com os guris e pensar nas suas amadas. Adorado por todos, tem que ter na resenha! Sem ele nem tem resenha, o tezeu é virgem, minha rima é chata, so a lersch foi pra chapa! Tezeu na cestinha usava a camisa numero 23, não jogava uma bola fora, se é que tu me entende... ",
         imagem:"teteu.png",
         tags: "teteu"
     },
@@ -85,7 +85,7 @@ let dados = [
         titulo: "Raffa Moreira",
         descricao: "Rafael Fernando Moreira (Guarulhos, 10 de fevereiro de 1988), mais conhecido pelo nome artístico de Raffa Moreira ou BC Raff, é um rapper e produtor musical brasileiro. Ficou conhecido com o single Bro, lançado em outubro de 2017, e com sua participação em Poetas no Topo 2. É considerado o principal pioneiro do trap no Brasil, e um dos principais artistas da cena do trap nacional.",
         link: "https://pt.wikipedia.org/wiki/Raffa_Moreira",
-        imagem:"raffamoreira.png",
+        imagem:"Raffamoreira.png",
         tags: "hip hop rap trap raffa moreira rafael"
     },
     {
@@ -135,6 +135,62 @@ let dados = [
         descricao: "Kaique Menezes (São Paulo, 12 de março de 2000), cujo nome artístico é KayBlack, é uma cantor brasileiro que canta uma mistura de funk e rap. Em abril de 2023, o artista se torna o segundo mais escutado do Spotify no Brasil.",
         link: "https://pt.wikipedia.org/wiki/Khttps://oglobo.globo.com/cultura/musica/noticia/2023/04/conheca-kayblack-o-rapper-que-fala-de-amor-e-esta-com-quatro-musicas-no-top-50-brasil.ghtmlayBlack",
         imagem:"kayblack.png",
-        tags: "funk nacional trap hip hop rap kayblack"
+        tags: "funk brasileiro trap hip hop rap kayblack"
+    },
+    {
+        titulo: "Chefin",
+        descricao: "Natanael Cauã Almeida de Souza (Rio de Janeiro, 14 de setembro de 2004), mais conhecido pelo nome artístico Chefin, é um rapper, cantor e compositor brasileiro. Ficou conhecido nacionalmente pela canção 212, que alcançou o 4° lugar da Billboard Brazil, e atualmente possui mais de duzentos milhões de streams na Internet.",
+        link: "https://pt.wikipedia.org/wiki/Chefin",
+        imagem:"chefin.png",
+        tags: "trap hip hop rap chefin"
+    },
+    {
+        titulo: "Cjota",
+        descricao: "João Victor Martins (Belo Horionte, 24 de agosto de 2000), seu nome artistico é Cjota. Cantando desde os 4 anos, se encantou pelas batalhas de rima em BH, antes de virar o Cjota",
+        link: "https://bhaz.com.br/guia-bhaz/conheca-cjota/#:~:text=Cjota%2C%20tem%2023%20anos%20e,antes%20de%20virar%20o%20Cjota.",
+        imagem:"cjota.png",
+        tags: "soul r&b trap hip hop rap cjota"
+    },
+    {
+        titulo: "Filipe Ret",
+        descricao: "Filipe Cavaleiro de Macedo da Silva Faria, mais conhecido como Filipe Ret (Rio de Janeiro, 19 de junho de 1985), é um rapper, cantor, compositor, comunicólogo, poeta e empresário brasileiro. Nascido e criado no Catete, zona sul do Rio de Janeiro, iniciou sua carreira musical nas batalhas de MCs na Lapa em 2003. Seu nome artístico Ret, vem das épocas quando pichava muro",
+        link: "https://pt.wikipedia.org/wiki/Filipe_Ret",
+        imagem:"filipiret.png",
+        tags: "trap hip hop rap filipe ret"
+    },
+    {
+        titulo: "MD Chefe",
+        descricao: "Leonardo dos Santos Barreto (Rio de Janeiro, 2 de dezembro de 1999) conhecido pelo nome artístico MD Chefe, é um rapper, compositor, e empresário brasileiro. Ficou conhecido nacionalmente pelos singles Rei Lacoste e Tiffany. Suas canções abordam as principais características do estilo de vida do músico, com temas sobre moda, elegância e sofisticação.",
+        link: "https://pt.wikipedia.org/wiki/Filipe_Ret",
+        imagem:"mdchefe.png",
+        tags: "trap hip hop rap md chefe"
+    },
+    {
+        titulo: "MC Cabelinho",
+        descricao: "Victor Hugo Oliveira do Nascimento (Rio de Janeiro, 28 de janeiro de 1996) mais conhecido como MC Cabelinho é um cantor, compositor e ator brasileiro. Em 2019, estreou na atuação interpretando Farula, na telenovela Amor de Mãe.",
+        link: "https://pt.wikipedia.org/wiki/MC_Cabelinho",
+        imagem:"mccabelinho.png",
+        tags: "trap hip hop rap mc cabelinho"
+    },
+    {
+        titulo: "BK",
+        descricao: "Abebe Bikila Costa Santos (Rio de Janeiro, 20 de março de 1989), conhecido pelo seu nome artístico BK', é um rapper, escritor e compositor brasileiro considerado um dos nomes mais influentes do cenário do rap brasileiro. Em suas letras, apresenta como seus principais temas a violência policial, desigualdade, racismo, suas conquistas, farras e reviravoltas em sua vida pessoal.",
+        link: "https://pt.wikipedia.org/wiki/BK%27",
+        imagem:"bk.png",
+        tags: "trap hip hop rap bk"
+    },
+    {
+        titulo: "MC Cabelinho",
+        descricao: "Victor Hugo Oliveira do Nascimento (Rio de Janeiro, 28 de janeiro de 1996) mais conhecido como MC Cabelinho é um cantor, compositor e ator brasileiro. Em 2019, estreou na atuação interpretando Farula, na telenovela Amor de Mãe.",
+        link: "https://pt.wikipedia.org/wiki/MC_Cabelinho",
+        imagem:"mccabelinho.png",
+        tags: "trap hip hop rap mc cabelinho"
+    },
+    {
+        titulo: "MC Cabelinho",
+        descricao: "Victor Hugo Oliveira do Nascimento (Rio de Janeiro, 28 de janeiro de 1996) mais conhecido como MC Cabelinho é um cantor, compositor e ator brasileiro. Em 2019, estreou na atuação interpretando Farula, na telenovela Amor de Mãe.",
+        link: "https://pt.wikipedia.org/wiki/MC_Cabelinho",
+        imagem:"mccabelinho.png",
+        tags: "trap hip hop rap mc cabelinho"
     },
 ];
