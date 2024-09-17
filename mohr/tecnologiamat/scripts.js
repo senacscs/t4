@@ -1,0 +1,1 @@
+window.location.replace("https://senacscs.github.io/t4/wickert/indexsla/index.html");
