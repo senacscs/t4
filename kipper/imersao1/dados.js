@@ -85,7 +85,7 @@ let dados = [
         titulo: "Raffa Moreira",
         descricao: "Rafael Fernando Moreira (Guarulhos, 10 de fevereiro de 1988), mais conhecido pelo nome artístico de Raffa Moreira ou BC Raff, é um rapper e produtor musical brasileiro. Ficou conhecido com o single Bro, lançado em outubro de 2017, e com sua participação em Poetas no Topo 2. É considerado o principal pioneiro do trap no Brasil, e um dos principais artistas da cena do trap nacional.",
         link: "https://pt.wikipedia.org/wiki/Raffa_Moreira",
-        imagem:"Raffamoreira.png",
+        imagem:"raffamoreira.png",
         tags: "hip hop rap trap raffa moreira rafael"
     },
     {
