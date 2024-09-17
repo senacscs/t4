@@ -214,11 +214,4 @@ let dados = [
         imagem:"brandao.png",
         tags: "trap hip hop rap brandao brandão brandão085 brandao085"
     },
-    {
-        titulo: "",
-        descricao: "",
-        link: "",
-        imagem:".png",
-        tags: "trap hip hop rap "
-    },
 ];
