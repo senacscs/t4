@@ -34,4 +34,11 @@ let dados = [
         tags: "inter idolo zagueiro brasileiro brasil indio",
         imagem: "imagens/indio.jpg"
     },
+    {
+        titulo: "Valdomiro Vaz Franco",
+        descricao: "Marcos Antônio de Lima, mais conhecido como Índio, é um dos maiores ídolos da história do Internacional. Sua trajetória no clube gaúcho foi marcada por títulos, paixão e uma identificação única com a torcida colorada.",
+        link: "https://pt.wikipedia.org/wiki/Marcos_Ant%C3%B4nio_de_Lima",
+        tags: "inter idolo atacante ponta direita destro brasileiro brasil valdomiro",
+        imagem: "imagens/valdomiro.jpg"
+    },
 ];
