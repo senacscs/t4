@@ -79,6 +79,7 @@ section button {
 .item-resultado h2 {
     font-size: 1.5rem; /* Tamanho da fonte */
     color: #430404; /* Cor do texto */
+    text-align: center;
 }
 
 /* Estiliza os links dentro dos itens de resultado */
@@ -101,7 +102,9 @@ section button {
 img {
     display: block;
     width: 500px;
-    height: 200px
+    height: 200px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 /* Estiliza o rodapé da página */
 footer {
