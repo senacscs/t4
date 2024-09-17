@@ -4,14 +4,20 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
+    /* background-color: #DDDDDD;  */
+    
     display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
+    flex-direction:column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Preenche a altura total da viewport */
+     /* height: 100vh; Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
+}
+
+.principal {
+    background-image: url("https://i.pinimg.com/originals/79/34/31/79343179c9ed077320a23890c3f5745b.gif");
+    background-size: contain;
 }
 
 /* Estiliza os títulos h1 */
@@ -25,22 +31,24 @@ h1 {
 /* Estiliza as seções da página */
 section {
     display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
+    flex-direction:column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
 }
 
 div {
      width: 80%;
+
 }
 
-        .container {
-            display: flex;
-            align-items: center;
-        }
-        .container img {
-            margin-right: 20px;
-        }
+ .container {
+    display: flex;
+    align-items: center;
+ }
+
+.container img {
+  margin-right: 20px;
+}
 
 a,p,h2 {
     text-align: center;
@@ -50,6 +58,15 @@ img {
     width: 50%;
     display: block;
     margin: 0 auto;
+    display: flex;
+}
+
+.reflexao{
+    width: 15%;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    padding: 1%;
 }
 
 /* Estiliza os inputs dentro das seções */
