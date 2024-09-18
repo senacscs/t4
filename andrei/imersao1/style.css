@@ -98,6 +98,8 @@ section button {
     color: #430404; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
     text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 img {
