@@ -42,7 +42,7 @@ function pesquisar() {
   }
 
   if (!resultados) {
-      resultados = "<p>Nada foi encontrado</p>"
+      resultados = "<p>Não existe ainda.</p>"
   }
 
   // Atribui os resultados gerados à seção HTML

@@ -4,21 +4,21 @@ let dados = [
         descricao: "Marshall Bruce Mathers III, mais conhecido pelo seu nome artístico Eminem, é um rapper, compositor, produtor musical e ator estadunidense. Adquiriu rápida popularidade em 1999 com o lançamento do disco The Slim Shady LP, o qual venceu o Grammy Award de Melhor Álbum de Rap do ano.",
         link: "https://pt.wikipedia.org/wiki/Eminem",
         imagem: "https://img.odcdn.com.br/cdn-cgi/image/width=1280,height=720,fit=cover/wp-content/uploads/2024/02/Eminem.png",
-        tags: "goat rap god afiado"
+        tags: "goat rap god eua usa afiado"
     },
     {
         titulo: "Jay-Z",
         descricao: "Shawn Corey Carter, mais conhecido pelo seu nome artístico JAY-Z, é um rapper, compositor, produtor e empresário norte-americano. Ele é um dos artistas de hip hop mais bem sucedidos empresarialmente e financeiramente nos Estados Unidos.",
         link: "https://pt.wikipedia.org/wiki/Jay-Z",
         imagem: "https://s2.glbimg.com/MRrqy7zwOOTbVoajbPNaPk-JyFg=/620x466/e.glbimg.com/og/ed/f/original/2021/11/23/gettyimages-1345217425.jpg",
-        tags: "rap usa goat"
+        tags: "rap usa eua goat"
     },
     {
         titulo: "50 Cent",
         descricao: "Curtis James Jackson III, mais conhecido pelo seu nome artístico 50 Cent, é um rapper, ator, diretor, roteirista e empresário norte-americano. Ficou conhecido com o lançamento dos álbuns Get Rich or Die Tryin' e The Massacre",
         link: "https://pt.wikipedia.org/wiki/50_Cent",
         imagem: "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/01/896/500/50-cent.jpg?ve=1&tl=1",
-        tags: "moeda negro rap"
+        tags: "moeda negro usa eua rap"
     },
     {
         titulo: "Snoop Dogg",
@@ -53,7 +53,7 @@ let dados = [
         descricao: "Dwayne Michael Carter, Jr., mais conhecido pelo seu nome artístico de Lil Wayne, é um rapper, cantor, compositor, produtor executivo e empreendedor americano, conhecido por ser um dos maiores influenciadores do rap/trap atual e dono da gravadora Young Money Entertainment.",
         link: "https://pt.wikipedia.org/wiki/Lil_Wayne",
         imagem: "https://macmagazine.com.br/wp-content/uploads/2020/04/28-Lil-Wayne.jpg",
-        tags: "baixo rap"
+        tags: "baixo negro rap"
     },
     {
         titulo: "The Notorious B.I.G",
@@ -256,7 +256,7 @@ let dados = [
         descricao: "Michael Joseph Jackson foi um cantor, compositor e dançarino estadunidense. Apelidado de 'Rei do Pop', foi um dos ícones culturais mais importantes e influentes de todos os tempos e um dos maiores artistas da história da música.",
         link: "https://pt.wikipedia.org/wiki/Michael_Jackson",
         imagem: "https://midias.em.com.br/_midias/jpg/2024/05/27/1200x720/1_michael_jackson___epic_records-37454700.jpg",
-        tags: "pop god goat rei"
+        tags: "pop god goat morto rei"
     },
     {
         titulo: "Bob Marley",
@@ -270,7 +270,7 @@ let dados = [
         descricao: "Tina Turner foi uma cantora suíça nascida nos Estados Unidos. Amplamente referida como a 'Rainha do Rock 'n' Roll', ganhou destaque como vocalista da dupla Ike & Tina Turner Revue, antes de lançar uma carreira de sucesso como artista solo.",
         link: "https://pt.wikipedia.org/wiki/Tina_Turner",
         imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTULVm156zydEn6yTLQG5vqwjJhJrLIOqEhWw&s",
-        tags: "suica rainha morta idosa"
+        tags: "suica rainha morto idosa"
     },
     {
         titulo: "Elvis Presley",
@@ -327,5 +327,26 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Rihanna",
         imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ftmPyjVHCnYDdrl8J1dCFoWvcBS5PckuxA&s",
         tags: "pop queen eua"
+    },
+    {
+        titulo: "The Weeknd",
+        descricao: "Abel Makkonen Tesfaye, mais conhecido por seu nome artístico The Weeknd, é um cantor, compositor, ator e produtor musical canadense. Conhecido por sua versatilidade sonora e lirismo sombrio, suas músicas exploram temas de escapismo, romance e melancolia, e são frequentemente inspiradas em experiências pessoais.",
+        link: "https://pt.wikipedia.org/wiki/The_Weeknd",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlnkvKTu8sBVl2E90YfXe1S4bVFJieF4x-vA&s",
+        tags: "week pop eua"
+    },
+    {
+        titulo: "Billie Ellish",
+        descricao: "Billie Eilish Pirate Baird O'Connell é uma cantora e compositora estadunidense. Ganhou popularidade em 2016, quando lançou o single de estreia 'Ocean Eyes' no SoundCloud, posteriormente lançado pelas gravadoras Darkroom e Interscope Records.",
+        link: "https://pt.wikipedia.org/wiki/Billie_Ellish",
+        imagem: "https://imagenes.elpais.com/resizer/v2/NWFSHZYFO5EHVBUYSIWTVXR6MI.aspx?auth=e3dfa52f0ceb53433948cadf50ee71cb1c692ba72d81a58f99724bf8bd3f54f4&width=1960&height=1470&smart=true",
+        tags: "pop rap eua usa"
+    },
+    {
+        titulo: "Nate Dogg",
+        descricao: "Nate Dogg, nome artístico de Nathaniel Dwayne Hale, foi um cantor, compositor, rapper e ator americano. Começou a cantar na igreja New Hope Trinity Baptist Church Choir, em Long Beach, Califórnia, onde seu pai, Daniel Lee Hale, era pastor.",
+        link: "https://pt.wikipedia.org/wiki/Nate_Dogg",
+        imagem: "https://m.i.uol.com.br/musica/2011/03/16/o-rapper-nate-dogg-em-evento-em-hollywood-na-california-26052005-1300287106640_956x500.jpg",
+        tags: "morto usa eua rap"
     }
 ];
