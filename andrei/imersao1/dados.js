@@ -28,7 +28,7 @@ let dados = [
         imagem: "imagens/figueroa.jpg"
     },
     {
-        titulo: "Marcos Antônio de Lima",
+        titulo: "Marcos Antônio de Lima (Índio)",
         descricao: "Marcos Antônio de Lima, mais conhecido como Índio, é um dos maiores ídolos da história do Internacional. Sua trajetória no clube gaúcho foi marcada por títulos, paixão e uma identificação única com a torcida colorada.",
         link: "https://pt.wikipedia.org/wiki/Marcos_Ant%C3%B4nio_de_Lima",
         tags: "inter idolo zagueiro brasileiro brasil indio",
@@ -42,10 +42,17 @@ let dados = [
         imagem: "imagens/valdomiro.jpg"
     },
     {
-        titulo: "Osmar Fortes Barcellos",
+        titulo: "Osmar Fortes Barcellos (Tesourinha)",
         descricao: "Osmar Fortes Barcellos, mais conhecido como Tesourinha, é um nome que ecoa com força na história do futebol gaúcho e, especialmente, do Sport Club Internacional. Nascido em Porto Alegre em 3 de outubro de 1921, Tesourinha se destacou como um dos maiores atacantes da história do futebol brasileiro.",
         link: "https://pt.wikipedia.org/wiki/Tesourinha_(futebolista)",
         tags: "inter idolo atacante ponta direita destro brasileiro brasil tesourinha",
         imagem: "imagens/tesourinha.jpg"
+    },
+    {
+        titulo: "Haílton Corrêa Arruda (Manga)",
+        descricao: "Haílton Corrêa Arruda, mais conhecido como Manga, é um dos maiores goleiros da história do futebol brasileiro. Nascido em Recife, em 1937, Manga se destacou por suas defesas espetaculares, agilidade e liderança dentro de campo.",
+        link: "https://pt.wikipedia.org/wiki/Manga_(futebolista)",
+        tags: "inter idolo goleiro brasileiro brasil manga",
+        imagem: "imagens/manga.jpg"
     },
 ];
