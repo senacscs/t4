@@ -230,7 +230,7 @@ a {
 
 }
 a:hover {
-    color: #0dcaf0;
+    color: rgb(199, 28, 28);
 }
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
@@ -7175,12 +7175,12 @@ fieldset:disabled .btn {
 }
 .bg-light {
     --bs-bg-opacity: 1;
-    background-color: blue, var(--bs-bg-opacity)) !important;
+    background-color: blue, var(--bs-bg-opacity) !important;
 }
 .bg-dark {
     --bs-bg-opacity: 1;
     background-color: darkred !important;
-
+}
 .bg-black {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
