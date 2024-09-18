@@ -47,7 +47,7 @@ section input {
 
 /* Estiliza os botões dentro das seções */
 section button {
-    padding: 500px; /* Espaçamento interno do botão */
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
     background-color: #430404; /* Cor de fundo do botão */
