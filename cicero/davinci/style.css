@@ -9,9 +9,50 @@ html {
 
         background-color: rgb(176, 176, 252);
 
+        #telona {
+            width: 100vw;
+            height: 100vh;
+            z-index: 99;
+            position: fixed;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(10px);
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .bar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                #botao {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50px;
+                    background: rgba(66, 114, 155, 0.669);
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    ion-icon {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
         h1 {
             font-size: 40px;
             margin: 10px
+        }
+
+        img {
+            border-radius: 20px;
         }
 
         header {
@@ -33,29 +74,47 @@ html {
             margin-top: 44px;
             padding: 10px;
 
-            img {
-                border-radius: 20px;
-            }
-
             .textao {
                 text-align: justify;
                 margin: 10px;
                 font-size: 20px;
+                text-indent: 50px;
             }
 
-            .grongus {
+            .textao.foo {
+                width: 75vw;
+                margin: 20px;
+            }
+
+            .doohickey {
+                width: 100vw;
                 display: flex;
-                flex-direction: row;
-                width: 80vw;
+                align-items: center;
+                justify-content: center;
 
-                .blarb {
-                    margin-left: 10px;
-                    flex-direction: column;
-                }
+                .grongus {
+                    display: flex;
+                    flex-direction: row;
+                    width: 80vw;
 
-                img {
-                    width: 300px
+
+                    .blarb {
+                        margin-left: 10px;
+                        flex-direction: column;
+                    }
+
+                    img {
+                        width: 300px
+                    }
                 }
+            }
+
+            .bege {
+                background-color: beige;
+            }
+
+            .rosa {
+                background-color: pink;
             }
 
             .dagoob {
@@ -64,6 +123,7 @@ html {
                 justify-content: space-around;
 
                 width: 100vw;
+
                 .doob {
                     display: flex;
                     flex-direction: column;
