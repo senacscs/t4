@@ -67,6 +67,7 @@ header {
     border-radius: 5px;
     color: white;
     text-align: center;
+    border-bottom: 0.2rem solid blueviolet;
 }
 
 
@@ -207,13 +208,13 @@ to {
   }
 
 .segunda-fileira {
-    position: relative;
+    position: absolute;
     left: 370px;
-    bottom: 1480px;
+    top: 615px;
 }
 
 .terceira-fileira {
-    position: relative;
+    position: absolute;
     left: 370px;
-    bottom: 1185px;
+    top: 1px;
 }
