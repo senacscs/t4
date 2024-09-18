@@ -85,7 +85,19 @@ header {
     top: 30%;
     font-weight: 400;
     font-family: "Concert One", sans-serif;
+    color: rgb(252, 223, 255);
+    animation: glow 1.5s ease-in-out infinite alternate;
 }
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(161, 85, 148), 0 0 20px rgb(161, 85, 148), 0 0 30px rgb(161, 85, 148), 0 0 40px rgb(161, 85, 148), 0 0 50px rgb(161, 85, 148), 0 0 60px rgb(161, 85, 148), 0 0 70px rgb(161, 85, 148);
+}
+to {
+    text-shadow: 0 0 20px rgb(161, 85, 148), 0 0 30px rgb(161, 85, 148), 0 0 40px rgb(161, 85, 148), 0 0 50px rgb(161, 85, 148), 0 0 60px rgb(161, 85, 148), 0 0 70px rgb(161, 85, 148), 0 0 80px rgb(161, 85, 148);
+}
+}
+
 
 
 .Mohr {
