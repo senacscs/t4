@@ -97,11 +97,12 @@ section button {
 .descricao-meta {
     color: #430404; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
+    text-align: center;
 }
 
 img {
     display: block;
-    width: 500px;
+    width: 200px;
     height: 200px;
     margin-left: 500px;
     margin-right: 500px;
