@@ -49,7 +49,7 @@ let dados = [
         imagem: "imagens/tesourinha.jpg"
     },
     {
-        titulo: "Haílton Corrêa Arruda (Mang)",
+        titulo: "Haílton Corrêa Arruda (Manga)",
         descricao: "Haílton Corrêa Arruda, mais conhecido como Manga, é um dos maiores goleiros da história do futebol brasileiro. Nascido em Recife, em 1937, Manga se destacou por suas defesas espetaculares, agilidade e liderança dentro de campo.",
         link: "https://pt.wikipedia.org/wiki/Manga_(futebolista)",
         tags: "inter idolo goleiro brasileiro brasil manga",
