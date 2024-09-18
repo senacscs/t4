@@ -1,434 +1,207 @@
-body {
-    background: linear-gradient(50deg, #262626 50%, #161616 50%);
-    overflow-y: hidden;
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(fundo.jpg);
+    background-color: black;
     overflow-x: hidden;
-    font-family: sans-serif;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    transform: scale(1.00);
-    margin-top: -3.5vh;
-}
-
-.display {
+.btn{
     position: absolute;
-    background: linear-gradient(50deg, #a8acb0 50%, #abb1af 50%);
-    height: 420px;
-    width: 720px;
-    border-radius: 2px;
-    background-image: url(planodefundo.png);
-    background-size: cover;
-    background-position: bottom;
-}
-
-.border {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: #000000;
-    height: 465px;
-    width: 770px;
-    border: 5px rgb(169, 169, 179) solid;
-}
-
-.bottom {
-    margin-top: 500px;
-    position: absolute;
-    height: 33px;
-    width: 925px;
-    border-radius: 3px;
-    background-color: rgb(162, 162, 166);
-}
-
-.bottom::before {
-    content: '';
-    position: absolute;
-    background-color: #9a9ea1;
-    height: 15px;
-    width: 925px;
-    margin-top: 30px;
-    border-bottom-right-radius: 7.5rem 2.5rem;
-    border-bottom-left-radius: 7.5rem 2.5rem;
-}
-
-.bottom::after {
-    content: '';
-    position: absolute;
-    background-color: #606067;
-    height: 10px;
-    width: 125px;
-    margin-left: 400px;
-    border-radius: 0 0 .25rem .25rem
-}
-
-.barra-de-tarefas {
-    width: 100%;
-    height: 30px;
-    backdrop-filter: blur(30px);
-    margin-top: calc(420px - 30px);
-    border-top: 1px solid rgba(18, 18, 18, 0.27);
-    align-content: center;
-}
-
-.tarefas {
-    width: 300px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0);
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tarefas img {
-    height: 23px;
-    width: 23px;
-    padding: 2.5px;
-    border-radius: 4px;
-    transition: 0.2s;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.redesw {    
-    height: 23px;
-    width: 23px;
-    padding: 2.5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.redesw img {
-    height: 23px;
-    width: 23px;
-}
-.abaredes {
-    width: 0px;
-    height: 20px;
-    margin-top: -60px;
-    background-color: rgba(255, 255, 255, 0.562);
-    position: absolute;
-    transition: 0.3s ease-in-out;
-    border-radius: 6px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-.redesw:hover .abaredes {
-    border: 1px solid rgb(0, 0, 0);
-    padding: 5px;
-    width: 100px;
-}
-.tarefas img:hover, .redesw img:hover {
-    background-color: #9a9ea171;
-}
-.abaredes a ion-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 3px;
-    margin-right: 3px;
-    transition: 0.2s;
-}
-.abaredes :nth-child(1) ion-icon:hover {
-    color: rgb(21, 255, 0);
-}
-.abaredes :nth-child(2) ion-icon:hover {
-    color: rgb(129, 17, 235);
-}
-.abaredes :nth-child(3) ion-icon:hover {
-    color: rgb(245, 17, 253);
-}
-.abaredes :nth-child(4) ion-icon:hover {
-    color: rgb(0, 2, 83);
-}
-.abaredes a, .abaredes a:visited {
-    text-decoration: none;
-    color: #000000;
-}
-
-.hora {
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    color: rgb(208, 208, 208);
-    letter-spacing: 1px;
-    margin-top: 12px;
-}
-
-.data {
-    width: 100px;
-    height: 30px;
-    margin-top: -40px;
-    text-align: end;
-    background-color: rgba(255, 0, 0, 0);
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.data p {
-    position: absolute;
-    color: rgb(208, 208, 208);
-    top: 0;
-    font-size: 13px;
-    margin-left: 26px;
-    margin-top: 15px;
-    letter-spacing: 1px;
-}
-
-.app {
-    width: 93%;
-    height: 350px;
-    margin-left: calc((100% / 2) - (93% / 2));
-    margin-top: 20px;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.app a ion-icon {
-    width: 30px;
-    height: 30px;
-    color: rgb(16, 0, 106);
-    background-color: rgb(220, 221, 235);
-    padding: 3px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.app a:hover::before {
-    background-color: #a3a3a394;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.229);
-    color: rgb(255, 255, 255);
-}
-
-.app a {
-    width: 40px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
     height: 60px;
-    transition: 0.3s;
-}
-
-.app a::before {
-    position: absolute;
-    width: 40px;
     text-align: center;
-    color: rgb(238, 238, 238);
-    top: 40px;
-    transition: 0.3s;    
-    transform: translate(-5px, -44px);    
-    padding: 44px 3px 3px 3px;    
-    border-radius: 5px;
-}
-
-.mun::before {
-    content: "Olá Mundo";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.inh::before {
-    content: "Indicações HTML";
-    text-shadow: 
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.inc::before {
-    content: "Indicações CSS";
-    text-shadow: 
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0),
-    0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.res::before {
-    content: "Respon- sáveis";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px; 
-}
-
-.pro::before {
-    content: "Projeto PI";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.cur::before {
-    content: "Currículo";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.ofi::before {
-    content: "Oficina";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.tod::before {
-    content: "Test ODS";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.jog::before {
-    content: "Jogo 1";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.data2 {
+    line-height: 60px;
+    color: #fff;
     font-size: 24px;
-    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,#df5bd6, #cb61f9, #fc46de, #e43687);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+.btn:hover{
+    animation: animate 8s linear infinite;
+}
+.btn:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#df5bd6, #cb61f9, #fc46de, #e43687);
+    background-size: 400px;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.btn:hover:before{
+    filter: blur(10px);
+    opacity: 1;
+}
+
+@keyframes animate {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+
+
+header {
+    position: relative;
+    bottom: 100px;
+    background: linear-gradient(to right, #1f2727, #000000);
+    height: 600px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+
+ 
+  h1 {
+    transition: font-size 0.5s ease; /* Animação para o tamanho do texto */
+  }
+ 
+  header.scrolled h1 {
+    font-size: 24px; /* Tamanho do texto ao rolar a página */
+  }
+
+.titulo {
+    font-size: 100px;
+    position: relative;
+    top: 30%;
+    font-weight: 400;
+    font-family: "Concert One", sans-serif;
+}
+
+
+.Mohr {
+    position: relative;
     color: white;
 }
 
-.cuidado::before {
-    content: "Autocuida- do";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.cuidado {
+.projetos {
     position: relative;
-    bottom: 120px;
+    top: 50px;
+    color: white;
+    border-radius: 5px;
 }
 
-.tecnologia::before {
-    content: "Tecnologia /mat";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.tecnologia {
+  .projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 120px;
     position: relative;
-    bottom: 120px;
-}
-
-.imersao::before {
-    content: "Imersão";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
-
-.imersao {
+  }
+  
+  .projetos h2::after{
+    content: "→";
+    display: block;
+    position: absolute;
+    font-size: 1.75rem;
+    /* right: 10px; */
+    top: 130px;
+    animation: seta 0.5s ease-in 0s infinite alternate;
+  }
+  
+  @keyframes seta {
+    from {
+      right: 15px;
+    }
+    to {
+      right: 10px;
+    }
+  }
+  
+  .projetos-flex {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .cada-projeto {
+    width: 300px;
+    height: auto;
+    background-color: #EEF5F6;
+    border-radius: 16px;
+    cursor: pointer;
     position: relative;
-    bottom: 118px;
-}
+    left: 100px;
+    font-weight: 400;
+    font-family: "Concert One", sans-serif;
+  }
+  
+  .projetos-img {
+    height: 180px;
+  }
+  
+  .projetos-img img {
+    width: 100%;
+    height: 180px;
+    border-radius: 16px 16px 8px 8px;
+  }
+  
+  .cada-projeto h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #242424;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  /* .cada-projeto h3::before {
+    content: "";
+    width: 12px;
+    height: 8px;
+    display: block;
+    background: linear-gradient(180deg, #417C88, #2C6571);
+    margin-right: 8px;
+    transition: 0.3s;
+  } */
+  
+  .cada-projeto:hover h3::before {
+    width: 20px;
+  }
+  
+  .cada-projeto p {
+    font-size: 1.125rem;
+    color: #242424;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 20px;
+  }
+  
+  .cada-projeto span {
+    color: #474747;
+  }
 
-.turma::before {
-    content: "Imersão da Turma";
-        text-shadow: 
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0),
-        0px 0px 5px rgb(0, 0, 0);
-    font-size: 9px;
-}
+  a {
+    text-decoration: none;
+  }
 
-.turma {
+.segunda-fileira {
     position: relative;
-    bottom: 118px;
-    /* margin-bottom: 50px; */
+    left: 370px;
+    bottom: 1480px;
 }
 
-
-
-
-
+.terceira-fileira {
+    position: relative;
+    left: 370px;
+    bottom: 1185px;
+}
