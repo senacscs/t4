@@ -141,7 +141,7 @@ main {
 
 .gradient-bg {
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
