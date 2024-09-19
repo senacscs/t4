@@ -12,7 +12,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* height: 100vh; */
+        height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -22,71 +22,91 @@
         text-align: center;
         letter-spacing: 0.4rem;
     }
+    /* Estiliza as seções da página */
     section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 3rem;
+        display: flex; /* Usa Flexbox para layout */
+        flex-direction: column; /* Alinha os itens na vertical */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */ 
     }
+    /* Estiliza os inputs dentro das seções */
     section input {
-        width: 30rem;
-        border: none;
-        padding: 1rem;
-        border-radius: 1.5rem;
-        margin-bottom: 1rem;
-        color: #000000;
-        font-size: 1rem;
-        box-sizing: border-box;
+        width: 30rem; /* Largura dos inputs */
+        border: none; /* Remove a borda padrão */
+        padding: 1rem; /* Espaçamento interno */
+        border-radius: 1.5rem; /* Borda arredondada */
+        margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+        color: #000000; /* Cor do texto */
+        font-size: 1rem; /* Tamanho da fonte */
+        box-sizing: border-box; /* Inclui padding e border na largura total */
     }
+    /* Estiliza os botões dentro das seções */
     section button {
-        padding: 0.8rem 1.2rem;
-        border: none;
-        border-radius: 1.5rem;
-        background-color: #ff0000;
-        color: #F5F7F8;
-        font-size: 1rem;
-        cursor: pointer;
+        padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+        border: none; /* Remove a borda padrão */
+        border-radius: 1.5rem; /* Borda arredondada */
+        background-color: #ff0000; /* Cor de fundo do botão */
+        color: #F5F7F8; /* Cor do texto do botão */
+        font-size: 1rem; /* Tamanho da fonte */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
     }
+    /* Estiliza a caixa de resultados da pesquisa */
     .resultados-pesquisa {
-        width: 60rem;
-        height: 46vh;
-        overflow-y: auto;
-        margin-top: 1rem;
-        padding: 1rem;
-        border-radius: 0.7rem;
+        width: 60rem; /* Largura máxima da caixa de resultados */
+        height: 46vh; /* Altura máxima da caixa de resultados */
+        overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+        margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+        padding: 1rem; /* Espaçamento interno */
+        border-radius: 0.6rem; /* Borda arredondada */
     }
+    /* Estiliza a frase de nada encontrado do texto */
     .fundo {
         color: white;
     }
+    /* Estiliza cada item de resultado */
     .item-resultado {
-        background: #555353; 
-        border-radius: 0.6rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 2px 6px rgba(107, 101, 101, 0.1);
+        background: #555353; /* Cor de fundo dos itens */
+        border-radius: 0.6rem; /* Borda arredondada */
+        padding: 1rem; /* Espaçamento interno */
+        margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
     }
+    /* Estiliza os títulos h2 dentro dos itens de resultado */
     .item-resultado h2 {
-        font-size: 1.5rem;
-        color: #ffffff;
+        font-size: 1.5rem; /* Tamanho do texto */
+        color: #ffffff; /* Cor do texto */
     }
+    /* Estiliza os links dentro dos itens de resultado */
     .item-resultado a {
-        text-decoration: none;
-        color: #ffffff;
+        text-decoration: none; /* Remove o sublinhado padrão de links */
+        color: #ffffff; /* Cor do texto dos links */
     }
+    /* Estiliza a descrição meta dentro dos itens de resultado */
     .item-resultado a:hover {
             text-decoration: underline;
-        }
-
-    .descricao-meta {
-        color: #ffffff;
-        margin: 0.5rem 0;
     }
+    /* Estiliza a descrição meta dentro dos itens de resultado */
+    .descricao-meta {
+        color: #ffffff; /* Cor do texto */
+        margin: 0.5rem 0; /* Margem acima e abaixo */
+    }
+    /* Estiliza as imagens todas */
     img {
-        width: 250px;   
-        height: auto;
-        display: flex;
-        float: left;
-        margin-right: 5px;
+        width: 250px; /* Largura da imagem */   
+        height: auto; /* Altura da imagem */
+        display: flex; /* Coloca a imagem ficar correta */
+        float: left; /* Flutuar a imagem */
+        margin-right: 5px; /* Margem para a direita */
+    }
+    footer {
+        background-color: #000000; /* Cor de fundo do rodapé */
+        color: #ffffff; /* Cor do texto */
+        text-align: center; /* Alinha o texto ao centro */
+        padding: 0; /* Espaçamento interno */
+        width: 100%; /* Largura total da página */
+        position: absolute; /* Posiciona o rodapé */
+        bottom: 0; /* Alinha ao fundo da página */
+        font-size: 1rem; /* Tamanho da fonte */
     }
 }
 
