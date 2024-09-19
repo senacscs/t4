@@ -5,60 +5,416 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Jogos</title>
+    <title>minecraft</title>
 </head>
 
 <body>
     <header>
-        <h1>Jogos</h1>
+        <h1>Itens e blocos do minecraft</h1>
     </header>
     <main>
+
         <section>
-            <input type="text" placeholder="Digite o nome do jogo" id="campo-pesquisa" oninput="pesquisar()".>
-            <!-- <button onclick="pesquisar()">Pesquisar</button> -->
+            <input type="text" placeholder="Digite o nome do jogo" id="campo-pesquisa" oninput="pesquisar()">
+
         </section>
         <section class="resultados-pesquisa" id="resultados-pesquisa">
         </section>
     </main>
     <footer>
-        <!-- <p>2024 - Atletas do Brasil. Todos os direitos reservados</p>
-        <p>Entre em contato pelo email: guilherme@atletas.com.br</p> -->
     </footer>
     
     <script>
 
 let dados = [
     {
-        titulo: "The Legend of Zelda: Breath of the Wild",
-        descricao: " Um jogo de mundo aberto onde o jogador controla Link, explorando o reino de Hyrule para derrotar o vilão Calamity Ganon.",
-        estilo: "Ação-aventura",
-        tags: "zelda Zelda Ação Aventura offline"
+        titulo: "Maçã",
+        tags:"alimento",
+        imagem:"./img_comidas/Maça.webp",
     },
     {
-        titulo: "Minecraft",
-        descricao: "Um jogo onde os jogadores podem construir e explorar mundos feitos de blocos, enfrentando criaturas e coletando recursos.",
-        estilo: "Sandbox sobrevivência",
-        tags: "Mine Minecraft mundo aberto sandbox sobrevivência online offline"
+        titulo:"Sopa suspeita",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SopaSuspeita.webp",
     },
     {
-        titulo: "Fortnite",
-        descricao: "Um jogo onde 100 jogadores competem para ser o último sobrevivente em uma ilha, construindo estruturas e coletando armas.",
-        estilo: "Battle Royale sobrevivência tiro",
-        tags: "Fort Fortnite battle royale sobrevivência tiro online",
+        titulo:"Bolo",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Bolo2.jpg",
     },
     {
-        titulo: "Grand Theft Auto V",
-        descricao: " Um jogo de mundo aberto onde os jogadores podem explorar a cidade fictícia de Los Santos, completando missões e participando de atividades diversas, tanto no modo história quanto no modo online.",
-        estilo: "Ação tiro",
-        tags: "ação tiro corrida GTA gta grand theft auto online offline"
+        titulo:"Pão",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Pao.webp",
     },
     {
-        titulo: "Overwatch",
-        descricao: "Um jogo de tiro em equipe onde os jogadores escolhem heróis com habilidades únicas para competir em partidas objetivas, promovendo trabalho em equipe e estratégia.",
-        estilo: "Tiro em primeira pessoa",
-        tags: "tiro primeira pessoa equipe online overwatch"
+        titulo:"Biscoito",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Biscoito.webp",
     },
+    {
+        titulo:"Sopa de cogumelo",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SopaCogumelo.webp",
+    },
+    {
+        titulo:"Maçã dourada",
+        tags:"comida alimento",
+        imagem:"./img_comidas/MaçaDourada.webp",
+    },
+    {
+        titulo:"Sopa de beterraba",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SopaBeterraba.webp",
+    },
+    {
+        titulo:"Sopa de coelho",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SopaCoelho.webp",
+    },
+    {
+        titulo:"Cenoura dourada",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CenouraDourada.webp",
+    },
+    {
+        titulo:"Cenoura",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Cenoura.webp",
+    },
+    {
+        titulo:"Alga seca",
+        tags:"comida alimento",
+        imagem:"./img_comidas/AlgaSeca.webp",
+    },
+    {
+        titulo:"Beterraba",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Beterraba.webp",
+    },
+    {
+        titulo:"Carne podre",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CarnePodre.webp",
+    },
+    {
+        titulo:"Melancia",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Melancia.webp",
+    },
+    {
+        titulo:"Bife assado",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Bife.webp",
+    },
+    {
+        titulo:"Maçã Encantada",
+        tags:"comida alimento",
+        imagem:"./img_comidas/MaçaEncantada.webp",
+    },
+    {
+        titulo:"Carneiro assado",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CarneiroAssado.webp",
+    },
+    {
+        titulo:"Costela de porco assada",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CosteletaDePorcoAssada.webp",
+    },
+    {
+        titulo:"Salmão assado",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SalmaoAssado.webp",
+    },
+    {
+        titulo:"Batata assada",
+        tags:"comida alimento",
+        imagem:"./img_comidas/BatataAssada.webp",
+    },
+    {
+        titulo:"Frango assado",
+        tags:"comida alimento",
+        imagem:"./img_comidas/FrangoAssado.webp",
+    },
+    {
+        titulo:"Bacalhau assado",
+        tags:"comida alimento",
+        imagem:"./img_comidas/BacalhauAssado.webp",
+    },
+    {
+        titulo:"Coelho assado",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CoelhoAssado.webp",
+    },
+    {
+        titulo:"Sopa de coelho",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SopaCoelho.webp",
+    },
+    {
+        titulo:"Fruta do coro",
+        tags:"comida alimento",
+        imagem:"./img_comidas/FrutaCoro.webp",
+    },
+    {
+        titulo:"Batata venenosa",
+        tags:"comida alimento",
+        imagem:"./img_comidas/BatataVenenosa.webp",
+    },
+    {
+        titulo:"Batata",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Batata.webp",
+    },
+    {
+        titulo:"Torta de abóbora",
+        tags:"comida alimento",
+        imagem:"./img_comidas/TortaAbobora.webp",
+    },
+    {
+        titulo:"Frango cru",
+        tags:"comida alimento",
+        imagem:"./img_comidas/FrangoCru.webp",
+    },
+    {
+        titulo:"Carneiro cru",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CarneiroCru.webp",
+    },
+    {
+        titulo:"Costeleta de porco crua",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CosteletaDePorcoCrua.webp",
+    },
+    {
+        titulo:"Coelho cru",
+        tags:"comida alimento",
+        imagem:"./img_comidas/CoelhoCru.webp",
+    },
+    {
+        titulo:"Frasco de mel",
+        tags:"comida alimento",
+        imagem:"./img_comidas/FrascoMel.webp",
+    },
+    {
+        titulo:"Baiacu",
+        tags:"comida alimento",
+        imagem:"./img_comidas/Baiacu.webp",
+    },
+    {
+        titulo:"Bacalhau cru",
+        tags:"comida alimento",
+        imagem:"./img_comidas/BacalhauCru.webp",
+    },
+    {
+        titulo:"Salmão cru",
+        tags:"comida alimento",
+        imagem:"./img_comidas/SalmaoCru.webp",
+    },
+    {
+        titulo:"Olho de aranha",
+        tags:"comida alimento",
+        imagem:"./img_comidas/OlhoDeAranha.webp",
+    },
+    {
+        titulo:"Bagas doces",
+        tags:"comida alimento",
+        imagem:"./img_comidas/BagasDoces.webp",
+    },
+    {
+        titulo:"Bagas douradas",
+        tags:"comida alimento",
+        imagem:"./img_comidas/BagasDouradas.webp",
+    },
+    {
+        titulo:"Peixe tropical",
+        tags:"comida alimento",
+        imagem:"./img_comidas/PeixeTropical.webp",
+    },
+    {
+        titulo:"Frasco de água",
+        tags:"alimento comida",
+        imagem:"./img_comidas/FrascoDeAgua.webp",
+    },
+    // {
+    //     titulo:"Espada de madeira",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Espada de pedra",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Espada de ferro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Espada de ouro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Espada de diamante",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Espada de netherita",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Machado de madeira",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Machado de pedra",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Machado de ferro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Machado de ouro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Machado de diamante",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Machado de netherita",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Enxada de madeira",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Enxada de pedra",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Enxada de ferro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Enxada de ouro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Enxada de diamante",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Enxada de netherita",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pá de madeira",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pá de pedra",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pá de ferro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pá de ouro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pá de diamante",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pá de netherita",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Picareta de madeira",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Picareta de pedra",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Picareta de ferro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Picareta de ouro",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Picareta de diamante",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Picareta de netherita",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Tesoura",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Vara de pesca",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Pederneira",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Vara de pesca com cogumelo",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // },
+    // {
+    //     titulo:"Vara de pesca com cenoura",
+    //     tags:"ferramenta item",
+    //     imagem:"",
+    // }
+    // ... adicionar mais itens e blocos aqui
 ];
+
 
 // ===========================================================================================
 
@@ -70,34 +426,30 @@ let dados = [
 
     // se campoPesquisa for uma string sem nada
     if (!campoPesquisa) {
-        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar o nome de um atleta ou esporte</p>"
+        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar o nome de bloco ou item válido</p>"
         return 
     }
 
     campoPesquisa = campoPesquisa.toLowerCase()
 
     // Inicializa uma string vazia para armazenar os resultados
+    let imagem = "";
     let resultados = "";
     let titulo = ""; 
-    let descricao = "";
-    let estilo = "";
     let tags = "";
 
     // Itera sobre cada dado da lista de dados
     for (let dado of dados) {
         titulo = dado.titulo.toLowerCase()
-        descricao = dado.descricao.toLowerCase()
         tags = dado.tags.toLowerCase()
         // se titulo includes campoPesquisa
-        if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || estilo.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
+        if (titulo.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
             // cria um novo elemento
             resultados += `
             <div class="item-resultado">
                 <h2>
-                    <a href="#" target="_blank">${dado.titulo}</a>
+                    <img class="m" src="${dado.imagem}"><p>${dado.titulo}</p>
                 </h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <a href=${dado.estilo} target="_blank">Mais informações</a>
             </div>
         `;
         }
