@@ -15,7 +15,7 @@
     </header>
     <main>
         <section>
-            <input type="text" accesskey="enter" placeholder="Digite o nome ou apelido do rapper favorito..." id="campo-pesquisa">
+            <input type="text"  data-shortcut-key="enter" placeholder="Digite o nome ou apelido do rapper favorito..." id="campo-pesquisa" onkeydown="if(event.key === 'Enter') pesquisar()">
             <button onclick="pesquisar()">Pesquisar</button>
         </section>
         <section class="resultados-pesquisa" id="resultados-pesquisa" >

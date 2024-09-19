@@ -29,7 +29,7 @@ let dados = [
     },
     {
         titulo: "Kanye West",
-        descricao: "Atualmente, como cantor, West é o 4º artista que mais vendeu músicas em formato digital.[9] Além disso, ele acumula uma impressionante coleção de prêmios, incluindo um total de 24 Grammys, tornando-se assim o maior rapper da história da premiação.",
+        descricao: "Atualmente, como cantor, West é o 4º artista que mais vendeu músicas em formato digital. Além disso, ele acumula uma impressionante coleção de prêmios, incluindo um total de 24 Grammys, tornando-se assim o maior rapper da história da premiação.",
         link: "https://pt.wikipedia.org/wiki/Kanye_West",
         imagem: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2024%2F08%2F08%2Fye-fried-music-video-vultures-2-ty-dolla-sign-stream-0.jpg?w=960&cbr=1&q=90&fit=max",
         tags: "grammy rap usa"
@@ -348,5 +348,40 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Nate_Dogg",
         imagem: "https://m.i.uol.com.br/musica/2011/03/16/o-rapper-nate-dogg-em-evento-em-hollywood-na-california-26052005-1300287106640_956x500.jpg",
         tags: "morto usa eua rap"
+    },
+    {
+        titulo: "Nas",
+        descricao: "Nas, nome artístico de Nasir bin Olu Dara Jones, é um rapper e ator americano. Filho do músico de jazz Olu Dara, ele nasceu e foi criado nos conjuntos habitacionais de Queensbridge, em Queens, New York City.",
+        link: "https://pt.wikipedia.org/wiki/Nas",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFSChjHYN1yr4gRnmtthUwXr96J80SCHaWQA&s",
+        tags: "eua usa rap negro"
+    },
+    {
+        titulo: "T.I.",
+        descricao: "Clifford Joseph Harris Jr., mais conhecido pelo seu nome artístico de T.I. ou T.I.P. é um rapper e ator, de Atlanta. É vencedor de três Grammy Awards.",
+        link: "https://pt.wikipedia.org/wiki/T.I.",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHvWEasaUATx0lJ6-kpi_AorIEO5HLthATg&s",
+        tags: "eua usa rap black"
+    },
+    {
+        titulo: "Rick Ross",
+        descricao: "Rick Ross, William Leonard Roberts, é um rapper norte-americano. Mora no norte de Miami em Dade County. Em 2006, lançou seu primeiro CD, Port of Miami, vendendo cerca de 722 mil, o que lhe trouxe muita fama e repercussão.",
+        link: "https://pt.wikipedia.org/wiki/Rick_Ross",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp33cuUGT28Ou67Vlibfz25AJBUEacnGrxNw&s",
+        tags: "black usa eua famoso"
+    },
+    {
+        titulo: "Miley Cyrus",
+        descricao: "Miley Ray Cyrus, nascida Destiny Hope Cyrus, é uma cantora, compositora e atriz americana. Tornou-se mundialmente popular por interpretar Miley Stewart/Hannah Montana na famosa série do Disney Channel Hannah Montana.",
+        link: "https://pt.wikipedia.org/wiki/Miley_Cyrus",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpj9rK1PMAZuucrjYUQzTtvTsnAPTt-XqMnA&s",
+        tags: "rap pop eua usa"
+    },
+    {
+        titulo: "Dua Lipa",
+        descricao: "Dua Lipa é uma cantora, compositora, atriz, dançarina e modelo anglo-albanesa. Nascida e criada em Londres e passando parte de sua adolescência, mais especificamente dos 11 aos 15 anos, em Pristina, Kosovo, Lipa ganhou popularidade no mundo em 2017, com o sucesso 'New Rules'.",
+        link: "https://pt.wikipedia.org/wiki/Dua_Lipa",
+        imagem: "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/02/dua-lipa-novo-album-1.png",
+        tags: "eua usa pop famosa rap"
     }
 ];
