@@ -1,10 +1,39 @@
+* {
+  cursor: url("cursor.png"), auto;
+}
+
+
 body{
     margin: 0;
     padding: 0;
     background-image: url(fundo.jpg);
     background-color: black;
     overflow-x: hidden;
+    cursor: url("cursor.png"), auto;
 }
+
+input[type="submit"], input[type="button"], a, button {
+  cursor: url("cursor.png"), auto;
+}
+
+.subtitulo {
+  position: relative;
+  bottom: 150px;
+  text-align: center;
+  height: 60px;
+  font-size: 30px;
+  background-color: purple;
+  width: 100%;
+  color: white;
+}
+
+.subtitulo 
+
+h5 {
+ position: relative;
+ top: 15px;
+}
+
 .btn{
     position: absolute;
     top: 70%;
@@ -24,6 +53,7 @@ body{
     background-size: 400%;
     border-radius: 30px;
     z-index: 1;
+    cursor: url("cursor.png"), auto;
 }
 .btn:hover{
     animation: animate 8s linear infinite;
@@ -111,12 +141,14 @@ to {
     top: 50px;
     color: white;
     border-radius: 5px;
+    cursor: url("cursor.png"), auto;
 }
 
   .projetos h2 {
     font-size: 2.5rem;
     margin-bottom: 120px;
     position: relative;
+    cursor: url("cursor.png"), auto;
   }
   
   .projetos h2::after{
@@ -127,6 +159,7 @@ to {
     /* right: 10px; */
     top: 130px;
     animation: seta 0.5s ease-in 0s infinite alternate;
+    cursor: url("cursor.png"), auto;
   }
   
   @keyframes seta {
@@ -143,6 +176,7 @@ to {
     gap: 40px;
     overflow-x: auto;
     padding-bottom: 10px;
+    cursor: url("cursor.png"), auto;
   }
   
   .cada-projeto {
@@ -155,7 +189,17 @@ to {
     left: 100px;
     font-weight: 400;
     font-family: "Concert One", sans-serif;
+    overflow: hidden; /* Para garantir que o conteúdo não saia da caixa */
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave */
+    display: inline-block; 
+    margin: 10px;
+    cursor: url("cursor.png"), auto;
   }
+
+
+.cada-projeto:hover {
+  box-shadow: 0 0 50px 20px rgba(230, 0, 255, 0.8); /* Brilho amarelo ao passar o mouse */
+}
   
   .projetos-img {
     height: 180px;
@@ -164,7 +208,7 @@ to {
   .projetos-img img {
     width: 100%;
     height: 180px;
-    border-radius: 16px 16px 8px 8px;
+    border-radius: 16px 16px 0px 0px;
   }
   
   .cada-projeto h3 {
@@ -176,16 +220,7 @@ to {
     align-items: center;
     text-align: left;
   }
-  
-  /* .cada-projeto h3::before {
-    content: "";
-    width: 12px;
-    height: 8px;
-    display: block;
-    background: linear-gradient(180deg, #417C88, #2C6571);
-    margin-right: 8px;
-    transition: 0.3s;
-  } */
+
   
   .cada-projeto:hover h3::before {
     width: 20px;
@@ -205,12 +240,13 @@ to {
 
   a {
     text-decoration: none;
+    cursor: url("cursor.png"), auto;
   }
 
 .segunda-fileira {
     position: absolute;
     left: 370px;
-    top: 615px;
+    top: 715px;
 }
 
 .terceira-fileira {
@@ -218,3 +254,4 @@ to {
     left: 370px;
     top: 1px;
 }
+   
