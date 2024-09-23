@@ -136,20 +136,20 @@ let dados = [
         tags: "trap hip hop rap mc cabelinho"
     },
     {
-        titulo: "MD Chefe",
-        descricao: "Leonardo dos Santos Barreto (Rio de Janeiro, 2 de dezembro de 1999) conhecido pelo nome artístico MD Chefe, é um rapper, compositor, e empresário brasileiro. Ficou conhecido nacionalmente pelos singles Rei Lacoste e Tiffany. Suas canções abordam as principais características do estilo de vida do músico, com temas sobre moda, elegância e sofisticação.",
-        link: "https://pt.wikipedia.org/wiki/Filipe_Ret",
-        link2: "https://open.spotify.com/intl-pt/artist/6yZKPB8eRoJesHjtxPxSLs?si=J63KvbP6RzGqvOn5QUVqWQ",
-        imagem:"mdchefe.png",
-        tags: "trap hip hop rap md chefe"
-    },
-    {
         titulo: "MC Igu",
         descricao: "Igor Kuwahara, conhecido artisticamente como Mc Igu, é um rapper brasileiro que possui raízes japonesas. Igu mistura diferentes estilos e influências nas suas composições, trazendo uma roupagem totalmente única para o trap que vem se popularizando no Brasil.",
         link: "https://aminoapps.com/c/rapislife/page/blog/mc-igu-biografia/zY4N_w8Uxu8MG5ePmVob0ZoBrMoQnZPnWz",
         link2: "https://open.spotify.com/intl-pt/artist/5K854sjdzabwOy9KltU3Po?si=x4JTNVuNQmW1BNC9c9Ge7Q",
         imagem:"igu.png",
         tags: "hip hop gospel eletronica pop rap trap mc igu"
+    },
+    {
+        titulo: "MD Chefe",
+        descricao: "Leonardo dos Santos Barreto (Rio de Janeiro, 2 de dezembro de 1999) conhecido pelo nome artístico MD Chefe, é um rapper, compositor, e empresário brasileiro. Ficou conhecido nacionalmente pelos singles Rei Lacoste e Tiffany. Suas canções abordam as principais características do estilo de vida do músico, com temas sobre moda, elegância e sofisticação.",
+        link: "https://pt.wikipedia.org/wiki/Filipe_Ret",
+        link2: "https://open.spotify.com/intl-pt/artist/6yZKPB8eRoJesHjtxPxSLs?si=J63KvbP6RzGqvOn5QUVqWQ",
+        imagem:"mdchefe.png",
+        tags: "trap hip hop rap md chefe"
     },
     {
         titulo: "Nagalli",
