@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 body {
@@ -17,6 +18,19 @@ body {
   border-style: solid;
   border-color: #a98500;
   border-width: 3px;
+  transition: transform 0.2s ease;
+}
+
+.davi:hover {
+  transform: scale(1.2);
+}
+
+.ponte:hover {
+  transform: scale(1.2);
+}
+
+.resultado:hover {
+  transform: scale(1.2);
 }
 
 h1 {
