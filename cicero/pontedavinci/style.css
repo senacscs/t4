@@ -91,6 +91,8 @@ html {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            z-index: 99
         }
 
         header {
@@ -136,7 +138,7 @@ html {
                     }
 
                     img {
-                        width: 300px
+                        width: 300px;
                     }
                 }
             }
@@ -182,7 +184,7 @@ html {
             padding: 20px;
             text-align: center;
             width: 80%;
-            margin: 4%;
+            margin: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
             transition: all 0.2s ease-in;
@@ -197,7 +199,10 @@ html {
         }
 
         .top {
-            margin-top: 0;
+            margin-top: 60px;
+        }
+        .bottom {
+            margin-bottom: 80px;
         }
 
         .card:hover {
