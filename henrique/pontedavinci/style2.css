@@ -33,32 +33,32 @@ body {
 
 main {
     display: flex;
-    justify-content: center; /* Centraliza as seções de produção e resultados */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    flex: 1; /* Faz o main ocupar o espaço disponível */
+    flex: 1;
 }
 
 .production, .results {
     flex: 1;
     margin: 0 10px;
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center;
 }
 
 .image-container {
     display: flex;
-    justify-content: center; /* Centraliza as imagens */
-    align-items: center; /* Alinha as imagens no centro verticalmente */
-    gap: 20px; /* Adiciona espaço entre as imagens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .image {
-    width: 25%; /* Ajuste a largura para ocupar menos espaço */
-    max-width: 300px; /* Limita o tamanho máximo das imagens */
-    margin: 0; /* Remove a margem inferior */
+    width: 25%;
+    max-width: 300px; 
+    margin: 0; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    border-radius: 10px; 
 }
 
 
@@ -109,7 +109,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Certifique-se de que a lightbox fique acima de outros conteúdos */
+    z-index: 1000; 
 }
 
 .lightbox-image {
