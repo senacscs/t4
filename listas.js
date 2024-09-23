@@ -50,4 +50,5 @@ projetos = [
     { "nome": "Projeto PI", "url": "projeto" },
     { "nome": "Autocuidado", "url": "autocuidado"},
     { "nome": "Imersão", "url": "imersao1"},
+    { "nome": "Ponte Da Vinci", "url": "pontedavinci"},
 ]
