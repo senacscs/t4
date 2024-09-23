@@ -146,6 +146,21 @@ a:hover::after {
     box-shadow: 0 0 10px 0 black;
 }
 
+.fonte3 {
+    text-align: right;
+    margin: 5vh 1vw 0 0;
+}
+
+.fonte2 {
+    text-align: right;
+    margin: 5vh 1vw 0 0;
+}
+
+.fonte {
+    text-align: right;
+    margin: 13vh 1vw 0 0;
+}
+
 footer {
     background-color: #77dd77;
     text-align: center;
