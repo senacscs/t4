@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    text-align: center;
+    font-family: cursive;
+    scroll-behavior: smooth;
+}
+
+.cabecalho {
+    background-color: grey;
+    color: white;
+    /* text-align: center; */
+    transition: all .5s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.cabecalho-item {
+    flex: 1;
+}
+ul{
+    list-style-type: none;
+}
+.cabecalho:hover {
+    transform: scale(1.1);
+}
+
+body {
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+.ponteautoportante {
+    text-align: center;
+}
+
+.davinci {
+    border-radius: 20px;
+    border: 2px solid grey;
+}
+
+.tela{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 80vh;
+    background-color: #000000;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    border-radius: 90px;
+    width: 80%;
+    height: 60vh;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+.conteudo1 {
+    line-height: 1.2;
+    text-align: justify;
+}
+
+h2{
+    font-size: 40px;
+}
+
+p{
+    font-size: 30px;
+    text-align: justify;
+}
+
+footer {
+    border-top: solid 2px grey;
+}
+
+.zoom1 {
+    transition: all .5s ease;
+}
+
+.zoom1:hover {
+    transform: scale(1.1);
+}
+
+.zoom2 {
+    transition: all .5s ease;
+}
+
+.zoom2:hover {
+    transform: scale(1.1);
+}
+
+.zoom3 {
+    transition: all .5s ease;
+}
+
+.zoom3:hover {
+    transform: scale(1.1);
+}
+
