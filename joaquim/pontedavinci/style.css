@@ -5,6 +5,7 @@ body {
     padding: 0;
     font-family: Dosis;
     overflow-x: hidden;
+    background-color: #77dd77;
 }
 
 header {
@@ -12,14 +13,13 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
-    border-bottom: 0.1rem solid rgb(255, 70, 243);
 }
 
 nav ul li {
     text-decoration: none;
     display: inline-block;
     list-style: none;
-    margin-left: 228px;
+    margin-left: 19vw;
 }
 
 a {
@@ -90,7 +90,7 @@ a:hover::after {
 .fotos {
     max-height: 48vh;
     border-radius: 15px;
-    box-shadow: 0 0 20px 0 white;
+    box-shadow: 0 0 20px 0 black;
 }
 
 .geral2 {
@@ -100,24 +100,38 @@ a:hover::after {
 
 .aa {
     display: inline-flex;
-
     margin: 0 2vw;
+    width: 100%;
 }
 
 .texto {
-    width: 30%;
-    margin: 8vh 2vw 0 2vw;
-    font-size: 1.2em;
-    border: 1px solid;
-    background-color: rgba(0, 0, 0, 0.226);
-    color: white;
-    box-shadow: 8px 8px 15px black;
-    transition: 0.5s;
+    width: 28%;
+    margin: 10vh 2vw 0 2vw;
+    font-size: 1.1em;
+    text-align: justify;
+    background-color: #cfcf83;
+    box-shadow: 8px 8px 25px black;
+    transition: 0.6s;
+    border-radius: 15px;
+}
+
+.texto p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.texto h2 {
+    margin-left: 20px;
+}
+
+.texto:hover {
+    transform: scale(1.22);
 }
 
 .pre {
     background: #ff6961;
     height: 100vh;
+    width: 100%;
 }
 
 .ladoalado {
@@ -128,7 +142,7 @@ a:hover::after {
 .imagens2 {
     max-height: 60vh;
     border-radius: 20px;
-    padding: 100px
+    margin: 22vh 10vw 0 10vw;
     box-shadow: 0 0 10px 0 black;
 }
 
@@ -137,9 +151,6 @@ footer {
     text-align: center;
     bottom: 0;
     width: 100%;
-    opacity: 90%;
-}
-
-.texto:hover {
-    transform: scale(1.22);
+    margin: 0;
+    height: 11vh;
 }
