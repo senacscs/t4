@@ -96,14 +96,6 @@ let dados = [
         tags: "hip hop rap trap r&b  ga g.a super nova supernova"
     },
     {
-        titulo: "MC Igu",
-        descricao: "Igor Kuwahara, conhecido artisticamente como Mc Igu, é um rapper brasileiro que possui raízes japonesas. Igu mistura diferentes estilos e influências nas suas composições, trazendo uma roupagem totalmente única para o trap que vem se popularizando no Brasil.",
-        link: "https://aminoapps.com/c/rapislife/page/blog/mc-igu-biografia/zY4N_w8Uxu8MG5ePmVob0ZoBrMoQnZPnWz",
-        link2: "https://open.spotify.com/intl-pt/artist/5K854sjdzabwOy9KltU3Po?si=x4JTNVuNQmW1BNC9c9Ge7Q",
-        imagem:"igu.png",
-        tags: "hip hop gospel eletronica pop rap trap mc igu"
-    },
-    {
         titulo: "KayBlack",
         descricao: "Kaique Menezes (São Paulo, 12 de março de 2000), cujo nome artístico é KayBlack, é uma cantor brasileiro que canta uma mistura de funk e rap. Em abril de 2023, o artista se torna o segundo mais escutado do Spotify no Brasil.",
         link: "https://pt.wikipedia.org/wiki/Khttps://oglobo.globo.com/cultura/musica/noticia/2023/04/conheca-kayblack-o-rapper-que-fala-de-amor-e-esta-com-quatro-musicas-no-top-50-brasil.ghtmlayBlack",
@@ -150,6 +142,14 @@ let dados = [
         link2: "https://open.spotify.com/intl-pt/artist/6yZKPB8eRoJesHjtxPxSLs?si=J63KvbP6RzGqvOn5QUVqWQ",
         imagem:"mdchefe.png",
         tags: "trap hip hop rap md chefe"
+    },
+    {
+        titulo: "MC Igu",
+        descricao: "Igor Kuwahara, conhecido artisticamente como Mc Igu, é um rapper brasileiro que possui raízes japonesas. Igu mistura diferentes estilos e influências nas suas composições, trazendo uma roupagem totalmente única para o trap que vem se popularizando no Brasil.",
+        link: "https://aminoapps.com/c/rapislife/page/blog/mc-igu-biografia/zY4N_w8Uxu8MG5ePmVob0ZoBrMoQnZPnWz",
+        link2: "https://open.spotify.com/intl-pt/artist/5K854sjdzabwOy9KltU3Po?si=x4JTNVuNQmW1BNC9c9Ge7Q",
+        imagem:"igu.png",
+        tags: "hip hop gospel eletronica pop rap trap mc igu"
     },
     {
         titulo: "Nagalli",
