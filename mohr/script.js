@@ -65,3 +65,21 @@ function animate() {
 
 init();
 animate();
+
+/*Header*/
+  // Pega o header e guarda a posição original
+  window.onscroll = function() {
+    stickysubtitulo();
+  };
+
+  var subtitulo = document.querySelector("subtitulo");
+  var sticky = subtitulo.offsetTop; // Posição original do header
+
+  function stickysubtitulo() {
+    // Quando o scroll passar o topo do header, adiciona a classe 'sticky'
+    if (window.pageYOffset > sticky) {
+      subtitulo.classList.add("sticky");
+    } else {
+      subtitulo.classList.remove("sticky");
+    }
+  }

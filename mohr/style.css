@@ -25,9 +25,10 @@ input[type="submit"], input[type="button"], a, button {
   background-color: purple;
   width: 100%;
   color: white;
-}
+  font-family: "Concert One", sans-serif;
+  z-index: 100;
 
-.subtitulo 
+}
 
 h5 {
  position: relative;
@@ -246,7 +247,7 @@ to {
 .segunda-fileira {
     position: absolute;
     left: 370px;
-    top: 715px;
+    top: 719px;
 }
 
 .terceira-fileira {
