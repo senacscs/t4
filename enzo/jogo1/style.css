@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background-image: url(fundinho.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+
+h1 {
+    color: rgb(3, 19, 24);
+    background-color: black;
+    border-radius: 20px;
+    width: 25%;
+    text-align: center;
+    position: relative;
+    margin-top: 35%;
+    margin-left: 36%;
+    margin-bottom: 35%;
+    margin-right: 30%;
+}
+
+h1 a {
+color: rgb(12, 56, 67);
+text-decoration: none;
+}
+
+h1 a:hover {
+    color: rgb(79, 97, 255);
+    transition: color 0.8s;
+}

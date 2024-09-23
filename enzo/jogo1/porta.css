@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+body {
+ background-image: url(porta.gif);
+ background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+
+h1 {
+    color: white;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 22%;
+    margin-right: 20%;
+    margin-bottom: 50%;
+    backdrop-filter: blur(20px);
+    width: 700px;
+    height: 70px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px white;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(255, 0, 0);
+        transition: color 1s;
+    }
+
+    a::after {
+     content: '';
+     position: absolute;
+     left: 305px;
+     bottom: 2px;
+     width: 0;
+     height: 2px;
+     background: rgb(255, 0, 0);
+     transition: width 1s;   
+    }
+
+    a:hover::after {
+        width: 12%;
+    }

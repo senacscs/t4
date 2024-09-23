@@ -1,0 +1,68 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+body {
+background-image: url(cozinha.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+ overflow: hidden;
+}
+
+h1{
+color: white;
+position: relative;
+top: 150px;
+left: 400px;
+backdrop-filter: blur(20px);
+width: 400px;
+font-size: 50px;
+border-radius: 20px;
+text-align: center;
+box-shadow: 0 0 10px white;
+}
+
+.question-a {
+    position: relative;
+    top: 200px;
+    font-size: 30px;
+    left: 350px;
+    color: white;
+    backdrop-filter: blur(20px);
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.question-b:active{
+    box-shadow: 0 0 5px green;
+}
+
+.question-b {
+    position: relative;
+    top: 135px;
+    font-size: 30px;
+    left: 730px;
+    color: white;
+    backdrop-filter: blur(20px);
+    width: 160px;
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px white;
+    text-align: center;
+}
+
+.question-a:active{
+    box-shadow: 0 0 5px rgb(255, 0, 0);
+}
+
+a{
+    text-decoration: none;
+}
