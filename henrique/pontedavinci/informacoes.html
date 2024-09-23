@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponte Da Vinci</title>
     <link rel="stylesheet" href="style3.css">
+    <style>
+        /* Estilos da caixa ao redor do iframe */
+        .iframe-container {
+            border: 5px solid #c64699;; /* Cor da borda */
+            border-radius: 10px; /* Bordas arredondadas */
+            overflow: hidden; /* Para esconder partes que saem da borda */
+            transition: transform 0.3s, box-shadow 0.3s; /* Animação */
+            margin-bottom: 20px; /* Espaço abaixo da caixa */
+        }
+
+        .iframe-container:hover {
+            transform: scale(1.05); /* Aumenta a escala ao passar o mouse */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+        }
+
+    </style>
 </head>
 <body>
     <div class="wrapper">
         <main>
             <div class="view view--1">
                 <div>
-                    <h1>O que é uma Ponte Autoportante?</h1>
-                    <p>A ponte autoportante é uma estrutura de engenharia que utiliza o princípio de autossustentação para suportar suas próprias cargas. Diferente das pontes tradicionais, que muitas vezes dependem de suportes adicionais, as pontes autoportantes são projetadas para suportar cargas utilizando apenas seus próprios materiais e design.</p>
-                    <h1>Materiais Utilizados:</h1>
-                    <p>Papel, Régua, Tesoura, Cola.</p>
-                    <h1>Grupo:</h1>
-                    <p>Feito por Andrielen, Henrique e Larissa.</p>
-                    <p>Para Analice, Cícero, Clara e Nicole.</p>
+                    <h1>Referências:</h1>
+                    <div class="iframe-container">
+                        <iframe height="300px" width="600px"  src="Ponte de Da Vinci.pdf"></iframe>
+                    </div>
                     <button onclick="location.href='index.html'" type="button" class="unbutton button button--open" aria-label="Open other view">Página Inicial</button>
                 </div>
             </div>
             <script src="script.js"></script>
         </main>
     </div>
+    <footer>
+        <p>Clientes: <a href="https://senacscs.github.io/t4/ana/">Analice</a>, <a href="https://senacscs.github.io/t4/cicero/index/index.html">Cícero</a>, <a href="https://senacscs.github.io/t4/cicero/index/index.html">Clara</a> e <a href="https://senacscs.github.io/t4/nick/">Nicole</a>.</p>
+        <p>Fornecedores: <a href="https://senacscs.github.io/t4/andri/">Andrielen</a>, <a href="https://senacscs.github.io/t4/henrique/index.html/">Henrique</a> e <a href="https://senacscs.github.io/t4/larii/">Larissa</a>.</p>
+    </footer>
 </body>
 </html>

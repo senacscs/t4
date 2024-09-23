@@ -164,3 +164,17 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
+footer {
+    margin-top: auto; /* Faz o footer ficar na parte inferior da página */
+    padding: 20px;
+    text-align: center;
+    background-color: #c64699;
+    color: #ffffff;
+    width: 100%;
+}
+
+footer a {
+    color: #f08fd6;
+    text-decoration: none;
+}
