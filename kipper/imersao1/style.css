@@ -4,20 +4,23 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", Georgia, 'Times New Roman', Times, serif; /* Define a fonte padrão */
-    background-color: #0d2e51;
-    display: flex; /* Usa Flexbox para layout */
+    background-image: url(gif.gif);
+       display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem; /* Tamanho da fonte */
-    color: #F5F7F8; /* Cor do texto */
+    color: #30475E; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
@@ -100,7 +103,7 @@ section button {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #454546; /* Cor de fundo do rodapé */
+    background-color: #30475E; /* Cor de fundo do rodapé */
     color: #676f81; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
