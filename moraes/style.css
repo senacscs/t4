@@ -1,24 +1,67 @@
-h1 {
-    text-align: center;
-    font-size: 90px;
-    color: white;
+*{
+    margin: 0; 
+    padding: 0;
+  }
+  body {
+    background-image: url('wallpaper.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    margin: 0;
 }
-body {
-    background-color: rgb(44, 42, 41);
-}
-li {
-    text-align: center;
-    font-size: 40px;
-    color: white;  
-}
-a {
-    color: white;
-}
-div {
-    background-color: rgb(22, 19, 40);
-    border-radius: 10px;
-    margin-left: 200px;
-    margin-right: 200px;
-    box-shadow: 6px 6px 12px 12px rgb(22, 16, 107);
 
-}
+  section {
+    width: 780px;
+    height: auto;
+    margin: 50px auto;
+  }
+  
+  section label {
+    width: 175px;
+    padding: 10px 2px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    display: block;
+    float: left;
+    color: #ffffff;
+    font-family: 'Arial';
+    text-align:center;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+  }
+  
+  #galeria img {
+    float: left;
+    width:250px;
+    padding: 5px;
+    transition: all .4s;
+  }
+  
+  input:checked + label {
+    background-color: #383838;
+    color: #FFF;
+  }
+  
+  input {
+   display: none;
+  } 
+  
+  #bt_website:checked ~ #galeria .systems,
+  #bt_website:checked ~ #galeria .app {
+     opacity: .4;
+     transform: scale(0.5);
+  }
+  
+  #bt_systems:checked ~ #galeria .website,
+  #bt_systems:checked ~ #galeria .app {
+    opacity: .4;
+    transform: scale(0.5);
+  }
+  
+  #bt_app:checked ~ #galeria .website,
+  #bt_app:checked ~ #galeria .systems{
+    opacity: .4;
+    transform: scale(0.5);
+  }
