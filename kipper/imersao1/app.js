@@ -24,7 +24,7 @@ function pesquisar() {
         descricao = dado.descricao.toLowerCase()
         tags = dado.tags.toLowerCase()
         // se titulo includes campoPesquisa
-        if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
+        if (titulo.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
             // cria um novo elemento
             resultados += `
             <div class="item-resultado">
