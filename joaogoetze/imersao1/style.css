@@ -16,6 +16,7 @@ body {
 
 .principal {
     background-image: url("https://i.pinimg.com/originals/79/34/31/79343179c9ed077320a23890c3f5745b.gif");
+    /* background-image:url(https://i0.wp.com/theverybesttop10.com/wp-content/uploads/2017/08/Top-10-Amazing-and-Unusual-Cat-Gifts-They-Will-Love-5.jpg?resize=600%2C470); */
     background-size: contain;
 }
 
@@ -58,7 +59,7 @@ div {
 .pesquisar{
     background-color: rgba(77, 151, 241, 0.8);
    }
--
+
 a,p,h2 {
     text-align: center;
 }
@@ -136,6 +137,7 @@ section button {
 /* Estiliza os links quando são passados o mouse sobre */
 .item-resultado a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    background-color: #c3ceef;
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */

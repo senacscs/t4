@@ -37,7 +37,7 @@ function pesquisar() {
     }
 
     if (!resultados) {
-        resultados = "<p>Nada foi encontrado ou você digitou errado</p>";
+        resultados = "<p>Nada foi encontrado veja se você digitou errado</p>";
     }
 
     // Atribui os resultados gerados à seção HTML
