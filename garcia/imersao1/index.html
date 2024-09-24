@@ -15,7 +15,7 @@
     <main>
 
         <section>
-            <input type="text" placeholder="Digite o nome do jogo" id="campo-pesquisa" oninput="pesquisar()">
+            <input type="text" placeholder="Digite o nome da comida" id="campo-pesquisa" oninput="pesquisar()">
 
         </section>
         <section class="resultados-pesquisa" id="resultados-pesquisa">
@@ -426,7 +426,7 @@ let dados = [
 
     // se campoPesquisa for uma string sem nada
     if (!campoPesquisa) {
-        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar o nome de bloco ou item válido</p>"
+        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar uma comida</p>"
         return 
     }
 
