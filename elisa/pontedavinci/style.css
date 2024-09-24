@@ -149,3 +149,9 @@ body{
       font-size: 36px;
     }
   }
+  footer{
+    width: 100%;
+    background-color: #462d13;
+    color: white;
+    Align-items: center;
+  }
