@@ -13,6 +13,11 @@
     margin: 20px 0;
   }
 
+  nav ul li{
+    display: inline;
+    margin: 0 1em;
+  }
+
   header, footer {
     background-color: #d18f8f;
     color: #391212;
@@ -95,6 +100,11 @@
     margin: 20px 0;
   }
 
+  nav ul li{
+    display: inline;
+    margin: 0 1em;
+  }
+
   header, footer {
     background-color: #d18f8f;
     color: #391212;
@@ -140,4 +150,4 @@
     background-color: #f00;
     height: 2px;
   }
-  }
+}
