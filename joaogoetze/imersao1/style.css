@@ -4,8 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    /* background-color: #DDDDDD;  */
-    
+    background-color: #d4defb;
     display: flex; /* Usa Flexbox para layout */
     flex-direction:column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -38,7 +37,7 @@ section {
 
 div {
      width: 80%;
-
+     background-color: aqua;
 }
 
  .container {
@@ -50,6 +49,16 @@ div {
   margin-right: 20px;
 }
 
+.pesquisa{
+ background-color: rgba(255, 255, 255, 0.7);
+ color: #000000;
+ font-weight: 1000;
+}
+
+.pesquisar{
+    background-color: rgba(77, 151, 241, 0.8);
+   }
+-
 a,p,h2 {
     text-align: center;
 }
@@ -61,13 +70,13 @@ img {
     display: flex;
 }
 
-.reflexao{
+/* .reflexao{
     width: 15%;
     display: block;
     margin: 0 auto;
     display: flex;
     padding: 1%;
-}
+} */
 
 /* Estiliza os inputs dentro das seções */
 section input {
@@ -100,15 +109,16 @@ section button {
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
+    /* background-color: #9d9d9d; */
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-    background: #FFFFFF; /* Cor de fundo dos itens */
+    background: #b0c0f3; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra leve */
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
