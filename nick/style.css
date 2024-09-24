@@ -23,7 +23,7 @@ body {background-color: rgb(238, 113, 165);
    margin-left: 7%;
    margin-bottom: 5%;
    border-radius: 20px;
-   height: 400px;
+   height: 320px;
    filter: grayscale(100%);
  }  
 
@@ -32,7 +32,7 @@ body {background-color: rgb(238, 113, 165);
   margin-left: 7%;
   margin-bottom: 5%;
   border-radius: 20px;
-  height: 400px;
+  /* height: 400px; */
   filter: grayscale(0%);
  }
 
@@ -53,7 +53,7 @@ body {background-color: rgb(238, 113, 165);
  border-radius: 20px;
  margin-right: auto;
  width: 350px;
- height: 500px;
+ /* height: 500px; */
  margin-left: auto;
  color: ghostwhite;
 }
