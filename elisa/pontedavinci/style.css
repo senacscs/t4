@@ -131,6 +131,23 @@ body{
   .pont2, .pont3{
     margin-left: 5%;
   }
+  
+  footer{
+    width: 100%;
+    background-color: #462d13;
+    color: white;
+    align-items: center;
+    margin: auto;
+    font-family: sans-serif;
+
+    div{
+      background-color: #462d13;
+      color: white;
+      text-align: center;
+      margin: auto;
+      font-family: sans-serif;
+    }
+  }
 
   @media all and (max-width: 820px) {
     section.module h2 {
@@ -156,4 +173,12 @@ body{
     align-items: center;
     margin: auto;
     font-family: sans-serif;
+
+    div{
+      background-color: #462d13;
+      color: white;
+      text-align: center;
+      margin: auto;
+      font-family: sans-serif;
+    }
   }
