@@ -383,5 +383,47 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Dua_Lipa",
         imagem: "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/02/dua-lipa-novo-album-1.png",
         tags: "eua usa pop famosa rap"
+    },
+    {
+        titulo: "Will Smith",
+        descricao: "Willard Carroll Smith II, mais conhecido como Will Smith é um ator, rapper e produtor americano. Vencedor de diversos prêmios, incluindo um Oscar e quatro prêmios Grammy, tornou-se um dos poucos artistas a ter sucesso em três diferentes áreas de entretenimento dos Estados Unidos: cinema, televisão e música.",
+        link: "https://pt.wikipedia.org/wiki/Will_Smith",
+        imagem: "https://br.web.img2.acsta.net/pictures/17/02/08/16/50/452749.jpg",
+        tags: "ator famoso negro rap eua usa"
+    },
+    {
+        titulo: "Justin Timberlake",
+        descricao: "Justin Randall Timberlake, mais conhecido como Justin Timberlake, é um cantor, compositor, músico, ator, dublador, produtor musical, dançarino, multi-instrumentista e empresário norte-americano. Ele foi integrante da boy band 'N Sync.",
+        link: "https://pt.wikipedia.org/wiki/Justin_Timberlake",
+        imagem: "https://s2-oglobo.glbimg.com/tGx2L3BUag1bGEXmmXqTAzaB4XA=/0x0:679x625/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/z/n/s5smHlQ4aw2RTHgccwBg/74579241-singer-justin-timberlake-arrives-for-the-75th-golden-globe-awards-on-january-7-2018-in.jpg",
+        tags: "branco rock pop rap eua usa"
+    },
+    {
+        titulo: "Jamie Foxx",
+        descricao: "Eric Marlon Bishop, mais conhecido como Jamie Foxx, é um ator, produtor, roteirista, cantor e comediante norte-americano. É conhecido principalmente por atuar como Ray Charles no musical Ray e como Django no filme Django Livre, de Quentin Tarantino.",
+        link: "https://pt.wikipedia.org/wiki/Jamie_Foxx",
+        imagem: "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/05/200619093245-jamie-foxx-0222-e1690023305618.jpg?w=1200&h=1200&crop=1",
+        tags: "rap usa eua ator negro"
+    },
+    {
+        titulo: "Ed Sheeran",
+        descricao: "Edward Christopher Sheeran MBE, mais conhecido como Ed Sheeran, é um cantor, compositor, produtor e ator britânico. No início de 2012, Sheeran lançou um extended play independente, que chamou a atenção de Elton John e Jamie Foxx. Ele, em seguida, assinou contrato com a Asylum Records.",
+        link: "https://pt.wikipedia.org/wiki/Ed_Sheeran",
+        imagem: "https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2023/02/02084936/ed-sheeran-d7a7c1e2f4e641938d37c3830be2944b.jpg",
+        tags: "pop usa eua branco"
+    },
+    {
+        titulo: "Alan Walker",
+        descricao: "Alan Olav Walker é um DJ e produtor musical norueguês nascido no Reino Unido. Ficou mundialmente conhecido pelo single 'Faded', que recebeu certificado de diamante na Alemanha e multi-platina em mais de 10 países, incluindo Estados Unidos e Reino Unido.",
+        link: "https://pt.wikipedia.org/wiki/Alan_Walker",
+        imagem: "https://s3.playbpm.com.br/images/Alan-Walker-Soundrive-Music-scale.242d6621.fill-1140x450.png",
+        tags: "dj usa eua branco britanico"
+    },
+    {
+        titulo: "Marshmello",
+        descricao: "Christopher Comstock, mais conhecido profissionalmente como Marshmello, é um produtor de música eletrônica e DJ norte-americano. Suas músicas 'Silence', 'Wolves', 'Friends', 'Happier' e 'Alone' receberam certificações multiplatina em vários países, alcançando o Top 40 da Billboard Hot 100.",
+        link: "https://pt.wikipedia.org/wiki/Marshmello",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwGMk47lV131EmDW8R44UAeOMvZqPtw5vMA&s",
+        tags: "comida usa eua dj"
     }
 ];

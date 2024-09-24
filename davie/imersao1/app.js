@@ -42,9 +42,17 @@ function pesquisar() {
   }
 
   if (!resultados) {
-      resultados = "<p>Não existe ainda.</p>"
+      resultados = "<p class='fundo'>Não existe ainda.</p>"
   }
 
   // Atribui os resultados gerados à seção HTML
   section.innerHTML = resultados;
 }
+const button = document.getElementById('send');
+
+button.addEventListener('click', () => {
+  button.classList.add('piscar');
+  setTimeout(() => {
+    button.classList.remove('piscar');
+  }, 1000);
+});
