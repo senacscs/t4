@@ -1,0 +1,93 @@
+@font-face {
+    font-family: hollow;
+    src: url("img/Trajan\ Pro\ Regular.ttf");
+}
+
+* {
+    margin: 0;
+    text-align: center;
+    font-family: hollow;
+}
+
+h1 {
+    text-shadow: 0 0 10px #fff;
+}
+
+header {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding-bottom: 200px;
+    padding-top: 100px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    transition: opacity 2s ease;
+}
+
+body {
+    background: url(img/greenpath.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.olaforasteiro {
+    margin-top: 100px;
+    font-size: 100px;
+    text-shadow: 0 0 20px #fff;
+}
+
+.icone {
+    border-radius: 200px;
+}
+
+#sites {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    a {
+        min-width: 300px;
+        max-width: 10vw;
+        width: 400px;
+        min-height: 300px;
+        max-height: 10vh;
+        height: 400px;
+
+        border: solid 2px black;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.596);
+        backdrop-filter: blur(5px);
+        margin: 5px;
+
+        text-decoration: none;
+        color: aliceblue;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        transition: all 0.5s ease;
+
+        img {
+            min-width: 100px;
+            max-width: 50%;
+            min-height: 100px;
+            max-height: 50%;
+            border-radius: 5px;
+        }
+    }
+    a:hover{
+        transform: scale(1.1);
+    }
+}
