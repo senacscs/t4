@@ -111,6 +111,7 @@ let TRABALHOS = [
         content: [
             { nome: "4-1: SLAVES TO POWER", url: "jogo1", img: "egito.jpg" },
             { nome: "polia", url: "tecnologiamat", img: "polia.bmp" },
+            { nome: "DA VINKI?", url: "pontedavinci", img: "davinki.jpg" },
         ]
     },
     {
@@ -137,10 +138,13 @@ function criarLevel(lista){
     p.innerHTML = lista.nome;
     let a = criarElem("a", null, atrib = [["href","../"+lista.url], ["target","_blank"]])
     let img = criarElem("img", null, atrib = [["src",lista.img ? "./img/level/"+lista.img : "./img/ha/kratos.gif"]]);
+    let nominho = criarElem("span","nominho");
+    nominho.innerHTML = lista.url;
 
     a.appendChild(img)
     level.appendChild(p);
     level.appendChild(a);
+    level.appendChild(nominho)
 
     return level;
 }

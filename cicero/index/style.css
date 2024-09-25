@@ -190,7 +190,7 @@ body {
             .galbo {
                 width: 100%;
                 border-bottom: white 2px solid;
-                
+
                 p {
                     margin-bottom: 0;
                     font-size: 40px;
@@ -203,7 +203,7 @@ body {
                 align-items: center;
                 flex-wrap: wrap;
                 justify-content: center;
-                
+
                 .nivel {
                     display: flex;
                     flex-direction: column;
@@ -226,6 +226,16 @@ body {
                         width: 100%;
                         margin-top: 3px;
                         max-height: 200px;
+                    }
+
+                    .nominho {
+                        display: none;
+                    }
+                }
+
+                .nivel:hover {
+                    .nominho {
+                        display: inline;
                     }
                 }
             }

@@ -17,7 +17,7 @@ html {
         #telona {
             width: 100vw;
             height: 100vh;
-            z-index: 99;
+            z-index: 100;
             position: fixed;
             top: 0;
             left: 0;
