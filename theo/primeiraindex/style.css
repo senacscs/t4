@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:rgb(241, 172, 193);
+}
+
+header {
+    background-color: rgba(181, 117, 157, 0.9);
+    color: black;
+    padding: 1px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+h1{
+    font-size: 24px;
+}
+
+a {
+    color: rgb(0,0,0);
+    text-decoration: none;
+  }
+ 
+  /* a:visited {
+    color: rgba(181, 117, 157, 0.9);
+  } */
+ 
+  a:hover {
+    color: rgba(181, 117, 157, 0.9);
+  }
+ 
+  a:active {
+    color: rgba(181, 117, 157, 0.9);
+  }
+  
+  button {
+    background-color: rgba(181, 117, 157, 0.9);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+  color: purple;
+  transition: color 0.8s;
+}
+
+/* .simbolos {
+  margin-right: -90%;
+  margin-top: -45px;
+} */
+ /* .simbolos{
+ align-items: center;
+ display:flex;
+ float: right;
+ } */
+
+ .simbolos {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  margin-top: 17px;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: purple;
+  transition: color 1s;
+}
