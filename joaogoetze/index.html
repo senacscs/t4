@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
    <meta charset="UTF-8">
@@ -8,71 +8,65 @@
    <link rel="stylesheet" href="style.css"> 
 </head>
 
-<header id="subir"> 
-   <section>
-   index do João G. 
-   <section> 
-    <a href="curriculo/"><p>leia meu currículo</a> </p>
-    <a href="index-1/index.html"><p>Veja a 1º versão da minha index</a> </p>
-   </section>  
-   <h1> meus sites:</h1>
-   <nav>
-      <!-- <ul> -->
-           <a href="#olamundo" >site Ola Mundo|</a>
-           <a href="#html">|site de referencias de html|</a>
-           <a href="#css">|site de referencias de css|</a>
-           <a href="#responsaveis">|site para os responsaveis|</a>
-           <a href="#pi">|projeto integrador</a>
-           <a href="#oficina">|site da oficina(zueira)|</a>
-           <a href="#odsteste">|site do teste da ods|</a>
-           <a href="#jogo1">|um jogo de enigma|</a>
-           <a href="#bluetooth">|site do tecnologiamat|</a>
-           <a href="#autocuidado">|site sobre autocuidado|</a>
-           <a href="#imersao1">|imersao1|</a>
-      <!-- </ul> -->
-   </nav>
-</header>
+<body>
+   <header id="subir"> 
+      <section>
+         index do João G. 
+      </section> 
+      <section> 
+         <a href="curriculo/"><p>leia meu currículo</p></a>
+         <a href="index-1/index.html"><p>Veja a 1º versão da minha index</p></a>
+      </section>  
+      <h1>meus sites:</h1>
+      <nav>
+         <a href="#olamundo">site Ola Mundo</a> |
+         <a href="#html">site de referencias de html</a> |
+         <a href="#css">site de referencias de css</a> |
+         <a href="#responsaveis">site para os responsaveis</a> |
+         <a href="#pi">projeto integrador</a> |
+         <a href="#oficina">site da oficina(zueira)</a> |
+         <a href="#odsteste">site do teste da ods</a> |
+         <a href="#jogo1">um jogo de enigma</a> |
+         <a href="#bluetooth">site do tecnologiamat</a> |
+         <a href="#autocuidado">site sobre autocuidado</a> |
+         <a href="#imersao1">imersao1|</a>
+         <br>
+         <br>
+         <button onclick="invertSections()">|--Inverter Ordem dos Sites--|</button>
 
-<main>
-   <body>
+      </nav>
+   </header>
+
+   <main id="main-content">
+
       <section id="olamundo"> 
-         <h2><a href="olamundo/index.html"><p>Ola Mundo </a> </h2>
-         <h2><a href="olamundo/index.html"><p>Link pro site </a> </h2>
-         <iframe  class="itens"src="olamundo/index.html" frameborder="0"></iframe>
-         <!-- <a href="olamundo/index.html"><img  class="itens" src="Ola Mundo.png"></a> -->
-         <!--acima o site ola mundo contendo link escrito e imagem com link-->
+         <h2><a href="olamundo/index.html">Ola Mundo</a></h2>
+         <h2><a href="olamundo/index.html">Link pro site</a></h2>
+         <iframe class="itens" src="olamundo/index.html" frameborder="0"></iframe>
       </section> 
 
       <section id="html">   
-         <h2> <a href="indicacoeshtml/index.html"> <p>indicações de html</a> </h2>
-         <h2> <a href="indicacoeshtml/index.html"> <p>Link pro site</a> </h2>
-         <iframe class="itens"src="indicacoeshtml/index.html" >frameborder="0"></iframe>
-         <!-- <a href="indicacoeshtml/index.html"><img class="itens" src="indicações de html.png"></a> -->
-         <!--acima o site de indicações de html contendo link escrito e imagem com link-->
+         <h2><a href="indicacoeshtml/index.html">indicações de html</a></h2>
+         <h2><a href="indicacoeshtml/index.html">Link pro site</a></h2>
+         <iframe class="itens" src="indicacoeshtml/index.html" frameborder="0"></iframe>
       </section> 
 
       <section id="css"> 
-         <h2> <a href="indicacoescss/"><p>indicações de css</a> </h2>
-         <h2><a href="indicacoescss/"><p>Link pro site</a> </h2>
-         <iframe  class="itens"src="indicacacoescss/index.html" frameborder="0"></iframe>
-         <!-- <a href="indicacoescss/"><img class="itens" src="indicações de css.png"></a> -->
-         <!--acima o site de indicações de css contendo link escrito e imagem com link-->
+         <h2><a href="indicacoescss/">indicações de css</a></h2>
+         <h2><a href="indicacoescss/">Link pro site</a></h2>
+         <iframe class="itens" src="indicacacoescss/index.html" frameborder="0"></iframe>
       </section> 
 
       <section id="responsaveis">                      
-          <h2><a href="responsaveis/"><p>responsaveis</a> </h2>
-         <h2><a href="responsaveis/"><p>Link pro site</a> </h2>
-         <iframe  class="itens" src="responsaveis/index.html" frameborder="0"></iframe>
-         <!-- <a href="responsaveis/"><img class="itens" src="site dos responsaveis.png"></a> -->
-         <!--acima o site dos responsaveis contendo link escrito e imagem com link-->
+         <h2><a href="responsaveis/">responsaveis</a></h2>
+         <h2><a href="responsaveis/">Link pro site</a></h2>
+         <iframe class="itens" src="responsaveis/index.html" frameborder="0"></iframe>
       </section> 
 
       <section id="pi"> 
-         <h2><a href="projeto/" ><p>site do ODS do Projeto integrador</a> </h2>
-         <h2><a href="projeto/"><p>Link pro site</a> </h2>
-         <iframe  class="itens" src="projeto/index.html" frameborder="0"></iframe>
-         <!-- <a href="projeto/"><img class="itens" src="projetosobreods.png"></a> -->
-         <!--acima o site do pi contendo link escrito e imagem com link-->
+         <h2><a href="projeto/">site do ODS do Projeto integrador</a></h2>
+         <h2><a href="projeto/">Link pro site</a></h2>
+         <iframe class="itens" src="projeto/index.html" frameborder="0"></iframe>
       </section> 
 
       <section id="oficina"> 
@@ -130,8 +124,21 @@
          <!--acima o site do da Vinci contendo link escrito e imagem com link-->
       </section>
 
-      <footer> <a href="#subir"><img class="subir" src="botãodesubir.png"></a></footer>
-   </body>
-</main>
+   </main>
+
+   <footer>
+      <a href="#subir"><img class="subir" src="botãodesubir.png" alt="Botão de subir"></a>
+   </footer>
+
+   <script>
+      function invertSections() {
+         const mainContent = document.getElementById('main-content');
+         const sections = Array.from(mainContent.querySelectorAll('section'));
+         sections.reverse().forEach(section => mainContent.appendChild(section));
+      }
+   </script>
+</body>
 
 </html>
+
+

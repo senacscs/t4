@@ -20,7 +20,6 @@
     align-items:center;
     justify-content: center;
   } */
-  
 
   /* iframe{ 
     border: 2px solid white;
@@ -47,7 +46,7 @@
   .subir{
     width: 5%;
     display: block;
-    padding-left: 1000px;
+    padding-left: 1200px;
     height: 65px;
   }
   .container {
@@ -212,7 +211,7 @@
   .subir{
     width: 5%;
     display: block;
-    padding-left: 900px;
+    padding-left: 1060px;
     height: 65px;
   }
   .container {
@@ -286,7 +285,7 @@
   h2{
     color: rgb(255, 255, 255);
     text-align:center;
-    /* font-family: fantasy; */
+    font-family: fantasy;
   }
   p{color:rgb(255, 255, 255);
     text-align:center;
@@ -380,7 +379,7 @@
       .subir{
         width: 5%;
         display: block;
-        padding-left: 600px;
+        padding-left: 1060px;
         height: 65px;
       }
       .container {
@@ -454,7 +453,7 @@
       h2{
         color: rgb(255, 255, 255);
         text-align:center;
-        /* font-family: fantasy; */
+        font-family: fantasy;
       }
       p{color:rgb(255, 255, 255);
         text-align:center;
