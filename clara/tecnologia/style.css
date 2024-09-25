@@ -11,6 +11,8 @@ body{
 
 p{
     color: rgb(0, 0, 0);
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 h2{
@@ -29,13 +31,14 @@ li{
     list-style: none;
     text-align: center;
     
+    
 }
 header{
     display: flex;
     align-items: center;
     box-sizing: border-box;
     background-color:  rgba(44, 114, 0, 0.653);
-    
+    box-shadow: 0 0 20px;
 }
 #menu a{ 
     display: block;
@@ -95,10 +98,27 @@ img{
     text-align: center;
     margin-left: 30%;
     margin-right: 30%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+
 }
 
 .principal{
    width: 200px; 
    left: 200px;
+   transition: transform 0.3s ease-in-out;
+}
 
+.principal:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+   margin-top: 5%;
+   padding-top: 2%;
 }

@@ -11,6 +11,8 @@ body{
 
 p{
     color: rgb(0, 0, 0);
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 h2{
@@ -34,14 +36,14 @@ header{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    background-color:  rgb(255, 236, 88);
+    background-color:  rgb(231, 221, 20);
     
 }
 #menu a{ 
     display: block;
     padding: .5rem;
     text-align: right;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -87,6 +89,15 @@ header input:hover{
 img{
     text-align: center;
     border-radius: 10%;
+    max-width: 490px;
+    margin-bottom: 0;
+    box-shadow: 0 0 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    
 }
 
 
@@ -95,4 +106,24 @@ img{
     text-align: center;
     margin-left: 30%;
     margin-right: 30%;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    box-shadow: 0 0 20px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #dda838;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    text-shadow: 0 0 20px #f7ee00;
+}
+

@@ -44,6 +44,10 @@ header{
     color: white;
 }
 
+a {
+    color: rgb(90, 0, 64);
+    padding-bottom: 15px;
+}
 
 
 a:hover{
@@ -93,6 +97,24 @@ img{
 .card{
     background-color: rgb(255, 26, 125);
     text-align: center;
+    border-radius: 20px;
     margin-left: 30%;
     margin-right: 30%;
+    margin-bottom: 20px;
+}
+
+.card1{
+    background-color: rgb(255, 26, 125);
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+    color: rgb(255, 255, 255);
+    height: 50px;
+}
+
+.title {
+    margin-top: 15%;
 }
