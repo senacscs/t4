@@ -33,6 +33,7 @@ function pesquisar() {
                 </h2>
                 <p class="descricao-meta">${dado.descricao}</p>
                 <a href=${dado.link} target="_blank">Mais informações</a>
+                <img src=${dado.imagem} alt=${dado.titulo}>
             </div>
         `;
         }

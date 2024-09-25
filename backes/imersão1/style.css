@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
+    background-color: #5f5a5a; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -69,7 +69,7 @@ section button:hover {
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 100%; /* Largura total */
-    max-width: 60rem; /* Largura máxima da caixa de resultados */
+    max-width: 40rem; /* Largura máxima da caixa de resultados */
     height: 46vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
@@ -78,6 +78,13 @@ section button:hover {
     background-color: #FFFFFF; /* Cor de fundo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
     box-sizing: border-box; /* Inclui padding na largura total */
+}
+.item-resultado img{
+    margin-top: 50px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estiliza cada item de resultado */
