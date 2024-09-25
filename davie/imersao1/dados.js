@@ -425,5 +425,12 @@ let dados = [
         link: "https://pt.wikipedia.org/wiki/Marshmello",
         imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwGMk47lV131EmDW8R44UAeOMvZqPtw5vMA&s",
         tags: "comida usa eua dj"
+    },
+    {
+        titulo: "Killer Mike",
+        descricao: "Michael Santiago Render mais conhecido pelo nome artístico de Killer Mike, é um rapper e ativista americano. Ele fez sua estreia no quarto álbum do Outkast, Stankonia (2000), e apareceu como convidado no single 'The Whole World', vencedor do Grammy, de seu álbum de maiores sucessos Big Boi e Dre Present, Outkast (2001).",
+        link: "https://en.wikipedia.org/wiki/Killer_Mike",
+        imagem: "https://s3.us-east-1.amazonaws.com/vnda-cockpit/www-streetopia-me/2020/12/18/5fdc1e901b210killermike01.jpg",
+        tags: "negro ativismo usa eua"
     }
 ];

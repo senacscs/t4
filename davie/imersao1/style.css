@@ -104,7 +104,7 @@
     }
     /* Estiliza a imagem dentro dos itens de resultado */
     img:hover, img:focus {
-        transform: translateX(0) scale(1.09);
+        transform: translateX(0) scale(1.09); /* Quando encosta o mouse na imagem ela amplia o tamanho */
     }
     footer {
         background-color: #000000; /* Cor de fundo do rodapé */
