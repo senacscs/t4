@@ -47,18 +47,7 @@
       font-size: 24px; /* Tamanho do texto ao rolar a página */
     }
     
-  .blocos-indicacoes-html {
-    background-color: black;
-    position: relative;
-    top: 150px;
-    left: 100px;
-    color: white;
-    border: 0.1rem solid white;
-    width: 310px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 0 white;
-    max-width: 350px;
-  }
+  
 
   a {
     text-decoration: none;
@@ -72,7 +61,7 @@
 
   .blocos-olamundo {
     position: relative;
-    left: 460px;
+    left: 475px;
     top: 240px;
     background-color: black;
     position: relative;
@@ -114,7 +103,7 @@
 
   .blocos-responsaveis {
     position: relative;
-    left: 460px;
+    left: 475px;
     bottom: 50px;
     background-color: black;
     position: relative;
@@ -154,10 +143,23 @@
     max-width: 350px;
   }
 
+.blocos-indicacoes-html {
+    background-color: black;
+    position: relative;
+    top: 150px;
+    left: 100px;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
   .blocos-imersao1 {
       position: relative;
-      left: 460px;
-      bottom: 250px;
+      left: 475px;
+      bottom: 355px;
       background-color: black;
       position: relative;
       color: white;
@@ -166,6 +168,48 @@
       border-radius: 20px;
       box-shadow: 0 0 10px 0 white;
       max-width: 350px;
+  }
+
+  .blocos-autocuidado {
+    position: relative;
+    left: 850px;
+    bottom: 1000px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-jogo1 {
+    position: relative;
+    left: 100px;
+    bottom: 90px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-tecnologiamat {
+    position: relative;
+    left: 475px;
+    bottom: 1000px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
   }
 
   .content {
@@ -217,12 +261,45 @@
     animation-timing-function: cubic-bezier(.15,.41,.69,.94);
     animation-iteration-count: infinite;
   }
+
   @keyframes scroll {
     0% { opacity: 0; }
     10% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(15px); opacity: 0;}
   }
 
+  .fundo-curriculo {
+    background-color: white;
+    opacity: 60%;
+    width: 80%;
+    text-align: center;
+    color: black;
+    margin-left: 10%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 white;
+    position: relative;
+    bottom: 100px;
+    height: 500px;
+  }
+
+  .fundo-curriculo :hover {
+    width: 81%;
+    transition: ease-in 1s;
+  }
+
+  h3 {
+    color: black;
+    font-size: 25px;
+    position: relative;
+    top: 30px;
+  }
+
+  img {
+    width: 700px;
+    border-radius: 20px;
+    position: relative;
+    top: 30px;
+  }
 
 
 
