@@ -173,7 +173,7 @@
   .blocos-autocuidado {
     position: relative;
     left: 850px;
-    bottom: 1000px;
+    bottom: 1020px;
     background-color: black;
     position: relative;
     color: white;
@@ -202,6 +202,20 @@
     position: relative;
     left: 475px;
     bottom: 1000px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  .blocos-davinci {
+    position: relative;
+    left: 850px;
+    bottom: 1125px;
     background-color: black;
     position: relative;
     color: white;
