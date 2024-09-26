@@ -28,6 +28,18 @@ h1 {
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
 
+img.capas{
+    float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 10px 0;
+    /* width: 30%; */
+}
+
+.informacao{
+  font-size: 15px;
+}
+
 /* Estiliza as seções da página */
 section {
     display: flex; /* Usa Flexbox para layout */
@@ -61,7 +73,7 @@ div {
    }
 
 a,p,h2 {
-    text-align: center;
+     text-align: center;
 }
 
 img {
@@ -69,6 +81,8 @@ img {
     display: block;
     margin: 0 auto;
     display: flex;
+    border-radius: 1.5rem; 
+    height: 270px;
 }
 
 /* .reflexao{
@@ -148,13 +162,13 @@ section button {
     align-items: center;
 }
 
-img.capas{
+/* img.capas{
     float: left;
     border: transparent thin solid;
     padding: 5px;
     margin: 0px 10px 10px 0;
     width: 15%;
-}
+} */
 
 /* Estiliza o rodapé da página */
 footer {

@@ -27,12 +27,12 @@ function pesquisar() {
             resultados += `
             <div class="item-resultado">
                 <h2>
-                <a href="${dado.link}" target="_blank">${dado.titulo}</a>
+                    <a href="#" target="_blank">${dado.titulo}</a>
+                     <img class="capas" aling="left" src="${dado.foto}">
                 </h2>
-                <img src="${dado.foto}" alt="Imagem de ${dado.titulo}"> 
                 <p class="descricao-meta">${dado.descricao}</p>
-                <p><a href="${dado.link}" target="_blank">Mais informações</a></p>
-            </div>`;
+                <h2><a href=${dado.link} class="informacao" target="_blank">Mais informações</a></h2>
+            </div> `;
         }
     }
 
