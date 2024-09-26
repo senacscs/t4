@@ -1,5 +1,5 @@
 p{
-   color: black;
+   color: whitesmoke;
    text-align: center; 
   font-family: initial;
   font-size: xx-large;
@@ -8,7 +8,7 @@ p{
 }
 body{
 
-background-color:black ;
+background-color:black;
 text-align: center;
 font-size: xx-large;
    font-family:'Times New Roman', Times, serif 
@@ -36,11 +36,11 @@ hr{
 section{
 
    text-align: center;
-    background-color:aquamarine;
+    background-color:rgba(0, 0, 0, 0.32);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px whitesmoke;
-    border-style: double;
+    border-style:hidden;
     width: 550px;
     margin-left: auto;
     margin-right: auto;
@@ -49,9 +49,9 @@ section{
  
 }
 a{
-color:black;
+color:whitesmoke;
 font-family: initial;
-font-size: smaller;
+font-size:x-large;
 
 
 }
@@ -60,4 +60,18 @@ font-size: smaller;
      background-color: grey;
    }
     
+ }
+ button {
+   background-color:rgba(43, 39, 39, 0.219);
+   border: none;
+   color: white;
+  
+   text-align: center;
+   text-decoration:solid;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+
+   width: 350px;
+   height: 100px;
  }

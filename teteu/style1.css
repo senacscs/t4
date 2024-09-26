@@ -1,7 +1,7 @@
 
 
 .clock {
-    background-color:aquamarine;
+    background-color:rgba(0, 0, 0, 0.484);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px whitesmoke;
@@ -15,4 +15,5 @@
 .time {
     font-size: 2rem;
     text-align: center;
+    color: whitesmoke;
 }
