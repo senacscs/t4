@@ -84,11 +84,12 @@ main {
 }
 
 :root {
-    --color-bg1: rgb(5, 60, 211);
-    --color-bg2: rgb(0, 17, 82);
-    --color1: 18, 113, 255;
-    --color2: 39, 74, 255;
-    --color3: 50, 220, 255;
+    --color-bg1: rgb(59, 104, 226);
+    --color-bg2: rgb(2, 13, 59);
+    --color-bg3: rgb(28, 75, 168);
+    --color1: 5, 60, 211;
+    --color2: 12, 20, 53;
+    --color3: 167, 181, 237;
     --color4: 31, 50, 232;
     --color5: 43, 28, 125;
     --color-interactive: 255, 255, 255;
@@ -140,18 +141,24 @@ main {
 
 
 .gradient-bg {
-    width: 100vw;
+    /* width: 100vw;
     height: 130vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     /* top: 0;
-    left: 0; */
+    left: 0; 
+    margin: 0%; */
+    width: 100vw;
+    height: auto; /* Altere para auto */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(5deg, var(--color-bg1), var(--color-bg2), var(--color-bg3));
     margin: 0%;
 
-    svg {
+    /* svg {
         display: none;
-    }
+    } */
 
 
     .gradients-container {
@@ -164,7 +171,7 @@ main {
 
     .g1 {
         position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+        background: radial-gradient(circle at center, rgb(--color1), rgb(--color1)) no-repeat;
         mix-blend-mode: var(--blending);
 
         width: var(--circle-size);
@@ -180,7 +187,7 @@ main {
 
     .g2 {
         position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+        background: radial-gradient(circle at center, rgb(--color2), rgb(--color2)) no-repeat;
         mix-blend-mode: var(--blending);
 
         width: var(--circle-size);
@@ -196,7 +203,7 @@ main {
 
     .g3 {
         position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+        background: radial-gradient(circle at center, rgb(--color3), rgb(--color3)) no-repeat;
         mix-blend-mode: var(--blending);
 
         width: var(--circle-size);
@@ -212,7 +219,7 @@ main {
 
     .g4 {
         position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+        background: radial-gradient(circle at center, rgb(--color4), rgb(--color4),) no-repeat;
         mix-blend-mode: var(--blending);
 
         width: var(--circle-size);
@@ -237,13 +244,13 @@ main {
         left: calc(50% - var(--circle-size));
 
         transform-origin: calc(50% - 800px) calc(50% + 200px);
-        animation: moveInCircle 20s ease infinite;
+        animation: moveInCircle 30s ease infinite;
 
         opacity: 1;
     }
 
     .interactive {
-        position: absolute;
+        /* position: absolute;
         background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
         mix-blend-mode: var(--blending);
 
@@ -252,7 +259,16 @@ main {
         top: -50%;
         left: -50%;
 
+        opacity: 0.7; */
+        position: fixed; /* Fixe a posição em toda a tela */
+        background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+        width: 100vw; /* Use 100% da largura da viewport */
+        height: 150vh; /* Use 100% da altura da viewport */
+        top: 0; /* Alinhe ao topo da viewport */
+        left: 0; /* Alinhe à esquerda da viewport */
         opacity: 0.7;
+        pointer-events: none; /* Não bloqueia a interação com outros elementos */
     }
 }
 

@@ -1,9 +1,12 @@
-const intro = document.querySelector('.intro');
-const title = document.querySelector('.intro h1');
 
-// Evento de clique no h1 para ocultar a tela de introdução
-title.addEventListener('click', () => {
-    intro.classList.add('hidden');
+const intro = document.querySelector('.intro');
+
+// Remover a tela de introdução automaticamente após 2 segundos
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        intro.classList.add('hidden');
+    }, 1400); // 2 segundos de delay
+    
 });
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');
@@ -13,18 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
     let tgY = 0;
 
     function move() {
-        curX += (tgX - curX) / 20;
-        curY += (tgY - curY) / 20;
+        // Suaviza o movimento, mas com uma resposta mais rápida
+        curX += (tgX - curX) / 10; // Reduzi a suavização para deixar mais responsivo
+        curY += (tgY - curY) / 10;
+
         interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-        requestAnimationFrame(() => {
-            move();
-        });
+        
+        // Chama a função de animação
+        requestAnimationFrame(move);
     }
 
+    // Atualiza as coordenadas do mouse
     window.addEventListener('mousemove', (event) => {
-        tgX = event.clientX;
-        tgY = event.clientY;
+        tgX = event.clientX - interBubble.offsetWidth / 2; // Centraliza o movimento
+        tgY = event.clientY - interBubble.offsetHeight / 2;
     });
 
+    // Inicia a animação
     move();
 });
