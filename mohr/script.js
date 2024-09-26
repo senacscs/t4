@@ -66,20 +66,19 @@ function animate() {
 init();
 animate();
 
-/*Header*/
-  // Pega o header e guarda a posição original
-  window.onscroll = function() {
-    stickysubtitulo();
-  };
+// Seleciona o subtítulo
+const subtitulo = document.querySelector('.subtitulo');
 
-  var subtitulo = document.querySelector("subtitulo");
-  var sticky = subtitulo.offsetTop; // Posição original do header
+// Adiciona um listener para o evento de rolagem da página
+window.addEventListener('scroll', function() {
+  // Pega a posição do subtítulo em relação ao topo da página
+  const subtituloOffsetTop = subtitulo.offsetTop;
 
-  function stickysubtitulo() {
-    // Quando o scroll passar o topo do header, adiciona a classe 'sticky'
-    if (window.pageYOffset > sticky) {
-      subtitulo.classList.add("sticky");
-    } else {
-      subtitulo.classList.remove("sticky");
-    }
+  // Verifica se a página foi rolada o suficiente para o subtítulo "grudar"
+  if (window.pageYOffset > subtituloOffsetTop) {
+    subtitulo.classList.add('fixed'); // Adiciona a classe que o fixa no topo
+  } else {
+    subtitulo.classList.remove('fixed'); // Remove a classe se o scroll for para cima
   }
+});
+

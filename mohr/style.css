@@ -27,7 +27,13 @@ input[type="submit"], input[type="button"], a, button {
   color: white;
   font-family: "Concert One", sans-serif;
   z-index: 100;
+  transition: top 0.5s ease; /* Suaviza o movimento quando a posição muda */
+}
 
+.subtitulo.fixed {
+  position: fixed; /* Fixa o subtítulo no topo */
+  top: 0;
+  bottom: auto; /* Remove o offset inferior */
 }
 
 h5 {
@@ -182,7 +188,7 @@ to {
   
   .cada-projeto {
     width: 300px;
-    height: auto;
+    height: 345px;
     background-color: #EEF5F6;
     border-radius: 16px;
     cursor: pointer;
@@ -220,6 +226,8 @@ to {
     display: flex;
     align-items: center;
     text-align: left;
+    position: relative;
+    bottom: 30px;
   }
 
   
@@ -242,6 +250,7 @@ to {
   a {
     text-decoration: none;
     cursor: url("cursor.png"), auto;
+    color:rgb(117, 38, 192);
   }
 
 .segunda-fileira {
@@ -256,3 +265,76 @@ to {
     top: 1px;
 }
    
+
+h6 {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 15px;
+  position: relative;
+  bottom: 80px;
+  right: 10px;
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+}
+
+.sobremim {
+  position: relative;
+ 
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  color: white;
+}
+
+.escrita {
+  position: relative;
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  color: white;
+  font-size: 8px;
+  
+}
+
+.mim {
+  background-color: #cb61f99a;
+  width: 60%;
+  position: relative;
+  top: 120px;
+  border-radius: 30px;
+  left: 21%;
+}
+
+marquee {
+  position: relative;
+  top: 200px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.doguinhos {
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  position: relative;
+  top: 190px;
+  text-align: center;
+  color: white;
+  background-color: #cb61f9;
+
+}
+
+.fotos {
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.contatos {
+  color: white;
+  text-align: center;
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  text-align: center;
+  position: relative;
+  top: 130px;
+  font-size: 10px;
+}

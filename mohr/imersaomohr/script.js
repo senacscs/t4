@@ -1,5 +1,5 @@
 const imagem = document.getElementById('imagemPula');
-const velocidade = 5; // Pixels por movimento
+const velocidade = 3; // Pixels por movimento
 let posX = 0;
 let posY = 0;
 let direcaoX = 1;

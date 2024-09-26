@@ -11,7 +11,7 @@ let dados = [
         descricao: "Muito animada, criativa, gente boa, inteligente, divertida.",
         link: "https://senacscs.github.io/t4/mohr",
         imagem: "manu.png",
-        tags: "mohr"
+        tags: "mohr manumohr entrosa"
     },
     {
         titulo: "Nicole",
@@ -39,24 +39,24 @@ let dados = [
         descricao: "Baixinha.",
         link: "https://senacscs.github.io/t4/elisa",
         imagem: "ana.png",
-        tags: "ana"
+        tags: "elisa aninha"
     },
     {
         titulo: "Andrielen",
         descricao: "Baixinha, barulhenta, criativa, fotógrafa.",
         link: "https://senacscs.github.io/t4/andri",
         imagem: "andri.png",
-        tags: "andri"
+        tags: "andri claudia"
     },
     {
         titulo: "Larissa",
         descricao: "Criativa, animada, amorosa.",
         link: "https://senacscs.github.io/t4/larii",
         imagem: "lari.png",
-        tags: "lari"
+        tags: "gewer"
     },
     {
-        titulo: "Rafael Mitt",
+        titulo: "Rafael Marmitt",
         descricao: "Inteligente, Esperto, Bagunceiro, WE GAMBLE!!",
         link: "https://senacscs.github.io/t4/rafaelmarmitt",
         imagem: "mitt.png",
@@ -67,77 +67,77 @@ let dados = [
         descricao: "Eu sou Bernardo Aquino.",
         link: "https://senacscs.github.io/t4/aquino",
         imagem: "be.png",
-        tags: "be"
+        tags: "be aquino betongo tongo"
     },
     {
         titulo: "Guilherme Dalke",
         descricao: "Alto pra caramba, gente boa, legal, divertido.",
         link: "https://senacscs.github.io/t4/dalke",
         imagem: "dalke.png",
-        tags: ""
+        tags: "dalke"
     },
     {
         titulo: "Augusto Kirst",
         descricao: "Campeão do campeonato de valorant, açaí lover, ratinho de academia, queridinho.",
         link: "https://senacscs.github.io/t4/augusto",
         imagem: "kirst.png",
-        tags: "kirst"
+        tags: "atotao attottao porquinho porco"
     },
     {
         titulo: "Enzo Bossardi",
         descricao: "Briguento, engraçado, comilão, gente boa e enche o saco dos professores.",
         link: "https://senacscs.github.io/t4/enzo",
         imagem: "enzo.png",
-        tags: "enzo"
+        tags: "enzo zizu ziuz"
     },
     {
         titulo: "Joaquim",
         descricao: "Inteligente, generoso, querido, joga bem valorant.",
         link: "https://senacscs.github.io/t4/joaquim",
         imagem: "joaquim.png",
-        tags: "joaquim"
+        tags: "joaquim jo jojo eijojo"
     },
     {
         titulo: "Johann",
         descricao: "Querido, atleta, gente boa, divertido, engraçado.",
         link: "https://senacscs.github.io/t4/kipper",
         imagem: "johann.png",
-        tags: "johann"
+        tags: "johann eijohann"
     },
     {
         titulo: "Luís",
         descricao: "Inteligente, enche o saco, esportivo, dorminhoco.",
         link: "https://senacscs.github.io/t4/garcia",
         imagem: "luis.png",
-        tags: "luis"
+        tags: "luis garcia"
     },
     {
         titulo: "Lucas",
         descricao: "'agora um mico...', bom gosto musical, lana lover, brat, fofinho e cool",
         link: "https://senacscs.github.io/t4/lucas",
         imagem: "lucas.png",
-        tags: "joaquim"
+        tags: "lanalover azevedo"
     },
     {
         titulo: "Pedro Backes",
         descricao: "Dorme a aula inteira.",
         link: "https://senacscs.github.io/t4/backes",
         imagem: "",
-        tags: "backes"
+        tags: "backes dorminhoco"
     },
     {
         titulo: "Iuri",
         descricao: "Metido, rude, destruidor de index, odiamos.",
         link: "https://senacscs.github.io/t4/wickert",
         imagem: "",
-        tags: "iuri"
+        tags: "wickert"
     },
     {
         titulo: "Theo",
         descricao: "Opioide, resenha, apaixonado pela flavia, campeão no campeonato de Valorant 2024",
         link: "https://senacscs.github.io/t4/theo",
         imagem: "theo.png",
-        tags: "theo"
+        tags: "carpes"
         
     },
     {
@@ -145,7 +145,7 @@ let dados = [
         descricao: "O chatão da turma.",
         link: "https://senacscs.github.io/t4/ernesto",
         imagem: "",
-        tags: "ernesto"
+        tags: "nesto"
     },
     {
         titulo: "Andrei",
@@ -166,7 +166,7 @@ let dados = [
         descricao: "Querido, favorito da turma, super hiper mega inteligente.",
         link: "https://senacscs.github.io/t4/cicero",
         imagem: "cicero.png",
-        tags: "cicero"
+        tags: "cicero cicu"
     },
     {
         titulo: "Gabriel Ludwig",
@@ -208,35 +208,35 @@ let dados = [
         descricao: "amigavel",
         link: "https://senacscs.github.io/t4/marina",
         imagem: ".png",
-        tags: ""
+        tags: "marina"
     },
     {
         titulo: "Sara",
         descricao: "Alma não presente",
         link: "https://senacscs.github.io/t4/sararosa",
         imagem: ".png",
-        tags: ""
+        tags: "sara"
     },
     {
         titulo: "Gustavo Tatsch",
         descricao: "Sociavel,criativo e inteligente",
         link: "https://senacscs.github.io/t4/gustavo",
         imagem: ".png",
-        tags: ""
+        tags: "tatsch"
     },
     {
         titulo: "João Gabriel",
         descricao: "amigavel e criativo",
         link: "https://senacscs.github.io/t4/joaogoetze",
         imagem: ".png",
-        tags: ""
+        tags: "joao"
     },
     {
         titulo: "Pedro Arthur",
         descricao: "Quieto, basqueteiro e sociavel",
         link: "https://senacscs.github.io/t4/pedroa",
         imagem: ".png",
-        tags: ""
+        tags: "pedrao"
     },
     {
         titulo: "Pedro Fagundes Alves",
