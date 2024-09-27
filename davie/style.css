@@ -43,9 +43,12 @@ a:hover {
 }
 section {
     transition: background-color 0.5s ease-in-out;
+    transition: transform 1s;
+    transform: translateX(0) scale(1);
 }
 section:hover {
     background-color: #07c60d;
+    transform: translateX(0) scale(1.04);
 }
 footer {
     text-align: center;
@@ -66,14 +69,15 @@ footer {
     transform: translateX(0) scale(1);
 }
 #showMoreButton:hover, #showMoreButton:focus {
-    background-color: #02cc7b;
+    background-color: #129101;
     color: #fff;
-    box-shadow: 0 12px 16px 0 #02cc7b,0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 16px 0 #129101,0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transform: translateX(0) scale(1.09);
 }
 #showMoreButton:active {
     transform: translateY(2px);
     transform: translateX(0) scale(1);
+    transition: none;
 }
 .curriculo {
     position: fixed;
@@ -87,7 +91,7 @@ footer {
     z-index: 99999999;
     overflow: hidden;
     border: 1px solid black;
-}x  
+}
 .curriculo::after {
     content: "";
     position: absolute;
