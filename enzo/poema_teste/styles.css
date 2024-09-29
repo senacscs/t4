@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url(poema\ fundo\ de\ site.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    background-color: black;
+    color: white;
+    height: 590px;
+    position: relative;
+    bottom: 34px;
+    border-bottom: 0.1rem solid white;
+    box-shadow: 0 0 10px 0 white;
+    text-align: center;
+}
+
+.link-cabeça {
+    text-decoration: none;
+}
+
+h1 {
+    position: relative;
+    top: 230px;
+    font-size: 50px;
+}
+
+.corpo {
+    background-color: rgb(54, 54, 54, 0.6); 
+    width: 60%;
+    height: 900px;
+    position: relative;
+    left: 21%;
+    border: 0.1rem solid white;
+    box-shadow: 0 0 50px black;
+    border-radius: 10px;
+}
+
+p {
+    color: white;
+    position: relative;
+    left: 4.2%;
+    bottom: 10px;
+    font-size: 25px;
+}
+
+footer {
+    position: relative;
+    top: 50px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    border-top: 0.2rem solid black;
+}
+
+h2 {
+    position: relative;
+    bottom: 15px;
+}
+
+.styled-link {
+    position: relative;
+    bottom: 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-decoration: none; /* Remove a linha padrão */
+    border-bottom: 2px solid transparent; /* Inicialmente, sem linha */
+    transition: border-bottom 0.5s ease-in-out; /* Efeito de transição suave */
+  }
+  
+  .styled-link:hover {
+    color: blue;
+    border-bottom: 2px solid blue; /* Aparece a linha ao passar o mouse */
+  }
