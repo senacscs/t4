@@ -1,0 +1,97 @@
+body{
+    background: linear-gradient(90deg, rgb(50, 107, 173), rgb(248, 248, 248));
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+a:hover{
+    color:rgb(76, 76, 81);
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    text-align: center;
+
+}
+ul{
+   text-align: center;
+}
+@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
+
+:root {
+/*  change this for scaling  */
+  --m: 4rem;
+  
+  --red: #cbafaf;
+  --pink: #cf7ecd;
+  --purple: #817aca;
+  --blue: #6b8bc6;
+  --green: #80cd96;
+  --yellow: #c6c082;
+  --orange: #bd8c6f;
+  
+}
+body {
+  background-color: #2378cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  border: calc(0.08 * var(--m)) solid transparent;
+  position: static;
+  color: #e40000;
+  font-family: 'Space Grotesk';
+  font-size: large;
+  border-radius: calc(0.7 * var(--m));
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  
+  background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(76, 76, 196, 0.6) 80%, rgba(34, 34, 167, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-size: 100%;
+  animation: animate 1ms infinite linear;
+}
+
+button::before {
+  content: '';
+  background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  height: 500%;
+  width: 200%;
+  position: absolute;
+  bottom: -100%;
+  z-index: -5;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+  filter: blur(calc(0.8 * var(--m)));
+}
+
+button:hover, button:hover::before {
+  animation: animate 0.5s infinite linear;
+}
+
+@keyframes animate {
+  0% {background-position: 0}
+  100% {background-position: 100%}
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 2rem;
+  }
+}
+

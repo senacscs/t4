@@ -1,96 +1,72 @@
-body{
-    background: linear-gradient(90deg, rgb(50, 107, 173), rgb(248, 248, 248));
-}
-a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
-}
-a:hover{
-    color:rgb(76, 76, 81);
-}
-h1{
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-}
-p{
-    text-align: center;
-
-}
-ul{
-   text-align: center;
-}
-@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
-
-:root {
-/*  change this for scaling  */
-  --m: 4rem;
-  
-  --red: #cbafaf;
-  --pink: #cf7ecd;
-  --purple: #817aca;
-  --blue: #6b8bc6;
-  --green: #80cd96;
-  --yellow: #c6c082;
-  --orange: #bd8c6f;
-  
-}
 body {
-  background-color: #2378cd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(90deg, rgb(122, 118, 118), rgb(0, 0, 0));
 }
 
-button {
-  border: calc(0.08 * var(--m)) solid transparent;
-  position: relative;
-  color: #F3F3F3;
-  font-family: 'Space Grotesk';
-  font-size: large;
-  border-radius: calc(0.7 * var(--m));
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-
-  
-  background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(76, 76, 196, 0.6) 80%, rgba(34, 34, 167, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
-  background-origin: border-box;
-  background-clip: padding-box, border-box, border-box;
-  background-size: 100%;
-  animation: animate 2s infinite linear;
+.container {
+    position: relative;
+    width: 100%;
+    height: 91vh;
+    overflow: hidden;
+    z-index: -1;
+    background: linear-gradient(90deg, rgb(122, 118, 118), rgb(0, 0, 0));
 }
 
-button::before {
-  content: '';
-  background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  bottom: -30%;
-  z-index: -5;
-  background-size: 200%;
-  animation: animate 2s infinite linear;
-  filter: blur(calc(0.8 * var(--m)));
+.bolhas {
+    position: absolute;
+    display: flex;
 }
 
-button:hover, button:hover::before {
-  animation: animate 0.5s infinite linear;
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: rgb(122, 118, 118);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(102, 98, 98),
+        0 0 50px rgb(82, 78, 78),
+        0 0 100px rgb(0, 0, 0);
+    animation: animar calc(60s / var(--i)) linear infinite;
 }
 
-@keyframes animate {
-  0% {background-position: 0}
-  100% {background-position: 100%}
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
 }
 
-@media screen and (max-width: 1000px) {
-  :root {
-    --m: 2rem;
-  }
+.bolhas span:nth-of-type(even) {
+    background: rgb(85, 84, 84);
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(65, 64, 64),
+        0 0 50px rgb(45, 44, 44),
+        0 0 100px rgb(0, 0, 0);
+}
+
+h2 {
+    text-align: center;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(122, 108, 108);
+}
+
+a:hover {
+    color: rgb(102, 98, 98);
+}
+
+.texto {
+    margin-top: -350px;
 }
