@@ -1,0 +1,153 @@
+@media (min-width: 1200px) {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #eddbc2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    main {
+      padding: 20px;
+      margin: 20px 0;
+    }
+  
+    nav ul li{
+      display: inline;
+      margin: 0 1em;
+    }
+  
+    header, footer {
+      background-color: #d18f8f;
+      color: #391212;
+      text-align: center;
+      font-family: fantasy;
+      width: 100%;
+    }
+  
+    header {
+      padding: 15px;
+    }
+  
+    footer {
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+    }
+  
+    h1, a, h2, p, li, ul {
+      text-align: center;
+    }
+  
+    h1, a, h2 {
+      color: #391212;
+    }
+  
+    p {
+      color: #74342B;
+      line-height: 22px;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Espaçamento entre as imagens */
+    }
+  
+    .container img {
+      width: 30%; /* Ajuste a largura conforme necessário */
+    }
+  
+    hr {
+      background-color: #f00;
+      height: 2px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Estilos específicos para telas pequenas */
+  @media (max-width: 991px) {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #eddbc2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    main {
+      padding: 20px;
+      margin: 20px 0;
+    }
+  
+    nav ul li{
+      display: inline;
+      margin: 0 1em;
+    }
+  
+    header, footer {
+      background-color: #d18f8f;
+      color: #391212;
+      text-align: center;
+      font-family: fantasy;
+      width: 100%;
+    }
+  
+    header {
+      padding: 15px;
+    }
+  
+    footer {
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+    }
+  
+    h1, a, h2, p, li, ul {
+      text-align: center;
+    }
+  
+    h1, a, h2 {
+      color: #391212;
+    }
+  
+    p {
+      color: #74342B;
+      line-height: 22px;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Espaçamento entre as imagens */
+    }
+  
+    .container img {
+      width: 30%; /* Ajuste a largura conforme necessário */
+    }
+  
+    hr {
+      background-color: #f00;
+      height: 2px;
+    }
+  }
