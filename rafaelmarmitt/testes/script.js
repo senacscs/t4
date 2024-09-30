@@ -1,3 +1,7 @@
+/***********************************
+Cursor
+************************************/
+
 let curs = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -19,6 +23,11 @@ menuEls.forEach((el) => {
   curs.classList.remove("cursor-fade");
  });
 });
+
+/***********************************
+Timer
+************************************/
+
 var h = document.getElementById('h'),
     m = document.getElementById('m'),
     s = document.getElementById('s'),
@@ -35,6 +44,34 @@ function tick() {
 }
 tick();
 setInterval(tick, 1000);
+
+/***********************************
+Annime.js filter SVG
+************************************/
+/*
+var timeline = anime.timeline({
+  duration: 1200,
+  easing: 'linear',
+  autoplay: true,
+  loop:true,
+  direction:'alternate',
+  easing:'easeInOutQuad'
+});
+
+timeline.add({
+  targets: ['feTurbulence', 'feMorphology'],
+  // baseFrequency: ['0.014 0.014', '0.023 0.023'],
+  radius: [14, 8, 20, 8, 14]
+  // seed: [4, 8, 20, 8, 4]
+});
+*/
+
+
+
+/***********************************
+Year Roman Numerals
+************************************/
+
 function convertToRomanNumerals(num) {
             const values = [
                 { value: 1000, symbol: 'M' },
@@ -68,6 +105,13 @@ function convertToRomanNumerals(num) {
             document.getElementById("year").innerHTML = yearInRoman;
         }
         window.onload = displayYearInRomanNumerals;
+//document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+/***********************************
+Switch CSS Colors
+************************************/
+
 const toggleThemeBtn = document.querySelector('#toggle-theme');
 
 toggleThemeBtn.addEventListener('click', function() {
@@ -75,6 +119,13 @@ toggleThemeBtn.addEventListener('click', function() {
   const newTheme = currentTheme === 'dark' ? 'grey' : currentTheme === 'grey' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', newTheme);
 });
+
+
+
+/***********************************
+Switch Fullscreen
+************************************/
+
 function toggleFullscreen(elem) {
  elem = elem || document.documentElement;  
  if (!document.fullscreenElement && !document.mozFullScreenElement &&
@@ -103,6 +154,12 @@ function toggleFullscreen(elem) {
 document.getElementById('fullscreen-mode').addEventListener('click', function() {
  toggleFullscreen();
 });
+
+
+/***********************************
+Activity
+************************************/
+
 var timeoutID;
 
 function setup() {

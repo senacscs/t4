@@ -77,6 +77,9 @@
     scroll-behavior: smooth;
     background: var(--c0);
     color: var(--c11);
+    /*
+    font-size: min(max(1rem, 4vw), 22px);
+    */
     font-family: "Inter", sans-serif;
     user-select: none;
     margin: 0;
@@ -154,6 +157,16 @@
     left: 1rem;
     font-family: Arial, sans-serif;
     font-size:12px;
+    /*
+    letter-spacing: 0em;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    /*
+    font-size: min(max(4rem, 8rem), 10rem);
+    font-optical-sizing: auto;
+    line-height:1em;
+    text-align:left;
+    */
     font-style: normal;
     opacity: 1;
     z-index: 22;
@@ -179,6 +192,9 @@
     position: relative;
     transition: color 0.6s cubic-bezier(0.860, 0.000, 0.070, 1.000);
    }
+   /************
+   Portfolio Grid
+   *************/
    section#studio .cards-container {
     width: 100%;
     max-width: 90%;
@@ -190,8 +206,38 @@
     min-height: 100vh;
    
    }
-
+   
+   /* Customize website's scrollbar like Mac OS
+   Not supports in Firefox and IE */
+   
+   /* total width 
+   .cards-container::-webkit-scrollbar {
+   background-color:#fff;
+   width:16px
+   }
+   
+   .cards-container::-webkit-scrollbar-track {
+   width:2px;
+   background-color:#fff
+   }
+   .cards-container::-webkit-scrollbar-track:hover {
+   background-color:#f4f4f4
+   }
+   .cards-container::-webkit-scrollbar-thumb {
+   background-color:#babac0;
+   border-radius:16px;
+   border:5px solid #fff
+   }
+   .cards-container::-webkit-scrollbar-thumb:hover {
+   background-color:#a0a0a5;
+   border:1px solid #f4f4f4
+   }
+   */
+   
+   /* set button(top and bottom of the scrollbar) */
    .cards-container::-webkit-scrollbar-button {display:none}
+   
+   /* div box */
    .cards-container {
     width: 100%;
     max-width: 90%;
@@ -201,6 +247,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 16px;
+    /* if we want equal height on cards */
     grid-auto-rows: 1fr;
    
    
@@ -242,6 +289,9 @@
      color: var(--c11);
      background-image: linear-gradient(180deg, transparent 50%, var(--c0) 50%) !important;
      transition: all 0.6s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+     /*
+     filter: var(--filter-01);
+     */
     }
    }
    
@@ -328,6 +378,9 @@
     height: 30px;
     border: 3px solid var(--c11);
     background:var(--c0);
+    /*
+    filter: var(--filter-01);
+    */
     border-radius: 50%;
     opacity: 1;
     top: -100px;
@@ -407,6 +460,9 @@
     background:url(
      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
     ) repeat;
+    /*
+    http://www.patternify.com/
+    */
     z-index:999;
     opacity:1;
     mix-blend-mode:multiply;
