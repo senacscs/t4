@@ -294,3 +294,11 @@ main {
 a{
     color: black;
 }
+footer{
+    background-color: rgb(0, 17, 82);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
