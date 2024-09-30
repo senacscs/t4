@@ -377,16 +377,45 @@ html {
 
 
 footer {
-    width: 100%;
-    display: block;
+    width: 60%;
     background-color: rgb(208, 206, 236);
-    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 20% 0 20%;
 }
-footer hr {
+.hr {
     width: 60%;
     border: 1px solid rgba(0, 0, 0, 0.37);
+    margin-top: 50px;
 }
 footer p {
-    text-align: center;
     font-weight: 550;
+    text-align: left;
+}
+.fornecedores {
+    margin-top: -50px;
+    background-color: #bab3fa;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.clientes {
+    margin-top: -50px;    
+    background-color: #bab3fa;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.referencias {
+    width: 30%;
+    margin-top: -50px;    
+    background-color: #bab3fa;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.referencias a {
+    margin-top: 20px;
 }
