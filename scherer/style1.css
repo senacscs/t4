@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(248, 246, 246);
+}
+h1{
+    color: beige;
+}
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+}
+a{
+    color: rgb(255, 255, 255);
+}
+section{
+    text-align: center;
+    padding: 7px;
+    background-color: #333;
+    border-radius: 30px ;
+
+
+}
+
+
+
