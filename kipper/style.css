@@ -70,3 +70,6 @@ a:hover {
 .texto {
     margin-top: -350px;
 }
+p{
+    background: transparent;
+}
