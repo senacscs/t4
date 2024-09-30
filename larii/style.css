@@ -49,7 +49,7 @@ main {
 .polaroid {
     background-color: white;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(1, 0, 0, 0.7);
     padding: 10px;
     text-align: center;
     transform: rotate(2deg);
@@ -58,7 +58,7 @@ main {
 
 .polaroid:hover {
     transform: rotate(2deg) translateY(-10px); /* Move para cima ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Aumenta a sombra ao passar o mouse */
 }
 
 .polaroid h2 {
