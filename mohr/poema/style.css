@@ -1,0 +1,78 @@
+body {
+  background-image: url(fundo.jpg);
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+#telona {
+  font-family: "Playpen Sans", cursive;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;  
+  font-size: 100px;
+
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+
+  transition: opacity 3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poema {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 35px;
+  font-family: "Playpen Sans", cursive;
+  font-size: 13px;
+}
+
+.caixa {
+  height: 400px;
+  width: 820px;
+  border-radius: 30px;
+  padding: 8px;
+  margin: 20px auto;
+  background-size: cover;
+  overflow-y: scroll;
+  color: white;
+  position: relative;
+  top: 50px;
+}
+
+h1 {
+  opacity: 100%;
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+.caixa {
+  overflow: scroll; /* Mantém a funcionalidade de rolagem */
+}
+
+.caixa::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem visualmente */
+}
+
+/* Para o Firefox */
+.caixa {
+  scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+}
+
+/* Para Internet Explorer e versões mais antigas do Edge */
+.caixa {
+  -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge antigo */
+}
+
+.autor {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 25px;
+}
