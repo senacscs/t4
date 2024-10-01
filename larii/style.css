@@ -5,6 +5,7 @@
 
 body {
     font-family: "EB Garamond", serif;
+    font-size: large;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -15,7 +16,7 @@ body {
 header {
     background-color: #152f64;
     color: white;
-    padding: 220px;
+    padding: 25%;
     text-align: center;
   font-family: "Edu TAS Beginner", cursive;
   font-optical-sizing: auto;
@@ -88,5 +89,5 @@ footer {
     color: white;
     position: relative;
     bottom: 0;
-    /* width: 100%; */
+    width: 120%;
 }

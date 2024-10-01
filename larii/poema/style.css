@@ -1,0 +1,78 @@
+body {
+    font-family: "Caveat", cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #fbfbfb;
+    background-image: url("fundoclaro.jpg");
+    background-size: cover;
+    font-optical-sizing: auto;
+    font-weight: normal; /* Ajuste para um valor válido */
+    font-style: italic;
+    font-size: larger;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background-image: url("daisys.jpg");
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.8); /* Sombra no texto */
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #183dc1;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #6587ab;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 17px 20px rgba(33, 33, 33, 0.813); /* Sombra nas imagens */
+    transition: transform 0.2s; /* Efeito suave de transição */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6f8cad;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+}
+
