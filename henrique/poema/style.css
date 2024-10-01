@@ -1,0 +1,181 @@
+.hero {
+    height: 95vh;
+    min-height: 500px;
+    position: relative;
+    display: grid;
+    place-content: center;
+  
+    /* 
+      Setting a named view timeline.
+      
+      This allows to start the animation on the 
+      h1 tag based on the hero container 
+      scroll position.
+    */
+    view-timeline-name: --woof;
+  }
+  
+  .hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center bottom;
+  
+    /* Scroll animation */
+    animation: scale 3s linear both;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+  
+  .hero h1 {
+    isolation: isolate;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    padding: 0 0.5rem;
+  
+    /* Scroll animation */
+    animation: fade-out 3s linear both;
+    animation-timeline: --woof;
+    animation-range: exit exit 30vh;
+  }
+  
+  .overlay {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black;
+  
+    /* Scroll animation */
+    animation: lighten 3s linear both;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+
+  /* Keyframe definitions */
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+  }
+  
+  @keyframes lighten {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes scale {
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+      border-radius: 50px;
+    }
+    to {
+      transform: rotate(720deg);
+      border-radius: 6px;
+    }
+  }
+
+  .shape {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(45deg, #7B4B3A, #D4B69A);
+    margin-left: auto;
+  
+    /* Formato de estrela */
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    );
+
+    /* Scroll animation */
+    animation: spin 3s ease-in-out both;
+    animation-timeline: view();
+}
+
+.shape2 {
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(45deg, #4B4B4B, #AFAFAF);
+  margin-left: auto;
+
+  /* Formato de estrela */
+  clip-path: polygon(
+      50% 0%, 
+      61% 35%, 
+      98% 35%, 
+      68% 57%, 
+      79% 91%, 
+      50% 70%, 
+      21% 91%, 
+      32% 57%, 
+      2% 35%, 
+      39% 35%
+  );
+
+  /* Scroll animation */
+  animation: spin 3s ease-in-out both;
+  animation-timeline: view();
+}
+  
+  /*  
+  --------------------
+  --------------------
+  --------------------
+  */
+  
+  .content {
+    padding: 3rem 0.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+  
+    h2 {
+      font-size: 1.80rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      color: #3b3b3b;
+    }
+  }
+  
+  body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.informacoes, .poema {
+    flex: 5; /* Cada um ocupará a mesma largura */
+    margin: 0 1rem; /* Espaçamento entre os dois */
+}
+
+.informacoes h2, .poema h2{
+  font-size: 1.50rem;
+}
