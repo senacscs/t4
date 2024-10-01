@@ -4,14 +4,6 @@
     position: relative;
     display: grid;
     place-content: center;
-  
-    /* 
-      Setting a named view timeline.
-      
-      This allows to start the animation on the 
-      h1 tag based on the hero container 
-      scroll position.
-    */
     view-timeline-name: --woof;
   }
   
@@ -22,8 +14,6 @@
     height: 100%;
     object-fit: cover;
     transform-origin: center bottom;
-  
-    /* Scroll animation */
     animation: scale 3s linear both;
     animation-timeline: view();
     animation-range: exit;
@@ -36,8 +26,6 @@
     font-weight: 700;
     color: white;
     padding: 0 0.5rem;
-  
-    /* Scroll animation */
     animation: fade-out 3s linear both;
     animation-timeline: --woof;
     animation-range: exit exit 30vh;
@@ -48,14 +36,11 @@
     position: absolute;
     inset: 0;
     background: black;
-  
-    /* Scroll animation */
     animation: lighten 3s linear both;
     animation-timeline: view();
     animation-range: exit;
   }
 
-  /* Keyframe definitions */
   @keyframes fade-out {
     to {
       opacity: 0;
@@ -94,8 +79,6 @@
     width: 100px;
     background: linear-gradient(45deg, #7B4B3A, #D4B69A);
     margin-left: auto;
-  
-    /* Formato de estrela */
     clip-path: polygon(
         50% 0%, 
         61% 35%, 
@@ -108,8 +91,6 @@
         2% 35%, 
         39% 35%
     );
-
-    /* Scroll animation */
     animation: spin 3s ease-in-out both;
     animation-timeline: view();
 }
@@ -119,8 +100,6 @@
   width: 100px;
   background: linear-gradient(45deg, #4B4B4B, #AFAFAF);
   margin-left: auto;
-
-  /* Formato de estrela */
   clip-path: polygon(
       50% 0%, 
       61% 35%, 
@@ -133,17 +112,9 @@
       2% 35%, 
       39% 35%
   );
-
-  /* Scroll animation */
   animation: spin 3s ease-in-out both;
   animation-timeline: view();
 }
-  
-  /*  
-  --------------------
-  --------------------
-  --------------------
-  */
   
   .content {
     padding: 3rem 0.5rem;
@@ -163,6 +134,7 @@
   body {
     margin: 0;
     font-family: Poppins, sans-serif;
+    
   }
 
   .flex-container {
@@ -172,8 +144,8 @@
 }
 
 .informacoes, .poema {
-    flex: 5; /* Cada um ocupará a mesma largura */
-    margin: 0 1rem; /* Espaçamento entre os dois */
+    flex: 5;
+    margin: 0 1rem; 
 }
 
 .informacoes h2, .poema h2{
