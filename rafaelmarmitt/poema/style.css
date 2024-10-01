@@ -14,6 +14,7 @@
 .title {
     text-align: center;
     padding-top: 30%;
+    transition: all 0.5s ease-out;
 }
 
 .scroll-container {
@@ -40,6 +41,7 @@
     margin-right: 40px;
     padding-top: 20%;
     transition: all 0.5s ease-out;
+    
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -85,6 +87,7 @@ body {
 .title:hover {
     transform: scale(1.1); /* Aumenta a imagem em 10% */
     transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave */
+    
 }
 
 .signature:hover {
