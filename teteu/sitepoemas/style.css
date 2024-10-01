@@ -1,0 +1,62 @@
+body {margin:0;padding:0;}
+canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+#poem {
+position: absolute;
+top: 0px;
+left:50%;
+width: 480px;
+height: auto;
+margin-left: -240px;
+font: 1.4em "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+font-weight: bold;
+text-shadow: 0.12em 0.12em 0.36em #da6e0e;
+color:#fff;
+}
+#poem ul {
+list-style-type: none;
+margin-left:-36px;
+}
+#poem li {
+padding-bottom:0.8em;
+opacity:0.8;
+}
+#poem h3 {
+margin-right:64px;
+margin-top:-12px;
+text-align:right;
+}
+h1{
+text-align: center;
+}
+h3{
+text-align: center;
+color: rgba(255, 0, 0, 0.489);
+}
+button{
+background-color: rgba(245, 187, 187, 0);
+margin-left: auto;
+margin-right: auto;
+}
+footer{
+text-align: center;
+padding: 10px;
+width: 100%;
+position: absolute;
+bottom: 0;
+background-color: rgba(223, 25, 25, 0.594);
+color: white;
+border-radius: 10px 10px 0 0;
+}
+h2{
+color: rwqpooweeqtrrgb(245, 121, 121);
+}
+h2{
+color:rgba(255, 255, 255, 0.427);
+
+}
