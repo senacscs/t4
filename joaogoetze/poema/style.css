@@ -3,3 +3,31 @@
     font-size: 20px;
     text-align: center;
   }
+
+  #Botao{
+   background-color: #ff7e7e;
+   color:rgba(rgb(196, 231, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.9);
+   align-items: center;
+   display:flexbox;
+   height: 20px;
+  }
+
+  div{
+    background-color:rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.6); 
+    width: 100px;
+    align-items: center;
+  }
+
+  .conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+  }
+
+  .principal {
+    background-image: url("https://professorpinguim.com.br/blog/wp-content/uploads/2021/03/reflex%C3%A3o-da-luz-em-espelhos-esf%C3%A9ricos-scaled.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
