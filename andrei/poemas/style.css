@@ -1,0 +1,95 @@
+body {
+  background: rgb(255, 250, 250);
+}
+
+article {
+  width: 80%;
+  margin: 0 auto;
+  padding: 75px 100px;
+  background: snow;
+}
+
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  margin: 0 0 20px;
+}
+
+h1 span {
+  font-family: 'Playball', cursive;
+  font-size: 60px;
+  text-transform: lowercase;
+  position: relative;
+  top: -15px;
+}
+
+.meta {
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.meta h2 {
+  display: inline-block;
+  margin: 0;
+  padding: 0 20px;
+  background: white;
+  position: relative;
+  top: -12px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+.columns p {
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+strong {
+  margin: 0;
+}
+
+blockquote {
+  -moz-column-span: all;
+  -webkit-column-span: all;
+  column-span: all;
+  font-family: 'Playball', cursive;
+  font-size: 32px;
+  font-weight: normal;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  padding: 15px 0;
+}
+
+/* Melhorias adicionais */
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  article {
+    padding: 50px 20px; /* Reduz o padding em telas menores */
+  }
+
+  h1 {
+    font-size: 48px; /* Ajusta o tamanho da fonte para dispositivos menores */
+  }
+
+  h1 span {
+    font-size: 36px; /* Ajusta o tamanho da fonte para dispositivos menores */
+  }
+}
