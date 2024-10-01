@@ -9,7 +9,7 @@ function scrollDivSmoothly() {
   element.scrollTop = newPosition;
 
   // Chama a função novamente após um intervalo de tempo (ajuste o valor para controlar a velocidade)
-  setTimeout(scrollDivSmoothly, 60);
+  setTimeout(scrollDivSmoothly, 45);
 }
 
 // Inicia a rolagem automática
