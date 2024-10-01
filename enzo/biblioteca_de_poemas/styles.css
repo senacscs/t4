@@ -1,0 +1,139 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url(fundo\ branco\ biblioteca.jpg);
+}
+
+header {
+    background-image: url(biblioteca2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 595px;
+    position: relative;
+    bottom: 50px;
+}
+
+h1 {
+    position: relative;
+    top: 240px;
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.poema1 {
+    position: relative;
+    top: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+}
+
+.poema2 {
+    position: relative;
+    top: 200px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+}
+
+.poema3 {
+    position: relative;
+    top: 300px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+}
+
+.poema4 {
+    position: relative;
+    top: 400px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+}
+
+.poema5 {
+    position: relative;
+    top: 500px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: cursive;
+    position: relative;
+    left: 30px;
+}
+
+p {
+    font-family: cursive;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.botoes {
+    background-color: #333;
+    width: 100%;
+    position: relative;
+    bottom:50px;
+    border-top: 0.1rem solid white;
+    border-bottom: 0.1rem solid white;
+}
+
+button {
+    background-color: black; /* Verde */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 100px;
+  }
+
+  button:hover {
+    background-color: white; /* Mudança de cor ao passar o mouse */
+    color: black;
+  }
+
+  footer {
+    position: relative;
+    top: 600px;
+    text-align: center;
+    height: 80px;
+    background-color: white;
+    width: 100%;
+    border-top: 0.2rem solid black;
+}
+
+.styled-link {
+    position: relative;
+    bottom: 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-decoration: none; /* Remove a linha padrão */
+    border-bottom: 2px solid transparent; /* Inicialmente, sem linha */
+    transition: border-bottom 0.5s ease-in-out; /* Efeito de transição suave */
+  }
+  
+  .styled-link:hover {
+    color: blue;
+    border-bottom: 2px solid blue; /* Aparece a linha ao passar o mouse */
+  }
