@@ -237,6 +237,44 @@ a:not([href]):not([class]):hover {
     color: inherit;
     text-decoration: none;
 }
+
+/* Estilo da tela de introdução */
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s ease-in-out;
+    z-index: 1000;
+    font-family: "Bahnschrift Condensed";
+}
+
+
+.intro h1 {
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+    font-family: "Bahnschrift Condensed";
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    padding: 20px;
+    height: 200vh;
+    /* Para ter bastante espaço e testar o scroll */
+    background-color: #f0f0f0;
+}
+
+/* Quando a tela de introdução some */
+.hidden {
+    transform: translateY(-100%);
+}
+
 code,
 kbd,
 pre,
