@@ -240,6 +240,20 @@
     max-width: 350px;
   }
 
+  .blocos-biblioteca-poemas {
+    position: relative;
+    left: 100px;
+    bottom: 1100px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
   .content {
     position: relative;
     top: 600px;
