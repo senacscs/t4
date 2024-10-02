@@ -1,0 +1,140 @@
+body{
+    background-image: linear-gradient(90deg, red, yellow, orange);
+
+}
+.titulo{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 35px;
+}
+.autor1{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+}
+.sidebar {
+    height: 100%;
+    width: 135px;
+    position: fixed;
+    /* Fixa o menu na posição */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size:
+      15px;
+    color: #ffffff;
+    display: block;
+  }
+
+  .sidebar a:hover {
+    color: #5e5c5ccc;
+  }
+  .caminho{
+    text-align: center;
+    text-transform: uppercase;
+  
+    
+    
+  }
+  .poema2t{
+    text-align: center;
+    color: rgb(250, 250, 250);
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+  }
+  .pasargarda{
+    text-align: center;
+    text-transform: uppercase;
+    
+  }
+  
+  .poema3t{
+    text-align: center;
+    color: rgb(250, 250, 250);
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+  }
+  .autor2{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+  }
+  .autor3{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+  }
+  .sujo{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #888;
+  }
+  .poema4t{
+    text-align: center;
+    color: rgb(250, 250, 250);
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+  }
+  .autor4{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+  }
+  .poema4t{
+    text-align: center;
+  }
+  .poética{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #888;
+  }
+  .outrospoema {
+    text-align: center;
+  }
+  .outrospoema :visited{
+    color: inherit;
+
+  }
+  .poemapri{
+    color: #0022ff; /* Cor neon (ajuste conforme preferência) */
+    text-shadow: 
+        0 0 7px #FFF,
+        0 0 10px #FFF,
+        0 0 21px #FFF,
+        0 0 42px rgb(0, 234, 255),
+        0 0 82px rgb(183, 12, 12),
+        0 0 92px #00F,
+        0 0 102px #00F,
+        0 0 151px rgb(81, 255, 0);
+    font-size: 35px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
