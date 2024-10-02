@@ -1,0 +1,72 @@
+/* styles.css */
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    background-image: url("fotodefundo.jpg");
+}
+
+.poema {
+    background-color: #ff71acd0;
+    box-shadow: 0 2px 5px rgba(226, 166, 185, 0.523);
+    height: 60px;
+}
+
+h1 {
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+.poema {
+    background: linear-gradient(to bottom right, #ff6c8255,  #ff6c8255);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.5);
+}
+
+.verso:hover {
+    transform: scale(1.1);
+    text-shadow: none;
+}
+
+.texto{
+    background-color: #;
+    padding: 20px;
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.523);
+    text-align: center;
+    
+
+}
+.texto{
+   
+    
+    background: radial-gradient(circle, rgba(255, 175, 176, 0.597) 0%, rgba(255, 171, 186, 0.833) 88%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(53, 53, 53, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.texto:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.outrospoemas {
+    background-color: #f5007ab6;
+    background: linear-gradient(to bottom right, #ff6c8255,  #ff6c8255);
+    height: 40px;
+}
+
+ .outrospoemas{
+    font-size: 30px;
+    position: relative;
+    top: 15px;}
