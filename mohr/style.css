@@ -6,7 +6,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(fundo.jpg);
+    background-image: url(imagens/fundo.jpg);
     background-color: black;
     overflow-x: hidden;
     cursor: url("cursor.png"), auto;
