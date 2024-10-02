@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-image: url(uu.jpg);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    color: #1a7017;
+}
+
+h2 {
+    color: #1a7017;
+}
+
+.back {
+    width: 80%;
+      background-color: rgb(101, 169, 209);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      opacity: 0.8;
+}
