@@ -134,7 +134,6 @@
   body {
     margin: 0;
     font-family: Poppins, sans-serif;
-    
   }
 
   .flex-container {
@@ -150,4 +149,45 @@
 
 .informacoes h2, .poema h2{
   font-size: 1.50rem;
+}
+
+button {
+  background-color: #7B4B3A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #D4B69A;
+  transform: scale(1.50);
+}
+
+.bubbly-button {
+  background-color: #7B4B3A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.5), 0 0 20px rgba(160, 82, 45, 0.5);
+}
+
+.bubbly-button:hover {
+  background-color: #7B4B3A;
+  transform: scale(1.15);
 }
