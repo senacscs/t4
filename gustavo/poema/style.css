@@ -1,0 +1,79 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght400;500;display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffc56;
+}
+ 
+.wrapper {
+  padding: 0; /* Removi o padding para não adicionar espaçamento interno */
+  width: 100%; /* Ocupar toda a largura da página */
+}
+ 
+header {
+  padding: 0 15px;
+  text-align: center;
+  font-size: 21px;
+}
+ 
+.columns {
+  display: flex;
+  flex-wrap: wrap; /* Corrigi o valor para flex-wrap */
+  justify-content: space-between; /* Mantém as colunas com espaçamento */
+  width: 100%; /* Garante que a seção columns ocupe toda a largura */
+}
+ 
+.column {
+  flex: 1 1 100%; /* Cada coluna ocupa 100% da largura */
+  padding: 10px;
+  background: #3af4d5;
+  transition: 0.3s;
+  box-sizing: border-box; /* Garante que padding não cause aumento no tamanho */
+  margin-bottom: 10px;
+}
+ 
+/* Alterado: A cor de fundo agora é azul */
+.column:first-child {
+  background: #0000ff; /* Cor azul */
+}
+ 
+/* Remove o background azul da última coluna para que o poema tenha uma cor diferente */
+.column:last-child {
+  background: #fffc56;
+}
+ 
+/* Ajuste para telas menores */
+@media screen and (max-width: 980px) {
+  .columns .column {
+    flex-basis: 100%; /* Mantém 100% da largura em telas menores */
+    margin-bottom: 5px;
+  }
+}
+ 
+/* Centralizar o botão e o menu de navegação */
+header, .nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+ 
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+ 
+.nav-bar li {
+  margin: 0 10px;
+}
