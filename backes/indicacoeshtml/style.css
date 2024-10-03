@@ -1,51 +1,168 @@
+/* Resetando margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-        }
+/* Estilizando o body */
+body {
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding-bottom: 50px; /* Para não ficar sobrepondo ao footer */
+}
 
-        header {
-            background-color: #000000;
-            color: #f0e7e7;
-            padding: 20px;
-            text-align: center;
-        }
+/* Cabeçalho */
+header {
+    background-color: #4CAF50; /* Cor verde mais vibrante */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        main {
-            padding: 20px;
-        }
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        section {
-            margin-bottom: 20px;
-            background-color: #a58e8e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        h1, h2 {
-            color: #ffffff;
-        }
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
 
-        footer {
-            background-color: #000000;
-            color: #000000;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    
+nav ul li a:hover {
+    color: #FFD700; /* Cor dourada ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Seção Principal */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Estilizando os links dos botões */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Imagem representativa */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 5px solid #eee;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .button {
+        padding: 10px 15px;
+    }
+
+    footer {
+        position: relative;
+        bottom: auto;
+    }
+}

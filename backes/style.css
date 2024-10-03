@@ -1,130 +1,138 @@
-/* Estilo geral da página */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+/* Resetando margens e paddings padrões */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Estilo do cabeçalho */
+/* Corpo da página */
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Cabeçalho */
 header {
-    background: #007bff;
-    color: #fff;
-    padding: 1.5rem 1rem;
+    background-color: #0044cc;
+    color: white;
     text-align: center;
-    border-bottom: 4px solid #0056b3;
+    padding: 50px 0;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 700;
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-/* Estilo da área principal */
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* Seção Principal */
 main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    padding: 20px;
 }
 
-/* Estilo da seção de links */
-section {
+.intro {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
 }
 
-section h2 {
+.intro h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #007bff;
+    color: #0044cc;
 }
 
-section p {
-    font-size: 1.1rem;
-    color: #555;
+.intro p {
+    font-size: 1.2rem;
+    color: #666;
 }
 
-/* Estilo dos links */
-.link {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-}
-
-.link:hover {
-    background-color: #007bff;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-/* Estilo da navegação */
-nav {
-    margin-top: 2rem;
-}
-
+/* Navegação */
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-}
-
-nav li {
+    padding: 20px 0;
     margin: 0;
 }
 
+nav ul li {
+    margin: 10px 15px;
+}
+
 nav a {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
     text-decoration: none;
-    color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    color: #0044cc;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s, transform 0.3s;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    background-color: #007bff;
-    color: #fff;
-    transform: translateY(-2px);
+    color: #ffffff;
+    background-color: #0044cc;
+    transform: translateY(-5px);
 }
 
-/* Estilo do rodapé */
+/* Ícones ao lado dos links */
+nav a i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+/* Rodapé */
 footer {
-    background: #007bff;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-top: 4px solid #0056b3;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .link, nav a {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    nav a {
+        font-size: 1rem;
+    }
+}
 
-    h1 {
+@media screen and (max-width: 480px) {
+    header h1 {
         font-size: 2rem;
     }
 
-    section h2 {
-        font-size: 1.8rem;
+    header p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
     }
 }
