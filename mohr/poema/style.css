@@ -1,7 +1,8 @@
 body {
   background-image: url(fundo.jpg);
   background-size: cover;
-  overflow-x: hidden;
+  overflow: hidden;
+  background-repeat: repeat;
 }
 
 #telona {
@@ -43,7 +44,7 @@ body {
   overflow-y: scroll;
   color: white;
   position: relative;
-  top: 50px;
+  bottom: 630px;
 }
 
 h1 {
@@ -75,4 +76,45 @@ h1 {
 
 h2 {
   font-size: 25px;
+}
+/* 
+.div {
+  background-size: 100% 100%;
+  box-shadow: 20px 20px 10px gray;
+  animation: slider 10s linear infinite;
+} */
+
+@keyframes slider {
+  0%{background-image: url(fundo2.jpg);}
+  30%{background-image: url(fundo3.jpg);}
+  60%{background-image: url(fundo4.jpg);}
+  100%{background-image: url(fundo5.jpg);}
+}
+
+.img1 {
+  position: relative;
+  left: 100px;
+  top: 80px;
+}
+
+.img2 {
+  position: relative;
+  top: 140px;
+  left: 100px;
+}
+
+.img3 {
+  position: relative;
+  bottom: 260px;
+  left: 950px;
+}
+
+.img4 {
+  position: relative;
+  bottom: 200px;
+  left: 950px;
+}
+
+img {
+  width: 140px;
 }
