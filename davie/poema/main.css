@@ -1,0 +1,33 @@
+body {
+    background-image: url(Bolhas.avif);
+    background-size: cover;
+    height: 200opx;
+}
+#title {
+    font-size: 164px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* sombra ao texto */
+    color: #ffffff; /* cor do texto */
+}
+h3 {
+    font-size: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.amor {
+    background-color: black;
+    width: 700px;
+    color: #ffffff;
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    margin-right: 20px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
