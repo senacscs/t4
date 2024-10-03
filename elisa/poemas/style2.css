@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    font-family: "Bahnschrift Condensed";
+    align-items: center;
+    justify-content: center;
+}
+
+.poema1,
+.poema2,
+.poema3,
+.poema4,
+.poema5 {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    width: 90%;
+    border-radius: 12px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+
+}.poema3, .poema2{
+    width: 15%;
+    display: inline-flex;
+    margin-left: 10%;
+ }
+
+.poema4,
+.poema5 {
+    width: 48%;
+    display: inline-flex;
+    margin-left: 3%;
+}
+
+.poema5, .poema2 {
+    width: 40%;
+}
+
+.p1,
+.p2 {
+    display: inline;
+}
+
+.p2 {
+    margin-left: 5%;
+}
