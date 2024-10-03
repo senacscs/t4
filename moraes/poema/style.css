@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(244, 221, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    color: rgb(54, 15, 15);
+    margin-left: 10%;
+    margin-bottom: -10px;
+}
+p {
+    margin-left: 10%;
+    width: 70%;
+}
+
+img {
+    width: 30%;
+    height: 30%;
+    margin-top: 70px;
+    margin-right: 90px;
+}
+cite {
+    margin-left: 10%;
+    width: 70%;
+}
+h3 {
+    margin-left: 10%;
+    width: 70%;
+}
