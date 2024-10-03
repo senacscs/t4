@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- https://meyerweb.com/eric/tools/css/reset/ ---------- */
+
+@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+
+/* ---------- GENERAL ---------- */
+
+body {
+	background: linear-gradient(130deg, darkblue, black);
+	color: #000;
+  font: 100%/1.5em Georgia, Times New Roman, Times, serif;
+  margin: 0;
+}
+
+p {
+	margin-bottom: 24px;
+    color: white;
+}
+
+.container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+/* ---------- POEM ---------- */
+
+#poem {
+	color: #2a2929;
+	font-family: Georgia;
+	margin: 50px auto;
+	position: relative;
+	width: 350px;
+}
+
+#poem .open-quote {
+	background-color: #fff;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	display: block;
+	font-size: 120px;
+	height: 100px;
+	left: -136px;
+	line-height: 160px;
+	position: absolute;
+	text-align: center;
+	width: 100px;
+}
+
+#poem blockquote {
+	font-size: 24px;
+	line-height: 1.5em;
+}
+
+#poem blockquote cite {
+	font-size: 18px;
+	font-style: italic;
+	padding-left: 36px;
+}
+
+#poem blockquote cite:before {
+	content: "\2014 \2009";	
+}
+
+#poem .blockquote-content {
+	border-left: 5px solid #fff;
+	padding-left: 36px;
+}
+h2 {
+    font-size: 35px;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+cite {
+    color: white;
+}
+a {
+    color: white;
+}
