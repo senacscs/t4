@@ -48,13 +48,13 @@ function mostrarEEsconderPoema() {
     if (index < linhas.length) {
       poemaElement.textContent = linhas[index];
       index++;
-      setTimeout(apagarLinha, 4000); // Espera 2 segundos antes de apagar a linha
+      setTimeout(apagarLinha, 3500); // Espera 3.5 segundos antes de apagar a linha
     }
   }
 
   function apagarLinha() {
     poemaElement.textContent = '';
-    setTimeout(mostrarLinha, 111); // Espera 1 segundo antes de mostrar a próxima linha
+    setTimeout(mostrarLinha, 1); // Espera 0.001 segundo antes de mostrar a próxima linha
   }
 
   mostrarLinha(); // Inicia o processo

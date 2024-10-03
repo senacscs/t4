@@ -1,0 +1,99 @@
+.principal {
+    background-image: url("https://professorpinguim.com.br/blog/wp-content/uploads/2021/03/reflex%C3%A3o-da-luz-em-espelhos-esf%C3%A9ricos-scaled.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+  
+  @keyframes piscar{
+    0% { color: rgb(255, 151, 33); }
+    50% { color: rgb(143, 253, 240); }
+    100% { color: rgb(255, 84, 72); }
+  }
+  
+  @keyframes poema{
+    0% { color: rgb(255, 151, 33); }
+    50% { color: rgb(244, 123, 71); }
+    100% { color: rgb(255, 84, 72); }
+  }
+  
+  #poema {
+      font-family: serif;
+      font-size: 20px;
+      text-align: center;
+      animation: poema 2.5s infinite;
+    }
+  
+    #playButton{
+      color: #000000;
+      text-align: center;
+      display: inline-block;
+      padding: 2px 5px;
+      font-size: 16px;
+      color: black;
+      background-color: #ff7e7e;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+    }
+  
+    section div{
+      background-color:rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.0); 
+      width: 100px;
+      align-items: center;
+    }
+  
+    h1{
+      text-align: center;
+      height: 0px;
+      padding-top: 60px;
+    }
+  
+    ul li{
+      display: inline;
+      margin: 0 3em;
+      text-align: center;
+    }
+  
+    .a{
+      animation: poema 2.5s infinite;
+      text-decoration: none;
+      width: 5px;
+      /* cursor: url("cursor.jpg"), auto; */
+    }
+  
+    button:hover{
+      background-color:orange ;
+      }
+  
+    a:hover{
+    background-color:rgb(255, 237, 202) ;
+    }
+    
+    .piscar{
+      animation: piscar 3s infinite;
+    }
+  
+    .voltar{
+      color: #000000;
+      text-align: center;
+      display: inline-block;
+      padding: 2px 25px;
+      font-size: 16px;
+      color: black;
+      background-color: #ff7e7e;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+    }
+  
+    .conteiner{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      width: 100%;
+      cursor: none, auto;
+    }
+  

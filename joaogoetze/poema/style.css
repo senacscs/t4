@@ -11,8 +11,7 @@
 }
 
 @keyframes poema{
-  0% { color: rgb(255, 151, 33); }
-  50% { color: rgb(244, 123, 71); }
+  0% { color: rgb(244, 123, 71); }
   100% { color: rgb(255, 84, 72); }
 }
 
@@ -20,10 +19,13 @@
     font-family: serif;
     font-size: 20px;
     text-align: center;
-    animation: poema 2.5s infinite;
+    animation: poema 3.6s infinite;
+    /* background-color: rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.0);
+    border: 2px solid #000000;
+    border-radius: 5px; */
   }
 
-  #Botao{
+  #playButton{
     color: #000000;
     text-align: center;
     display: inline-block;
@@ -35,6 +37,8 @@
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
+    margin-left:1155px;
+    /* width: 0px; */
   }
 
   section div{
@@ -61,13 +65,19 @@
 
   button:hover{
     background-color:orange ;
+    color: #ffffff;
+    box-shadow: 0px 0px 50px 100px rgba(255, 148, 34, 0.5);
     }
 
   a:hover{
   background-color:orange ;
+  color: #ffffff;
+  box-shadow: 0px 0px 90px 60px rgba(255, 148, 34, 0.5);
   }
 
-
+  /* .a:hover{  /*<----isso é uma class */
+    /* background-color:orange ; 
+    } */
   
   .piscar{
     animation: piscar 3s infinite;
@@ -85,6 +95,8 @@
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
+    margin-left:1155px;
+    /* width: 0px; */
   }
 
   .conteiner{
@@ -93,4 +105,4 @@
     align-items: center;
     height: 50vh;
     width: 100%;
-  }
+    }
