@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poema</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="poema.js"></script>
+</head>
+
+<body>
+
+   <header>
+    <div id="vanta-bg">
+        <div class="container">
+            <h1>Poema Nostalgia</h1>
+        </div>
+    </div>
+</header>
+
+<a id="button"></a>
+
+<div class="content">
+  <h1>Nostalgia</h1>
+  <h3>José Santos Chocano</h3>
+<p>
+                Dez anos atrás
+                que eu viajo pelo mundo.
+                Eu vivi pouco!
+                Eu fiquei muito cansado!
+                Aquele que vive com pressa não vive realmente,
+                quem não cria raízes não pode dar fruto.
+                <br>
+                <br>
+                 Ser um rio que viaja, ser uma nuvem que passa,
+                sem deixar memória ou vestígios,
+                É triste e mais triste para aqueles que se sentem
+                nuvem no alto, rio no fundo.
+                <br>
+                <br>
+                Eu gostaria de ser uma árvore melhor do que um pássaro,
+                Eu gostaria de ser madeira em vez de fumaça;
+                E para a jornada que cansa
+                Eu prefiro terroir;
+                a cidade natal com suas torres sineiras,
+                Varandas arcaicas, portais antigos
+                ruas estreitas, como se as casas
+                nem eles gostariam de separar muito ...
+                Eu estou na praia
+                de um caminho íngreme.
+                <br>
+                <br>
+                 Eu olho para a cobra na estrada
+                que em cada montanha dá um nó;
+                E então eu entendo que o caminho é longo,
+                que o terreno é acidentado,
+                que a inclinação é árdua,
+                que a paisagem está murcha ...
+                Senhor! Estou cansado de viajar! Eu sinto
+                Nostalgia, eu anseio descansar bem perto
+                meu... Todo mundo vai cercar meu assento
+                para que eu possa contar a eles minhas tristezas e meus triunfos;
+                e eu, à maneira de quem andou
+                Um álbum de adesivos, eu vou te dizer com prazer
+                As Mil e Uma Noites de Minhas Aventuras
+                e terminarei com esta frase de infortúnio:
+                "Eu vivi pouco!"
+                Eu fiquei muito cansado!</p>
+
+
+
+
+  
+</div>
+
+        <br>
+        <br>
+        <div class="link">
+            <h3>Link para os outros poemas</h3>
+            <a href="poemas.html">Clique Aqui</a>
+
+        </div>
+        <br>
+        <br>
+    </div>
+    <footer class="footer">
+        
+        <p>&copy; 2024 - Nicole Kauane Mueller.</p>
+        <script>
+            let vantaEffect;
+            let highlightFrequency = 1.0;
+            let midtoneFrequency = 0.5;
+            let lowlightFrequency = 0.3;
+            let baseFrequency = 0.005;
+
+            function initVanta() {
+                vantaEffect = VANTA.FOG({
+                    el: "#vanta-bg",
+                    highlightColor: 0xff0000,
+                    midtoneColor: 0x00ff00,
+                    lowlightColor: 0x0000ff,
+                    baseColor: 0xffffff,
+                    blurFactor: 0.5,
+                    speed: 2.0,
+                    zoom: 1.0,
+                    scale: 2,
+                    scaleMobile: 4
+                });
+            }
+
+            function colorCycle() {
+                // Cycle through rainbow colors at different frequencies
+                vantaEffect.setOptions({
+                    highlightColor: cycleColor(highlightFrequency),
+                    midtoneColor: cycleColor(midtoneFrequency),
+                    lowlightColor: cycleColor(lowlightFrequency),
+                    baseColor: cycleColor(baseFrequency),
+                });
+                requestAnimationFrame(colorCycle);
+            }
+
+            function cycleColor(frequency) {
+                const time = Date.now() * 0.001;
+                const r = Math.sin(frequency * time + 0) * 127 + 128;
+                const g = Math.sin(frequency * time + 2) * 127 + 128;
+                const b = Math.sin(frequency * time + 4) * 127 + 128;
+                return (r << 16) + (g << 8) + b;
+            }
+
+            function changeEffect(effect) {
+                switch (effect) {
+                    case 'fog':
+                        vantaEffect.setOptions({
+                           
+                            blurFactor: Math.random() * 1.5 + 0.2,
+                            speed: Math.random() * 3 + 0.1,
+                        });
+                        break;
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", initVanta);
+            requestAnimationFrame(colorCycle);
+
+            // Fullscreen toggle functionality
+            const fullscreenToggle = document.getElementById('fullscreen-toggle');
+
+            fullscreenToggle.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch((err) => {
+                        console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                    });
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+
+            document.addEventListener('fullscreenchange', () => {
+                if (document.fullscreenElement) {
+                    fullscreenToggle.textContent = 'Exit Fullscreen';
+                } else {
+                    fullscreenToggle.textContent = 'Toggle Fullscreen';
+                }
+            });
+
+            var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    </footer>
+
+</body>
+
+</html>

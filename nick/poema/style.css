@@ -1,0 +1,99 @@
+
+* {
+    text-align: center;
+}
+
+
+
+#vanta-bg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+
+h1 {
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-family: italic;
+    display: block;
+    
+
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03a9f4;
+    height: 100px;
+    color: white;
+}
+
+
+p {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+
+.link {
+    height: 110px;
+    left: 180px;
+    background-color: #03a9f4;
+    width: 400px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;
+   
+}
+
+  
+  .content {
+    width: 77%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
+  }
+  @media (min-width: 500px) {
+    .content {
+      width: 43%;
+    }
+    #button {
+      margin: 30px;
+    }
+  }
+  .content h1 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+  }
+  .content h3 {
+    font-style: italic;
+    color: #96a2a7;
+  }
+  a{
+    color: white
+  }
+  h3{
+    color: white;
+  }
