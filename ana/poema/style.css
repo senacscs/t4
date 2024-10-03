@@ -1,0 +1,172 @@
+img {
+    width: 200px;
+}
+
+head, body {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, p {
+    font-style: italic;
+    text-align: center;
+}
+
+
+ body { 
+    margin: 0;
+    padding: 0;
+    background-image: url(fundinho.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden; 
+}
+
+h1 {
+    margin-top: 30px;
+    color: rgb(2, 11, 0);
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    background-color: rgba(73, 205, 220, 0.555);
+    margin-top: 0;
+    font-family: "Cedarville Cursive", cursive;
+    text-shadow: white 0 0 10px ;
+}
+
+p {
+    color: rgb(60, 116, 162);
+    font-size: 20px;
+    /* background-color: white; */
+    border-radius: 30px;
+    /* padding: 7vw;  */
+    padding-left: 4vw;   
+    line-height: 1.6; 
+    text-align: justify;
+}
+
+.caixa-texto{
+    background-color: white;
+    border-radius: 5vw;
+    width: 35vw;
+    height: auto;
+    margin: auto;
+    margin-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: rgb(60, 116, 162);
+    color: rgb(0, 0, 0);
+    padding: 30px ;
+    text-align: center;
+    font-size: 50px;
+    /* font-family: Georgia, Times, 'Times New Roman', serif; */
+}
+
+nav {
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(60, 116, 162);
+    text-decoration: none;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+}
+
+iframe {
+    margin-left: 140px;
+}
+
+#inicial {
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    img {
+        width: 500px;
+        border-radius: 30px;
+    }
+}
+
+/*(Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(189, 181, 181);; /* Cor do fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 116, 162); /* Cor da barra de rolagem */
+    border-radius: 6px; /* Deixar as bordas arredondadas */
+    border: 2px solid rgb(60, 116, 162); /* Cor da borda ao redor da barra */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(46, 95, 135); /* Cor ao passar o mouse sobre a barra */
+}
+
+iframe {
+    position: relative;
+    text-align: center;
+    right: 55px;
+}
+
+footer {
+    margin-top: auto; 
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(60, 116, 162);
+    color: #ffffff;
+    width: 100%;
+    font-size: 18px;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px; 
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1.2em;
+        padding: 20px;
+    }
+}
