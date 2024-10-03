@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <span id="text1">Index Henrique</span>
+        <span id="text2"></span>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>Olá Mundo</h2>
+            <p>Descrição do card 1. Este é um exemplo de conteúdo.</p>
+        </div>
+        <div class="card">
+            <h2>Indicações HTML</h2>
+            <p>Descrição do card 2. Aqui você pode adicionar mais informações.</p>
+        </div>
+        <div class="card">
+            <h2>Indicações CSS</h2>
+            <p>Descrição do card 3. Adicione o que quiser aqui!</p>
+        </div>
+    </div>
+
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic"
+                    type="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+    <script src="script.js"></script>
+</body>
+</html>
