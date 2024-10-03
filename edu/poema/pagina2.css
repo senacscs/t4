@@ -1,0 +1,11 @@
+html {
+    background-image: url(chuva.jpeg.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: aliceblue;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}

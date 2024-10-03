@@ -22,6 +22,7 @@ const sites = [
     { nome: "Autocuidado", url: "autocuidado", src: "vessel.png" },
     { nome: "Imersão", url: "imersao1", src: "iselda.png" },
     { nome: "Ponte Da Vinci", url: "pontedavinci", src: "besouro.png"},
+    { nome: "Poemas", url: "poema", src: "dreamers.png"},
 ]
 
 const sitesDiv = document.getElementById("sites");

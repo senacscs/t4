@@ -1,0 +1,24 @@
+html {   
+    cursor: url(image.png), auto;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(TV\ girl_.jpg);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top:10em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: fixed;
+  }
+  
+  * { color:#fff; text-decoration: none;}
+
+a {
+    color: aliceblue;
+    text-align: center;
+}
