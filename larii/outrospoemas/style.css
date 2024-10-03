@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradiente de fundo */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    background-image: url("fundo.jpg");
+    background-size: cover;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 500px; /* Largura do carrossel */
+    overflow: hidden;
+    transition: transform 0.3s; /* Transição suave para o efeito de aumento */
+}
+
+.carousel:hover {
+    transform: scale(1.05); /* Aumenta o carrossel ao passar o mouse */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+}
+
+.carousel-images img {
+    width: 400px; /* Largura das imagens */
+    height: auto;
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    display: none; /* Esconde as imagens inicialmente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra nas imagens */
+    transition: transform 0.3s; /* Transição suave para o efeito de aumento */
+}
+
+.carousel-images img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+.carousel-images img.active {
+    display: block; /* Exibe apenas a imagem ativa */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}

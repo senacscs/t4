@@ -6,7 +6,7 @@ body {
     background-image: url("fundoclaro.jpg");
     background-size: cover;
     font-optical-sizing: auto;
-    font-weight: normal; /* Ajuste para um valor válido */
+    font-weight: normal; 
     font-style: italic;
     font-size: larger;
 }
@@ -22,7 +22,7 @@ header {
 h1 {
     margin: 0;
     color: #ffffff;
-    text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.8); /* Sombra no texto */
+    text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.8); 
 }
 
 .search-bar {
@@ -61,12 +61,12 @@ button:hover {
 .image-container img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 17px 20px rgba(33, 33, 33, 0.813); /* Sombra nas imagens */
-    transition: transform 0.2s; /* Efeito suave de transição */
+    box-shadow: 0 17px 20px rgba(33, 33, 33, 0.813); 
+    transition: transform 0.2s; 
 }
 
 .image-container img:hover {
-    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    transform: scale(1.05);
 }
 
 footer {
