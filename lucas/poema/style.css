@@ -1,27 +1,41 @@
 body {
     background: linear-gradient(130deg, darkred, black);
     height: 100vh;
-    /* Garante que o body ocupe toda a altura da janela */
     display: flex;
-    /* Usando flexbox para centralizar */
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Centraliza verticalmente */
     margin: 0;
-    /* Remove margens padrão do body */
 }
 
 div {
     color: white;
     font-family: sans-serif;
     text-align: center;
-
 }
-h1{
+
+h1 {
     font-size: 70px;
 }
-a{
+
+a {
     color: white;
     font-size: 50px;
+}
+
+:root {
+    --color-interactive: 255, 255, 255;
+    --circle-size: 10%;
+    --blending: hard-light; /* Removido espaço em branco */
+}
+
+.interactive {
+    position: fixed; /* Fixa a posição em toda a tela */
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 100vw; /* 100% da largura da viewport */
+    height: 100vh; /* Use 100% da altura da viewport */
+    top: 0; /* Alinhe ao topo da viewport */
+    left: 0; /* Alinhe à esquerda da viewport */
+    opacity: 0.7;
+    pointer-events: none; /* Não bloqueia a interação com outros elementos */
 }
