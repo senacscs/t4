@@ -33,7 +33,7 @@ input[type="submit"], input[type="button"], a, button {
 .subtitulo.fixed {
   position: fixed; /* Fixa o subtítulo no topo */
   top: 0;
-  bottom: auto; /* Remove o offset inferior */
+  bottom: auto; 
 }
 
 h5 {
