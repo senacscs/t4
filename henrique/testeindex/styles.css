@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 
 body {
-	margin: 0px;
+    margin: 0;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #container {
-	position: absolute;
-	margin: auto;
-	width: 100vw;
-	height: 80pt;
-	top: 0;
-	bottom: 0;
-	
-	filter: url(#threshold) blur(0.6px);
+    width: 100%;
+    height: 80pt; /* você pode ajustar a altura conforme necessário */
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url(#threshold) blur(0.6px);
 }
 
 #text1, #text2 {
@@ -32,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
+    width: 100%; /* Adiciona largura total para os cards */
 }
 
 .card {
@@ -44,7 +46,15 @@ body {
     padding: 20px;
     width: 200px;
     text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animações suaves para sombra e transformação */
+    cursor: pointer; /* Indica que o card é clicável */
 }
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra aumentada ao passar o mouse */
+    transform: scale(1.10); /* Diminui o tamanho do card para 95% */
+}
+
 
 .card h2 {
     font-size: 18px;
