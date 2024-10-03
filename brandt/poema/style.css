@@ -1,0 +1,51 @@
+@import url('https://fonts.cdnfonts.com/css/rubik-pixels?styles=170400');
+
+body {
+    background-color: black;
+    overflow: hidden;
+    /* margin: 0; */
+    /* height: 100vh;  */
+    /* position: relative; */
+    /* display: flexbox; */
+}
+
+p {
+    color: bisque;
+    font-family: "Rubik Pixels", sans-serif;
+    font-size: 300px;
+    /* width: 400%; */
+    /* line-height: -50000em; */
+    /* white-space: nowrap; */
+    padding: 4px;
+}
+
+marquee {
+    margin: -300px;
+}
+
+.esquerda {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 25%;  */
+    /* left: 25%;
+    right: 50%; */
+    top: 25%;
+    /* bottom: 50%; */
+    width: 40%; /* Full width */
+    height: 40%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Black w/ opacity */
+    box-shadow: 0 0 30px white;
+    border-radius: 20px;
+    /* margin-right: auto; */
+    margin-left: 28%;
+    display: block ;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: "Rubik Pixels", sans-serif;
+    text-align: center;
+    color: bisque;
+}
+
