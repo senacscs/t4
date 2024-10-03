@@ -1,0 +1,345 @@
+@import url('https://i.pinimg.com/736x/8f/6c/2a/8f6c2a4be3f409f71a4dfb7eef89852b.jpg');
+
+:root {
+    --c1: #f0f8ff;
+    --c2: #303030;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #4b0082, #9400d3);
+    padding-top: 100vh;
+}
+
+body * {
+    font-family: 'Times New Roman', serif;
+}
+
+h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.25em;
+    font-family: "Days One", Arial, Helvetica, serif;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.6em;
+    font-family: "Days One", Arial, Helvetica, serif;
+}
+
+p {
+    font-size: 1.25em;
+    margin: 2em 0;
+    color: #666;
+}
+
+.content {
+    width: 60vw;
+    height: auto;
+    padding: 5vmin;
+    background: #fbfbfb;
+    box-sizing: border-box;
+    box-shadow: 0 0 1em 0em #000;
+}
+
+.progress-bar {
+    background: #ff9800;
+    width: 0;
+    height: 1vmin;
+    position: fixed;
+    left: 0;
+    top: 0;
+    animation: grow-bar linear forwards;
+    animation-timeline: scroll(root);
+    z-index: 5;
+}
+
+@keyframes grow-bar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.doble {
+    width: 49%;
+    margin: 10% 0 10% 1%;
+    float: left;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+.revealing-image {
+    animation: reveal linear both;
+    animation-timeline: view(10% 10%);
+    animation-range: entry -50% cover 30%;
+    animation-range: entry -100% cover 25%;
+}
+
+.parallax1-header {
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/8f/39/d5/8f39d53f9f956bae7779a4a94197d69c.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-blend-mode: soft-light;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: calc(4vw + 1em);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    animation: sticky-parallax-header linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 90vh;
+    box-shadow: 0 0 1em 0 #000;
+
+    text-shadow: 1vmin 1vmin 1vmin #000, 1px 1px 1px #000, -1px -1px 1px #000,
+        -1px 1px 1px #000, 1px -1px 1px #000;
+}
+
+.parallax-header {
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/8f/39/d5/8f39d53f9f956bae7779a4a94197d69c.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-blend-mode: soft-light;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: calc(4vw + 1em);
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    animation: sticky-parallax-header linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 90vh;
+    box-shadow: 0 0 1em 0 #000;
+
+    text-shadow: 1vmin 1vmin 1vmin #000, 1px 1px 1px #000, -1px -1px 1px #000,
+        -1px 1px 1px #000, 1px -1px 1px #000;
+}
+
+@keyframes sticky-parallax-header {
+    0% {
+        background-position: 50% 0;
+        height: 100vh;
+        font-size: calc(4vw + 1em);
+    }
+
+    100% {
+        background-position: 50% 100;
+        height: 10vh;
+        font-size: 2em;
+        background-color: #00000080;
+        filter: sepia(1);
+        text-shadow: 0 0 0 #000, 1px 1px 1px #000, -1px -1px 1px #000,
+            -1px 1px 1px #000, 1px -1px 1px #000;
+    }
+}
+
+blockquote {
+    position: relative;
+    padding: 2.5em 5em 4em 5em;
+    margin: 4em 0em;
+    font-size: 1.25em;
+    color: var(--c2);
+    background: conic-gradient(from 180deg at 100% calc(100% - 0.65em), var(--c2) 0 25%, #fff0 0 100%), conic-gradient(from 180deg at 0.65em 50%, var(--c2) 0 25%, #fff0 0 100%), conic-gradient(from 0deg at calc(100% - 0.65em) 50%, var(--c2) 0 25%, #fff0 0 100%), conic-gradient(from 0deg at 0em 0.65em, var(--c2) 0 25%, #fff0 0 100%);
+}
+
+blockquote:before,
+blockquote:after {
+    content: "";
+    position: absolute;
+    width: 3.5em;
+    height: 4.5em;
+    top: 3em;
+    left: 0.25em;
+    transform: rotate(5deg) scale(0.6);
+    background:
+        radial-gradient(circle at 1.75em 3em, var(--c2) 1.5em, #fff0 calc(1.5em + 1px)),
+        radial-gradient(circle at 3.5em 1.5em, #fff0 2em, var(--c2) calc(2em + 1px) calc(4em + 1px), #fff0 calc(4em + 2px));
+    filter: drop-shadow(3.5em -0.5em 0px var(--c2));
+    border-radius: 100%;
+}
+
+blockquote:after {
+    top: inherit;
+    bottom: 3em;
+    transform: rotate(195deg) scale(0.6);
+    right: 0.25em;
+    left: inherit;
+}
+
+blockquote p {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    font-family: "Days One", Arial, Helvetica, serif;
+}
+
+blockquote p:first-letter {
+    background: var(--c2);
+    color: var(--c1);
+    padding: 0 0.75em;
+    margin-top: 0;
+    margin-left: 0.65em;
+    margin-right: 0.25em;
+    box-sizing: border-box;
+    font-size: 2em;
+    float: left;
+}
+
+blockquote cite {
+    font-weight: bold;
+    position: absolute;
+    bottom: 2.5em;
+    background: var(--c2);
+    color: var(--c1);
+    right: 6em;
+    padding: 0.5em 1em;
+}
+
+small {
+    font-size: 0.7em;
+}
+
+small+small {
+    opacity: 0.6;
+    font-size: 0.55em;
+    margin-top: 2em;
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #47c;
+    border-bottom: 2px dotted #9998;
+}
+
+a:hover {
+    border-bottom-color: #47c;
+}
+
+@import url('https://i.pinimg.com/736x/8f/6c/2a/8f6c2a4be3f409f71a4dfb7eef89852b.jpg');
+
+:root {
+    --c1: #f0f8ff;
+    --c2: #303030;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(173, 216, 230, 0.7), rgba(221, 160, 221, 0.7), rgba(144, 238, 144, 0.7), rgba(173, 216, 230, 0.7));
+    padding-top: 100vh;
+}
+
+body * {
+    font-family: 'Times New Roman', serif;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #47c;
+    border-bottom: 2px dotted #9998;
+}
+
+a:hover {
+    border-bottom-color: #47c;
+}
+
+.poem {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.poem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
+    /* Degradê em cores pastel */
+    width: 0;
+    height: 1vmin;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.botao-poema {
+    background-color: #ffcccb;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao-poema:hover {
+    transform: translateY(-5px);
+    background-color: #ffb3b3;
+}
+
+
+
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #e0c0e0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    margin: 15px 0
+}
+
+.quote {
+    background: rgba(220, 210, 210, 0.8);
+    border-left: 5px solid #e0c0e0;
+    padding: 20px 15px;
+    font-style: italic;
+    border-radius: 5px;
+}
