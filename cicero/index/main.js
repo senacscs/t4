@@ -120,7 +120,7 @@ let TRABALHOS = [
             { nome: "INDICAÇÕES HTML", url: "indicacoeshtml", img: "design.webp" },
             { nome: "INDICAÇÕES CSS", url: "indicacoescss", img: "design.jpg" },
             { nome: "SITE PRA MAMÃE", url: "responsaveis", img: "ursinho.gif" },
-            { nome: "POEMAS IRADOS", url: "responsaveis", img: "pirata.webp" },
+            { nome: "POEMAS IRADOS", url: "poema", img: "pirata.webp" },
         ]
     },
     {
