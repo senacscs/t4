@@ -378,44 +378,45 @@ html {
 
 footer {
     width: 60%;
-    background-color: rgb(208, 206, 236);
+    background-color: #3075ff;
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 0 20% 0 20%;
+    height: 200px;
+    margin-top: -20px;
 }
 .hr {
     width: 60%;
-    border: 1px solid rgba(0, 0, 0, 0.37);
-    margin-top: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 0;
+    margin-top: -20px;
 }
 footer p {
     font-weight: 550;
     text-align: left;
 }
 .fornecedores {
-    margin-top: -50px;
-    background-color: #bab3fa;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    align-content: center;
 }
 .clientes {
-    margin-top: -50px;    
-    background-color: #bab3fa;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    align-content: center;
 
 }
 .referencias {
-    width: 30%;
-    margin-top: -50px;    
-    background-color: #bab3fa;
+    width: 30%; 
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    align-content: center;
 }
 .referencias a {
     margin-top: 20px;
+    color: black;
 }
