@@ -1,0 +1,76 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #0a0002;
+	font-family: Arial, sans-serif;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#content {
+	position: relative;
+	padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 0.5em;
+}
+.tela {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 95vh;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.titulo {
+    color: #b19dfc;
+}
+.botao {
+    left: 50px;
+    margin: 15px;
+    padding: 0px;
+    list-style-type: none;
+    box-shadow: #f874e9 10px;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.botao a, .botao a:visited {
+    font: bold 12px/24px arial, helvetica, sans-serif;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #14120E;
+    background: #f5c6ea url('botao_link.gif');
+    width: 200px;
+    height: 24px;
+    display: block;
+}
+.botao a:hover {
+    background: #f57fce url('botao_hover.gif');
+    color: #fea1e2;
+    transform: scale(1.2);
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+}
+.box {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    margin: 10px;
+    background-color: lightcoral;
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
