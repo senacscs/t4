@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+
+body { 
+  background-image: url(CoracaoT4.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+.chrome {
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(#ff91de);
+  -webkit-text-stroke: 4px #ff00b3;
+  font-size: 200px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  color: rgb(255, 142, 251);
+  text-align: center;
+}
+
+.dreams {
+  position:absolute;
+  margin: 0px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 160px;
+  color: #F975F7 ;
+  transform:rotate(-15deg);
+  -ms-transform:rotate(-15deg); /* IE 9 */
+  -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+  margin-left: 860px;
+  margin-top: -120px;
+  -webkit-text-stroke: 1px #f008b7;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+  z-index: 20;
+}
+.centro{
+  margin-top: 2000px;
+}
+.poema {
+  font-family: 'Georgia', 'Times New Roman', serif; /* Escolha uma fonte serifada para um tom mais clássico */
+  font-size: 18px;
+  line-height: 1.6em; /* Aumenta o espaçamento entre as linhas */
+  text-align: center; /* Alinha o texto ao centro */
+  margin: 20px auto; /* Define margens automáticas para centralizar o bloco */
+  width: 60%; /* Define uma largura específica para o poema */
+  white-space: pre-wrap; /* Mantém as quebras de linha conforme no HTML */
+  background-color: #f9f9f9; /* Fundo claro para destaque suave */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  border: 1px solid #ccc; /* Borda sutil */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  color:black;
+  
+}
+.Cor1{
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(#000000);
+  -webkit-text-stroke: 4px #000000;
+  font-size: 150px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  color: rgb(199, 102, 218);
+  text-align: center;
+}
+.Cor2{
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(#022e19);
+  -webkit-text-stroke: 4px #0080ff;
+  font-size: 150px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  color: rgb(119, 230, 255);
+  text-align: center;
+}
+.Cor3{
+  background-image: linear-gradient(180deg,rgb(71, 60, 60),rgb(93, 209, 39));
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(#000000);
+  -webkit-text-stroke: 4px #750606;
+  font-size: 110px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  color: transparent;
+  text-align: center;
+  background-clip: text;
+}
+.Cor4{
+  background-image: linear-gradient(90deg,rgb(71, 60, 60),rgb(254, 0, 76));
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(#000000);
+  -webkit-text-stroke: 4px #000000;
+  font-size: 100px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+img{
+  width: 200px;
+  height: auto;
+  justify-content: center;
+  border: 2px;
+  cursor: pointer;
+  padding: 20px;
+  gap: 10px;
+  max-width: 300px;
+}
+.dois{
+  width: 250px;
+}
+.tres{
+  width: 230px;
+}
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #6c757d;
+  border-top: 1px solid #e9ecef;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
