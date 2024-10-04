@@ -2,10 +2,26 @@ html {
     background-image: url(chuva.jpeg.gif);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
     color: aliceblue;
     text-align: center;
+    padding: 20px 50px;
+
 }
 
 p {
     font-size: 18px;
+}
+
+div {
+    border: solid 2px black;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    color: black;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+a {
+    color: white;
 }
