@@ -2,7 +2,25 @@ body {
   background-image: url(fundo.jpg);
   background-size: cover;
   overflow: hidden;
-  background-repeat: repeat;
+  /* background-repeat: repeat; */
+  background-repeat: no-repeat;
+  animation: changeBackground 30s ease-in-out infinite;
+  transition: background-image 1.5s ease-in-out;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('fundo.jpg');
+  }
+  33% {
+    background-image: url('fundo2.jpg');
+  }
+  66% {
+    background-image: url('fundo3.jpg');
+  }
+  100% {
+    background-image: url('fundo4.jpg');
+  }
 }
 
 #telona {
@@ -84,11 +102,22 @@ h2 {
   animation: slider 10s linear infinite;
 } */
 
-@keyframes slider {
+/* @keyframes slider {
   0%{background-image: url(fundo2.jpg);}
   30%{background-image: url(fundo3.jpg);}
   60%{background-image: url(fundo4.jpg);}
   100%{background-image: url(fundo5.jpg);}
+} */
+
+@keyframes slider {
+  0%{background-image: url(fundo2.jpg);}
+  30%{background-image: url(fundo4.jpg);}
+  60%{background-image: url(fundo3.jpg);}
+  100%{background-image: url(fundo5.jpg);}
+}
+
+.div {
+  animation: slider 1s linear infinite; /* Reduzi o tempo total para 5 segundos */
 }
 
 .img1 {
