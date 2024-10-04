@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O tempo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+    <div class="card">
+      <svg viewBox="0 0 100% 100%" xmlns='http://www.w3.org/2000/svg' class="noise">
+        <filter id='noiseFilter'>
+          <feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='6' stitchTiles='stitch' />
+        </filter>
+
+        <!-- <rect
+              width='100%'
+              height='100%'
+              preserveAspectRatio="xMidYMid meet"
+              filter='url(#noiseFilter)' /> -->
+      </svg>
+      <div class="content">
+        <h1>O Tempo</h1>
+        <p>A vida é o dever que nós trouxemos para fazer em casa. <br>
+          Quando se vê, já são seis horas! <br>
+          Quando se vê, já é sexta-feira! <br>
+          Quando se vê, já é Natal... <br>
+          Quando se vê, já terminou o ano... <br><br>
+
+          Quando se vê, perdemos o amor da nossa vida. <br>
+          Quando se vê, passaram-se 50 anos! <br>
+          Agora, é tarde demais para ser reprovado... <br><br>
+
+          Se me fosse dado um dia, outra oportunidade, eu nem olhava o relógio. <br>
+          Seguiria sempre em frente e iria jogando pelo caminho a casca dourada e inútil das horas. <br><br>
+
+          Dessa forma, eu digo: não deixe de fazer algo que gosta devido à falta de tempo; <br>
+          a única falta que terá, será desse tempo que infelizmente... não voltará mais. <br><br></p>
+      </div>
+    </div>
+    <div class="gradient-bg">
+      <svg viewBox="0 0 100vw 100vw" xmlns='http://www.w3.org/2000/svg' class="noiseBg">
+        <filter id='noiseFilterBg'>
+          <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+        </filter>
+
+        <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilterBg)' />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="centro">
+      <div class="creditos">
+        <p>Luís Garcia</p> <br>
+        <!-- <p> 02/10/2024</p> -->
+        <!-- <a href="">Veja mais poemas</a> -->
+        <div class="icons">
+          <a href="poema.html"><ion-icon id="img" class="img"  name="folder-outline"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+
+<!-- html -->
+<!-- 
+    
+<svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+    <path d="M250,0 Q250,250 250,500" />
+</svg> -->
+<!-- css -->
+<!-- body {
+    margin: 0;
+    height: 100vh;
+    background: rgb(29,29,29);
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: block;
+  transform: rotate(90deg);
+}
+
+path {
+    stroke: white;
+    fill: none;
+}
+
+h1 {
+    font-size: 5rem;
+    color: red;
+    font-family: 'Playfair Dispaly', serif;
+    pointer-events: none;
+
+    &:before {
+        content: 'WOBBLY';
+        position: absolute;
+        top: 20%;
+        left: -10%;
+        font-size: 20rem;
+        color: rgb(32,32,32);
+        z-index: -2;
+    }
+}body {
+    margin: 0;
+    height: 100vh;
+    background: rgb(29,29,29);
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: block;
+  transform: rotate(90deg);
+}
+
+path {
+    stroke: white;
+    fill: none;
+}
+
+h1 {
+    font-size: 5rem;
+    color: red;
+    font-family: 'Playfair Dispaly', serif;
+    pointer-events: none;
+
+    &:before {
+        content: 'WOBBLY';
+        position: absolute;
+        top: 20%;
+        left: -10%;
+        font-size: 20rem;
+        color: rgb(32,32,32);
+        z-index: -2;
+    }
+} -->
+
+
+<!-- js -->
+
+<!-- 
+const path = document.querySelector('path')
+
+let coords = {
+    x: 0,
+    y: 0
+}
+
+let width = 0
+
+document.addEventListener('mousemove', event => {
+    coords.x = event.clientX
+    coords.y = event.clientY
+
+    width = coords.y / window.innerHeight
+
+    console.log(width.toFixed(1))
+
+    updateCoords(coords)
+})
+
+document.addEventListener('mouseout', event => {
+    gsap.to(path, { ease: Elastic.easeOut.config(1,0.3), attr: { d: "M250,0 Q250,250 250,500"}})
+})
+
+function updateCoords(coords) {
+    coords.x = width*500
+    path.setAttribute('d', `M250,0 Q${coords.x},${coords.y} 250,500`)
+} -->
