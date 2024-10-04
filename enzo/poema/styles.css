@@ -5,64 +5,154 @@ body, html {
 }
 
 body {
-    background-image: url(poema\ fundo\ de\ site.jpg);
-    background-position: center;
-    background-size: cover;
-    font-family: 'Courier New', Courier, monospace;
+    background-image: url(fundo\ branco\ biblioteca.jpg);
 }
 
 header {
-    background-color: black;
+    background-image: url(biblioteca2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
-    height: 590px;
-    position: relative;
-    bottom: 34px;
-    border-bottom: 0.1rem solid white;
-    box-shadow: 0 0 10px 0 white;
     text-align: center;
-}
-
-.link-cabeça {
-    text-decoration: none;
+    height: 595px;
+    position: relative;
+    bottom: 50px;
 }
 
 h1 {
     position: relative;
-    top: 230px;
-    font-size: 50px;
+    top: 240px;
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.corpo {
-    background-color: rgb(54, 54, 54, 0.6); 
-    width: 60%;
-    height: 900px;
+.poema1 {
     position: relative;
-    left: 21%;
-    border: 0.1rem solid white;
-    box-shadow: 0 0 50px black;
+    top: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
     border-radius: 10px;
+    box-shadow: 0 0 20px black;
 }
 
-p {
-    color: white;
-    position: relative;
-    left: 4.2%;
-    bottom: 10px;
-    font-size: 25px;
+.poema1:hover {
+    box-shadow: 0 0 60px black;
+    transition: box-shadow 1s;
 }
 
-footer {
+.poema2 {
     position: relative;
-    top: 50px;
-    background-color: white;
-    width: 100%;
-    text-align: center;
-    border-top: 0.2rem solid black;
+    top: 200px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.poema2:hover {
+    box-shadow: 0 0 60px black;
+    transition: box-shadow 1s;
+}
+
+.poema3 {
+    position: relative;
+    top: 300px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.poema3:hover {
+    box-shadow: 0 0 60px black;
+    transition: box-shadow 1s;
+}
+
+.poema4 {
+    position: relative;
+    top: 400px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.poema4:hover {
+    box-shadow: 0 0 60px black;
+    transition: box-shadow 1s;
+}
+
+.poema5 {
+    position: relative;
+    top: 500px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+
+.poema5:hover {
+    box-shadow: 0 0 60px black;
+    transition: box-shadow ease-in-out 1s;
 }
 
 h2 {
+    font-size: 25px;
+    font-family: cursive;
     position: relative;
-    bottom: 15px;
+    left: 30px;
+}
+
+p {
+    font-family: cursive;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.botoes {
+    background-color: #333;
+    width: 100%;
+    position: relative;
+    bottom:50px;
+    border-top: 0.1rem solid white;
+    border-bottom: 0.1rem solid white;  
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 100px;
+  }
+
+  button:hover {
+    background-color: white; /* Mudança de cor ao passar o mouse */
+    color: black;
+  }
+
+  footer {
+    position: relative;
+    top: 600px;
+    text-align: center;
+    height: 80px;
+    background-color: white;
+    width: 100%;
+    border-top: 0.2rem solid black;
 }
 
 .styled-link {
@@ -78,6 +168,8 @@ h2 {
   }
   
   .styled-link:hover {
-    color: blue;
+    color: rgb(72, 72, 255);
     border-bottom: 2px solid blue; /* Aparece a linha ao passar o mouse */
   }
+
+  
