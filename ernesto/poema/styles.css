@@ -47,7 +47,8 @@ body {
   margin: 20px auto; /* Define margens automáticas para centralizar o bloco */
   width: 60%; /* Define uma largura específica para o poema */
   white-space: pre-wrap; /* Mantém as quebras de linha conforme no HTML */
-  background-color: #f9f9f9; /* Fundo claro para destaque suave */
+  background-color: #f9f9f9b9; /* Fundo claro para destaque suave */
+  backdrop-filter: blur(10px);
   padding: 20px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
   border: 1px solid #ccc; /* Borda sutil */
