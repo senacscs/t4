@@ -1,0 +1,51 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    body {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0;
+        padding: 0;
+
+        header {
+           width: 100vw;
+           padding: 20px;
+           background-color: aliceblue; 
+           margin: 10px;
+        }
+        main {
+            display: flex;
+            flex-direction: row;
+
+            .babyshoes {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 10px;
+
+                img {
+                    width: 400px;
+                    margin: 10px;
+                    border-radius: 20px;
+                }
+                .pequenos {
+                    img {
+                        width: 100px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .neverworn {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 10px;
+
+                
+            }
+        }
+    }
+}
