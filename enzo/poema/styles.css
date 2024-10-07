@@ -6,10 +6,12 @@ body, html {
 
 body {
     background-image: url(fundo\ branco\ biblioteca.jpg);
+    overflow-x: hidden;
 }
 
 header {
     background-image: url(biblioteca2.jpg);
+    opacity: 85%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -35,6 +37,7 @@ h1 {
     border: 0.2rem solid black;
     border-radius: 10px;
     box-shadow: 0 0 20px black;
+    backdrop-filter: blur(3px);
 }
 
 .poema1:hover {
@@ -50,6 +53,7 @@ h1 {
     border: 0.2rem solid black;
     border-radius: 10px;
     box-shadow: 0 0 20px 0 black;
+    backdrop-filter: blur(3px);
 }
 
 .poema2:hover {
@@ -65,6 +69,7 @@ h1 {
     border: 0.2rem solid black;
     border-radius: 10px;
     box-shadow: 0 0 20px 0 black;
+    backdrop-filter: blur(3px);
 }
 
 .poema3:hover {
@@ -80,6 +85,7 @@ h1 {
     border: 0.2rem solid black;
     border-radius: 10px;
     box-shadow: 0 0 20px 0 black;
+    backdrop-filter: blur(3px);
 }
 
 .poema4:hover {
@@ -95,6 +101,7 @@ h1 {
     border: 0.2rem solid black;
     border-radius: 10px;
     box-shadow: 0 0 20px 0 black;
+    backdrop-filter: blur(3px);
 }
 
 .poema5:hover {
@@ -167,7 +174,7 @@ button {
     transition: border-bottom 0.5s ease-in-out; /* Efeito de transição suave */
   }
   
-  .styled-link:hover {
+  .styled-link:hover { 
     color: rgb(72, 72, 255);
     border-bottom: 2px solid blue; /* Aparece a linha ao passar o mouse */
   }
