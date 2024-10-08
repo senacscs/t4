@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua Geométrica</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            background-image: url(Captura\ de\ tela\ 2024-10-08\ 083859.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .moon-svg {
+            width: 300px;
+            height: 300px;
+        }
+
+        polygon {
+            stroke: rgb(101, 198, 36);
+            stroke-width: 2;
+            fill: rgb(132, 210, 80);
+            background-color: rgb(101, 198, 36);
+            color: rgb(101, 198, 36);
+        }
+
+        .triangulo {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 50px solid; /* Light brown */
+            position: absolute;
+            top: 290px;
+            left: 633px;
+            transform: rotate(60deg);
+            stroke: rgb(101, 198, 36);
+            fill: rgb(132, 210, 80);
+            color: rgb(132, 210, 80);
+        }
+
+        .bico {
+            fill: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="triangulo"></div>
+    <svg class="moon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+       
+        <polygon points="20,20 30,10 40,20" class="bico"/>
+        <polygon points="30,10 50,20 40,30" />
+        <polygon points="50,20 60,40 40,30" />
+        <polygon points="40,30 60,40 50,50" />
+        
+        <!-- Middle part -->
+        <polygon points="50,50 40,30 20,40" />
+        <polygon points="40,30 30,50 20,40" />
+        <polygon points="30,50 40,60 20,60" />
+        <polygon points="40,60 50,50 60,70" />
+        
+        <!-- Bottom part -->
+        <polygon points="20,60 30,70 40,60" />
+        <polygon points="30,70 50,80 40,60" />
+        <polygon points="50,80 60,90 40,70" />
+        <polygon points="60,90 50,80 70,100" />
+    </svg>
+</body>
+</html>
