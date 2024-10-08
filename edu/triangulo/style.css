@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    height: 100vh;
+    background-color: rgb(159, 7, 7);
+}
+
+.branco {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid white;
+    display: inline;
+    margin-top: 300px;
+}
+
+.vermelhoescuro {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 100px solid rgb(206, 195, 195);
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vermelhoescuro2 {
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 200px solid rgb(92, 7, 7);
+    margin-top: 0;
+    display: inline-flex;
+}
+
+.preto {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid black;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: list-item;
+}
