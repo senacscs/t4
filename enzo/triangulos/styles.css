@@ -1,0 +1,92 @@
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color:  #999;
+        }
+
+		header {
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			color: white;
+			text-align: center;
+			font-size: 50px;
+			border-bottom: 0.2rem solid black;
+			font-family: cursive;
+		}
+
+        .cat {
+            position: relative;
+            width: 200px;
+            height: 400px;
+        }
+
+        /* Quadrados */
+        .square {
+            position: absolute;
+            width: 50px;
+            height: 50px;   
+        }
+
+        .square.orange {
+            background-color: orange;
+            top: 140px;
+            left: 80px;
+            transform: rotate(45deg);
+        }
+
+        .square.pink {
+            background-color: pink;
+            top: 80px;
+            left: 30px;
+            transform: rotate(45deg);
+        }
+
+        .square.purple {
+            background-color: purple;
+            top: 80px;
+            left: 130px;
+            transform: rotate(45deg);
+        }
+
+        /* Triângulos */
+        .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .triangle.yellow {
+            border-width: 0 50px 87px 50px;
+            border-color: transparent transparent yellow transparent;
+            top: 200px;
+            left: 55px;
+        }
+
+        .triangle.teal {
+            border-width: 0 50px 87px 50px;
+            border-color: transparent transparent teal transparent;
+            top: 140px;
+            left: 200px;
+            transform: rotate(180deg);
+        }
+
+        .triangle.red {
+            border-width: 87px 50px 0 50px;
+            border-color: red transparent transparent transparent;
+            top: 290px;
+            left: 55px;
+        }
+
+        .triangle.green {
+            border-width: 87px 50px 0 50px;
+            border-color: green transparent transparent transparent;
+            top: 140px;
+            right: 200px;
+        }
