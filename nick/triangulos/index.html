@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: #113847; /* Céu azul */
+    }
+
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 20%;
+      background-color: #228B22; /* Cor do chão (grama) */
+    }
+
+    .tree {
+      position: relative;
+      margin: 0 auto;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid #006400; /* Folhagem verde escura */
+    }
+
+    .trunk {
+      position: absolute;
+      top: 100px;
+      left: -25px;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 100px solid #8B4513; /* Tronco triangular marrom */
+    }
+
+    .tree-container {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      bottom: 30%; /* Assegura que as árvores fiquem em cima da grama */
+      width: 100%;
+    }
+
+    /* Passarinho em formato triangular */
+    .bird {
+      position: absolute;
+      top: 10%; /* Altura inicial do pássaro */
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid black; /* Asa esquerda */
+      transform: rotate(-20deg);
+    }
+
+    .bird::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid black; /* Asa direita */
+      transform: rotate(40deg);
+    }
+
+    /* Estilos para passarinho 2 */
+    .bird2 {
+      position: absolute;
+      top: 15%; /* Altura inicial do segundo pássaro */
+      left: 40%;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid black; /* Asa esquerda */
+      transform: rotate(-20deg);
+    }
+
+    .bird2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid black; /* Asa direita */
+      transform: rotate(40deg);
+    }
+
+    /* Estilos para passarinho 3 */
+    .bird3 {
+      position: absolute;
+      top: 12%; /* Altura inicial do terceiro pássaro */
+      left: 60%;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid black; /* Asa esquerda */
+      transform: rotate(-20deg);
+    }
+
+    .bird3::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid black; /* Asa direita */
+      transform: rotate(40deg);
+    }
+  </style>
+  <title>triangulos</title>
+</head>
+<body>
+
+  <div class="scene">
+    <div class="tree-container">
+      <div class="tree">
+        <div class="trunk"></div>
+      </div>
+      <div class="tree">
+        <div class="trunk"></div>
+      </div>
+      <div class="tree">
+        <div class="trunk"></div>
+      </div>
+      <div class="tree">
+        <div class="trunk"></div>
+      </div>
+      <div class="tree">
+        <div class="trunk"></div>
+      </div>
+    </div>
+    <div class="ground"></div>
+
+    <!-- Passarinhos -->
+    <div class="bird"></div>
+    <div class="bird2"></div>
+    <div class="bird3"></div>
+
+  </div>
+
+</body>
+</html>
