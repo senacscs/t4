@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3d6ea5;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgb(83, 47, 122);
+    transform-origin: 50% 100%;
+}
+
+.triangle1 {
+    transform: rotate(0deg); /* Triângulo superior */
+    top: 0;
+    left: -400px;
+}
+
+.triangle2 {
+    transform: rotate(72deg); /* Rotação de 72 graus */
+    top: 0;
+    left: -400px;
+}
+
+.triangle3 {
+    transform: rotate(144deg); /* Rotação de 144 graus */
+    top: 0;
+    left: -400px;
+}
+
+.triangle4 {
+    transform: rotate(216deg); /* Rotação de 216 graus */
+    top: 0;
+    left: -400px;
+}
+
+.triangle5 {
+    transform: rotate(288deg); /* Rotação de 288 graus */
+    top: 0;
+    left: -400px;
+}
+
+.triangle6 {
+    transform: rotate(0deg); /* Triângulo superior */
+    top: 0;
+    left: 450px;
+}
+
+.triangle7 {
+    transform: rotate(72deg); /* Rotação de 72 graus */
+    top: 0;
+    left: 450px;
+}
+
+.triangle8 {
+    transform: rotate(144deg); /* Rotação de 144 graus */
+    top: 0;
+    left: 450px;
+}
+
+.triangle9 {
+    transform: rotate(216deg); /* Rotação de 216 graus */
+    top: 0;
+    left: 450px;
+}
+
+.triangle10 {
+    transform: rotate(288deg); /* Rotação de 288 graus */
+    top: 0;
+    left: 450px;
+}
