@@ -4,22 +4,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+p{
+color: whitesmoke;
+font-size:xx-large;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
  
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #6e7dff, #4b90e1); /* Gradiente suave de azul */
+  background: linear-gradient(135deg, #290202, #000000); /* Gradiente suave de azul */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 20px;
+  margin: 50px;
 }
  
 .container {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
-  gap: 20px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
   transform: rotate(45deg); /* Rotaciona a grade para criar um padrão mais dinâmico */
@@ -50,7 +55,7 @@ body {
 #triangulo-para-direita {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 50px solid #34d399; /* Tom verde */
+  border-left: 50px solid #8934d3; /* Tom verde */
 }
  
 /* Triângulo para baixo */
@@ -64,12 +69,12 @@ body {
 #triangulo-para-esquerda {
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-right: 50px solid #4b0557; /* Azul */
+  border-right: 50px solid #8e439b; /* Azul */
 }
  
 /* Triângulo adicional (para adicionar dinamismo) */
 #triangulo-para-esquerda:nth-child(5) {
-  border-right: 50px solid #7d137f; /* Rosa */
+  border-right: 50px solid #3cb0c4; /* Rosa */
 }
  
 #triangulo-para-direita:nth-child(6) {
