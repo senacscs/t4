@@ -30,7 +30,7 @@ body {
 
         .triangulo2 {
             border-width: 100px 0 0 100px;
-            border-color: transparent transparent transparent #eeff00;
+            border-color: transparent transparent transparent #fffc62;
             top: 0;
             left: 100px;
             transform: rotate(45deg);
