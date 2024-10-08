@@ -59,6 +59,8 @@
     left: 10px;
   }
 
+  /*Início Dos Blocos*/
+
   .blocos-olamundo {
     position: relative;
     left: 475px;
@@ -253,6 +255,22 @@
     box-shadow: 0 0 10px 0 white;
     max-width: 350px;
   }
+  
+  .blocos-triangulos {
+    position: relative;
+    left: 475px;
+    bottom: 1225px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+  }
+
+  /*Fim Dos Blocos*/
 
   .content {
     position: relative;
