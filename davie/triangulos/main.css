@@ -1,0 +1,84 @@
+body {
+  background-image: url(triangulos.avif);
+  background-size: cover;
+}
+.triangulo-para-cima {
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #5386E4;
+  margin-left: 600px;
+  margin-top: 30px;
+}
+
+.triangulo-para-cima1 {
+  rotate: 30deg;
+  margin-left: 660px;
+  margin-top: 5px;
+}
+
+.triangulo-para-cima2 {
+  rotate: 90deg;
+  margin-top: 30px;
+  margin-left: 700px;
+}
+
+.triangulo-para-cima3 {
+  rotate: -30deg;
+  margin-left: 540px;
+  position: absolute;
+  margin-top: 1px;
+}
+
+.triangulo-para-cima4 {
+  rotate: -90deg;
+  margin-left: 500px;
+  /* margin-top: 1px; */
+  position: absolute;
+}
+
+.triangulo-para-cima5 {
+  rotate: -120deg;
+  margin-left: 530px;
+  position: absolute;
+  margin-top: 40px;
+}
+
+.triangulo-para-cima6 {
+  rotate: 120deg;
+  margin-left: 675px;
+  margin-top: 45px;
+}
+
+.triangulo-para-cima7 {
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #5386E4;
+  margin-left: 600px;
+  margin-top: 10px;
+  rotate: -180deg;
+}
+#triangulo-para-direita {
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid #4C4B63;
+}
+#triangulo-para-baixo {
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #949396;
+}
+#triangulo-para-esquerda {
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent; 
+  border-right:25px solid #ABA8B2; 
+}
