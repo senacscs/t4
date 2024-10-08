@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #87CEEB; 
+}
+
+.sol {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD700; 
+    border-radius: 00%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.montanha {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid #8B4513; 
+    position: relative;
+    margin: 0 10px;
+}
+
+.montanha:nth-child(2) {
+    border-bottom-color: #A0522D; 
+}
+
+.montanha:nth-child(3) {
+    border-bottom-color: #CD853F; 
+}
+
+
+.nuvem {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid white; 
+    position: absolute;
+    margin: 0 10px;
+}
+
+.nuvem:nth-child(5) {
+    top: 70px; 
+    center: 200px;
+}
+
+.nuvem:nth-child(6) {
+    top: 80px; 
+    left: 300px;
+}
+
+.nuvem:nth-child(7) {
+    top: 60px; 
+    right: 150px;
+}
+
+.nuvem:nth-child(8) {
+    top: 90px; 
+    left: 250px;
+}
+
+.nuvem:nth-child(9) {
+    top: 50px; 
+    left: 350px;
+}
+
+
+.nuvem:nth-child(10) {
+    top: 40px;
+    right: 100px;
+}
+
+.nuvem:nth-child(11) {
+    top: 110px; 
+    center: 280px;
+}
+
+.nuvem:nth-child(12) {
+    top: 30px; 
+    right: 400px;
+}
+
+.nuvem:ntn-child(13) {
+    top: 30px;
+    right: 300px;
+}
+
+
