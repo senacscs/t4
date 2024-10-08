@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define altura de 100% da viewport */
+    margin: 0; /* Remove margens do body */
+    flex-direction: column; /* Organiza em coluna */
+  }
+
+  h2 {
+    margin-top: -20px; /* Adjust this value as needed */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente os triângulos para cima */
+  }
+  
+  .container-down {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Diminui o espaçamento superior */
+    position: absolute;
+  }
+  
+  
+  .triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #555;
+}
+    
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #ff4b4b;
+  }
+  
