@@ -1,0 +1,88 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(mar.jpg);
+            background-repeat: no-repeat;
+        }
+        .tangram {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .triangulo {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .triangulo1 {
+            border-width: 100px 100px 0 0;
+            border-color: #0062ff transparent transparent transparent;
+            top: 0;
+            left: 0;
+            transform: rotate(45deg);
+        }
+
+        .triangulo2 {
+            border-width: 100px 0 0 100px;
+            border-color: transparent transparent transparent #eeff00;
+            top: 0;
+            left: 100px;
+            transform: rotate(45deg);
+        }
+        .olho {
+            height: 10;
+            border-left: 40px transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 50px solid black;
+            position:relative;
+            margin: -20px auto;
+            z-index: 2;
+            margin-right: 30px;
+      }
+        .triangulo3 {
+            border-width: 50px 50px 0 0;
+            border-color: #0000ff transparent transparent transparent;
+            top: 100px;
+            left: 0;
+            transform: rotate(45deg);
+        }
+
+        .triangulo4 {
+            border-width: 50px 0 0 50px;
+            border-color: transparent transparent transparent #ffff00;
+            top: 100px;
+            left: 50px;
+            transform: rotate(45deg);
+        }
+
+        .triangulo5 {
+            border-width: 50px 50px 0 0;
+            border-color: #0033ff transparent transparent transparent;
+            top: 150px;
+            left: 50px;
+            transform: rotate(45deg);
+        }
+
+        .triangulo6 {
+            border-width: 50px 0 0 50px;
+            border-color: transparent transparent transparent #fff200;
+            top: 150px;
+            left: 100px;
+            transform: rotate(45deg);
+        }
+
+        .quadrado {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff9900;
+            top: 100px;
+            left: 100px;
+            transform: rotate(45deg);
+        }
