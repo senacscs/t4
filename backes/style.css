@@ -91,13 +91,7 @@ nav a i {
 }
 
 /* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
-}
+
 
 footer p {
     font-size: 1rem;
