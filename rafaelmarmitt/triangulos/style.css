@@ -1,0 +1,102 @@
+
+
+body {  
+    background-color: rgb(13, 8, 28);
+}
+
+div {
+    display: inline-block;
+}
+
+.folha {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid green;
+    border-top-left-radius:   
+   100px;
+    border-top-right-radius: 100px;
+    margin: 0;
+    padding: 0;
+
+  }
+
+.tronco {
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid brown;
+        border-top-left-radius:   
+       25px;
+        border-top-right-radius: 25px;
+        margin: 0;
+        padding: 0;
+        padding-left: 150.5px;
+
+      }
+.chao {
+    background-color: green;
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.grama {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid rgb(12, 109, 12) ;
+        border-top-left-radius:   
+       20px;
+        border-top-right-radius: 20px;
+      }
+
+.grama1 {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid rgb(4, 64, 4) ;
+        border-top-left-radius:   
+       20px;
+        border-top-right-radius: 20px;
+      }
+
+      .lago {
+        background-color: rgb(38, 146, 168);
+        display: inline-block;
+      }
+
+
+.agua      {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid rgb(10, 89, 105) ;
+        border-top-left-radius:   
+       20px;
+        border-top-right-radius: 20px;
+        margin: 0;
+        padding: 0;
+        /* max-width: 98%; */
+      }
+      
+ .agua1 {
+    border-bottom: 30px solid rgb(0, 120, 145) ;
+
+
+ }     
+
+.chao1 {
+        background-color: green;
+        display: inline-block;
+        /* max-width: 99%; */
+
+    }
+
