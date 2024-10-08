@@ -1,0 +1,92 @@
+.tangram {
+    margin: 30px 0 0 30px;
+    position: relative;
+    background-color: #74AC2D;
+  }
+  
+  .tangram--cat .triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  
+  .tangram--cat .triangle--pink {
+    border-left: 50px solid #EC5799;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+  }
+  
+  .tangram--cat .triangle--purple {
+    border-left: 50px solid #A91B65;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    -moz-transform: translate(52px, 0) rotate(180deg);
+    -o-transform: translate(52px, 0) rotate(180deg);
+    -ms-transform: translate(52px, 0) rotate(180deg);
+    -webkit-transform: translate(52px, 0) rotate(180deg);
+    transform: translate(52px, 0) rotate(180deg);
+  }
+  
+  .tangram--cat .triangle--turquoise {
+    border-left: 70px solid #1BA293;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    -moz-transform: translate(10px, 132px) rotate(180deg);
+    -o-transform: translate(10px, 132px) rotate(180deg);
+    -ms-transform: translate(10px, 132px) rotate(180deg);
+    -webkit-transform: translate(10px, 132px) rotate(180deg);
+    transform: translate(10px, 132px) rotate(180deg);
+  }
+  
+  .tangram--cat .triangle--yellow {
+    border-left: 100px solid #FBC002;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    -moz-transform: translate(85px, 132px);
+    -o-transform: translate(85px, 132px);
+    -ms-transform: translate(85px, 132px);
+    -webkit-transform: translate(85px, 132px);
+    transform: translate(85px, 132px);
+  }
+  
+  .tangram--cat .triangle--red {
+    border-left: 100px solid #E91A24;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    -moz-transform: translate(100px, 245px) rotate(45deg);
+    -o-transform: translate(100px, 245px) rotate(45deg);
+    -ms-transform: translate(100px, 245px) rotate(45deg);
+    -webkit-transform: translate(100px, 245px) rotate(45deg);
+    transform: translate(100px, 245px) rotate(45deg);
+  }
+  
+  .tangram--cat .square {
+    position: absolute;
+  }
+  
+  .tangram--cat .square--orange {
+    background-color: #F48400;
+    width: 70px;
+    height: 70px;
+    -moz-transform: translate(16px, 70px) rotate(45deg);
+    -o-transform: translate(16px, 70px) rotate(45deg);
+    -ms-transform: translate(16px, 70px) rotate(45deg);
+    -webkit-transform: translate(16px, 70px) rotate(45deg);
+    transform: translate(16px, 70px) rotate(45deg);
+  }
+  
+  .tangram--cat .parallelogram {
+    position: absolute;
+  }
+  
+  .tangram--cat .parallelogram--green {
+    background-color: #74AC2D;
+    width: 64px;
+    height: 70px;
+    -moz-transform: translate(222px, 310px) skew(-45deg);
+    -o-transform: translate(222px, 310px) skew(-45deg);
+    -ms-transform: translate(222px, 310px) skew(-45deg);
+    -webkit-transform: translate(222px, 310px) skew(-45deg);
+    transform: translate(222px, 310px) skew(-45deg);
+  }
+  
