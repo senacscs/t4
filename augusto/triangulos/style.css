@@ -1,0 +1,23 @@
+body{
+    background: linear-gradient(10000deg, rgb(206, 0, 0), rgb(99, 0, 0));
+}
+.triangulo{
+  width: 0;
+  height: 0;
+  
+  border: 80px solid transparent;
+  border-left-color: steelblue;
+  
+  border: 80px solid;
+  border-color: tomato steelblue transparent seagreen;
+  margin: 3em auto;
+}
+
+.triangulo3{
+  width: 0;
+  height: 0;
+  border-top: 60px solid teal;
+  border-right: 80px solid transparent;
+  border-left: 80px solid transparent;
+  margin: 3em auto 
+} 
