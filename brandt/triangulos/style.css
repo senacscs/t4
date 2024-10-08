@@ -1,0 +1,217 @@
+body {
+    background-color: #597a46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+  
+.fox {
+    width: 200px;
+    height: 150px;
+    position: relative;
+}
+  
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.head-one {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #e87d12;
+    border-top: 0px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.head-two {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 50px solid #ed8d2c;
+    border-bottom: 70px solid transparent;
+    position: absolute;
+    bottom: 59px;
+    left: 100px;
+}
+
+.head-three {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-left: 50px solid #ca6907;
+    border-bottom: 70px solid transparent;
+    position: absolute;
+    bottom: 59px;
+    right: 100px;
+}
+
+.head-out-one {
+    width: 0;
+    height: 0;
+    border-left: 25px solid #597a46;
+	border-top: 5px solid transparent;
+	border-bottom: 25px solid transparent;
+    border-right: 0px;
+    position: absolute;
+    bottom: 57px;
+    right: 130px;
+    rotate: 270deg;
+}
+
+.head-out-two {
+    width: 0;
+    height: 0;
+    border-left: 25px solid #597a46;
+	border-top: 5px solid transparent;
+	border-bottom: 25px solid transparent;
+    border-right: 0px;
+    position: absolute;
+    bottom: 47px;
+    left: 135px;
+    rotate: 47deg;
+}
+
+.ear-left {
+    width: 0;
+    height: 0;
+    border-left: 40px solid #ab601b;
+    border-top: 30px solid transparent;;
+    border-bottom: 0px solid transparent;
+    border-right: 0px;
+    position: absolute;
+    left: 55px;
+    bottom: 125px;
+}
+  
+.ear-right {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 30px solid #ab601b;
+    border-top: 0px;
+    position: absolute;
+    right: 55px;
+    bottom: 125px;
+}
+
+.eye-left {
+    width: 0;
+    height: 0;
+    border-left: 10px solid #d9d9d9;
+    border-right: 10px solid #1d4408;
+    border-bottom: 15px solid #442608;
+    position: absolute;
+    top: 45px;
+    left: 60px;
+}
+  
+.eye-right {
+    width: 0;
+    height: 0;
+    border-left: 10px solid #1d4408;
+    border-right: 10px solid #d9d9d9;
+    border-bottom: 15px solid #442608;
+    position: absolute;
+    top: 45px;
+    right: 60px;
+}
+
+.head-detail {
+    width: 0;
+	height: 0;
+    border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 30px solid #dcdcdc;
+    position: absolute;
+    top: 60px;
+    left: 75px;
+}
+  
+.nose {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 15px solid #202020;
+    border-bottom: 0px;
+    position: absolute;
+    top: 60px;
+    left: 90px;
+}
+
+.body-one {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #e87d12;
+    border-top: 0px;
+    position: absolute;
+    top: 90px;
+    left: 50px;
+}
+
+/* .tail {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid #e87d12;
+    position: absolute;
+    top: 140px;
+    left: 100px;
+  }
+
+.leg-front-left {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #e87d12;
+    position: absolute;
+    top: 120px;
+    left: 30px;
+}
+  
+.leg-front-right {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #e87d12;
+    position: absolute;
+    top: 120px;
+    right: 30px;
+}
+  
+.leg-back-left {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #e87d12;
+    position: absolute;
+    top: 150px;
+    left: 40px;
+}
+  
+.leg-back-right {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #e87d12;
+    position: absolute;
+    top: 150px;
+    right: 40px;
+} */
