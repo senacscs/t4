@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte o boneco!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">  
+        <div class="cabeca">
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t1"></div>
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t2"></div>
+        </div>
+        <div class="barriga">
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t3"></div>
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t4"></div>
+        </div>  
+        <div class="braco">
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t6"></div>
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t7"></div>
+        </div>
+        <div class="perna">
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t8"></div>
+            <div draggable="true" ondragstart="drag(event)" class="triangulo" id="t5"></div>
+        </div>
+    </div>
+    <div class="sla">
+        <img src="homi.jpeg" alt="imagem de exemplo">
+    </div>
+
+        <script>
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        document.querySelectorAll('.container').forEach(container => {
+            container.addEventListener('dragover', function (event) {
+                event.preventDefault();
+            });
+
+            container.addEventListener('drop', function (event) {
+                event.preventDefault();
+                const id = event.dataTransfer.getData("text");
+                const element = document.getElementById(id);
+                const offsetX = event.clientX - element.offsetWidth / 2;
+                const offsetY = event.clientY - element.offsetHeight / 2;
+                element.style.position = 'absolute';
+                element.style.left = offsetX + 'px';
+                element.style.top = offsetY + 'px';
+            });
+        });</script>
+</body>
+</html>
+
