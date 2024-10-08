@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+    background-color: #f0f0f0;
+}
+
+.ala {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid;
+    transform-origin: 50% 100%;
+}
+
+.triangle1 {
+    top: 0;
+    left: 50px;
+	color:rgb(49, 226, 43);
+}
+
+.triangle2 {
+    transform: rotate(72deg);
+    top: 0;
+    left: 50px;
+	color:rgb(86, 7, 160);
+}
+
+.triangle3 {
+    transform: rotate(144deg);
+    top: 0;
+    left: 50px;
+	color:rgb(95, 3, 77);
+}
+
+.triangle4 {
+    transform: rotate(216deg);
+    top: 0;
+    left: 50px;
+	color:rgb(22, 63, 38);
+}
+
+.triangle5 {
+    transform: rotate(288deg);
+    top: 0;
+    left: 50px;
+	color:rgb(75, 95, 3);
+}
