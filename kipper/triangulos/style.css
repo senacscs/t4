@@ -1,0 +1,49 @@
+@keyframes colorChangePlatinum {
+    0%{fill:#011640}
+    11%{fill:#011640}
+    22%{fill: #0468BF}
+    33%{fill: #0468BF}
+    44%{fill: #0468BF}
+    55%{fill: #0487D9}
+    66%{fill: #0487D9}
+    77%{fill: #0487D9}
+    88%{fill: #0468BF}
+    100%{fill: #011640}
+}
+@keyframes colorChangeGold {
+    0%{fill: #0468BF}
+    11%{fill:#0468BF}
+    22%{fill: #0487D9}
+    33%{fill: #0487D9}
+    44%{fill: #0487D9}
+    55%{fill: #011640}
+    66%{fill: #011640}
+    77%{fill: #011640}
+    88%{fill: #0487D9}
+    100%{fill: #0468BF}
+}
+@keyframes colorChangeRose {
+    0%{fill:#0468BF}
+    11%{fill:#0468BF}
+    22%{fill: #0487D9}
+    33%{fill: #0487D9}
+    44%{fill: #0487D9}
+    55%{fill: #0468BF}
+    66%{fill: #011640}
+    77%{fill: #011640}
+    88%{fill: #011640}
+    100%{fill: #0468BF}
+}
+.start_animation .platinum {
+    animation: colorChangePlatinum 9s infinite;
+}
+.start_animation .gold {
+    animation: colorChangeGold 9s infinite;
+}
+.start_animation .rose {
+    animation: colorChangeRose 9s infinite;
+}
+
+defs a path {
+    z-index: 1000;
+}
