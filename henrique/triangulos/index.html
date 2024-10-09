@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paisagem</title>
+    <title>Triângulos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,17 +18,32 @@
     </div>
 <script>
     const snowflakesContainer = document.querySelector('.snowflakes');
-    
-    for (let i = 0; i < 50; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.style.left = Math.random() * 100 + 'vw'; // Posição aleatória na horizontal
-        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Duração aleatória
-        snowflake.style.animationDelay = Math.random() * 5 + 's'; // Atraso aleatório
-        snowflake.style.opacity = Math.random(); // Opacidade aleatória
-        snowflake.style.setProperty('--i', i);
-        snowflakesContainer.appendChild(snowflake);
-    }
+
+for (let i = 0; i < 50; i++) {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    snowflake.style.left = Math.random() * 100 + 'vw'; 
+    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; 
+    snowflake.style.animationDelay = Math.random() * 5 + 's'; 
+    snowflake.style.opacity = Math.random(); 
+
+    const size = Math.random() * 15 + 10; 
+    snowflake.style.width = size + 'px';
+    snowflake.style.height = size + 'px';
+
+    snowflake.style.transform = 'translateY(-100px)'; 
+
+    snowflake.style.setProperty('--i', i);
+    snowflakesContainer.appendChild(snowflake);
+}
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const mountains = document.querySelectorAll('.mountain');
+    mountains.forEach(mountain => {
+        mountain.style.animation = 'snowCap 20s forwards'; 
+    });
+});
+
 </script>
 </body>
 </html>
