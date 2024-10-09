@@ -1,7 +1,12 @@
+body{
+  background-color: #b9dd89;
+  overflow: hidden;
+}
+
 .tangram {
     margin: 30px 0 0 30px;
     position: relative;
-    background-color: #74AC2D;
+    background-color: #93f315;
   }
   
   .tangram--cat .triangle {
@@ -11,13 +16,13 @@
   }
   
   .tangram--cat .triangle--pink {
-    border-left: 50px solid #EC5799;
+    border-left: 50px solid #9400D3;
     border-top: 50px solid transparent;
     border-bottom: 50px solid transparent;
   }
   
   .tangram--cat .triangle--purple {
-    border-left: 50px solid #A91B65;
+    border-left: 50px solid #9932CC;
     border-top: 50px solid transparent;
     border-bottom: 50px solid transparent;
     -moz-transform: translate(52px, 0) rotate(180deg);
@@ -28,7 +33,7 @@
   }
   
   .tangram--cat .triangle--turquoise {
-    border-left: 70px solid #1BA293;
+    border-left: 70px solid #A020F0;
     border-top: 70px solid transparent;
     border-bottom: 70px solid transparent;
     -moz-transform: translate(10px, 132px) rotate(180deg);
@@ -39,7 +44,7 @@
   }
   
   .tangram--cat .triangle--yellow {
-    border-left: 100px solid #FBC002;
+    border-left: 100px solid #8B008B;
     border-top: 100px solid transparent;
     border-bottom: 100px solid transparent;
     -moz-transform: translate(85px, 132px);
@@ -50,7 +55,7 @@
   }
   
   .tangram--cat .triangle--red {
-    border-left: 100px solid #E91A24;
+    border-left: 100px solid #8A2BE2;
     border-top: 100px solid transparent;
     border-bottom: 100px solid transparent;
     -moz-transform: translate(100px, 245px) rotate(45deg);
@@ -65,7 +70,7 @@
   }
   
   .tangram--cat .square--orange {
-    background-color: #F48400;
+    background-color: #538b53e5;
     width: 70px;
     height: 70px;
     -moz-transform: translate(16px, 70px) rotate(45deg);
@@ -80,7 +85,7 @@
   }
   
   .tangram--cat .parallelogram--green {
-    background-color: #74AC2D;
+    background-color: #6b7e52;
     width: 64px;
     height: 70px;
     -moz-transform: translate(222px, 310px) skew(-45deg);
@@ -88,5 +93,13 @@
     -ms-transform: translate(222px, 310px) skew(-45deg);
     -webkit-transform: translate(222px, 310px) skew(-45deg);
     transform: translate(222px, 310px) skew(-45deg);
+}
+
+
+  .center {
+    display: flex; /* Adiciona flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Define a altura do contêiner */
+    margin-top: 80px;
   }
-  
+
