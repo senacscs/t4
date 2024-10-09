@@ -1,3 +1,5 @@
+/* aparencia tela grande */
+@media (min-width: 1200px) {
 .principal {
   background-image: url("https://professorpinguim.com.br/blog/wp-content/uploads/2021/03/reflex%C3%A3o-da-luz-em-espelhos-esf%C3%A9ricos-scaled.jpg");
   background-size:cover;
@@ -75,9 +77,6 @@
   box-shadow: 0px 0px 90px 60px rgba(255, 148, 34, 0.5);
   }
 
-  /* .a:hover{  /*<----isso é uma class */
-    /* background-color:orange ; 
-    } */
   
   .piscar{
     animation: piscar 3s infinite;
@@ -105,4 +104,123 @@
     align-items: center;
     height: 50vh;
     width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+    /* aparencia telas pequenas */
+    @media (max-width: 1199px) {
+      .principal {
+        background-image: url("https://cdn.pixabay.com/photo/2024/05/08/13/58/letter-8748382_1280.png");
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+      
+      @keyframes piscar{
+        0% { color: rgb(255, 151, 33); }
+        50% { color: rgb(143, 253, 240); }
+        100% { color: rgb(255, 84, 72); }
+      }
+      
+      @keyframes poema{
+        0% { color: rgb(0, 0, 0); }
+      }
+      
+      #poema {
+          font-family: serif;
+          font-size: 20px;
+          text-align: center;
+          animation: poema 3.6s infinite;
+          /* background-color: rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.0);
+          border: 2px solid #000000;
+          border-radius: 5px; */
+        }
+      
+        #playButton{
+          color: #000000;
+          text-align: center;
+          display: inline-block;
+          padding: 2px 5px;
+          font-size: 16px;
+          color: black;
+          background-color: #ff7e7e;
+          border: 2px solid #000000;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          margin-left:1155px;
+          /* width: 0px; */
+        }
+      
+        section div{
+          background-color:rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.0); 
+          width: 100px;
+          align-items: center;
+        }
+      
+        h1{
+          text-align: center;
+          height: 0px;
+          padding-top: 60px;
+        }
+      
+        ul li{
+          display: inline;
+          margin: 0 3em;
+          text-align: center;
+        }
+      
+        .a{
+          animation: poema 2.5s infinite;
+        }
+      
+        button:hover{
+          background-color:orange ;
+          color: #ffffff;
+          box-shadow: 0px 0px 50px 100px rgba(255, 148, 34, 0.5);
+          }
+      
+        a:hover{
+        background-color:orange ;
+        color: #ffffff;
+        box-shadow: 0px 0px 90px 60px rgba(255, 148, 34, 0.5);
+        }
+      
+        
+        .piscar{
+          animation: piscar 3s infinite;
+        }
+      
+        .voltar{
+          color: #000000;
+          text-align: center;
+          display: inline-block;
+          padding: 2px 25px;
+          font-size: 16px;
+          color: black;
+          background-color: #ff7e7e;
+          border: 2px solid #000000;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          margin-left:1155px;
+          /* width: 0px; */
+        }
+      
+        .conteiner{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50vh;
+          width: 100%;
+          }
     }
