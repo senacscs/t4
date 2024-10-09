@@ -1,0 +1,250 @@
+img{
+  display: inline-block;
+  margin-top: -100px;
+  margin-left: 400;
+}
+
+.gato {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    align-items: center;
+    /* margin-left: 100px; */
+}
+.triangulo {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+}
+.triangulo-cima {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgb(81, 165, 255);
+  }
+
+.olhos{
+  justify-content: space-between;
+
+  width: 1000px;;
+}
+
+.rabo {
+  position: absolute;
+  margin-left:100px;
+  margin-top: -50px;
+}
+  
+  .triangulo-baixo {
+    width: 0;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-top: 100px solid rgb(81, 165, 255);
+  }
+  
+  .triangulo-esquerda {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 60px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 100px solid rgb(81, 165, 255);
+  }
+
+  /* .triangulo-esquerda2 {
+    width: 0;
+    height: 0;
+    border-top: 90px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 700px solid #007bff;
+
+  } */
+  
+  .triangulo-direita {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 60px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px solid black;
+  }
+
+  /* .triangulo-direita2 {
+    width: 0;
+    height: 0;
+    border-top: 160px solid transparent;
+    border-bottom: 150px solid transparent;
+    border-left:550px solid #007bff;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -210px;
+  
+  } */
+
+  .triangulo-equilatero-rabo {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -60px;
+    border-left: 100px solid transparent;
+    border-right: 320px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+    position: absolute;
+    margin-left: 110px;
+    margin-top: -0px;
+  }
+  
+  .triangulo-equilatero {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -60px;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero1 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero2 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero3 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 165px solid transparent;
+    border-right: 165px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero4 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 170px solid transparent;
+    border-right: 170px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero5 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero6 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 155px solid transparent;
+    border-right: 155px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero7 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero8 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero9 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 185px solid transparent;
+    border-right: 185px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero10 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 190px solid transparent;
+    border-right: 190px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero11 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 195px solid transparent;
+    border-right: 195px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero12 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero13 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 205px solid transparent;
+    border-right: 205px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
+  .triangulo-equilatero14 {
+    width: 0;
+    height: 0;
+    margin: -50px;
+    margin-top: -90px;
+    border-left: 210px solid transparent;
+    border-right: 210px solid transparent;
+    border-bottom: 96.6px solid black; /* Altura = (Lado * sqrt(3)) / 2 */
+  }
+  
