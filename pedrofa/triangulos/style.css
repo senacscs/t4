@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.raboum {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #c8ad57;
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 50px;
+    /* Aumentado de 0 para 50 */
+    left: 250px;
+}
+
+.rabodois {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid #f2e49b;
+    transform: rotate(deg);
+    position: absolute;
+    bottom: 50px;
+    /* Aumentado de 0 para 50 */
+    left: 300px;
+}
+
+.perna {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 90px solid #c8ad57;
+    transform: rotate(deg);
+    position: absolute;
+    /* Aumentado de 60 para 100 */
+    top: 455px;
+    left: 400px;
+}
+
+.corpoum {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 120px solid #f2e49b;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 385px;
+    left: 360px;
+}
+
+.corpodois {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 120px solid #c8ad57;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 285px;
+    /* Aumentado de 120 para 160 */
+    left: 360px;
+}
+
+.vermelho {
+    border-left: 60px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 50px solid #e27474;
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 300px;
+    /* Aumentado de 200 para 240 */
+    left: 420px;
+}
+
+.cabeca {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #f2e49b;
+    transform: rotate(deg);
+    position: absolute;
+    bottom: 350px;
+    /* Aumentado de 220 para 260 */
+    left: 420px;
+}
+
+.oreiaum {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #c8ad57;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 375px;
+    /* Aumentado de 280 para 320 */
+    left: 395px;
+}
+
+.oireiadois {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #c8ad57;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 375px;
+    /* Aumentado de 280 para 320 */
+    left: 444px;
+}
