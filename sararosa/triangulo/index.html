@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Abstrata</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:  #029756c3;
+            margin: 0;
+        }
+        .art {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-style: solid;
+        }
+        .triangle1 {
+            border-width: 0 150px 150px 0;
+            border-color: transparent #febe0f transparent transparent;
+            top: 0;
+            left: 0;
+        }
+        .triangle2 {
+            border-width: 150px 0 0 150px;
+            border-color: transparent transparent transparent #ffa4bf;
+            top: 0;
+            right: 0;
+        }
+        .triangle3 {
+            border-width: 150px 150px 0 0;
+            border-color: #fe6622 transparent transparent transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .triangle4 {
+            border-width: 0 0 150px 150px;
+            border-color: transparent transparent #4580b2 transparent;
+            bottom: 0;
+            right: 0;
+        }
+        .triangle5 {
+            border-width: 75px 75px 0 0;
+            border-color: #a166aa transparent transparent transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="art">
+        <div class="triangle triangle1"></div>
+        <div class="triangle triangle2"></div>
+        <div class="triangle triangle3"></div>
+        <div class="triangle triangle4"></div>
+        <div class="triangle triangle5"></div>
+    </div>
+</body>
+</html>
