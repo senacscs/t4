@@ -112,6 +112,7 @@ let TRABALHOS = [
             { nome: "4-1: SLAVES TO POWER", url: "jogo1", img: "egito.jpg" },
             { nome: "polia", url: "tecnologiamat", img: "polia.bmp" },
             { nome: "DA VINKI?", url: "pontedavinci", img: "davinki.jpg" },
+            { nome: "TRIÂNGULO = ILUMINATTI?!?!?!?!", url: "triangulos", img: "iluminatti.jpg" },
         ]
     },
     {
