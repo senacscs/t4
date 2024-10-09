@@ -1,0 +1,77 @@
+/* Reset de margens e preenchimento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6e7dff, #4b90e1); /* Gradiente suave de azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg); /* Rotaciona a grade para criar um padrão mais dinâmico */
+}
+
+.triangulo {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover com animação */
+.triangulo:hover {
+  transform: scale(1.2) rotate(10deg);
+  opacity: 0.9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidade */
+}
+
+/* Triângulo para cima */
+#triangulo-para-cima {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #ff6347; /* Tom laranja */
+}
+
+/* Triângulo para a direita */
+#triangulo-para-direita {
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #34d399; /* Tom verde */
+}
+
+/* Triângulo para baixo */
+#triangulo-para-baixo {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #ffcc00; /* Amarelo vibrante */
+}
+
+/* Triângulo para a esquerda */
+#triangulo-para-esquerda {
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 50px solid #1e90ff; /* Azul */
+}
+
+/* Triângulo adicional (para adicionar dinamismo) */
+#triangulo-para-esquerda:nth-child(5) {
+  border-right: 50px solid #ff69b4; /* Rosa */
+}
+
+#triangulo-para-direita:nth-child(6) {
+  border-left: 50px solid #ffd700; /* Dourado */
+}
