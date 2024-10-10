@@ -21,3 +21,13 @@
 		escreva("\nA divisão dos números é igual a: ", div, "\n") 	// Exibe o resultado da divisão
 	} 
 } */
+
+   function conta() {
+	let input = parseInt(document.getElementById("input").value);
+	let input2 = parseInt(document.getElementById("inputdois").value);
+
+	document.writeln("soma: " + (input+input2) );
+	document.writeln("subtração: " + (input-input2) );
+	document.writeln("multiplicação: " + (input*input2) );
+	document.writeln("divisão: " + (input/input2) );
+   }
