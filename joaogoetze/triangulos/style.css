@@ -70,7 +70,7 @@ img{
     display: inline-block;
     border-top: 60px solid transparent;
     border-bottom: 50px solid transparent;
-    border-left: 100px solid black;
+    border-left: 100px solid rgb(81, 165, 255);
   }
 
   /* .triangulo-direita2 {
