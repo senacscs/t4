@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KonMari na Vida Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let currentCardIndex = 0;
+        let cards;
+
+        function scrollCards(direction) {
+            if (direction === 'next') {
+                currentCardIndex = (currentCardIndex + 1) % cards.length;
+            } else if (direction === 'prev') {
+                currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length;
+            }
+            document.querySelector('.container').style.transform = `translateX(-${currentCardIndex * 320}px)`;
+        }
+
+        function autoScroll() {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: document.querySelector('.container').offsetTop,
+                    behavior: 'smooth'
+                });
+            }, 2000); // Ajuste o tempo aqui para controlar quando a rolagem automática acontece
+        }
+
+        window.onload = () => {
+            cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            autoScroll(); // Chama a função de rolagem automática
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Marie Kondo</h1>
+    </div>
+
+    <div class="container" id="page1">
+        <div class="card">
+            <h2>O que é o método KonMari?</h2>
+            <p>O método KonMari é uma abordagem de organização e limpeza desenvolvida por Marie Kondo que se concentra em manter apenas os itens que trazem alegria.</p>
+        </div>
+        <div class="card">
+            <h2>Essa ferramenta é uma aplicação?</h2>
+            <p>Não, o método é uma filosofia, mas pode ser aplicado em ferramentas digitais como aplicativos de organização e produtividade.</p>
+        </div>
+        <div class="card">
+            <h2>Função da ferramenta</h2>
+            <p>A função é ajudar a organizar arquivos e informações digitais, eliminando o que não é necessário.</p>
+        </div>
+        <div class="card">
+            <h2>Como pode ajudar?</h2>
+            <p>Ajuda a planejar melhor, mantendo apenas o que é relevante, e proporcionando uma sensação de leveza.</p>
+        </div>
+        <div class="card">
+            <h2>Exemplo prático</h2>
+            <p>Use aplicativos como Todoist ou Trello para organizar tarefas e projetos, aplicando a filosofia de manter apenas o que traz alegria e propósito.</p>
+        </div>
+        <button class="scroll-button" onclick="scrollCards('prev')">&lt;</button>
+        <button class="scroll-button" onclick="scrollCards('next')">Próximo</button>
+    </div>
+    
+    <div class="image-slider">
+        <img src="image1.jpg" alt="Imagem 1">
+        <img src="image2.jpg" alt="Imagem 2">
+        <img src="image3.jpg" alt="Imagem 3">
+    </div>
+
+    <div class="container" id="page2">
+        <div class="card">
+            <h2>Organizando sua vida digital</h2>
+            <p>Aplique o método KonMari também na sua vida digital, mantendo arquivos e documentos que trazem alegria.</p>
+        </div>
+        <div class="card">
+            <h2>Ferramentas úteis</h2>
+            <p>Utilize ferramentas como Google Drive e Notion para organizar suas informações de forma eficaz.</p>
+        </div>
+        <button class="scroll-button" onclick="scrollCards('prev')">&lt;</button>
+        <button class="scroll-button" onclick="scrollCards('next')">Próximo</button>
+    </div>
+</body>
+</html>
