@@ -7,7 +7,7 @@
 
 body {
     font-family: monospace;
-    color: #120539;
+    color: #ffffff;
 }
   
 ul {
@@ -45,7 +45,7 @@ h1 {
 }
   
 .nav-header a:hover {
-    color: #20ecff;
+    color: #fcfcfc;
 }
   
 .container {
@@ -92,6 +92,10 @@ h1 {
   
 section {
     padding: 50px 0;
+}
+
+.diferenciais h2{
+    color: #ffffff;
 }
   
 .site-bg {
