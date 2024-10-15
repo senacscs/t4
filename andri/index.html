@@ -3,71 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KonMari na Vida Digital</title>
+    <title>Index Andri</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="gato.jpg.png" type="image">
 </head>
 <body>
-    <div class="header">
-        <h1 class="title">Marie Kondo</h1>
+
+    <div class="sidebar">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="nav" id="nav">
+            <a href="https://www.instagram.com/wh0isandris/" target="_blank">Instagram</a>
+            <a href="https://github.com/andrimachado" target="_blank">GitHub</a>
+            <a href="https://www.freecodecamp.org/AndriMachado" target="_blank">FreeCodeCamp</a>
+            <a href="https://senacscs.github.io/t4/andri/curriculo/">Currículo</a>
+        </div>
     </div>
 
-    <div class="container" id="page1">
-        <div class="card light">
-            <h2>O que é o método KonMari?</h2>
-            <p>O método KonMari é uma abordagem de organização e limpeza desenvolvida por Marie Kondo que se concentra em manter apenas os itens que trazem alegria.</p>
+    <div class="content">
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
         </div>
-        <div class="card dark">
-            <h2>Essa ferramenta é uma aplicação?</h2>
-            <p>Não, o método é uma filosofia, mas pode ser aplicado em ferramentas digitais como aplicativos de organização e produtividade.</p>
+
+        <div class="text-container">
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/olamundo/" target="_blank">Olá Mundo</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/indicacoeshtml/" target="_blank">Indicaçãoes HTML</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/indicacoescss/" target="_blank">Indicaçãoes CSS</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/responsaveis/" target="_blank">Responsáveis</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/projeto/" target="_blank">Projeto P.I</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/oficina/" target="_blank">Oficina</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/brandt/jogo1/" target="_blank">JOGO 1</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andrei/tecnologiamat/index.html" target="_blank">TEC+MAT</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/autocuidado/" target="_blank">Autocuidado</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/imersao1/" target="_blank">Imersão Alura</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/henrique/pontedavinci/" target="_blank">Ponte da Vici - DEV</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/joaquim/pontedavinci/" target="_blank">Ponte da Vinci - Cliente</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/poema/" target="_blank">Poemas</a>
+            <a class="text-box" href="https://senacscs.github.io/t4/andri/triangulos/" target="_blank">Site tangram</a>
         </div>
-        <div class="card light">
-            <h2>Função da ferramenta</h2>
-            <p>A função é ajudar a organizar arquivos e informações digitais, eliminando o que não é necessário.</p>
-        </div>
-        <div class="card dark">
-            <h2>Como pode ajudar?</h2>
-            <p>Ajuda a planejar melhor, mantendo apenas o que é relevante, e proporcionando uma sensação de leveza.</p>
-        </div>
-        <div class="card light">
-            <h2>Exemplo prático</h2>
-            <p>Use aplicativos como Todoist ou Trello para organizar tarefas e projetos, aplicando a filosofia de manter apenas o que traz alegria e propósito.</p>
-        </div>
-    </div>
-    <div class="scroll-bar">
-        <div class="scroll-thumb"></div>
+
+        <div class="smoke" id="smoke"></div>
     </div>
 
-    <div class="image-slider">
-        <img src="image1.jpg" alt="Imagem 1">
-        <img src="image2.jpg" alt="Imagem 2">
-        <img src="image3.jpg" alt="Imagem 3">
-    </div>
-
-    <div class="container" id="page2">
-        <div class="card light">
-            <h2>Organizando sua vida digital</h2>
-            <p>Aplique o método KonMari também na sua vida digital, mantendo arquivos e documentos que trazem alegria.</p>
-        </div>
-        <div class="card dark">
-            <h2>Ferramentas úteis</h2>
-            <p>Utilize ferramentas como Google Drive e Notion para organizar suas informações de forma eficaz.</p>
-        </div>
-    </div>
     <script>
-        let currentCardIndex = 0;
-        let cards;
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav');
 
-        function scrollCards(index) {
-            currentCardIndex = index;
-            document.querySelector('.container').style.transform = `translateX(-${currentCardIndex * 320}px)`;
-        }
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
 
-        window.onload = () => {
-            cards = document.querySelectorAll('.card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
+        document.addEventListener('mousemove', (e) => {
+            const smoke = document.getElementById('smoke');
+            smoke.style.left = `${e.pageX}px`;
+            smoke.style.top = `${e.pageY}px`;
+        });
+
+        const searchInput = document.querySelector('.search-bar input');
+        const textBoxes = document.querySelectorAll('.text-box');
+
+        searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+
+            textBoxes.forEach(box => {
+                const text = box.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    box.style.display = 'inline-block';
+                } else {
+                    box.style.display = 'none';
+                }
             });
-        };
+        });
+
+        
     </script>
 </body>
 </html>
