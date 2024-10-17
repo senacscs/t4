@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html {
+	background-color: #2d6264;
+	scroll-behavior: smooth;
+	
+	color:#EEF9FC;
+	line-height: 1.6;
+	font-family: 'Montserrat', sans-serif;
+}  
+
+::selection{
+	background-color: #99e1ed;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	width: 100%;
+	height: 700px;
+	margin: 0 auto;
+}
+
+section {
+min-width:30m;
+max-width: 50em;
+margin: 0 auto;
+padding: 20px;
+text-align: justify;
+/* height: 700px; */
+}
+
+#more > .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;	
+}
+
+h1 {
+	color:#EEF9FC;
+	text-align:center;
+	font-style: italic;
+	font-size:4.5rem;
+	font-family: 'Bebas Neue', sans-serif;
+	margin: 4rem;
+	line-height:.9em;
+	padding-bottom:.5em;
+	margin-bottom:.5em;
+	border-bottom: 2px solid #5EB1BF;
+}
+
+h1 span {
+	color:#5EB1BF;
+	font-size: 6rem;
+	font-weight: 500;
+}
+
+nav > a {
+	color:#EEF9FC;
+	font-size: 20px;
+	font-weight: 800;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+	nav > a:hover{
+		color:#5EB1BF;
+		text-decoration: underline;
+	}
+
+	h2 {
+		color: #fff;
+		width: 100%;
+		height: 150px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+
+		user-select: none;
+		-webkit-user-select: none;
+	}
+
+	h3{
+		font-size: 1.3rem;
+		padding-top: 2.5rem;
+	}
+
+	p {
+		font-size: larger;
+		text-indent: 1.5em;
+	}
+
+		section#tutorial h2,
+		section#video h2,
+		section#more h2 {
+			background-image: url("../assets/images/titlebg.jpg");
+			background-size: cover;
+			background-position: right;
+		}
+
+		section#site h2,
+		section#podcast h2 {
+			background-image: url("../assets/images/titlebg2.jpg");
+			background-position: top;
+		}
+
+		section a {
+			color: #EEF9FC;
+			font-weight: 400;
+			font-style: italic;
+		}
+			a:hover{
+				color: #5EB1BF;
+			}
+
+			.instagram-button {
+				display: inline-block;
+				text-decoration: none;
+				background-color: #405DE6; /* Cor de fundo do botão (cor do Instagram) */
+				color: #fff; /* Cor do texto */
+				padding: 10px 20px;
+				border-radius: 5px;
+				transition: background-color 0.3s ease;
+			  }
+			  
+			  .instagram-button:hover {
+				background-color: #4C68D7; /* Cor de fundo do botão ao passar o mouse */
+			  }
+			  
+			  .instagram-logo {
+				width: 20px; /* Ajuste o tamanho do logo conforme necessário */
+				height: 20px; /* Ajuste o tamanho do logo conforme necessário */
+				vertical-align: middle;
+				margin-right: 10px;
+			  }
+			  
+			  .username {
+				vertical-align: middle;
+			  }
+			  
+			  .back-to-top {
+				position: fixed;
+				bottom: 4rem;
+				right: 4rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 4rem;
+				width: 4rem;
+				background-color: var(--pink);
+				border-radius: 50%;
+				z-index: 10;
+				visibility: hidden;
+				transition: all .4s;
+			}
+			
+			.back-to-top-svg {
+				height: 50%;
+			}
+footer{
+	background-color:rgba(24,48,72,255);
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	a{
+		color: white;
+		text-decoration: none;
+	}
+}
+	
+@media only screen and (max-width: 667px){
+section {
+	max-width: 25em;
+	}
+
+h1 {
+	font-size: 3.5rem;
+}
+h1 span {
+	font-size: 3.5rem;
+}
+}
