@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="list.css">
+    <link rel="shortcut icon" href="kayne.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <div class="input-area">
+            <input type="text" id="task-input" placeholder="Digite uma nova tarefa...">
+            <button id="add-task">Adicionar</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <footer class="rodape">
+        <p>
+            <a href="https://senacscs.github.io/t4/andri/" target="_blank">Andrielen M.</a> | 
+            <a href="https://senacscs.github.io/t4/Ludwig/" target="_blank">Gabriel L.</a> |
+            <a href="https://senacscs.github.io/t4/backes/" target="_blank">Pedro B.</a> 
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('add-task').addEventListener('click', function() {
+            const input = document.getElementById('task-input');
+            const taskText = input.value.trim();
+
+            if (taskText) {
+                const li = document.createElement('li');
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        li.classList.add('completed');
+                    } else {
+                        li.classList.remove('completed'); 
+                    }
+                });
+
+                li.appendChild(checkbox);
+                li.appendChild(document.createTextNode(taskText));
+                document.getElementById('task-list').appendChild(li);
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

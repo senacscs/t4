@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8c4bc; 
+    color: #2e5d34; 
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #2e5d34; 
+}
+
+.input-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #77b59a; 
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 70%; 
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #77b59a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5ca679; 
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9; 
+    border: 1px solid #77b59a; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center; 
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #b0b0b0;
+}
+
+.rodape {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #7fff7f, #ff7f7f);
+    color: white;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape a:hover {
+    color: #fff5f5;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+#task-list {
+    list-style-type: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.rodape {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #7fff7f, #ff7f7f); /* Degradê verde a rosa pastel */
+    color: white;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape a:hover {
+    color: #fff5f5; /* Tom mais claro ao passar o mouse */
+}

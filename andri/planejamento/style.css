@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8c4bc;
+}
+
+.title {
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 20px;
+    justify-content: center; 
+}
+
+.card {
+    width: 200px; 
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    flex: 1 1 200px;
+    max-width: 300px; 
+}
+.card.light {
+    background-color: #96dcb7; 
+}
+
+.card.dark {
+    background-color: #77b59a; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.image-slider {
+    display: flex;
+    overflow-x: auto;
+    background-color: #f8c4bc; 
+    padding: 20px;
+}
+
+.image-slider img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.image-slider img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 50vh; 
+    }
+
+    .title {
+        font-size: 2rem; 
+    }
+
+    .card {
+        width: 90%; 
+        max-width: none; 
+    }
+
+    .image-slider {
+        flex-direction: column; 
+    }
+
+    .image-slider img {
+        max-width: 90%; 
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.external-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #77b59a;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.external-link:hover {
+    background-color: #5ca679; 
+}
+
+.rodape {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #7fff7f, #ff7f7f); 
+    color: white;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape a:hover {
+    color: #fff5f5; 
+}
