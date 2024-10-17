@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
 }
-
+ 
 header {
     background-color: #ba391c;
     color: white;
@@ -18,36 +18,79 @@ header {
     padding: 20px;
     border-bottom: 0.2rem solid orange;
 }
-
+ 
 h1 {
     margin: 0;
 }
-
+ 
 div {
     margin: 20px auto;
     padding: 20px;
-    max-width: 800px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Garante que o elemento ocupe toda a largura */
     box-shadow: 0 0 12px black;
 }
-
+ 
+ 
+@media (min-width: 768px) {
+    div {
+        max-width: 800px;
+        width: 90%;
+    }
+ 
+    .videomaneiro {
+        max-width: 560px;
+        margin: 0 auto;
+        display: block;
+    }
+ 
+    div:hover {
+        background-color: #f0f0f5;
+        box-shadow: 0 0 04px black;
+        transform: scale(1.08);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+   
+}
+ 
+@media (max-width: 768px) {
+    div {
+        max-width: 90%;
+        width: 100%;
+    }
+ 
+    .videomaneiro {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+ 
+    div:hover {
+        background-color: #f0f0f5;
+        box-shadow: 0 0 04px black;
+        transform: scale(1.04);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+}
+ 
 h2 {
     color: #333;
     border-bottom: 2px solid #ba391c;
     padding-bottom: 10px;
 }
-
-p, ul, ol {
+ 
+p,
+ul,
+ol {
     line-height: 1.6;
 }
-
-ul, ol {
+ 
+ul,
+ol {
     margin-left: 20px;
 }
-
+ 
 footer {
     text-align: center;
     padding: 10px;
@@ -59,8 +102,12 @@ footer {
     height: 35px;
 }
 
-.videomaneiro {
-    position: relative;
-    left: 100px;
-    border-radius: 10px;
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #333;
+    transition: color 1s;
 }
