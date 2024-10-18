@@ -1,0 +1,39 @@
+html {
+    min-height: 100%;
+    background-image: url(nuvem.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+h1{
+   text-align: center;
+}
+
+.poema{
+   border: solid 5px #aba6a3;
+   border-radius: 50px;
+   width:fit-content;
+   padding: 20px;
+   backdrop-filter: blur(10px);
+}
+
+a:link, a:visited { text-decoration: none; } a:hover { text-decoration: underline; }
+
+a{
+   color: black;
+}
+
+.poema2{
+   border: solid 4px #8e8b89;
+   border-radius: 15px;
+   width:fit-content;
+   padding: 4px;
+   Float:right
+}
