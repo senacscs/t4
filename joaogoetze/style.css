@@ -3,7 +3,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(0, 111, 128);/*#62ffe5;*/
+    background-color: rgb(88, 212, 26);/*#62ffe5;*/
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center;
@@ -34,19 +34,32 @@
   iframe {
     border: 2px solid white;
     width: 100px;
-    height: 500px;
+    height: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    background-color: white;
+}
+
+.ladoalado {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ladoalado section {
+  flex: 1;
+  min-width: 45%; /* Ajuste conforme necessário */
+  margin: 10px;
 }
 
 
   }
   .subir{
     width: 5%;
-    display: block;
-    padding-left: 1120px;
+    display:block;
+    margin-left: 1120px;
     height: 65px;
   }
   .container {
@@ -79,12 +92,12 @@
   }
   
   a:hover {
-    background-color:rgb(0, 111, 128);
+    background-color:rgb(246, 255, 0);
   }
   
   
   header {
-    background-color:rgb(18, 78, 88);
+    background-color:rgb(0, 135, 0);
     color: red;
     padding: 15px;
     text-align: center;
@@ -113,29 +126,11 @@
     text-align: center;
   }
   
-  h1 {
+  h1, h2, p, a, ol, li, figcaption {
     color: rgb(255, 255, 255);
     text-align: center;
   }
-  h2{
-    color: rgb(255, 255, 255);
-    text-align:center;
-  }
-  p{color:rgb(255, 255, 255);
-    text-align:center;
-  }
-  a{color:rgb(255, 255, 255);
-  }
-  ol{color: rgb(255, 255, 255);
-    text-align:center;
-    }
 
-  li{color:rgb(255, 255, 255);
-        text-align:center;
-    }
-  figcaption{color: rgb(255, 255, 255);
-        text-align:center;
-    }
   img {
     display:block;
   margin-left:auto;
@@ -167,7 +162,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(0, 111, 128);/*#62ffe5;*/
+    background-color: rgb(88, 212, 26);/*#62ffe5;*/
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center;
@@ -206,12 +201,23 @@
     align-items: center;
 }
 
+.ladoalado {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ladoalado section {
+  flex: 1;
+  min-width: 45%; /* Ajuste conforme necessário */
+  margin: 10px;
+}
 
   }
   .subir{
     width: 5%;
-    display: block;
-    padding-left: 959px;
+    display: flexbox;
+    margin-left: 959px;
     height: 65px;
   }
   .container {
@@ -244,12 +250,12 @@
   }
   
   a:hover {
-    background-color:rgb(0, 111, 128);
+    background-color:rgb(255, 255, 0);
   }
   
   
   header {
-    background-color:rgb(18, 78, 88);
+    background-color:rgb(0, 135, 0);
     color: red;
     padding: 15px;
     text-align: center;
@@ -258,7 +264,7 @@
   }
   
   footer {
-    background-color:rgb(0, 111, 128,);
+    /* background-color:rgb(0, 111, 128,); */
     color: white;
     text-align: right;
     padding: 10px;
@@ -274,34 +280,15 @@
   }
   
   a{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
   }
   
-  h1 {
+  h1, h2, p, a, ol, li, figcaption {
     color: rgb(255, 255, 255);
     text-align: center;
   }
-  h2{
-    color: rgb(255, 255, 255);
-    text-align:center;
-    font-family: fantasy;
-  }
-  p{color:rgb(255, 255, 255);
-    text-align:center;
-  }
-  a{color:rgb(255, 255, 255);
-  }
-  ol{color: rgb(255, 255, 255);
-    text-align:center;
-    }
 
-  li{color:rgb(255, 255, 255);
-        text-align:center;
-    }
-  figcaption{color: rgb(255, 255, 255);
-        text-align:center;
-    }
   img {
     display:block;
   margin-left:auto;
@@ -333,7 +320,7 @@
     @media (min-width: 600px) and (max-width: 991px) {      body {
         margin: 0;
         padding: 0;
-        background-color: rgb(0, 111, 128);/*#62ffe5;*/
+        background-color: rgb(88, 212, 26);/*#62ffe5;*/
         background-size:cover;
         background-repeat:no-repeat;
         background-position:center;
@@ -364,9 +351,9 @@
     
       iframe {
         border: 2px solid white;
-        width: 100px;
+        width: 50px;
         height: 500px;
-        display: block;
+        display: inline-flexbox;
         margin-left: auto;
         margin-right: auto;
         align-items: center;
@@ -377,8 +364,8 @@
       }
       .subir{
         width: 5%;
-        display: block;
-        padding-left: 570px;
+        display: flexbox;
+        margin-left: 570px;
         height: 65px;
       }
       .container {
@@ -416,7 +403,7 @@
       
       
       header {
-        background-color:rgb(18, 78, 88);
+        background-color:rgb(0, 135, 0);
         color: red;
         padding: 15px;
         text-align: center;
@@ -445,30 +432,11 @@
         text-align: center;
       }
       
-      h1 {
+      h1, h2, p, a, ol, li, figcaption {
         color: rgb(255, 255, 255);
         text-align: center;
       }
-      h2{
-        color: rgb(255, 255, 255);
-        text-align:center;
-        font-family: fantasy;
-      }
-      p{color:rgb(255, 255, 255);
-        text-align:center;
-      }
-      a{color:rgb(255, 255, 255);
-      }
-      ol{color: rgb(255, 255, 255);
-        text-align:center;
-        }
-    
-      li{color:rgb(255, 255, 255);
-            text-align:center;
-        }
-      figcaption{color: rgb(255, 255, 255);
-            text-align:center;
-        }
+
       img {
         display:block;
       margin-left:auto;
@@ -495,7 +463,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: rgb(0, 111, 128);/*#62ffe5;*/
+      background-color: rgb(88, 212, 26);/*#62ffe5;*/
       background-size:cover;
       background-repeat:no-repeat;
       background-position:center;
@@ -539,8 +507,8 @@
     }
     .subir{
       width: 5%;
-      display: block;
-      padding-left: 350px;
+      display: flexbox;
+      margin-left: 350px;
       height: 65px;
     }
     .container {
@@ -578,7 +546,7 @@
     
     
     header {
-      background-color:rgb(18, 78, 88);
+      background-color:rgb(0, 135, 0);
       color: red;
       padding: 15px;
       text-align: center;
@@ -607,30 +575,11 @@
       text-align: center;
     }
     
-    h1 {
+    h1, h2, p, a, ol, li, figcaption {
       color: rgb(255, 255, 255);
       text-align: center;
     }
-    h2{
-      color: rgb(255, 255, 255);
-      text-align:center;
-      font-family: fantasy;
-    }
-    p{color:rgb(255, 255, 255);
-      text-align:center;
-    }
-    a{color:rgb(255, 255, 255);
-    }
-    ol{color: rgb(255, 255, 255);
-      text-align:center;
-      }
-  
-    li{color:rgb(255, 255, 255);
-          text-align:center;
-      }
-    figcaption{color: rgb(255, 255, 255);
-          text-align:center;
-      }
+
     img {
       display:block;
     margin-left:auto;
