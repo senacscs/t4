@@ -1,0 +1,64 @@
+.neck{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 10%;
+    color: rgb(104, 128, 69);
+    text-decoration: solid;
+    text-align: center;
+    width: 50%;
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(203, 195, 195);
+    border-radius: 15px;
+    padding: 3px;
+
+}
+ul{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 10%;
+    color: rgb(104, 128, 69);
+    text-decoration: solid;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+body{
+    background-color: rgb(223, 215, 215);
+    width: 100%;
+    overflow-x: hidden;
+}
+.container{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 10% (rgb);
+    color: rgb(104, 128, 69);
+    text-decoration: solid;
+    text-align: center;
+    font-size: small;
+    width: 60%;
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(203, 195, 195);
+    border-radius: 15px;
+    padding: 3px;
+}
+.defincao{
+    color: rgb(0, 0, 0);
+}
+.ladoalado{
+    display: flex;
+    width: 560px;
+    height: 315px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imagem {
+    display: flex;
+    width: 560px;
+    height: 215px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
