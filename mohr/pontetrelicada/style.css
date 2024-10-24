@@ -1,0 +1,187 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    background-image: url(fundo.jpg);
+    overflow-x: hidden;
+} */
+
+
+/* Reset básico */
+/* Reset básico */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #79dae0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0;  /* Remove padding extra do topo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 60px;
+}
+
+.Urbanisme {
+    position: relative;
+    bottom: 35px;
+}
+
+ul {
+    position: relative;
+    bottom: 35px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;  /* Um leve padding para dentro da nav */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    margin-right: 10px;
+    position: relative;
+    bottom: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Seção principal */
+.titulo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Compensação para o cabeçalho fixo */
+}
+
+.titulo-content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.titulo-content h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 50px;
+}
+
+/* Sobre nós */
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #497cfe;
+    padding: 50px 20px;
+    
+}
+
+.sobre .container {
+    max-width: 600px;
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.sobre p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+}
+
+.sobre-image img {
+    width: 500px;
+    position: relative;
+    right: 50px;
+    border-radius: 20px;
+}
+.sobre-image img:hover {
+    width: 530px;
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #59add1;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
