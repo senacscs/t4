@@ -102,7 +102,7 @@ img:hover {
 
 
 .card{
-    background-color: rgb(247, 255, 139);
+    background-color: rgba(50, 0, 124, 0.649);
     text-align: center;
     margin-left: 30%;
     margin-right: 30%;
@@ -120,10 +120,10 @@ img:hover {
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
-    background-color: #dda838;
+    background-color: #300088a5;
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 20px;
-    text-shadow: 0 0 20px #f7ee00;
+    text-shadow: 0 0 20px #4a009a91;
 }
 
