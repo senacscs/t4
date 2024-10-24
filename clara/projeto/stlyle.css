@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(233, 255, 109);
+    background-color: rgba(127, 212, 251, 0.452);
     background-size: 100% 100%;
 }
 
@@ -20,7 +20,7 @@ h2{
 }
 
 li{
-    color: rgb(255, 238, 56);
+    color: rgb(48, 176, 255);
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     padding-left: 30px;
@@ -36,20 +36,20 @@ header{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    background-color:  rgb(231, 221, 20);
+    background-color:  rgb(18, 0, 107);
     
 }
 #menu a{ 
     display: block;
     padding: .5rem;
     text-align: right;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
 
 a:hover{
-    background-color:rgb(255, 236, 88);
+    background-color:rgba(0, 32, 102, 0.703);
     transition: 1s;
 }
 
