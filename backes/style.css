@@ -10,7 +10,6 @@
 body {
     background-color: #f4f7f6;
     color: #333;
-    font-family: 'Arial', sans-serif;
 }
 
 /* Cabeçalho */
@@ -30,7 +29,6 @@ header p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
-    padding-bottom: 20px;
 }
 
 /* Seção Principal */
@@ -76,12 +74,14 @@ nav a {
     align-items: center;
     transition: color 0.3s, transform 0.3s;
     border-radius: 5px;
+    border: 2px solid transparent;
 }
 
 nav a:hover {
     color: #ffffff;
     background-color: #0044cc;
     transform: translateY(-5px);
+    border: 2px solid #ffffff;
 }
 
 /* Ícones ao lado dos links */
@@ -91,7 +91,12 @@ nav a i {
 }
 
 /* Rodapé */
-
+footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
 
 footer p {
     font-size: 1rem;
