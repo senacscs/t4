@@ -1,340 +1,240 @@
-* {
-  cursor: url("cursor.png"), auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
-
-body{
+body {
+    background-color: rgb(182, 118, 200);
     margin: 0;
     padding: 0;
-    background-image: url(imagens/fundo.jpg);
-    background-color: black;
-    overflow-x: hidden;
-    cursor: url("cursor.png"), auto;
 }
-
-input[type="submit"], input[type="button"], a, button {
-  cursor: url("cursor.png"), auto;
-}
-
-.subtitulo {
-  position: relative;
-  bottom: 150px;
-  text-align: center;
-  height: 60px;
-  font-size: 30px;
-  background-color: purple;
-  width: 100%;
-  color: white;
-  font-family: "Concert One", sans-serif;
-  z-index: 100;
-  transition: top 0.5s ease; /* Suaviza o movimento quando a posição muda */
-}
-
-.subtitulo.fixed {
-  position: fixed; /* Fixa o subtítulo no topo */
-  top: 0;
-  bottom: auto; /* Remove o offset inferior */
-}
-
-h5 {
- position: relative;
- top: 15px;
-}
-
-.btn{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 200px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    background: linear-gradient(90deg,#df5bd6, #cb61f9, #fc46de, #e43687);
-    background-size: 400%;
-    border-radius: 30px;
-    z-index: 1;
-    cursor: url("cursor.png"), auto;
-}
-.btn:hover{
-    animation: animate 8s linear infinite;
-}
-.btn:before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg,#df5bd6, #cb61f9, #fc46de, #e43687);
-    background-size: 400px;
-    border-radius: 40px;
-    opacity: 0;
-    transition: 0.5s;
-}
-.btn:hover:before{
-    filter: blur(10px);
-    opacity: 1;
-}
-
-@keyframes animate {
-    0%{
-        background-position: 0%;
-    }
-    100%{
-        background-position: 400%;
-    }
-}
-
-
 
 header {
-    position: relative;
-    bottom: 100px;
-    background: linear-gradient(to right, #1f2727, #000000);
-    height: 600px;
+    color: aliceblue;
+    background: linear-gradient(to right, #d9cddd, #8f459c);
+    height: 610px;
     width: 100%;
-    border-radius: 5px;
-    color: white;
+    font-size: 40px;
     text-align: center;
-    border-bottom: 0.2rem solid blueviolet;
-}
-
-
- 
-  h1 {
-    transition: font-size 0.5s ease; /* Animação para o tamanho do texto */
-  }
- 
-  header.scrolled h1 {
-    font-size: 24px; /* Tamanho do texto ao rolar a página */
-  }
-
-.titulo {
-    font-size: 100px;
     position: relative;
-    top: 30%;
-    font-weight: 400;
-    font-family: "Concert One", sans-serif;
-    color: rgb(252, 223, 255);
-    animation: glow 1.5s ease-in-out infinite alternate;
+    bottom: 80px;
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px rgb(161, 85, 148), 0 0 20px rgb(161, 85, 148), 0 0 30px rgb(161, 85, 148), 0 0 40px rgb(161, 85, 148), 0 0 50px rgb(161, 85, 148), 0 0 60px rgb(161, 85, 148), 0 0 70px rgb(161, 85, 148);
-}
-to {
-    text-shadow: 0 0 20px rgb(161, 85, 148), 0 0 30px rgb(161, 85, 148), 0 0 40px rgb(161, 85, 148), 0 0 50px rgb(161, 85, 148), 0 0 60px rgb(161, 85, 148), 0 0 70px rgb(161, 85, 148), 0 0 80px rgb(161, 85, 148);
-}
-}
-
-
-
-.Mohr {
+#primeirotitulo {
     position: relative;
+    top: 220px;
+    font-size: 120px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     color: white;
 }
 
-.projetos {
-    position: relative;
-    top: 50px;
-    color: white;
-    border-radius: 5px;
-    cursor: url("cursor.png"), auto;
-}
-
-  .projetos h2 {
-    font-size: 2.5rem;
-    margin-bottom: 120px;
-    position: relative;
-    cursor: url("cursor.png"), auto;
-  }
-  
-  .projetos h2::after{
-    content: "→";
-    display: block;
-    position: absolute;
-    font-size: 1.75rem;
-    /* right: 10px; */
-    top: 130px;
-    animation: seta 0.5s ease-in 0s infinite alternate;
-    cursor: url("cursor.png"), auto;
-  }
-  
-  @keyframes seta {
-    from {
-      right: 15px;
-    }
-    to {
-      right: 10px;
-    }
-  }
-  
-  .projetos-flex {
-    display: flex;
-    gap: 40px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    cursor: url("cursor.png"), auto;
-  }
-  
-  .cada-projeto {
-    width: 300px;
-    height: 345px;
-    background-color: #EEF5F6;
-    border-radius: 16px;
-    cursor: pointer;
-    position: relative;
-    left: 100px;
-    font-weight: 400;
-    font-family: "Concert One", sans-serif;
-    overflow: hidden; /* Para garantir que o conteúdo não saia da caixa */
-    transition: box-shadow 0.3s ease-in-out; /* Transição suave */
-    display: inline-block; 
-    margin: 10px;
-    cursor: url("cursor.png"), auto;
-  }
-
-
-.cada-projeto:hover {
-  box-shadow: 0 0 50px 20px rgba(230, 0, 255, 0.8); /* Brilho amarelo ao passar o mouse */
-}
-  
-  .projetos-img {
-    height: 180px;
-  }
-  
-  .projetos-img img {
+#cabecario {
     width: 100%;
-    height: 180px;
-    border-radius: 16px 16px 0px 0px;
-  }
-  
-  .cada-projeto h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #242424;
-    padding: 20px;
+    background-color: #e284fe;
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    z-index: 1000;
+}
+
+nav ul li a:hover {
+    color: #b871b3;
+    transform: scale(1.1);
+}
+
+li {
+    list-style: none;
+}
+
+nav ul {
     display: flex;
-    align-items: center;
-    text-align: left;
-    position: relative;
-    bottom: 30px;
-  }
-
-  
-  .cada-projeto:hover h3::before {
-    width: 20px;
-  }
-  
-  .cada-projeto p {
-    font-size: 1.125rem;
-    color: #242424;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px 20px 20px;
-  }
-  
-  .cada-projeto span {
-    color: #474747;
-  }
-
-  a {
-    text-decoration: none;
-    cursor: url("cursor.png"), auto;
-    color:rgb(117, 38, 192);
-  }
-
-.segunda-fileira {
-    position: absolute;
-    left: 370px;
-    top: 719px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
-
-.terceira-fileira {
-    position: absolute;
-    left: 370px;
-    top: 1px;
-}
-   
-
-h6 {
-  margin-left: 30px;
-  margin-right: 30px;
-  font-size: 15px;
-  position: relative;
-  bottom: 80px;
-  right: 10px;
-  font-family: "Playpen Sans", cursive;
-  font-style: normal;
-}
-
-.sobremim {
-  position: relative;
  
-  text-align: center;
-  font-family: "Playpen Sans", cursive;
-  font-style: normal;
-  color: white;
+nav ul li {
+    margin: 0 10px;
 }
-
-.escrita {
-  position: relative;
-  text-align: center;
-  font-family: "Playpen Sans", cursive;
-  font-style: normal;
-  color: white;
-  font-size: 8px;
   
+nav ul li a {
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+  
+/* Efeito de hover */
+nav ul li a:hover {
+    color: #d900ff;
+    transform: scale(1.1);
+}
+  
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #d900ff;
 }
 
-.mim {
-  background-color: #cb61f99a;
-  width: 60%;
-  position: relative;
-  top: 120px;
-  border-radius: 30px;
-  left: 21%;
+a {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#primeiralinha {
+    position: relative;
+    bottom: 90px;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+
+/* trabalhos */
+
+
+#title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+    color: white;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    bottom: 50px;
+}
+
+#segundalinha {
+    position: relative;
+    bottom: 60px;
+    width: 140px;
+    overflow: hidden;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+}
+  
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+  
+section {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaçamento entre as seções */
+}
+
+#photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0; /* Remover o padding */
+}
+
+#photo-gallery img {
+    width: 280px; /* Largura das imagens */
+    height: 290px; /* Altura das imagens */
+    object-fit: cover; /* Manter a proporção das imagens */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição do efeito */
+    border: 0.2rem solid white;
+}
+
+#photo-gallery img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    box-shadow: #ffffff;
+}
+
+/* sobre mim */
+
+#terceiralinha {
+    position: relative;
+    bottom: 20px;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#sobremim {
+    position: relative;
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    color: white;
+}
+
+#escrita {
+    position: relative;
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    color: white;
+    font-size: 8px;
+    
+}
+
+#mim {
+    background-color: #ceaddc9a;
+    width: 60%;
+    position: relative;
+    top: 120px;
+    border-radius: 30px;
+    left: 21%;
 }
 
 marquee {
-  position: relative;
-  top: 200px;
-  margin-right: 100px;
-  margin-left: 100px;
+    position: relative;
+    top: 200px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
-
-.doguinhos {
-  font-family: "Playpen Sans", cursive;
-  font-style: normal;
-  position: relative;
-  top: 190px;
-  text-align: center;
-  color: white;
-  background-color: #cb61f9;
-
+  
+#doguinhos {
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    top: 190px;
+    text-align: center;
+    color: white;
+    background-color: #d8b3e7;
 }
-
+  
 .fotos {
-  border-radius: 10px;
-  margin-right: 50px;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+  
+.contatos {
+    color: white;
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    top: 130px;
+    font-size: 10px;
 }
 
-.contatos {
-  color: white;
-  text-align: center;
-  font-family: "Playpen Sans", cursive;
-  font-style: normal;
-  text-align: center;
-  position: relative;
-  top: 130px;
-  font-size: 10px;
-}
