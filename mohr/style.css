@@ -38,6 +38,7 @@ header {
     font-family: "Playpen Sans", cursive;
     font-style: normal;
     z-index: 1000;
+    border-bottom: 0.2rem solid white;
 }
 
 nav ul li a:hover {
