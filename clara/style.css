@@ -1,194 +1,189 @@
 body {
-  color: #2f4f4f;
-  font-family: 'Roboto', Arial;
-  font-size: 87.5%;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.body {
-  margin: 0 auto;
-  width: 80%;
-  clear: both;
-}
-
-a {
-  text-decoration: none;
-  color: #2f4f4f;
-}
-
-ul {
-  list-style: none;
-}
-
-.mainHeader {
-  text-align: center;
-  position: relative;
-  margin:20px;
-}
-
-.mainHeader img {
-  width: 70px;
-  height: auto;
-}
-
-nav {
-  font-family: 'Roboto', sans-serif;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  text-align: center;
-  border-bottom: 2px solid lightgray;
-}
-
-nav ul {
-  padding: 0px;
-  display: inline-block;
-  margin: 0px;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  font-weight: bold;
-  display: block;
-  padding: 15px 40px;
-}
-
-nav ul li a:hover {
-  background-color: #FFE9EC;
-  border-radius: 10px;
-}
-
-#headerText {
-  color: #DEA5A4;
-  font-size: 470%;
-  margin: 0 auto;
-}
-
-#headerList {
-  display: inline;
-  text-align: center;
-}
-
-.title {
-  text-align: center;
-  font-size: 20px;
-  margin-top:70px;
-}
-
-#photos img {
+    color: #2f4f4f;
+    font-family: 'Roboto', Arial;
+    font-size: 87.5%;
+    line-height: 1.5;
+    text-align: left;
+  }
   
-  display:flex;
-  justify-content: space-between;
-  margin: 5px;
-  border-radius: 5px;
+  .body {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    clear: both;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2f4f4f;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mainHeader {
+    text-align: center;
+    position: relative;
+    margin: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    color: #2f4f4f;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  /* Efeito de hover */
+  nav ul li a:hover {
+    color: #DEA5A4;
+    transform: scale(1.1);
+  }
+  
+  nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #DEA5A4;
+  }
+  
+  #headerText {
+    color: #DEA5A4;
+    font-size: 2.5em;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  
+  #photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  section {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaçamento entre as seções */
 }
 
-#photo-gallery {
-  display:flex;
-  justify-content: space-between;
-  margin: 0px auto;
-  padding: 10px;
-  max-width: 100%;
-  height: auto;
+#sobre-mim, #contatos-rede {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens no centro */
+    margin: 20px 0; /* Ajuste para espaço entre seções */
+    padding: 10px; /* Ajuste para espaço interno */
+}
 
+
+  #photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0; /* Remover o padding */
 }
 
 #photo-gallery img {
-  width: 250px;
-  height: 250px;
+    width: 200px; /* Largura das imagens */
+    height: 200px; /* Altura das imagens */
+    object-fit: cover; /* Manter a proporção das imagens */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição do efeito */
 }
 
-
-.about{
-  text-align:center;
-  font-size:20px;
-  font-weight:bold;
-  margin-top: 70px;
-  margin-bottom:30px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 70px;
+#photo-gallery img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
-
-.paragraph {
-  width: 680px;
-  margin: 0px auto;
-  text-align: justify;
-  padding: 0 30px;
-}
-
-p {
-  margin-bottom: 34px;
-  font-size: 15px;
-  line-height: 26px;
-  font-weight: 300;
-  letter-spacing: .6px;
-}
-
-.footer{
-	background-color: #DEA5A4;
-	height: 80px;
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
   
-}
-.footer p{
-  margin: 0;
-	font-size: 13px;
-	color: #000;
-	line-height: 80px;
-  text-align: center;
-}
-.insta{
-  height: 15px;
-  width: auto;
-}
-
-body after {
-  content: url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/close.png) url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/loading.gif) url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/prev.png) url(https://raw.githubusercontent.com/lokesh/lightbox2/master/src/images/next.png);
-  display: none;
-}
-
-
-
-#contact {
-  position: relative;
-  margin: 100px 0 10px 0;
-  font-size: 20px;
-  text-align: center;
+  .about, #contact {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 40px auto;
+  }
   
-}
+  .paragraph {
+    width: 90%;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  .footer {
+    background-color: #DEA5A4;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 13px;
+    color: #000;
+  }
+  
+  .cont {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .inst, .email, .freecdcmp, .github {
+    max-width: 50px;
+  }
+  
+  /* Media query para dispositivos móveis */
+  @media (max-width: 768px) {
+    #headerText {
+      font-size: 1.8em;
+    }
+  
+    nav ul li a {
+      padding: 10px;
+    }
+  
+    #photo-gallery img {
+      max-width: 120px;
+    }
+  
+    .paragraph {
+      width: 100%;
+    }
+  }
 
-#block {
-  width: 680px;
-  margin: 50px auto 100px auto;
+  @media (max-width: 768px) {
+    #photo-gallery img {
+        max-width: 150px; /* Ajuste a largura máxima para telas menores */
+        height: 120px; /* Ajuste a altura para telas menores */
+    }
 }
-
-
-.inst {
-  max-width: 80px;
-}
-
-.email {
-  max-width: 90px;
-}
-
-.freecdcmp {
-  max-width: 80px;
-}
-
-.github {
-  max-width: 70px;
-}
-
-.cont {
-  text-align: center;
-  margin: 0;
-  display: block;
-}
+  
