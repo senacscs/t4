@@ -23,12 +23,14 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     line-height: 1.6;
     color: #ffffff;
     background-color: #79dae0;
+    overflow-x: hidden;
 }
 
 /* Cabeçalho */
@@ -392,8 +394,21 @@ nav ul li a:hover {
     transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
+#primeiralinha {
+    position: relative;
+    
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
 
-
+#segundalinha {
+    position: relative;
+    
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
 
 
 
