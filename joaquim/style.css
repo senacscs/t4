@@ -61,6 +61,19 @@
     --ease-bounce-5: linear(0, 0.004, 0.016 2.5%, 0.063, 0.141, 0.25 10.1%, 0.562, 1 20.2%, 0.783, 0.627, 0.534 30.9%, 0.511, 0.503, 0.511, 0.534 38%, 0.627, 0.782, 1 48.7%, 0.892, 0.815, 0.769 56.3%, 0.757, 0.753, 0.757, 0.769 61.3%, 0.815, 0.892, 1 68.8%, 0.908 72.4%, 0.885, 0.878, 0.885, 0.908 79.4%, 1 83%, 0.954 85.5%, 0.943, 0.939, 0.943, 0.954 90.5%, 1 93%, 0.977, 0.97, 0.977, 1)
 }
 
+:root {
+    --black: hsl(0, 0%, 13%);
+    --dark: hsl(12, 32%, 2%);
+    --gray: hsl(0, 0%, 70%);
+    --white: hsl(0, 0%, 96%);
+    --red: hsl(12, 90%, 63%);
+    --red-shadow: hsl(12, 100%, 60%);
+    --gray-sheen: linear-gradient(to bottom,
+            hsla(0, 0%, 13%, 0.5),
+            hsla(0, 0%, 70%, 0.5),
+            hsla(0, 0%, 96%, 0.5));
+}
+
 @keyframes sheen {
     100% {
         transform: rotateZ(60deg) translate(1em, -9em);
@@ -82,33 +95,80 @@
     transform: rotateZ(60deg) translate(-5em, 7.5em);
 }
 
-header {
-    padding: 1px;
-    text-align: center;
-    width: 100%;
-}
-
-:root {
-    --black: hsl(0, 0%, 13%);
-    --dark: hsl(12, 32%, 2%);
-    --gray: hsl(0, 0%, 70%);
-    --white: hsl(0, 0%, 96%);
-    --red: hsl(12, 90%, 63%);
-    --red-shadow: hsl(12, 100%, 60%);
-    --gray-sheen: linear-gradient(to bottom,
-            hsla(0, 0%, 13%, 0.5),
-            hsla(0, 0%, 70%, 0.5),
-            hsla(0, 0%, 96%, 0.5));
-}
-
 html,
 body {
     background-color: var(--black);
     margin: 0;
     padding: 0;
-    font-family: "aglet-mono-variable", sans-serif;
+    font-family: "Roboto", sans-serif;
     width: 99.9%;
 }
+
+header {
+    padding: 1px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+header h1 {
+    font-size: 9rem;
+}
+
+header section {
+    display: inline-block;
+    width: 100%;
+}
+
+header section img {
+    width: 64px;
+}
+
+
+.menu-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background-color: var(--black);
+    border-radius: 5px;
+    padding: 10px;
+    transition: bottom 0.5s ease;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.menu ul li img:hover {
+    transform: scale(1.1);
+}
+
+.menu.active {
+    display: block;
+}
+
 
 div:has(h2 + p) {
     display: grid;
@@ -160,7 +220,6 @@ section {
     align-items: center;
     text-align: center;
     color: var(--white);
-    font-family: "aglet-mono-variable", sans-serif;
 }
 
 button {
@@ -195,7 +254,6 @@ a:link {
     font-size: 18px;
     box-shadow: 8px 8px 15px black;
     transition: 0.5s;
-
 }
 
 .curri a,

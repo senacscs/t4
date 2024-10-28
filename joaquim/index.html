@@ -15,7 +15,17 @@
 
 <body>
     <header>
-        <h1>Joaquim Thomé</h1>
+        <div class="menu-icon">
+            <span>☰ Redes Sociais</span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><img src="/imagens/linkedin.png" alt="LinkedIn"></li>
+                <li><img src="/imagens/github.png" alt="GitHub"></li>
+                <li><img src="/imagens/instagram.png" alt="Instagram"></li>
+                <li><img src="/imagens/gmail.png" alt="Gmail"></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <article>
@@ -124,7 +134,7 @@
                     <p>Site sobre autocuidado pessoal de PV + TÉC</p>
                 </div>
                 <div>
-                    <a href="autocuidado/" tager="_blank"><button anim="sheen" class="curri">Acessar</button></a>
+                    <a href="autocuidado/" target="_blank"><button anim="sheen" class="curri">Acessar</button></a>
                 </div>
             </section>
             <section>
@@ -133,7 +143,7 @@
                     <p>Site editado com base na Imersão DEV da Alura</p>
                 </div>
                 <div>
-                    <a href="imersao1/" tager="_blank"><button anim="sheen" class="curri">Acessar</button></a>
+                    <a href="imersao1/" target="_blank"><button anim="sheen" class="curri">Acessar</button></a>
                 </div>
             </section>
             <section>
@@ -142,19 +152,45 @@
                     <p>Site para "clientes" sobre a ponte autoportante</p>
                 </div>
                 <div>
-                    <a href="pontedavinci/" tager="_blank"><button anim="sheen" class="curri">Acessar</button></a>
+                    <a href="pontedavinci/" target="_blank"><button anim="sheen" class="curri">Acessar</button></a>
                 </div>
             </section>
             <section>
                 <div>
-                    <h2>Site Da Vinci - Cliente</h2>
-                    <p>Site feito para nós sobre a ponte autoportante</p>
+                    <h2>Site Da Vinci - CLI</h2>
+                    <p>Site feito por "DEV's" sobre a ponte autoportante</p>
                 </div>
                 <div>
-                    <a href="../moraes/pontedavinci/" tager="_blank"><button anim="sheen" class="curri">Acessar</button></a>
+                    <a href="../moraes/pontedavinci/" target="_blank"><button anim="sheen"
+                            class="curri">Acessar</button></a>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Site Poemas</h2>
+                    <p>Site sobre poemas sobre a infância de LPT + TÉC</p>
+                </div>
+                <div>
+                    <a href="poema/" target="_blank"><button anim="sheen" class="curri">Acessar</button></a>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Site Triângulos</h2>
+                    <p>Site de um desenho feito usando apenas triângulos.</p>
+                </div>
+                <div>
+                    <a href="poema/" target="_blank"><button anim="sheen" class="curri">Acessar</button></a>
                 </div>
             </section>
         </article>
+        <footer>
+            <script>
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('.menu').classList.toggle('active');
+                });
+            </script>
+        </footer>
     </main>
 </body>
 
