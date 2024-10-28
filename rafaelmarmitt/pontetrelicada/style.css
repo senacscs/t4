@@ -283,3 +283,13 @@ li {
     border-style: solid;
     border-color:#413ad4;
 }
+
+.video {
+    border-color: #6c63ff;
+    border-width: 5px;
+    border-style:solid;
+    margin-top: 5%;
+    border-radius: 20px;
+    display: inline-block;
+    margin-left: 15%;
+}
