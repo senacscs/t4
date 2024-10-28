@@ -182,3 +182,27 @@ footer p {
         width: 100px;
         border-radius: 20px;
     }
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+    }
+    
+    .video-container iframe {
+        max-width: 100%;
+        height: auto;
+    }
+    .ponte-image {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .ponte-image img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
