@@ -23,6 +23,8 @@ const sites = [
     { nome: "Imersão", url: "imersao1", src: "iselda.png" },
     { nome: "Ponte Da Vinci", url: "pontedavinci", src: "besouro.png"},
     { nome: "Poemas", url: "poema", src: "dreamers.png"},
+    { nome: "Triângulos" url: "triangulo" src: "bretta"},
+
 ]
 
 const sitesDiv = document.getElementById("sites");
