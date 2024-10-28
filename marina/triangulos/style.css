@@ -1,0 +1,47 @@
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    position: absolute;
+}
+.body {
+    top: 50px;
+    left: 50px;
+}
+.tail {
+    top: 50px;
+    left: 0;
+    border-bottom-color: lightgreen;
+    transform: rotate(-45deg);
+}
+.taile {
+    top: 50px;
+    left: 0;
+    border-bottom-color: lightgreen;
+    transform: rotate(45deg);
+}
+
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+        }
+        
+        .body {
+            width: 10px;
+            height: 100px;
+            background-color: black;
+            top: 50px;
+            left: 75px;
+        }
+
+        div {
+            display: inline-block;
+            margin-right: 50px;
+        }
+       
