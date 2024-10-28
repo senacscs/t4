@@ -133,7 +133,7 @@ nav ul li a:hover {
     font-size: 50px;
 }
 
-/* Sobre nós */
+/* Localização */
 .sobre {
     display: flex;
     justify-content: space-between;
@@ -158,6 +158,8 @@ nav ul li a:hover {
     font-weight: weight;
     font-style: normal;
     font-size: 60px;
+    position: relative;
+    left: 50px;
 }
 
 .sobre p {
@@ -165,6 +167,8 @@ nav ul li a:hover {
     margin-bottom: 20px;
     font-family: "Playpen Sans", cursive;
     font-style: normal;
+    position: relative;
+    left: 50px;
 }
 
 .sobre-image img {
@@ -178,10 +182,237 @@ nav ul li a:hover {
     transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
-/* Rodapé */
-footer {
-    background-color: #59add1;
+/* Como funciona a ponte? */
+
+.ponte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #88d5f7;
+    padding: 50px 20px;
+    
+}
+
+.ponte .como {
+    max-width: 600px;
+}
+
+.ponte h2 {
+    margin-bottom: 20px;
     color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 670px;
+}
+
+.ponte p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: end;
+    position: relative;
+    left: 600px;
+}
+
+.ponte-image img {
+    width: 500px;
+    position: relative;
+    right: 700px;
+    border-radius: 20px;
+}
+.ponte-image img:hover {
+    width: 530px;
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+
+
+/* como foi o processo? */
+
+.processo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #26AFE0;
+    padding: 50px 20px;
+}
+
+.processo .pro {
+    max-width: 600px;
+}
+
+.processo h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 50px;
+}
+
+.processo p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    left: 50px;
+}
+
+.processo-image img {
+    width: 400px;
+    position: relative;
+    right: 100px;
+    border-radius: 20px;
+}
+.processo-image img:hover {
+    width: 430px;
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+/* entregas */
+
+.entregas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6ec2f6;
+    padding: 50px 20px;
+}
+
+.entregas .entre {
+    max-width: 600px;
+}
+
+.entregas h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 600px;
+    text-align: end;
+}
+
+.entregas p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: end;
+    position: relative;
+    left: 600px;
+}
+
+.entregas-image img {
+    width: 400px;
+    position: relative;
+    right: 800px;
+    border-radius: 20px;
+}
+
+.entregas-image img:hover {
+    width: 400px;
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+
+/* sobre nós */
+
+.sobrenos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(fundo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+}
+
+.sobrenos .nos {
+    max-width: 600px;
+}
+
+.sobrenos h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 350px;
+    text-align: center;
+}
+
+.sobrenos p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    left: 350px;
+}
+
+.sobrenos-image img {
+    width: 400px;
+    position: relative;
+    right: 800px;
+    border-radius: 20px;
+}
+
+.sobrenos-image img:hover {
+    width: 400px;
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #5bbaf5b5;
+    color: white;
     text-align: center;
     padding: 20px 0;
+    height: 70px;
+}
+
+footer p {
+    position: relative;
+    bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
