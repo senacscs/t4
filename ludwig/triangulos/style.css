@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0f7fa;
+  margin: 0;
+  flex-direction: column; /* Adiciona esta linha */
+}
+
+.tree {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Adiciona esta linha para alinhar os triângulos verticalmente */
+  align-items: center; /* Adiciona esta linha para centralizar a árvore */
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.triangle1 {
+  border-bottom: 120px solid #4caf50; /* Verde */
+}
+
+.triangle2 {
+  border-bottom: 100px solid #388e3c; /* Verde escuro */
+}
+
+.triangle3 {
+  border-bottom: 80px solid #66bb6a; /* Verde claro */
+}
+
+.triangle4 {
+  border-bottom: 60px solid #c8e6c9; /* Verde mais claro */
+}
+
+.trunk {
+  width: 30px;
+  height: 40px;
+  background-color: #795548; /* Marrom */
+  margin: 0 auto;
+}
+
+.star {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #ffeb3b; /* Amarelo */
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.star:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #ffeb3b; /* Amarelo */
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  transform: rotate(90deg);
+}
