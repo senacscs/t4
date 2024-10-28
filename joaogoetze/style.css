@@ -3,7 +3,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(88, 212, 26);/*#62ffe5;*/
+    background-color:rgb(0, 255, 153);
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center;
@@ -42,6 +42,20 @@
     background-color: white;
 }
 
+button{
+  color: #000000;
+  text-align: center;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 16px;
+  color: black;
+  background-color: #76ed21;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  /* text-decoration: none; */
+  text-align: center;
+}
+
 .ladoalado {
   display: flex;
   justify-content: space-around;
@@ -56,12 +70,15 @@
 
 
   }
+
   .subir{
     width: 5%;
     display:block;
-    margin-left: 1120px;
+    margin-right:5%;
     height: 65px;
+    
   }
+
   .container {
     border: 3px solid white;
     width: 100%; 
@@ -92,17 +109,17 @@
   }
   
   a:hover {
-    background-color:rgb(246, 255, 0);
+    color: #000;
   }
   
   
   header {
-    background-color:rgb(0, 135, 0);
+    background-color:rgba(0, 192, 115, 0.744);
     color: red;
     padding: 15px;
     text-align: center;
-    font-family: fantasy;
     list-style-type: style none;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
   }
   
   footer {
@@ -122,8 +139,9 @@
   }
   
   a{
-    color: rgb(1, 1, 1);
+    color: rgb(0, 0, 0);
     text-align: center;
+    text-decoration: none;
   }
   
   h1, h2, p, a, ol, li, figcaption {
@@ -162,7 +180,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(88, 212, 26);/*#62ffe5;*/
+    background-color:rgb(0, 255, 153);
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center;
@@ -199,6 +217,22 @@
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    background-color: white;
+
+}
+
+button{
+  color: #000000;
+  text-align: center;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 16px;
+  color: black;
+  background-color: #76ed21;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  /* text-decoration: none; */
+  text-align: center;
 }
 
 .ladoalado {
@@ -217,7 +251,7 @@
   .subir{
     width: 5%;
     display: flexbox;
-    margin-left: 959px;
+    margin-right: 5%;
     height: 65px;
   }
   .container {
@@ -250,17 +284,17 @@
   }
   
   a:hover {
-    background-color:rgb(255, 255, 0);
+    color: #000;
   }
   
   
   header {
-    background-color:rgb(0, 135, 0);
+    background-color:rgba(0, 192, 115, 0.744);
     color: red;
     padding: 15px;
     text-align: center;
-    font-family: fantasy;
     list-style-type: style none;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
   }
   
   footer {
@@ -282,6 +316,7 @@
   a{
     color: rgb(0, 0, 0);
     text-align: center;
+    text-decoration: none;
   }
   
   h1, h2, p, a, ol, li, figcaption {
@@ -320,7 +355,7 @@
     @media (min-width: 600px) and (max-width: 991px) {      body {
         margin: 0;
         padding: 0;
-        background-color: rgb(88, 212, 26);/*#62ffe5;*/
+        background-color:rgb(0, 255, 153);
         background-size:cover;
         background-repeat:no-repeat;
         background-position:center;
@@ -358,14 +393,29 @@
         margin-right: auto;
         align-items: center;
         transform: scale(0.7); 
+        background-color: white;
+
     }
     
+    button{
+      color: #000000;
+      text-align: center;
+      display: inline-block;
+      padding: 2px 5px;
+      font-size: 16px;
+      color: black;
+      background-color: #76ed21;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      /* text-decoration: none; */
+      text-align: center;
+    }
     
       }
       .subir{
         width: 5%;
         display: flexbox;
-        margin-left: 570px;
+        margin-right: 5%;
         height: 65px;
       }
       .container {
@@ -398,17 +448,17 @@
       }
       
       a:hover {
-        background-color:rgb(0, 111, 128);
+        color: #000;
       }
       
       
       header {
-        background-color:rgb(0, 135, 0);
+        background-color:rgba(0, 192, 115, 0.744);
         color: red;
         padding: 15px;
         text-align: center;
-        font-family: fantasy;
         list-style-type: style none;
+        box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
       }
       
       footer {
@@ -430,6 +480,7 @@
       a{
         color: rgb(255, 255, 255);
         text-align: center;
+        text-decoration: none;
       }
       
       h1, h2, p, a, ol, li, figcaption {
@@ -463,11 +514,12 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: rgb(88, 212, 26);/*#62ffe5;*/
+      background-color:rgb(0, 255, 153);
       background-size:cover;
       background-repeat:no-repeat;
       background-position:center;
     
+
     /* div{
       background-color: #62ffe5;*//*rgb(0, 155, 179);
       border: 3px solid white;
@@ -501,6 +553,23 @@
       margin-right: auto;
       align-items: center;
       transform: scale(0.7); 
+      background-color: white;
+
+  }
+
+
+  button{
+    color: #000000;
+    text-align: center;
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 16px;
+    color: black;
+    background-color: #76ed21;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    /* text-decoration: none; */
+    text-align: center;
   }
   
   
@@ -508,7 +577,7 @@
     .subir{
       width: 5%;
       display: flexbox;
-      margin-left: 350px;
+      margin-right: 5%;
       height: 65px;
     }
     .container {
@@ -541,17 +610,17 @@
     }
     
     a:hover {
-      background-color:rgb(0, 111, 128);
+      color: #000;
     }
     
     
     header {
-      background-color:rgb(0, 135, 0);
+      background-color:rgba(0, 192, 115, 0.744);
       color: red;
       padding: 15px;
       text-align: center;
-      font-family: fantasy;
       list-style-type: style none;
+      box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
     }
     
     footer {
@@ -573,6 +642,7 @@
     a{
       color: rgb(255, 255, 255);
       text-align: center;
+      text-decoration: none;
     }
     
     h1, h2, p, a, ol, li, figcaption {
