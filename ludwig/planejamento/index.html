@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KonMari na Vida Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="kayne.png">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Marie Kondo</h1>
+    </div>   
+ 
+    <div class="container" id="page1">
+        <div class="card light question">
+            <h2>O que é o método KonMari?</h2>
+            <p>A japonesa Marie Kondo introduziu seu método de limpeza KonMari em 2011 com o livro A Magia da Arrumação. A Netflix lançou este ano a série Ordem na Casa com Marie Kondo, que se tornou um dos programas mais vistos.</p>
+        </div>
+        <div class="card dark question">
+            <h2>Essa ferramenta é um APP?</h2>
+            <p>Não, o método é uma filosofia, mas pode ser aplicado em ferramentas digitais como aplicativos de organização e produtividade.</p>
+        </div>
+        <div class="card light">
+            <h2>Função da ferramenta</h2>
+            <p>A função é ajudar a organizar arquivos e informações digitais, eliminando o que não é necessário.</p>
+        </div>
+        <div class="card dark">
+            <h2>Como pode ajudar?</h2>
+            <p>Ajuda a planejar melhor, mantendo apenas o que é relevante, e proporcionando uma sensação de leveza.</p>
+        </div>
+        <div class="card light">
+            <h2>Exemplo prático</h2>
+            <p>Use aplicativos como Todoist ou Trello para organizar tarefas e projetos, aplicando a filosofia de manter apenas o que traz alegria e propósito.</p>
+        </div>
+    </div>
+ 
+    <div class="image-slider" style="background-color: #f8c4bc;">
+        <img src="evernote.png" alt="evernote"
+        <img src="todoist.png" alt="Imagem 2">
+        <img src="habitica.png" alt="Imagem 3">
+        <img src="notion.png" alt="Imagem 2">
+    </div>
+ 
+    <div class="container" id="page2">
+        <div class="card light">
+            <h2>Organizando sua vida digital</h2>
+            <p>Aplique o método KonMari também na sua vida digital, mantendo arquivos e documentos que trazem alegria.</p>
+        </div>
+        <div class="card dark">
+            <h2>Ferramentas úteis</h2>
+            <p>Utilize ferramentas como Google Drive e Notion para organizar suas informações de forma eficaz.</p>
+        </div>
+        <div class="card light">
+            <h2>Mantenha o foco</h2>
+            <p>Evite distrações digitais e mantenha apenas os aplicativos que realmente ajudam.</p>
+        </div>
+        <div class="card dark">
+            <h2>Revisões periódicas</h2>
+            <p>Reserve um tempo a cada mês para revisar e reorganizar seus arquivos.</p>
+        </div>
+        <div class="card light">
+            <h2>Benefícios do método</h2>
+            <p>Um ambiente organizado pode reduzir o estresse e aumentar a produtividade.</p>
+        </div>
+        <div class="card dark">
+            <h2>Dicas de organização digital</h2>
+            <p>Crie pastas específicas para diferentes categorias e mantenha apenas o que realmente usa.</p>
+        </div>
+    </div>
+ 
+    <div class="button-container">
+        <button class="bnt" onclick="location.href='list.html'">lista de tarefas</button>
+    </div>
+   
+    <script>
+       
+        window.onload = function() {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            let scrollPosition = 0;
+            const scrollStep = 1;
+            const scrollInterval = setInterval(() => {
+                scrollPosition += scrollStep;
+                window.scrollTo(0, scrollPosition);
+ 
+       
+                if (scrollPosition + window.innerHeight >= document.body.scrollHeight) {
+                    clearInterval(scrollInterval);
+                    window.scrollTo(0, headerHeight);
+                }
+            }, 10);
+        };
+    </script>
+    <footer class="rodape">
+        <p>
+            <a href="https://senacscs.github.io/t4/andri/" target="_blank">Andrielen M.</a> |
+            <a href="https://senacscs.github.io/t4/Ludwig/" target="_blank">Gabriel L.</a> |
+            <a href="https://senacscs.github.io/t4/backes/" target="_blank">Pedro B.</a>
+           
+        </p>
+    </footer>
+</body>
+</html>
+ 

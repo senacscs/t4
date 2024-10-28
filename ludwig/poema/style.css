@@ -1,0 +1,165 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #f8f2f2;
+    background-image: url(imagens/emocoes-digitais-a-magia-dos-gifs-de-coracao-39.gif);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid black;
+}
+
+h1 {
+    text-align: center;
+    color: #fffdfd;
+    margin-bottom: 30px;
+}
+
+.poema pre {
+    margin-bottom: 40px;
+    background-image: url(imagens/fundo-de-dia-dos-namorados-estilo-grunge-com-design-de-coracoes_1048-17781.jpg);
+    
+}
+
+.poema h2 {
+    color: #3e0000;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    
+}
+
+pre {
+    background-color: #f7f7f7;
+    border-left: 4px solid #ff767d;
+    padding: 15px;
+    white-space: pre-wrap; /* Ensures long lines wrap correctly */
+    overflow: auto;
+    border-radius: 5px;
+    text-align: justify;
+    
+}
+.menu {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+ 
+  .menu .menu-lines {
+    position: fixed;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+ 
+  }
+ 
+  .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(169, 169, 169);
+    border-radius: 3px;
+    transition: all ease .2s;
+  }
+ 
+  .menu .menu-fake {
+    position: fixed;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+  }
+ 
+  .menu .menu-fake:checked~.menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg)scaleX(1.25);
+  }
+ 
+  .menu .menu-fake:checked~.menu-lines span:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .menu .menu-fake:checked~.menu-lines span:nth-child(3) {
+    transform: rotate(-45deg)scaleX(1.25);
+    transform-origin: 0% 100%;
+  }
+ 
+  .menu ul {
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 250px;
+    background-color: rgb(19, 19, 19);
+    height: 100vh;
+    padding-top: 100px;
+    margin-left: -500px;
+    transition: all ease .4s;
+  }
+ 
+  .menu .menu-fake:checked~ul {
+    margin-left: 0;
+  }
+ 
+  .menu ul li {
+    padding: 10px 30px;
+ 
+  }
+ 
+  .menu li a:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-top: 300px;
+    letter-spacing: 2px;
+  }
+ 
+  .menu ul li a:hover {
+    color: rgb(169, 169, 169);
+    transition: all ease .3s;
+  }
+ 
+  .dropdown-menu a {
+    display: block;
+    color: white;
+}
+
+.poema {
+  color: rgb(255, 251, 251);
+  text-align: center;
+}
+
+.caixa-poema {
+  max-width: 570px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ff0808;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-image: url;
+  border: 5px solid rgb(255, 254, 254);
+}
+.poema h2 {
+  text-align: center;
+  color: #eee6e6;
+  margin-bottom: 20px;
+}
+.poema p {
+  line-height: 1.6;
+  margin: 10px 0;
+  text-align: center;
+  
+
+}
+
+
