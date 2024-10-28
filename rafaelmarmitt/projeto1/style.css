@@ -1,0 +1,199 @@
+@media (min-width:768px) {
+body {
+
+    background-color: rgb(238, 238, 238);
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    font-family: sans-serif;
+
+    text-align: center ;
+
+}
+
+
+.al h1 {
+
+    color: black;
+
+    font-size: 60px;
+
+    text-align: center;
+
+    margin-top: 200px;
+
+}
+
+.al p {
+
+    color: black;
+
+    text-align: center;
+
+    margin-top: -30px;
+
+}
+
+header {
+
+    background-color: black;
+    
+    margin: 0;
+
+    display: block;
+
+    height: 200px;
+
+    color: white;
+
+    text-align: center;
+
+    padding:  0;
+}
+
+.ref {
+    
+    text-align: center;
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.titulo {
+    
+    color: white;
+
+    font-size: 40px;
+
+    text-align: center;
+
+}
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: gray;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+  
+  a:active {
+    color: gray;
+  } 
+  
+ul {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+p {
+    text-align: center;
+}
+}
+
+
+@media (max-width:768px) {
+    body {
+
+        background-color: rgb(238, 238, 238);
+    
+        margin: 0;
+    
+        padding: 0;
+    
+        width: 100%;
+    
+        height: 100vh;
+    
+        font-family: sans-serif;
+    
+    }
+    
+    .al p {
+    
+        color: black;
+    
+        text-align: center;
+    
+        margin-top: -30px;
+    
+    }
+    
+}
+
+.conteudo {
+    text-align: center;
+}
+
+hr {    
+
+    background-color: black;
+
+    border-color: black;
+
+}
+
+.ref {
+    
+    text-align: center;
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+header {
+
+    background-color: black;
+    
+    margin: 0;
+
+    display: block;
+
+    height: 200px;
+
+    color: white;
+
+    text-align: center;
+}
+
+.titulo {
+    
+        color: white;
+    
+        font-size: 40px;
+    
+        text-align: center;
+    
+}
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: gray;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+  
+  a:active {
+    color: gray;
+  }
+
+ul {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    text-align: center;
+}
