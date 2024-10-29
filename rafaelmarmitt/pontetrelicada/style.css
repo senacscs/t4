@@ -293,3 +293,7 @@ li {
     display: inline-block;
     margin-left: 15%;
 }
+
+.mapa {
+    border-radius: 20px;
+    }
