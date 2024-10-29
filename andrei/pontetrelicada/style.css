@@ -1,0 +1,295 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+
+/* Start Landing Page */
+.landing-page header {
+    min-height: 80px;
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .landing-page header {
+        min-height: auto;
+        display: initial;
+    }
+}
+
+.landing-page header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.landing-page header .logo {
+    color: #5d5d5d;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.landing-page header .links {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .links {
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+.landing-page header .links li {
+    margin-left: 30px;
+    color: #5d5d5d;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .links li {
+        margin-left: auto;
+    }
+}
+
+.landing-page header .links li:last-child {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #6c63ff;
+}
+
+.landing-page header .links li:not(:last-child):hover {
+    color: #6c63ff;
+}
+
+.landing-page .content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 140px;
+    min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 767px) {
+    .landing-page .content .container {
+        gap: 0;
+        min-height: calc(100vh - 101px);
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page .content .info {
+        text-align: center;
+        margin-bottom: 15px
+    }
+}
+
+.landing-page .content .info .enzo1 {
+    color:#6c63ff;
+    font-size: 44px;
+}
+
+.landing-page .content .info .enzo   {
+    box-shadow: 0 0 20px #6c63ff;
+}
+
+.landing-page .content .info .mitt1 {
+    color: #413ad4;
+    font-size: 44px;
+}
+
+.landing-page .content .info .mitt {
+    box-shadow: 0 0 20px #413ad4;
+}
+
+.landing-page .content .info .better1 {
+    color:#6c63ff;
+    font-size: 44px;
+}
+
+.landing-page .content .info .better{
+    box-shadow: 0 0 20px #6c63ff;
+}
+
+
+.landing-page .content .info .dudu1 {
+    color: #413ad4;
+    font-size: 44px;
+}
+
+.landing-page .content .info .dudu{
+    box-shadow: 0 0 20px #413ad4;
+}
+
+
+.landing-page .content .info h1 {
+    color: #5d5d5d;
+    font-size: 44px;
+}
+
+
+
+
+.landing-page .content .info p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #5d5d5d;
+}
+
+.landing-page .content .info button {
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #6c63ff;
+}
+
+.landing-page .content .image img {
+    max-width: 100%;
+}
+
+/* End Landing Page */
+
+li {
+    padding-bottom: 20px;
+}
+
+
+.menu1 {
+    padding-top: 20px;
+}
+
+.logo1 {
+    width: 200px;
+    height: 200px;
+}
+
+.ftteam {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    margin: 5% 5%;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 7%;
+
+}
+
+.roles {
+    transition: transform 0.5s ease-in-out;
+}
+
+.roles:hover {
+    transform: scale(1.2);
+}
+
+.ftteam:hover {
+    transform: scale(1.2);
+}
+
+.roles {
+    display: inline-block;
+    margin-left: 3.5%;
+}
+
+.enzo {
+    border-width: 5px;
+    border-style: solid;
+    border-color: #6c63ff;
+}
+
+.mitt {
+    border-width: 5px;
+    border-style: solid;
+    border-color:#413ad4;
+}
+
+.better {
+    border-width: 5px;
+    border-style: solid;
+    border-color:#6c63ff;
+}
+
+.dudu {
+    border-width: 5px;
+    border-style: solid;
+    border-color:#413ad4;
+}
+
+.video {
+    border-color: #6c63ff;
+    border-width: 5px;
+    border-style:solid;
+    margin-top: 5%;
+    border-radius: 20px;
+    display: inline-block;
+    margin-left: 15%;
+}
