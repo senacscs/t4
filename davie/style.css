@@ -21,10 +21,14 @@ main {
 }
 section {
     background-color: #083604;
+    color: #b5b4b4;
     border: 1px solid #094000;
     margin: 20px;
     padding: 20px;
     width: calc(33.33% - 40px);
+    transition: background-color 0.5s ease-in-out;
+    transition: transform 1s;
+    transform: translateX(0) scale(1);
 }
 h2 {
     font-size: 24px;
@@ -41,13 +45,9 @@ a:hover {
     text-decoration: underline;
     color: #23527c;
 }
-section {
-    transition: background-color 0.5s ease-in-out;
-    transition: transform 1s;
-    transform: translateX(0) scale(1);
-}
 section:hover {
     background-color: #07c60d;
+    color: #000;
     transform: translateX(0) scale(1.04);
 }
 footer {
