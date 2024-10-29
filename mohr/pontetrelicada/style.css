@@ -176,7 +176,7 @@ nav ul li a:hover {
 .sobre-image img {
     width: 500px;
     position: relative;
-    right: 50px;
+    right: 20px;
     border-radius: 20px;
 }
 .sobre-image img:hover {
@@ -227,7 +227,7 @@ nav ul li a:hover {
 .ponte-image img {
     width: 500px;
     position: relative;
-    right: 700px;
+    right: 660px;
     border-radius: 20px;
 }
 .ponte-image img:hover {
@@ -278,7 +278,7 @@ nav ul li a:hover {
 .processo-image img {
     width: 400px;
     position: relative;
-    right: 100px;
+    right: 50px;
     border-radius: 20px;
 }
 .processo-image img:hover {
@@ -312,7 +312,7 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 600px;
+    left: 550px;
     text-align: end;
 }
 
@@ -323,13 +323,13 @@ nav ul li a:hover {
     font-style: normal;
     text-align: end;
     position: relative;
-    left: 600px;
+    left: 550px;
 }
 
 .entregas-image img {
     width: 400px;
     position: relative;
-    right: 800px;
+    right: 760px;
     border-radius: 20px;
 }
 
