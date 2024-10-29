@@ -1,0 +1,26 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#pt {
+    background-color: #feffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    color: #000000;
+}
+
+#en{
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    color: #feffff;
+}
