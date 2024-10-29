@@ -270,6 +270,21 @@
     max-width: 350px;
   }
 
+  .blocos-projeto-2 {
+    position: relative;
+    left: 850px;
+    bottom: 1350px;
+    background-color: black;
+    position: relative;
+    color: white;
+    border: 0.1rem solid white;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 white;
+    max-width: 350px;
+    max-height: 500px;
+  }
+
   /*Fim Dos Blocos*/
 
   .content {
