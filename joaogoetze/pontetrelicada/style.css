@@ -93,7 +93,6 @@
   .container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espaçamento entre as imagens */
   }
 
   .container img {
@@ -120,12 +119,15 @@
     height: 20px;
   }
 
-iframe{
-  width: 200;
+/* iframe{
   align-items: center;
   margin: auto;
+} */
 
-}
+/* 
+.width-video{
+  /* width: 20%; 
+} */
 
 a:hover{
   color:#d2ff8a;
