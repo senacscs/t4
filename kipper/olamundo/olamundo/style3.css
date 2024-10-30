@@ -1,0 +1,29 @@
+body {
+    background-image: url(macaco\ batendo.jpg);
+
+}
+
+i {
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+p {
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
