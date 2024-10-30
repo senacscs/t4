@@ -52,7 +52,6 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-
   }
 
   .ladoalado2 {
@@ -84,7 +83,6 @@
     color: #fff;
     box-shadow: none;
     outline: none;
-
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
   }
 
