@@ -7,6 +7,7 @@ html, body {
 
 body {
     background-color: #999;
+    overflow-x: hidden;
 }
 
 header {
@@ -126,4 +127,48 @@ footer {
 h5 {
     position: relative;
     bottom: 40px;
+}
+
+#selecione {
+    position: relative;
+    left: 360px;
+    bottom: 50px;
+}
+
+#select {
+    position: relative;
+    left: 390px;
+    bottom: 50px;
+}
+
+.botoes {
+    position: relative;
+
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 200px;
+    border-color: black;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 20px;
+    font-family: impact, serif;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}
+
+#botao-1 {
+    position: relative; 
+    left: 330px;
+}
+
+#botao-2 {
+    position: relative;
+    left: 450px;
 }

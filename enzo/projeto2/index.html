@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="ods_icon-removebg-preview.png" type="image/x-icon">
 </head>
 <body>
+    <div class="lang" id="pt">
     <header><h1>Erradicação da Pobreza</h1></header>
     <div class="Navegador">
         <nav>
@@ -19,6 +20,15 @@
             </ul>
         </nav>
     </div>
+        <section class="idioma">
+            <h2 id="selecione">Selecione a linguagem</h2>
+            <p id="select">Select the language</p>
+     <!-- Botões para alternar idioma -->
+      <div class="botoes">
+     <button onclick="setLanguage('pt')" id="botao-1">Português</button>
+     <button onclick="setLanguage('en')" id="botao-2">English</button>
+    </div>
+</section>
     <section>
         <h2>Introdução:</h2>
         <hr>
@@ -65,5 +75,108 @@
     <footer>
         <h5>© <a href="https://senacscs.github.io/t4/enzo/" target="_blank">Enzo Bossardi</a></h5>
     </footer>
+</div>
+
+<!--TESTE-1-->
+
+
+<div class="lang" id="en">
+    <header><h1>Eradication of poverty</h1></header>
+    <div class="Navegador">
+        <nav>
+            <ul>
+                <li><a href="#Intro">Introduction</a></li>
+                <li><a href="#Obje">Objectives</a></li>
+                <li><a href="#Hipo">Hypotheses</a></li>
+                <li id="Intro"><a href="#Prob">Research Problem</a></li>
+            </ul>
+        </nav>
+    </div>
+        <section class="idioma">
+            <h2 id="selecione">Select the language</h2>
+            <p id="select">Selecione a linguagem</p>
+     <!-- Botões para alternar idioma -->
+      <div class="botoes">
+     <button onclick="setLanguage('pt')" id="botao-1">Português</button>
+     <button onclick="setLanguage('en')" id="botao-2">English</button>
+    </div>
+</section>
+    <section>
+        <h2>Introduction:</h2>
+        <hr>
+        <p>Eradicating poverty is one of the UN's Sustainable Development Goals, aiming to eliminate or reduce extreme poverty. This objective covers not only the lack of income, but also the lack of access to rights and opportunities, such as education, health and housing. Achieving it requires collaboration between governments, civil society, and international organizations, as well as the implementation of inclusive policies that promote equitable economic growth and equal access to resources and services.  </p>
+    </section>
+    <section id="Obje">
+        <h2>Project Objectives:</h2>
+        <hr>
+        <h3>Main Objective:</h3>
+        <p>
+           - Develop an awareness website that provides information and ideas on how to alleviate or even eradicate poverty in some countries.</p>
+           <h3>Secondary Objectives:</h3>
+           <h4>Ensure equal access to economic resources:</h4>
+           <p>- Ensure that everyone, especially the poor, has equal access to financial services, land and natural resources.</p>
+           <h4 id="txtcentro1">Provide social protection for all:</h4>
+           <p>- Create social safety nets to protect the poor and vulnerable against economic shocks and other disasters.</p>
+           <h4 id="txtcentro2">Eliminate extreme poverty:</h4>
+           <p>- Ensure that no one lives on less than $1.25 a day by 2030.</p>
+    </section>
+    <section id="Hipo">
+        <h2>Hypotheses:</h2>
+        <hr>
+        <p>If we develop an interactive and accessible website that provides educational resources, practical tools and a community engagement platform, perhaps it will be possible to significantly increase awareness, empowerment and collaboration among individuals, communities and organizations, resulting in effective poverty reduction at the local and global.</p>
+    </section>
+    <section id="Prob">
+        <h2>Search Problem:</h2>
+        <hr>
+        <p>What effective strategies can be implemented to eradicate poverty in developing urban communities, taking into account socioeconomic, cultural and political factors?</p>
+    </section>
+    <section id="imagens">
+        <marquee behavior="" direction="" scrollamount="10">
+            <img src="imagens 1.jpg" alt="criança" width="300px" height="200px">
+            <img src="imagem 2.jpg" alt="favela" width="300px" height="200px">
+            <img src="imagem 3.jpg" alt="crianças" width="300px" height="200px">
+            <img src="imagem 4.jpg" alt="piazinho" width="300px" height="200px">
+            <img src="imagem 5.jpg" alt="piazinho" width="300px" height="200px">
+            <img src="imagem 6.jpg" alt="piazinho" width="300px" height="200px">
+            <img src="imagem 7.jpg" alt="piazinho" width="300px" height="200px">
+            <img src="imagem 8.jpg" alt="piazinho" width="300px" height="200px">
+            <img src="imagem 9.jpg" alt="piazinho" width="300px" height="200px">
+            <img src="imagem 10.jpg" alt="piazinho" width="300px" height="200px">
+        </marquee>
+    </section>
+    <footer>
+        <h5>© <a href="https://senacscs.github.io/t4/enzo/" target="_blank">Enzo Bossardi</a></h5>
+    </footer>
+</div>
+
+
+    <script>
+        // Função para verificar o idioma armazenado no localStorage
+        function getSavedLanguage() {
+            return localStorage.getItem('preferredLang');
+        }
+
+        // Função para definir e salvar o idioma
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            showLanguage(lang);
+        }
+
+        // Função para mostrar o conteúdo do idioma selecionado
+        function showLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+            document.getElementById(lang).style.display = 'block';
+        }
+
+        // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('pt') ? 'pt' : 'en';
+        }
+
+        // Configuração inicial ao carregar a página
+        const lang = getSavedLanguage() || detectBrowserLanguage();
+        setLanguage(lang);
+    </script>
 </body>
 </html>
