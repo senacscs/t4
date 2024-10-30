@@ -1,0 +1,107 @@
+@media (min-width: 768px) {
+    header {
+        background-color: darkgrey;
+        width: 100%;
+        padding: 1px;
+        text-align: center;
+        box-shadow: rgba(91, 91, 91, 0.35) 0px 5px 15px;
+    }
+    
+    nav ul li {
+        align-content: center;
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    a {
+        color:black;
+  
+    }
+    
+    h1 {
+        font-size:xx-large;
+        margin-bottom: -8px;
+    }
+
+    p {
+        font-size: large;
+    }
+    
+    a:hover {
+        color:blue;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .texto {
+        margin-right: auto;
+        margin-left: auto;
+        width: 95%;
+    }
+    
+    .contorno {
+        background-color: darkgray;
+        border-radius: 30px;
+        margin-top: 15px;
+        width: 70%;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-color: rgb(35, 34, 34);
+        width: 100%;
+        padding: 1px;
+        text-align: center;
+        
+    }
+
+    body {
+        background-color: darkgrey;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        color: rgb(122, 122, 122);
+        padding: 0;
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    a:hover {
+        color: grey;
+    }
+
+    a {
+        color: grey;
+    }
+    .contorno {
+        background-color: rgb(35, 34, 34);
+        border-radius: 30px;
+        margin-top: 15px;
+        width: 90%;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    a:hover,
+    a:active,
+    a:visited,
+    a:link {
+        color: rgb(0, 0, 0);
+    }
+}
