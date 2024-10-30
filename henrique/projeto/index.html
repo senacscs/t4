@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Projeto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" id="favicon" href="ods7.png" type="icon">
+    <style>
+        .language-buttons {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="language-buttons">
+            <button onclick="setLanguage('pt')">Português</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+        <h1 id="header-title">Energia Acessível e Limpa</h1>
+        <h1 id="header-subtitle">Garantir o acesso a fontes de energia fiáveis, sustentáveis e modernas para todos.</h1>
+        <a href="https://brasil.un.org/pt-br/sdgs/7">
+            <img id="header-image" src="ods7.png" width="200px" alt="ODS 7">
+        </a>
+    </header>
+    <main>
+        <section>
+            <h1 id="intro-title">Introdução e Justificativa:</h1>
+            <h3 id="intro-justification">O Objetivo de Desenvolvimento Sustentável 7 da ONU busca garantir acesso universal a energia limpa e sustentável até 2030. A meta 7.2 visa aumentar significativamente a participação de energias renováveis na matriz energética global. Desde 2010, a capacidade instalada de energia solar e eólica triplicou, segundo a Agência Internacional de Energia Renovável (IRENA), mas muitas comunidades ainda enfrentam desafios financeiros e carecem de informações sobre essas tecnologias. 
+                Diante desse cenário, a pesquisa propõe o desenvolvimento de um aplicativo móvel interativo que eduque e incentive a adoção de energias renováveis. A plataforma visa aumentar o conhecimento sobre os benefícios e a viabilidade dessas tecnologias, contribuindo para o ODS 7. Assim, esperamos fornecer uma ferramenta acessível que capacite indivíduos e comunidades a implementar soluções energéticas sustentáveis, promovendo uma transformação positiva no uso dos recursos energéticos.</h3>
+        </section>
+        <section>
+            <h1 id="problem-title">Problema de Pesquisa:</h1>
+            <h3 id="problem-description">Como podemos aumentar a adoção de energias renováveis através de uma plataforma digital interativa?</h3>
+        </section>
+        <section>
+            <h1 id="objective-title">Objetivo Principal:</h1>
+            <h3 id="main-objective">Desenvolver um aplicativo móvel interativo que eduque e incentive indivíduos e comunidades a adotarem fontes de energia renováveis, oferecendo informações detalhadas sobre benefícios ambientais, viabilidade econômica, opções disponíveis localmente e passos práticos para implementação.</h3>
+        </section>
+        <section>
+            <h1 id="hypotheses-title">Hipóteses:</h1>
+            <h3 id="hypothesis-1">1. A utilização do aplicativo móvel pode aumentar significativamente o conhecimento sobre energias renováveis e motivar a adoção de tecnologias sustentáveis, contribuindo diretamente para o aumento da participação das energias renováveis na matriz energética global até 2030.</h3>
+            <h3 id="hypothesis-2">2. Através do aplicativo móvel estabelecer uma base sólida de conhecimento e conscientização ambiental desde cedo, influenciando positivamente o comportamento das futuras gerações.</h3>
+        </section>
+        <section>
+            <h1 id="app-description-title">Descrição do Aplicativo:</h1>
+            <h3 id="app-description-1">1. Educação sobre Energias Renováveis: Oferece explicações claras sobre diferentes tipos de energias renováveis (solar, eólica, hidrelétrica), seus benefícios ambientais e funcionamento.</h3>
+            <h3 id="app-description-2">2. Guias Práticos: Fornece passos detalhados para a instalação de sistemas de energia renovável em residências, com informações sobre custos, economia a longo prazo e incentivos fiscais.</h3>
+            <h3 id="app-description-3">3. Calculadoras de Viabilidade: Ferramentas interativas que ajudam a estimar a economia de energia e a redução de emissões ao adotar energias renováveis.</h3>
+            <h3 id="app-description-4">4. Comunidades: Fóruns para troca de experiências, estudos de caso de sucesso e direcionamento a profissionais e empresas do setor.</h3>
+            <h3 id="app-description-5">5. Atualizações e Notificações: Informações em tempo real sobre novas tecnologias, mudanças regulatórias e eventos locais de interesse.</h3>
+        </section>
+    </main>
+
+    <script>
+        function getSavedLanguage() {
+            return localStorage.getItem('preferredLang');
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            showLanguage(lang);
+        }
+
+        function showLanguage(lang) {
+            const translations = {
+                pt: {
+                    title: "Projeto",
+                    headerTitle: "Energia Acessível e Limpa",
+                    headerSubtitle: "Garantir o acesso a fontes de energia fiáveis, sustentáveis e modernas para todos.",
+                    introTitle: "Introdução e Justificativa:",
+                    introJustification: "O Objetivo de Desenvolvimento Sustentável 7 da ONU busca garantir acesso universal a energia limpa e sustentável até 2030. A meta 7.2 visa aumentar significativamente a participação de energias renováveis na matriz energética global. Desde 2010, a capacidade instalada de energia solar e eólica triplicou, segundo a Agência Internacional de Energia Renovável (IRENA), mas muitas comunidades ainda enfrentam desafios financeiros e carecem de informações sobre essas tecnologias. Diante desse cenário, a pesquisa propõe o desenvolvimento de um aplicativo móvel interativo que eduque e incentive a adoção de energias renováveis. A plataforma visa aumentar o conhecimento sobre os benefícios e a viabilidade dessas tecnologias, contribuindo para o ODS 7. Assim, esperamos fornecer uma ferramenta acessível que capacite indivíduos e comunidades a implementar soluções energéticas sustentáveis, promovendo uma transformação positiva no uso dos recursos energéticos.",
+                    problemTitle: "Problema de Pesquisa:",
+                    problemDescription: "Como podemos aumentar a adoção de energias renováveis através de uma plataforma digital interativa?",
+                    objectiveTitle: "Objetivo Principal:",
+                    mainObjective: "Desenvolver um aplicativo móvel interativo que eduque e incentive indivíduos e comunidades a adotarem fontes de energia renováveis, oferecendo informações detalhadas sobre benefícios ambientais, viabilidade econômica, opções disponíveis localmente e passos práticos para implementação.",
+                    hypothesesTitle: "Hipóteses:",
+                    hypothesis1: "1. A utilização do aplicativo móvel pode aumentar significativamente o conhecimento sobre energias renováveis e motivar a adoção de tecnologias sustentáveis, contribuindo diretamente para o aumento da participação das energias renováveis na matriz energética global até 2030.",
+                    hypothesis2: "2. Através do aplicativo móvel estabelecer uma base sólida de conhecimento e conscientização ambiental desde cedo, influenciando positivamente o comportamento das futuras gerações.",
+                    appDescriptionTitle: "Descrição do Aplicativo:",
+                    appDescription1: "1. Educação sobre Energias Renováveis: Oferece explicações claras sobre diferentes tipos de energias renováveis (solar, eólica, hidrelétrica), seus benefícios ambientais e funcionamento.",
+                    appDescription2: "2. Guias Práticos: Fornece passos detalhados para a instalação de sistemas de energia renovável em residências, com informações sobre custos, economia a longo prazo e incentivos fiscais.",
+                    appDescription3: "3. Calculadoras de Viabilidade: Ferramentas interativas que ajudam a estimar a economia de energia e a redução de emissões ao adotar energias renováveis.",
+                    appDescription4: "4. Comunidades: Fóruns para troca de experiências, estudos de caso de sucesso e direcionamento a profissionais e empresas do setor.",
+                    appDescription5: "5. Atualizações e Notificações: Informações em tempo real sobre novas tecnologias, mudanças regulatórias e eventos locais de interesse."
+                },
+                en: {
+                    title: "Project",
+                    headerTitle: "Affordable and Clean Energy",
+                    headerSubtitle: "Ensure access to reliable, sustainable, and modern energy for all.",
+                    introTitle: "Introduction and Justification:",
+                    introJustification: "The Sustainable Development Goal 7 of the UN aims to ensure universal access to clean and sustainable energy by 2030. Target 7.2 aims to significantly increase the share of renewable energy in the global energy mix. Since 2010, the installed capacity of solar and wind energy has tripled, according to the International Renewable Energy Agency (IRENA), but many communities still face financial challenges and lack information about these technologies. In light of this scenario, the research proposes the development of an interactive mobile application that educates and encourages the adoption of renewable energy. The platform aims to increase knowledge about the benefits and viability of these technologies, contributing to SDG 7. Thus, we hope to provide an accessible tool that empowers individuals and communities to implement sustainable energy solutions, promoting a positive transformation in the use of energy resources.",
+                    problemTitle: "Research Problem:",
+                    problemDescription: "How can we increase the adoption of renewable energy through an interactive digital platform?",
+                    objectiveTitle: "Main Objective:",
+                    mainObjective: "To develop an interactive mobile application that educates and encourages individuals and communities to adopt renewable energy sources, providing detailed information on environmental benefits, economic viability, locally available options, and practical steps for implementation.",
+                    hypothesesTitle: "Hypotheses:",
+                    hypothesis1: "1. The use of the mobile application can significantly increase knowledge about renewable energy and motivate the adoption of sustainable technologies, directly contributing to the increase of renewable energy participation in the global energy matrix by 2030.",
+                    hypothesis2: "2. Through the mobile application, establish a solid knowledge base and environmental awareness from an early age, positively influencing the behavior of future generations.",
+                    appDescriptionTitle: "Application Description:",
+                    appDescription1: "1. Education on Renewable Energy: Provides clear explanations of different types of renewable energy (solar, wind, hydropower), their environmental benefits, and functioning.",
+                    appDescription2: "2. Practical Guides: Provides detailed steps for installing renewable energy systems in homes, with information on costs, long-term savings, and tax incentives.",
+                    appDescription3: "3. Feasibility Calculators: Interactive tools that help estimate energy savings and emissions reductions when adopting renewable energy.",
+                    appDescription4: "4. Communities: Forums for sharing experiences, success stories, and guidance to professionals and companies in the sector.",
+                    appDescription5: "5. Updates and Notifications: Real-time information on new technologies, regulatory changes, and local events of interest."
+                }
+            };
+
+            document.getElementById("page-title").textContent = translations[lang].title;
+            document.getElementById("header-title").textContent = translations[lang].headerTitle;
+            document.getElementById("header-subtitle").textContent = translations[lang].headerSubtitle;
+
+            // Atualiza os títulos e conteúdos das seções
+            document.getElementById("intro-title").textContent = translations[lang].introTitle;
+            document.getElementById("intro-justification").textContent = translations[lang].introJustification;
+            document.getElementById("problem-title").textContent = translations[lang].problemTitle;
+            document.getElementById("problem-description").textContent = translations[lang].problemDescription;
+            document.getElementById("objective-title").textContent = translations[lang].objectiveTitle;
+            document.getElementById("main-objective").textContent = translations[lang].mainObjective;
+            document.getElementById("hypotheses-title").textContent = translations[lang].hypothesesTitle;
+            document.getElementById("hypothesis-1").textContent = translations[lang].hypothesis1;
+            document.getElementById("hypothesis-2").textContent = translations[lang].hypothesis2;
+            document.getElementById("app-description-title").textContent = translations[lang].appDescriptionTitle;
+            document.getElementById("app-description-1").textContent = translations[lang].appDescription1;
+            document.getElementById("app-description-2").textContent = translations[lang].appDescription2;
+            document.getElementById("app-description-3").textContent = translations[lang].appDescription3;
+            document.getElementById("app-description-4").textContent = translations[lang].appDescription4;
+            document.getElementById("app-description-5").textContent = translations[lang].appDescription5;
+
+            // Alterar favicon e imagem
+            document.getElementById("favicon").href = lang === 'en' ? 'ods7en.png' : 'ods7.png';
+            document.getElementById("header-image").src = lang === 'en' ? 'ods7en.png' : 'ods7.png';
+        }
+
+        // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('pt') ? 'pt' : 'en';
+        }
+
+        // Configuração inicial ao carregar a página
+        const lang = getSavedLanguage() || detectBrowserLanguage();
+        setLanguage(lang);
+    </script>
+</body>
+</html>

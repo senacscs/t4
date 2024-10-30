@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+    body {
+        background-color:white;
+        margin: 0;
+}
+
+h3 {
+        font-style: oblique;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+        background-color:#fcd666cc;
+        margin: 0;
+}
+    
+h1 {
+        font-style: oblique;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+        background-color:#fcc313;
+}
+    
+header {
+        background-color:white;
+        text-align: center;
+}
+}
+@media (min-width: 768px) {
+    body {
+        background-color:white;
+        margin: 0;
+}
+
+h3 {
+        font-style: oblique;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+        background-color:#fcd666cc;
+        margin: 0;
+}
+    
+h1 {
+        font-style: oblique;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+        background-color:#fcc313;
+}
+    
+header {
+        background-color:white;
+        text-align: center;
+}
+}
