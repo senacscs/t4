@@ -1,168 +1,92 @@
-/* Resetando margens e paddings padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
 }
 
-/* Estilizando o body */
 body {
-    background-color: #f4f4f4; /* Cor de fundo clara */
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
     color: #333;
-    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    padding-bottom: 50px; /* Para não ficar sobrepondo ao footer */
 }
 
-/* Cabeçalho */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header {
-    background-color: #4CAF50; /* Cor verde mais vibrante */
+    background: linear-gradient(to right, #4a90e2, #9013fe);
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Cor dourada ao passar o mouse */
-    transform: scale(1.05);
-}
-
-/* Seção Principal */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    color: #ffcc00;
 }
 
 .content-section {
-    background-color: #fff;
-    padding: 30px;
-    margin: 30px 0;
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.content-section:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
 }
 
 p {
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-/* Estilizando os links dos botões */
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #4CAF50;
+button {
+    background-color: #4a90e2;
     color: white;
-    text-decoration: none;
-    font-size: 1rem;
+    border: none;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+button:hover {
+    background-color: #357ABD;
 }
 
-/* Imagem representativa */
 img {
     max-width: 100%;
-    height: auto;
     border-radius: 8px;
-    margin-top: 20px;
-    border: 5px solid #eee;
+    margin: 20px 0;
 }
 
-/* Rodapé */
 footer {
-    background-color: #333;
+    background: #4a90e2;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 15px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-    nav ul {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .content-section {
-        padding: 20px;
-    }
-
-    .button {
-        padding: 10px 15px;
-    }
-
-    footer {
-        position: relative;
-        bottom: auto;
-    }
 }
