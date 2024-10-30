@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0%;
     padding: 0;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -24,7 +24,7 @@ body {
     width: 30px;
     height: 30px;
     background: rgb(122, 118, 118);
-    margin: 0 4px;
+    margin: 0 5px;
     border-radius: 50%;
     box-shadow: 0 0 0 10px rgb(102, 98, 98),
         0 0 50px rgb(82, 78, 78),
@@ -34,11 +34,11 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateY(100vh) scale(0);
+        transform: translateY(80vh) scale(0);
     }
 
     100% {
-        transform: translateY(-10vh) scale(1);
+        transform: translateY(-20vh) scale(1);
     }
 }
 
@@ -56,20 +56,39 @@ h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
     background: transparent;
+
 }
 
 a {
     text-decoration: none;
-    color: rgb(122, 108, 108);
+    color: rgb(142, 138, 138);
 }
 
 a:hover {
-    color: rgb(102, 98, 98);
+    color: rgb(122, 118, 118);
 }
 
-.texto {
-    margin-top: -350px;
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-basis: 180px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white)
 }
-p{
+article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    position: relative;
+    padding-block: 32px;
+}
+h1{
     background: transparent;
 }
+
