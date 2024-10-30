@@ -16,8 +16,10 @@ body {
 }
 
 .bolhas {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
+    z-index: -1;
+    height: 100%;
 }
 
 .bolhas span {
@@ -34,7 +36,7 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateY(80vh) scale(0);
+        transform: translateY(120vh) scale(0);
     }
 
     100% {
