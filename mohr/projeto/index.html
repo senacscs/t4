@@ -1,103 +1,269 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Integrador</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urbanisme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Concert+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Playpen+Sans:wght@100..800&family=Ribeye+Marrow&family=Sofadi+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div>
-  <h1 class="titulo" data-text="Projeto Integrador">Projeto Integrador</h1>
-  </div>
-  
-  <section class="menu">
+body -->
 
-  <h3 class="subtitulo2">Ensino especial em escolas particulares de Santa Cruz do Sul</h3>
-  <br>
-  <br>
-  <br>
 
-  <div class="ttl">
-  <h3 class="titulo1">Indrodução e Justificativa</h3>
-  </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Integrador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="" rel="stylesheet">
+  <link href="" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Playpen+Sans:wght@100..800&family=Ribeye+Marrow&family=Sofadi+One&display=swap" rel="stylesheet">
+<body>
 
-  <hr class="linha1">
-  <br>
+    <div class="botoes">
+    <button onclick="setLanguage('pt')" id="port">Português</button>
+        <button onclick="setLanguage('en')" id="engl">English</button>
+    </div>
 
-  <div class="txt">
-  <h3 class="texto1">A ODS 4, que trata da Educação de Qualidade, é um dos 17 Objetivos de Desenvolvimento Sustentável estabelecidos pela ONU em 2015, com o propósito de garantir uma educação inclusiva, equitativa e de qualidade para todos. Em um contexto geral onde as desigualdades educacionais continuam a ser um obstáculo para o desenvolvimento social e econômico, a ODS 4 destaca a importância de uma educação acessível e de alta qualidade por meio de promover a igualdade.</h3>
-  <br>
-  <h3 class="texto2">O acesso à educação de qualidade ainda é um desafio significativo em muitas partes do mundo. Muitos dos que frequentam a escola não alcançam níveis básicos de proficiência em leitura e matemática. Além disso, diferenças de gênero, econômicas e regionais aumentam essas questões, com meninas, crianças de áreas rurais e minorias étnicas enfrentando maiores dificuldades para acessar uma educação de qualidade.</h3>
-  <br>
-  <h3 class="texto3">A qualidade da educação é outro aspecto fundamental que precisa ser abordado para alcançar a ODS 4. Além de garantir o acesso, é essencial assegurar que o ensino seja relevante, inclusivo e adaptado às necessidades de todos os alunos. Isso exige investir na formação contínua de professores, melhorar a metodologia, e infraestrutura das escolas, onde habilidades como pensamento crítico, criatividade são cada vez mais valorizadas. A falta de professores qualificados continua a ser uma barreira significativa para a melhoria da qualidade do ensino em muitos países.</h3>
-  <br>
-  <h3 class="texto4">Diante desses desafios, esta pesquisa se propõe a investigar as principais barreiras ao cumprimento da ODS 4, com foco na qualidade da educação e melhora das metodologias. Este trabalho pretende criar um site para garantir que todos tenham a oportunidade de obter uma educação de qualidade, independentemente de suas circunstâncias.</h3>
-  </div>
-  <br>
-  <br>
-  <div class="ttl">
-  <h3 class="titulo2">Problema de Pesquisa</h3>
-  </div>
-  <hr class="linha2">
-  <br>
-  <div class="txt">
-  <h3 class="texto5">Como está a qualidade de ensino para adolescentes especiais nas escolas particulares de Santa Cruz do Sul?</h3>
-  </div>
-  <br>
-  <div class="ttl">
-  <h3 class="titulo3">Objetivo Principal</h3>
-  </div>
-  <hr class="linha3">
-  <br>
-  <div class="txt"></div>
-  <h3 class="texto6">Criar um site, onde os alunos poderão deixar suas opiniões, feedbacks e sugestões sobre a metodologia das escolas.</h3>
-  </div>
-  <br>
-  <div class="ttl">
-  <h3 class="titulo4">Hipóteses</h3>
-  </div>
-  <hr class="linha4">
-  <br>
-  <div class="txt"></div>
-  <h3 class="texto7">Criando um site, poderá ajudar os adultos/responsáveis a verem e entenderem como os alunos se sentem em relação ao método de ensino. E caso a metodologia não agrade o aluno, os superiores podem alterar algo, fazendo com que o aluno tenha uma melhor experiência.</h3>
-  </div>
+    <div class="lang" id="pt">
+    <header>
+        <nav id="navegar">
+            <div class="logo">
+                <a href="https://www.canva.com/design/DAGSVTxoKPg/9W6r8l47SpxU1gyYezVboQ/edit?utm_content=DAGSVTxoKPg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><img src="logo.png"></a>
+                <!-- <span class="Urbanisme">Urbanisme</span> -->
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#primeiralinha">Introdução</a></li>
+                <li><a href="#segundalinha">Justificativa</a></li>
+                <li><a href="#terceiralinha">Problema</a></li>
+                <li><a href="#quartalinha">Objetivo</a></li>
+                <li><a href="#quintalinha">Soluções</a></li>
+                <li><a href="#sextalinha">Resultaods</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  </section>
+    <!-- Seção principal-->
+    <section class="titulo">
+        <div class="titulo-content">
+            <h1 >Projeto Integrador</h1>
+        </div>
+    </section>
 
-  <header>
-    <a class="ods" href="#subtitulo">subtitulo</a>
-  </header>
-  
-</body>
+    <hr id="primeiralinha">
+
+    <!--Localização-->
+    <section class="sobre">
+        <div class="container">
+            <h2>Introdução</h2>
+            <p>A ODS 4, faz parte dos 17 Objetivos de Desenvolvimento Sustentável da ONU. Educação inclusiva, equitativa e de qualidade para todos. No mundo todo, a desigualdade na educação ainda é um grande obstáculo para o desenvolvimento social e econômico, e essa meta reforça a importância de garantir que a educação seja acessível e de qualidade, promovendo a igualdade.</p>
+        </div>
+        <div class="sobre-image">
+            <a href="https://pt.wikipedia.org/wiki/Objetivo_de_Desenvolvimento_Sustent%C3%A1vel_4" target="_blank"><img src="ods4.png"></a>
+        </div>
+    </section>
+    
+    <hr id="segundalinha">
+
+
+    <section class="ponte">
+        <div class="como">
+            <h2>Justificativa</h2>
+            <p id="justi">O acesso à educação de qualidade é desafiador, com problemas como metodologias fracas, superlotação nas salas, escassez de professores capacitados e falta de apoio governamental. Grupos vulneráveis, como pessoas com deficiências e de baixa renda, são os mais afetados pela falta de inclusão. Para melhorar, é essencial investir em professores, infraestrutura, metodologias práticas, recursos tecnológicos, e garantir um ambiente inclusivo, dinâmico e motivador.</p>
+        </div>
+    </section>
+
+
+    <hr id="terceiralinha">
+
+    <section class="processo">
+        <div class="pro">
+            <h2>Problema de Pesquisa</h2>
+            <p>Como está a qualidade de ensino para adolescentes especiais nas escolas particulares de Santa Cruz do Sul?</p>
+        </div>
+        <div class="processo-image">
+           <img src="aula.webp">
+        </div>
+    </section>
+
+
+    <hr id="quartalinha">
+
+    <section class="entregas">
+        <div class="entre">
+            <h2>Objetivo Principal</h2>
+            <p>Criar Um site</p>
+            <p>Os alunos poderão deixar suas opiniões, feedbacks e sugestões sobre a metodologia das escolas.</p>
+        </div>
+        <div class="entregas-image">
+            <img src="aula2.webp" >
+        </div>
+    </section>
+
+
+    <hr id="quintalinha">
  
-<div class="foto">
-  <img src="fotoods.png">
+    <section class="sobrenos">
+        <div class="nos">
+            <h2>Soluções</h2>
+            <p>Criar um site de feedbacks.</p>
+            <p>Poderá ajudar os adultos/responsáveis a verem e entenderem como os alunos se sentem em relação ao método de ensino.</p>
+            <p>E caso a metodologia não agrade o aluno, os superiores podem alterar algo, fazendo com que o aluno tenha uma melhor experiência.</p>
+        </div>
+    </section>
+
+
+    <hr id="sextalinha">
+
+    <section class="resultado">
+        <div class="resu">
+            <h2>Resultados Esperados</h2>
+            <p>● Maior participação dos alunos.</p>
+            <p>● Melhoria na metodologia de ensino.</p>
+            <p>● Conscientização dos responsáveis.</p>
+            <p>● Ambiente escolar mais inclusivo</p>
+            <p>● Redução de insatisfações</p>
+        </div>
+        <div class="resultado-image">
+            <img src="sala.jpg">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>© Projeto: Minha escola, minha voz.</p>
+        <p><a href="https://api.whatsapp.com/send?phone=995509632" target="_blank">WhatsApp: (54) 99550-9632</a> | Email: manuelamartinmohr@gmail.com</p>
+    </footer>
 </div>
 
+
+<!--SITE EM INGLES-->
+
+
+<div class="lang" id="en">
+    <header>
+        <nav id="navegar">
+            <div class="logo">
+                <a href="https://www.canva.com/design/DAGSVTxoKPg/9W6r8l47SpxU1gyYezVboQ/edit?utm_content=DAGSVTxoKPg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><img src="logoen.png"></a>
+                <!-- <span class="Urbanisme">Urbanisme</span> -->
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#primeiralinha">Introduction</a></li>
+                <li><a href="#segundalinha">Justification</a></li>
+                <li><a href="#terceiralinha">Problem</a></li>
+                <li><a href="#quartalinha">Objective</a></li>
+                <li><a href="#quintalinha">Solutions</a></li>
+                <li><a href="#sextalinha">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal-->
+    <section class="titulo">
+        <div class="titulo-content">
+            <h1>Integrative Project</h1>
+        </div>
+    </section>
+    <hr id="primeiralinha">
+
+    <!--Localização-->
+    <section class="sobre">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>SDG 4 is one of the 17 UN Sustainable Development Goals: inclusive, equitable and quality education for all. Worldwide, inequality in education is still a major obstacle to social and economic development, and this goal reinforces the importance of ensuring that education is accessible and of quality, promoting equality.</p>
+        </div>
+        <div class="sobre-image">
+            <a href="https://pt.wikipedia.org/wiki/Objetivo_de_Desenvolvimento_Sustent%C3%A1vel_4" target="_blank"><img src="ods4.png"></a>
+        </div>
+    </section>
+    
+    <hr id="segundalinha">
+
+
+    <section class="ponte">
+        <div class="como">
+            <h2>Justification</h2>
+            <p id="justi">Access to quality education is challenging, with problems such as weak methodologies, overcrowding in classrooms, a shortage of qualified teachers and a lack of government support. Vulnerable groups, such as people with disabilities and low-income people, are the most affected by the lack of inclusion. To improve, it is essential to invest in teachers, infrastructure, practical methodologies, technological resources, and ensure an inclusive, dynamic and motivating environment.</p>
+        </div>
+    </section>
+
+
+    <hr id="terceiralinha">
+
+    <section class="processo">
+        <div class="pro">
+            <h2>Research Problem</h2>
+            <p>How is the quality of education for special needs teenagers in private schools in Santa Cruz do Sul?</p>
+        </div>
+        <div class="processo-image">
+           <img src="aula.webp">
+        </div>
+    </section>
+
+
+    <hr id="quartalinha">
+
+    <section class="entregas">
+        <div class="entre">
+            <h2>Main Objective</h2>
+            <p>Create a website</p>
+            <p>Students will be able to leave their opinions, feedback and suggestions about the schools' methodology.</p>
+        </div>
+        <div class="entregas-image">
+            <img src="aula2.webp" >
+        </div>
+    </section>
+
+
+    <hr id="quintalinha">
+ 
+    <section class="sobrenos">
+        <div class="nos">
+            <h2>Solutions</h2>
+            <p>Create a feedback website.</p>
+            <p>It can help adults/guardians see and understand how students feel about the teaching method.</p>
+            <p>And if the methodology does not please the student, superiors can change something, ensuring that the student has a better experience.</p>
+        </div>
+    </section>
+
+
+    <hr id="sextalinha">
+
+    <section class="resultado">
+        <div class="resu">
+            <h2>Expected Results</h2>
+            <p>● Greater student participation.</p>
+            <p>● Improvement in teaching methodology.</p>
+            <p>● Raising awareness among those responsible.</p>
+            <p>● More inclusive school environment.</p>
+            <p>● Reduction of dissatisfaction.</p>
+        </div>
+        <div class="resultado-image">
+            <img src="sala.jpg">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>© Project: My school, my voice.</p>
+        <p><a href="https://api.whatsapp.com/send?phone=995509632" target="_blank">WhatsApp: (54) 99550-9632</a> | Email: manuelamartinmohr@gmail.com</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

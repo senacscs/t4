@@ -1,3 +1,14 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    background-image: url(fundo.jpg);
+    overflow-x: hidden;
+} */
+
+
+/* Reset básico */
+/* Reset básico */
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
@@ -18,15 +29,13 @@ html, body {
 body {
     line-height: 1.6;
     color: #ffffff;
-    background: radial-gradient(#950b0b , black);
-    display: grid;
+    background-color: #79dae0;
     overflow-x: hidden;
 }
 
 /* Cabeçalho */
 header {
-    background-color: rgb(127, 28, 28);
-    display: grid;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 0;  /* Remove padding extra do topo */
     position: fixed;
     top: 0;
@@ -83,6 +92,7 @@ nav ul li a {
     font-weight: bold;
     position: relative;
     bottom: 20px;
+    color: rgb(0, 0, 0);
     font-family: "Playpen Sans", cursive;
     font-style: normal;
 }
@@ -101,8 +111,6 @@ nav ul li a:hover {
     padding-top: 60px; /* Compensação para o cabeçalho fixo */
 }
 
-
-
 .titulo-content h1 {
     font-size: 3rem;
     color: #ffffff;
@@ -111,9 +119,7 @@ nav ul li a:hover {
     font-family: "Bellefair", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
-    position: relative;
-    bottom: 100px;
+    font-size: 60px;
 }
 
 .titulo-content h2 {
@@ -134,7 +140,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a81010;
+    background-color: #497cfe;
     padding: 50px 20px;
     
 }
@@ -168,16 +174,13 @@ nav ul li a:hover {
 }
 
 .sobre-image img {
-    width: 350px;
+    width: 500px;
     position: relative;
-    right: 80px;
+    right: 20px;
     border-radius: 20px;
-    border: 0.1rem solid white;
-    transition: .3s;
 }
-
 .sobre-image img:hover {
-    transform: scale(1.05);
+    width: 530px;
     transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
@@ -187,8 +190,9 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #720f0f;
+    background-color: #88d5f7;
     padding: 50px 20px;
+    
 }
 
 .ponte .como {
@@ -207,7 +211,7 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 480px;
+    left: 670px;
 }
 
 .ponte p {
@@ -215,10 +219,9 @@ nav ul li a:hover {
     margin-bottom: 20px;
     font-family: "Playpen Sans", cursive;
     font-style: normal;
-    text-align: center;
-    width: 900px;
+    text-align: end;
     position: relative;
-    left: 160px;
+    left: 600px;
 }
 
 .ponte-image img {
@@ -226,11 +229,9 @@ nav ul li a:hover {
     position: relative;
     right: 660px;
     border-radius: 20px;
-    transition: .3s;
-    border: 0.1rem solid white;
 }
 .ponte-image img:hover {
-    transform: scale(1.05);
+    width: 530px;
     transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
@@ -242,7 +243,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e02626;
+    background-color: #26AFE0;
     padding: 50px 20px;
 }
 
@@ -260,13 +261,13 @@ nav ul li a:hover {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    font-size: 90px;
+    font-size: 60px;
     position: relative;
     left: 50px;
 }
 
 .processo p {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 20px;
     font-family: "Playpen Sans", cursive;
     font-style: normal;
@@ -279,11 +280,9 @@ nav ul li a:hover {
     position: relative;
     right: 50px;
     border-radius: 20px;
-    transition: .3s;
-    border: 0.1rem solid white;
 }
 .processo-image img:hover {
-    transform: scale(1.05);
+    width: 430px;
     transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
@@ -293,7 +292,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a32727;
+    background-color: #6ec2f6;
     padding: 50px 20px;
 }
 
@@ -330,14 +329,13 @@ nav ul li a:hover {
 .entregas-image img {
     width: 400px;
     position: relative;
-    right: 700px;
+    right: 760px;
     border-radius: 20px;
-    transition: .3s;
-    border: 0.1rem solid white;
 }
+
 .entregas-image img:hover {
-    transform: scale(1.05);
-    border-radius: 20px;
+    width: 400px;
+    transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
 
@@ -347,7 +345,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(red.jpg);
+    background-image: url(fundo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,61 +382,21 @@ nav ul li a:hover {
     left: 350px;
 }
 
-/*  */
-.resultado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #a81010;
-    padding: 50px 20px;
-    
-}
-
-.resultado .resu {
-    max-width: 600px;
-}
-
-.resultado h2 {
-    margin-bottom: 20px;
-    color: #ffffff;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* fonte */
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 60px;
+.sobrenos-image img {
+    width: 400px;
     position: relative;
-    left: 50px;
-}
-
-.resultado p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-family: "Playpen Sans", cursive;
-    font-style: normal;
-    position: relative;
-    left: 50px;
-}
-
-.resultado-image img {
-    width: 500px;
-    position: relative;
-    right: 50px;
+    right: 800px;
     border-radius: 20px;
-    transition: .3s;
-    border: 0.1rem solid white;
 }
-.resultado-image img:hover {
-    transform: scale(1.05);
+
+.sobrenos-image img:hover {
+    width: 400px;
     transition: ease-in-out 0.7s;border-radius: 20px;
 }
 
-
-
 #primeiralinha {
     position: relative;
+    
     overflow: hidden;
     height: 3px;
     background-color: white;
@@ -446,45 +404,18 @@ nav ul li a:hover {
 
 #segundalinha {
     position: relative;
+    
     overflow: hidden;
     height: 3px;
     background-color: white;
 }
-
-#terceiralinha {
-    position: relative;
-    overflow: hidden;
-    height: 3px;
-    background-color: white;
-}
-
-#quartalinha {
-    position: relative;
-    overflow: hidden;
-    height: 3px;
-    background-color: white;
-}
-
-#quintalinha {
-    position: relative;
-    overflow: hidden;
-    height: 3px;
-    background-color: white;
-}
-
-#sextalinha {
-    position: relative;
-    overflow: hidden;
-    height: 3px;
-    background-color: white;
-}
-
 
 
 
 
 
 footer {
+    background-color: #5bbaf5b5;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -500,35 +431,3 @@ a {
     text-decoration: none;
     color: white;
 }
-
-#navegar {
-    position: relative;
-    top: 40px;
-}
-
-.botoes {
-    position: relative;
-    top: 500px;
-}
-
-button {
-    border-radius: 20px;
-    background-color: pink;
-    width: 150px;
-    height: 50px;
-    position: relative;
-    left: 37%;
-    border: 0.1rem solid white;
-    font-size: 15px;
-    font-family: cursive;
-    margin-right: 10px;
-    bottom: 40px;
-}
-
-button:hover {
-    transform: scale(1.1);
-    background-color: rgb(222, 66, 92);
-    transition: 1s ease-in-out;
-}
-
-
