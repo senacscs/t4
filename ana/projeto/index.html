@@ -1,30 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Integrador</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="arquivo-ods.png" type="image/x-icon">
+    <title>Projeto ODS</title>
 </head>
-<body>
-    <h1>Titulo</h1>
-    <h2>Analice da Costa Werner</h2>
-    <img src="ods.png" alt="" width="200px">
-    <section>
-<h3>Introdução e justificativa</h3>
-<p> escreva sobre a introdução e a justificativa aqui</p>
-    </section>
-    <section>
-<h3>Problema de pesquisa</h3>
-<p> escreva sobre o problema de pesquisa aqui</p>
-</section>
-<section>
-<h3>Objetivo principal</h3>
-<p>escreva sobre o objetivo aqui</p>
-</section>
-<section>
-<h3>Hipóteses</h3>
-<p> escreva sobre a hipótese aqui </p>
-</section>
+
+<body>  
+    <div class="title">
+        <h1>Projeto Integrador</h1>
+        <!-- Botões para alternar entre português e inglês -->
+        <button onclick="showPortuguese()">Português</button>
+        <button onclick="showEnglish()">Inglês</button>
+    </div>
+    
+    <!-- Conteúdo em português -->
+    <div id="content-pt">
+        <div id="objetivo" class="card">
+            <h2>Objetivo do Desenvolvimento Sustentável</h2>
+            <p>O Objetivo do Desenvolvimento Sustentável (ODS) escolhido para esta pesquisa é o ODS 13: Ação Contra a Mudança Global do Clima. A meta de interesse dentro deste ODS é a Meta 13.2.</p>
+            <img src="ODS13.svg" alt="ODS 13 Image">
+        </div>
+
+        <div id="intjus" class="card">
+            <h2>Introdução e Justificativa</h2>
+            <p>Este objetivo visa tomar medidas urgentes para combater a mudança climática e seus impactos. A meta de interesse dentro deste ODS é a Meta 13.2, que busca integrar medidas da mudança do clima nas políticas, estratégias e planejamentos nacionais.</p>
+        </div>
+
+        <div id="problema" class="card">
+            <h2>Problema de Pesquisa</h2>
+            <p>Como um aplicativo que calcula e rastreia as emissões de carbono pode incentivar práticas agrícolas mais sustentáveis e reduzir impactos ambientais?</p>
+        </div>
+
+        <div id="objetivoprincipal" class="card">
+            <h2>Objetivo Principal</h2>
+            <p>O objetivo principal desta pesquisa é desenvolver um aplicativo de monitoramento agrícola que permita aos agricultores rastrear e reduzir suas emissões de carbono, promovendo práticas agrícolas mais sustentáveis e mitigando os impactos da agricultura.</p>
+        </div>
+
+        <div id="hipotese" class="card">
+            <h2>Hipóteses</h2>
+            <p>A hipótese principal dessa pesquisa é que o uso de um aplicativo de monitoramento agrícola pode reduzir as emissões de gases de efeito estufa nas propriedades rurais, fornecendo aos agricultores informações precisas e em tempo real sobre suas práticas agrícolas.</p>
+        </div>
+
+        <div id="resultados" class="card">
+            <h2>Resultados Esperados</h2>
+            <p>Controle sobre a emissão de carbono; Conscientização sobre práticas mais sustentáveis; Conscientização sobre os impactos; Ajuste em tempo real da emissão de carbono.</p>
+        </div>
+
+        <div id="referencias" class="card">
+            <h2>Referências</h2>
+            <p>
+                https://www.ipcc.ch/reports/. <br>
+                http://www.fao.org/climate-smart-agriculture/en/. <br>
+                https://sdgs.un.org/goals/goal13.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Conteúdo em inglês, inicialmente oculto -->
+    <div id="content-en" style="display: none;">
+        <div id="objective" class="card">
+            <h2>Sustainable Development Goal</h2>
+            <p>The Sustainable Development Goal (SDG) chosen for this research is SDG 13: Climate Action. The target of interest within this SDG is Target 13.2.</p>
+            <img src="ODS13.svg" alt="ODS 13 Image">
+        </div>
+
+        <div id="introduction" class="card">
+            <h2>Introduction and Justification</h2>
+            <p>This SDG aims to take urgent measures to combat climate change and its impacts. Target 13.2 seeks to integrate climate change measures into national policies, strategies, and planning. This target is related to promoting agricultural practices that reduce greenhouse gas emissions through the implementation of environmental monitoring and management technologies.</p>
+        </div>
+
+        <div id="problem" class="card">
+            <h2>Research Problem</h2>
+            <p>How can an app that calculates and tracks carbon emissions encourage more sustainable agricultural practices and reduce environmental impacts?</p>
+        </div>
+
+        <div id="main-objective" class="card">
+            <h2>Main Objective</h2>
+            <p>The main objective of this research is to develop an agricultural monitoring app that enables farmers to track and reduce their carbon emissions, promoting more sustainable practices and mitigating agricultural impacts.</p>
+        </div>
+
+        <div id="hypothesis" class="card">
+            <h2>Hypotheses</h2>
+            <p>The main hypothesis of this research is that using an agricultural monitoring app can reduce greenhouse gas emissions on farms by providing farmers with accurate real-time information on their practices, encouraging more sustainable and efficient techniques.</p>
+        </div>
+
+        <div id="expected-results" class="card">
+            <h2>Expected Results</h2>
+            <p>Control over carbon emissions; Awareness of more sustainable practices; Awareness of impacts; Real-time carbon emission adjustments.</p>
+        </div>
+
+        <div id="references" class="card">
+            <h2>References</h2>
+            <p>
+                https://www.ipcc.ch/reports/. <br>
+                http://www.fao.org/climate-smart-agriculture/en/. <br>
+                https://sdgs.un.org/goals/goal13.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://senacscs.github.io/t4/ana/">Analice da Costa Werner</a>
+    </footer>
+
+    <script>
+        function showPortuguese() {
+            document.getElementById('content-pt').style.display = 'block';
+            document.getElementById('content-en').style.display = 'none';
+        }
+
+        function showEnglish() {
+            document.getElementById('content-pt').style.display = 'none';
+            document.getElementById('content-en').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

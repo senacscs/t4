@@ -1,35 +1,75 @@
-body{
-    background-color: rgb(223, 47, 88);
+* {
+    margin: 0;
+    padding: 0;
 }
-h1{
- color: rgb(123, 11, 74);
-    text-align: center;
-}
-h2{
-    text-align: center;
-}
-section{
-    color: rgb(123, 11, 74);
-    margin: 20px;
-    border: solid 2px;
-    padding: 10px;
-    border-radius: 10px;
-    font-style:normal;
-    font-size: 20px;
-}
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: rgb(255, 255, 255); 
 
-
+body {
+    background-color: rgb(102, 192, 110);
+    background-size: 100% 100%;
 }
-h2,p{
+
+p {
+    color: rgb(0, 0, 0);
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+}
+
+.title {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(85, 164, 83);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    text-shadow: 0 0 20px rgb(68, 175, 67);
+}
+
+.card {
+    background-color: rgb(85, 164, 83);
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    box-shadow: 0 0 20px;
+    transition: transform 0.3s ease-in-out;
+    width: 950px;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(68, 175, 67);
     color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-h3{
-    color: rgb(88, 3, 37);
+
+button:hover {
+    background-color: rgb(55, 150, 55);
+}
+
+footer {
+    background-color: rgb(85, 164, 83);
+    height: 50px;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
