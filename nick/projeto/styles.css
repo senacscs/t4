@@ -201,3 +201,30 @@ footer a:hover {
     height: 300px;
   }
 }
+button {
+  background-color: #930606; /* Cor do botão para combinar com o cabeçalho */
+  color: white; /* Cor do texto */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background-color: #7f0000; /* Cor ao passar o mouse */
+  transform: translateY(-3px); /* Efeito de elevação */
+}
+
+button:active {
+  background-color: #3f0202; /* Cor ao clicar */
+  transform: translateY(0); /* Retorna ao plano ao clicar */
+}
+
+button:focus {
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra leve */
+}
