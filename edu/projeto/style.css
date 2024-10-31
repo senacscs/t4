@@ -1,23 +1,47 @@
 * {
     margin: 0;
+    font-family:'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(15, 15, 68);
+    background-color: green;
     color: white;
     text-align: center;
 }
 
 header {
-    background-color: black;
-    padding: 10px;
+    background-color: green;
+    padding: 100px;
     font-style: italic;
 }
 
+.titulo {
+    font-size: 50px;
+}
+
 .ods {
-    border: solid;
-    border-color: black;
-    block-size: auto;
+    background-color: rgb(0, 118, 41);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    .texto {
+        width: 30%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-size: 18px;
+
+    }
+    
 }
 
 .icone {
@@ -30,15 +54,17 @@ a {
 }
 
 .referencias {
-    font-style: italic;
-    border: solid;
-    border-color: black;
-    margin-top: 5px;
+    background-color: green;
 }
 
 iframe {
     margin-top: 10px;
     border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+.imagem {
+    background-color: rgb(0, 118, 41);
 }
 
 .celular {
@@ -51,23 +77,19 @@ iframe {
 }
 
 .pesquisa {
-    border: solid;
-    border-color: black;
+    background-color: rgb(0, 118, 41);
+
 }
 
 .solucoes {
-    border: solid;
-    border-color: black;
     margin-top: 5px;
 }
 
 .objetivo {
-    border: solid;
-    border-color: black;
     margin-top: 10px;
 }
 
 .rodape {
-    background-color: black;
+    background-color: rgb(0, 118, 41);
     font-style: italic;
 }
