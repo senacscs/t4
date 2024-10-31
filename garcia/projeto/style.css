@@ -144,3 +144,27 @@ footer{
     letter-spacing: 2px;
     text-align: center;
 }
+
+.btn-pt, .btn-en{
+    border: none;
+    background-color: rgb(88, 189, 98);
+    border-radius: 20vw;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    height: 3vh;
+    width: 6vw;
+    z-index: 1000000;
+    position: fixed;
+    margin: 10px;
+}
+
+
+/* .btn-en{
+    border: none;
+    background-color: rgb(88, 189, 98);
+    border-radius: 20vw;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    height: 4vh;
+    width: 8vw;
+} */
