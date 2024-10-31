@@ -1,56 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projeto</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projeto</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function toggleLanguage(lang) {
+      const elementsPT = document.querySelectorAll('.pt');
+      const elementsEN = document.querySelectorAll('.en');
+      
+      if (lang === 'en') {
+        elementsPT.forEach(el => el.style.display = 'none');
+        elementsEN.forEach(el => el.style.display = 'block');
+      } else {
+        elementsPT.forEach(el => el.style.display = 'block');
+        elementsEN.forEach(el => el.style.display = 'none');
+      }
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#dados">ODS</a></li>
-                <li><a href="#referencia">Referências</a></li>
-                <li><a href="#problema">Problema</a></li>
-                <li><a href="#solucoes">Soluções existentes</a></li>
-                <li><a href="#objetivo">Objetivo principal</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Serviços Gerais</h1>
-        <h2>Nicole Kauane Mueller</h2>
-        <section>
-            <h2 id="dados">ODS</h2>
-            <h3>Trabalho decente e crescimento econômico</h3>
-            <p>Promover o crescimento econômico inclusivo e sustentável, o emprego pleno e produtivo e o trabalho digno para todos</p>
-        <img src="ods.png" alt="" width="200px">
-       <h5><a href="https://brasil.un.org/pt-br/sdgs/8">ods 8</a></h5>
-    </section>
-        <section>
-    <h3 id="referencia">Referências</h3>
-    <p>Tive essa ideia ao ver que muitas pessoas precisam de serviços gerais, 
-        sendo na sua própria cidade ou até mesmo quando esta viajando. Visanso o <a href="https://brasil.un.org/pt-br/sdgs">site das ODS</a></p>
-    <a href="https://brasil.un.org/pt-br/sdgs"></a>
-        </section>
-        <section>
-    <h3 id="problema">Problema</h3>
-    <p>Como dar mais visibilidade e fácil acesso ao trabalho das pessoas? E uma maneira de encontrar emprego de uma forma mais fácil</p>
-    </section>
-    <section>
-        <h3 id="solucoes">Soluções existentes</h3>
-       <h5><a href="https://mdservicos.com/">Referência</a></h5>
-       </section>
-    <section>
-    <h3 id="objetivo">Objetivo principal</h3>
-    <p>Desenvolver um aplicativo onde mostre profissionais de cada área na cidade onde você esta para poder contratar os serviços dessas pessoas, podendo avaliar o trabalho dos mesmos e nesse aplicativo também teria uma aba onde mostraria sugestões de emprego.</p>
-    </section>
-    <footer>
-        <p>Nicole Kauane Mueller</p>
-    </footer>
-</body>
-</main>
-    </html>
 
-   
+  <header>
+    <h1 class="pt">Plataforma de Conexão de Serviços</h1>
+    <h1 class="en" style="display: none;">Service Connection Platform</h1>
+    <p class="pt">Projeto PI - Desenvolvendo soluções para um mercado de trabalho sustentável</p>
+    <p class="en" style="display: none;">PI Project - Developing solutions for a sustainable labor market</p>
+    <button onclick="toggleLanguage('pt')">Português</button>
+    <button onclick="toggleLanguage('en')">English</button>
+  </header>
+
+  <section id="introducao">
+    <h2 class="pt">Introdução e Justificativa</h2>
+    <h2 class="en" style="display: none;">Introduction and Justification</h2>
+    <p class="pt">A ODS 8, proposta pela ONU, visa promover um crescimento econômico sustentável e inclusivo, garantindo emprego decente para todos. No cenário atual, as pessoas buscam cada vez mais praticidade na contratação de serviços, valorizando plataformas que conectem profissionais e consumidores de forma rápida e confiável.</p>
+    <p class="en" style="display: none;">SDG 8, proposed by the UN, aims to promote sustainable and inclusive economic growth, ensuring decent work for all. In the current scenario, people increasingly seek convenience when hiring services, valuing platforms that connect professionals and consumers in a fast and reliable way.</p>
+    <p class="pt">Assim, surge a necessidade de criar um mecanismo que conecte melhor trabalhadores e empregadores, oferecendo avaliações transparentes e facilitando a contratação de serviços.</p>
+    <p class="en" style="display: none;">Thus, there is a need to create a mechanism that better connects workers and employers, offering transparent evaluations and facilitating service hiring.</p>
+    <p class="pt">Para mais informações, veja a <a href="https://brasil.un.org/pt-br/sdgs/8" target="_blank">ODS 8 no site da ONU</a>.</p>
+    <p class="en" style="display: none;">For more information, see <a href="https://brasil.un.org/pt-br/sdgs/8" target="_blank">SDG 8 on the UN website</a>.</p>
+  </section>
+
+  <section id="problema">
+    <h2 class="pt">Problema de Pesquisa</h2>
+    <h2 class="en" style="display: none;">Research Problem</h2>
+    <p class="pt">Como promover maior visibilidade e acessibilidade ao trabalho de profissionais autônomos, facilitando a contratação de serviços e o acesso a oportunidades de emprego de maneira prática e confiável, tanto para empregadores quanto para trabalhadores?</p>
+    <p class="en" style="display: none;">How to promote greater visibility and accessibility to the work of freelance professionals, facilitating the hiring of services and access to job opportunities in a practical and reliable way, both for employers and workers?</p>
+  </section>
+
+  <section id="objetivo">
+    <h2 class="pt">Objetivo Principal</h2>
+    <h2 class="en" style="display: none;">Main Objective</h2>
+    <p class="pt">Desenvolver uma plataforma digital que facilite a conexão entre profissionais e clientes, permitindo a contratação rápida e avaliação de serviços, além de oferecer uma seção dedicada a oportunidades de emprego e parcerias.</p>
+    <p class="en" style="display: none;">To develop a digital platform that facilitates the connection between professionals and clients, enabling quick hiring and service evaluation, in addition to offering a dedicated section for job opportunities and partnerships.</p>
+  </section>
+
+  <section id="hipoteses">
+    <h2 class="pt">Hipóteses</h2>
+    <h2 class="en" style="display: none;">Hypotheses</h2>
+    <p class="pt">A plataforma permitirá que os usuários encontrem facilmente os serviços de que precisam, enquanto profissionais terão maior visibilidade e acesso a clientes. Além disso, o aplicativo facilitará a criação de oportunidades de emprego e promoverá a formalização do mercado de trabalho.</p>
+    <p class="en" style="display: none;">The platform will allow users to easily find the services they need, while professionals will gain greater visibility and access to clients. Additionally, the app will facilitate job opportunities and promote the formalization of the labor market.</p>
+  </section>
+
+  <section id="resultados">
+    <h2 class="pt">Resultados Esperados</h2>
+    <h2 class="en" style="display: none;">Expected Results</h2>
+    <p class="pt">A plataforma vai ajudar trabalhadores autônomos, ou seja, quem trabalha por conta própria, a serem mais facilmente encontrados pelas pessoas que precisam dos seus serviços. Além disso, quem quiser contratar esses serviços poderá ver recomendações e avaliações, ajudando a escolher alguém de confiança.</p>
+    <p class="en" style="display: none;">The platform will help freelance workers, that is, those who work independently, to be more easily found by people who need their services. Additionally, those looking to hire these services will be able to see recommendations and reviews, helping them choose someone trustworthy.</p>
+    <p class="pt">A plataforma também vai incentivar esses trabalhadores a se organizarem melhor e se regularizarem, o que traz vantagens para eles e ajuda a melhorar a economia. Outra coisa legal é que ela vai criar oportunidades para parcerias entre profissionais e facilitar o encontro de empregos, promovendo o crescimento econômico de forma justa e responsável.</p>
+    <p class="en" style="display: none;">The platform will also encourage these workers to organize themselves better and regularize their businesses, which benefits them and helps improve the economy. Another great aspect is that it will create opportunities for partnerships among professionals and make it easier to find jobs, promoting economic growth in a fair and responsible way.</p>
+  </section>
+
+  <section id="referencias">
+    <h2 class="pt">Referências</h2>
+    <h2 class="en" style="display: none;">References</h2>
+    <ul class="pt">
+      <li>Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (SEBRAE) - Artigos e pesquisas sobre o papel do trabalho autônomo e o impacto do empreendedorismo no Brasil. Disponível em: <a href="https://www.sebrae.com.br" target="_blank">https://www.sebrae.com.br</a>.</li>
+      <li>Conferência das Nações Unidas sobre Comércio e Desenvolvimento (UNCTAD) - Relatório de Economia Digital, destacando como as plataformas digitais podem ajudar o trabalho informal e a inclusão econômica. Disponível em: <a href="https://unctad.org/topic/e-commerce-and-digital-economy" target="_blank">https://unctad.org/topic/e-commerce-and-digital-economy</a>.</li>
+      <li>Instituto Brasileiro de Geografia e Estatística (IBGE) - Pesquisa Nacional sobre o Trabalho Informal, abordando a quantidade de trabalhadores autônomos e as condições desse tipo de trabalho no Brasil. Disponível em: <a href="https://www.ibge.gov.br" target="_blank">https://www.ibge.gov.br</a>.</li>
+    </ul>
+    <ul class="en" style="display: none;">
+      <li>Brazilian Support Service for Micro and Small Enterprises (SEBRAE) - Articles and research on the role of self-employment and the impact of entrepreneurship in Brazil. Available at: <a href="https://www.sebrae.com.br" target="_blank">https://www.sebrae.com.br</a>.</li>
+      <li>United Nations Conference on Trade and Development (UNCTAD) - Digital Economy Report, highlighting how digital platforms can support informal work and economic inclusion. Available at: <a href="https://unctad.org/topic/e-commerce-and-digital-economy" target="_blank">https://unctad.org/topic/e-commerce-and-digital-economy</a>.</li>
+      <li>Brazilian Institute of Geography and Statistics (IBGE) - National Survey on Informal Work, addressing the number of self-employed workers and the conditions of this type of work in Brazil. Available at: <a href="https://www.ibge.gov.br" target="_blank">https://www.ibge.gov.br</a>.</li>
+    </ul>
+  </section>
+  <section id="apresentacao">
+    <h2 class="pt">Apresentação do Projeto</h2>
+    <h2 class="en" style="display: none;">Project Presentation</h2>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+    padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+    border-radius: 8px; will-change: transform;">
+     <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+       src="https://www.canva.com/design/DAGUYxq9H4M/6FTDqxrJS5LtNTACv6LNaw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+     </iframe>
+   </div>
+   <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGUYxq9H4M&#x2F;6FTDqxrJS5LtNTACv6LNaw&#x2F;view?utm_content=DAGUYxq9H4M&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Apresentação de plano de marketing moderno escuro minimalista preto vermelho e cinza</a> de Nicole Mueller
+  </section>
+  
+
+  <footer>
+    <p class="pt">&copy; 2024 Projeto PI - Plataforma de Conexão de Serviços</p>
+    <p class="en" style="display: none;">&copy; 2024 PI Project - Service Connection Platform</p>
+  </footer>
+
+</body>
+</html>
