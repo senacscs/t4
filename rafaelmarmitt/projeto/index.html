@@ -1,46 +1,250 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJETO</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="ods.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/velha.png" type="image/x-icon">
+    <style>
+        .lang {
+            display: none;
+        }
+    </style>
+    <title>Site de PI</title>
 </head>
+
 <body>
-    <header><div class="titulo"><br>PROJETO RAFAEL BROCHIER MARMITT</div>
-        <p>App de Triagem <br> ODS 3</p></header>
-    <div id="ini"></div>
-    <div class="navbar" id="nav">
-        <div class="al">
-            
-        </div>
-        <div class="abs"></div>
+    <!--  Português  -->
+
+    <div class="lang" id="pt">
+
+        <section class="home">
+            <div class="description">
+                <div class="btntranslate">
+                    <button class="btn" onclick="setLanguage('pt')">Português</button>
+                    <button class="btn" onclick="setLanguage('en')">English</button>
+                </div>
+                <h1 class="title">
+                    <span class="gradient-text">App de Triagem</span>
+                </h1>
+                <p class="paragraph">
+                    Desenvolvimento de um aplicativo com uma interface intuitiva, proporcionando uma triagem
+                    personalizada e
+                    monitoramento contínuo da saúde dos idosos.
+                </p>
+                <a href="#card-container">
+                    <button type="submit" class="btn" aria-label="submit">
+                        <span>Saiba Mais</span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </a>
+            </div>
+            <div class="users-color-container">
+                <span class="item" style="--i: 1"></span>
+                <img class="item" src="img/image-removebg-preview (5).png" style="--i: 2" alt="" />
+                <span class="item" style="--i: 3"></span>
+                <img class="item" src="img/image-removebg-preview (6).png" style="--i: 4" alt="" />
+
+                <img class="item" src="img/image-removebg-preview (9).png" style="--i: 10" alt="" />
+                <span class="item" style="--i: 11"></span>
+
+                <img class="item" src="img/image-removebg-preview (8).png" style="--i: 12" alt="" />
+                <span class="item" style="--i: 5"></span>
+
+                <span class="item" style="--i: 9"></span>
+                <img class="item" src="img/image-removebg-preview (10).png" style="--i: 8" alt="" />
+
+                <span class="item" style="--i: 7"></span>
+                <img class="item" src="img/image-removebg-preview (11).png" style="--i: 6" alt="" />
+            </div>
+        </section>
+        <section class="card-container" id="card-container">
+            <div class="slider">
+                <div class="card" data-tilt>
+                    <div id="content" class="content">
+                        <img src="img/ods3.png" alt="Logo ODS 3" />
+                        <h1>Qual a ODS envolvida?</h1>
+                        <p>
+                            O objetivo escolhido foi o Objetivo de Desenvolvimento Sustentável (ODS) 3, que visa
+                            garantir
+                            vidas saudáveis e
+                            promover o bem-estar para todos, em todas as idades.
+                        </p>
+                        <a target="_blank"
+                            href="https://www.unodc.org/lpo-brazil/pt/frontpage/2019/04/ods-3--sobre-sade-e-bem-estar---o-objetivo-do-ms-em-abril.html">
+                            <button class="btn btn1">
+                                <span>Saiba Mais sobre a ODS3</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-tilt>
+                <div class="content">
+                    <img src="img/problemapesq.png" alt="Problema de Pesquisa" />
+                    <h1>Problema de pesquisa</h1>
+                    <p>
+                        Como podemos ajudar a solucionar o problema de negligência e ajudar idosos que
+                        precisam de cuidados especiais?
+                    </p>
+                </div>
+            </div>
+            <div class="card" data-tilt>
+                <div class="content">
+                    <img src="img/objprincipal.jpg" alt="" />
+                    <h1>Objetivo principal</h1>
+                    <p>
+                        Desenvolvimento de um aplicativo que automatiza o processo de triagem para
+                        idosos. O aplicativo também enviará comunicados aos parentes, informando sobre: <br> • Hora
+                        de
+                        entrada e saída <br>
+                        • Resultados das atividades propostas <br>
+                        • Integração do idoso <br>
+                    </p>
+                </div>
+            </div>
+            <div class="card" data-tilt>
+                <div class="content">
+                    <img src="img/hipotese.png" alt="" />
+                    <h1>Hipóteses</h1>
+                    <p>
+                        Os principais objetivos e características incluem:
+                        <br>
+                        • Integração física, social, mental e sensorial dos idosos <br>
+                        • Acompanhamento por profissionais como nutricionistas, psicólogos e psicopedagogos. <br>
+                        • Serviço gratuito <br>
+                    </p>
+                </div>
+            </div>
+            <a target="_blank" href="ProjetoAutomatizacaoDeTriagem.pdf">
+                <button type="submit" class="btn" aria-label="submit">
+                    <span>Baixe meu projeto em PDF</span>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+            </a>
+        </section>
     </div>
-    <div class="conteudo">     
-    <h1>ODS 3, Saúde e Bem-Estar</h1>
-    <p>"Garantir uma vida saudável e promover o bem-estar para todos em todas idades."</p>
-    <br>
-    <br>
-    <a href="https://brasil.un.org/pt-br/sdgs/3"><img src="ods.jpg" alt="Logo da ODS 3"></a>
-    <br>
-    <br>
-    <br>
-    <h1>Referências</h1>
-    <ul class="ref">
-        <li><a target="_blank" href="http://hdl.handle.net/11624/1489">ALMEIDA, Tais Silva de. Abandono afetivo inverso: responsabilidade civil dos filhos em relação aos pais idosos. Monografia (Graduação) - Universidade de Santa Cruz do Sul 2016</a></li>
-        <br>
-        <li><a target="_blank" href="http://hdl.handle.net/11624/2527">KRUG, Juliana Santa Catharina. Abandono de idosos em instituições de Longa Permanencia para idosos-ILPI: anaise de drets responsabilidades Monografia (Graduaçãol-Universidade de Santa Cruz do Sul, 2019</a></li>
-        <br>  
-        <li><a target="_blank" href="https://repositorio.unisc.br/jspui/bitstream/11624/2981/1/Adriane%20Gonçalves%20de%20Moraes.pdf">MORAES, Adriane Gonçalves de. A responsabilização pelo abandono familiar do idese. Monografia (Graduação)- Universidade de Santa Cruz du Sul, 2020.</a></li>
-    </ul>
-    <br>
-    <br>
-    <h1>Objetivo</h1>
-    <p>Desenvolvimento de um aplicativo que faria o processo de triagem de forma automática e também mandará comunicados aos parentes do idoso, como hora de entrada e saída, resultados das atividades propostas, integração, bem-estar e sobre a saúde do indivíduo no Centro de Convivência Diurno. Como segunda parte do projeto foi idealizado um centro de convivência diurno de idosos que visa a integração física, social, mental e sensorial  dos idosos com acompanhamento de nutricionistas, psicólogos, psicopedagogos, enfermeiros e educadores competentes, tudo isso de forma gratuita.</p>
-    <br>
-    <br>
-</div>
-    
+
+    <!-- Fim Pt -->
+
+    <!-- Começo Eng-->
+
+    <div class="lang" id="en">
+
+        <section class="home">
+            <div class="description">
+                <div class="btntranslate">
+                    <button class="btn" onclick="setLanguage('pt')">Português</button>
+                    <button class="btn" onclick="setLanguage('en')">English</button>
+                </div>
+                <h1 class="title">
+                    <span class="gradient-text">Screening App</span>
+                </h1>
+                <p class="paragraph">
+                    Development of an application with an intuitive interface, providing screening
+                    personalized and
+                    continuous monitoring of the health of the elderly.
+                </p>
+                <a href="#card-container">
+                    <button type="submit" class="btn" aria-label="submit">
+                        <span>See More</span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </a>
+            </div>
+            <div class="users-color-container">
+                <span class="item" style="--i: 1"></span>
+                <img class="item" src="img/image-removebg-preview (5).png" style="--i: 2" alt="" />
+                <span class="item" style="--i: 3"></span>
+                <img class="item" src="img/image-removebg-preview (6).png" style="--i: 4" alt="" />
+
+                <img class="item" src="img/image-removebg-preview (9).png" style="--i: 10" alt="" />
+                <span class="item" style="--i: 11"></span>
+
+                <img class="item" src="img/image-removebg-preview (8).png" style="--i: 12" alt="" />
+                <span class="item" style="--i: 5"></span>
+
+                <span class="item" style="--i: 9"></span>
+                <img class="item" src="img/image-removebg-preview (10).png" style="--i: 8" alt="" />
+
+                <span class="item" style="--i: 7"></span>
+                <img class="item" src="img/image-removebg-preview (11).png" style="--i: 6" alt="" />
+            </div>
+        </section>
+        <section class="card-container" id="card-container">
+            <div class="slider">
+                <div class="card" data-tilt>
+                    <div id="content" class="content">
+                        <img src="img/ods3.png" alt="Logo ODS 3" />
+                        <h1>What SDG is involved?</h1>
+                        <p>
+                            The objective chosen was Sustainable Development Goal (SDG) 3, which aims to
+                            to guarantee
+                            healthy lives and
+                            promote well-being for everyone, at all ages.
+                        </p>
+                        <a target="_blank"
+                            href="https://www.unodc.org/lpo-brazil/pt/frontpage/2019/04/ods-3--sobre-sade-e-bem-estar---o-objetivo-do-ms-em-abril.html">
+                            <button class="btn btn1">
+                                <span>Learn More about SDG3</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-tilt>
+                <div class="content">
+                    <img src="img/problemapesq.png" alt="Problema de Pesquisa" />
+                    <h1>Search problem</h1>
+                    <p>
+                        How can we help solve the problem of neglect and help seniors who
+                        Do they need special care?
+                    </p>
+                </div>
+            </div>
+            <div class="card" data-tilt>
+                <div class="content">
+                    <img src="img/objprincipal.jpg" alt="" />
+                    <h1>Main objective</h1>
+                    <p>
+                        Development of an application that automates the screening process for
+                        elderly. The application will also send communications to relatives, informing them about: <br>
+                        • Time
+                        of
+                        entry and exit <br>
+                        • Results of proposed activities <br>
+                        • Integration of the elderly <br>
+                    </p>
+                </div>
+            </div>
+            <div class="card" data-tilt>
+                <div class="content">
+                    <img src="img/hipotese.png" alt="" />
+                    <h1>Hypotheses</h1>
+                    <p>
+                        Key objectives and features include:
+                        • Physical, social, mental and sensory integration of the elderly <br>
+                        • Monitoring by professionals such as nutritionists, psychologists and educational
+                        psychologists. <br>
+                        • Free service <br>
+                    </p>
+                </div>
+            </div>
+            <a target="_blank" href="ProjetoAutomatizacaoDeTriagem.pdf">
+                <button type="submit" class="btn" aria-label="submit">
+                    <span>Download my Project in PDF</span>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+            </a>
+        </section>
+    </div>
+
+
+    <!-- Fim Eng-->
+    <script src="script.js"></script>
 </body>
+
 </html>
