@@ -14,6 +14,49 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Estilos para os botões de alternância de idioma */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    animation: pulse 0.6s infinite;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para o container da imagem */
+.container {
+    margin: 20px;
+    text-align: center;
+}
+
+.country-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
 /* Estilos para cabeçalho */
 header {
     text-align: center;
@@ -71,6 +114,7 @@ iframe {
         flex: 1 1 100%;
     }
 }
+
 /* Centralizar a imagem dentro do article */
 article {
     text-align: center;
