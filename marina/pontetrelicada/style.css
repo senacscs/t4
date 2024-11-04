@@ -77,6 +77,19 @@ html {
                     }
                 }
 
+                .galeria {
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+
+                    img {
+                        max-width: 40%;
+                        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                        border-radius: 10px;
+                    }
+                }
+
             }
 
             section:not(.imagens) {
@@ -86,7 +99,7 @@ html {
             }
 
             #conceito {
-                background-color:  #B2D5DE;
+                background-color: #B2D5DE;
             }
 
             #trelicas {
@@ -95,6 +108,15 @@ html {
 
             #triangulos {
                 background-color: #CEE9BE;
+            }
+
+            #nossotrabalho {
+                background-color: #F1C6A4;
+                align-items: center;
+
+                h1 {
+                    text-align: center;
+                }
             }
 
 
@@ -150,6 +172,18 @@ html {
                 }
             }
 
+
+
+        }
+
+        footer {
+            padding: 5px;
+            background-color: #B2D5DE;
+            height: min-content;
+            width: 100vw;
+            p {
+                text-align: center;
+            }
         }
     }
 }
