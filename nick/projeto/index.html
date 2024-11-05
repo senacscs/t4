@@ -18,18 +18,50 @@
         elementsEN.forEach(el => el.style.display = 'none');
       }
     }
+
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
   </script>
 </head>
 <body>
 
-  <header>
+<header>
+  <div class="header-content">
     <h1 class="pt">Plataforma de Conexão de Serviços</h1>
     <h1 class="en" style="display: none;">Service Connection Platform</h1>
     <p class="pt">Projeto PI - Desenvolvendo soluções para um mercado de trabalho sustentável</p>
     <p class="en" style="display: none;">PI Project - Developing solutions for a sustainable labor market</p>
     <button onclick="toggleLanguage('pt')">Português</button>
     <button onclick="toggleLanguage('en')">English</button>
-  </header>
+  </div>
+
+ 
+  <nav class="navbar">
+    <div class="brand-title">Projeto de PI</div>
+    <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="nav-links">
+      <a href="#introducao" class="pt">Introdução</a>
+      <a href="#problema" class="pt">Problema</a>
+      <a href="#objetivo" class="pt">Objetivo</a>
+      <a href="#hipoteses" class="pt">Hipóteses</a>
+      <a href="#resultados" class="pt">Resultados</a>
+      <a href="#referencias" class="pt">Referências</a>
+      <a href="#introducao" class="en" style="display: none;">Introduction</a>
+      <a href="#problema" class="en" style="display: none;">Problem</a>
+      <a href="#objetivo" class="en" style="display: none;">Objective</a>
+      <a href="#hipoteses" class="en" style="display: none;">Hypotheses</a>
+      <a href="#resultados" class="en" style="display: none;">Results</a>
+      <a href="#referencias" class="en" style="display: none;">References</a>
+    </div>
+  </nav>
+</header>
+
 
   <section id="introducao">
     <h2 class="pt">Introdução e Justificativa</h2>
@@ -76,14 +108,14 @@
     <h2 class="pt">Referências</h2>
     <h2 class="en" style="display: none;">References</h2>
     <ul class="pt">
-      <li>Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (SEBRAE) - Artigos e pesquisas sobre o papel do trabalho autônomo e o impacto do empreendedorismo no Brasil. Disponível em: <a href="https://www.sebrae.com.br" target="_blank">https://www.sebrae.com.br</a>.</li>
-      <li>Conferência das Nações Unidas sobre Comércio e Desenvolvimento (UNCTAD) - Relatório de Economia Digital, destacando como as plataformas digitais podem ajudar o trabalho informal e a inclusão econômica. Disponível em: <a href="https://unctad.org/topic/e-commerce-and-digital-economy" target="_blank">https://unctad.org/topic/e-commerce-and-digital-economy</a>.</li>
-      <li>Instituto Brasileiro de Geografia e Estatística (IBGE) - Pesquisa Nacional sobre o Trabalho Informal, abordando a quantidade de trabalhadores autônomos e as condições desse tipo de trabalho no Brasil. Disponível em: <a href="https://www.ibge.gov.br" target="_blank">https://www.ibge.gov.br</a>.</li>
+      <li><a href="https://www.sebrae.com.br" target="_blank">https://www.sebrae.com.br</a>.</li>
+      <li><a href="https://unctad.org/topic/e-commerce-and-digital-economy" target="_blank">https://unctad.org/topic/e-commerce-and-digital-economy</a>.</li>
+      <li><a href="https://www.ibge.gov.br" target="_blank">https://www.ibge.gov.br</a>.</li>
     </ul>
     <ul class="en" style="display: none;">
-      <li>Brazilian Support Service for Micro and Small Enterprises (SEBRAE) - Articles and research on the role of self-employment and the impact of entrepreneurship in Brazil. Available at: <a href="https://www.sebrae.com.br" target="_blank">https://www.sebrae.com.br</a>.</li>
-      <li>United Nations Conference on Trade and Development (UNCTAD) - Digital Economy Report, highlighting how digital platforms can support informal work and economic inclusion. Available at: <a href="https://unctad.org/topic/e-commerce-and-digital-economy" target="_blank">https://unctad.org/topic/e-commerce-and-digital-economy</a>.</li>
-      <li>Brazilian Institute of Geography and Statistics (IBGE) - National Survey on Informal Work, addressing the number of self-employed workers and the conditions of this type of work in Brazil. Available at: <a href="https://www.ibge.gov.br" target="_blank">https://www.ibge.gov.br</a>.</li>
+      <li><a href="https://www.sebrae.com.br" target="_blank">https://www.sebrae.com.br</a>.</li>
+      <li><a href="https://unctad.org/topic/e-commerce-and-digital-economy" target="_blank">https://unctad.org/topic/e-commerce-and-digital-economy</a>.</li>
+      <li><a href="https://www.ibge.gov.br" target="_blank">https://www.ibge.gov.br</a>.</li>
     </ul>
   </section>
   <section id="apresentacao">

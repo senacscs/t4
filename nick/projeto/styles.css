@@ -25,7 +25,7 @@ p {
 
 
 header {
-  background: linear-gradient(135deg, #3f0202, #930606); /* Cores da ODS 8 */
+  background: linear-gradient(135deg, #3f0202, #930606); 
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -202,8 +202,8 @@ footer a:hover {
   }
 }
 button {
-  background-color: #930606; /* Cor do botão para combinar com o cabeçalho */
-  color: white; /* Cor do texto */
+  background-color: #930606; 
+  color: white; 
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
@@ -215,16 +215,90 @@ button {
 }
 
 button:hover {
-  background-color: #7f0000; /* Cor ao passar o mouse */
-  transform: translateY(-3px); /* Efeito de elevação */
+  background-color: #7f0000; 
+  transform: translateY(-3px); 
 }
 
 button:active {
-  background-color: #3f0202; /* Cor ao clicar */
-  transform: translateY(0); /* Retorna ao plano ao clicar */
+  background-color: #3f0202; 
+  transform: translateY(0); 
 }
 
 button:focus {
-  outline: none; /* Remove o contorno padrão */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra leve */
+  outline: none; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #930606;
+  padding: 15px 20px;
+  color: white;
+}
+
+.navbar .brand-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+@media (max-width: 768px) {
+  .navbar .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #930606;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+  }
 }
