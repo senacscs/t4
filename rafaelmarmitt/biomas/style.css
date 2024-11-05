@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    scroll-behavior: smooth;
 }
 body{
     max-width:100%;
@@ -7,7 +8,7 @@ body{
   }
   #landing{
     height:100vh;
-    background:url(https://images.unsplash.com/photo-1450380412196-4e27fb7d2270?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375) no-repeat center center fixed;
+    background:url(https://blog.123milhas.com/wp-content/uploads/2020/12/41o-CERRADO-BRASILEIRO-1920x1077-1.jpg) no-repeat center center fixed;
     background-size:cover;
     -webkit-background-size:cover;
     -o-background-size:cover;
@@ -51,7 +52,7 @@ body{
     font-size: 22px;
     line-height: 32px;
     letter-spacing: 8px;
-    color: #fff;
+    color: black;
     top: -48px;
     position: relative;
     text-align:center;
@@ -68,8 +69,8 @@ body{
     position:absolute;
   }
   .text-2 h2{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20px;
+    font-family: serif;
+    font-size: 30px;
     color: #fff;
   }
   button{
@@ -90,10 +91,6 @@ body{
     max-width:750px;  
     margin-left:75px;
   }
-  #text-changer-1 img{
-    margin:-10px 10px 5px 0;
-    border-radius:50px;
-  }
   #text-changer-3 .social{
     margin:35px;
   }
@@ -104,17 +101,43 @@ body{
   #text-changer-3 .fa:hover{
     color:#2e8ece;
   }
-  .project{
-    height:100%; width:100%;
-    border:1px solid #fff;
-    margin-bottom:5px;
-  }
   #text-changer-2{
     text-align:center;
     height:100%;
   }
-
-  
   .jump {
     text-decoration: none;
   }
+  .ft1 {
+    width: 200px;
+    height: 200px;
+    display:inline-flexbox;
+    border-radius: 50%;
+    margin-right: 7%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .ft2 {
+    margin-left: 10%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .ft1:hover {
+    transform: scale(1.2);
+  }
+  .title1 {
+    padding-top: 2%;
+    font-size: 75px;
+    max-width: 90%;
+  }
+.subtitle {
+  height:100%; width:100%;
+  padding-top: 10%;
+  font-size: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.subtitle:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilíngue com página única e botão de Troca</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lang { display: none; }
+    </style>
+</head>
+<body>
+        <!-- Botões para alternar idioma -->
+        <button class="btn" onclick="setLanguage('pt')">Português</button>
+        <button class="btn" onclick="setLanguage('en')">English</button>
+
+    <!-- Conteúdo em Português -->
+    <div class="lang" id="pt">
+        <h1>Bem-vindo ao nosso site!</h1>
+        <p>Este é o conteúdo em português.</p>
+    </div>
+    <!-- Conteúdo em Inglês -->
+    <div class="lang" id="en">
+        <h1>Welcome to our website!</h1>
+        <p>This is the content in English.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
