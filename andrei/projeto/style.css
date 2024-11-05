@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(193, 191, 191);
+        background-image: url("https://img.freepik.com/fotos-premium/fundo-de-textura-de-padrao-de-ondas-do-mar_684882-460.jpg");
+        background-size: 500px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        text-align: center;
+        font-size: 45px;
+        background-color: rgb(41, 40, 40);
+        color: white;
+        border-radius: 60px;
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+    h2 {
+        margin-left: 80px;
+        margin-right: 80px;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.755);
+        border-radius: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(193, 191, 191);
+        background-image: url("https://th.bing.com/th/id/R.9a8cebd1439731de2d1c30acc635a89d?rik=wZURRdVOFh5lEw&pid=ImgRaw&r=0");
+        background-size: 2250px;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: 22px;
+        background-color: rgb(41, 40, 40);
+        color: white;
+    }
+    h2 {
+        margin-left: 70px;
+        margin-right: 70px;
+        font-size: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.537);
+    }
+    ul {
+        font-size: 10px;
+        text-align: center;
+        color: brown;
+    }
+    }
