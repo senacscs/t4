@@ -6,56 +6,43 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-}
-
-/* Estilo para o cabeçalho principal */
-h1,h2 {
+  }
+  
+  /* Estilo para o cabeçalho principal */
+  h1, h2 {
     background-color: #4CAF50;
     color: white;
     padding: 20px;
     text-align: center;
     margin: 0;
-}
-
-/* Estilo para os cabeçalhos secundários */
- h3{
+  }
+  
+  /* Estilo para os cabeçalhos secundários */
+  h3 {
     background-color: #555;
     color: white;
     padding: 10px;
-    margin: 0;
-}
-
-/* Estilo para os links */
-a {
-    display: block;
-    background-color: #eee;
-    color: #333;
-    padding: 10px;
-    text-decoration: none;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-/* Estilo para os links ao passar o mouse */
-a:hover {
-    background-color: #555;
-}
-
-/* Container para centralizar o conteúdo */
-.container {
+    margin: 10px 0; /* Adiciona margem entre os títulos */
+  }
+  
+  /* Estilo para os links */
+  a {
+    color: #eee; /* Cor do texto do link */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave para a cor */
+  }
+  
+  /* Estilo para os links ao passar o mouse */
+  a:hover {
+    color: #fff; /* Muda a cor ao passar o mouse */
+  }
+  
+  /* Container para centralizar o conteúdo */
+  .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 0.6rem; /* Borda arredondada */
-}
+  }
+  
