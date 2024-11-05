@@ -1,40 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portugol</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .coluna {
+            width: 30%;
+        }
+
+        .coluna input, .coluna button {
+            margin: 10px 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<style>
-    p{
-        text-align: end;
-        font-size: 2rem;
-        margin-right: 20vw;
-    }
-</style>
 <body>
     <header>
         <h1>PORTUGOL PARA JAVASCRIPT</h1>
+        <p class="desc">Botão azul liga o monitor</p>
     </header>
     <main>
-        <p id="res"></p>
-        <p id="res2"></p>
-        <button onclick="bdia()">Clica</button>
-        <br><br>
-        <input placeholder="Adiciona um numero ai" id="ipt" type="number"><button onclick="nmr()">dps clica aq</button>
-        <br><br>
-        <input type="text" placeholder="poem teu nome" id="nome"><button onclick="sim()">Clica tb</button>
-        <br><br><br>
-        <input type="text" id="valor1" placeholder="primeiro numero"><input type="number" id="valor2" placeholder="segundo numero">
-        <button id="div" onclick="dividir()">÷</button><button id="soma" onclick="somar()">+</button><button onclick="multi()" id="multi">X</button><button onclick="subtrair()" id="sub">-</button>
-        <br><br><br>
-        <input type="number" id="valor0"><button onclick="conta()">Calcupara potência e raiz</button>
-        <br><br><br>
-        <input id="var1" placeholder="insira um valor para trocar" type="number"><input placeholder="insira mais um valor" id="var2" type="number"><button onclick="troca()">Trocar os numeros</button>
-        <br><br><br>
-        <input id="idade" placeholder="tua idade" type="number"><button onclick="verificar()">verificação</button>
+        <div class="borda">
+            <div id="Monitor" class="monitor">
+                <p id="res"></p>
+            </div>
+            <div class="btnLigar" onclick="ligar()" id="BTN_ligar"></div>
+        </div>
+
+        <div class="container">
+            <!-- Coluna 1 -->
+            <div class="coluna">
+                <input maxlength="8" placeholder="Adiciona um número" id="ipt1" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="nmr()">Clica aqui</button>
+
+                <input maxlength="8" type="text" placeholder="Nome" id="nome1" oninput="limitarCaracteres(this, 8)">
+                <button onclick="sim()">Confirmar Nome</button>
+
+                <input maxlength="8" type="number" id="valor01" placeholder="Número para raiz/potência">
+                <button onclick="conta()">Calcular</button>
+            </div>
+
+            <!-- Coluna 2 -->
+            <div class="coluna">
+                <input maxlength="8" placeholder="Adiciona um número" id="ipt2" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="nmr()">Clica aqui</button>
+
+                <input maxlength="8" type="text" placeholder="Nome" id="nome2" oninput="limitarCaracteres(this, 8)">
+                <button onclick="sim()">Confirmar Nome</button>
+
+                <input maxlength="8" type="number" id="valor02" placeholder="Número para raiz/potência">
+                <button onclick="conta()">Calcular</button>
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="coluna">
+                <input maxlength="8" placeholder="Adiciona um número" id="ipt3" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="nmr()">Clica aqui</button>
+
+                <input maxlength="8" type="text" placeholder="Nome" id="nome3" oninput="limitarCaracteres(this, 8)">
+                <button onclick="sim()">Confirmar Nome</button>
+
+                <input maxlength="8" type="number" id="valor03" placeholder="Número para raiz/potência">
+                <button onclick="conta()">Calcular</button>
+            </div>
+        </div>
     </main>
+
     <footer>
         <script src="./js/olamundo.js"></script>
         <script src="./js/nmrdigitado.js"></script>
@@ -44,6 +83,34 @@
         <script src="./js/variaveis.js"></script>
         <script src="./js/idadeNecessaria.js"></script>
     </footer>
-</body>
 
+    <script>
+    function ligar() {
+        const ligar = document.getElementById('Monitor');
+        const button = document.getElementById('BTN_ligar');
+        
+        ligar.classList.toggle('ligaron');
+        
+        if (ligar.classList.contains('ligaron')) {
+            button.innerHTML = `<style>
+                .btnLigar {
+                    background-color: red;
+                }
+            </style>`;
+        } else {
+            button.innerHTML = `<style>
+                .btnLigar {
+                    background-color: blue;
+                }
+            </style>`;
+        }
+    }
+
+    function limitarCaracteres(input, max) {
+        if (input.value.length > max) {
+            input.value = input.value.slice(0, max);
+        }
+    }
+    </script>
+</body>
 </html>
