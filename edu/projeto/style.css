@@ -1,31 +1,39 @@
+@font-face {
+    font-family: edu;
+    src: url("Optional.otf");
+}
+
 * {
     margin: 0;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: green;
+    background-color: #132A13;
     color: white;
     text-align: center;
 }
 
 header {
-    background-color: green;
-    padding: 100px;
-    font-style: italic;
+    background-color: #5F6F52;
+    padding: 200px;
+
+    h3 {
+
+        font-family: edu;
+        font-size: 75px;
+    }
 }
 
-.titulo {
-    font-size: 50px;
-}
 
 .ods {
-    background-color: rgb(0, 118, 41);
+    background-color: #A9B388;
+    padding: 200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+
 
     .texto {
         width: 30%;
@@ -41,7 +49,7 @@ header {
         font-size: 18px;
 
     }
-    
+
 }
 
 .icone {
@@ -50,11 +58,13 @@ header {
 }
 
 a {
-    color: whitesmoke
+    color: black;
 }
 
 .referencias {
-    background-color: green;
+    background-color: #FEFAE0;
+    color: black;
+    padding: 200px;
 }
 
 iframe {
@@ -64,20 +74,29 @@ iframe {
 }
 
 .imagem {
-    background-color: rgb(0, 118, 41);
+    background-color: #F9EBC7;
+    padding: 200px;
 }
 
-.celular {
+.mentes {
     border-radius: 10px;
     margin-top: 20px;
+    margin-bottom: 18px;
 }
 
-.problema {
-    font-style: italic;
+.problemadepesquisa {
+    background-color: #B99470;
+    padding: 200px;
+}
+
+.problema1 {
+    text-align: justify;
+    margin-left: auto;
+    margin-left: auto;
 }
 
 .pesquisa {
-    background-color: rgb(0, 118, 41);
+    background-color: #C4661F;
 
 }
 
@@ -86,10 +105,23 @@ iframe {
 }
 
 .objetivo {
-    margin-top: 10px;
+    background-color: #C4661F;
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .rodape {
-    background-color: rgb(0, 118, 41);
-    font-style: italic;
+    background-color: #783D19;
+    padding: 200px;
+   
+    h3 {
+        
+        font-family: edu;
+        font-size: 75px;
+    }
 }
