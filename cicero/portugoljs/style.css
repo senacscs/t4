@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    div {
+        padding: 10px;
+        border: 2px solid black;
+        min-height: 200px;
+        margin: 10px;
+    }
+}
