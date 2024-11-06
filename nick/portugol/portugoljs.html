@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles5.css">
+    <title>Portugoljs</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>PortugolJS</h1>
+        
+        <button onclick="texto()">Clique</button>
+        
+        <div style="margin-top: 20px;">
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <button onclick="nomedigitado()">Mostrar Nome</button>
+        </div>
+
+        <p id="resultado"></p>
+
+        <div style="margin-top: 20px;">
+            <a href="numerodigitado.html">Número Digitado</a>
+            <a href="seunome.html">Seu Nome</a>
+            <a href="variavel.html">Variável</a>
+            <a href="maioridade.html">Maior idade</a>
+            <a href="textodigitado.html">Variável</a>
+        </div>
+    </div>
+
+    <script>
+        function texto() {
+            document.getElementById("resultado").innerText = "veja os codigos em javascript!";
+        }
+
+        function nomedigitado() {
+            const nome = document.getElementById("nome").value;
+            document.getElementById("resultado").innerText = `Olá, ${nome}!`;
+        }
+    </script>
+</body>
+</html>
