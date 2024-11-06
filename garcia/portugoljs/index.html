@@ -17,8 +17,9 @@
         }
 
         .coluna input, .coluna button {
-            margin: 10px 0;
-            width: 100%;
+            display: block;
+            margin: 10px auto;
+            width: 80%;
         }
     </style>
 </head>
@@ -36,40 +37,35 @@
         </div>
 
         <div class="container">
-            <!-- Coluna 1 -->
+            <!-- Primeira coluna -->
             <div class="coluna">
-                <input maxlength="8" placeholder="Adiciona um número" id="ipt1" type="number" oninput="limitarCaracteres(this, 8)">
-                <button onclick="nmr()">Clica aqui</button>
-
-                <input maxlength="8" type="text" placeholder="Nome" id="nome1" oninput="limitarCaracteres(this, 8)">
-                <button onclick="sim()">Confirmar Nome</button>
-
-                <input maxlength="8" type="number" id="valor01" placeholder="Número para raiz/potência">
-                <button onclick="conta()">Calcular</button>
+                <p id="res2"></p>
+                <button onclick="bdia()">Clica</button>
+                <input maxlength="8" placeholder="Adiciona um numero ai" id="ipt" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="nmr()">dps clica aq</button>
             </div>
 
-            <!-- Coluna 2 -->
+            <!-- Segunda coluna -->
             <div class="coluna">
-                <input maxlength="8" placeholder="Adiciona um número" id="ipt2" type="number" oninput="limitarCaracteres(this, 8)">
-                <button onclick="nmr()">Clica aqui</button>
-
-                <input maxlength="8" type="text" placeholder="Nome" id="nome2" oninput="limitarCaracteres(this, 8)">
-                <button onclick="sim()">Confirmar Nome</button>
-
-                <input maxlength="8" type="number" id="valor02" placeholder="Número para raiz/potência">
-                <button onclick="conta()">Calcular</button>
+                <input maxlength="8" type="text" placeholder="poem teu nome" id="nome" oninput="limitarCaracteres(this, 8)">
+                <button onclick="sim()">Clica tb</button>
+                <input maxlength="8" type="text" id="valor1" placeholder="primeiro numero" oninput="limitarCaracteres(this, 8)">
+                <input maxlength="8" type="number" id="valor2" placeholder="segundo numero" oninput="limitarCaracteres(this, 8)">
+                <button id="div" onclick="dividir()">÷</button>
+                <button id="soma" onclick="somar()">+</button>
+                <button onclick="multi()" id="multi">X</button>
+                <button onclick="subtrair()" id="sub">-</button>
             </div>
 
-            <!-- Coluna 3 -->
+            <!-- Terceira coluna -->
             <div class="coluna">
-                <input maxlength="8" placeholder="Adiciona um número" id="ipt3" type="number" oninput="limitarCaracteres(this, 8)">
-                <button onclick="nmr()">Clica aqui</button>
-
-                <input maxlength="8" type="text" placeholder="Nome" id="nome3" oninput="limitarCaracteres(this, 8)">
-                <button onclick="sim()">Confirmar Nome</button>
-
-                <input maxlength="8" type="number" id="valor03" placeholder="Número para raiz/potência">
-                <button onclick="conta()">Calcular</button>
+                <input maxlength="8" type="number" id="valor0" oninput="limitarCaracteres(this, 8)">
+                <button onclick="conta()">Calcular potência e raiz</button>
+                <input maxlength="8" id="var1" placeholder="insira um valor para trocar" type="number" oninput="limitarCaracteres(this, 8)">
+                <input maxlength="8" placeholder="insira mais um valor" id="var2" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="troca()">Trocar os numeros</button>
+                <input maxlength="8" id="idade" placeholder="Idade" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="verificar()">verificação</button>
             </div>
         </div>
     </main>
