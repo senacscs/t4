@@ -26,7 +26,7 @@ function matematica(){
 // 		cadeia matematica
  let a, b, soma, sub, mult, div;
 // 		real a, b, soma, sub, mult, div
-    // 		leia(numero)
+    // 		leia(numero)     
     a = parseInt(document.getElementById("numero").value)
     b = parseInt(document.getElementById("numero").value)
 
