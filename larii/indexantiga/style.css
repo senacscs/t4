@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playpen+Sans:wght@100..800&display=swap');
+:root {
+    --adjust-size: 0px; /* 必要に応じて */
+}
+
+body {
+    font-family: "EB Garamond", serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url("azulescuro.jpg");
+    /* background-size: cover */
+}
+
+header {
+    background-color: #152f64;
+    color: white;
+    padding: 25%;
+    text-align: center;
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post {
+    margin: 25px;
+    position: relative;
+}
+
+.polaroid {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(1, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    transform: rotate(2deg);
+    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transição suave */
+}
+
+.polaroid:hover {
+    transform: rotate(2deg) translateY(-10px); /* Move para cima ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Aumenta a sombra ao passar o mouse */
+}
+
+.polaroid h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.polaroid p {
+    font-size: 0.9em;
+}
+
+img {
+    width: 160px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transição suave */
+    box-shadow: 0 50px 20px rgba(0, 0, 0, 0.7); /* Sombra padrão */
+}
+
+img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 30px 16px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #152f64;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 120%;
+}

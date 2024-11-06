@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <header>
+        <h1>Média Aritmética</h1>
+    </header>
+
+    <main>
+        <p>Algoritmo para calcular a média aritmética de 3 números.</p>
+
+        <h2>Exemplo de Código JavaScript:</h2>
+        <pre>
+let nota1 = 7;
+let nota2 = 8;
+let nota3 = 6;
+let media = (nota1 + nota2 + nota3) / 3;
+console.log("Média:", media);
+        </pre>
+
+        <button onclick="calcularMedia()">Executar Código</button>
+
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Voltar para a lista de exemplos</a></p>
+    </footer>
+
+    <script>
+        function calcularMedia() {
+            let nota1 = 7;
+            let nota2 = 8;
+            let nota3 = 6;
+            let media = (nota1 + nota2 + nota3) / 3;
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = `Média: ${media.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

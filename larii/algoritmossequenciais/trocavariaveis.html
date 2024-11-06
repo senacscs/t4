@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Variáveis</title>
+</head>
+<body>
+    <header>
+        <h1>Troca de Variáveis</h1>
+    </header>
+    
+    <main>
+        <p>Troca de valores entre duas variáveis.</p>
+        
+        <h2>Exemplo de Código JavaScript:</h2>
+        <pre>
+let a = 5;
+let b = 10;
+console.log("Antes da troca:");
+console.log("a =", a, "b =", b);
+
+// Troca dos valores
+let temp = a;
+a = b;
+b = temp;
+
+console.log("Após a troca:");
+console.log("a =", a, "b =", b);
+        </pre>
+
+        <button onclick="trocaValores()">Executar Código</button>
+
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Voltar para a lista de exemplos</a></p>
+    </footer>
+
+    <script>
+        function trocaValores() {
+            let a = 5;
+            let b = 10;
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = `
+                Antes da troca:<br>
+                a = ${a} b = ${b}<br>
+            `;
+
+            // Troca dos valores
+            let temp = a;
+            a = b;
+            b = temp;
+
+            resultado.innerHTML += `
+                Após a troca:<br>
+                a = ${a} b = ${b}<br>
+            `;
+        }
+    </script>
+</body>
+</html>

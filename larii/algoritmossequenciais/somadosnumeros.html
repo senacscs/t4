@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dos Números</title>
+</head>
+<body>
+    <header>
+        <h1>Soma dos Números</h1>
+    </header>
+
+    <main>
+        <p>Algoritmo que soma dois números.</p>
+
+        <h2>Exemplo de Código JavaScript:</h2>
+        <pre>
+let num1 = 8;
+let num2 = 5;
+let soma = num1 + num2;
+console.log("Soma dos números:", soma);
+        </pre>
+
+        <button onclick="somarNumeros()">Executar Código</button>
+
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Voltar para a lista de exemplos</a></p>
+    </footer>
+
+    <script>
+        function somarNumeros() {
+            let num1 = 8;
+            let num2 = 5;
+            let soma = num1 + num2;
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = `Soma dos números: ${soma}`;
+        }
+    </script>
+</body>
+</html>

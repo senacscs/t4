@@ -1,0 +1,113 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #2a3953;
+    color: #b7adce;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.exemplos-lista {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2a3953;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    border: 2px solid #2a3953;
+}
+
+ul li a:hover {
+    background-color: #2a3953;
+    color: #fff;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f1f1f1;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+button {
+    background-color: #2a3953;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2a3953;
+    transform: scale(1.05);
+}
+
+
+#resultado {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+}

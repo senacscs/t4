@@ -1,93 +1,779 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playpen+Sans:wght@100..800&display=swap');
-:root {
-    --adjust-size: 0px; /* 必要に応じて */
-}
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
-body {
-    font-family: "EB Garamond", serif;
-    font-size: large;
+body
+{
+    width: 100%;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    background-image: url("azulescuro.jpg");
-    /* background-size: cover */
+    display: flex;
+    font-family: 'Belanosima', sans-serif;
+    background-image: url(azulescuro.jpg);
+    background-size: cover;
+   
+}
+a
+{
+    margin: auto;
+    text-decoration: none;
+}
+.darksoul-card1
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+    
+}
+.darksoul-card2
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+    
+
+}
+.darksoul-card3
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: end;
+    justify-content: left;
+    font-family: "Kaushan Script", cursive;
+   
+}
+.darksoul-card4
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+}
+.darksoul-card5
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+    
+
+}
+.darksoul-card6
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: end;
+    justify-content: left;
+    font-family: "Kaushan Script", cursive;
+   
+}
+.darksoul-card7
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+}
+.darksoul-card8
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+}
+.darksoul-card9
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: end;
+    justify-content: left;
+    font-family: "Kaushan Script", cursive;
+   
+}
+.darksoul-card10
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+}
+.darksoul-card11
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+
+}
+.darksoul-card12
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: end;
+    justify-content: left;
+    font-family: "Kaushan Script", cursive;
+    
+}
+.darksoul-card13
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+}
+.darksoul-card14
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+
+}
+.darksoul-card15
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: end;
+    justify-content: left;
+    font-family: "Kaushan Script", cursive;
+}
+.darksoul-card16
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
 }
 
-header {
-    background-color: #152f64;
+
+
+
+
+.circle1
+{
+    position: absolute;
+    margin: auto;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(123, 153, 174);
+    border-radius: 0px 15px 0px 50px;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card1:hover .circle1
+{
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #b74b95 60%, #081e5e 90%);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(eu.jpg);
+    background-size: 200px;
+}
+.darksoul-card1:hover .content
+{
     color: white;
-    padding: 25%;
+}
+.circle2
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 50%;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card2:hover .circle2
+{
+    margin-top: 0px;
+    background-color: rgb(42, 42, 42);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(midnights.jpg);
+    background-size: 200px;
+}
+.darksoul-card2:hover .content
+{
+    color: white;
+}
+.circle3
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 0px 50px 0px 15px;
+    transition: all 0.5s;
+    
+}
+.darksoul-card3:hover .circle3
+{
+    margin-top: 0px;
+    background-color: rgb(255, 201, 201);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(mirrorball1.jpg);
+    background-size: 200px;
+}
+.darksoul-card3:hover .content
+{
+    color: white;
+}
+.circle4
+{
+    position: absolute;
+    margin: auto;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    background: rgb(123, 153, 174);
+    border-radius: 0px 15px 0px 50px;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card4:hover .circle4
+{
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(estrelas.jpg);
+    background-size: 200px;
+}
+.darksoul-card4:hover .content
+{
+    color: white;
+}
+.circle5
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 50%;
+    transition: all 0.5s;
+   
+}
+.darksoul-card5:hover .circle5
+{
+    margin-top: 0px;
+    background-color: rgb(42, 42, 42);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(pais.jpg);
+    background-size: 200px;
+}
+.darksoul-card5:hover .content
+{
+    color: white;
+}
+.circle6
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 0px 50px 0px 15px;
+    transition: all 0.5s;
+   
+}
+.darksoul-card6:hover .circle6
+{
+    margin-top: 0px;
+    background-color: rgb(255, 201, 201);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(animal.jpg);
+    background-size: 200px;
+}
+.darksoul-card6:hover .content
+{
+    color: white;
+}
+.circle7
+{
+    position: absolute;
+    margin: auto;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    background:rgb(123, 153, 174);
+    border-radius: 0px 15px 0px 50px;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card7:hover .circle7
+{
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(wanda.jpg);
+    background-size: 200px;
+}
+.darksoul-card7:hover .content
+{
+    color: white;
+}
+.circle8
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 50%;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card8:hover .circle8
+{
+    margin-top: 0px;
+    background-color: rgb(42, 42, 42);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(Imagem\ do\ WhatsApp\ de\ 2024-07-15\ à\(s\)\ 10.06.34_287c7327.jpg);
+    background-size: 200px;
+}
+.darksoul-card8:hover .content
+{
+    color: white;
+}
+.circle9
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 0px 50px 0px 15px;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card9:hover .circle9
+{
+    margin-top: 0px;
+    background-color: rgb(255, 201, 201);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(autocuidado.jpg);
+    background-size: 200px;
+}
+.darksoul-card9:hover .content
+{
+    color: white;
+}
+.circle10
+{
+    position: absolute;
+    margin: auto;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    background: rgb(123, 153, 174);
+    border-radius: 0px 15px 0px 50px;
+    transition: all 0.5s;
+   
+    
+}
+.darksoul-card10:hover .circle10
+{
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(tecnologiamat.jpg);
+    background-size: 200px;
+}
+.darksoul-card10:hover .content
+{
+    color: white;
+}
+.circle11
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 50%;
+    transition: all 0.5s;
+    
+}
+.darksoul-card11:hover .circle11
+{
+    margin-top: 0px;
+    background-color: rgb(42, 42, 42);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(ponteautoportante.jpg);
+    background-size: 200px;
+}
+.darksoul-card11:hover .content
+{
+    color: white;
+}
+.circle12
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 0px 50px 0px 15px;
+    transition: all 0.5s;
+    
+}
+.darksoul-card12:hover .circle12
+{
+    margin-top: 0px;
+    background-color: rgb(255, 201, 201);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(ponteautoportante.jpg);
+    background-size: 200px;
+}
+.darksoul-card12:hover .content
+{
+    color: white;
+}
+.circle13
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(123, 153, 174);
+    border-radius: 50%;
+    transition: all 0.5s;
+    
+}
+.darksoul-card13:hover .circle13
+{
+    margin-top: 0px;
+    background-color: rgb(42, 42, 42);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(poema.png);
+    background-size: 200px;
+}
+.darksoul-card13:hover .content
+{
+    color: white;
+}
+.circle14
+{
+    position: absolute;
+    margin: auto;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    background: rgb(123, 153, 174);
+    border-radius: 0px 15px 0px 50px;
+    transition: all 0.5s;
+    
+}
+.darksoul-card14:hover .circle14
+{
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(triangulos.jpeg);
+    background-size: 200px;
+}
+.darksoul-card14:hover .content
+{
+    color: white;
+}
+.circle15
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(123, 153, 174);
+    border-radius: 50%;
+    transition: all 0.5s;
+    
+}
+.darksoul-card15:hover .circle15
+{
+    margin-top: 0px;
+    background-color: rgb(42, 42, 42);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(planejamento.jpeg);
+    background-size: 200px;
+}
+.darksoul-card15:hover .content
+{
+    color: white;
+}
+.circle16
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(123, 153, 174);
+    border-radius: 0px 50px 0px 15px;
+    transition: all 0.5s;
+    
+}
+.darksoul-card16:hover .circle16
+{
+    margin-top: 0px;
+    background-color: rgb(255, 201, 201);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(mirrorball1.jpg);
+    background-size: 200px;
+}
+.darksoul-card16:hover .content
+{
+    color: white;
+}
+.content
+{
+    margin: auto;
+    z-index: 100;
+    color: black;
+    font-weight: 500;
+}
+@media only screen and (max-width: 600px) 
+{
+    body
+    {
+        flex-direction: column;
+    }
+}
+.darksoul-card1 img
+{
+    position: absolute;
+    margin: auto;
+    padding-top: 8px;
+    padding-right: 8px;
+}
+.darksoul-card2 img
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    padding-top: 12px;
+}
+.darksoul-card3 img
+{
+    position: absolute;
+    margin: auto;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+.disclaimer {
+    position: fixed;
+    bottom: 0;  /* Coloca a disclaimer na parte inferior da página */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    width: 100%;
+    color: rgb(0, 0, 0);
     text-align: center;
-  font-family: "Edu TAS Beginner", cursive;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+    padding: 10px 0; /* Adiciona um pouco de espaço acima e abaixo do texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Um fundo leve para garantir legibilidade */
+    font-family: "Kaushan Script", cursive;
+    font-weight: 900;
+    z-index: 1000;  /* Garante que a disclaimer fique acima de outros elementos */
 }
 
-h1 {
-  font-family: "Edu TAS Beginner", cursive;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+.disclaimer a
+{
+    text-decoration: none;
+    color: #202020;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 900;
 }
-
-
-main {
-    padding: 20px;
+.disclaimer a:hover
+{
+    text-decoration: overline;
 }
-
-.posts {
+.card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Alinha as caixas ao centro */
+    gap: 20px; /* Espaçamento entre as caixas */
+    margin: 20px; /* Margem do contêiner */
 }
 
-.post {
-    margin: 25px;
-    position: relative;
-}
-
-.polaroid {
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(1, 0, 0, 0.7);
-    padding: 10px;
-    text-align: center;
-    transform: rotate(2deg);
-    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transição suave */
-}
-
-.polaroid:hover {
-    transform: rotate(2deg) translateY(-10px); /* Move para cima ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Aumenta a sombra ao passar o mouse */
-}
-
-.polaroid h2 {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.polaroid p {
-    font-size: 0.9em;
-}
-
-img {
-    width: 160px;
-    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transição suave */
-    box-shadow: 0 50px 20px rgba(0, 0, 0, 0.7); /* Sombra padrão */
-}
-
-img:hover {
-    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
-    box-shadow: 0 30px 16px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #152f64;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 120%;
+.darksoul-card1, .darksoul-card2, .darksoul-card3 {
+    flex: 0 1 200px; /* Tamanho fixo para cada card */
 }
