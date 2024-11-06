@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+.con  {
+    background-color: rgb(212, 178, 4);
+    width: 25%;
+    height: 5%;
+    margin-left: 70px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px ;  
+    width: 300px;
+  }
+  a {
+    color: white;
+  }
+  h1 {
+    color: white;
+    font-size: 600%;
+    text-align: center;
+  }
