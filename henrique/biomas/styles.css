@@ -198,3 +198,19 @@
 
 .content footer ion-icon:hover { color: rgb(121, 149, 121); }
 
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-family: futura,sans-serif;
+  color: white;
+}
+
+/* Estilo dos links (remover sublinhado e cor diferente) */
+.credit-link {
+  text-decoration: none;  /* Remove o sublinhado */
+  color: inherit;         /* Herda a cor do texto pai (sem cor diferente) */
+}
+
+.credit-link:hover {
+  text-decoration: none;  /* Remove sublinhado ao passar o mouse */
+}
