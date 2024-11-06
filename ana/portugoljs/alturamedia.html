@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Alturas</title>
+    <link rel="stylesheet" href="alturamedia.css"> 
+</head>
+<body>
+    <h1>Cálculo da média de alturas</h1>
+    <button onclick="calcularMediaAlturas()">Calcular Média</button>
+
+    <script>
+        function calcularMediaAlturas() {
+            let altura1 = parseFloat(prompt("Digite a altura da primeira pessoa (em metros): "));
+            let altura2 = parseFloat(prompt("Digite a altura da segunda pessoa (em metros): "));
+            let altura3 = parseFloat(prompt("Digite a altura da terceira pessoa (em metros): "));
+
+            let mediaAltura = (altura1 + altura2 + altura3) / 3;
+            alert("A média das alturas é: " + mediaAltura.toFixed(2) + " metros");
+        }
+    </script>
+</body>
+</html>

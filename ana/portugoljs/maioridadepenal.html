@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Maioridade</title>
+    <link rel="stylesheet" href="maioridadepenal.css"> 
+</head>
+<body>
+    <h1>Verifique sua Maioridade</h1>
+    <button onclick="verificarMaioridade()">Clique para verificar</button>
+
+    <script>
+        function verificarMaioridade() {
+            const MAIORIDADE = 18;
+            let idade = parseInt(prompt("Digite sua idade: "));
+            let anos = MAIORIDADE - idade;
+
+            if (anos > 0) {
+                alert(`Falta(m) ${anos} ano(s) para você atingir a maioridade`);
+            } else {
+                alert("Você já atingiu a maioridade");
+            }
+        }
+    </script>
+</body>
+</html>

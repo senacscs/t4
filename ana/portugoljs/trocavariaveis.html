@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Variáveis</title>
+    <link rel="stylesheet" href="trocavarieveis.css"
+</head>
+<body>
+    <h1>Troca de Valores com JavaScript</h1>
+    <button onclick="trocarValores()">Clique para executar</button>
+
+    <script>
+        function trocarValores() {
+            let a = parseInt(prompt("Informe um valor para a variável A: "));
+            let b = parseInt(prompt("Informe um valor para a variável B: "));
+
+            console.log("Variáveis antes da troca:");
+            console.log("A =", a, "; B =", b);
+
+            // Troca de valores usando uma variável auxiliar
+            let aux = a;
+            a = b;
+            b = aux;
+
+            console.log("Variáveis após a troca:");
+            console.log("A =", a, "; B =", b);
+        }
+    </script>
+</body>
+</html>

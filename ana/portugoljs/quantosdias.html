@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Dias Passados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo de Dias Passados desde 01/01/0001</h1>
+        <button onclick="calcularDias()">Clique para calcular</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularDias() {
+            // Solicitar o ano atual
+            let anoAtual = parseInt(prompt("Informe o ano atual:"));
+
+            // Calcular a quantidade de anos bissextos (divisão inteira por 4)
+            let qtdAnosBi = Math.floor(anoAtual / 4);
+
+            // Calcular o total de dias
+            let dias = (anoAtual - 1) * 365 + qtdAnosBi;
+
+            // Exibir o resultado
+            document.getElementById("resultado").innerText = 
+                `Já se passaram ${dias} dias desde 01/01/0001`;
+        }
+    </script>
+</body>
+</html>

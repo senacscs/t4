@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Compra</title>
+    <link rel="stylesheet" href="lojadeferramentas.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo de Compra</h1>
+        <button onclick="calcularTotal()">Clique para calcular o total</button>
+    </div>
+
+    <script>
+        function calcularTotal() {
+            const PRECO_PARAFUSO = 1.50;
+            const PRECO_ARRUELA = 2.00;
+            const PRECO_PORCA = 2.50;
+
+            let nome = prompt("Digite seu nome:");
+            let quantidadeParafusos = parseInt(prompt("Digite a quantidade de parafusos que deseja comprar:"));
+            let quantidadeArruelas = parseInt(prompt("Digite a quantidade de arruelas que deseja comprar:"));
+            let quantidadePorcas = parseInt(prompt("Digite a quantidade de porcas que deseja comprar:"));
+
+            let totalParafusos = PRECO_PARAFUSO * quantidadeParafusos;
+            let totalArruelas = PRECO_ARRUELA * quantidadeArruelas;
+            let totalPorcas = PRECO_PORCA * quantidadePorcas;
+            let totalPagar = totalParafusos + totalArruelas + totalPorcas;
+
+            alert("Cliente: " + nome + "\n" +
+                  "===============================\n" +
+                  "Parafusos: " + quantidadeParafusos + "\n" +
+                  "Arruelas: " + quantidadeArruelas + "\n" +
+                  "Porcas: " + quantidadePorcas + "\n" +
+                  "===============================\n" +
+                  "Total a pagar: R$ " + totalPagar.toFixed(2));
+        }
+    </script>
+</body>
+</html>
