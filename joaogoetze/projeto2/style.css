@@ -45,10 +45,10 @@
       color: #333; 
     }
     
-    /* Estilo para quando o mouse passa por cima do link */
     a:hover {
-      color: #ffffff; /* Muda a cor do texto quando o mouse passa por cima */
-      text-decoration: underline; /* Adiciona o sublinhado */
+      color: #6f03f3; 
+      text-decoration:underline;
+      
     }
 
     header {
