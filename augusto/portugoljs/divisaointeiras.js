@@ -6,7 +6,7 @@
 		
 		escreva("Digite um valor: ") 
 		leia(valor)
-
+		Feito por: Augusto
 		metade_inteira = valor / 2 // Calcula a metade inteira do valor
 		resto = valor % 3 // Calcula o resto da divisão do valor por 3
 		

@@ -33,6 +33,7 @@ function calcularAnos() {
 	// Calcula os anos faltantes
 	const anosFaltantes = MAIORIDADE - idade;
 
+
 	// Exibe o resultado
 	if (anosFaltantes > 0) {
 	  document.getElementById("resultado").textContent = `Falta(m) ${anosFaltantes} ano(s) para você atingir a maioridade.`;
