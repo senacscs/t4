@@ -261,6 +261,22 @@ a
     font-family: "Grand Hotel", cursive;
    
 }
+.darksoul-card18
+{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 153, 174);
+    box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+   
+}
+
 
 
 
@@ -693,7 +709,7 @@ a
 .darksoul-card16:hover .circle16
 {
     margin-top: 0px;
-    background-color: rgb(255, 201, 201);
+    background-color: rgb(123, 153, 174);
     width: 200px;
     height: 200px;
     border-radius: 15px;
@@ -704,6 +720,35 @@ a
 .darksoul-card16:hover .content
 {
     color: white;
+}
+
+.circle18
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 35px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(123, 153, 174);
+    border-radius: 0px 50px 0px 15px;
+    transition: all 0.5s;
+    
+}
+.darksoul-card18:hover .circle18
+{
+    margin-top: 0px;
+    background-color: rgb(123, 153, 174);
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    background-image: url(algoritmossequenciais.jpeg);
+    background-size: 200px;
+}
+.darksoul-card18:hover .content
+{
+    color: white;
+    text-align: center;
 }
 .content
 {
