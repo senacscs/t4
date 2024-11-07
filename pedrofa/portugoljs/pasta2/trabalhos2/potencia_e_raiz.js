@@ -21,8 +21,14 @@
 */
 
 function numeroDigitado () {
-	let numero = parseFloat(document.getElementById("number").value)
+	let numero = parseFloat(document.getElementById("numero").value)
 	let potencia, raiz_quadrada
 
-	potencia = mat.potencia(number, 3.0)
+	potencia = mat.potencia(numero, 3.0)
+	raiz_quadrada = mat.raiz(numero, 2.0)
+
+	document.write("O número ao cubo é:", potencia)
+	document.write("A raiz quadrada do número é:", raiz_quadrada)
+
 }
+
