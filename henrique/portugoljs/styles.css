@@ -1,0 +1,16 @@
+button{
+    border: none;
+    border-radius: 100px;
+    background-color: pink;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, p{
+    display: flex;
+    text-align: end;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    
+}
