@@ -17,7 +17,7 @@
  * 	Logo após, pede ao usuário que informe sua idade e calcula quantos anos faltam
  * 	para ele atingir a maioridade.
  * 
- * Autores:
+ * Autores:atotao
  * 
  * 	Giordana Maria da Costa Valle
  * 	Carlos Alexandre Krueger
