@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Média Aritmética</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -11,18 +12,18 @@
     </header>
 
     <main>
-        <p>Algoritmo para calcular a média aritmética de 3 números.</p>
+        <p>Digite três notas para calcular a média aritmética:</p>
 
-        <h2>Exemplo de Código JavaScript:</h2>
-        <pre>
-let nota1 = 7;
-let nota2 = 8;
-let nota3 = 6;
-let media = (nota1 + nota2 + nota3) / 3;
-console.log("Média:", media);
-        </pre>
+        <label for="nota1">Nota 1:</label>
+        <input type="number" id="nota1" placeholder="Digite a primeira nota"><br><br>
 
-        <button onclick="calcularMedia()">Executar Código</button>
+        <label for="nota2">Nota 2:</label>
+        <input type="number" id="nota2" placeholder="Digite a segunda nota"><br><br>
+
+        <label for="nota3">Nota 3:</label>
+        <input type="number" id="nota3" placeholder="Digite a terceira nota"><br><br>
+
+        <button onclick="calcularMedia()">Calcular Média</button>
 
         <h2>Resultado:</h2>
         <div id="resultado"></div>
@@ -34,12 +35,22 @@ console.log("Média:", media);
 
     <script>
         function calcularMedia() {
-            let nota1 = 7;
-            let nota2 = 8;
-            let nota3 = 6;
+            // Obtém os valores inseridos pelo usuário
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let nota3 = parseFloat(document.getElementById("nota3").value);
+
+            // Verifica se os valores são números válidos
+            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                document.getElementById("resultado").innerText = "Por favor, insira valores numéricos válidos para todas as notas.";
+                return;
+            }
+
+            // Calcula a média
             let media = (nota1 + nota2 + nota3) / 3;
-            let resultado = document.getElementById("resultado");
-            resultado.innerHTML = `Média: ${media.toFixed(2)}`;
+
+            // Exibe o resultado
+            document.getElementById("resultado").innerText = `Média: ${media.toFixed(2)}`;
         }
     </script>
 </body>

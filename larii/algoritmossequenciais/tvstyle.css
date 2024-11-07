@@ -1,0 +1,89 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5;
+    color: #4a148c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+}
+
+h1 {
+    color: #4a148c;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos dos inputs e do botão */
+label {
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 2px solid #ce93d8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(74, 20, 140, 0.1);
+    font-size: 1em;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #ab47bc;
+    box-shadow: 0 0 8px rgba(171, 71, 188, 0.3);
+}
+
+button {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(74, 20, 140, 0.3);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4a148c;
+}
+
+/* Estilos do resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+footer a {
+    color: #4a148c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #6a1b9a;
+    text-decoration: underline;
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tvstyle.css">
     <title>Troca de Variáveis</title>
 </head>
 <body>
@@ -11,25 +12,15 @@
     </header>
     
     <main>
-        <p>Troca de valores entre duas variáveis.</p>
-        
-        <h2>Exemplo de Código JavaScript:</h2>
-        <pre>
-let a = 5;
-let b = 10;
-console.log("Antes da troca:");
-console.log("a =", a, "b =", b);
+        <p>Troca de valores entre duas variáveis inseridas pelo usuário.</p>
 
-// Troca dos valores
-let temp = a;
-a = b;
-b = temp;
+        <label for="valorA">Valor de A:</label>
+        <input type="number" id="valorA"><br><br>
 
-console.log("Após a troca:");
-console.log("a =", a, "b =", b);
-        </pre>
+        <label for="valorB">Valor de B:</label>
+        <input type="number" id="valorB"><br><br>
 
-        <button onclick="trocaValores()">Executar Código</button>
+        <button onclick="trocaValores()">Executar Troca</button>
 
         <h2>Resultado:</h2>
         <div id="resultado"></div>
@@ -41,12 +32,21 @@ console.log("a =", a, "b =", b);
 
     <script>
         function trocaValores() {
-            let a = 5;
-            let b = 10;
+            // Obtém os valores inseridos pelo usuário
+            let a = parseFloat(document.getElementById("valorA").value);
+            let b = parseFloat(document.getElementById("valorB").value);
+
+            // Verifica se os valores são números válidos
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("resultado").innerText = "Por favor, insira valores numéricos válidos.";
+                return;
+            }
+
+            // Exibe os valores antes da troca
             let resultado = document.getElementById("resultado");
             resultado.innerHTML = `
                 Antes da troca:<br>
-                a = ${a} b = ${b}<br>
+                a = ${a}, b = ${b}<br>
             `;
 
             // Troca dos valores
@@ -54,9 +54,10 @@ console.log("a =", a, "b =", b);
             a = b;
             b = temp;
 
+            // Exibe os valores após a troca
             resultado.innerHTML += `
                 Após a troca:<br>
-                a = ${a} b = ${b}<br>
+                a = ${a}, b = ${b}
             `;
         }
     </script>

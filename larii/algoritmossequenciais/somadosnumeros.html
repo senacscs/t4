@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soma dos Números</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -11,17 +12,15 @@
     </header>
 
     <main>
-        <p>Algoritmo que soma dois números.</p>
+        <p>Digite dois números para calcular a soma:</p>
 
-        <h2>Exemplo de Código JavaScript:</h2>
-        <pre>
-let num1 = 8;
-let num2 = 5;
-let soma = num1 + num2;
-console.log("Soma dos números:", soma);
-        </pre>
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" placeholder="Digite o primeiro número"><br><br>
 
-        <button onclick="somarNumeros()">Executar Código</button>
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" placeholder="Digite o segundo número"><br><br>
+
+        <button onclick="somarNumeros()">Calcular Soma</button>
 
         <h2>Resultado:</h2>
         <div id="resultado"></div>
@@ -33,11 +32,21 @@ console.log("Soma dos números:", soma);
 
     <script>
         function somarNumeros() {
-            let num1 = 8;
-            let num2 = 5;
+            // Obtém os valores inseridos pelo usuário
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+
+            // Verifica se os valores são números válidos
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("resultado").innerText = "Por favor, insira valores numéricos válidos.";
+                return;
+            }
+
+            // Calcula a soma
             let soma = num1 + num2;
-            let resultado = document.getElementById("resultado");
-            resultado.innerHTML = `Soma dos números: ${soma}`;
+
+            // Exibe o resultado
+            document.getElementById("resultado").innerText = `Soma dos números: ${soma}`;
         }
     </script>
 </body>
