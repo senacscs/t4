@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body {
+    max-height: 100vh;
+    width: 100vw;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f9f6ef;
+    place-content: center;
+    background-image: radial-gradient(circle at 50% 50%, #000878, #008d8d);
+    text-align: center;
+  }
+
+  h2 {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    width: 1;
+  }
+  
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+    border-radius: 20px;
+  }
+ 
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  

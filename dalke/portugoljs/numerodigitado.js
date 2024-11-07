@@ -11,10 +11,10 @@
 	} 
 }
 */
-function numeroDigitado() {
-    let numero
-    numero = document.getElementById("numero").value
-    console.log("O número digitado foi: ", numero, "\n")
-    alert("O número digitado foi: ", numero, "\n")
-    document.write("O número digitado foi: ", numero, "\n")
-    }
+function exibirNumero() {
+	// Obter o valor digitado pelo usuário
+	const numero = parseInt(document.getElementById("numero").value);
+
+	// Exibir o resultado
+	document.getElementById("resultado").textContent = `O número digitado foi: ${numero}`;
+}
