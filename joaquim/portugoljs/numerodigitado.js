@@ -1,20 +1,19 @@
-// programa 
-// { 
-// 	funcao inicio () 
-// 	{ 
-// 		inteiro numero
+/* programa 
+{ 
+	funcao inicio () 
+	{ 
+		inteiro numero
+		
+		escreva("Digite um número inteiro: ")
+		leia(numero)
+		
+		escreva("O número digitado foi: ", numero, "\n")
+	} 
+}
+*/
+function exibirNumero() {
 
-// 		escreva("Digite um número inteiro: ")
-// 		leia(numero)
+	const numero = parseInt(document.getElementById("numero").value);
 
-// 		escreva("O número digitado foi: ", numero, "\n")
-// 	} 
-// }
-
-function numeroDigitado() {
-    let numero;
-    numero = document.getElementById("numero").value
-    console.log("O número digitado foi: ", numero);
-    alert("O número digitado foi: ", numero);
-    document.write("O número digitado foi: ", numero);
+	document.getElementById("resultado").textContent = `O número digitado foi: ${numero}`;
 }
