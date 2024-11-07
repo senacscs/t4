@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digite seu Nome</title>
+</head>
+<link rel="stylesheet" href="seunome.css">
+<body>
+    <h1>Digite seu Nome</h1>
+    <input type="text" id="nome">
+    <button onclick="sim()">Iniciar</button>
+    <p id="res"></p>
+    
+    <script src="seunome.js"></script>
+    <script>
+        function sim(){
+    const nsei = document.getElementById('nome').value;
+    document.getElementById("res").innerText = `Olá ${nsei}`;
+
+}
+    </script>
+   
+</body>
+</html>

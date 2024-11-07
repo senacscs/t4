@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="variaveis.css">
+<body>
+    <script src="variaveis.js"></script>
+    <input maxlength="8" id="var1" placeholder="insira um valor para trocar" type="number" oninput="limitarCaracteres(this, 8)">
+                <input maxlength="8" placeholder="insira mais um valor" id="var2" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="troca()">Trocar os numeros</button>
+                <p id="res"></p>
+</body>
+</html>
