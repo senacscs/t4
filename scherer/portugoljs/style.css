@@ -15,7 +15,7 @@ h1 {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 0, 0.922);
   color: rgb(0, 0, 0);
   padding: 10px;
   text-align: center;
@@ -27,9 +27,6 @@ header h1 {
   color: #000000;
 }
 
-header :hover h1 {
-  color: #000000;
-}
 
 .itens {
   justify-content: center;
@@ -55,7 +52,7 @@ header :hover h1 {
 }
 
 .botao:hover {
-  background: #ffffff;
+  background: yellow;
 }
 
 .botao:hover a {
@@ -116,16 +113,13 @@ h2 {
 
 }
 
-.currículo :hover {
-  background-color: #ffffff;
-}
 
 .currículo:hover {
-  background: #ffffff;
+  background: yellow;
 }
 
 .currículo:hover a {
-  color: #000000;
+  color:rgb(1, 1, 1);
 }
 
 .currículo a {
@@ -163,7 +157,7 @@ h1 {
 }
 footer{
   font-family:"Kanit", sans-serif; 
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 0, 0.922);
   color: rgb(0, 0, 0);
   padding: 10px;
   text-align: center;
