@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles9.css">
+  <title>Potência e Raiz Quadrada</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Potência e Raiz Quadrada</h1>
+    <p>Digite um valor para calcular o cubo e a raiz quadrada:</p>
+
+    <!-- Input para o valor -->
+    <input type="number" id="valor" placeholder="Digite um valor">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function calcular() {
+        // Pega o valor do input
+        const valor = parseFloat(document.getElementById("valor").value);
+
+        // Verifica se o valor é um número válido
+        if (isNaN(valor)) {
+          document.getElementById("resultado").innerText = "Por favor, digite um valor numérico válido.";
+          return;
+        }
+
+        // Calcula a potência ao cubo e a raiz quadrada
+        const potencia = Math.pow(valor, 3); // Eleva ao cubo
+        const raizQuadrada = Math.sqrt(valor); // Calcula a raiz quadrada
+
+        // Exibe os resultados
+        document.getElementById("resultado").innerHTML = `
+          <p>O número ao cubo é: ${potencia.toFixed(2)}</p>
+          <p>A raiz quadrada do número é: ${raizQuadrada.toFixed(2)}</p>
+        `;
+      }
+    </script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style8.css">
+  <title>Metade Inteira e Resto</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Metade Inteira e Resto</h1>
+    <p>Digite um valor para ver sua metade inteira e o resto da divisão por 3.</p>
+
+    <!-- Input para o valor -->
+    <input type="number" id="valor" placeholder="Digite um valor inteiro">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function calcular() {
+        // Pega o valor do input
+        const valor = parseInt(document.getElementById("valor").value);
+
+        // Verifica se o valor é um número válido
+        if (isNaN(valor)) {
+          document.getElementById("resultado").innerText = "Por favor, digite um valor numérico válido.";
+          return;
+        }
+
+        // Calcula a metade inteira e o resto
+        const metadeInteira = Math.floor(valor / 2); // Metade inteira
+        const resto = valor % 3; // Resto da divisão por 3
+
+        // Exibe os resultados
+        document.getElementById("resultado").innerHTML = `
+          <p>A metade inteira do número é: ${metadeInteira}</p>
+          <p>O resto (mod) da divisão por 3 é: ${resto}</p>
+        `;
+      }
+    </script>
+  </main>
+</body>
+</html>

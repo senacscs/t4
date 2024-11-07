@@ -11,13 +11,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f4f8;
+    background-color: #ffbce2;
     color: #333;
 }
 
 h1 {
     font-size: 2em;
-    color: #4a4e69;
+    color: #d82894;
     margin-bottom: 20px;
 }
 
@@ -40,7 +40,7 @@ h1 {
 }
 
 .container button {
-    background-color: #4a4e69;
+    background-color: #fa4cb8;
     color: #fff;
     padding: 10px 20px;
     margin: 10px 0;
@@ -52,22 +52,22 @@ h1 {
 }
 
 .container button:hover {
-    background-color: #6b728e;
+    background-color: #f31b99;
 }
 
 .container a {
     display: inline-block;
     margin: 10px 0;
     padding: 10px 20px;
-    color: #4a4e69;
+    color: #f31b99;
     text-decoration: none;
-    border: 1px solid #4a4e69;
+    border: 1px solid #f31b99;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .container a:hover {
-    background-color: #4a4e69;
+    background-color: #f31b99;
     color: #fff;
 }
 

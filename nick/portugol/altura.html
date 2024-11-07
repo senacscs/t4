@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles10.css">
+  <title>Média das Alturas</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Média das Alturas</h1>
+    <p>Digite as alturas de três pessoas para calcular a média:</p>
+
+    <!-- Inputs para as alturas -->
+    <input type="number" id="altura1" placeholder="Altura da primeira pessoa (em metros)">
+    <input type="number" id="altura2" placeholder="Altura da segunda pessoa (em metros)">
+    <input type="number" id="altura3" placeholder="Altura da terceira pessoa (em metros)">
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function calcularMedia() {
+        // Captura os valores dos inputs
+        const altura1 = parseFloat(document.getElementById("altura1").value);
+        const altura2 = parseFloat(document.getElementById("altura2").value);
+        const altura3 = parseFloat(document.getElementById("altura3").value);
+
+        // Verifica se os valores são números válidos
+        if (isNaN(altura1) || isNaN(altura2) || isNaN(altura3)) {
+          document.getElementById("resultado").innerText = "Por favor, digite valores numéricos válidos para todas as alturas.";
+          return;
+        }
+
+        // Calcula a média das alturas
+        const mediaAltura = (altura1 + altura2 + altura3) / 3;
+
+        // Exibe o resultado arredondado para duas casas decimais
+        document.getElementById("resultado").innerHTML = `
+          <p>A média das alturas é: ${mediaAltura.toFixed(2)} metros</p>
+        `;
+      }
+    </script>
+  </main>
+</body>
+</html>
