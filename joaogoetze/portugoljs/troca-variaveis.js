@@ -35,8 +35,8 @@ function matematica(){
     //     inteiro a, b, aux
 
 
-    a = document.getElementById("numero").value
-    b = document.getElementById("numero").value
+    a = document.getElementById("numero1").value
+    b = document.getElementById("numero2").value
     //     leia(a)
     //     leia(b)
 
@@ -57,7 +57,7 @@ function matematica(){
     document.write("\n")
 
     document.write("Variáveis após a troca: \n")
-    document.write("A = ", b, "; B = ", a, "\n")
+    document.write("A = ", a, "; B = ", b, "\n")
     //     escreva("Variáveis após a troca: \n")
 //     escreva("A = ", a, "; B = ", b, "\n")
 
