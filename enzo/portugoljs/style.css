@@ -1,0 +1,83 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #555;
+    color: white;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    bottom: 40px;
+    content: center;
+    background-image: url(plano-de-fundo-codigos.jpg);
+    height: 570px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-bottom: 0.2rem solid white;
+}
+
+h1 {
+    font-size: 60px;
+    position: relative;
+    top: 38%;
+    margin-left: 27%;
+    margin-right: 27%;
+}
+
+.cards {
+    background-color: #333;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 20px;
+}
+
+.cards li {
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 200px;
+    transition: all ease-in-out 0.4s;
+}
+
+.fundo-card {
+    background-color: white;
+    margin: 20px;
+    width: 15%;
+    display: inline-block;
+    min-width: 200px;
+    width: 300px;
+    text-align: center;
+    height: 300px;
+    border: 0.2rem solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transição também no estado normal */
+}
+
+.fundo-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px black;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+
+
