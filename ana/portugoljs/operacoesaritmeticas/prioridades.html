@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioridades</title>
+    <link rel="stylesheet" href="prioridades.css">
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function inicio() {
+            let resultado;
+            let output = document.getElementById("output");
+
+            // Exemplo 1: Multiplicação tem prioridade sobre a soma
+            resultado = 5 + 4 * 2;
+            output.innerHTML += `<p>Operação: 5 + 4 * 2 = ${resultado}</p>`;
+
+            // Exemplo 2: Parênteses mudam a prioridade, soma é executada primeiro
+            resultado = (5 + 4) * 2;
+            output.innerHTML += `<p>Operação: (5 + 4) * 2 = ${resultado}</p>`;
+
+            // Exemplo 3: Divisão executada primeiro, depois multiplicação e, por fim, soma
+            resultado = 1 + 2 / 3 * 4;
+            output.innerHTML += `<p>Operação: 1 + 2 / 3 * 4 = ${resultado.toFixed(2)}</p>`;
+
+            // Exemplo 4: Parênteses mudam a prioridade, soma e multiplicação ocorrem primeiro
+            resultado = (1 + 2) / (3 * 4);
+            output.innerHTML += `<p>Operação: (1 + 2) / (3 * 4) = ${resultado.toFixed(2)}</p>`;
+        }
+
+        // Chama a função ao carregar o script
+        inicio();
+    </script>
+</body>
+</html>

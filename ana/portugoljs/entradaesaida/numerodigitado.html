@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Digitado</title>
+    <link rel="stylesheet" href="numerodigitado.css">
+</head>
+<body>
+    <div id="output"></div>
+    
+    <script>
+       
+        function inicio() {
+          
+            let numero = prompt("Digite um número inteiro:");
+
+           
+            if (!isNaN(numero)) {
+                
+                numero = parseInt(numero, 10);
+
+            
+                document.getElementById("output").innerText = "O número digitado foi: " + numero;
+            } else {
+              
+                document.getElementById("output").innerText = "Por favor, digite um número válido.";
+            }
+        }
+
+        inicio();
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+body {
+    background-color: #b3daff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#message {
+    font-size: 2em;
+    color: #333; 
+}

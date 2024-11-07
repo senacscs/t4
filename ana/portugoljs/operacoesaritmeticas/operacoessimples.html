@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Simples</title>
+    <link rel="stylesheet" href="operacoessimples.css">
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function inicio() {
+            // Solicita ao usuário que digite o primeiro número
+            let a = parseFloat(prompt("Digite o primeiro número:"));
+            // Solicita ao usuário que digite o segundo número
+            let b = parseFloat(prompt("Digite o segundo número:"));
+
+            // Verifica se os valores inseridos são números
+            if (!isNaN(a) && !isNaN(b)) {
+                // Calcula os resultados
+                let soma = a + b;
+                let sub = a - b;
+                let mult = a * b;
+                let div = b !== 0 ? (a / b).toFixed(2) : "Indefinido (divisão por zero)";
+
+                // Exibe os resultados na página
+                document.getElementById("output").innerHTML = `
+                    <p>A soma dos números é: ${soma}</p>
+                    <p>A subtração dos números é: ${sub}</p>
+                    <p>A multiplicação dos números é: ${mult}</p>
+                    <p>A divisão dos números é: ${div}</p>
+                `;
+            } else {
+                // Exibe mensagem de erro se a entrada for inválida
+                document.getElementById("output").innerText = "Por favor, insira números válidos.";
+            }
+        }
+
+        // Chama a função ao carregar o script
+        inicio();
+    </script>
+</body>
+</html>

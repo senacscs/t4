@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada e Saída de Dados</title>
+    <link rel="stylesheet" href="seunome.css">
+</head>
+<body>
+    <div id="output"> </div>
+
+    <script>
+        // Função para obter o nome do usuário e exibi-lo
+        function inicio() {
+            // Solicita que o usuário digite seu nome
+            let nome = prompt("Digite seu nome:");
+
+            // Verifica se o nome não está vazio
+            if (nome) {
+                // Exibe o nome do usuário na tela
+                document.getElementById("output").innerText = "Olá, " + nome + "!";
+            } else {
+                // Exibe uma mensagem se o usuário não digitar nada
+                document.getElementById("output").innerText = "Nenhum nome foi digitado.";
+            }
+        }
+
+        // Chama a função para executar ao carregar o script
+        inicio();
+    </script>
+</body>
+</html>

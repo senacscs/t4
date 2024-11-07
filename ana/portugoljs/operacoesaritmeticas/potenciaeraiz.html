@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potência e Raiz</title>
+    <link rel="stylesheet" href="potenciaeraiz.css">
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function inicio() {
+            // Solicita o valor do usuário
+            let valor = prompt("Digite um valor:");
+            valor = parseFloat(valor); // Converte para número decimal
+
+            // Calcula o valor ao cubo e a raiz quadrada
+            let potencia = Math.pow(valor, 3); // Eleva o valor ao cubo
+            let raiz_quadrada = Math.sqrt(valor); // Calcula a raiz quadrada
+
+            // Exibe os resultados na página
+            let output = document.getElementById("output");
+            output.innerHTML = `
+                <p>O número ao cubo é: ${potencia.toFixed(2)}</p>
+                <p>A raiz quadrada do número é: ${raiz_quadrada.toFixed(2)}</p>
+            `;
+        }
+
+        // Chama a função ao carregar o script
+        inicio();
+    </script>
+</body>
+</html>

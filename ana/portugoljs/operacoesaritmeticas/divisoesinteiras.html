@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisões Inteiras</title>
+    <link rel="stylesheet" href="divisoesinteiras.css">
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function inicio() {
+            // Solicita o valor do usuário
+            let valor = prompt("Digite um valor:");
+            valor = parseInt(valor); // Converte para inteiro
+
+            // Calcula a metade inteira e o resto da divisão por 3
+            let metade_inteira = Math.floor(valor / 2); // Calcula a metade inteira
+            let resto = valor % 3; // Calcula o resto da divisão por 3
+
+            // Exibe os resultados na página
+            let output = document.getElementById("output");
+            output.innerHTML = `
+                <p>A metade inteira do número é: ${metade_inteira}</p>
+                <p>O resto (mod) da divisão por 3 é: ${resto}</p>
+            `;
+        }
+
+        // Chama a função ao carregar o script
+        inicio();
+    </script>
+</body>
+</html>
