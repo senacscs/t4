@@ -27,27 +27,16 @@
  */
 
 
-function trocarValores() {
-	// Obtendo os valores dos campos de entrada
-	const a = parseInt(document.getElementById("a").value);
-	const b = parseInt(document.getElementById("b").value);
-
-	// Mostrando os valores antes da troca
-	document.getElementById("resultado").innerHTML = `
-	  Valores antes da troca:<br>
-	  A = ${a}<br>
-	  B = ${b}<br>
-	`;
-
-	// Trocando os valores
-	const aux = a;
-	a = b;
-	b = aux;
-
-	// Mostrando os valores após a troca
-	document.getElementById("resultado").innerHTML += `
-	  Valores após a troca:<br>
-	  A = ${a}<br>
-	  B = ${b}
-	`;
-  }
+function numeroDigitado() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+ 
+    document.write("Variáveis antes da troca: A = " + a + "; B = " + b + "<br>");
+ 
+    let aux = a;
+    a = b;
+    b = aux;
+ 
+    document.write("Variáveis após a troca: A = " + a + "; B = " + b + "<br>");
+}
+ 

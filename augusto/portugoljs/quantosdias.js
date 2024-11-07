@@ -25,14 +25,15 @@
  * Data: 01/06/2013
  */
 function calcularDias() {
-    const anoAtual = parseInt(document.getElementById("ano").value);
+  // Obter o ano informado pelo usuário
+  const anoAtual = parseFloat(document.getElementById("ano").value);
 
-    // Cálculo mais preciso de anos bissextos
-    const qtdAnosBissextos = Math.floor(anoAtual / 4) - Math.floor(anoAtual / 100) + Math.floor(anoAtual / 400);
+  // Calcular a quantidade de anos bissextos
+  const qtdAnosBissextos = Math.floor(anoAtual / 4);
 
-    // Cálculo do número total de dias
-    const dias = (anoAtual - 1) * 365 + qtdAnosBissextos;
+  // Calcular o número total de dias
+  const dias = (anoAtual - 1) * 365 + qtdAnosBissextos;
 
-    // Exibição do resultado
-    document.getElementById("resultado").textContent = `Já se passaram ${dias} dias desde 01/01/0001`;
-  }
+  // Exibir o resultado
+  document.getElementById("resultado").textContent = `Já se passaram ${dias} dias desde 01/01/0001`;
+}

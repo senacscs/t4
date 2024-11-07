@@ -40,3 +40,4 @@ function calcularAnos() {
 	  document.getElementById("resultado").textContent = "Você já atingiu a maioridade.";
 	}
 }
+// feito por: Augusto
