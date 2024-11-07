@@ -1,0 +1,552 @@
+/* style.css */
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between; /* Alinha o conteúdo entre a esquerda e a direita */
+    align-items: center;
+    height: 100vh;
+    padding-left: 20px; /* Adiciona um pequeno espaço à esquerda */
+    padding-right: 20px; /* Adiciona um pequeno espaço à direita */
+}
+
+/* Lado a lado (contêiner com os 3 filhos) para a esquerda */
+.ladoalado-esquerda {
+    display: flex;
+    justify-content: flex-start;  /* Alinha os contêineres no início da linha (à esquerda) */
+    gap: 20px;                    /* Espaçamento entre os contêineres filhos */
+    flex-wrap: wrap;              /* Permite que os contêineres "quebrem" em novas linhas, se necessário */
+    width: 40%;                   /* Largura do contêiner principal à esquerda */
+    padding: 20px;
+    background-color: #c1e2f7;
+    border-radius: 10px;
+}
+
+/* Lado a lado (contêiner com os 3 filhos) para o centro */
+.ladoalado-centro {
+    display: flex;
+    justify-content: center;  /* Alinha os contêineres no centro da linha */
+    gap: 20px;                /* Espaçamento entre os contêineres filhos */
+    flex-wrap: wrap;          /* Permite que os contêineres "quebrem" em novas linhas, se necessário */
+    width: 40%;               /* Largura do contêiner principal ao centro */
+    padding: 20px;
+    background-color: #c1e2f7;
+    border-radius: 10px;
+}
+
+/* Lado a lado (contêiner com os 3 filhos) para a direita */
+.ladoalado-direita {
+    display: flex;
+    justify-content: flex-end;  /* Alinha os contêineres no final da linha (à direita) */
+    gap: 20px;                   /* Espaçamento entre os contêineres filhos */
+    flex-wrap: wrap;             /* Permite que os contêineres "quebrem" em novas linhas, se necessário */
+    width: 40%;                  /* Largura do contêiner principal à direita */
+    padding: 20px;
+    background-color: #c1e2f7;
+    border-radius: 10px;
+}
+
+/* Estilo para os contêineres filhos */
+.child-container {
+    width: 250px;                /* Largura do contêiner */
+    height: 250px;               /* Altura do contêiner */
+    background-color: #3498db;   /* Cor de fundo */
+    display: flex;
+    flex-direction: column;      /* Alinha o conteúdo internamente em uma coluna */
+    justify-content: space-between; /* Cria espaçamento entre os elementos (título, texto, link) */
+    align-items: center;         /* Alinha os elementos no centro */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Estilo para os links */
+.child-container a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.child-container a:hover {
+    background-color: #c0392b;
+}
+
+/* Define a cor de fundo para a página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para o cabeçalho principal */
+  h1, h2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Estilo para os cabeçalhos secundários */
+  h3 {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    margin: 10px 0; /* Adiciona margem entre os títulos */
+  }
+  
+  /* Estilo para os links */
+  a {
+    color: #eee; /* Cor do texto do link */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave para a cor */
+  }
+  
+  /* Estilo para os links ao passar o mouse */
+  a:hover {
+    color: #fff; /* Muda a cor ao passar o mouse */
+  }
+  
+  /* Container para centralizar o conteúdo */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para o título */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estilo para o botão */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a mensagem */
+#mensagem {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Estilo para a lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Numerodigitado */
+
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex; /* Usando flexbox para centralizar */
+    flex-direction: column; /* Direção da coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+}
+
+/* Estilo para o título */
+h1 {
+    color: #333;
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo para o container do rótulo e entrada */
+.input-container {
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 20px 0; /* Espaçamento vertical */
+}
+
+/* Estilo para o rótulo e entrada */
+label {
+    font-size: 18px;
+    color: #555;
+    margin-right: 10px; /* Espaçamento entre o rótulo e o campo */
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    display: inline-block; /* Permite que o campo fique ao lado do rótulo */
+}
+
+/* Estilo para o botão */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para a mensagem */
+#mensagem {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Estilo para a barra de navegação */
+.nav-bar {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    margin: 10px 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Operações Simples */
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center; /* Centraliza o texto em todo o corpo */
+}
+
+/* Estilo para o título */
+h1 {
+    color: #333;
+    margin-top: 80px; /* Aumenta o espaço acima do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estilo para os rótulos */
+label {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para os campos de entrada */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para os resultados */
+h2 {
+    color: #333;
+    margin-top: 30px; /* Aumenta o espaço acima dos resultados */
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para a barra de navegação */
+.nav-bar {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    margin: 10px 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/*Prioridade */
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título */
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estilo para os rótulos */
+label {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para os campos de entrada */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+/* Estilo para os resultados */
+h2 {
+    color: #333;
+    margin-top: 30px; /* Espaço acima dos resultados */
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para a barra de navegação */
+.nav-bar {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    margin: 10px 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+/*Divisões inteiras */
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título */
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estilo para o container de entrada */
+.input-container {
+    margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* Estilo para os rótulos */
+label {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para os campos de entrada */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-top: 5px; /* Espaço acima do campo */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+/* Estilo para a mensagem */
+#mensagem {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px; /* Espaço acima da mensagem */
+}
+
+/* Estilo para a barra de navegação */
+.nav-bar {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    margin: 10px 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+

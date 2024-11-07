@@ -1,6 +1,6 @@
-function calcular() {
+function inicio() {
     // Lê o valor do input
-    var valor = parseInt(document.getElementById("valor").value);
+    var valor = parseInt(document.getElementById("numero").value); // Corrigido para "numero"
 
     // Verifica se o valor é um número válido
     if (isNaN(valor)) {
@@ -8,11 +8,14 @@ function calcular() {
         return;
     }
 
+    // Exibe um alerta com o número digitado
+    alert("O número digitado foi: " + valor);
+
     // Calcula a metade inteira e o resto
     var metade_inteira = Math.floor(valor / 2);  // Metade inteira usando Math.floor
     var resto = valor % 3;  // Resto da divisão por 3
 
     // Exibe os resultados no HTML
-    document.getElementById("metade_inteira").textContent = "A metade inteira do número é: " + metade_inteira;
-    document.getElementById("resto").textContent = "O resto (mod) da divisão por 3 é: " + resto;
+    document.getElementById("mensagem").textContent = "A metade inteira do número é: " + metade_inteira + 
+        ", e o resto da divisão por 3 é: " + resto;
 }

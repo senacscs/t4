@@ -3,19 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo Olá Mundo</title>
+    <title>Portugoljs transformando os códigos para JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.min.css">
+    <style>
+        /* Estilos gerais do corpo */
+        body {
+            display: flex;
+            flex-direction: column;        /* Alinha os itens em coluna */
+            justify-content: flex-start;    /* Alinha os itens no início */
+            align-items: center;            /* Centraliza horizontalmente */
+            height: 100vh;                 /* Altura total da viewport */
+            margin: 0;
+            padding: 20px;                 /* Espaçamento interno */
+            background-color: #f0f0f0;     /* Cor de fundo */
+        }
+
+        /* Estilo para os títulos */
+        h1 {
+            margin: 20px 0;                /* Margem superior e inferior */
+            text-align: center;            /* Centraliza o texto */
+        }
+
+        /* Contêiner para os quadrados */
+        .container {
+            display: flex;                 /* Flexbox para alinhar os quadrados lado a lado */
+            justify-content: center;       /* Centraliza os quadrados horizontalmente */
+            flex-wrap: wrap;               /* Permite que os quadrados quebrem para a linha seguinte se necessário */
+            margin-top: 20px;             /* Margem superior para espaçamento */
+        }
+
+        /* Estilos para o contêiner quadrado */
+        .square-container {
+            width: 300px;                  /* Largura do contêiner */
+            height: 300px;                 /* Altura do contêiner para ser quadrado */
+            background-color: #3498db;     /* Cor de fundo */
+            color: white;                  /* Cor do texto */
+            padding: 20px;                 /* Espaçamento interno */
+            border-radius: 10px;           /* Cantos arredondados */
+            display: flex;                 /* Flexbox para centralizar o conteúdo */
+            flex-direction: column;        /* Colocar o título e o texto na coluna */
+            justify-content: space-between; /* Espaçamento entre o título, texto e link */
+            text-align: center;            /* Alinha o texto ao centro */
+            margin: 10px;                 /* Margem entre os contêineres */
+        }
+
+        .square-container h2 {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .square-container p {
+            font-size: 16px;
+            flex-grow: 1;                  /* Deixa o texto crescer para ocupar o espaço restante */
+        }
+
+        .square-container a {
+            color: white;                  /* Cor do link */
+            font-weight: bold;             /* Deixa o link em negrito */
+            text-decoration: none;         /* Remove o sublinhado */
+            background-color: #e74c3c;     /* Cor de fundo do link */
+            padding: 10px 20px;            /* Espaçamento interno */
+            border-radius: 5px;            /* Bordas arredondadas no link */
+            transition: background-color 0.3s; /* Animação suave para a cor de fundo */
+        }
+
+        .square-container a:hover {
+            background-color: #c0392b;     /* Cor do link quando passar o mouse */
+        }
+    </style>
 </head>
 <body>
-    <h1>Exemplo de "Olá Mundo!"</h1>
-    
-    <button onclick="inicio()">Mostrar 'Olá Mundo!'</button>
-    
-    <p id="mensagem"></p>
+    <h1>Portugoljs transformando os códigos para JavaScript</h1>
+    <h1>Entrada e saída</h1>
 
-        <ul>
-            <li><a href="numerodigitado.html">Ir para o proximo</a></li>
-        </ul>
+    <!-- Contêiner para os quadrados -->
+    <div class="container">
+        <!-- Contêiner quadrado com título, descrição e link -->
+        <div class="square-container">
+            <h2>Olá Mundo</h2>
+            <p>Portugol Web Studio do Olá Mundo em JavaScript</p>
+            <a href="olamundo/index.html">Olá Mundo</a>
+        </div>
 
-    <script src="olamundo.js"></script>
+        <!-- Contêiner quadrado à direita -->
+        <div class="square-container">
+            <h2>Número Digitado</h2>
+            <p>Portugol Web Studio do Número Digitado em JavaScript</p>
+            <a href="numerodigitado/index.html">Número Digitado</a>
+        </div>
+
+        <!-- Contêiner quadrado à direita -->
+        <div class="square-container">
+            <h2>Seu Nome</h2>
+            <p>Portugol Web Studio do Seu Nome em JavaScript</p>
+            <a href="seunome/index.html">Seu Nome</a>
+        </div>
+    </div>
+    
+    <body>
+        <h1>Portugoljs transformando os códigos para JavaScript</h1>
+        <h1>Operações Aritméticas</h1>
+    
+        <!-- Contêiner para os quadrados -->
+        <div class="container">
+            <!-- Contêiner quadrado com título, descrição e link -->
+            <div class="square-container">
+                <h2>Operação Simples</h2>
+                <p>Portugol Web Studio de Operação Simples em JavaScript</p>
+                <a href="operaçoessimples/index.html">Operação Simples</a>
+            </div>
+    
+            <!-- Contêiner quadrado à direita -->
+            <div class="square-container">
+                <h2>Prioridades</h2>
+                <p>Portugol Web Studio de Prioridades em JavaScript</p>
+                <a href="prioridades/index.html">Prioridades</a>
+            </div>
+    
+            <!-- Contêiner quadrado à direita -->
+            <div class="square-container">
+                <h2>Divisões Inteiras</h2>
+                <p>Portugol Web Studio de Divisões Inteiras em JavaScript</p>
+                <a href="divisoesinteiras/index.html">Divisões Inteiras</a>
+            </div>
+        </div>
+
+        <!-- Contêiner quadrado à direita -->
+        <div class="square-container">
+            <h2>Potencia e Raiz </h2>
+            <p>Portugol Web Studio de Potencia e Raiz  em JavaScript</p>
+            <a href="potenciaeraiz/index.html">Potencia e Raiz</a>
+        </div>
+    </div>
+
+    
+        <body>
+            <h1>Portugoljs transformando os códigos para JavaScript</h1>
+            <h1>Algoritmos Sequencias</h1>
+        
+            <!-- Contêiner para os quadrados -->
+            <div class="container">
+                <!-- Contêiner quadrado com título, descrição e link -->
+                <div class="square-container">
+                    <h2>Troca variáveis</h2>
+                    <p>Portugol Web Studio de Troca variáveis em JavaScript</p>
+                    <a href="trocavariaveis/index.html">Troca variáveis</a>
+                </div>
+        
+                <!-- Contêiner quadrado à direita -->
+                <div class="square-container">
+                    <h2>Maioridade penal</h2>
+                    <p>Portugol Web Studio de Maioridade penal,  em JavaScript</p>
+                    <a href="maioridadepenal/index.html">Maioridade penal</a>
+                </div>
+        
+                <!-- Contêiner quadrado à direita -->
+                <div class="square-container">
+                    <h2>Altura média</h2>
+                    <p>Portugol Web Studio de Altura média em JavaScript</p>
+                    <a href="alturamedia/index.html">Altura média,</a>
+                </div>
+            </div>
+            
+            <!-- Contêiner quadrado à direita -->
+            <div class="square-container">
+                <h2>Loja de ferramentas</h2>
+                <p>Portugol Web Studio de  em JavaScript</p>
+                <a href="lojadeferramentas/index.html"> Loja de ferramentas</a>
+            </div>
+
+             <!-- Contêiner quadrado à direita -->
+             <div class="square-container">
+                <h2>Quantos dias</h2>
+                <p>Portugol Web Studio de  em JavaScript</p>
+                <a href="quantosdias/index.html"> Quantos dias</a>
+            </div>
+        </div>
 </body>
 </html>
