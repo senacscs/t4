@@ -63,7 +63,17 @@ section {
 }
 
 /* CONTENT */
-
+.chapeu{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+    rotate: 40deg;
+    width: 8%;
+}
+.tit, .chapeu{
+    display: inline-flex;
+    margin-top: -20px;
+}
 .content {
     max-width: 2400px;
 }
@@ -161,9 +171,13 @@ section {
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 50%;
     border-radius: 20px;
+}
+.aula{
+    margin-left: 65px;
+    margin-top: 20px;
 }
 
 .overlay {
