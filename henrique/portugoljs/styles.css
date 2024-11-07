@@ -26,6 +26,14 @@ button.operacao {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+button.link {
+    border: none;
+    border-radius: 100px;
+    background-color:darkorange;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 h1, p {
     display: flex;
     text-align: end;

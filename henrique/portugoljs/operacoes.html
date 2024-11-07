@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portugol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="app">
+        <header class="topo">
+            <h1>Portugol para JS: Operações Aritméticas</h1>
+        </header>
+        <div>
+            <a href="index.html"><button class="link">Entrada e Saída</button></a>
+            <a href="operacoes.html"><button class="link">Operações Aritméticas</button></a>
+            <a href="algoritimos.html"><button class="link">Algoritimos Sequenciais</button></a>
+        </div>
+        <main>
+            <div class="resultado-caixa">
+                <p id="resultadoMsg">Aqui aparecerão os resultados...</p>
+            </div>
+            <div class="inputs-e-botoes">
+                <h1>Operações Simples</h1>
+                <input type="number" id="num1" placeholder="Primeiro Número">
+                <input type="number" id="num2" placeholder="Segundo Número">
+                <button id="somarBtn" class="operacao" onclick="somarNumeros()">Somar (+)</button>
+                <button id="subtrairBtn" class="operacao" onclick="subtrairNumeros()">Subtrair (-)</button>
+                <button id="multiplicarBtn" class="operacao" onclick="multiplicarNumeros()">Multiplicar (*)</button>
+                <button id="dividirBtn" class="operacao" onclick="dividirNumeros()">Dividir (/)</button>
+                <h1>Prioridades</h1>
+                <button class="operacao" onclick="operacao1()">Operação: 5 + 4 * 2</button>
+                <button class="operacao" onclick="operacao2()">Operação: (5 + 4) * 2</button>
+                <button class="operacao" onclick="operacao3()">Operação: 1 + 2 / 3 * 4</button>
+                <button class="operacao" onclick="operacao4()">Operação: (1 + 2) / (3 * 4)</button>
+                <h1>Divisões Inteiras</h1>
+                <input type="number" id="numeroInput" placeholder="Insira um número">
+                <button class="operacao" onclick="calcular()">Divisões Inteiras</button>
+                <h1>Potência e Raiz</h1>
+                <input type="number" id="numeroInput" placeholder="Digite um valor">
+                <button class="operacao" onclick="calcular()">Potência e Raiz</button>
+            </div>
+        </main>
+    </section>
+    <script src="operacoessimples.js"></script>
+    <script src="prioridades.js"></script>
+    <script src="divisoesinteiras.js"></script>
+    <script src="potenciaeraiz.js"></script>
+</body>
+</html>
