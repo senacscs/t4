@@ -1,0 +1,32 @@
+* {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+body {
+    background-color: #424242;
+    color: white;
+    font-weight: 200;
+    text-shadow: 0 0 20px #fff;
+    text-align: center;
+    margin: 20vh 10vh;
+    font-family: "Raleway";
+    font-size: 4rem;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#numero {
+    border-radius: 15px;
+    height: 10vh;
+    width: 90vh;
+}
+
+button {
+   background-color: #fec200;
+   border-radius: 10px;
+   height: 10vh;
+   width: 90vh;
+   margin-top: 2vh;
+}

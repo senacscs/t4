@@ -1,0 +1,132 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #263238;
+}
+
+.hdr {
+    width: 100%;
+    height: 15vh;
+    background-color: #121e24;
+    justify-content: left;
+    align-items: start;
+    color: white;
+    display: inline-flex;
+}
+
+.img {
+    margin-left: 5vh;
+    margin-top: 2.5vh;
+    width: 50px;
+    height: 55px;
+
+}
+
+.imgtop {
+    width: 300px;
+    height: 350px;
+    display: inline-flex;
+}
+
+.title {
+    font-family: "Raleway";
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: 4.5vh;
+    color: white;
+    font-weight: 300;
+    font-size: 1.7em;
+    text-shadow: 0 0 3px #fec200;
+}
+
+.title1 {
+    font-family: "Raleway";
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-left: 5vh;
+    margin-bottom: 0;
+    color: white;
+    font-weight: 100;
+    font-size: 5em;
+    text-align: justify;
+    padding-bottom: 0;
+}
+
+.subtitle {
+    font-family: "Raleway";
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.top {
+    transition: transform 0.5s ease-in-out;
+    text-shadow: 0 0 7px #fec200;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20vh;
+    margin-top: 10vh;
+}
+
+.top:hover {
+    transform: scale(1.1);
+}
+
+.card-container {
+    margin-left: 50vh;
+    margin-top: 40vh;
+    margin-bottom: 30vh;
+    display: inline-flex;
+}
+
+
+.card {
+    width: 200px;
+    height: 180px;
+    display: block;
+    margin-left: 2.5vh;
+    background-color: #121e24;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.imgcard {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.foot {
+    width: 100%;
+    height: 15vh;
+    background-color: #121e24;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: inline-flex;
+    font-family: "Raleway";
+    font-optical-sizing: auto;
+    display: inline-flex;
+}
