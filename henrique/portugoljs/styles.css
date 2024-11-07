@@ -1,16 +1,35 @@
-button{
-    border: none;
-    border-radius: 100px;
-    background-color: pink;
-    color:white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-h1, p{
+.inputs-e-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 100px;
+    background-color:pink;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button.operacao {
+    border: none;
+    border-radius: 100px;
+    background-color:skyblue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, p {
     display: flex;
     text-align: end;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
-    
 }
