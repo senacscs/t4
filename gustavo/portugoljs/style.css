@@ -120,12 +120,18 @@ body {
   
   /* Container para centralizar o conteúdo */
   .container {
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Espaço entre os contêineres */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+.square-container {
+    width: 45%; /* Ajuste a largura conforme necessário */
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+    border: 1px solid #ccc; /* Adiciona uma borda para visualização */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito */
+}
+
   
 /* Reset básico */
 body {
@@ -279,6 +285,59 @@ button:hover {
 
 .nav-bar a:hover {
     text-decoration: underline;
+}
+
+/*Seu nome*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resultado {
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 /* Operações Simples */
