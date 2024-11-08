@@ -1,12 +1,12 @@
 body {
-  background: #40916c;
+  background: #efeded;
 }
 h1 {
   position: relative;
   text-align: center;
-  color: rgb(234, 220, 220);
+  color: #40916c;
   font-size: 50px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 p {
@@ -14,7 +14,7 @@ p {
   font-weight: 300;
   text-align: center;
   font-size: 18px;
-  color: #676767;
+  color: #40916c;
 }
 .frame {
   width: 90%;
@@ -30,7 +30,7 @@ button {
   color: #fff;
  
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -75,7 +75,7 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
 
 /* 3 */
 .btn-3 {
-  background: #38a3a5;
+  background: #40916c;
 
   height: 40px;
   line-height: 42px;
@@ -95,7 +95,7 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
   content: "";
   right: 0;
   top: 0;
-   background: #38a3a5;
+   background: #40916c;
   transition: all 0.3s ease;
 }
 .btn-3:before {
@@ -117,7 +117,7 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
   width: 100%;
 }
 .btn-3 span:hover{
-   color: #38a3a5;
+   color: #40916c;
 }
 .btn-3 span:before,
 .btn-3 span:after {
@@ -125,7 +125,7 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
   content: "";
   left: 0;
   bottom: 0;
-   background: #38a3a5;
+   background: #40916c;
   transition: all 0.3s ease;
 }
 .btn-3 span:before {
