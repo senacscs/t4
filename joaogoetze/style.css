@@ -109,7 +109,13 @@ button{
   }
   
   a:hover {
-    color: #000;
+    color: #ffffff;
+  }
+
+  a:houver ::after{
+    width: 10%;
+    text-decoration:underline;
+
   }
   
   
@@ -145,7 +151,7 @@ button{
   }
   
   h1, h2, p, a, ol, li, figcaption {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
   }
 
@@ -284,7 +290,7 @@ button{
   }
   
   a:hover {
-    color: #000;
+    color: #ffffff;
   }
   
   
@@ -320,7 +326,7 @@ button{
   }
   
   h1, h2, p, a, ol, li, figcaption {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
   }
 
@@ -448,7 +454,7 @@ button{
       }
       
       a:hover {
-        color: #000;
+        color: #ffffff;
       }
       
       
@@ -478,13 +484,13 @@ button{
       }
       
       a{
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         text-align: center;
         text-decoration: none;
       }
       
       h1, h2, p, a, ol, li, figcaption {
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         text-align: center;
       }
 
@@ -610,7 +616,7 @@ button{
     }
     
     a:hover {
-      color: #000;
+      color: #ffffff;
     }
     
     
@@ -640,13 +646,13 @@ button{
     }
     
     a{
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       text-align: center;
       text-decoration: none;
     }
     
     h1, h2, p, a, ol, li, figcaption {
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       text-align: center;
     }
 
