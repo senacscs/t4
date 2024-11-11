@@ -15,14 +15,17 @@
             let a = parseFloat(prompt("Digite o primeiro número:"));
             // Solicita ao usuário que digite o segundo número
             let b = parseFloat(prompt("Digite o segundo número:"));
+            // Solicita ao usuário que digite a base do logaritmo
+            let base = parseFloat(prompt("Digite a base para o logaritmo do primeiro número:"));
 
             // Verifica se os valores inseridos são números
-            if (!isNaN(a) && !isNaN(b)) {
+            if (!isNaN(a) && !isNaN(b) && !isNaN(base) && base > 0 && base !== 1) {
                 // Calcula os resultados
                 let soma = a + b;
                 let sub = a - b;
                 let mult = a * b;
                 let div = b !== 0 ? (a / b).toFixed(2) : "Indefinido (divisão por zero)";
+                let log = a > 0 ? (Math.log(a) / Math.log(base)).toFixed(2) : "Indefinido (número negativo ou zero)";
 
                 // Exibe os resultados na página
                 document.getElementById("output").innerHTML = `
@@ -30,10 +33,11 @@
                     <p>A subtração dos números é: ${sub}</p>
                     <p>A multiplicação dos números é: ${mult}</p>
                     <p>A divisão dos números é: ${div}</p>
+                    <p>O logaritmo do primeiro número na base ${base} é: ${log}</p>
                 `;
             } else {
                 // Exibe mensagem de erro se a entrada for inválida
-                document.getElementById("output").innerText = "Por favor, insira números válidos.";
+                document.getElementById("output").innerText = "Por favor, insira números válidos e uma base maior que 0 e diferente de 1 para o logaritmo.";
             }
         }
 
