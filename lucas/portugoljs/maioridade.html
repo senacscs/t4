@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="idade">Digite sua idade:</label>
+  <input type="number" id="idade">
+  <button onclick="calcularAnos()">Calcular</button>
+  <p id="resultado"></p>
+
+    <script>
+function calcularAnos() {
+	const MAIORIDADE = 18;
+
+	const idade = parseInt(document.getElementById("idade").value);
+
+	const anosFaltantes = MAIORIDADE - idade;
+
+	if (anosFaltantes > 0) {
+	  document.getElementById("resultado").textContent = `Falta(m) ${anosFaltantes} ano(s) para você atingir a maioridade.`;
+	} else {
+	  document.getElementById("resultado").textContent = "Você já atingiu a maioridade.";
+	}
+}
+    </script>
+</body>
+</html>

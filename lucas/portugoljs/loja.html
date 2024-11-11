@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="nome">Nome do cliente:</label>
+    <input type="text" id="nome"><br>
+  
+    <label for="parafusos">Quantidade de parafusos:</label>
+    <input type="number" id="parafusos"><br>
+  
+    <label for="arruelas">Quantidade de arruelas:</label>
+    <input type="number" id="arruelas"><br>
+  
+    <label for="porcas">Quantidade de porcas:</label>
+    <input type="number" id="porcas"><br>
+  
+    <button onclick="calcularTotal()">Calcular Total</button>
+  
+    <p id="resultado"></p>
+    <script>
+function calcularTotal() {
+
+const PRECO_PARAFUSO = 1.50;
+const PRECO_ARRUELA = 2.00;
+const PRECO_PORCA = 2.50;
+
+const nome = document.getElementById("nome").value;
+const quantidadeParafusos = parseInt(document.getElementById("parafusos").value);
+const quantidadeArruelas = parseInt(document.getElementById("arruelas").value);
+const quantidadePorcas = parseInt(document.getElementById("porcas").value);
+
+const totalParafusos = PRECO_PARAFUSO * quantidadeParafusos;
+const totalArruelas = PRECO_ARRUELA * quantidadeArruelas;
+const totalPorcas = PRECO_PORCA * quantidadePorcas;
+const totalPagar = totalParafusos + totalArruelas + totalPorcas;
+
+document.getElementById("resultado").innerHTML = `
+  <h2>Resumo da Compra</h2>
+  <p>Cliente: ${nome}</p>
+  <p>Parafusos: ${quantidadeParafusos} - R$ ${totalParafusos.toFixed(2)}</p>
+  <p>Arruelas: ${quantidadeArruelas} - R$ ${totalArruelas.toFixed(2)}</p>
+  <p>Porcas: ${quantidadePorcas} - R$ ${totalPorcas.toFixed(2)}</p>
+  <p><b>Total a pagar: R$ ${totalPagar.toFixed(2)}</b></p>
+`; 
+}
+    </script>
+</body>
+
+</html>

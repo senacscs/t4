@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portugoljs</title>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Digite um número"><button onclick="numeroDigitado()"></button>
+    <script>
+        /*programa 
+{ 
+	funcao inicio () 
+	{ 
+		inteiro numero
+		
+		escreva("Digite um número inteiro: ")
+		leia(numero)
+		
+		escreva("O número digitado foi: ", numero, "\n")
+	} 
+}
+*/
+function numeroDigitado() {
+
+let numero;
+
+numero = document.getElementById("numero").value
+
+document.write("O número digitado foi: ", numero);
+}
+    </script>
+    <p id="resultado"></p>
+</body>
+</html>
