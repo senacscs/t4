@@ -12,11 +12,11 @@
 }*/
 
 function numeroDigitado() {
-  //inteiro numero
+  // inteiro numero
   let numero;
-  //leia(numero)
+  // leia(numero)
   numero = document.getElementById("numero").value;
-  //escreva("O número digitadO foi: ", numero, "\n")
+  // escreva("O número digitado foi: ", numero, "\n")
   console.log("O número digitado foi: ", numero);
   alert("O número digitado foi: ", numero);
   document.write("O número digitado foi: ", numero);

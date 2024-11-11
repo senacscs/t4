@@ -22,8 +22,8 @@
 // 	}
 // }
 
-function calcule () {
-//real a, b, soma, sub, mult, div
+function calcule() {
+// real a, b, soma, sub, mult, div
 let a, b, soma, sub, mult, div
 a = document.getElementById("a").value;
 b = document.getElementById("b").value;
@@ -31,10 +31,12 @@ soma = a + b
 sub  = a - b
 mult = a * b
 div  = a / b
+log = Math.log(a) / Math.log(b);
 
 alert("Conseguiu o resultado!")
 document.write("O resultado dos números em soma: ", soma, '<br>');
 document.write("O resultado dos números em subtração: ", sub, '<br>');
 document.write("O resultado dos números em multiplicação: ", mult, '<br>');
 document.write("O resultado dos números em divisão: ", div, '<br>');
+document.write("O resultado dos números em log: ", log, '<br>');
 }

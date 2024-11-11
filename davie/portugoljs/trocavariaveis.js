@@ -37,9 +37,9 @@ function variaveis () {
 
     a = document.getElementById("a").value;
     b = document.getElementById("b").value;
-    //leia(a)
-    //leia(b)
-    //leia(aux)
+    // leia(a)
+    // leia(b)
+    // leia(aux)
     // console.clear()
 
     aux = a
