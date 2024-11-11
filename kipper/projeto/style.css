@@ -8,12 +8,13 @@
 }
 .imagem2{
   display: flex;
-  width: 240px;
-  height: 150px;
+  width: 560px;
+  height: 215px;
   margin-left: auto;
   margin-right: 260px;
-  margin-top: 80px;
+  margin-top: 180px;
 }
+
 header {
     background: radial-gradient(circle, #26bde2 0%, );
     width: 100%;
@@ -44,7 +45,7 @@ a:hover {
     font-family: Arial;
   }
   body {
-    background: linear-gradient(#26bde2 25%, #32a0cb 35%, #000000);
+    background: linear-gradient(#26bde2 30%, #32a0cb 35%, #000000);
     overflow-x: hidden;
   }
   
@@ -96,7 +97,7 @@ h2{
   text-transform: uppercase;
   display: block;
   justify-content: center;
-  min-height: 83dvh;
+  min-height: 50dvh;
   letter-spacing: .1em;
 }
 p{
@@ -112,59 +113,33 @@ p{
 }
 p1{
   color: white;
-  display: block;
+  display: flex;
   position: relative;
   bottom: 871px;
   letter-spacing: .1em;
-  position: relative;
   margin-right: 100px;
   margin-left: 650px;
   text-align: start;
 }
-.problemas{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  align-items: center;
-  justify-content: center;
-  min-height: 100dvh;
-  position: relative;
-  padding-block: 32px;
-  flex-direction: column;
-  bottom: 650px;
-
+div{
+  color: white;
+  letter-spacing: .1em;
+  text-align: center;
 }
-article2 {
-  display: flex;
-  gap: 36px;
-  align-items: baseline;
-  justify-content: center;
-  position: relative;
-  padding-block: 32px;
-  bottom: 670px;
-}
-
-.prohip {
- 
- margin-top: -620px;
-}
-
-
-  
   @keyframes wave {
     0% {
-      background-position: left -1400px top -4px;
+      background-position: left -1400px top 10px
     }
   
-    40% {
-      background-position: left 200px top 25px;
+    25% {
+      background-position: left 200px top 15px;
     }
   
-    80% {
-      background-position: left 1200px top 0px;
+    50% {
+      background-position: left 1200px top 20px;
     }
   
     100% {
-      background-position: left 1800px top 25px;
+      background-position: left 1400px top 25px;
     }
   }
