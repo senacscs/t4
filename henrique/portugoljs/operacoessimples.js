@@ -1,27 +1,18 @@
-function somarNumeros() {
-    let numero1 = parseInt(document.getElementById('num1').value);
-    let numero2 = parseInt(document.getElementById('num2').value);
-    let resultado = numero1 + numero2;
-    document.getElementById('resultadoMsg').innerText = `O valor de ${numero1} somado a ${numero2} é = ${resultado}`;
-}
+function operacoesSimples() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    
+    let soma = a + b;
+    let sub = a - b;
+    let mult = a * b;
+    let div = b !== 0 ? a / b : "Não é possível dividir por zero"; // Verificação para divisão por zero
 
-function subtrairNumeros() {
-    const numero1 = parseInt(document.getElementById('num1').value);
-    const numero2 = parseInt(document.getElementById('num2').value);
-    const resultado = numero1 - numero2;
-    document.getElementById('resultadoMsg').innerText = `O valor de ${numero1} subtraído de ${numero2} é = ${resultado}`;
-}
-
-function multiplicarNumeros() {
-    const numero1 = parseInt(document.getElementById('num1').value);
-    const numero2 = parseInt(document.getElementById('num2').value);
-    const resultado = numero1 * numero2;
-    document.getElementById('resultadoMsg').innerText = `O valor de ${numero1} multiplicado por ${numero2} é = ${resultado}`;
-}
-
-function dividirNumeros() {
-    const numero1 = parseInt(document.getElementById('num1').value);
-    const numero2 = parseInt(document.getElementById('num2').value);
-    const resultado = numero1 / numero2;
-    document.getElementById('resultadoMsg').innerText = `O valor de ${numero1} dividido por ${numero2} é = ${resultado}`;
+    let resultadoMsg = `
+        A soma dos números é igual a: ${soma} <br>
+        A subtração dos números é igual a: ${sub} <br>
+        A multiplicação dos números é igual a: ${mult} <br>
+        A divisão dos números é igual a: ${div}
+    `;
+    
+    document.getElementById("resultadoMsg").innerHTML = resultadoMsg;
 }
