@@ -1,0 +1,145 @@
+@media (min-width: 768px) {
+ /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #822433; /* Bordô similar ao site FEJERS */
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+
+header .logo {
+    height: 50px;
+}
+
+header .menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .menu li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #822433;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.hero-image {
+    height: 250px;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2, section h3 {
+    color: #822433;
+    margin-bottom: 20px;
+}
+
+section img {
+    width: 50%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.membros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as caixas */
+}
+
+.membro {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 150px; /* Largura da caixa */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.membro img {
+    width: 100%; /* A imagem ocupará a largura total da caixa */
+    border-radius: 50%; /* Para fazer a imagem redonda */
+}
+
+.membro p {
+    margin-top: 10px; /* Espaçamento acima do texto */
+}
+
+
+.espacamento {
+    background-color: rgb(226, 226, 226);
+    width: 120%;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    padding: 40px;
+}
+
+.nome {
+color: black;
+}
+
+.profissao {
+color: red;
+}
+
+}
+
+@media (max-width: 768px) {
+  
+}
