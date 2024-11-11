@@ -20,15 +20,16 @@
 }
 */
 
-function numeroDigitado () {
-	let numero = parseFloat(document.getElementById("numero").value)
-	let potencia, raiz_quadrada
-
-	potencia = mat.potencia(numero, 3.0)
-	raiz_quadrada = mat.raiz(numero, 2.0)
-
-	document.write("O número ao cubo é:", potencia)
-	document.write("A raiz quadrada do número é:", raiz_quadrada)
-
+function calcular() {
+    const valor = parseFloat(document.getElementById("numero").value);
+ 
+ 
+    const potencia = Math.pow(valor, 3);
+    const raizQuadrada = Math.sqrt(valor);
+ 
+    document.getElementById("resultado").textContent = `
+        O número ao cubo é: ${potencia}
+        A raiz quadrada do número é: ${raizQuadrada}
+    `;
 }
-
+ 

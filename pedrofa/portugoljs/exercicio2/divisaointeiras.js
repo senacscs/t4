@@ -16,6 +16,13 @@
 }
 */
 
+function calcular() {
+    const valor = parseInt(document.getElementById("numero").value);
+    const metadeInteira = Math.floor(valor / 2);
+    const resto = valor % 3;
+    document.getElementById("resultado").textContent = `A metade inteira do número é: ${metadeInteira}
+O resto (mod) da divisão por 3 é: ${resto}`;
+}
 
 
 

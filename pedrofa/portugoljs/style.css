@@ -1,5 +1,5 @@
 @media (min-width: 768px) {
-
+    
     * {
         margin: 0;
         padding: 0;
@@ -10,11 +10,12 @@
         background-color: #263238;
     }
 
-    .topo{
-        width: 100%;
-        height: 16%;
-    
+    .topo {
+        padding-top: 20px;
+        border-radius: 8px;
         background-color: black;
+        color: white;
+        text-align: center;
     }
 
     header {
@@ -34,7 +35,7 @@
     .box {
         background-color: rgb(18, 30, 36);
         border-radius: 8px;
-        padding: 20px;
+        padding: 15px;
         width: 250px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
@@ -56,6 +57,7 @@
 
     a {
         color: white;
+        text-decoration: none;
     }
 
     .box:hover {
@@ -67,9 +69,237 @@
         text-align: center;
     }
 
+    .logo:hover {
+        transform: scale(1.08);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .cima {
+        margin-bottom: 3%;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .search-bar input {
+        width: 50%;
+        height: 30px;
+        padding: 0 10px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar:hover {
+        transform: scale(1.04);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    footer {
+        padding-top: 20px;
+        border-radius: 8px;
+        background-color: black;
+    }
+
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer a:hover {
+        color: yellow;
+    }
+
+    footer ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    footer ul li {
+        display: inline;
+    }
+
+    footer ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer ul li a:hover {
+        color: yellow;
+    }
+
+    p {
+        color: white;
+    }
 }
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #263238;
+    }
+
+    .topo {
+        padding-top: 20px;
+        border-radius: 8px;
+        background-color: black;
+    }
+
+    header {
+        background-color: #263238;
+        padding: 10px 0;
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        background-color: rgb(18, 30, 36);
+        border-radius: 8px;
+        padding: 15px;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .box p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .box:hover {
+        transform: translateY(-10px);
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cima {
+        margin-bottom: 3%;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .search-bar input {
+        width: 50%;
+        height: 30px;
+        padding: 0 10px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        padding-top: 20px;
+        border-radius: 8px;
+        background-color: black;
+    }
 
 
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-@media (max-width: 768px) {}
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer a:hover {
+        color: yellow;
+    }
+
+    footer ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    footer ul li {
+        display: inline;
+    }
+
+    footer ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer ul li a:hover {
+        color: yellow;
+    }
+
+    p {
+        color: white;
+    }
+}

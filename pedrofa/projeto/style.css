@@ -1,11 +1,27 @@
+
 @media (min-width: 768px) {
     body {
-        background-color: white;
-        background-image: url(imagens/natureza.png);
+        background-color: #f8c413;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        width: 100%;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .introducao {
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 
     p {
@@ -22,25 +38,48 @@
         padding: 20px;
         border: 2px solid #000;
         border-radius: 10px;
-        /* Adicionando bordas arredondadas */
         margin: 20px auto;
-        /* Centralizando horizontalmente com margem automática */
         max-width: 30%;
-        /* Limitando a largura máxima do h1 */
         background-color: black;
-        /* Cor de fundo para a faixa */
+        margin-top: 30px;
     }
 
-    .carta {
-        /* width: 1500px; */
-        height: 750px;
+    h1 a {
+        color: #f8c413;
+    }
+
+    h1:hover {
+         background-color: #f0f0f5;
+        box-shadow: 0 0 04px black;
+        transform: scale(1.04);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    section {
+        width: 90%;
+        height: 100%;
         background-color: white;
         border-radius: 30px;
-
         box-shadow: 0 0 20px;
         padding: 8px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 15px;
+    }
+
+    section:hover {
+        background-color: #f0f0f5;
+        box-shadow: 0 0 04px black;
+        transform: scale(1.04);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     }
 
     img {
@@ -57,7 +96,10 @@
     footer {
         background-color: #333;
         color: #fff;
-        padding: 20px 0;
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+        width: 97%;
     }
 
     .container {
@@ -69,106 +111,220 @@
         flex-wrap: wrap;
     }
 
-    .container>div {
-        flex: 1;
-        margin-right: 20px;
-    }
-
-    .contato h3,
-    .links-adicionais h3,
-    .copyright p {
-        margin-top: 0;
-    }
-
-    .contato p,
-    .links-adicionais ul,
-    .links-adicionais ul li,
-    .copyright p {
-        margin-bottom: 10px;
-    }
-
-    .links-adicionais ul {
-        padding: 0;
-    }
-
-    .links-adicionais ul li {
-        list-style: none;
-    }
-
-    .links-adicionais ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .links-adicionais ul li a:hover {
-        text-decoration: underline;
-    }
-
-    /* Estilos para a barra de navegação */
     header {
         background-color: #333;
         padding: 10px 0;
         display: flex;
         justify-content: center;
-        /* Centraliza itens horizontalmente */
+        margin: -10px;
+        margin-top: 10px;
     }
 
     nav ul {
         list-style-type: none;
         padding: 0;
         display: flex;
-        /* Alterado para flex para alinhar itens horizontalmente */
-        justify-content: center;
-        /* Centraliza itens horizontalmente */
         align-items: center;
-        /* Centraliza itens verticalmente (opcional) */
-    }
-
-    nav ul li {
-        display: inline;
-        /* Exibe os itens na mesma linha */
-        margin: 0 10px;
     }
 
     nav ul li a {
         text-decoration: none;
         padding: 5px 10px;
         color: inherit;
-        /* Mantém a cor do texto definida no HTML */
+        margin: 6px;
     }
 
     nav ul li a:hover {
         background-color: #333;
     }
 
-    /* Cores específicas para cada link */
-    nav ul li:nth-child(1) a {
-        color: blue;
+    .bt1 {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        border: solid 1px;
+        border-radius: 20px;
+        padding-bottom: 20px;
+        transition: 0.5s;
     }
 
-    nav ul li:nth-child(2) a {
-        color: orange;
+    .bt1:hover> :not(:hover) {
+        transform: scale(0.95);
+        opacity: 0.4;
     }
 
-    nav ul li:nth-child(3) a {
-        color: green;
+    .se {
+        transition: 0.4s;
+        text-align: center;
     }
 
-    nav ul li:nth-child(4) a {
-        color: red;
+    .alint {
+        font-size: 130%;
     }
 
-    nav ul li:nth-child(5) a {
-        color: blueviolet;
+    .esp {
+        height: 12px;
     }
+
+    .slider {
+        overflow: hidden;
+    }
+
+    .slides {
+        width: 400px;
+        height: 400px;
+        display: flex;
+    }
+
+    .slides input {
+        display: none;
+    }
+
+    .slide {
+        position: relative;
+        transition: 2s;
+    }
+
+    .slide img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .manual-navegation {
+        position: absolute;
+        width: 400px;
+        margin-top: -30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn {
+        border: 2px solid #fff;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .manual-btn:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .manual-btn:hover {
+        background-color: #fff;
+    }
+
+    #radio1:checked~.first {
+        margin-left: 0;
+    }
+
+    #radio2:checked~.first {
+        margin-left: -100%;
+    }
+
+    #radio3:checked~.first {
+        margin-left: -200%;
+    }
+
+    #radio4:checked~.first {
+        margin-left: -300%;
+    }
+
+    #radio5:checked~.first {
+        margin-left: -400%;
+    }
+
+    #radio6:checked~.first {
+        margin-left: -500%;
+    }
+
+    #radio7:checked~.first {
+        margin-left: -600%;
+    }
+
+    .navegation-auto div {
+        border: 2px solid #20a6ff;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .navegation-auto {
+        position: absolute;
+        width: 400px;
+        margin-top: 370px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navegation-auto div:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    #radio1:checked~.navegation-auto .auto-btn1 {
+        background-color: #fff;
+    }
+
+    #radio2:checked~.navegation-auto .auto-btn2 {
+        background-color: #fff;
+    }
+
+    #radio3:checked~.navegation-auto .auto-btn3 {
+        background-color: #fff;
+    }
+
+    #radio4:checked~.navegation-auto .auto-btn4 {
+        background-color: #fff;
+    }
+
+    #radio5:checked~.navegation-auto .auto-btn5 {
+        background-color: #fff;
+    }
+
+    #radio6:checked~.navegation-auto .auto-btn6 {
+        background-color: #fff;
+    }
+
+    #radio7:checked~.navegation-auto .auto-btn7 {
+        background-color: #fff;
+    }
+
+    .text1 {
+        width: 400px;
+        height: 400px;
+        box-shadow: 0 0 20px;
+        border-radius: 20px;
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .canva {
+        margin-top: 25px;
+    }
+
+
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* */
+/*  */
 
 @media (max-width: 768px) {
     body {
         background-color: white;
         background-repeat: no-repeat;
         background-position: center;
-        
+
         display: flex;
     }
 
@@ -221,11 +377,12 @@
     footer {
         background-color: #333;
         color: #fff;
-        padding: 20px 0;
+        padding: 20px;
+        margin-right: 100px;
     }
 
     .container {
-        max-width: 1200px;
+        max-width: 100px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -233,46 +390,13 @@
         flex-wrap: wrap;
     }
 
-    .container>div {
-        flex: 1;
-        margin-right: 20px;
-    }
 
-    .contato h3,
-    .links-adicionais h3,
-    .copyright p {
-        margin-top: 0;
-    }
-
-    .contato p,
-    .links-adicionais ul,
-    .links-adicionais ul li,
-    .copyright p {
-        margin-bottom: 10px;
-    }
-
-    .links-adicionais ul {
-        padding: 0;
-    }
-
-    .links-adicionais ul li {
-        list-style: none;
-    }
-
-    .links-adicionais ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .links-adicionais ul li a:hover {
-        text-decoration: underline;
-    }
 
     /* Estilos para a barra de navegação */
     header {
         background-color: #333;
         padding: 10px 0;
-       
+
         justify-content: center;
         /* Centraliza itens horizontalmente */
     }
@@ -280,7 +404,7 @@
     nav ul {
         list-style-type: none;
         padding: 7%;
-        
+
         /* Alterado para flex para alinhar itens horizontalmente */
         justify-content: center;
         /* Centraliza itens horizontalmente */
@@ -289,7 +413,7 @@
     }
 
     nav ul li {
-        
+
         /* Exibe os itens na mesma linha */
         margin: 0 10px;
     }
