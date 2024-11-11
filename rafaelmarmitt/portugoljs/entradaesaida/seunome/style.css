@@ -4,8 +4,29 @@ body {
     font-weight: 200;
     text-shadow: 0 0 20px #fff;
     text-align: center;
-    margin: 20vh 10vh;
     font-family: "Raleway";
-    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
 }
 
+button {
+    background-color: #fec200;
+    border-radius: 15px;
+    height: 7vh;
+    width: 15vh;
+    margin-left:  95vh;
+    margin-top: 2vh;
+}
+
+#nome {
+    background-color: #b1b1b1;
+    border-radius: 15px;
+    height: 10vh;
+    width: 25vh;
+    text-align: center;
+    margin-left: 89vh;
+}
+
+h1 {
+    text-align: center;
+}

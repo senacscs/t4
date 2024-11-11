@@ -61,3 +61,8 @@ font-size: 1.17rem;
 .arrow-down {
     transform: rotate(0deg); 
 }
+
+a {
+    text-decoration: none;
+    color: #b1b1b1;
+}
