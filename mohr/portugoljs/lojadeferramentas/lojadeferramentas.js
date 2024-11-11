@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function calcularTotal() {
     // Definindo os preços constantes dos produtos
-    const PRECO_PAES = 0.50;
-    const PRECO_PAODEQUEIJO = 4.00;
-    const PRECO_COXINHA = 3.00;
+    const PRECO_PAES = 0.75;
+    const PRECO_PAODEQUEIJO = 5.00;
+    const PRECO_COXINHA = 7.00;
 
     // Obtendo os valores das entradas
     let nome = document.getElementById("nome").value;
