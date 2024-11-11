@@ -228,6 +228,7 @@ function conta() {
     document.writeln("subtração: " + (input - input2));
     document.writeln("multiplicação: " + (input * input2));
     document.writeln("divisão: " + (input / input2));
+    document.writeln("logaritmo: " + (Math.log(input2) / Math.log(input)));
 }
 
 /*
