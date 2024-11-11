@@ -13,7 +13,7 @@ body {
 button {
     border: none;
     border-radius: 100px;
-    background-color:pink;
+    background-color:lightblue;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -21,7 +21,15 @@ button {
 button.operacao {
     border: none;
     border-radius: 100px;
-    background-color:skyblue;
+    background-color:lightpink;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button.algoritimos {
+    border: none;
+    border-radius: 100px;
+    background-color:lightgreen;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
