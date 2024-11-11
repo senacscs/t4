@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Compra de Ferragens</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora de Compra de Ferragens</h1>
-    <button onclick="calcularTotal()">Calcular Total</button>
-    <div id="resultado"></div>
+    <div class="container">
+        <h1>Calculadora da Padaria</h1>
 
+        <!-- Campo para nome do cliente -->
+        <input type="text" id="nome" placeholder="Digite seu nome" class="input">
+
+        <!-- Entradas para quantidades -->
+        <input type="number" id="quantidadePaes" placeholder="Quantidade de Pães" class="input" min="0">
+        <input type="number" id="quantidadePaodequeijo" placeholder="Quantidade de Pão de Queijo" class="input" min="0">
+        <input type="number" id="quantidadeCoxinha" placeholder="Quantidade de Coxinhas" class="input" min="0">
+
+        <!-- Botão para calcular total -->
+        <button id="calcularBtn">Calcular Total</button>
+
+        <!-- Resultado -->
+        <div id="resultado"></div>
+    </div>
 
     <script src="lojadeferramentas.js"></script>
 </body>

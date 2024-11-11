@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Potência e Raiz Quadrada</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora de Potência e Raiz Quadrada</h1>
-    <button onclick="inicio()">Calcular</button>
+    <div class="container">
+        <h1>Calculadora de Potência e Raiz Quadrada</h1>
 
-    <script src="potencia_e_raiz.js"> </script>
+        <!-- Campo de entrada para o número -->
+        <input type="number" id="valor" placeholder="Digite um valor" class="input">
+
+        <!-- Botão para realizar o cálculo -->
+        <button id="calcularBtn">Calcular</button>
+
+        <!-- Exibição dos resultados -->
+        <div id="resultado"></div>
+    </div>
+
+    <script src="potencia_e_raiz.js"></script>
 </body>
 </html>

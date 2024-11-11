@@ -1,0 +1,60 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ff6f00;
+    margin: 0;
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Título */
+h1 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* Input */
+.input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Botão */
+button {
+    background-color: #ff9d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b6690b;
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}

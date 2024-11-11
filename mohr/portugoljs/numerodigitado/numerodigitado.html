@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Número Digitado</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Digite um Número Inteiro</h1>
-    <button onclick="inicio()">Mostrar Número</button>
+    <div class="container">
+        <h1>Digite um Número Inteiro</h1>
+
+        <!-- Campo de entrada para número -->
+        <input type="number" id="numero" placeholder="Digite um número inteiro" class="input">
+
+        <!-- Botão para mostrar número -->
+        <button id="mostrarBtn">Mostrar Número</button>
+
+        <!-- Exibição do resultado -->
+        <p id="resultado"></p>
+    </div>
 
     <script src="numerodigitado.js"></script>
 </body>

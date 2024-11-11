@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maioridade</title>
-    
+    <title>Verificação de Maioridade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Verifique sua Maioridade</h1>
-    <button onclick="verificarMaioridade()">Verificar</button>
-    <p id="resultado"></p>
+    <div class="container">
+        <h1>Verifique sua Maioridade</h1>
+
+        <!-- Campo de entrada para idade -->
+        <input type="number" id="idade" placeholder="Digite sua idade" class="input">
+        
+        <!-- Botão para verificar maioridade -->
+        <button id="verificarBtn">Verificar</button>
+
+        <!-- Exibição do resultado -->
+        <p id="resultado"></p>
+    </div>
 
     <script src="maioridadepenal.js"></script>
 </body>

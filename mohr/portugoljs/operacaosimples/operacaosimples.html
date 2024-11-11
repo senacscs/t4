@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operações Matemáticas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora Simples</h1>
-    <button onclick="inicio()">Calcular</button>
+    <div class="container">
+        <h1>Calculadora Simples</h1>
 
-    <script src="operacaosimples.js"> </script>
+        <!-- Campo de entrada para o primeiro número -->
+        <input type="number" id="numero1" placeholder="Digite o primeiro número" class="input">
+
+        <!-- Campo de entrada para o segundo número -->
+        <input type="number" id="numero2" placeholder="Digite o segundo número" class="input">
+
+        <!-- Botão para realizar os cálculos -->
+        <button id="calcularBtn">Calcular</button>
+
+        <!-- Exibição dos resultados -->
+        <div id="resultado"></div>
+    </div>
+
+    <script src="operacaosimples.js"></script>
 </body>
 </html>

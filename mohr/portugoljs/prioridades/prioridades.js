@@ -32,17 +32,19 @@
 // } 
 
 function inicio() {
-    let resultadosDiv = document.getElementById('resultados'); // Pega o div para mostrar os resultados
+    let resultadosDiv = document.getElementById('resultados');
+    
+    resultadosDiv.innerHTML = ""; 
 
-    // Exibe a operação onde a multiplicação é executada primeiro
-    resultadosDiv.innerHTML += "Operação: 5 + 4 * 2<br>";
+   
+    resultadosDiv.innerHTML += "<strong>Operação:</strong> 5 + 4 * 2 = " + (5 + 4 * 2) + "<br>";
 
-    // Exibe a operação onde a soma é executada primeiro
-    resultadosDiv.innerHTML += "Operação: (5 + 4) * 2<br>";
+    
+    resultadosDiv.innerHTML += "<strong>Operação:</strong> (5 + 4) * 2 = " + ((5 + 4) * 2) + "<br>";
 
-    // Exibe a operação onde a divisão e multiplicação são feitas antes da soma
-    resultadosDiv.innerHTML += "Operação: 1 + 2 / 3 * 4<br>";
+    
+    resultadosDiv.innerHTML += "<strong>Operação:</strong> 1 + 2 / 3 * 4 = " + (1 + 2 / 3 * 4).toFixed(2) + "<br>";
 
-    // Exibe a operação onde a soma é feita antes da multiplicação e depois a divisão
-    resultadosDiv.innerHTML += "Operação: (1 + 2) / (3 * 4)<br>";
+    
+    resultadosDiv.innerHTML += "<strong>Operação:</strong> (1 + 2) / (3 * 4) = " + ((1 + 2) / (3 * 4)).toFixed(2) + "<br>";
 }

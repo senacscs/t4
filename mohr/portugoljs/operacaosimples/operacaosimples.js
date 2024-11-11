@@ -1,16 +1,31 @@
-function inicio() {
-    let a, b, soma, sub, mult, div;
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("calcularBtn").addEventListener("click", calcularOperacoes);
+});
 
-    a = parseFloat(prompt("Digite o primeiro número: "));
-    b = parseFloat(prompt("Digite o segundo número: "));
+function calcularOperacoes() {
+    // Obtém os valores dos campos de entrada
+    let a = parseFloat(document.getElementById("numero1").value);
+    let b = parseFloat(document.getElementById("numero2").value);
 
-    soma = a + b; // Soma os dois valores
-    sub = a - b;  // Subtrai os dois valores
-    mult = a * b; // Multiplica os dois valores
-    div = a / b;  // Divide os dois valores
+    // Verifica se os valores são válidos
+    if (isNaN(a) || isNaN(b)) {
+        document.getElementById("resultado").innerHTML = "Por favor, insira dois números válidos.";
+        return;
+    }
 
-    alert("A soma dos números é igual a: " + soma +
-          "\nA subtração dos números é igual a: " + sub +
-          "\nA multiplicação dos números é igual a: " + mult +
-          "\nA divisão dos números é igual a: " + div);
+    // Realiza as operações matemáticas
+    let soma = a + b;
+    let sub = a - b;
+    let mult = a * b;
+    let div = b !== 0 ? (a / b).toFixed(2) : "Infinito (divisão por zero)";
+    let log = Math.log(b) / Math.log(a) 
+
+    // Exibe os resultados na página
+    document.getElementById("resultado").innerHTML =
+        `<p>A soma dos números é: ${soma}</p>
+         <p>A subtração dos números é: ${sub}</p>
+         <p>A multiplicação dos números é: ${mult}</p>
+         <p>A divisão dos números é: ${div}</p>
+         <p>O log de ${b} na base ${a} é ${log} </p>
+         `;
 }

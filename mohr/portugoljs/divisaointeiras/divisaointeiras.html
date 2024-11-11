@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divisão Inteiras</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1>Calculadora de Metade Inteira e Resto</h1>
-    <button onclick="inicio()">Calcular</button>
+    <div class="container">
+        <h1>Calculadora de Metade Inteira e Resto</h1>
+        
+        <!-- Entrada para o valor -->
+        <input type="number" id="valor" placeholder="Digite um valor" class="input">
+        
+        <!-- Botão para calcular -->
+        <button id="calcularBtn">Calcular</button>
+        
+        <!-- Resultado -->
+        <p id="resultado"></p>
+    </div>
 
     <script src="divisaointeiras.js"></script>
 </body>

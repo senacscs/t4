@@ -1,28 +1,15 @@
-/* programa 
-{ 
-	funcao inicio () 
-	{ 
-		inteiro numero
-		
-		escreva("Digite um número inteiro: ")
-		leia(numero)
-		
-		escreva("O número digitado foi: ", numero, "\n")
-	} 
-}
-*/
-// function numeroDigitado() {
-// let numero
-// numero = document.getElementById("numero").value
-// console.log("O número digitado foi: ", numero, "\n")
-// alert("O número digitado foi: ", numero, "\n")
-// document.write("O número digitado foi: ", numero, "\n")
-// }
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("mostrarBtn").addEventListener("click", mostrarNumero);
+});
 
-function inicio() {
-	let numero;
+function mostrarNumero() {
+    // Obtém o valor do campo de entrada
+    let numero = parseInt(document.getElementById("numero").value);
 
-	numero = parseInt(prompt("Digite um número inteiro: "));
-
-	alert("O número digitado foi: " + numero);
+    // Verifica se o valor é um número válido
+    if (isNaN(numero)) {
+        document.getElementById("resultado").innerHTML = "Por favor, insira um número válido.";
+    } else {
+        document.getElementById("resultado").innerHTML = "O número digitado foi: " + numero;
+    }
 }

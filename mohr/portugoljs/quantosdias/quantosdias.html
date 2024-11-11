@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Dias desde 01/01/0001</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calcular Dias desde 01/01/0001</h1>
-    <button onclick="calcularDias()">Calcular Dias</button>
-    <p id="resultado"></p>
+    <div class="container">
+        <h1>Calcular Dias desde 01/01/0001</h1>
 
+        <!-- Campo de entrada para o ano -->
+        <input type="number" id="anoAtual" placeholder="Digite o ano atual" class="input">
+
+        <!-- Botão para realizar o cálculo -->
+        <button onclick="calcularDias()">Calcular Dias</button>
+
+        <!-- Exibição do resultado -->
+        <p id="resultado"></p>
+    </div>
 
     <script src="quantosdias.js"></script>
 </body>

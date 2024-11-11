@@ -1,11 +1,23 @@
-function inicio() {
-	let valor, potencia, raiz_quadrada;
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("calcularBtn").addEventListener("click", calcularPotenciaRaiz);
+});
 
-	valor = parseFloat(prompt("Digite um valor: "));
+function calcularPotenciaRaiz() {
+    // Obtém o valor do campo de entrada
+    let valor = parseFloat(document.getElementById("valor").value);
 
-	potencia = Math.pow(valor, 3);       // Calcula o valor elevado ao cubo
-	raiz_quadrada = Math.sqrt(valor);    // Calcula a raiz quadrada do valor
+    // Verifica se o valor é válido
+    if (isNaN(valor)) {
+        document.getElementById("resultado").innerHTML = "Por favor, insira um número válido.";
+        return;
+    }
 
-	alert("O número ao cubo é: " + potencia +
-		  "\nA raiz quadrada do número é: " + raiz_quadrada);
+    // Calcula o valor ao cubo e a raiz quadrada
+    let potencia = Math.pow(valor, 3).toFixed(2);
+    let raizQuadrada = Math.sqrt(valor).toFixed(2);
+
+    // Exibe os resultados na página
+    document.getElementById("resultado").innerHTML =
+        `<p>O número ao cubo é: ${potencia}</p>
+         <p>A raiz quadrada do número é: ${raizQuadrada}</p>`;
 }
