@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ODS 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/ods.png" type="image/x-icon">
+    <style>
+        .lang {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botões para alternar idioma -->
+    <!-- Botões para alternar idioma -->
+    <button onclick="setLanguage('pt')">
+        <img src="imagens/bandeira-do-brasil-og.webp" alt="Bandeira do Brasil"
+            style="width: 20px; height: auto; vertical-align: middle;">
+        Português
+    </button>
+    <button onclick="setLanguage('en')">
+        <img src="imagens/estadosunidos.jpg" alt="Flag of the United States"
+            style="width: 20px; height: auto; vertical-align: middle;">
+        Estados Unidos
+    </button>
+    <!-- Conteúdo em Português -->
+    <div class="lang" id="pt">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#introducao" style="color: purple;">Introdução e Justificativa</a></li>
+                    <li><a href="#problema" style="color: aqua;">Problema de Pesquisa</a></li>
+                    <li><a href="#objetivo" style="color: orange;">Objetivo Principal</a></li>
+                    <li><a href="#hipoteses" style="color: rgba(255, 255, 0, 0.781);">Hipóteses</a></li>
+                    <li><a href="#resultado" style="color: green;">Resultados Esperados</a></li>
+                    <li><a href="#referencias" style="color: red;">Referências</a></li>
+                    <li><a href="#canva" style="color: blue;">Canva</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 style="color: white;"><a href="https://brasil.un.org/pt-br/sdgs/7" target="_blank">Energia Limpa e
+                    Acessível</a></h1>
+            <section class="introducao">
+                <h2 id="introducao" style="color: purple;"><strong>1. Introdução e Justificativa</strong></h2>
+                <p>O acesso a energias limpas e acessíveis é essencial para o desenvolvimento sustentável, pois
+                    contribui para a preservação ambiental e a redução da dependência de fontes prejudiciais (Embrapa,
+                    2018). Este projeto busca garantir acesso a informações e tecnologias de energia sustentável,
+                    alinhando-se ao ODS 7, com foco em promover fontes renováveis como solar, eólica e biomassa, que
+                    ajudam a mitigar mudanças climáticas. No Brasil, os investimentos em energias renováveis têm
+                    crescido, diversificando a matriz energética nacional (EIGEDIM, 2020). Contudo, desafios como altos
+                    custos iniciais, desinformação sobre os benefícios e a falta de incentivos governamentais ainda
+                    dificultam a adoção dessas tecnologias (National Geographic, 2024; EPP, 2021). A conscientização
+                    sobre as vantagens ambientais e econômicas das energias renováveis é fundamental para superar essas
+                    barreiras e promover um sistema energético mais limpo e eficiente.</p>
+                <h3>Imagens sobre os tipos de fontes renováveis:</h3>
+
+                <div class="text1 slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+                        <input type="radio" name="radio-btn" id="radio6">
+                        <input type="radio" name="radio-btn" id="radio7">
+
+                        <div class="slide first">
+                            <img src="imagens/placa.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/eolica.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/hidrica.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/oceanica.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/biomassa.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/geotermica.jpg">
+                        </div>
+
+                        <div class="navegation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                            <div class="auto-btn6"></div>
+                        </div>
+                    </div>
+
+                    <div class="manual-navegation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                        <label for="radio6" class="manual-btn"></label>
+                    </div>
+                </div>
+
+            </section>
+            <section class="problema">
+                <h2 id="problema" style="color: aqua"><strong>2. Problema de Pesquisa</strong></h2>
+                <p>Como podemos informar/conscientizar à população brasileira às energias renováveis</p>
+            </section>
+            <section class="objetivo">
+                <h2 id="objetivo" style="color: orange"><strong>3. Objetivo Principal</strong></h2>
+                <p>Desenvolver um site que de informações sobre energias sustentáveis, e que
+                    também
+                    haverá uma aba que mostra vários contatos de empresas de energias.</p>
+            </section>
+            <section class="hipoteses">
+                <h2 id="hipoteses" style="color: rgba(255, 255, 0, 0.781);"><strong>4. Hipóteses</strong></h2>
+                <ul>
+                    <li>O site fornecerá informações detalhadas sobre os diferentes tipos de energia</li>
+                    <li>O site auxiliará os usuários a tomarem decisões informadas sobre compra e
+                        investimento relacionados a essas energias</li>
+                    <li>Se políticas públicas incluíssem campanhas de conscientização e incentivos ao uso de energias
+                        renováveis, mais pessoas adotariam práticas sustentáveis, reduzindo a dependência de fontes
+                        poluentes.</li>
+                    <li>muitas pessoas se limitam e não conseguem se informar sobre diversos assuntos.</li>
+                </ul>
+            </section>
+            <section class="resultado">
+                <h2 id="resultado" style="color: green;"><strong>5. Resultados Esperados</strong></h2>
+                <ol type="a">
+                    <li>Aumento da conscientização sobre energias renováveis</li>
+                    <li>Apoio à economia verde e sustentável</li>
+                    <li>Redução da dependência de fontes poluentes</li>
+                </ol>
+            </section>
+            <section class="referencias">
+                <h2 id="referencias" style="color: red;"><strong>6. Referências</strong></h2>
+                <ul>
+                    <li><a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1090708/2/ODS7energialimpaeacessivel.pdf#page=53"
+                            target="_blank">Embrapa
+                            (2018, pág. 53 e 54)</a></li>
+                    <li><a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1090708/2/ODS7energialimpaeacessivel.pdf#page=37"
+                            target="_blank">Embrapa
+                            (2018, pág. 37)</a></li>
+                    <li><a href="https://periodicos.ufms.br/index.php/EIGEDIN/article/view/11428"
+                            target="_blank">EIGEDIM (2020)</a>
+                    </li>
+                    <li><a href="https://portal.epitaya.com.br/index.php/ebooks/article/view/53" target="_blank">Epitaya
+                            (2020 - 12)</a>
+                    </li>
+                    <li><a href="https://www.nationalgeographicbrasil.com/meio-ambiente/2024/04/os-6-fatos-sobre-as-energias-renovaveis-elas-sao-fundamentais-contra-as-mudancas-climaticas" target="_blank">National Geographic (2024)</a></li>
+                    <li><a href="http://br.evolutionpp.com/por-que-as-fontes-de-energia-renovaveis-sao-pouco-utilizadas/" target="_blank">Evolution Power Partners (2021)</a></li>
+                </ul>
+            </section>
+            <section class="canva">
+                <h2 id="canva" style="color: blue;">7. Canva</h2>
+                <div style="position: relative; width: 100%; height: 90%; padding-top: 56.2500%;
+            padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+            border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy"
+                        style="position: absolute; width: 100%; height: 85%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAGTo0rRi84/c_wRdG27WlAPXQ5XdXAprg/view?embed"
+                        allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+                <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGTo0rRi84&#x2F;c_wRdG27WlAPXQ5XdXAprg&#x2F;view?utm_content=DAGTo0rRi84&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+                    target="_blank" rel="noopener"></a>
+            </section>
+        </main>
+        <footer>
+            <div class="copyright">
+                <p>&copy; 2024 Ensino Médio Senac.</p>
+                <p>Desenvolvido por: <a href="https://senacscs.github.io/t4/pedrofa/"><strong>Pedro Alves</strong></a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Conteúdo em Inglês -->
+    <div class="lang" id="en">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#introducao" style="color: purple;">Introduction and Justification</a></li>
+                    <li><a href="#problema" style="color: aqua;">Research Problem</a></li>
+                    <li><a href="#objetivo" style="color: orange;">Main Objective</a></li>
+                    <li><a href="#hipoteses" style="color: rgba(255, 255, 0, 0.781);">Hypotheses</a></li>
+                    <li><a href="#resultado" style="color: green;">Expected Results</a></li>
+                    <li><a href="#referencias" style="color: red;">References</a></li>
+                    <li><a href="#canva" style="color: blue;">Canva</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 style="color: white;"><a href="https://brasil.un.org/pt-br/sdgs/7" target="_blank">Clean and Accessible
+                    Energy</a></h1>
+            <section class="introducao">
+                <h2 id="introducao" style="color: purple;"><strong>1. Introduction and Justification</strong></h2>
+                <p>Access to clean and affordable energy is essential for sustainable development (Embrapa, 2018).
+                    This project seeks to promote the transition to renewable energies, such as solar, wind, and
+                    biomass,
+                    aligning with SDG 7, which aims to reduce dependence on polluting sources. Brazil has made progress
+                    in
+                    the renewable energy sector, diversifying its energy matrix (EIGEDIM, 2020). However, challenges
+                    such as high initial costs and lack of awareness of long-term benefits still limit the adoption of
+                    these
+                    technologies in many communities.</p>
+                <h3>Images of types of renewable sources:</h3>
+                <div class="text1 slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+                        <input type="radio" name="radio-btn" id="radio6">
+                        <input type="radio" name="radio-btn" id="radio7">
+
+                        <div class="slide first">
+                            <img src="imagens/placa.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/eolica.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/hidrica.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/oceanica.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/biomassa.png">
+                        </div>
+                        <div class="slide">
+                            <img src="imagens/geotermica.jpg">
+                        </div>
+
+                        <div class="navegation-auto">
+                            <div class="auto-btn8"></div>
+                            <div class="auto-btn9"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                            <div class="auto-btn6"></div>
+                        </div>
+                    </div>
+
+                    <div class="manual-navegation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                        <label for="radio6" class="manual-btn"></label>
+                    </div>
+                </div>
+            </section>
+            <section class="problema">
+                <h2 id="problema" style="color: aqua"><strong>2. Research Problem</strong></h2>
+                <p>How can we provide better access to information for the Brazilian population on renewable energies?
+                </p>
+            </section>
+            <section class="objetivo">
+                <h2 id="objetivo" style="color: orange"><strong>3. Main Objective</strong></h2>
+                <p>To develop a website/AI that provides information and answers questions on sustainable energies, and
+                    includes a section showing contacts of energy companies. This project aims to detail/inform
+                    people about companies and types of renewable energy sources.</p>
+            </section>
+            <section class="hipoteses">
+                <h2 id="hipoteses" style="color: rgba(255, 255, 0, 0.781);"><strong>4. Hypotheses</strong></h2>
+                <ul>
+                    <li>The site will provide detailed information on different types of energy.</li>
+                    <li>Additionally, the site will help users make informed decisions about purchases and investments
+                        related to these energies.</li>
+                </ul>
+            </section>
+            <section class="resultado">
+                <h2 id="resultado" style="color: green;"><strong>5. Expected Results</strong></h2>
+                <ol type="a">
+                    <li>Increased awareness of renewable energies.</li>
+                    <li>Support for a green and sustainable economy.</li>
+                    <li>Reduced dependence on polluting sources.</li>
+                </ol>
+            </section>
+            <section class="referencias">
+                <h2 id="referencias" style="color: red;"><strong>6. References</strong></h2>
+                <ul>
+                    <li><a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1090708/2/ODS7energialimpaeacessivel.pdf#page=53"
+                            target="_blank">Embrapa
+                            (2018, pp. 53 and 54)</a></li>
+                    <li><a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1090708/2/ODS7energialimpaeacessivel.pdf#page=37"
+                            target="_blank">Embrapa
+                            (2018, p. 37)</a></li>
+                    <li><a href="https://periodicos.ufms.br/index.php/EIGEDIN/article/view/11428"
+                            target="_blank">EIGEDIM (2020)</a>
+                    </li>
+                    <li><a href="https://portal.epitaya.com.br/index.php/ebooks/article/view/53" target="_blank">Epitaya
+                            (2020 - 12)</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="canva">
+                <h2 id="canva" style="color: blue;">7. Canva</h2>
+                <div style="position: relative; width: 100%; height: 90%; padding-top: 56.2500%;
+            padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+            border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy"
+                        style="position: absolute; width: 100%; height: 85%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAGTo0rRi84/c_wRdG27WlAPXQ5XdXAprg/view?embed"
+                        allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+                <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGTo0rRi84&#x2F;c_wRdG27WlAPXQ5XdXAprg&#x2F;view?utm_content=DAGTo0rRi84&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+                    target="_blank" rel="noopener"></a>
+            </section>
+        </main>
+        <footer>
+            <div class="copyright">
+                <p>&copy; 2024 Ensino Médio Senac.</p>
+                <p>Developed by: <a href="https://senacscs.github.io/t4/pedrofa/" style="color: red;"
+                        target="_blank"><strong>Pedro Alves</strong></a></p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        // Função para verificar o idioma armazenado no localStorage
+        function getSavedLanguage() {
+            return localStorage.getItem('preferredLang');
+        }
+
+        // Função para definir e salvar o idioma
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            showLanguage(lang);
+        }
+
+        // Função para mostrar o conteúdo do idioma selecionado
+        function showLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+            document.getElementById(lang).style.display = 'block';
+        }
+
+        // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('pt') ? 'pt' : 'en';
+        }
+
+        // Configuração inicial ao carregar a página
+        const lang = getSavedLanguage() || detectBrowserLanguage();
+        setLanguage(lang);
+    </script>
+</body>
+
+</html>
