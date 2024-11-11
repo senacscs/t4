@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto</title>
+  <link rel="stylesheet" href="style1.1.css">
+  <script>
+    function toggleLanguage(lang) {
+      const elementsPT = document.querySelectorAll('.pt');
+      const elementsEN = document.querySelectorAll('.en');
+
+      if (lang === 'en') {
+        elementsPT.forEach(el => el.style.display = 'none');
+        elementsEN.forEach(el => el.style.display = 'block');
+      } else {
+        elementsPT.forEach(el => el.style.display = 'block');
+        elementsEN.forEach(el => el.style.display = 'none');
+      }
+    }
+
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- <ion-icon name="chevron-down-outline" class="seta" id="seta" onclick="toma()"></ion-icon> -->
+  <nav class="menu">
+    <input type="checkbox" class="menu-fake">
+    <div class="menu-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#introducao" class="pt">Introdução e Justificativa</a></li>
+      <li><a href="#problema" class="pt">Problema de Pesquisa</a></li>
+      <li><a href="#objetivo" class="pt">Objetivo Principal</a></li>
+      <li><a href="#hipoteses" class="pt">Hipóteses</a></li>
+      <li><a href="#referencias" class="pt">Referências</a></li>
+
+      <li><a href="#introducao" class="en" style="display: none;">Introduction and Justification</a></li>
+      <li><a href="#problema" class="en" style="display: none;">Research Problem</a></li>
+      <li><a href="#objetivo" class="en" style="display: none;">Main Objective</a></li>
+      <li><a href="#hipoteses" class="en" style="display: none;">Hypotheses</a></li>
+      <li><a href="#referencias" class="en" style="display: none;">References</a></li>
+    </ul>
+  </nav>
+  <header id="headpau">
+      <button onclick="toggleLanguage('pt')">Português</button>
+    <button onclick="toggleLanguage('en')">English</button>
+    <div class="header-content">
+      <h1 class="pt">Projeto de Pesquisa</h1>
+      <h1 class="en" style="display: none;">Research Project</h1>
+    </div>
+
+    <!-- <nav class="navbar">
+    <div class="brand-title">Projeto de Pesquisa</div>
+    <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="nav-links">
+      <a href="#introducao" class="pt">Introdução e Justificativa</a>
+      <a href="#problema" class="pt">Problema de Pesquisa</a>
+      <a href="#objetivo" class="pt">Objetivo Principal</a>
+      <a href="#hipoteses" class="pt">Hipóteses</a>
+      <a href="#referencias" class="pt">Referências</a>
+
+      <a href="#introducao" class="en" style="display: none;">Introduction and Justification</a>
+      <a href="#problema" class="en" style="display: none;">Research Problem</a>
+      <a href="#objetivo" class="en" style="display: none;">Main Objective</a>
+      <a href="#hipoteses" class="en" style="display: none;">Hypotheses</a>
+      <a href="#referencias" class="en" style="display: none;">References</a>
+    </div>
+  </nav> -->
+  </header>
+
+  <section id="introducao">
+    <h2 class="pt">Introdução e Justificativa</h2>
+    <h2 class="en" style="display: none;">Introduction and Justification</h2>
+    <p class="pt">Meu projeto de pesquisa tem como público alvo: pedestres, ciclistas e motoristas. O problema que estou
+      resolvendo é a meta 3.6: “Até 2030, reduzir pela metade as mortes e lesões por acidentes no trânsito.” (ONU, 2015)
+    </p>
+    <p class="en" style="display: none;">My research project targets pedestrians, cyclists, and drivers. The problem I
+      am addressing is goal 3.6: “By 2030, halve the number of global deaths and injuries from road traffic accidents.”
+      (UN, 2015)</p>
+
+    <p class="pt">Muitas pessoas praticam ciclismo por sua simplicidade. A ideia é criar um app ou site semelhante ao
+      Waze, que inclua um mapa das ciclovias com indicações de qualidade e segurança, baseadas em avaliações de usuários
+      e taxas de acidentes.</p>
+    <p class="en" style="display: none;">Many people cycle due to its simplicity. The idea is to create an app or
+      website similar to Waze, including a map of bike lanes with quality and safety indications based on user reviews
+      and accident rates.</p>
+
+    <p class="pt">Outra hipótese seria construir mais ciclovias para reduzir o número de ciclistas no meio da rua,
+      diminuindo acidentes. O Brasil aumentou seu número de ciclovias em 4% em 2023, equivalente a 169km, segundo o
+      ‘Portal do Trânsito’.</p>
+    <p class="en" style="display: none;">Another hypothesis is to build more bike lanes, reducing the number of cyclists
+      on the road, thereby decreasing accidents. Brazil increased its bike lanes by 4% in 2023, equivalent to 169km,
+      according to the ‘Traffic Portal’.</p>
+  </section>
+
+  <section id="problema">
+    <h2 class="pt">Problema de Pesquisa</h2>
+    <h2 class="en" style="display: none;">Research Problem</h2>
+    <p class="pt">Qual o maior causador de mortes ou acidentes na estrada?</p>
+    <p class="en" style="display: none;">What is the main cause of road deaths or accidents?</p>
+  </section>
+
+  <section id="objetivo">
+    <h2 class="pt">Objetivo Principal</h2>
+    <h2 class="en" style="display: none;">Main Objective</h2>
+    <p class="pt">Descobrir as causas dos acidentes de trânsito e criar um site ou app de avaliação de segurança nas
+      estradas e ciclovias, permitindo que os usuários avaliem a segurança dessas vias.</p>
+    <p class="en" style="display: none;">To identify the causes of traffic accidents and create a website or app for
+      assessing road and bike lane safety, allowing users to evaluate the safety of these routes.</p>
+  </section>
+
+  <section id="hipoteses">
+    <h2 class="pt">Hipóteses</h2>
+    <h2 class="en" style="display: none;">Hypotheses</h2>
+    <p class="pt">H1. Ciclistas poderão avaliar e comentar sobre a segurança e qualidade das ciclovias.</p>
+    <p class="en" style="display: none;">H1. Cyclists will be able to evaluate and comment on the safety and quality of
+      bike lanes.</p>
+
+    <p class="pt">H2. Motoristas poderão identificar estradas de alto risco ou seguras.</p>
+    <p class="en" style="display: none;">H2. Drivers will be able to identify high-risk or safe roads.</p>
+  </section>
+
+  <section id="referencias">
+    <h2 class="pt">Referências</h2>
+    <h2 class="en" style="display: none;">References</h2>
+    <ul>
+      <li><a
+          href="https://g1.globo.com/jornal-nacional/noticia/2024/01/12/rodovias-federais-e-estaduais-apresentam-mais-de-26-mil-pontos-criticos-mg-lidera-ranking-do-perigo.ghtml"
+          target="_blank">Rodovias Federais e Estaduais Apresentam Mais de 26 Mil Pontos Críticos</a></li>
+      <li><a
+          href="https://g1.globo.com/jornal-nacional/noticia/2022/06/03/aumentam-os-acidentes-graves-envolvendo-ciclistas-no-brasil.ghtml"
+          target="_blank">Aumentam os Acidentes Graves Envolvendo Ciclistas no Brasil</a></li>
+      <li><a href="https://observatoriodabicicleta.org.br/o-brasil-aumentou-sua-rede-de-ciclovias-em-4-em-2023/"
+          target="_blank">O Brasil Aumentou Sua Rede de Ciclovias em 4% em 2023</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="pt">&copy; 2024 Projeto de Pesquisa</p>
+    <p class="en" style="display: none;">&copy; 2024 Research Project</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- <script src="hehe.js"></script> -->
+</body>
+
+</html>
