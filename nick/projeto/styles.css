@@ -14,9 +14,11 @@ body {
 
 h1, h2 {
   font-family: 'Roboto', sans-serif;
-  color: #e7d5d5; 
+  color: rgb(255, 255, 255); 
   font-weight: 700;
 }
+
+
 
 p {
   font-size: 1.1em;
@@ -48,6 +50,9 @@ header p {
   margin-top: 15px;
   font-size: 1.3em;
   font-weight: 300;
+}
+.pdf {
+  color: black
 }
 
 
