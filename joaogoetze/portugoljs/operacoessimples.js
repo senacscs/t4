@@ -27,8 +27,11 @@ function matematica(){
  let a, b, soma, sub, mult, div;
 // 		real a, b, soma, sub, mult, div
     // 		leia(numero)     
-    a = parseInt(document.getElementById("numero").value)
-    b = parseInt(document.getElementById("numero").value)
+    a = parseInt(document.getElementById("numero1").value)
+    b = parseInt(document.getElementById("numero2").value)
+
+
+
 
 
 
@@ -42,16 +45,25 @@ function matematica(){
    mult = a * b
 // 		div  = a / b // Divide os dois valores
    div = a / b
+
+    log =  Math.log(b) / Math.log(a);
+   
  
 	
 // 		escreva("\nA soma dos números é igual a: ", soma) 		// Exibe o resultado da soma
-document.write("\nA soma dos números é igual a: ", soma)	
+document.write("\nA soma dos números é igual a: ", soma)
+
 // 		escreva("\nA subtração dos números é igual a: ", sub) 		// Exibe o resultado da subtração
 document.write("\nA subtração dos números é igual a: ", sub)	
+
 // 		escreva("\nA multiplicação dos números é igual a: ", mult) 	// Exibe o resultado da multiplicação
 document.write("\nA subtração dos números é igual a: ", mult)	
+
 // 		escreva("\nA divisão dos números é igual a: ", div, "\n") 	// Exibe o resultado da divisão
 document.write("\nA divisão dos números é igual a: ", div, "\n")	
+
+document.write("\nA log dos números é igual a: ", log, "\n")	
+// tem q dar 3
 
 }
 
