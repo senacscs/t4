@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(IAehumano.webp);
+    background-color: rgba(red, 0.1);
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    header p {
+        margin-top: 10px;
+    }
+    #toggle-menu {
+      visibility: hidden;
+    }
+    nav {
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 50px;
+    }
+    .menu li {
+        float: left;
+    }
+    .box {
+        background-color: #000000;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 20px;
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+        border-radius: 15px;
+    }
+    .menu a {
+        display: block;
+        padding: 20px 26px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    .menu a:hover {
+        background-color: #575757;
+        color: rgb(0, 0, 0);
+    }
+    nav {
+        background-color: #000000;
+    }
+    header {
+        background-color: #000000;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .texto {
+        margin-top: 20px;
+    }
+    .imagem {
+        margin-top: 20px;
+    }
+    .english {
+        border-radius: 30px;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top: 10px;
+        transition: transform 2s;
+        transform: translateY(0) scale(1);
+    }
+    .english:hover {
+        transform: translateY(0) scale(1.22);
+    }
+    .portugues {
+        border-radius: 30px;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top: 10px;
+        transition: transform 2s;
+        transform: translateY(0) scale(1);
+    }
+    .portugues:hover {
+        transform: translateY(0) scale(1.22);
+    }
+}
+
+
+@media (max-width:768px) {
+    .imagem {
+        margin-top: 20px;
+    }
+    #toggle-menu {
+        background-color: #ffffff;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    nav {
+        background-color: #ffffff;
+        overflow: hidden; /* Para evitar que o conteúdo "vaze" durante a animação */
+        transition: max-height 0.3s ease; /* Transição suave para a altura máxima */
+    }
+    .hidden {
+        max-height: 0; /* Oculta o menu */
+        visibility: hidden; /* Oculta o menu */
+    }
+    .visible {
+        max-height: 500px; /* Altura máxima do menu quando visível */
+        visibility: visible; /* Torna o menu visível */
+    }
+    .menu {
+        list-style-type: none; /* Remove os marcadores da lista */
+        padding: 0; /* Remove o padding padrão */
+        margin: 0; /* Remove a margem padrão */
+    }
+    .menu li {
+        flex: 1; /* Faz com que os itens ocupem espaço igual */
+    }
+    .menu a {
+        display: block; /* Faz o link ocupar todo o espaço do item */
+        padding: 14px; /* Espaçamento interno */
+        text-align: center; /* Centraliza o texto */
+        color: black; /* Cor do texto */
+        text-decoration: none; /* Remove o sublinhado */
+    }
+    .menu a:hover {
+        background-color: #575757; /* Cor de fundo ao passar o mouse */
+        color: rgb(203, 203, 203);
+    }
+    header {
+        background-color: #000000;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .box {
+        background-color: #000000;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 20px;
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+        border-radius: 15px;
+    }
+    .box p {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .english {
+        border-radius: 30px;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top: 10px;
+        transition: transform 2s;
+        transform: translateY(0) scale(1);
+    }
+    .english:hover {
+        transform: translateY(0) scale(1.22);
+    }
+    .portugues {
+        border-radius: 30px;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top: 10px;
+        transition: transform 2s;
+        transform: translateY(0) scale(1);
+    }
+    .portugues:hover {
+        transform: translateY(0) scale(1.22);
+    }
+}
+
+
