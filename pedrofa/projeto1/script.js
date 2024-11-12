@@ -13,4 +13,10 @@ function nextImage(){
  
     document.getElementById("radio"+count).checked = true;
  
+
+    document.querySelector(".menu-btn").addEventListener("click", function() {
+        document.querySelector(".menu-btn").classList.toggle("active");
+        document.querySelector("nav ul").classList.toggle("show");
+    });
+    
 }

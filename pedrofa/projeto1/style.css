@@ -1,4 +1,3 @@
-
 @media (min-width: 768px) {
     body {
         background-color: #f8c413;
@@ -320,133 +319,248 @@
 /*  */
 
 @media (max-width: 768px) {
-    body {
-        background-color: white;
-        background-repeat: no-repeat;
-        background-position: center;
+  /* Corpo */
+body {
+    background-color: #f8c413;
+    background-size: cover;
+}
 
-        display: flex;
-    }
+/* Botões */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-    p {
-        font-size: 120%;
-    }
+/* Títulos e Parágrafos */
+h1, h2, h3 {
+    text-align: center;
+}
 
-    li {
-        font-size: 120%;
-    }
+h1 {
+    font-size: 40px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+  margin-left: 59px;
+    background-color: black;
+    width: 400px;
+}
 
-    h1 {
-        text-align: center;
-        font-size: 250%;
-        padding: 7%;
-        border: 1% solid #000;
-        border-radius: 5%;
-        /* Adicionando bordas arredondadas */
-        margin: 20px auto;
-        /* Centralizando horizontalmente com margem automática */
-        max-width: 70%;
-        /* Limitando a largura máxima do h1 */
-        background-color: black;
-        /* Cor de fundo para a faixa */
-    }
+h1 a {
+    color: #f8c413;
+}
 
-    .carta {
-        width: 950px;
-        height: 750px;
-        background-color: white;
-        border-radius: 30px;
+h1:hover {
+    background-color: #f0f0f5;
+    box-shadow: 0 0 4px black;
+    transform: scale(1.04);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-        box-shadow: 0 0 20px;
-        padding: 8px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+p, li {
+    font-size: 22px;
+}
 
-    img {
-        width: 200px;
-        height: 200px;
-    }
+section {
+    width: 130%;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 20px;
+    padding: 8px;
+    margin: 15px 20px;
+}
 
-    .imagem-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+section:hover {
+    background-color: #f0f0f5;
+    box-shadow: 0 0 4px black;
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        margin-right: 100px;
-    }
+/* Imagens */
+img {
+    width: 300px;
+    height: 300px;
+}
 
-    .container {
-        max-width: 100px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 135%;
+}
 
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
 
-    /* Estilos para a barra de navegação */
-    header {
-        background-color: #333;
-        padding: 10px 0;
+nav ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: inherit;
+    margin: 6px;
+    font-size: 7px;
+}
 
-        justify-content: center;
-        /* Centraliza itens horizontalmente */
-    }
+nav ul li a:hover {
+    background-color: #333;
+}
 
-    nav ul {
-        list-style-type: none;
-        padding: 7%;
+/* Botão Customizado */
+.bt1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    border: 1px solid;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
 
-        /* Alterado para flex para alinhar itens horizontalmente */
-        justify-content: center;
-        /* Centraliza itens horizontalmente */
-        align-items: center;
-        /* Centraliza itens verticalmente (opcional) */
-    }
+.bt1:hover > :not(:hover) {
+    transform: scale(0.95);
+    opacity: 0.4;
+}
 
-    nav ul li {
+/* Alinhamento e Espaçamento */
+.alint {
+    font-size: 130%;
+}
 
-        /* Exibe os itens na mesma linha */
-        margin: 0 10px;
-    }
+.esp {
+    height: 12px;
+}
 
-    nav ul li a {
-        text-decoration: none;
-        padding: 5px 10px;
-        color: inherit;
-        /* Mantém a cor do texto definida no HTML */
-    }
+.se {
+    transition: 0.4s;
+    text-align: center;
+}
 
-    nav ul li a:hover {
-        background-color: #333;
-    }
+/* Slider */
+.slider {
+    overflow: hidden;
+}
 
-    /* Cores específicas para cada link */
-    nav ul li:nth-child(1) a {
-        color: blue;
-    }
+.slides {
+    width: 400px;
+    height: 400px;
+    display: flex;
+}
 
-    nav ul li:nth-child(2) a {
-        color: orange;
-    }
+.slides input {
+    display: none;
+}
 
-    nav ul li:nth-child(3) a {
-        color: green;
-    }
+.slide img {
+    width: 400px;
+    height: 400px;
+}
 
-    nav ul li:nth-child(4) a {
-        color: red;
-    }
+.manual-navegation, .navegation-auto {
+    position: absolute;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
 
-    nav ul li:nth-child(5) a {
-        color: blueviolet;
-    }
+.manual-btn, .navegation-auto div {
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-navegation {
+    margin-top: -30px;
+}
+
+.navegation-auto {
+    margin-top: 370px;
+}
+
+.manual-btn:not(:last-child), .navegation-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+.manual-btn:hover, .navegation-auto div:hover {
+    background-color: #fff;
+}
+
+/* Radio Inputs para Navegação do Slider */
+#radio1:checked ~ .first { margin-left: 0; }
+#radio2:checked ~ .first { margin-left: -100%; }
+#radio3:checked ~ .first { margin-left: -200%; }
+#radio4:checked ~ .first { margin-left: -300%; }
+#radio5:checked ~ .first { margin-left: -400%; }
+#radio6:checked ~ .first { margin-left: -500%; }
+#radio7:checked ~ .first { margin-left: -600%; }
+
+#radio1:checked ~ .navegation-auto .auto-btn1,
+#radio2:checked ~ .navegation-auto .auto-btn2,
+#radio3:checked ~ .navegation-auto .auto-btn3,
+#radio4:checked ~ .navegation-auto .auto-btn4,
+#radio5:checked ~ .navegation-auto .auto-btn5,
+#radio6:checked ~ .navegation-auto .auto-btn6,
+#radio7:checked ~ .navegation-auto .auto-btn7 {
+    background-color: #fff;
+}
+
+/* Texto Centralizado */
+.text1 {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Layout Geral */
+.container, header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    margin: 10px;
+    width: 138%;
+    margin-right: 10px;
+}
+
+.canva {
+    margin-top: 25px;
+}
 }
