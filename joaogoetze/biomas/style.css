@@ -205,7 +205,7 @@
       display:block;
     margin-left:auto;
     margin-right:auto;
-    width: 55%;
+    /* width: 55%; */
     }
 
     #pt {
@@ -239,8 +239,8 @@
 
   .ods-lado{
     display: flex; 
-    width: 80%; 
-    gap: 3%; 
+    /* width: 80%; 
+    gap: 3%;  */
     align-items: center;
     justify-content: center;
      align-items: center; 
@@ -259,14 +259,86 @@
     /* margin-right: 17%; */
   }
 
-  .arvore{
-    width: 150px; 
+
+
+  .bichos, .arvores, .arte{
     display: inline-flex; 
-    gap: 5px; 
-    margin-left: 23%;
   }
 
+  .arvores img{
+    width:22%; 
   }
+
+  .bichos img{
+    width:22%; 
+  }
+
+  .arte img{
+    width:22%; 
+  }
+
+  /* .bichos img .arvores img{
+    width:22%; 
+  } */
+
+  .planalto img{
+   width: 80%;
+  }
+
+  .clima img{
+    width: 80%;
+   }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -476,7 +548,7 @@
       display:block;
     margin-left:auto;
     margin-right:auto;
-    width: 55%;
+    /* width: 55%; */
     }
 
     #pt {
@@ -510,8 +582,8 @@
 
   .ods-lado{
     display: flex; 
-    width: 80%; 
-    gap: 3%; 
+    /* width: 80%; 
+    gap: 3%;  */
     align-items: center;
     justify-content: center;
      align-items: center; 
@@ -530,12 +602,36 @@
     /* margin-right: 17%; */
   }
 
-  .arvore{
-    width: 150px; 
+
+
+  .bichos, .arvores, .arte{
     display: inline-flex; 
-    gap: 5px; 
-    margin-left: 23%;
   }
+
+  .arvores img{
+    width:22%; 
+  }
+
+  .bichos img{
+    width:22%; 
+  }
+
+  .arte img{
+    width:22%; 
+  }
+
+  /* .bichos img .arvores img{
+    width:22%; 
+  } */
+
+  .planalto img{
+   width: 80%;
+  }
+
+  .clima img{
+    width: 80%;
+   }
+  
 
 
 }
