@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #ffffff;
+    background: radial-gradient(#061c4b , black);
+    display: grid;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #030c1e48;
+    display: grid;
+    padding: 0;  /* Remove padding extra do topo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 60px;
+}
+
+.Urbanisme {
+    position: relative;
+    bottom: 35px;
+}
+
+ul {
+    position: relative;
+    bottom: 35px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;  /* Um leve padding para dentro da nav */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    margin-right: 10px;
+    position: relative;
+    bottom: 60px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Seção principal */
+.titulo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Compensação para o cabeçalho fixo */
+}
+
+
+
+.titulo-content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    position: relative;
+    bottom: 100px;
+}
+
+.titulo-content h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 50px;
+}
+
+/* Localização */
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #061c4b;
+    padding: 50px 20px;
+    
+}
+
+.sobre .container {
+    max-width: 600px;
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 50px;
+}
+
+.sobre p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    left: 50px;
+}
+
+.sobre-image img {
+    width: 350px;
+    position: relative;
+    right: 80px;
+    border-radius: 20px;
+    border: 0.1rem solid white;
+    transition: .3s;
+}
+
+.sobre-image img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+/* Como funciona a ponte? */
+
+.ponte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #061c4b;
+    padding: 50px 20px;
+}
+
+.ponte .como {
+    max-width: 600px;
+}
+
+.ponte h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 480px;
+}
+
+.ponte p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: center;
+    width: 900px;
+    position: relative;
+    left: 160px;
+}
+
+.ponte-image img {
+    width: 500px;
+    position: relative;
+    right: 660px;
+    border-radius: 20px;
+    transition: .3s;
+    border: 0.1rem solid white;
+}
+.ponte-image img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+
+
+/* como foi o processo? */
+
+.processo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #506dab;
+    padding: 50px 20px;
+}
+
+.processo .pro {
+    max-width: 600px;
+}
+
+.processo h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 90px;
+    position: relative;
+    left: 50px;
+}
+
+.processo p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    left: 50px;
+}
+
+.processo-image img {
+    width: 400px;
+    position: relative;
+    right: 50px;
+    border-radius: 20px;
+    transition: .3s;
+    border: 0.1rem solid white;
+}
+.processo-image img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+/* entregas */
+
+.entregas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #061c4b;
+    padding: 50px 20px;
+}
+
+.entregas .entre {
+    max-width: 600px;
+}
+
+.entregas h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 550px;
+    text-align: end;
+}
+
+.entregas p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: end;
+    position: relative;
+    left: 550px;
+}
+
+.entregas-image img {
+    width: 400px;
+    position: relative;
+    right: 700px;
+    border-radius: 20px;
+    transition: .3s;
+    border: 0.1rem solid white;
+}
+.entregas-image img:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+}
+
+
+/* sobre nós */
+
+.sobrenos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(red.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+}
+
+.sobrenos .nos {
+    max-width: 600px;
+}
+
+.sobrenos h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 350px;
+    text-align: center;
+}
+
+.sobrenos p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    left: 350px;
+}
+
+/*  */
+.resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #061c4b;
+    padding: 50px 20px;
+    
+}
+
+.resultado .resu {
+    max-width: 600px;
+}
+
+.resultado h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* fonte */
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 60px;
+    position: relative;
+    left: 50px;
+}
+
+.resultado p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    left: 50px;
+}
+
+.resultado-image img {
+    width: 500px;
+    position: relative;
+    right: 50px;
+    border-radius: 20px;
+    transition: .3s;
+    border: 0.1rem solid white;
+}
+.resultado-image img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.7s;border-radius: 20px;
+}
+
+
+
+#primeiralinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#segundalinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#terceiralinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#quartalinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#quintalinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#sextalinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+
+
+
+
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    height: 70px;
+}
+
+footer p {
+    position: relative;
+    bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#navegar {
+    position: relative;
+    top: 40px;
+}
+
+.botoes {
+    position: relative;
+    top: 500px;
+}
+
+button {
+    border-radius: 20px;
+    background-color: rgb(194, 192, 255);
+    width: 150px;
+    height: 50px;
+    position: relative;
+    left: 37%;
+    border: 0.1rem solid white;
+    font-size: 15px;
+    font-family: cursive;
+    margin-right: 10px;
+    bottom: 40px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: rgb(60, 66, 138);
+    transition: 1s ease-in-out;
+}
