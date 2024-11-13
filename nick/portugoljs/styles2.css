@@ -18,20 +18,20 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(211, 64, 11, 0.1);
     max-width: 400px;
     text-align: center;
   }
 
   h1 {
     font-size: 1.8em;
-    color: #4a4e69;
+    color: #e74905;
     margin-bottom: 10px;
   }
 
   h2 {
     font-size: 1.2em;
-    color: #4a4e69;
+    color: #e74905;
     margin-bottom: 20px;
   }
 
@@ -39,7 +39,7 @@
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #4a4e69;
+    color: #e74905;
   }
 
   input[type="number"] {
@@ -54,7 +54,7 @@
   }
 
   button {
-    background-color: #4a4e69;
+    background-color: #e74905;
     color: #fff;
     padding: 10px 20px;
     font-size: 1em;
@@ -65,7 +65,7 @@
   }
 
   button:hover {
-    background-color: #6b728e;
+    background-color: #f2692f;
   }
 
   #resultado {

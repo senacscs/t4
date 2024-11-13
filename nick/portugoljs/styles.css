@@ -11,27 +11,27 @@
     align-items: center;
     min-height: 100vh;
     background-color: #f3f4f6;
-    color: #333;
+    color: #090909;
   }
 
   main {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(206, 0, 0, 0.1);
     max-width: 400px;
     text-align: center;
   }
 
   h1 {
     font-size: 1.8em;
-    color: #4a4e69;
+    color: #cb0f0f;
     margin-bottom: 10px;
   }
 
   h2 {
     font-size: 1.2em;
-    color: #4a4e69;
+    color: #cb0f0f;
     margin-bottom: 20px;
   }
 
@@ -39,7 +39,7 @@
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #4a4e69;
+    color: #cb0f0f;
   }
 
   input[type="number"] {
@@ -54,7 +54,7 @@
   }
 
   button {
-    background-color: #4a4e69;
+    background-color: #cb0f0f;
     color: #fff;
     padding: 10px 20px;
     font-size: 1em;

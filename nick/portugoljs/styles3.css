@@ -25,13 +25,13 @@
 
   h1 {
     font-size: 1.8em;
-    color: #4a4e69;
+    color: #eff30c;
     margin-bottom: 10px;
   }
 
   h2 {
     font-size: 1.2em;
-    color: #4a4e69;
+    color: #eff30c;
     margin-bottom: 20px;
   }
 
@@ -39,7 +39,7 @@
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #4a4e69;
+    color: #eff30c;
   }
 
   input[type="text"] {
@@ -54,7 +54,7 @@
   }
 
   button {
-    background-color: #4a4e69;
+    background-color: #eff30c;
     color: #fff;
     padding: 10px 20px;
     font-size: 1em;
