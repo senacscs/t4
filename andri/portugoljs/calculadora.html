@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Compra</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora da Papelaria</h1>
+
+        
+        <input type="text" id="nome" placeholder="Digite seu nome" class="input">
+
+        <input type="number" id="quantidadePaes" placeholder="Quantidade de canetas" class="input" min="0">
+        <input type="number" id="quantidadePaodequeijo" placeholder="Quantidade de caderno" class="input" min="0">
+        <input type="number" id="quantidadeCoxinha" placeholder="Quantidade de lápis" class="input" min="0">
+
+   
+        <button id="calcularBtn">Calcular Total</button>
+
+        
+        <div id="resultado"></div>
+    </div>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
