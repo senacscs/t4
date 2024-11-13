@@ -10,12 +10,20 @@
 </head>
 
 <body>
+    <!-- Seletor de idioma -->
+    <div class="language-selector">
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
     <div id="tsparticles"></div>
     <section>
         <div class="content">
-            <h1 class="eu">Lucas Azevedo</h1>
-            <h1 class="tit">EscolAgora</h1> <img class="chapeu" src="chapeubranco.png">
-            <p>
+            <h1 class="eu" id="name">Lucas Azevedo</h1>
+            <h1 class="tit" id="title">EscolAgora</h1> <img class="chapeu" src="chapeubranco.png">
+            <p id="project-description">
                 O projeto "EscolAgora" facilita a matrícula de crianças, com foco em necessidades especiais, promovendo
                 a educação de qualidade (ODS 4) e o crescimento econômico (ODS 8). O aplicativo oferece avaliações sobre
                 a infraestrutura e a qualidade pedagógica das escolas, permitindo que pais e estudantes escolham
@@ -23,7 +31,7 @@
                 garantir igualdade de acesso à educação
             </p>
             <nav>
-                <a href="#more-info"><button>Conferir projeto</button></a>
+                <a href="#more-info"><button id="check-project">Conferir projeto</button></a>
             </nav>
         </div>
 
@@ -31,9 +39,6 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                      <img class="aula" src="sala.avif">
-
-                    <!-- <div class="overlay">
-                       -->
                     <div class="ratings">
                         <div class="stars">
                             <ion-icon class="star" name="star"></ion-icon>
@@ -42,61 +47,96 @@
                             <ion-icon class="star" name="star"></ion-icon>
                             <ion-icon class="star" name="star-half-outline"></ion-icon>
                         </div>
-
                     </div>
                 </div>
             </div>
-            <!-- Outras slides do swiper aqui... -->
         </div>
-        </div>
-
-
     </section>
 
     <!-- NOVA SEÇÃO ADICIONADA -->
     <div class="content more-info" id="more-info">
-        <h1 class="dois"> Problema de pesquisa</h1>
-        <p>Quais são os principais desafios enfrentados por pais e responsáveis na busca por instituições de ensino
-            adequadas para crianças, especialmente aquelas com necessidades especiais?</p>
-            <br>
-        <br>
-        <br>
+        <h1 class="dois" id="research-problem">Problema de pesquisa</h1>
+        <p id="research-question">Quais são os principais desafios enfrentados por pais e responsáveis na busca por instituições de ensino adequadas para crianças, especialmente aquelas com necessidades especiais?</p>
 
-        <h1 class="dois"> Objetivos</h1>
-        <p>• Identificar as principais dificuldades que pais e responsáveis encontram ao buscar escolas para crianças,
-            com foco em necessidades especiais.</p>
-            
-         <p>  • Analisar a falta de informações acessíveis sobre a qualidade e a inclusão nas instituições de ensino.</p>
-            
-         <p>  • Investigar a percepção dos pais sobre a importância de avaliações e feedback de outros usuários na escolha
-            de escolas.</p>
-            
-         <p> • Explorar como a ausência de ferramentas digitais afeta o processo de matrícula e inclusão escolar.
-            
-        </p>
-        <br>
-        <br>
-        <br>
+        <h1 class="dois" id="objectives">Objetivos</h1>
+        <p id="objective1">• Identificar as principais dificuldades que pais e responsáveis encontram ao buscar escolas para crianças, com foco em necessidades especiais.</p>
+        <p id="objective2">• Analisar a falta de informações acessíveis sobre a qualidade e a inclusão nas instituições de ensino.</p>
+        <p id="objective3">• Investigar a percepção dos pais sobre a importância de avaliações e feedback de outros usuários na escolha de escolas.</p>
+        <p id="objective4">• Explorar como a ausência de ferramentas digitais afeta o processo de matrícula e inclusão escolar.</p>
+        <br><br><br>
 
-        <h1 class="dois">Hipóteses</h1>
-        <p>• O aplicativo centralizará todas as oportunidades de emprego em um só lugar, facilitando a busca e economizando tempo. </p>
-        <p>• Criará uma plataforma que permita a fácil visualização de perfis e currículos de profissionais e professores, juntamente com ferramentas de filtragem avançada, pode agilizar o processo de contratação.</p>
-        <p>• Integrará um sistema de avaliação transparente e confiável no aplicativo pode fornecer aos usuários insights valiosos para tomar decisões informadas.</p>
-     <p>• Poderia personalizar a experiência do usuário, sugerindo empregos, escolas e profissionais com base em suas habilidades, interesses e histórico de avaliações. </p>
-     <br>
-     <br>
-     <br>
-     <h1 class="dois">Resultados esperados</h1>
-        <p>• Maior inclusão dentro do ambiente escolar.</p>
-        <p>• Facilitação pela busca de empregos, abaixando o índice de professores desempregados.</p>
-        <p>• Mais senso crítico e pessoal aplicado dentro das escolas, contribuindo para a integração.</p>
-        <p>• Facilidade pela busca de profissionais competentes.</p>
-     
+        <h1 class="dois" id="hypotheses">Hipóteses</h1>
+        <p id="hypothesis1">• O aplicativo centralizará todas as oportunidades de emprego em um só lugar, facilitando a busca e economizando tempo.</p>
+        <p id="hypothesis2">• Criará uma plataforma que permita a fácil visualização de perfis e currículos de profissionais e professores, juntamente com ferramentas de filtragem avançada, pode agilizar o processo de contratação.</p>
+        <p id="hypothesis3">• Integrará um sistema de avaliação transparente e confiável no aplicativo pode fornecer aos usuários insights valiosos para tomar decisões informadas.</p>
+        <p id="hypothesis4">• Poderia personalizar a experiência do usuário, sugerindo empregos, escolas e profissionais com base em suas habilidades, interesses e histórico de avaliações.</p>
+        <br><br><br>
+
+        <h1 class="dois" id="expected-results">Resultados esperados</h1>
+        <p id="expected-result1">• Maior inclusão dentro do ambiente escolar.</p>
+        <p id="expected-result2">• Facilitação pela busca de empregos, abaixando o índice de professores desempregados.</p>
+        <p id="expected-result3">• Mais senso crítico e pessoal aplicado dentro das escolas, contribuindo para a integração.</p>
+        <p id="expected-result4">• Facilidade pela busca de profissionais competentes.</p>
     </div>
+
     <footer>
         <p>Confira meu projeto no <a href="https://www.canva.com/design/DAGVC4PUeDk/KwfMo7FAQ4offDiq5uMthQ/edit?utm_content=DAGVC4PUeDk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Canva</a> ou em <a href="file:///C:/Users/LUCASMATHEUSDEAZEVED/Downloads/projeto.pdf">PDF</a></p>
     </footer>
+
     <script src="tudo.js"></script>
+    <script>
+        // Função para alterar o idioma
+        function changeLanguage() {
+            const language = document.getElementById('language-select').value;
+            
+            if (language === 'en') {
+                document.getElementById('name').textContent = 'Lucas Azevedo';
+                document.getElementById('title').textContent = 'EscolAgora';
+                document.getElementById('project-description').textContent = 'The "EscolAgora" project facilitates the enrollment of children, focusing on special needs, promoting quality education (SDG 4) and economic growth (SDG 8). The app provides evaluations about the infrastructure and pedagogical quality of schools, allowing parents and students to choose institutions based on detailed information, without needing physical visits. The goal is to ensure equal access to education.';
+                document.getElementById('check-project').textContent = 'Check Project';
+                document.getElementById('research-problem').textContent = 'Research Problem';
+                document.getElementById('research-question').textContent = 'What are the main challenges faced by parents and guardians when searching for appropriate educational institutions for children, especially those with special needs?';
+                document.getElementById('objectives').textContent = 'Objectives';
+                document.getElementById('objective1').textContent = '• Identify the main difficulties parents and guardians face when searching for schools for children with special needs.';
+                document.getElementById('objective2').textContent = '• Analyze the lack of accessible information about quality and inclusion in educational institutions.';
+                document.getElementById('objective3').textContent = '• Investigate parents’ perception of the importance of evaluations and feedback from other users in choosing schools.';
+                document.getElementById('objective4').textContent = '• Explore how the absence of digital tools affects the enrollment and inclusion process.';
+                document.getElementById('hypotheses').textContent = 'Hypotheses';
+                document.getElementById('hypothesis1').textContent = '• The app will centralize all job opportunities in one place, making the search easier and saving time.';
+                document.getElementById('hypothesis2').textContent = '• It will create a platform that allows easy viewing of professional and teacher profiles and resumes, along with advanced filtering tools, speeding up the hiring process.';
+                document.getElementById('hypothesis3').textContent = '• It will integrate a transparent and reliable evaluation system, providing users with valuable insights for informed decision-making.';
+                document.getElementById('hypothesis4').textContent = '• It could personalize the user experience by suggesting jobs, schools, and professionals based on skills, interests, and evaluation history.';
+                document.getElementById('expected-results').textContent = 'Expected Results';
+                document.getElementById('expected-result1').textContent = '• Greater inclusion within the school environment.';
+                document.getElementById('expected-result2').textContent = '• Easier job search, reducing the number of unemployed teachers.';
+                document.getElementById('expected-result3').textContent = '• More critical thinking and personal development applied within schools, contributing to integration.';
+                document.getElementById('expected-result4').textContent = '• Easier search for competent professionals.';
+            } else {
+                // Retorno para português
+                document.getElementById('name').textContent = 'Lucas Azevedo';
+                document.getElementById('title').textContent = 'EscolAgora';
+                document.getElementById('project-description').textContent = 'O projeto "EscolAgora" facilita a matrícula de crianças, com foco em necessidades especiais, promovendo a educação de qualidade (ODS 4) e o crescimento econômico (ODS 8). O aplicativo oferece avaliações sobre a infraestrutura e a qualidade pedagógica das escolas, permitindo que pais e estudantes escolham instituições com base em informações detalhadas, sem precisar de visitas presenciais. O objetivo é garantir igualdade de acesso à educação';
+                document.getElementById('check-project').textContent = 'Conferir projeto';
+                document.getElementById('research-problem').textContent = 'Problema de pesquisa';
+                document.getElementById('research-question').textContent = 'Quais são os principais desafios enfrentados por pais e responsáveis na busca por instituições de ensino adequadas para crianças, especialmente aquelas com necessidades especiais?';
+                document.getElementById('objectives').textContent = 'Objetivos';
+                document.getElementById('objective1').textContent = '• Identificar as principais dificuldades que pais e responsáveis encontram ao buscar escolas para crianças, com foco em necessidades especiais.';
+                document.getElementById('objective2').textContent = '• Analisar a falta de informações acessíveis sobre a qualidade e a inclusão nas instituições de ensino.';
+                document.getElementById('objective3').textContent = '• Investigar a percepção dos pais sobre a importância de avaliações e feedback de outros usuários na escolha de escolas.';
+                document.getElementById('objective4').textContent = '• Explorar como a ausência de ferramentas digitais afeta o processo de matrícula e inclusão escolar.';
+                document.getElementById('hypotheses').textContent = 'Hipóteses';
+                document.getElementById('hypothesis1').textContent = '• O aplicativo centralizará todas as oportunidades de emprego em um só lugar, facilitando a busca e economizando tempo.';
+                document.getElementById('hypothesis2').textContent = '• Criará uma plataforma que permita a fácil visualização de perfis e currículos de profissionais e professores, juntamente com ferramentas de filtragem avançada, pode agilizar o processo de contratação.';
+                document.getElementById('hypothesis3').textContent = '• Integrará um sistema de avaliação transparente e confiável no aplicativo pode fornecer aos usuários insights valiosos para tomar decisões informadas.';
+                document.getElementById('hypothesis4').textContent = '• Poderia personalizar a experiência do usuário, sugerindo empregos, escolas e profissionais com base em suas habilidades, interesses e histórico de avaliações.';
+                document.getElementById('expected-results').textContent = 'Resultados esperados';
+                document.getElementById('expected-result1').textContent = '• Maior inclusão dentro do ambiente escolar.';
+                document.getElementById('expected-result2').textContent = '• Facilitação pela busca de empregos, abaixando o índice de professores desempregados.';
+                document.getElementById('expected-result3').textContent = '• Mais senso crítico e pessoal aplicado dentro das escolas, contribuindo para a integração.';
+                document.getElementById('expected-result4').textContent = '• Facilidade pela busca de profissionais competentes.';
+            }
+        }
+    </script>
 </body>
 
 </html>
