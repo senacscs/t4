@@ -80,6 +80,7 @@ body {
         margin-top: 10px;
         transition: transform 2s;
         transform: translateY(0) scale(1);
+        position: fixed;
     }
     .english:hover {
         transform: translateY(0) scale(1.22);
@@ -91,9 +92,19 @@ body {
         margin-top: 10px;
         transition: transform 2s;
         transform: translateY(0) scale(1);
+        position: fixed;
+        margin-left: 70px;
     }
     .portugues:hover {
         transform: translateY(0) scale(1.22);
+    }
+    .box a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .box a:hover {
+        background-color: #575757;
+        color: #000000;
     }
 }
 
