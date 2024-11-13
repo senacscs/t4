@@ -126,3 +126,25 @@ article {
     max-width: 100%; /* Garantir que a imagem seja responsiva */
     height: auto; /* Manter a proporção da imagem */
 }
+
+/* Estilo geral para o parágrafo */
+p {
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    line-height: 1.5; /* Altura da linha */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Estilo para o link */
+a {
+    color: #007BFF; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #0056b3; /* Cor do link ao passar o mouse */
+}
