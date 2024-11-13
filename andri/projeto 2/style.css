@@ -220,3 +220,8 @@ h3 {
   position: sticky;
   top: 0;
 }
+
+.footer{
+  width: 100px;
+  align-items: center;
+}

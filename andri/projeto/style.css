@@ -1,227 +1,208 @@
-body {
-  background-image: url(https://img.freepik.com/fotos-premium/fundo-de-marmore-branco-da-textura-textura-de-marmore-abstrata-testes-padroes-naturais-para-o-projeto_41389-491.jpg);
-  color: rgb(19, 4, 4);
-  font-family: 'Courier New', Courier, monospace;
-  padding: 30px;
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 'Montserrat', sans-serif;
+    color: #777;
+    scroll-behavior: smooth;
 }
 
-media(min-width: 768px) {}
-
-.image {
-  width: 200px;
-  position: relative;
+/* navbar */
+#navbar {
+    background-color:#dda3dd	;
+    opacity: 100;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 90;
 }
 
-.center {
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #c73a77d2
+#navbar  * {
+    margin: 0;
+    display: inline;
+    padding: 5px;
 }
 
-h1,
-h2,
+#navbar ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: nb#d31594;
+    opacity: 100%;
+    transition: ease 0.5s;
+}
+
+/* backgrounds */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bgimg-1 {
+  background-image: url(crinças\ .png);
+  min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url(criança.png);
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url(jovem.png);
+    min-height: 400px;
+}
+.bgimg-4 {
+  background-image: url(aual.png);
+  min-height: 400px;
+}
+
+.bg-color {
+    background-color: #282E34;
+    min-height: 100%;
+}
+
+.bg-color-2 {
+    background-color: #F63E7B;
+}
+
+/* titles */
+.caption {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption h1.border {
+    color: #fff;
+    padding: 18px;
+    font-size: 70px;
+    letter-spacing: 5px;
+}
+
+.subtitle {
+    font-size: 30px;
+}
+
+.caption_2 {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption_2 h2.subtitle {
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.caption_3 {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+}
+
+/* content */
 h3 {
-  padding-top: 5px;
-  font-size: 25pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font: 20px "Montserrat", sans-serif;
+    color: #111;
+    text-align: center;
 }
 
-h1:hover,
-h2:hover,
-h3:hover {
-  text-shadow: 2px 2px 10px #dc146b
+h3.question {
+    font-size: 40px;
+    text-transform: initial;
+    color: #fff;
+    font-weight: 700;
 }
 
-h1,
-h2 {
-  background-color: rgba(246, 88, 185, 0.411);
-  font-size: 20pt;
+.section {
+    color: #777;
+    background-color: #282E34;
+    padding: 50px 80px;
+    text-align: justify;
 }
 
-img {
-  margin: auto;
-  display: block;
+.section h3.question {
+    margin: 12%;
 }
 
-p {
-  font-family: monospace;
-  font-size: 14pt;
+.section-2 {
+    color: #ddd;
+    background-color: #282E34;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
 }
 
-h3 {
-  font-size: 20pt;
-  font-family: cursive;
+.section-2 h4 {
+margin: 0 auto;
 }
 
-ol {
-  font-family: monospace;
-  font-size: 14pt;
+.center-text {
+    text-align: center;
 }
 
-ul {
-  font-family: monospace;
-  font-size: 14pt;
+.section-text {
+    font-size: 15px;
 }
 
-.imagem-redonda {
-  border-radius: 50%;
+.moreinfo-text {
+    color: #fff;
+    font-size: 30px;
 }
 
-h3 {
-  border: 2px solid rgb(255, 5, 176);
-  padding: 5px;
-  box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.moreinfo-text-2 {
+    color: #fff;
+    font-size: 15px;
 }
 
-.expli {
-  text-align: right;
-  width: 400px;
-  display: flex;
+/* stops */
+.keyword {
+    background-color: transparent;
+    font-size: 50px;
+    color: #f7f7f7;
 }
 
-.menu {
-  color: #f20069ad;
-}
-
-.menu a:hover {
-  color: rgb(234, 81, 158);
-}
-
-.menu a:active {
-  color: rgb(210, 122, 187);
-}
-
-.menu a:visited {
-  color: rgb(211, 7, 85);
-}
-
-.menu a:link {
-  text-decoration: none;
-}
-
-.menu a:visited {
-  text-decoration: none;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-.menu a:active {
-  text-decoration: underline;
-}
-
-.sobre-projeto {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
-  text-align: start;
-
-}
-
-
-
-
-@media(max-width: 728px) {}
-
-.image {
-  width: 800px;
-  position: relative;
-}
-
-.center {
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #e3146e92
-}
-
-h1,
-h2,
-h3 {
-  padding-top: 5px;
-  font-size: 25pt;
-}
-
-h1:hover,
-h2:hover,
-h3:hover {
-  text-shadow: 2px 2px 10px #dc146b
-}
-
-h1,
-h2 {
-  background-color: rgba(246, 88, 185, 0.411);
-  font-size: 20pt;
-}
-
-img {
-  margin: auto;
-  display: block;
-}
-
-p {
-  font-family: monospace;
-  font-size: 14pt;
-}
-
-h3 {
-  font-size: 20pt;
-  font-family: cursive;
-}
-
-ol {
-  font-family: monospace;
-  font-size: 14pt;
-}
-
-ul {
-  font-family: monospace;
-  font-size: 14pt;
-}
-
-.imagem-redonda {
-  border-radius: 50%;
-}
-
-h3 {
-  border: 2px solid rgb(255, 5, 176);
-  padding: 5px;
-  box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.sobre-projeto {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
-  text-align: start;
-
-}
-
-.menu {
-  background-color: #da87c8b4;
-  text-align: center;
-}
-
-.menu ul li {
-  display: inline-block;
-}
-
-.menu ul li a {
-  display: block;
-  color: #ffffff94;
-  padding: 30px 10px;
-}
-
-.header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.footer{
-  width: 100px;
-  align-items: center;
-}
+/* HIGHLIGHTS */
+.link {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .link:hover {
+    text-decoration: none;
+  }
+  
+  .highlight {
+    font-size: 30px;
+  }
+  
+  *::selection {
+    background-color: #000;
+    color: #fff;
+  }

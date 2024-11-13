@@ -1,0 +1,227 @@
+body {
+  background-image: url(https://img.freepik.com/fotos-premium/fundo-de-marmore-branco-da-textura-textura-de-marmore-abstrata-testes-padroes-naturais-para-o-projeto_41389-491.jpg);
+  color: rgb(19, 4, 4);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 30px;
+}
+
+media(min-width: 768px) {}
+
+.image {
+  width: 200px;
+  position: relative;
+}
+
+.center {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #c73a77d2
+}
+
+h1,
+h2,
+h3 {
+  padding-top: 5px;
+  font-size: 25pt;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  text-shadow: 2px 2px 10px #dc146b
+}
+
+h1,
+h2 {
+  background-color: rgba(246, 88, 185, 0.411);
+  font-size: 20pt;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+p {
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+h3 {
+  font-size: 20pt;
+  font-family: cursive;
+}
+
+ol {
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+ul {
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+.imagem-redonda {
+  border-radius: 50%;
+}
+
+h3 {
+  border: 2px solid rgb(255, 5, 176);
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.expli {
+  text-align: right;
+  width: 400px;
+  display: flex;
+}
+
+.menu {
+  color: #f20069ad;
+}
+
+.menu a:hover {
+  color: rgb(234, 81, 158);
+}
+
+.menu a:active {
+  color: rgb(210, 122, 187);
+}
+
+.menu a:visited {
+  color: rgb(211, 7, 85);
+}
+
+.menu a:link {
+  text-decoration: none;
+}
+
+.menu a:visited {
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu a:active {
+  text-decoration: underline;
+}
+
+.sobre-projeto {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  text-align: start;
+
+}
+
+
+
+
+@media(max-width: 728px) {}
+
+.image {
+  width: 800px;
+  position: relative;
+}
+
+.center {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e3146e92
+}
+
+h1,
+h2,
+h3 {
+  padding-top: 5px;
+  font-size: 25pt;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  text-shadow: 2px 2px 10px #dc146b
+}
+
+h1,
+h2 {
+  background-color: rgba(246, 88, 185, 0.411);
+  font-size: 20pt;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+p {
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+h3 {
+  font-size: 20pt;
+  font-family: cursive;
+}
+
+ol {
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+ul {
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+.imagem-redonda {
+  border-radius: 50%;
+}
+
+h3 {
+  border: 2px solid rgb(255, 5, 176);
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sobre-projeto {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  text-align: start;
+
+}
+
+.menu {
+  background-color: #da87c8b4;
+  text-align: center;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  display: block;
+  color: #ffffff94;
+  padding: 30px 10px;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.footer{
+  width: 100px;
+  align-items: center;
+}
