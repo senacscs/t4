@@ -52,7 +52,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px;  /* Um leve padding para dentro da nav */
+    padding: 10px 20px; 
 }
 
 .logo {
@@ -62,7 +62,7 @@ nav {
 
 .logo img {
     width: 150px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     position: relative;
     bottom: 60px;
 }
@@ -104,20 +104,18 @@ nav ul li a:hover {
 
 
 .titulo-content h1 {
-    font-size: 3rem;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     /* fonte */
     font-family: "Bellefair", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 90px;
     position: relative;
-    bottom: 100px;
+    bottom: 60px;
 }
 
 .titulo-content h2 {
-    font-size: 1.5rem;
     color: #ffffff;
     margin-top: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -126,7 +124,9 @@ nav ul li a:hover {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    font-size: 50px;
+    font-size: 70px;
+    position: relative;
+    bottom: 80px;
 }
 
 /* Localização */
@@ -370,7 +370,7 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 350px;
+    left: 310px;
     text-align: center;
 }
 
@@ -381,7 +381,7 @@ nav ul li a:hover {
     font-style: normal;
     text-align: center;
     position: relative;
-    left: 350px;
+    left: 310px;
 }
 
 /*  */
@@ -436,6 +436,17 @@ nav ul li a:hover {
 }
 
 
+.canva {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(red.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+}
+
 
 #primeiralinha {
     position: relative;
@@ -479,6 +490,12 @@ nav ul li a:hover {
     background-color: white;
 }
 
+#setimalinha {
+    position: relative;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
 
 
 
@@ -531,4 +548,9 @@ button:hover {
     transition: 1s ease-in-out;
 }
 
-
+.slide p {
+    text-align: center;
+    position: relative;
+    left: 310px;
+    font-family: arial;
+}
