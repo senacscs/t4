@@ -1,43 +1,89 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(102, 192, 110);
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 p {
     color: rgb(0, 0, 0);
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: 2%;
 }
 
 h2 {
     color: rgb(0, 0, 0);
 }
 
+/* Estilo do menu de navegação */
+.navbar {
+    background-color: rgb(85, 164, 83);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: rgb(200, 255, 200);
+}
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
 .title {
     text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 4% auto;
+    padding: 1%;
     background-color: rgb(85, 164, 83);
-    margin-left: 20%;
-    margin-right: 20%;
     border-radius: 20px;
+    width: 60%;
     text-shadow: 0 0 20px rgb(68, 175, 67);
 }
 
 .card {
     background-color: rgb(85, 164, 83);
     text-align: center;
-    margin: 0 auto;
+    margin: 2% auto;
     border-radius: 20px;
-    margin-bottom: 2%;
-    box-shadow: 0 0 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    width: 950px;
+    width: 100%;
+    max-width: 950px;
     padding: 15px;
 }
 
@@ -63,13 +109,58 @@ footer {
     background-color: rgb(85, 164, 83);
     height: 50px;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1em;
     margin-top: 20px;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .title, .card {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .title, .card {
+        width: 100%;
+        padding: 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding-top: 10px;
+    }
 }
