@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de PI</title>
+    <link rel="icon" href=".ico">
+    <style>
+        .lang {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botões para alternar idioma -->
+    <button onclick="setLanguage('pt')">Português</button>
+    <button onclick="setLanguage('en')">English</button>
+
+    <div class="lang" id="pt">
+
+<header>
+    <nav>
+        <div class="tagline">
+        <ul>
+                  <li><a href="projeto.html">Introdução e Justificativa</a></li>
+                  <li><a href="pag2.html"> Problema e Hipóteses</a></li>
+                  <li><a href="#objetivo">Objetivo Principal e Solução</a></li>
+        </ul>
+        </div>
+        <div class="loader">
+            <h1>ODS 6</h1>
+          </div>
+    </nav>
+</header>
+    <div class="imagem">
+        <img src="ods.png">
+        </div>
+    <article>
+        <section>
+                <div class="texto">
+                    <h2 id="objetivo">Objetivo Principal</h2>
+                </div>
+        </section>
+        <section>
+                <div class="texto">
+                    <h2>Solução</h2>
+                </div>
+        </section>
+    </article>
+
+            <p>Inventimentos massivos na infraestrutura e tecnologia de saneamento em comunidades de baixa renda, garantir esse tema para crinças em escolas públicas e colaboração dos cidadãos que nessas comunidades residem. Se todos fatores forem realizados a porcentagem de que 24,3% da população brasileira não possuí saneamento básico, vai diminuir e vai ajudar na missão principal do ODS 6. </p>
+
+            <p1>Como fundador da VidaPura, estou comprometido em promover um impacto significativo na melhoria do saneamento básico em comunidades carentes. Vamos investir fortemente em materiais e tecnologias de ponta para fornecer soluções sustentáveis e eficazes.<br><br>
+
+                Além disso, estamos iniciando petições para que o tema do saneamento básico seja incluído nos currículos escolares, pois acreditamos que a educação é uma ferramenta poderosa para conscientização. Para complementar, formaremos uma equipe especializada que será responsável por organizar e conduzir palestras educativas em locais públicos, disseminando conhecimento sobre a importância do saneamento e seus impactos na saúde e no meio ambiente.<br><br>
+                
+                Estamos prontos para alocar os recursos necessários para tornar isso uma realidade e gerar mudanças duradouras!</p1>
+    </div>
+    <!--Ing-->
+    <div class="lang" id="en">
+
+        <header>
+            <nav>
+                <div class="tagline">
+                    <ul>
+                        <li><a href="projeto.html">Introduction and Justification</a></li>
+                        <li><a href="pag2.html">Problem and Hypotheses</a></li>
+                        <li><a href="#objective">Main Objective and Solution</a></li>
+                    </ul>
+                </div>
+                <div class="loader">
+                    <h1>SDG 6</h1>
+                </div>
+            </nav>
+        </header>
+    
+    
+        <article>
+            <section>
+                <div class="text">
+                    <h2 id="objective">Main Objective</h2>
+                </div>
+            </section>
+            <section>
+                <div class="text">
+                    <h2>Solution</h2>
+                </div>
+            </section>
+        </article>
+    
+        <div class="content">
+            <p>Massive investments in sanitation infrastructure and technology in low-income communities, ensuring this topic is included in public school curricula, and fostering collaboration from residents in these communities. If all these factors are implemented, the percentage of the Brazilian population without basic sanitation, currently at 24.3%, will decrease, contributing to the primary mission of SDG 6.</p>
+    
+            <p1>As the founder of VidaPura, I am committed to making a significant impact on improving basic sanitation in underserved communities. We will invest heavily in state-of-the-art materials and technologies to provide sustainable and effective solutions.<br><br>
+    
+            Furthermore, we are launching petitions to include the topic of basic sanitation in school curricula, as we believe that education is a powerful tool for raising awareness. To complement this, we will form a specialized team responsible for organizing and conducting educational lectures in public spaces, spreading knowledge about the importance of sanitation and its impact on health and the environment.<br><br>
+    
+            We are ready to allocate the necessary resources to make this vision a reality and create lasting change!</p1>
+        </div>
+    </div>    
+            <script>// Função para verificar o idioma armazenado no localStorage
+                function getSavedLanguage() {
+                    return localStorage.getItem('preferredLang');
+                }
+        
+                // Função para definir e salvar o idioma
+                function setLanguage(lang) {
+                    localStorage.setItem('preferredLang', lang);
+                    showLanguage(lang);
+                }
+        
+                // Função para mostrar o conteúdo do idioma selecionado
+                function showLanguage(lang) {
+                    document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+                    document.getElementById(lang).style.display = 'block';
+                }
+        
+                // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+                function detectBrowserLanguage() {
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    return browserLang.startsWith('pt') ? 'pt' : 'en';
+                }
+        
+                // Configuração inicial ao carregar a página
+                const lang = getSavedLanguage() || detectBrowserLanguage();
+                setLanguage(lang);
+            </script>
+</body>
+</html>
