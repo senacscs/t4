@@ -142,6 +142,7 @@
       color: rgb(0, 0, 0);
       text-align: center;
       text-decoration: none;
+      display: inline-flex;
     }
 
     .ir{
@@ -166,12 +167,20 @@
       color: rgb(255, 255, 255);
       text-align: center;
     }
+
+    p{
+      display: inline-flex;
+      text-align: center;
+    }
   
     img {
       display:block;
     margin-left:auto;
     margin-right:auto;
     width: 60%;
+
+
+
     }
   }
   
@@ -282,15 +291,6 @@
       justify-content: center;
     }
     
-    .itens {
-      border: 2px solid white;
-      width: 80%;
-      min-height: 150px;
-      margin-left: auto;
-      margin-right: auto;
-      align-items:   center;
-  
-    }
     
     main {
       padding: 20px;
