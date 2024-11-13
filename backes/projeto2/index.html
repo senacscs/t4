@@ -1,37 +1,139 @@
-<!-- only on desktop --> 
+<!DOCTYPE html>
+<html lang="pt">
 
-<main>
-  
-    <div id="sidebar">
-    <ul class="progress-bar">
-      <li><a href="#section1">Intro</a></li>
-      <li><a href="#section2">Introdução e Justificativa</a></li>
-      <li><a href="#section3">Objetivo Principal</a></li>
-      <li><a href="#section4">Hipotese</a></li>
-    </ul>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Bilíngue com página única e botão de Troca</title>
   <link rel="stylesheet" href="style.css">
-  <div class="content">
-    <div id="section1" class="section"><h1>Introdução e Justificativa</h1>Introducão e justificativa: 
+  <style>
+    .lang {
+      display: none;
+    }
+  </style>
+</head>
 
- 
-        A mortalidade materna continua sendo um grave problema de saúde pública, especialmente em países em desenvolvimento, onde a falta de acesso a cuidados de saúde e desigualdades estruturais aumentam o risco de complicações e mortes durante a gravidez e o parto. Em 2017, a OMS reportou cerca de 295.000 mortes maternas, a maioria em países de baixa e média renda. Esses números refletem a necessidade urgente de abordar tanto as causas diretas quanto os determinantes sociais e estruturais que influenciam a saúde materna, como acesso a cuidados de saúde, condições socioeconômicas desfavoráveis e desigualdade de gênero.
-         
-        Essa mortalidade não é apenas resultado de cuidados médicos inadequados, mas também de fatores sociais, econômicos e culturais. Mulheres em situações de vulnerabilidade, com acesso limitado à educação e serviços de saúde, estão particularmente expostas a esses riscos. Esta pesquisa visa investigar como esses fatores impactam a saúde materna e identificar intervenções eficazes para promover o acesso equitativo aos serviços de saúde materna 
-        A mortalidade materna é um reflexo da desigualdade social e das falhas nos sistemas de saúde, especialmente em países em desenvol         
-        Este estudo é relevante por oferecer uma compreensão mais profunda dos determinantes sociais e estruturais da mortalidade materna e por fornecer dados essenciais para melhorar a qualidade dos serviços de saúde e reduzir as disparidades existentes.
-        <p> </p></div>
-    <div id="section2" class="section"
-    
-    
-    
-    
-    ><h2>Problema de Pesquisa: 
-    </h2>
-      <h3>Mortalidade Materna em Países em Desenvolvimento</h3>
-      <p>A mortalidade materna continua a ser um desafio significativo em muitos países em desenvolvimento, representando um indicador crítico da saúde pública e da qualidade dos serviços de saúde. Segundo a Organização Mundial da Saúde (OMS), cerca de 295.000 mulheres morreram durante a gravidez e o parto em 2017, com a maioria dessas mortes ocorrendo em países de baixa e média renda (WHO, 2019). Fatores como falta de acesso a cuidados pré-natais adequados, condições socioeconômicas desfavoráveis, desigualdade de gênero e práticas culturais prejudiciais contribuem para a alta mortalidade materna.</p>
-    </div>
-    <div id="section3" class="section"><h2>Objetivo Principal:</h2>
-      <p>O objetivo principal desta pesquisa é investigar os determinantes sociais e estruturais que afetam a saúde materna e a mortalidade associada em contextos de vulnerabilidade. A pesquisa visa identificar intervenções eficazes que possam ser implementadas para reduzir esses índices e promover um acesso equitativo aos serviços de saúde materna.</p>
-    </div>
-    <div id="section4" class="section"><h2>Hipótese</h2><p>As desigualdades sociais, econômicas e de gênero têm um impacto significativo na mortalidade materna em países em desenvolvimento, sendo que o acesso limitado a serviços de saúde, a educação deficiente e a discriminação de gênero aumentam o risco de complicações durante a gravidez e o parto</p></div>
+<body>
+  <!-- Botões para alternar idioma -->
+  <button onclick="setLanguage('pt')">Português</button>
+  <button onclick="setLanguage('en')">English</button>
+
+  <!-- Conteúdo em Português -->
+  <div class="lang" id="pt">
+    <main>
+
+      <div id="sidebar">
+        <ul class="progress-bar">
+          <li><a href="#section1">Introdução e Justificativa</a></li>
+          <li><a href="#section2">Problema de pesquisa</a></li>
+          <li><a href="#section3">Objetivo Principal</a></li>
+          <li><a href="#section4">Hipotese</a></li>
+        </ul>
+      </div>
+      <link rel="stylesheet" href="style.css">
+      <div class="content">
+        <div id="section1" class="section">
+          <h1>Introdução e Justificativa</h1>Introducão e justificativa:
+
+
+          A mortalidade materna continua sendo um grave problema de saúde pública, especialmente em países em
+          desenvolvimento, onde a falta de acesso a cuidados de saúde e desigualdades estruturais aumentam o risco de
+          complicações e mortes durante a gravidez e o parto. Em 2017, a OMS reportou cerca de 295.000 mortes maternas,
+          a maioria em países de baixa e média renda. Esses números refletem a necessidade urgente de abordar tanto as
+          causas diretas quanto os determinantes sociais e estruturais que influenciam a saúde materna, como acesso a
+          cuidados de saúde, condições socioeconômicas desfavoráveis e desigualdade de gênero.
+
+          Essa mortalidade não é apenas resultado de cuidados médicos inadequados, mas também de fatores sociais,
+          econômicos e culturais. Mulheres em situações de vulnerabilidade, com acesso limitado à educação e serviços de
+          saúde, estão particularmente expostas a esses riscos. Esta pesquisa visa investigar como esses fatores
+          impactam a saúde materna e identificar intervenções eficazes para promover o acesso equitativo aos serviços de
+          saúde materna
+          A mortalidade materna é um reflexo da desigualdade social e das falhas nos sistemas de saúde, especialmente em
+          países em desenvol
+          Este estudo é relevante por oferecer uma compreensão mais profunda dos determinantes sociais e estruturais da
+          mortalidade materna e por fornecer dados essenciais para melhorar a qualidade dos serviços de saúde e reduzir
+          as disparidades existentes.
+          <p> </p>
+        </div>
+        <div id="section2" class="section">
+
+
+
+          <h2>Problema de Pesquisa:
+          </h2>
+          <h3>Mortalidade Materna em Países em Desenvolvimento</h3>
+          <p>A mortalidade materna continua a ser um desafio significativo em muitos países em desenvolvimento,
+            representando um indicador crítico da saúde pública e da qualidade dos serviços de saúde. Segundo a
+            Organização Mundial da Saúde (OMS), cerca de 295.000 mulheres morreram durante a gravidez e o parto em 2017,
+            com a maioria dessas mortes ocorrendo em países de baixa e média renda (WHO, 2019). Fatores como falta de
+            acesso a cuidados pré-natais adequados, condições socioeconômicas desfavoráveis, desigualdade de gênero e
+            práticas culturais prejudiciais contribuem para a alta mortalidade materna.</p>
+        </div>
+        <div id="section3" class="section">
+          <h2>Objetivo Principal:</h2>
+          <p>O objetivo principal desta pesquisa é investigar os determinantes sociais e estruturais que afetam a saúde
+            materna e a mortalidade associada em contextos de vulnerabilidade. A pesquisa visa identificar intervenções
+            eficazes que possam ser implementadas para reduzir esses índices e promover um acesso equitativo aos
+            serviços de saúde materna.</p>
+        </div>
+        <div id="section4" class="section">
+          <h2>Hipótese</h2>
+          <p>As desigualdades sociais, econômicas e de gênero têm um impacto significativo na mortalidade materna em
+            países em desenvolvimento, sendo que o acesso limitado a serviços de saúde, a educação deficiente e a
+            discriminação de gênero aumentam o risco de complicações durante a gravidez e o parto</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="lang" id="en">
+    <main>
+
+      <div id="sidebar">
+        <ul class="progress-bar">
+          <li><a href="#section1">Introduction and Rationale</a></li>
+          <li><a href="#section2">Search problem</a></li>
+          <li><a href="#section3">Main Objective</a></li>
+          <li><a href="#section4">Hypothesis</a></li>
+        </ul>
+      </div>
+      <link rel="stylesheet" href="style.css">
+      <div class="content">
+        <div id="section1" class="section">
+          <h1>Introduction and Justification</h1>
+
+
+          Maternal mortality remains a serious public health problem, especially in developing countries, where lack of access to health care and structural inequalities increase the risk of complications and deaths during pregnancy and childbirth. In 2017, WHO reported around 295,000 maternal deaths, the majority in low- and middle-income countries. These figures reflect the urgent need to address both the direct causes and the social and structural determinants that influence maternal health, such as access to health care, unfavorable socioeconomic conditions and gender inequality. This mortality is not only the result of inadequate medical care, but also of social, economic and cultural factors. Women in vulnerable situations, with limited access to education and health services, are particularly exposed to these risks. This research aims to investigate how these factors
+impact maternal health and identify effective interventions to promote equitable access to maternal
+health services. Maternal mortality is a reflection of social inequality and failures in health systems, especially in
+developing countries. This study is relevant because it offers a deeper understanding of the social and structural determinants of maternal mortality and provides essential data to improve the quality of health services and reduce existing disparities.
+          <p> </p>
+        </div>
+        <div id="section2" class="section">
+
+
+
+          <h2>Research Problem:
+          </h2>
+          <h3>Maternal Mortality in Developing Countries
+          </h3>
+          <p>Maternal mortality continues to be a significant challenge in many developing countries, representing a critical indicator of public health and the quality of health services. According to the World Health Organization (WHO), an estimated 295,000 women died during pregnancy and childbirth in 2017, with the majority of these deaths occurring in low- and middle-income countries (WHO, 2019). Factors such as lack of access to adequate antenatal care, unfavorable socioeconomic conditions, gender inequality, and harmful cultural practices contribute to high maternal mortality.
+            .</p>
+        </div>
+        <div id="section3" class="section">
+          <h2>Main Objective:</h2>
+          <p>The main objective of this research is to investigate the social and structural determinants that affect maternal health and associated mortality in vulnerable contexts. The research aims to identify effective interventions that can be implemented to reduce these indices and promote equitable access to maternal health services.</p>
+        </div>
+        <div id="section4" class="section">
+          <h2>Hypothesis</h2>
+          <p>Social, economic and gender inequalities have a significant impact on maternal mortality in developing countries, with limited access to health services, poor education and gender discrimination increasing the risk of complications during pregnancy and childbirth.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="pi.js"></script>
+</body>
+
+</html>
+
+
+<!-- only on desktop -->
