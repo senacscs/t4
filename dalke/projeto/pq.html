@@ -8,90 +8,206 @@
 </head>
 
 <body>
-    <h1 class="title">Sistemas Sustentáveis de Manejo Pecuário: Implementação do Pastoreio Voisin para o Consumo Responsável de Recursos Naturais</h1>
-    <span class="tagline">Guilherme Dalke Franck</span>
-    <button onclick="setLanguage('pt')">Português</button>
-    <button onclick="setLanguage('en')">English</button>
-    <nav class="main-nav">
-        <ul>
-            <li><a id="introducao-page" data-page="introducao" href="index.html">Introdução e justificativa</a>
-            </li>
-            <li><a href="problema.html" id="problema-page" data-page="problema">Problema e Hipóteses</a></li>
-            <li><a href="objetivo.html" id="objetivo-page" data-page="objetivo">Objetivo Principal</a></li>
-            <li><a href="pq.html" id="pq-page" data-page="pq">Sobre o Sistema</a></li>
-        </ul>
-    </nav>
-    <section data-page-name="about" class="page default">
-        <img class="profile-img" src="imagens/andrevoisin.jpg" alt="" />
-        <div class="about-me">
 
-            <h2 class="subtitle">André Voisin e o Desenvolvimento do Sistema de Pastoreio Sustentável</h2>
-            <p>O Sistema de Pastoreio Voisin foi criado pelo agrônomo francês André Voisin, que desenvolveu o método de
-                manejo rotacional de pastagens ao observar que a movimentação controlada dos animais entre piquetes
-                promovia a recuperação do solo e a saúde da vegetação. Em seu livro “Produtividade da Grama” (1957),
-                Voisin apresentou os princípios desse sistema, que prioriza o descanso adequado do solo entre as
-                rotações para evitar o desgaste excessivo e maximizar a produção. Esse sistema é até hoje um modelo de
-                manejo sustentável, ajudando pecuaristas a otimizar recursos naturais e a praticar uma produção
-                responsável, alinhada à ODS 12.</p>
+    <button class="custom-btn btn-1" onclick="setLanguage('pt')">Português</button>
+    <button class="custom-btn btn-1" onclick="setLanguage('en')">English</button>
 
-            <h2 class="subtitle">Sistema de Pastoreio Voisin: Um Caminho para a Pecuária Sustentável</h2>
-            <p>é uma abordagem inovadora de manejo de pastagens que visa equilibrar a produtividade com a
-                sustentabilidade ambiental. Essa prática é especialmente relevante para o cumprimento dos objetivos da
-                ODS 12, que busca promover padrões de consumo e produção responsáveis.
+
+    <div class="lang" id="pt">
+        <h1 class="title">Sistemas Sustentáveis de Manejo Pecuário: Implementação do Pastoreio Voisin para o Consumo
+            Responsável de Recursos Naturais</h1>
+        <span class="tagline">Guilherme Dalke Franck</span>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a id="introducao-page" data-page="introducao" href="index.html">Introdução e justificativa</a>
+                </li>
+                <li><a href="problema.html" id="problema-page" data-page="problema">Problema e Hipóteses</a></li>
+                <li><a href="objetivo.html" id="objetivo-page" data-page="objetivo">Objetivo Principal</a></li>
+                <li><a href="pq.html" id="pq-page" data-page="pq">Sobre o Sistema</a></li>
+            </ul>
+        </nav>
+        <section data-page-name="about" class="page default">
+            <img class="profile-img" src="imagens/andrevoisin.jpg" alt="" />
+            <div class="about-me">
+
+                <h2 class="subtitle">André Voisin e o Desenvolvimento do Sistema de Pastoreio Sustentável</h2>
+                <p>O Sistema de Pastoreio Voisin foi criado pelo agrônomo francês André Voisin, que desenvolveu o método
+                    de
+                    manejo rotacional de pastagens ao observar que a movimentação controlada dos animais entre piquetes
+                    promovia a recuperação do solo e a saúde da vegetação. Em seu livro “Produtividade da Grama” (1957),
+                    Voisin apresentou os princípios desse sistema, que prioriza o descanso adequado do solo entre as
+                    rotações para evitar o desgaste excessivo e maximizar a produção. Esse sistema é até hoje um modelo
+                    de
+                    manejo sustentável, ajudando pecuaristas a otimizar recursos naturais e a praticar uma produção
+                    responsável, alinhada à ODS 12.</p>
+
+                <h2 class="subtitle">Sistema de Pastoreio Voisin: Um Caminho para a Pecuária Sustentável</h2>
+                <p>é uma abordagem inovadora de manejo de pastagens que visa equilibrar a produtividade com a
+                    sustentabilidade ambiental. Essa prática é especialmente relevante para o cumprimento dos objetivos
+                    da
+                    ODS 12, que busca promover padrões de consumo e produção responsáveis.
+                    <br>
+                <h2 class="subtitle">Princípios do Pastoreio Voisin</h2>
+                <p> 1. Intervalo de Descanso Suficiente: Cada piquete recebe um período de descanso adequado para
+                    permitir a
+                    recuperação total das plantas, garantindo pastagens mais saudáveis e duradouras.
+                    <br><br>
+                    2. Alta Intensidade de Ocupação: A rotação é feita de forma a concentrar o rebanho em um piquete por
+                    um
+                    período curto, permitindo um consumo uniforme e evitando o pisoteio excessivo.
+                    <br><br>
+                    3. Baixa Frequência de Carga: A alternância frequente entre os piquetes impede a degradação do solo,
+                    preservando a sua estrutura e nutrientes.
+                    <br><br>
+                    4. Alta Frequência de Rotação: A movimentação regular dos animais ajuda a prevenir problemas de
+                    saúde no
+                    rebanho, além de otimizar a qualidade e a quantidade da pastagem.
+                </p>
+
+                <img src="imagens/banner.jpg" alt="">
+
+                <h2 class="subtitle">Vantagens para o Solo e o Meio Ambiente</h2>
+                <p>O uso de piquetes rotacionados permite que o solo retenha mais matéria orgânica e nutrientes, o que
+                    contribui para a saúde a longo prazo da pastagem. A cobertura vegetal se mantém mais densa e
+                    saudável,
+                    reduzindo a erosão e a necessidade de insumos químicos. Além disso, o descanso adequado dos piquetes
+                    promove a ciclagem de nutrientes e a absorção de carbono pelo solo, o que ajuda a mitigar os
+                    impactos
+                    ambientais da pecuária.</p>
+
                 <br>
-            <h2 class="subtitle">Princípios do Pastoreio Voisin</h2>
-            <p> 1. Intervalo de Descanso Suficiente: Cada piquete recebe um período de descanso adequado para permitir a
-                recuperação total das plantas, garantindo pastagens mais saudáveis e duradouras.
-                <br><br>
-                2. Alta Intensidade de Ocupação: A rotação é feita de forma a concentrar o rebanho em um piquete por um
-                período curto, permitindo um consumo uniforme e evitando o pisoteio excessivo.
-                <br><br>
-                3. Baixa Frequência de Carga: A alternância frequente entre os piquetes impede a degradação do solo,
-                preservando a sua estrutura e nutrientes.
-                <br><br>
-                4. Alta Frequência de Rotação: A movimentação regular dos animais ajuda a prevenir problemas de saúde no
-                rebanho, além de otimizar a qualidade e a quantidade da pastagem.
-            </p>
 
-            <img src="imagens/banner.jpg" alt="">
-
-            <h2 class="subtitle">Vantagens para o Solo e o Meio Ambiente</h2>
-            <p>O uso de piquetes rotacionados permite que o solo retenha mais matéria orgânica e nutrientes, o que
-                contribui para a saúde a longo prazo da pastagem. A cobertura vegetal se mantém mais densa e saudável,
-                reduzindo a erosão e a necessidade de insumos químicos. Além disso, o descanso adequado dos piquetes
-                promove a ciclagem de nutrientes e a absorção de carbono pelo solo, o que ajuda a mitigar os impactos
-                ambientais da pecuária.</p>
-
-            <br>
-
-            <h2 class="subtitle">Benefícios para a Produção e o Bem-Estar Animal</h2>
-            <p>Além dos impactos positivos para o solo e o ambiente, o pastoreio Voisin melhora o bem-estar animal e a
-                qualidade da produção. Os animais têm acesso a pasto fresco e nutritivo, o que reduz o estresse e
-                melhora a saúde geral do rebanho. Com a qualidade superior do pasto e a menor necessidade de
-                suplementos, os produtores também reduzem os custos de alimentação.</p>
+                <h2 class="subtitle">Benefícios para a Produção e o Bem-Estar Animal</h2>
+                <p>Além dos impactos positivos para o solo e o ambiente, o pastoreio Voisin melhora o bem-estar animal e
+                    a
+                    qualidade da produção. Os animais têm acesso a pasto fresco e nutritivo, o que reduz o estresse e
+                    melhora a saúde geral do rebanho. Com a qualidade superior do pasto e a menor necessidade de
+                    suplementos, os produtores também reduzem os custos de alimentação.</p>
 
                 <section data-page-name="about" class="page default">
                     <img class="profile-img" src="imagens/vacaempé.jpg" alt="" />
-<br>
-                <h2 class="subtitle">Alinhamento com a ODS 12: Consumo e Produção Responsáveis</h2>
-                <p>Esse modelo de manejo sustentável contribui diretamente para o cumprimento da ODS 12 ao promover uma
-                    utilização mais eficiente dos recursos naturais. O pastoreio Voisin representa uma prática de baixo
-                    impacto e alta produtividade, incentivando uma pecuária mais consciente e comprometida com o meio
-                    ambiente e a saúde do solo.</p>
-    
-                <br>
-    
-                <h2 class="subtitle">Conclusão</h2>
-                <p>O sistema de pastoreio Voisin, aliado ao uso de piquetes rotacionados, não só aumenta a produtividade da
-                    pecuária, como também protege o solo e promove práticas agrícolas sustentáveis. Para produtores que
-                    buscam aliar eficiência e responsabilidade ambiental, o pastoreio Voisin é uma estratégia fundamental.
-                </p>
-<br>
-<br>
+                    <br>
+                    <h2 class="subtitle">Alinhamento com a ODS 12: Consumo e Produção Responsáveis</h2>
+                    <p>Esse modelo de manejo sustentável contribui diretamente para o cumprimento da ODS 12 ao promover
+                        uma
+                        utilização mais eficiente dos recursos naturais. O pastoreio Voisin representa uma prática de
+                        baixo
+                        impacto e alta produtividade, incentivando uma pecuária mais consciente e comprometida com o
+                        meio
+                        ambiente e a saúde do solo.</p>
 
-            </p>
-        </div>
-    </section>
+                    <br>
+
+                    <h2 class="subtitle">Conclusão</h2>
+                    <p>O sistema de pastoreio Voisin, aliado ao uso de piquetes rotacionados, não só aumenta a
+                        produtividade da
+                        pecuária, como também protege o solo e promove práticas agrícolas sustentáveis. Para produtores
+                        que
+                        buscam aliar eficiência e responsabilidade ambiental, o pastoreio Voisin é uma estratégia
+                        fundamental.
+                    </p>
+                    <br>
+                    <br>
+
+                    </p>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="lang" id="en">
+        <h1 class="title">Sustainable Livestock Management Systems: Implementing Voisin Grazing for Responsible
+            Consumption of Natural Resources</h1>
+        <span class="tagline">Guilherme Dalke Franck</span>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a id="introducao-page" data-page="introducao" href="index.html">Introduction and Justification</a>
+                </li>
+                <li><a href="problema.html" id="problema-page" data-page="problema">Problem and Hypotheses</a></li>
+                <li><a href="objetivo.html" id="objetivo-page" data-page="objetivo">Main Objective</a></li>
+                <li><a href="pq.html" id="pq-page" data-page="pq">About the System</a></li>
+            </ul>
+        </nav>
+        <section data-page-name="about" class="page default">
+            <img class="profile-img" src="imagens/andrevoisin.jpg" alt="" />
+            <div class="about-me">
+
+                <h2 class="subtitle">André Voisin and the Development of the Sustainable Grazing System</h2>
+                <p>The Voisin Grazing System was created by French agronomist André Voisin, who developed the rotational
+                    grazing management method after observing that controlled movement of animals between paddocks
+                    promoted soil recovery and vegetation health. In his book 'Grass Productivity' (1957), Voisin
+                    presented the principles of this system, which emphasizes adequate soil rest between rotations to
+                    prevent excessive degradation and maximize production. This system remains a model of sustainable
+                    management, helping livestock farmers optimize natural resources and engage in responsible
+                    production, aligned with SDG 12</p>
+
+                <h2 class="subtitle">Voisin Grazing System: A Pathway to Sustainable Livestock Farming</h2>
+                <p>It is an innovative approach to pasture management aimed at balancing productivity with environmental
+                    sustainability. This practice is especially relevant to achieving the goals of SDG 12, which seeks
+                    to promote responsible consumption and production patterns.</p>
+                <br>
+                <h2 class="subtitle">Principles of Voisin Grazing</h2>
+                <p> 1. Sufficient Rest Interval: Each paddock is given an adequate rest period to allow full recovery of
+                    plants, ensuring healthier and longer-lasting pastures.
+                    <br><br>
+                    2. High Stocking Density: Rotation is designed to concentrate the herd in one paddock for a short
+                    period, allowing uniform grazing and preventing excessive trampling.
+                    <br><br>
+                    3. Low Grazing Frequency: Frequent alternation between paddocks prevents soil degradation,
+                    preserving its structure and nutrients.
+                    <br><br>
+                    4. High Rotation Frequency: Regular animal movement helps prevent health issues in the herd and
+                    optimizes pasture quality and quantity
+                </p>
+
+                <img src="imagens/banner.jpg" alt="">
+
+                <h2 class="subtitle">Benefits for Soil and the Environment</h2>
+                <p>The use of rotational paddocks allows the soil to retain more organic matter and nutrients,
+                    contributing to the long-term health of the pasture. Vegetation cover remains denser and healthier,
+                    reducing erosion and the need for chemical inputs. Additionally, adequate rest of paddocks promotes
+                    nutrient cycling and carbon absorption by the soil, helping mitigate the environmental impacts of
+                    livestock farming.</p>
+
+                <br>
+
+                <h2 class="subtitle">Benefits for Production and Animal Welfare</h2>
+                <p>In addition to the positive impacts on soil and the environment, Voisin grazing improves animal
+                    welfare and production quality. Animals have access to fresh, nutritious pasture, reducing stress
+                    and improving overall herd health. With superior pasture quality and reduced need for supplements,
+                    producers also lower feed costs.</p>
+
+                <section data-page-name="about" class="page default">
+                    <img class="profile-img" src="imagens/vacaempé.jpg" alt="" />
+                    <br>
+                    <h2 class="subtitle">Alignment with SDG 12: Responsible Consumption and Production</h2>
+                    <p>This sustainable management model directly contributes to achieving SDG 12 by promoting a more
+                        efficient use of natural resources. Voisin grazing represents a low-impact, high-productivity
+                        practice, encouraging more conscious livestock farming committed to environmental and soil
+                        health.</p>
+
+                    <br>
+
+                    <h2 class="subtitle">Conclusion</h2>
+                    <p>The Voisin grazing system, combined with the use of rotational paddocks, not only increases
+                        livestock productivity but also protects the soil and promotes sustainable farming practices.
+                        For producers seeking to combine efficiency and environmental responsibility, Voisin grazing is
+                        a fundamental strategy.
+                    </p>
+                    <br>
+                    <br>
+
+                    </p>
+            </div>
+        </section>
+    </div>
+
+
+
+    </div>
     <script src="java.js"></script>
 </body>
+
 </html>
