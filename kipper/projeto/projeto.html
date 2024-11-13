@@ -1,44 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto de PI</title>
     <link rel="icon" href=".ico">
+    <style>
+        .lang {
+            display: none;
+        }
+    </style>
 </head>
-<header>
-    <nav>
-        <div class="tagline">
-        <ul>
-                  <li><a href="#introducao">Introdução e Justificativa</a></li>
-                  <li><a href="pag2.html"> Problema e Hipóteses</a></li>
-                  <li><a href="pag3.html">Objetivo Principal e Solução</a></li>
-        </ul>
-        </div>
-        <div class="loader">
-            <h1>ODS 6</h1>
-          </div>
-</header>
+
 <body>
-    <div class="imagem">
-        <img src="ods.png">
+    <!-- Botões para alternar idioma -->
+    <button onclick="setLanguage('pt')">Português</button>
+    <button onclick="setLanguage('en')">English</button>
+
+    <div class="lang" id="pt">
+
+        <header>
+            <nav>
+                <div class="tagline">
+                    <ul>
+                        <li><a href="#introducao">Introdução e Justificativa</a></li>
+                        <li><a href="pag2.html"> Problema e Hipóteses</a></li>
+                        <li><a href="pag3.html">Objetivo Principal e Solução</a></li>
+                    </ul>
+                </div>
+                <div class="loader">
+                    <h1>ODS 6</h1>
+                </div>
+            </nav>
+        </header>
+
+        <div class="imagem">
+            <img src="ods.png">
         </div>
-    <article>
-        <section>
+        <article>
+            <section>
                 <div class="texto">
                     <h2 id="introducao">Introdução</h2>
                 </div>
-        </section>
-        <section>
+            </section>
+            <section>
                 <div class="texto">
                     <h2>Justificativa</h2>
                 </div>
-        </section>
-    </article>
+            </section>
+        </article>
 
-            <p>A água é um recurso natural que está na base da sobrevivência humana e da sustentabilidade do desenvolvimento. A água é usada para agricultura, indústria, geração de energia e, mais importante, para a saúde e bem-estar humanos. Apesar disso, bilhões de pessoas ainda não têm acesso a água potável segura e instalações sanitárias adequadas.<br> <br>Nesse contexto, a comunidade global criou o Objetivo de Desenvolvimento Sustentável 6 (ODS 6), cuja obtenção se dará por meio do acesso universal e justa à água potável segura e acessível para todos até 2030, uma meta que mais uma vez ressalta a natureza finita e a extrema importância da água para todos os seres vivos — e a mesma medida na melhoria da qualidade e disponibilidade da água.</p>
+        <p>A água é um recurso natural que está na base da sobrevivência humana e da sustentabilidade do
+            desenvolvimento. A
+            água é usada para agricultura, indústria, geração de energia e, mais importante, para a saúde e bem-estar
+            humanos. Apesar disso, bilhões de pessoas ainda não têm acesso a água potável segura e instalações
+            sanitárias
+            adequadas.<br> <br>Nesse contexto, a comunidade global criou o Objetivo de Desenvolvimento Sustentável 6
+            (ODS
+            6), cuja obtenção se dará por meio do acesso universal e justa à água potável segura e acessível para todos
+            até
+            2030, uma meta que mais uma vez ressalta a natureza finita e a extrema importância da água para todos os
+            seres
+            vivos — e a mesma medida na melhoria da qualidade e disponibilidade da água.</p>
 
-            <p1>A escolha do ODS 6 justifica-se pela falta de acesso à agua potavel e a serviços de saneamento básico adequados. Essa situação tem graves conseguências para a saúde, a economia e o meio ambiente. A falta de água potável e de saneamento básico contribui para a disseminação de doenças, como diarreia, cólera e febre tifoide, principalmente entra crianças. Além disso, a falta de acesso a esses serviços básicos impacta negativamente o desenvolvimento econômico e a qualidade de vida das pessoas.</p1>
+        <p1>A escolha do ODS 6 justifica-se pela falta de acesso à agua potavel e a serviços de saneamento básico
+            adequados.
+            Essa situação tem graves conseguências para a saúde, a economia e o meio ambiente. A falta de água potável e
+            de
+            saneamento básico contribui para a disseminação de doenças, como diarreia, cólera e febre tifoide,
+            principalmente entra crianças. Além disso, a falta de acesso a esses serviços básicos impacta negativamente
+            o
+            desenvolvimento econômico e a qualidade de vida das pessoas.</p1>
+    </div>
+
+
+    <!-- ING-->
+
+    <div class="lang" id="en">
+        <header>
+            <nav>
+                <div class="tagline">
+                    <ul>
+                        <li><a href="#introduction">Introduction and Justification</a></li>
+                        <li><a href="pag2.html">Problem and Hypotheses</a></li>
+                        <li><a href="pag3.html">Main Objective and Solution</a></li>
+                    </ul>
+                </div>
+                <div class="loader">
+                    <h1>SDG 6</h1>
+                </div>
+            </nav>
+        </header>
+    
+    
+        <article>
+            <section>
+                <div class="text">
+                    <h2 id="introduction">Introduction</h2>
+                </div>
+            </section>
+            <section>
+                <div class="text">
+                    <h2>Justification</h2>
+                </div>
+            </section>
+        </article>
+    
+        <p>Water is a natural resource that forms the foundation of human survival and sustainable development. Water is used for agriculture, industry, energy generation, and, most importantly, for human health and well-being. Despite this, billions of people still lack access to safe drinking water and adequate sanitation facilities.<br><br>In this context, the global community established Sustainable Development Goal 6 (SDG 6), which aims to achieve universal and equitable access to safe and affordable drinking water for all by 2030. This goal highlights the finite nature and extreme importance of water for all living beings, as well as the need to improve water quality and availability.</p>
+    
+        <p1>The choice of SDG 6 is justified by the lack of access to safe drinking water and adequate sanitation services. This situation has severe consequences for health, the economy, and the environment. The absence of safe drinking water and basic sanitation contributes to the spread of diseases such as diarrhea, cholera, and typhoid fever, especially among children. Furthermore, the lack of access to these basic services negatively impacts economic development and the quality of life of people.</p1>
+    </div>    
+    </div>
+    <script>// Função para verificar o idioma armazenado no localStorage
+        function getSavedLanguage() {
+            return localStorage.getItem('preferredLang');
+        }
+
+        // Função para definir e salvar o idioma
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            showLanguage(lang);
+        }
+
+        // Função para mostrar o conteúdo do idioma selecionado
+        function showLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+            document.getElementById(lang).style.display = 'block';
+        }
+
+        // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('pt') ? 'pt' : 'en';
+        }
+
+        // Configuração inicial ao carregar a página
+        const lang = getSavedLanguage() || detectBrowserLanguage();
+        setLanguage(lang);
+    </script>
+
 </body>
+
 </html>
