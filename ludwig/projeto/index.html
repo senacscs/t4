@@ -1,75 +1,195 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ODS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A voz do Oceano </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+
 </head>
+
 <body>
+  <button onclick="setLanguage('pt')">Português</button>
+  <button onclick="setLanguage('en')">English</button>
+
+  <div class="lang" id="pt">
+
     <header>
-        <h1>Projeto Integrador</h1>
-        <nav>
-            <ul>
-                <li><a href="#ods">ODS</a></li>
-                <li><a href="#referencias">Referências</a></li>
-                <li><a href="#problema">Problema</a></li>
-                <li><a href="#solucoes">Soluções Existentes</a></li>
-                <li><a href="#objetivo">Objetivo do Projeto</a></li>
-            </ul>
+      <div class="fake-header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="#int" class="nav-link">Introdução e Justificativa</a></li>
+            <li class="nav-item"><a href="#problema" class="nav-link">Problema</a></li>
+            <li class="nav-item"><a href="#objetivo" class="nav-link">Objetivo</a></li>
+            <li class="nav-item"><a href="#hipo" class="nav-link">Hipóteses</a></li>
+          </ul>
         </nav>
+      </div>
+
+      <div class="sec">
+        <h1>A voz do Oceano </h1>
+        <i>
+          <p>Gabriel Ludwig</p>
+        </i>
+      </div>
     </header>
-    
-    <main>
-        <section class="fle">
-            <article class="carta">
-                <h2 id="sustentavel">1.Objetivo do desenvolvimento sustentável</h2>
-                <p></p>
-            </section>
-            <img src="imagemods.jpg" alt="">
-            <section>
-                <h2 id="referencias">2.Referências</h2>
-                <p><a href="https://brasilescola.uol.com.br/geografia/poluicao-marinha.html">Poluição Marinha</a></p>
-                <p><a href="https://mundoeducacao.uol.com.br/geografia/poluicao-marinha.htm">Resumo sobre a poluição marinha</a></p>
-               
-            </section>
-            <section>
-                <h2 id="problema">3.Problema de pesquisa</h2>
-                <p>O que podemos fazer para reduzir a poluição marinha nos próximos anos?</p>
-            </section>
-            <img src="fototartaruga.jpg" alt="">
-            <section>
-                <h2 id="hipotese">4.Hipóteses</h2>
-                <ul>
-                    <li>Hipótese: Implementar políticas de gestão de resíduos mais eficazes e promover a conscientização pública sobre os impactos da poluição marinha levará a uma significativa redução na quantidade de resíduos plásticos e outros poluentes nos oceanos. 
-                        Esta hipótese pressupõe que a implementação de políticas rigorosas de gestão de resíduos, juntamente com esforços educacionais e de sensibilização, pode ser uma abordagem eficaz para mitigar a poluição marinha. A pesquisa poderia então explorar como essas políticas e programas de conscientização podem ser desenvolvidos, implementados e avaliados em diferentes contextos regionais e globais.
-                        </li>
-                    
-                </ul>
-            </section>
-            <section>
-                <h2 id="principal">5.Objetivo principal</h2>
-                <p>Acredito que com este aplicativo as pessoas irão pensar duas vezes antes de poluir, pois é um problema de grande importância que pode prejudicar o futuro dos nossos filhos e netos.</p>
-            </article>
-       
-    </main>
-</section>
-    <footer>
-        <div class="container">
-            <div class="contato">
-                <h3>Rede Social: @ludwig.gabriel</h3>
-                <p>E-mail: gabrielludwig0974@gmail.com </p>
-                <p>Telefone:51 999424726 </p>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Ensino Médio Senac.</p>
-                <p>Desenvolvido por 
-                    Gabriel Ludwig
-                </p>
-            </div>
-        </div>
-    </footer>
+    <div class="infor" id="int">
+      <div class="int">
+        <h1>Introdução<br>e Justificativa</h1>
+        <p>O Objetivo de Desenvolvimento Sustentável (ODS) 14, "Vida na Água", visa a proteção dos oceanos e recursos
+          marinhos, essenciais para o equilíbrio ecológico e a vida no planeta. No entanto, os oceanos enfrentam sérias
+          ameaças como poluição, sobrepesca e acidificação devido ao aumento do CO₂, que afetam ecossistemas marinhos, a
+          biodiversidade e, consequentemente, a qualidade de vida humana. A conservação dos mares é crucial para a
+          regulação climática, a produção de oxigênio e o suporte à vida marinha, além de impactar diretamente a
+          segurança alimentar, a economia global e as comunidades que dependem dos oceanos. A preservação dos
+          ecossistemas marinhos exige a colaboração de governos, empresas e cidadãos para garantir um futuro
+          sustentável.
+        </p>
+      </div>
+      <div class="esq">
+        <img class="image1" src="">
+        <img class="image2" src="">
+      </div>
+    </div>
+    <div class="infor2" id="problema">
+      <div class="prob">
+        <h1>Problema</h1>
+        <p>O que podemos fazer para reduzir a poluição marinha nos próximos anos?</p>
+      </div>
+    </div>
+    <div class="infor" id="objetivo">
+      <div class="obj">
+        <h1>Objetivo Principal</h1>
+        <p>Criar um aplicativo conscientizando as pessoas e lembra-las que não se deve descartar lixos nos oceanos,
+          visando o bem do meio ambiente e ate mesmo dos animais marinhos. Este aplicativo terá avisos todos os dias, e
+          também, mostrará como prevenir esta poluição, como por exemplo evitar o uso de plásticos em excesso.</p>
+      </div>
+      <div class="esq">
+        <img class="image3" src="">
+      </div>
+    </div>
+    <div class="infor2" id="hipo">
+      <div class="hipo">
+        <h1>Hipóteses</h1>
+        <p>Hipótese: Implementar políticas de gestão de resíduos mais eficazes e promover a conscientização pública
+          sobre os impactos da poluição marinha levará a uma significativa redução na quantidade de resíduos plásticos e
+          outros poluentes nos oceanos.
+          Esta hipótese pressupõe que a implementação de políticas rigorosas de gestão de resíduos, juntamente com
+          esforços educacionais e de sensibilização, pode ser uma abordagem eficaz para mitigar a poluição marinha. A
+          pesquisa poderia então explorar como essas políticas e programas de conscientização podem ser desenvolvidos,
+          implementados e avaliados em diferentes contextos regionais e globais.
+          Acredito que com este aplicativo as pessoas irão pensar duas vezes antes de poluir, pois é um problema de
+          grande importância que pode prejudicar o futuro dos nossos filhos e netos.
+        </p>
+      </div>
+      <div class="slides">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGUYwZV1QY/vAk32f4KJzsSNix4Z8LIjg/view?embed"
+          allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
+      <a target="_blank" href="Projeto Pi.pdf">
+        <button class="pdf">
+          Baixe Meu Projeto em PDF
+        </button>
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  <!--COMEÇO DO INGLES-->
+
+  <div class="lang" id="en">
+
+    <header>
+      <div class="fake-header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="#int" class="nav-link">Introduction and Justification</a></li>
+            <li class="nav-item"><a href="#problema" class="nav-link">Problem</a></li>
+            <li class="nav-item"><a href="#objetivo" class="nav-link">Objective</a></li>
+            <li class="nav-item"><a href="#hipo" class="nav-link">Hypotheses</a></li>
+
+          </ul>
+        </nav>
+      </div>
+      <div class="sec">
+        <h1>The Ocean's Voice</h1>
+        <i>
+          <p>Gabriel Ludwig</p>
+        </i>
+      </div>
+    </header>
+    <div class="infor" id="int">
+      <div class="int">
+        <h1>Introduction and Justification</h1>
+        <p>Sustainable Development Goal (SDG) 14, "Life Below Water", aims to conserve oceans and marine resources,
+          essential for ecological balance and life on the planet. However, oceans face serious threats such as
+          pollution,
+          overfishing, and acidification due to increased CO2, which affect marine ecosystems, biodiversity, and
+          consequently, human quality of life. Conserving the seas is crucial for climate regulation, oxygen production,
+          and supporting marine life, in addition to directly impacting food security, the global economy, and
+          communities
+          that depend on the oceans. The preservation of marine ecosystems requires the collaboration of governments,
+          businesses, and citizens to ensure a sustainable future.</p>
+      </div>
+      <div class="esq">
+        <img class="image1" src="">
+        <img class="image2" src="">
+      </div>
+    </div>
+    <div class="infor2" id="problema">
+      <div class="prob">
+        <h1>Problem</h1>
+        <p>What can we do to reduce marine pollution in the coming years?</p>
+      </div>
+    </div>
+    <div class="infor" id="objetivo">
+      <div class="obj">
+        <h1>Main Objective</h1>
+        <p>To create an application that raises awareness among people and reminds them not to discard waste in the
+          oceans, aiming for the benefit of the environment and even marine animals. This application will have daily
+          notifications and will also show how to prevent this pollution, such as avoiding excessive use of plastics.
+        </p>
+      </div>
+      <div class="esq">
+        <img class="image3" src="">
+      </div>
+    </div>
+    <div class="infor2" id="hipo">
+      <div class="hipo">
+        <h1>Hypotheses</h1>
+        <p>Hypothesis: Implementing more effective waste management policies and promoting public awareness of the
+          impacts
+          of marine pollution will lead to a significant reduction in the amount of plastic waste and other pollutants
+          in
+          the oceans. This hypothesis assumes that the implementation of strict waste management policies, along with
+          educational and awareness efforts, can be an effective approach to mitigating marine pollution. The research
+          could then explore how these policies and awareness programs can be developed, implemented, and evaluated in
+          different regional and global contexts.
+          I believe that with this application, people will think twice before polluting, as it is a problem of great
+          importance that can harm the future of our children and grandchildren.</p>
+      </div>
+      <div class="slides">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGUYwZV1QY/vAk32f4KJzsSNix4Z8LIjg/view?embed"
+          allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
+      <a target="_blank" href="Projeto Pi.pdf">
+        <button class="pdf">
+          Baixe Meu Projeto em PDF
+        </button>
+      </a>
+    </div>
+  </div>
+  </div>
 </body>
- 
+<footer>
+  <script src="script.js"></script>
+</footer>
+
+</div>
+
 </html>
- 

@@ -1,37 +1,285 @@
-
-* {
-    margin: 0;
+*,
+*::before,
+*::after {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}   
+}
 
+.lang {
+    display: none;
+}
+
+html,
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(103, 156, 255);
+    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #96b2ff;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-section{
-    color: rgb(3, 14, 88);
-    margin: 20px;
-    border: solid 2px;
-    padding: 10px;
-    border-radius: 10px;
-    font-style:normal;
-    font-size: 20px;
-}
-h2{
-    color: rgb(8, 19, 103);
-}
-li,p{
     color: white;
+    background-color: rgb(15, 212, 247);
+    height: 108vh;
+}
+
+header .sec h1 {
+    text-align: center;
+    font-size: 6rem;
+    padding-top: 15%;
+    text-transform: uppercase;
+}
+
+header .sec p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 1%;
+}
+
+.fake-header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1%;
+    background-color: rgb(15, 212, 247);
+
+    z-index: +1;
+    height: 8%;
+    width: 100%;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 2em;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    position: relative;
+    color: black;
+}
+
+.nav-link::before {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 150ms;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.infor {
+    height: 108vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.int h1 {
+    font-size: 3.2rem;
+    letter-spacing: 0.15rem;
+}
+
+.int p {
+    padding-top: 2%;
+    width: 45vw;
+    font-size: 1.15rem;
+    text-align: justify;
+    letter-spacing: 0.09rem;
+}
+
+.esq {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image1 {
+    position: relative;
+    top: -17vh;
+    right: 0;
+    max-height: 210px;
+    border-radius: 8px;
+}
+
+.image2 {
+    position: absolute;
+    top: 22vh;
+    right: 0;
+    max-height: 210px;
+    border-radius: 8px;
+}
+
+.infor2 {
+    background-color: rgb(15, 212, 247);
+    color: white;
+    height: 108vh;
+    align-content: center;
+}
+
+.prob h1 {
+    font-size: 4rem;
+    letter-spacing: 0.15rem;
+}
+
+.prob p {
+    padding-top: 2%;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    width: 60%;
+    text-align: left;
+}
+
+.prob {
+    margin-left: 13%;
+}
+
+.obj {
+    margin-left: 13%;
+}
+
+.obj h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.15rem;
+}
+
+.obj p {
+    padding-top: 2%;
+    width: 80%;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: 0.09rem;
+}
+
+.image3 {
+    width: 450px;
+    margin-left: -16%;
+}
+
+.hipo {
+    margin-left: 13%;
+}
+
+.hipo h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.15rem;
+}
+
+.hipo p {
+    padding-top: 2%;
+    width: 86%;
+    font-size: 1.8rem;
+    text-align: justify;
+    letter-spacing: 0.09rem;
+}
+
+.res {
+    margin-left: 13%;
+}
+
+.res h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.15rem;
+}
+
+.res p {
+    padding-top: 2%;
+    width: 80%;
+    font-size: 1.45rem;
+    text-align: left;
+    letter-spacing: 0.06rem;
+}
+
+.esq2 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image4 {
+    margin-left: -40%;
+}
+
+.infor3 {
+    background-color: rgb(15, 212, 247);
+    color: white;
+    height: 208vh;
+    align-content: center;
+}
+
+.arq {
+    width: 100%;
+    align-items: center;
+}
+
+iframe {
+    width: 77%;
+    overflow: hidden;
+    border: none;
+    height: 93vh;
+    margin-left: 13%;
+}
+
+#en {
+    position: absolute;
+    bottom: -2700px;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.2500%;
+    padding-bottom: 0;
+    margin-top: 1.6em;
+    margin-bottom: 0.9em;
+    overflow: hidden;
+    border-radius: 15px;
+    will-change: transform;
+    margin-left: 20vh;
+    margin-top: 50vh;
+    max-width: 90%;
+}
+
+iframe {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    margin-left: 10vh;
+}
+
+.pdf {
+    margin-top: 2vh;
+    margin-left: 90vh;
+    height: 10vh;
+    width: 25vh;
+    background-color:  rgb(15, 212, 247);
+    border-style: none;
+    box-shadow: 0 0 20px rgb(15, 212, 247);
+    cursor: pointer;
+    margin-bottom: 5vh;
 }
