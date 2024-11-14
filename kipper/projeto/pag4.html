@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de PI</title>
+    <link rel="icon" href=".ico">
+    <style>
+        .lang {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botões para alternar idioma -->
+    <button onclick="setLanguage('pt')">Português</button>
+    <button onclick="setLanguage('en')">English</button>
+
+    <div class="lang" id="pt">
+
+        <header>
+            <nav>
+                <div class="tagline">
+                    <ul>
+                        <li><a href="projeto.html">Introdução e Justificativa</a></li>
+                        <li><a href="pag2.html"> Problema e Hipóteses</a></li>
+                        <li><a href="pag3.html">Objetivo Principal e Solução</a></li>
+                        <li><a href="#referencias">Referências</a></li>
+                    </ul>
+                </div>
+                <div class="loader">
+                    <h1>ODS 6</h1>
+                </div>
+            </nav>
+        </header>
+        <article>
+            <section>
+                <div class="texto">
+                    <h2 id="referencias">Referências</h2>
+                </div>
+            </section>
+            <section>
+                <div class="texto">
+                    <h2>PDF</h2>
+                </div>
+            </section>
+        </article>
+
+        <p><em><a href="https://brasil.un.org/pt-br/sdgs/6">As Nações Unidas no Brasil</a><br><a href="https://www.gov.br/ana/pt-br/assuntos/saneamento-basico/saneamento-basico-no-brasil/panorama-do-saneamento-no-brasil-1#:~:text=O%20saneamento%20básico%20compreende%20os,manejo%20da%20água%20das%20chuvas.">Panorama do Saneamento no Brasil</a><br><a href="https://brasil.un.org/pt-br/sdgs/6">Goal 6 | Department of Economic and Social Affairs</a><br><a href="https://brasilescola.uol.com.br/o-que-e/biologia/o-que-e-saneamento-basico.htm">Brasil Escola</a></em></p>
+        
+
+        <p1><em><a href="How to.pdf">PDF dos slides</a></em></p1>
+    </div>
+
+
+    <!-- ING-->
+
+    <div class="lang" id="en">
+        <header>
+            <nav>
+                <div class="tagline">
+                    <ul>
+                        <li><a href="projeto.html">Introduction and Justification</a></li>
+                        <li><a href="pag2.html">Problem and Hypotheses</a></li>
+                        <li><a href="pag3.html">Main Objective and Solution</a></li>
+                        <li><a href="#references">References</a></li>
+                    </ul>
+                </div>
+                <div class="loader">
+                    <h1>SDG 6</h1>
+                </div>
+            </nav>
+        </header>
+    
+    
+        <article>
+            <section>
+                <div class="text">
+                    <h2 id="references">References</h2>
+                </div>
+            </section>
+            <section>
+                <div class="text">
+                    <h2>PDF</h2>
+                </div>
+            </section>
+        </article>
+        
+    
+        <p><em><a href="https://brasil.un.org/pt-br/sdgs/6">The United Nations in Brazil</a><br><a href="https://www.gov.br/ana/pt-br/assuntos/saneamento-basico/saneamento-basico-no-brasil/panorama-do-saneamento-no-brasil-1#:~:text=O%20saneamento%20básico%20compreende%20os,manejo%20da%20água%20das%20chuvas.">
+            Panorama of Sanitation in Brazil</a><br><a href="https://brasil.un.org/pt-br/sdgs/6">Goal 6 | Department of Economic and Social Affairs</a><br><a href="https://brasilescola.uol.com.br/o-que-e/biologia/o-que-e-saneamento-basico.htm">School Brazil</a></em></p>
+
+        <p1><em></em></p1>
+
+    </div>    
+    </div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGWW0lShTw&#x2F;2IY2WkTO4DlSDRFtHrByxA&#x2F;view?utm_content=DAGWW0lShTw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">o</a>
+    <script>// Função para verificar o idioma armazenado no localStorage
+        function getSavedLanguage() {
+            return localStorage.getItem('preferredLang');
+        }
+
+        // Função para definir e salvar o idioma
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            showLanguage(lang);
+        }
+
+        // Função para mostrar o conteúdo do idioma selecionado
+        function showLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+            document.getElementById(lang).style.display = 'block';
+        }
+
+        // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('pt') ? 'pt' : 'en';
+        }
+
+        // Configuração inicial ao carregar a página
+        const lang = getSavedLanguage() || detectBrowserLanguage();
+        setLanguage(lang);
+    </script>
+
+</body>
+
+</html>
