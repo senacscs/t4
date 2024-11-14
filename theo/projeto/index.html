@@ -1,23 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <link href="style.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto</title>
+  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto</title>
+  <style>
+    .lang {
+      display: none;
+    }
+  </style>
 </head>
-<body>       
-    <img src="ODS3_Portal.png">
-    <div class="contorno">
-       <h1>Objetivo Principal</h1>
-       <p>Criar um site em formato de blog onde as pessoas podem falar como a musica ajuda na vida delas/se a musica ajuda na vida delas.</p>
-</div>
-    <div class="contorno">
-        <h1>Hipótese</h1>
-        <p>Minha hipótese é que o site vai ajudar as pessoas a falarem se elas acham que a música ajuda/ajudou elas em relação a saúde mental. </p>
+
+<body>
+
+  <div class="lang" id="pt">
+
+    <header>
+      <div class="fake-header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="#int" class="nav-link">Introdução</a></li>
+            <li class="nav-item"><a href="#objetivo" class="nav-link">Objetivo</a></li>
+            <li class="nav-item"><a href="#hipo" class="nav-link">Hipóteses</a></li>
+            <li class="nav-item">
+              <button onclick="setLanguage('pt')">Português</button>
+              <button onclick="setLanguage('en')">English</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sec">
+        <h1>Como a música pode ajudar na nossa saúde mental</h1>
+      </div>
+    </header>
+    <div class="tudo">
+      <div class="intro" id="int">
+        <h2>Introdução</h2>
+        <p>A ONU introduziu, em 2015, os Objetivos de Desenvolvimento Sustentável (ODS), com a meta de promover o
+          desenvolvimento sustentável em todo o planeta até 2030.
+          A ODS 3 foi estabelecido para garantir vidas saudáveis e promover
+          o bem-estar para todos, em todas as idades. A música tem um papel crucial na melhoria da saúde mental,
+          ativando
+          áreas cerebrais associadas ao prazer e à
+          recompensa. Estudos mostram que a música reduz o estresse, melhora o humor e diminui sintomas de depressão e
+          ansiedade. Foi descoberto em um estudo que a música pode reduzir os níveis de cortisol (o hormônio do
+          estresse)
+          em nossos corpos. Outro estudo mostrou que ouvir música por apenas 15 minutos pode aumentar significativamente
+          a
+          sensação de felicidade e bem-estar. Estes resultados sugerem que a música tem o potencial não só de melhorar o
+          nosso humor, mas também de promover a saúde mental geral.</p>
+      </div>
+      <div class="objprin" id="objetivo">
+        <h2>Objetivo Principal</h2>
+        <p>Criar um site estilo blog onde as pessoas possam partilhar as suas experiências pessoais sobre como a música
+          ajudou as suas vidas. Este espaço permitirá aos indivíduos relatar o impacto positivo da música na sua saúde,
+          contribuindo para uma compreensão mais ampla do papel da música na saúde mental.</p>
+      </div>
+      <div class="hip" id="hipo">
+        <h2>Hipóteses</h2>
+        <p>As hipóteses que norteiam o projeto incluem que a música pode reduzir os níveis de estresse e ansiedade,
+          melhorar
+          o humor e ajudar a regular as emoções. Ao proporcionar um blog para estas discussões, esperamos aumentar a
+          consciencialização sobre os benefícios da musicoterapia e encorajar práticas que possam melhorar a saúde
+          mental
+          de todos.</p>
+      </div>
+      <h2>Arquivos</h2>
+    <div class="slide" style=" width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+      <iframe loading="lazy"
+        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+        src="https://www.canva.com/design/DAGWQ__j7X8/eD117cmXd33SLnZS40Nyug/view?embed"
+        allowfullscreen="allowfullscreen" allow="fullscreen">
+      </iframe>
     </div>
-    <footer>
-        Theo Carpes Erdmann
-    </footer>
-    </body>
+
+  </div>
+
+
+  <div class="lang" id="en">
+
+    <header>
+      <div class="fake-header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="#int" class="nav-link">Introduction</a></li>
+            <li class="nav-item"><a href="#objetivo" class="nav-link">Objective</a></li>
+            <li class="nav-item"><a href="#hipo" class="nav-link">Hypotheses</a></li>
+            <li class="nav-item">
+              <button onclick="setLanguage('pt')">Portuguese</button>
+              <button onclick="setLanguage('en')">English</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sec">
+        <h1>How music can help our mental health</h1>
+      </div>
+    </header>
+    <div class="tudo">
+      <div class="intro" id="int">
+        <h2>Introduction</h2>
+        <p>In 2015, the UN introduced the Sustainable Development Goals (SDGs), aiming to promote sustainable
+          development
+          across the planet by 2030.
+          SDG 3 was established to ensure healthy lives and promote well-being for all, at all ages. Music plays a
+          crucial
+          role in improving mental health, activating brain areas associated with pleasure and reward. Studies show that
+          music reduces stress, improves mood, and decreases symptoms of depression and anxiety. One study found that
+          music can lower cortisol levels (the stress hormone) in our bodies. Another study showed that listening to
+          music
+          for just 15 minutes can significantly increase the feeling of happiness and well-being. These findings suggest
+          that music has the potential not only to improve our mood but also to promote overall mental health.</p>
+      </div>
+      <div class="objprin" id="objetivo">
+        <h2>Main Objective</h2>
+        <p>To create a blog-style website where people can share their personal experiences of how music helped their
+          lives. This space will allow individuals to report the positive impact of music on their health, contributing
+          to
+          a broader understanding of the role of music in mental health.</p>
+      </div>
+      <div class="hip" id="hipo">
+        <h2>Hypotheses</h2>
+        <p>The guiding hypotheses of the project include that music can reduce stress and anxiety levels, improve mood,
+          and help regulate emotions. By providing a blog for these discussions, we hope to raise awareness of the
+          benefits of music therapy and encourage practices that can improve everyone's mental health.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+<script>
+  // Função para verificar o idioma armazenado no localStorage
+  function getSavedLanguage() {
+    return localStorage.getItem('preferredLang');
+  }
+
+  // Função para definir e salvar o idioma
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLang', lang);
+    showLanguage(lang);
+  }
+
+  // Função para mostrar o conteúdo do idioma selecionado
+  function showLanguage(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+    document.getElementById(lang).style.display = 'block';
+  }
+
+  // Detectar o idioma do navegador e redirecionar se não houver preferência salva
+  function detectBrowserLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    return browserLang.startsWith('pt') ? 'pt' : 'en';
+  }
+
+  // Configuração inicial ao carregar a página
+  const lang = getSavedLanguage() || detectBrowserLanguage();
+  setLanguage(lang);
+</script>
+
 </html>
