@@ -1,54 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projetointegrador</title>
     <link rel="stylesheet" href="style.css">
+    <title>Financial Education App</title>
 </head>
-
-<body>
-    <header>
-        <h1>Meu Projeto</h1>
-    </header>
-    <h2>Eduardo de Moraes Hillebrand</h2>
-    <img src="ods4.jpg" alt="" width="200px">
-    <section>
-        <h3>Problema de pesquisa</h3>
-        <p>Como podemos capacitar jovens a ter uma gestão financeira responsável, promovendo educação, desenvolvimento
-            pessoal e socioeconômico.</p>
-    </section>
-    <section>
-        <h3>Objetivo principal</h3>
-        <p>Desenvolver um aplicativo interativo e de fácil utilização que forneça educação financeira para jovens,
-            capacitando eles para tomar decisões informadas sobre finanças pessoais, investimentos e empreendedorismo.
-        </p>
-    </section>
-    <section>
-        <h3>Hipóteses</h3>
-        <p>A educação financeira acessível e interativa pode aumentar o conhecimento e as habilidades dos jovens em
-            relação às finanças pessoais, levando a uma melhor gestão de recursos financeiros e a uma tomada de decisão
-            mais consciente.
-
-            A disponibilidade de cursos educativos online e ferramentas de planejamento financeiro dentro do aplicativo
-            pode promover a aprendizagem ao longo da vida e a autonomia financeira dos jovens, alinhando-se assim com os
-            princípios de desenvolvimento sustentável. </p>
-    </section>
-    <div class="container">
-        <div class="item"> Jovens visionários economizam hoje para empreender amanhã e construir um futuro próspero
-        </div>
-        <div class="item"> Economizar é o primeiro passo para jovens empreendedores transformarem sonhos em realidade
-        </div>
-        <div class="item"> Investir em conhecimento e economizar é o caminho dos jovens para um futuro financeiramente
-            seguro e independente </div>
+<body data-barba="wrapper">
+   
+    <!-- Página Inicial -->
+    <div id="landingPage">
+        <main data-barba="container" data-barba-namespace="home">
+            <h1>Olá,</h1>
+            <h1>Somos a <a href="#">PouPay</a>,</h1>
+            <h1>Seu App de Educação Financeira.</h1>
+ 
+            <h4>Investimentos / Dinheiro / Poupança / Estratégia / Jovem.</h4>
+ 
+            <button class="linguagem" id="ingles" onclick="showEnglish()">Webpage em inglês</button>
+            <button class="linguagem" id="portugues" onclick="showPortuguese()">Webpage em português</button>
+        </main>
+        <hr>
     </div>
-    <br> <br><br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HzRK6wTSHHU?si=fslBVqwsK_536l-7"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <footer> feito é melhor que perfeito!</footer>
+   
+    <!-- Seção de conteúdo -->
+        <!-- Seção em Inglês -->
+        <section id="englishContent" style="display:none;">
+            <ul><strong> <h2>Introduction to Financial Education for Youth:</h2></strong></ul>
+<p><strong>Financial education is essential for preparing young people to handle the economic challenges of daily life.</strong> In the context of SDG 4, which promotes quality education for all, it’s clear that teaching finance early on is an urgent need. Today, in Brazil, <strong>28.64% of young people between 18 and 24 are in debt,</strong> highlighting the lack of proper guidance on money management. This project proposes the creation of an interactive app as an accessible solution to help these young people develop financial autonomy.</p>
+<p><strong>The app aims to offer online courses and practical financial planning tools, encouraging continuous and reality-based learning.</strong> This way, the project seeks not only to help young people out of debt but also to build a healthy relationship with their finances, aligning with principles of sustainability and responsible growth.</p>
+<br>
+<ul><strong> <h2>Research Question:</h2></strong></ul>
+<p><strong>How can we empower young people to manage finances responsibly, promoting education, personal, and socioeconomic development?</strong></p>
+<br>
+<ul><strong> <h2>Main Objective:</h2></strong></ul>
+<p>Create an interactive and easy-to-use app to provide financial education to young people, enabling them to make informed decisions on personal finance, investments, and entrepreneurship.</p>
+<br>
+<ul><strong> <h2>App and Usefulness:</h2></strong></ul>
+<p>The app will be a platform offering online courses and financial planning tools, encouraging continuous learning. <strong>This way, the project aims to help young people avoid debt and create a healthy relationship with their finances, promoting sustainability and responsible growth.</strong></p>
+<br>
+<ul><strong> <h2>Hypotheses:</h2></strong></ul>
+<ul>
+    <li>Accessible and interactive financial education can increase young people’s knowledge and skills in personal finance, leading to better resource management and more conscious decision-making.</li>
+    <br>
+    <li>The availability of online educational courses and financial planning tools within the app can promote lifelong learning and financial autonomy for young people, thus aligning with sustainable development principles.</li>
+</ul>
+ 
+        </section>
+ 
+        <!-- Seção em Português -->
+        <section id="portugueseContent">
+        <ul></strong> <h2>Introdução à Educação Financeira para Jovens:</h2><strong></ul>
+            <p><strong>A educação financeira é essencial para preparar os jovens a lidarem com os desafios econômicos do dia a dia. </strong> No contexto do ODS 4, que promove uma educação de qualidade para todos, fica claro que ensinar finanças desde cedo é uma necessidade urgente. Hoje, no Brasil, <strong>28,64% dos jovens entre 18 e 24 anos estão inadimplentes,</strong> o que evidencia a falta de orientação adequada sobre como gerenciar dinheiro. Este projeto propõe a criação de um aplicativo interativo como uma solução acessível para ajudar esses jovens a desenvolverem sua autonomia financeira.</p>
+            <p><strong>A ideia é que o aplicativo ofereça cursos online e ferramentas práticas de planejamento financeiro, incentivando uma aprendizagem constante e conectada à realidade. </strong> Com isso, o projeto visa não só ajudar os jovens a saírem da inadimplência, mas também a construir uma relação saudável com suas finanças, alinhando-se a princípios de sustentabilidade e crescimento responsável.</p>
+            <br>
+            <ul></strong> <h2>Problema de pesquisa:</h2><strong></ul>
+            <p><strong>Como podemos capacitar jovens a ter uma gestão financeira responsável, promovendo educação, desenvolvimento pessoal e socioeconômico?</strong></p>
+            <br>
+            <ul></strong> <h2> Objetivo principal:</h2><strong></ul>
+            <p>Criar um aplicativo interativo e fácil de usar para fornecer educação financeira aos jovens, capacitando-os para tomar decisões financeiras informadas sobre finanças pessoais, investimentos e empreendedorismo.</p>
+            <br>
+            <ul></strong> <h2>Aplicativo e utilidade:</h2><strong></ul>
+                <p> O aplicativo será uma plataforma que oferece cursos online e ferramentas de planejamento financeiro, incentivando o aprendizado constante. <strong> Com isso, o projeto visa ajudar jovens a evitar inadimplência e a criar uma relação saudável com suas finanças, promovendo sustentabilidade e crescimento responsável.</strong></p>
+<br>
+            <ul></strong> <h2>Hipóteses:</h2><strong></ul>
+            <ul>
+                <li>A educação financeira acessível e interativa pode aumentar o conhecimento e as habilidades dos jovens em relação às finanças pessoais, levando a uma melhor gestão de recursos financeiros e a uma tomada de decisão mais consciente.</li>
+                <br>
+                <li>A disponibilidade de cursos educativos online e ferramentas de planejamento financeiro dentro do aplicativo pode promover a aprendizagem ao longo da vida e a autonomia financeira dos jovens, alinhando-se assim com os princípios de desenvolvimento sustentável.</li>
+            </ul>
+        </section>
+    </div>
+    <br>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGUYkgtTf8/ulPCAZeYa4Tin0weCMOoNg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="//www.canva.com/design/DAGUYkgtTf8/ulPCAZeYa4Tin0weCMOoNg/view"></a>
+ <br>
+ 
+ 
+ <div class="refs">
+    <ul>
+        <h2>Acesse meu projeto em PDF:</h2>
+        <p>Acesse meu projeto por PDF: <a class="a1" href="projetoedu.pdf" target="_blank">Clique aqui</a></p>
+    </ul>
+   
+    <br>
+ 
+    <ul>
+        <h2>Minhas referências:</h2>
+        <p>Minhas referências:
+            <a class="a1" href="https://ojs.eniac.com.br/index.php/EniacPesquisa/article/download/108/pdf_9" target="_blank">Clique aqui</a> |
+            <a class="a1" href="https://www.scielo.br/j/rap/a/XhqxBt4Cr9FLctVvzh8gLPb/?format=pdf&lang=pt" target="_blank">Clique aqui</a> |
+            <a class="a1" href="https://revistas.pucsp.br/emd/article/download/36841/25699" target="_blank">Clique aqui</a>
+        </p>
+    </ul>  
+</div>
 </body>
-
+<!-- Footer -->
+<footer class="footer">
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 PouPay. Todos os direitos reservados.</p>
+    </div>
+</footer>
+ 
+<script>
+    // Função para exibir o conteúdo em inglês
+    function showEnglish() {
+        document.getElementById("englishContent").style.display = "block";
+        document.getElementById("portugueseContent").style.display = "none";
+    }
+ 
+    // Função para exibir o conteúdo em português
+    function showPortuguese() {
+        document.getElementById("portugueseContent").style.display = "block";
+        document.getElementById("englishContent").style.display = "none";
+    }
+ 
+    // Exibir conteúdo em português por padrão
+    showPortuguese();
+</script>
 </html>

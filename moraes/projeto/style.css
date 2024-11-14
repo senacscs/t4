@@ -1,252 +1,107 @@
-
-body {
-        background-color: rgb(236, 13, 13);
-    }
+/* Importando Fonte */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100i,300,400,600,700&display=swap');
  
-    h1 {
-        color: rgb(255, 255, 255);
-        text-align: center;
-    }
+/* Configurações Globais */
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
  
-    h2 {
-        text-align: center;
-    }
+/* Estilo do Container Principal */
+#landingPage {
+    padding-top: 10%;
+    font-size: 30px;
+    padding-left: 40px;
+    line-height: 25px;
+    padding-bottom: 15%;
+}
  
-    section {
-        color: rgb(255, 255, 255);
-        margin: 20px;
-        border: solid 2px;
-        padding: 10px;
-        border-radius: 10px;
-        font-style: normal;
-        font-size: 20px;
-    }
+#landingPage h4 {
+    color: rgb(99, 99, 99);
+    font-weight: 400;
+    font-size: 20px;
+}
  
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-style: solid;
-        border-radius: 5px;
-        border-color: rgb(255, 255, 255);
+/* Links e Hover */
+#landingPage a {
+    color: rgb(0, 191, 110);
+    text-decoration: none;
+    cursor: default;
+    transition: 0.5s;
+}
  
-    }
  
-    h2,
-    p {
-        color: white;
-    }
+#landingPage #hireButton:hover {
+    background-color: rgb(0, 191, 178);
+    border: 3px solid rgb(0, 191, 178);
+}
  
-    h3 {
-        color: rgb(88, 3, 37);
-    }
+/* Botão "Portfolio" */
+.linguagem {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    font-weight: 600;
+    border: 3px solid rgb(0, 153, 110);
+    transition: 0.5s;
+}
  
-    header {
-        padding: 20px;
-        background-color: rgb(36, 4, 4);
-        width: 97.37;
-        
-    }
-    .container {
-        display: block;
-        margin-left:auto ;
-        margin-right: auto;
-        width: 80%;
-        max-width: 800px;
-        padding: 20px;
-        background-color: #f08d8d;
-    
-      }
-  
-      .item {
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        text-align: center;
-      }
-      iframe {
-        border-radius: 15px;
-        margin-left: 330px;
-      }
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #440909;
-        color: white;
-        text-align: center;
-        padding: 12px 0;
-    }
-@media (max-width:768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(255, 0, 0);
-    }
+#landingPage #portfolioButton:hover {
+    background-color: rgb(0, 191, 110);
+    border: 3px solid rgb(0, 191, 110);
+}
  
-    h1 {
-        color: rgb(255, 255, 255);
-        text-align: center;
-    }
  
-    h2 {
-        text-align: center;
-    }
+ul.transition li {
+    transform: scaleY(0);
+    transform-origin: bottom left;
+    background-color: white;
+    width: 20%;
+}
+p {
+    font-weight: 200;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+h2 {
+    color: rgb(0, 191, 110)
+}
+hr {
+    color: rgb(41, 40, 40);
+    max-width: 50%;
+    margin-top: 14%;
+    text-align: center;
+}
+li {
+    font-weight: 300;
+    font-style: inherit;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: justify;
+}
  
-    section {
-        color: rgb(255, 255, 255);
-        margin: 20px;
-        border: solid 2px;
-        padding: 10px;
-        border-radius: 10px;
-        font-style: normal;
-        font-size: 20px;
-    }
- 
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-style: solid;
-        border-radius: 5px;
-        border-color: rgb(255, 255, 255);
- 
-    }
- 
-    h2,
-    p {
-        color: white;
-    }
- 
-    h3 {
-        color: rgb(255, 255, 255);
-    }
- 
-    header {
-        padding: 20px;
-        background-color: rgb(57, 1, 1);
-        width: 97.37;
-       
-    }
-    .container {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-
-        width: 80%;
-        max-width: 800px;
-        padding: 20px;
-       
-      }
-  
-      .item {
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }   
-      iframe {
-        border-radius: 15px;
-        margin-left: 330px;
-      }
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #440909;
-        color: white;
-        text-align: center;
-        padding: 12px 0;
-    }
+.refs .a1 {
+    font-weight: 400;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+}
+/* Footer */
+.footer {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
 }
 
-@media (min-width:768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(255, 0, 0);
-    }
- 
-    h1 {
-        color: rgb(255, 255, 255);
-        text-align: center;
-    }
- 
-    h2 {
-        text-align: center;
-    }
- 
-    section {
-        color: rgb(255, 255, 255);
-        margin: 20px;
-        border: solid 2px;
-        padding: 10px;
-        border-radius: 10px;
-        font-style: normal;
-        font-size: 20px;
-    }
- 
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-style: solid;
-        border-radius: 5px;
-        border-color: rgb(60, 12, 12);
- 
-    }
- 
-    h2,
-    p {
-        color: white;
-    }
- 
-    h3 {
-        color: rgb(255, 255, 255);
-    }
- 
-    header {
-        padding: 20px;
-        background-color: rgb(35, 2, 2);
-        width: 97.37;
-        
-    }
-    .container {
-        display: flex;
-        justify-content: center;
-        width: 80%;
-        max-width: 800px;
-        padding: 20px;
-        
-      }
-  
-      .item {
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        text-align: center;
-        justify-content: center;
-        display: inline-flex;
-      }   
-      iframe {
-        border-radius: 15px;
-        margin-left: 330px;
-      }
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #440909;
-        color: white;
-        text-align: center;
-        padding: 12px 0;
-    }
-}  
- 
- 
+.footer-content p {
+    color: #b0b0b0;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+}

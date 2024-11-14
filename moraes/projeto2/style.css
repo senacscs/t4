@@ -1,0 +1,252 @@
+
+body {
+        background-color: rgb(236, 13, 13);
+    }
+ 
+    h1 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+ 
+    h2 {
+        text-align: center;
+    }
+ 
+    section {
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        border: solid 2px;
+        padding: 10px;
+        border-radius: 10px;
+        font-style: normal;
+        font-size: 20px;
+    }
+ 
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(255, 255, 255);
+ 
+    }
+ 
+    h2,
+    p {
+        color: white;
+    }
+ 
+    h3 {
+        color: rgb(88, 3, 37);
+    }
+ 
+    header {
+        padding: 20px;
+        background-color: rgb(36, 4, 4);
+        width: 97.37;
+        
+    }
+    .container {
+        display: block;
+        margin-left:auto ;
+        margin-right: auto;
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        background-color: #f08d8d;
+    
+      }
+  
+      .item {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        text-align: center;
+      }
+      iframe {
+        border-radius: 15px;
+        margin-left: 330px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #440909;
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+    }
+@media (max-width:768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 0, 0);
+    }
+ 
+    h1 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+ 
+    h2 {
+        text-align: center;
+    }
+ 
+    section {
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        border: solid 2px;
+        padding: 10px;
+        border-radius: 10px;
+        font-style: normal;
+        font-size: 20px;
+    }
+ 
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(255, 255, 255);
+ 
+    }
+ 
+    h2,
+    p {
+        color: white;
+    }
+ 
+    h3 {
+        color: rgb(255, 255, 255);
+    }
+ 
+    header {
+        padding: 20px;
+        background-color: rgb(57, 1, 1);
+        width: 97.37;
+       
+    }
+    .container {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+       
+      }
+  
+      .item {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }   
+      iframe {
+        border-radius: 15px;
+        margin-left: 330px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #440909;
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+    }
+}
+
+@media (min-width:768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 0, 0);
+    }
+ 
+    h1 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+ 
+    h2 {
+        text-align: center;
+    }
+ 
+    section {
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        border: solid 2px;
+        padding: 10px;
+        border-radius: 10px;
+        font-style: normal;
+        font-size: 20px;
+    }
+ 
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(60, 12, 12);
+ 
+    }
+ 
+    h2,
+    p {
+        color: white;
+    }
+ 
+    h3 {
+        color: rgb(255, 255, 255);
+    }
+ 
+    header {
+        padding: 20px;
+        background-color: rgb(35, 2, 2);
+        width: 97.37;
+        
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        
+      }
+  
+      .item {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        text-align: center;
+        justify-content: center;
+        display: inline-flex;
+      }   
+      iframe {
+        border-radius: 15px;
+        margin-left: 330px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #440909;
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+    }
+}  
+ 
+ 
