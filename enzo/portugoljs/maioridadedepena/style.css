@@ -1,0 +1,17 @@
+html, body {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+}
+
+.corpo {
+    position: absolute;
+    margin-left: 40%;
+    top: 46%;
+}
+
+.idades {
+    position: absolute;
+    bottom: 100px;
+    font-size: 30px;
+}
