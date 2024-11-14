@@ -22,8 +22,7 @@ body {
     text-align: center;
 }
 
-header {
-    background-color: #3a4c40;
+.header {
     padding: 200px;
 
     h3 span {
@@ -31,23 +30,36 @@ header {
         font-family: edu;
         font-size: 75px;
     }
+}
+.header.p {
+    background-color: #488CFF;
+}
+.header.e {
+    background-color: #009695;
+}
 
-    #bot {
-        padding: 5px;
-        border-radius: 5px;
-        background-color: #fff;
-        color: #000;
-        width: fit-content;
-        position: fixed;
-        left: 0;
-        top: 0;
-        margin: 10px;
-    }
+#bot {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    width: fit-content;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    z-index: 99;
+}
+
+section:hover, header:hover, #bot:hover, footer:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+    z-index: 1
 }
 
 
 .ods {
-    background-color: #486856;
+    background-color: #7C95FF;
     padding: 200px;
     display: flex;
     flex-direction: row;
@@ -71,6 +83,22 @@ header {
 
 }
 
+.ods.p {
+    background-color: #7C95FF;
+    padding: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ods.e {
+    background-color: #00A894;
+    padding: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .icone {
     border-radius: 10px;
 
@@ -80,8 +108,13 @@ a {
     color: black;
 }
 
-.referencias {
-    background-color: #507963;
+.referencias.p {
+    background-color: #9F9FFF;
+    color: black;
+    padding: 200px;
+}
+.referencias.e {
+    background-color: #00BA8C;
     color: black;
     padding: 200px;
 }
@@ -92,8 +125,12 @@ iframe {
     margin-bottom: 35px;
 }
 
-.imagem {
-    background-color: #588970;
+.imagem.p {
+    background-color: #BBA9FF;
+    padding: 200px;
+}
+.imagem.e {
+    background-color: #48C97E;
     padding: 200px;
 }
 
@@ -103,8 +140,13 @@ iframe {
     margin-bottom: 18px;
 }
 
-.problemadepesquisa {
-    background-color: #5f967c;
+.problemadepesquisa.p {
+    background-color: #D4B5FF;
+    padding: 200px;
+}
+
+.problemadepesquisa.e {
+    background-color: #7FD671;
     padding: 200px;
 }
 
@@ -123,8 +165,8 @@ iframe {
     margin-top: 5px;
 }
 
-.objetivo {
-    background-color: #7cb69d;
+.objetivo.p {
+    background-color: #EAC1FF;
     padding: 200px;
     display: flex;
     flex-direction: column;
@@ -134,8 +176,53 @@ iframe {
     font-size: 18px;
 }
 
-.rodape {
-    background-color: #9ccbb8;
+.objetivo.e {
+    background-color: #AEE163;
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+.resultadosesperados.p {
+    background-color: #FDCEFF;
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.resultadosesperados.e {
+    background-color: #DBEB57;
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.rodape.p {
+    background-color: #FFE3F6;
+    padding: 200px;
+   
+    h3 span {
+        
+        font-family: edu;
+        font-size: 75px;
+    }
+}
+
+.rodape.e {
+    background-color: #FFF39E;
     padding: 200px;
    
     h3 span {

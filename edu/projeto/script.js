@@ -1,6 +1,7 @@
 let lang = "pt";
 let pt = Array.from(document.getElementsByClassName("pt"));
 let en = Array.from(document.getElementsByClassName("en"));
+let sections = Array.from(document.getElementsByTagName("section"));
 
 
 function trocarLingua() {
@@ -14,6 +15,12 @@ function trocarLingua() {
             en.forEach(element => {
                 element.style.display = "inline";
             });
+            sections.forEach(element => {
+                if(element.className.endsWith(" p")){
+                    element.className = element.className.slice(0,-2);
+                    element.className += " e";
+                }
+            });
             break;
 
         case "en":
@@ -24,6 +31,12 @@ function trocarLingua() {
             });
             pt.forEach(element => {
                 element.style.display = "inline";
+            });
+            sections.forEach(element => {
+                if(element.className.endsWith(" e")){
+                    element.className = element.className.slice(0,-2);
+                    element.className += " p";
+                }
             });
             break;
     }
