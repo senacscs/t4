@@ -8,7 +8,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -18,12 +19,575 @@ html, body {
 body {
     line-height: 1.6;
     color: #ffffff;
-    background: radial-gradient(#950b0b , black);
+    background: radial-gradient(#950b0b, black);
     display: grid;
     overflow-x: hidden;
 }
 
-/* Cabeçalho */
+
+/* responsivo */
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 1024px) {
+
+    /* Cabeçalho */
+    header {
+        background-color: rgb(127, 28, 28);
+        display: grid;
+        padding: 0;
+        /* Remove padding extra do topo */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        height: 60px;
+    }
+
+    .Urbanisme {
+        position: relative;
+        bottom: 35px;
+    }
+
+    ul {
+        position: relative;
+        bottom: 35px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 150px;
+        /* margin-right: 10px; */
+        position: relative;
+        bottom: 60px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+        bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 2px solid #ffffff;
+    }
+
+    /* Seção principal */
+    .titulo {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 60px;
+        /* Compensação para o cabeçalho fixo */
+    }
+
+
+
+    .titulo-content h1 {
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Bellefair", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 90px;
+        position: relative;
+        bottom: 60px;
+    }
+
+    .titulo-content h2 {
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 70px;
+        position: relative;
+        bottom: 80px;
+    }
+
+    /* Localização */
+    .sobre {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #a81010;
+        padding: 50px 20px;
+
+    }
+
+    .sobre .container {
+        max-width: 600px;
+    }
+
+    .sobre h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 60px;
+        position: relative;
+        left: 50px;
+    }
+
+    .sobre p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+        position: relative;
+        left: 50px;
+    }
+
+    .sobre-image img {
+        width: 350px;
+        position: relative;
+        right: 80px;
+        border-radius: 20px;
+        border: 0.1rem solid white;
+        transition: .3s;
+    }
+
+    .sobre-image img:hover {
+        transform: scale(1.05);
+        transition: ease-in-out 0.7s;
+        border-radius: 20px;
+    }
+
+    /* Como funciona a ponte? */
+
+    .ponte {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #720f0f;
+        padding: 50px 20px;
+    }
+
+    .ponte .como {
+        max-width: 600px;
+    }
+
+    .ponte h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 60px;
+        position: relative;
+        left: 480px;
+    }
+
+    .ponte p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+        text-align: center;
+        width: 900px;
+        position: relative;
+        left: 160px;
+    }
+
+    .ponte-image img {
+        width: 500px;
+        position: relative;
+        right: 660px;
+        border-radius: 20px;
+        transition: .3s;
+        border: 0.1rem solid white;
+    }
+
+    .ponte-image img:hover {
+        transform: scale(1.05);
+        transition: ease-in-out 0.7s;
+        border-radius: 20px;
+    }
+
+
+
+    /* como foi o processo? */
+
+    .processo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e02626;
+        padding: 50px 20px;
+    }
+
+    .processo .pro {
+        max-width: 600px;
+    }
+
+    .processo h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 90px;
+        position: relative;
+        left: 50px;
+    }
+
+    .processo p {
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+        position: relative;
+        left: 50px;
+    }
+
+    .processo-image img {
+        width: 400px;
+        position: relative;
+        right: 50px;
+        border-radius: 20px;
+        transition: .3s;
+        border: 0.1rem solid white;
+    }
+
+    .processo-image img:hover {
+        transform: scale(1.05);
+        transition: ease-in-out 0.7s;
+        border-radius: 20px;
+    }
+
+    /* entregas */
+
+    .entregas {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #a32727;
+        padding: 50px 20px;
+    }
+
+    .entregas .entre {
+        max-width: 600px;
+    }
+
+    .entregas h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 60px;
+        position: relative;
+        left: 550px;
+        text-align: end;
+    }
+
+    .entregas p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+        text-align: end;
+        position: relative;
+        left: 550px;
+    }
+
+    .entregas-image img {
+        width: 400px;
+        position: relative;
+        right: 700px;
+        border-radius: 20px;
+        transition: .3s;
+        border: 0.1rem solid white;
+    }
+
+    .entregas-image img:hover {
+        transform: scale(1.05);
+        border-radius: 20px;
+    }
+
+
+    /* sobre nós */
+
+    .sobrenos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(red.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 20px;
+    }
+
+    .sobrenos .nos {
+        max-width: 600px;
+    }
+
+    .sobrenos h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 60px;
+        position: relative;
+        left: 310px;
+        text-align: center;
+    }
+
+    .sobrenos p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+        text-align: center;
+        position: relative;
+        left: 310px;
+    }
+
+    /*  */
+    .resultado {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #a81010;
+        padding: 50px 20px;
+
+    }
+
+    .resultado .resu {
+        max-width: 600px;
+    }
+
+    .resultado h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* fonte */
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-size: 60px;
+        position: relative;
+        left: 50px;
+    }
+
+    .resultado p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: "Playpen Sans", cursive;
+        font-style: normal;
+        position: relative;
+        left: 50px;
+    }
+
+    .resultado-image img {
+        width: 500px;
+        position: relative;
+        right: 50px;
+        border-radius: 20px;
+        transition: .3s;
+        border: 0.1rem solid white;
+    }
+
+    .resultado-image img:hover {
+        transform: scale(1.05);
+        transition: ease-in-out 0.7s;
+        border-radius: 20px;
+    }
+
+
+    .canva {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(red.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 20px;
+    }
+
+
+    #primeiralinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+    #segundalinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+    #terceiralinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+    #quartalinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+    #quintalinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+    #sextalinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+    #setimalinha {
+        position: relative;
+        overflow: hidden;
+        height: 3px;
+        background-color: white;
+    }
+
+
+
+
+
+    footer {
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        height: 70px;
+    }
+
+    footer p {
+        position: relative;
+        bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #navegar {
+        position: relative;
+        top: 40px;
+    }
+
+    .botoes {
+        position: relative;
+        top: 500px;
+    }
+
+    button {
+        border-radius: 20px;
+        background-color: pink;
+        width: 150px;
+        height: 50px;
+        position: relative;
+        left: 37%;
+        border: 0.1rem solid white;
+        font-size: 15px;
+        font-family: cursive;
+        margin-right: 10px;
+        bottom: 40px;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        background-color: rgb(222, 66, 92);
+        transition: 1s ease-in-out;
+    }
+
+    .slide p {
+        text-align: center;
+        position: relative;
+        left: 310px;
+        font-family: arial;
+    }
+
+}
+
+
+
+/* TELA DE CELULAR  */
+
+
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    /* Cabeçalho */
 header {
     background-color: rgb(127, 28, 28);
     display: grid;
@@ -95,6 +659,8 @@ nav ul li a:hover {
 .titulo {
     height: 100vh;
     display: flex;
+    position: relative;
+    right: 29%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -135,8 +701,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #a81010;
-    padding: 50px 20px;
-    
+    padding: 200px 20px
 }
 
 .sobre .container {
@@ -156,21 +721,25 @@ nav ul li a:hover {
     font-size: 60px;
     position: relative;
     left: 50px;
+    bottom: 170px;
 }
 
 .sobre p {
     font-size: 20px;
-    margin-bottom: 20px;
+    bottom: 150px;
     font-family: "Playpen Sans", cursive;
     font-style: normal;
     position: relative;
-    left: 50px;
+    left: 10px;
+    width: 400px;
 }
 
 .sobre-image img {
     width: 350px;
     position: relative;
-    right: 80px;
+    height: 300px;
+    top: 250px;
+    right: 830px;
     border-radius: 20px;
     border: 0.1rem solid white;
     transition: .3s;
@@ -207,7 +776,7 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 480px;
+    left: 130px;
 }
 
 .ponte p {
@@ -216,9 +785,11 @@ nav ul li a:hover {
     font-family: "Playpen Sans", cursive;
     font-style: normal;
     text-align: center;
-    width: 900px;
+    width: 500px;
     position: relative;
-    left: 160px;
+    right: 90px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .ponte-image img {
@@ -262,7 +833,7 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 90px;
     position: relative;
-    left: 50px;
+    left: 20px;
 }
 
 .processo p {
@@ -271,20 +842,7 @@ nav ul li a:hover {
     font-family: "Playpen Sans", cursive;
     font-style: normal;
     position: relative;
-    left: 50px;
-}
-
-.processo-image img {
-    width: 400px;
-    position: relative;
-    right: 50px;
-    border-radius: 20px;
-    transition: .3s;
-    border: 0.1rem solid white;
-}
-.processo-image img:hover {
-    transform: scale(1.05);
-    transition: ease-in-out 0.7s;border-radius: 20px;
+    width: 500px;
 }
 
 /* entregas */
@@ -313,8 +871,8 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 550px;
     text-align: end;
+    right:  100px;
 }
 
 .entregas p {
@@ -324,13 +882,12 @@ nav ul li a:hover {
     font-style: normal;
     text-align: end;
     position: relative;
-    left: 550px;
+    right: 100px;
 }
 
 .entregas-image img {
-    width: 400px;
+    width: 200px;
     position: relative;
-    right: 700px;
     border-radius: 20px;
     transition: .3s;
     border: 0.1rem solid white;
@@ -370,7 +927,6 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 310px;
     text-align: center;
 }
 
@@ -381,7 +937,7 @@ nav ul li a:hover {
     font-style: normal;
     text-align: center;
     position: relative;
-    left: 310px;
+    width: 500px;
 }
 
 /*  */
@@ -390,7 +946,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #a81010;
-    padding: 50px 20px;
+    padding: 200px 200px;
     
 }
 
@@ -410,22 +966,26 @@ nav ul li a:hover {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    left: 50px;
+    right: 180px;
+    bottom: 150px;
 }
 
-.resultado p {
+.resultado li {
     font-size: 20px;
     margin-bottom: 20px;
     font-family: "Playpen Sans", cursive;
     font-style: normal;
     position: relative;
-    left: 50px;
+    right: 150px;
+    bottom: 150px;
+    width: 500px;
 }
 
 .resultado-image img {
-    width: 500px;
+    width: 400px;
     position: relative;
-    right: 50px;
+    right: 620px;
+    top: 200px;
     border-radius: 20px;
     transition: .3s;
     border: 0.1rem solid white;
@@ -445,7 +1005,10 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 20px;
+    position: relative;
+    right: 390px;
 }
+
 
 
 #primeiralinha {
@@ -511,6 +1074,8 @@ footer {
 footer p {
     position: relative;
     bottom: 10px;
+    width: 100%;
+    right: 380px;
 }
 
 a {
@@ -534,23 +1099,108 @@ button {
     width: 150px;
     height: 50px;
     position: relative;
-    left: 37%;
+    left: 10%;
     border: 0.1rem solid white;
     font-size: 15px;
     font-family: cursive;
     margin-right: 10px;
     bottom: 40px;
+    transition: 1s ease-in-out;
 }
 
 button:hover {
     transform: scale(1.1);
     background-color: rgb(222, 66, 92);
-    transition: 1s ease-in-out;
 }
 
 .slide p {
     text-align: center;
     position: relative;
-    left: 310px;
+    left: 480px;
+    width: 50%;
     font-family: arial;
 }
+/* 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: #343a40;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.menu-expanded {
+  background: #212529;
+  max-width: 0px;
+  opacity: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease 0s;
+  overflow: hidden;
+}
+
+.menu-expanded ul {
+  margin: 0;
+  list-style: none;
+  font-size: 32px;
+  text-align: right;
+  line-height: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hamburguer-menu {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  position: absolute;
+}
+
+.line {
+  display: block;
+  width: 30px;
+  background: #fff;
+  height: 2px;
+  margin: 5px 5px;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+
+.change .first-line {
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+.change .second-line {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.change ~ .menu-expanded {
+  max-width: 400px;
+  opacity: 1;
+}
+
+@media (max-width: 400px) {
+  .menu-expanded {
+    width: 100%;
+  }
+} */
+
+
+}
+
