@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 :root {
     --c0: white;
     --c1: #f5f5dc;
