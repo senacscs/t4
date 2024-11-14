@@ -97,17 +97,7 @@ section p {
 }
 
 
-section img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
 
-section img:hover {
-  transform: scale(1.05);
-}
 
 
 a {
