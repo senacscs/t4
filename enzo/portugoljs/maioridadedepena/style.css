@@ -2,16 +2,69 @@ html, body {
     padding: 0;
     height: 100%;
     margin: 0;
+    background-color: black;
 }
 
 .corpo {
     position: absolute;
-    margin-left: 40%;
-    top: 46%;
+    margin-left: 33%;
+    top: 20%;
+    background-color: #333;
+    width: 35%;
+    height: 65%;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    border: 0.2rem solid white;
+    box-shadow: 10px 10px 15px white;
 }
 
-.idades {
-    position: absolute;
-    bottom: 100px;
-    font-size: 30px;
+.digite-idade {
+    font-size: 25px;
+    position: relative;
+    top: 100px;
+    left: 115px;
+}
+
+input {
+    position: relative;
+    top: 170px;
+    right: 80px;
+    width: 50%;
+    height: 8%;
+    border-radius: 20px;
+    border: 0.1rem solid black;
+}
+
+button {
+    position: relative;
+    top: 200px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: impact, serif;
+    border: 0.2rem solid black;
+    width: 30%;
+    height: 7%;
+    box-shadow: 0 0 15px black;
+    transition: all ease-in-out 1s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 25px white;
+    border: 0.2rem solid white;
+    transform: scale(1.1);
+}
+
+p {
+    position: relative;
+    top: 225px;
+}
+
+::placeholder {
+    position: relative;
+    left: 10px;
+    font-size: 18px;
+    top: 2px;
 }
