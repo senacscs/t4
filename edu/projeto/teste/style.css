@@ -1,0 +1,8 @@
+body{
+    .pt {
+        display: inline;
+    }
+    .en {
+        display: none;
+    }
+}

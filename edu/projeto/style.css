@@ -26,10 +26,22 @@ header {
     background-color: #3a4c40;
     padding: 200px;
 
-    h3 {
+    h3 span {
 
         font-family: edu;
         font-size: 75px;
+    }
+
+    #bot {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #000;
+        width: fit-content;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: 10px;
     }
 }
 
@@ -126,9 +138,17 @@ iframe {
     background-color: #9ccbb8;
     padding: 200px;
    
-    h3 {
+    h3 span {
         
         font-family: edu;
         font-size: 75px;
     }
+}
+
+.pt {
+    display: inline;
+}
+
+.en {
+    display: none;
 }
