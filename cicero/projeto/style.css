@@ -1,0 +1,196 @@
+html {
+    font-family: monospace;
+
+    body {
+        background-color: #19181b;
+        color: #dddbc6;
+
+        margin: 0;
+
+        header {
+            height: fit-content;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #3a3b3d;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                margin: 5px;
+            }
+
+            #bot {
+                position: relative;
+                right: 0;
+                top: 0;
+                margin: 10px;
+
+                width: fit-content;
+                height: fit-content;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #9C9C93;
+                color: #3a3b3d;
+            }
+
+            #bot:hover {
+                transform: scale(1.1);
+                transition: all 0.5s ease;
+            }
+        }
+
+        main {
+
+            /*palheta foda
+                19181B
+                3A3B3D
+                5B5D5F
+                9C9C93
+                DDDBC6
+            */
+
+            p {
+                font-size: 18px;
+            }
+
+            section {
+                width: 100vw;
+                height: max-content;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                background-color: #19181b;
+
+                .imagem {
+                    width: 50%;
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+
+                    a {
+                        color: #dddbc6;
+                    }
+                }
+
+                .texto {
+                    width: 80%;
+
+                    p {
+                        text-align: justify;
+                        text-indent: 30px;
+
+                        .ref {
+                            vertical-align: super;
+                            font-size: 8px;
+                            color: #dddbc6;
+                        }
+                    }
+                }
+
+                .lateral {
+                    display: flex;
+                    flex-direction: row;
+
+                    div {
+                        width: fit-content;
+                        max-width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+
+                        h1 {
+                            text-align: center;
+                        }
+
+                        p {
+                            width: 50%;
+                            text-align: justify;
+                            text-indent: 20px;
+                        }
+                    }
+
+                    .comprido p {
+                        width: 70%;
+                    }
+                }
+
+                .odsText {
+                    display: flex;
+                    flex-direction: column;
+
+                    .ods {
+                        height: 300px;
+                        border-radius: 10px;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+
+        }
+
+        footer {
+            padding: 0 20px;
+
+            a {
+                color: #dddbc6;
+            }
+        }
+    }
+}
+
+@media all and (orientation:portrait) {
+    body {
+        header {
+            position: relative !important;
+        }
+
+        main {
+            section {
+                .lateral {
+                    flex-direction: column !important;
+                    align-items: center !important;
+
+                    div {
+                        max-width: 100vw !important;
+                        width: 80% !important;
+                    }
+
+                    p {
+                        width: 100% !important;
+                    }
+                }
+
+                .ods {
+                    max-width: 100vw !important;
+                }
+
+                .imagem {
+                    width: 95% !important;
+
+                }
+            }
+        }
+    }
+
+}
+
+.pt {
+    display: inline;
+}
+
+.en {
+    display: none;
+}
