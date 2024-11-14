@@ -48,8 +48,9 @@ a {
     color: black;
     text-decoration: none;
     position: relative;
-    top: 200px;
+    top: 250px;
     transition: all ease-in-out 0.4s;
+
 }
 
 .fundo-card {
@@ -77,7 +78,109 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    width: 250px;
+    z-index: -1;
+}
 
 
 
 
+
+.fundo-card:nth-child(1) {
+    background-image: url('site-hello-world-removebg-preview-removebg-preview.png');
+   background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(2) {
+    background-image: url('numero-digitado-site-portugol.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(3) {
+    background-image: url('divisão-inteiras-site-portugoljs.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(4) {
+    background-image: url('operação-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(5) {
+    background-image: url('prioridade-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(6) {
+    background-image: url('potencia-e-raiz-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(7) {
+    background-image: url('maior-idade-de-pena-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(8) {
+    background-image: url('quantos-dias-site-portugol-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(9) {
+    background-image: url('seu-nome-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(10) {
+    background-image: url('trocas-de-variaveis-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(11) {
+    background-image: url('altura-media-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+.fundo-card:nth-child(12) {
+    background-image: url('loja-de-ferramentas-site-portugoljs-removebg-preview.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    position: relative;
+}
+
+/* Repita para cada item */
