@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+button {
+    margin-left: 40%;
+    margin-top: 23%;
+    color: white;
+    background-color: black;
+    border: 0.2rem solid white;
+    font-size: 30px;
+    position: relative;
+    bottom: 100px;
+    width: 20%;
+    height: 20%;
+    font-family: impact, serif;
+    border-radius: 20px;
+    transition: all ease-in-out 1s;
+}
+button:hover {
+    color: black;
+    background-color: white;
+    border: 0.2rem solid black;
+}
+
+p {
+    margin-left: 44%;
+    margin-top: 8%;
+    font-size: 30px;
+    font-family: cursive;
+    color: white;
+    position: relative;
+    bottom: 50px;
+    right: 10px;
+}
+
+footer {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+a {
+    position: relative;
+    bottom: 15px;
+    color: black;
+    text-decoration: none;
+    transition: all ease-in-out 0.6s;
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
