@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: rgb(210,235,173);
+  }
+  
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #816246;
+    color: #fff;
+    border-bottom: 4px solid  #135c2c;
+    padding-inline: 16px;
+    
+  }
+  .nav{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav1{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    font-size: 48px;
+  }
+  .nav-list{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav1-list{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-list a{
+    font-size: 18px;
+    color:#fff;
+    padding-block: 16px;
+    }
+    .nsei{
+      height: calc(100vh - 70px);
+      background: center / 100vw 100vh no-repeat url(plantas.png);
+    }
+  .nav1-list a{
+    font-size: 18px;
+    color:#fff;
+    padding-block: 16px;
+    }
+  .hamburguer{
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .burguer{
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .hamburguer::before,
+  .hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .burguer::before,
+  .burguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  @media (max-width: 750px) {
+    .hamburguer{
+      display: block;
+      z-index: 1;
+    }
+    .burguer{
+      display: block;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 28px;
+      padding: 8px 16px;
+  }
+  }
+  .nav-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #135c2c;
+    clip-path: circle(85px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:0;
+    pointer-events: none;
+  }
+  .nav1-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #135c2c;
+    clip-path: circle(85px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:0;
+    pointer-events: none;
+  }
+  .nav-list a{
+    font-size: 24px;
+    opacity: 0;
+  }
+  .nav1-list a{
+    font-size: 24px;
+    opacity: 0;
+  }
+  .nav-list li:nth-child(1) a{
+    transition: 0.5s 0.2s;
+  }
+  .nav1-list li:nth-child(1) a{
+    transition: 0.5s 0.2s;
+  }
+  .nav-list li:nth-child(2) a{
+    transition: 0.5s 0.4s;
+  }
+  .nav1-list li:nth-child(2) a{
+    transition: 0.5s 0.4s;
+  }
+  .nav-list li:nth-child(3) a{
+    transition: 0.5s 0.6s;
+  }
+  .nav1-list li:nth-child(3) a{
+    transition: 0.5s 0.6s;
+  }
+  .nav-list li:nth-child(4) a{
+    transition: 0.5s 0.8s;
+  }
+  .nav1-list li:nth-child(4) a{
+    transition: 0.5s 0.8s;
+  }
+  .nav-list li:nth-child(5) a{
+    transition: 0.5s 1s;
+  }
+  .nav1-list li:nth-child(5) a{
+    transition: 0.5s 1s;
+  }
+  .nav.active .nav-list{
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+  .nav1.active .nav1-list{
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+  .nav.active .nav-list a{
+    opacity: 1;
+  }
+  .nav1.active .nav1-list a{
+    opacity: 1;
+  }
+  .nav.active .hamburguer{
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-color: transparent;
+  }
+  .nav1.active .burguer{
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-color: transparent;
+  }
+  .nav.active .hamburguer::before{
+    transform: rotate(135deg);
+  }
+  .nav1.active .burguer::before{
+    transform: rotate(135deg);
+  }
+  .nav.active .hamburguer::after{
+    transform:rotate(-135deg);
+    top:-7px;
+  }
+  .nav1.active .burguer::after{
+    transform:rotate(-135deg);
+    top:-7px;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+  .caixa {
+    background-color: #e0f7e9; /* Um verde claro para o fundo da caixa */
+    border: 2px solid #4caf50; /* Borda verde mais escura */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px; /* Largura máxima da caixa */
+    margin: 20px auto; /* Centraliza a caixa na página */
+}
+
+/* Estilo para o texto dentro da caixa */
+.caixa p {
+    color: #2e7d32; /* Cor do texto verde escuro */
+    font-family: 'Arial', sans-serif; /* Fonte do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    text-align: center justify; /* Alinhamento do texto */
+}
+h1 {
+  color: #ffffff; /* Cor do texto */
+  background-color: #4caf50; /* Cor de fundo */
+  border: 3px solid #2e7d32; /* Borda verde escura */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 36px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  display: block; /* Garante que o elemento ocupe toda a largura disponível */
+  margin: 20px auto; /* Centraliza o título na página */
+  max-width: 90%; /* Garante que o título não ultrapasse a largura da tela */
+}
+.button {
+  background-color: #4caf50; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto do botão */
+  border: 2px solid #2e7d32; /* Borda verde escura */
+  border-radius: 5px; /* Cantos arredondados */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  text-decoration: none; /* Remove sublinhado */
+  display: inline-block; /* Para que o botão se ajuste ao conteúdo */
+  margin: 20px auto; /* Espaçamento em volta do botão */
+  cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.button:hover {
+  background-color: #2e7d32; /* Muda a cor de fundo ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao passar o mouse */
+}
+.centralizado{
+  text-align: center;
+}
