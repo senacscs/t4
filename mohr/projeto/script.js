@@ -22,5 +22,5 @@ setLanguage(lang);
 
 function toggle(element) {
     element.classList.toggle("change");
-}
+  }
   

@@ -428,7 +428,7 @@ body {
         left: 50px;
     }
 
-    .resultado p {
+    .resultado li {
         font-size: 20px;
         margin-bottom: 20px;
         font-family: "Playpen Sans", cursive;
@@ -626,9 +626,8 @@ nav {
 
 .logo img {
     width: 150px;
-    /* margin-right: 10px; */
     position: relative;
-    bottom: 60px;
+    bottom: 292px;
 }
 
 nav ul {
@@ -1120,7 +1119,9 @@ button:hover {
     width: 50%;
     font-family: arial;
 }
-/* 
+
+/* hamburger */
+ 
 html,
 body {
   height: 100%;
@@ -1130,19 +1131,27 @@ body {
 .container {
   height: 100vh;
   width: 100%;
-  background: #343a40;
+  background: #b43232;
   font-family: "Poppins", sans-serif;
   position: relative;
+  right: 300px;
+  bottom: 45px;
+}
+
+li {
+    position: relative;
+    right: 14px;
+    top: 40px;
+    text-align: justify;
 }
 
 .menu-expanded {
-  background: #212529;
+  background: #dc2525;
   max-width: 0px;
   opacity: 0;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   transition: all 0.4s ease 0s;
   overflow: hidden;
 }
@@ -1153,6 +1162,8 @@ body {
   font-size: 32px;
   text-align: right;
   line-height: 2em;
+  flex-direction: column;
+  display: flex;
 }
 
 a {
@@ -1167,7 +1178,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  padding: 8px 8px;
   position: absolute;
 }
 
@@ -1199,8 +1210,6 @@ a {
   .menu-expanded {
     width: 100%;
   }
-} */
-
-
 }
 
+}
