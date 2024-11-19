@@ -1,48 +1,166 @@
-/* style.css */
+/* Resetando margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Define a cor de fundo para a página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Estilo da Navbar */
+.navbar {
+  background-color: #4CAF50; /* Cor verde */
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #555; /* Efeito de hover */
+}
+
+/* Responsividade - Adaptando para telas menores */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  /* Estilo para o cabeçalho principal */
-  h1, h2 {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
+
+  .nav-links li a {
+    width: 100%;
     text-align: center;
-    margin: 0;
   }
-  
-  /* Estilo para os cabeçalhos secundários */
-  h3 {
-    background-color: #555;
-    color: white;
-    padding: 10px;
-    margin: 10px 0; /* Adiciona margem entre os títulos */
+}
+
+/* Estilo da Seção Intro */
+.intro {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.intro-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* A imagem fica mais para cima */
+}
+
+.intro-image {
+  width: 150px; /* Tamanho fixo para a imagem */
+  height: 150px;
+  border-radius: 50%; /* Imagem circular */
+  object-fit: cover;
+  border: 3px solid #4CAF50; /* Borda verde */
+}
+
+.intro-right {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.intro-right h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.intro-right p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Estilo da Seção Trabalhos */
+.trabalhos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.trabalhos h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo do Contêiner de Quadrados */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.square-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.square-container:hover {
+  transform: translateY(-10px); /* Efeito de hover */
+}
+
+.square-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.square-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.square-container a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.square-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade - Ajustando para telas menores */
+@media (max-width: 768px) {
+  .square-container {
+    width: 100%;
   }
-  
-  /* Estilo para os links */
-  a {
-    color: #eee; /* Cor do texto do link */
-    text-decoration: none; /* Remove sublinhado */
-    transition: color 0.3s; /* Transição suave para a cor */
-  }
-  
-  /* Estilo para os links ao passar o mouse */
-  a:hover {
-    color: #fff; /* Muda a cor ao passar o mouse */
-  }
-  
-  /* Container para centralizar o conteúdo */
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
