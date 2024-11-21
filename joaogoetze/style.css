@@ -62,9 +62,6 @@
       margin: 10px;
     }
 
-
-  }
-
   .subir {
     width: 5%;
     display: block;
@@ -102,6 +99,48 @@
     padding: 10px;
   }
 
+  .ir-site{
+    color: #000000;
+    text-align: center;
+    display: inline-block;
+    padding: 4px 25px;
+    font-size: 19px;
+    color: black;
+    background-color: #5e9952;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 35%;
+    padding: 1.3% ;
+
+}
+
+
+/* .nome-site{
+    color: #000000;
+    text-align: center;
+    display: inline-block;
+    padding: 4px 65px;
+    font-size: 19px;
+    background-color: #5e9952;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    animation: piscar 1s infinite;
+    margin-left: 28% ;
+    padding: 2%;
+} */
+
+@keyframes piscar{
+  0% { color: rgb(#eee); }
+  25% { color: rgb(#3cd36e); }
+  50% { color: rgb(#5e9952); }
+  75% { color: rgb(#76ed21); }
+  100% { color: rgb(#000); }
+}
+
 
 
   h1,
@@ -116,8 +155,8 @@
   }
 
   h2{
-   font-size: 5
-   150%;
+   font-size: 150%;
+   animation: piscar 3s infinite;
   }
 
   p{
@@ -190,4 +229,5 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+  }
   }
