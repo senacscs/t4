@@ -44,11 +44,7 @@ a:hover {
     font-family: Arial;
   }
   body {
-    background: linear-gradient(#26bde2 25%, #32a0cb, #101414 50%);
-    overflow-x: hidden;
-  }
-  body2 {
-    background: linear-gradient(#05abdd 25%, #32a0cb, #101414 43%);
+    background: linear-gradient(#26bde2 40%, #32a0cb 50%, #101414 80%);
     overflow-x: hidden;
   }
   .loader {
@@ -120,6 +116,15 @@ p1{
   margin-right: 100px;
   margin-left: 650px;
   text-align: start;
+}
+p2{
+  color: white;
+  display: flex;
+  letter-spacing: .1em;
+  position: relative;
+  bottom: 400px;
+  margin-right: 350px;
+  margin-left: 350px;
 }
 div{
   color: white;
