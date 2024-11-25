@@ -8,7 +8,7 @@ body {
     overflow-y: scroll;
     scroll-behavior: smooth !important;
     overflow-x: hidden;
-    transition: 0s;
+    transition: 0.1s;
 }
 
 ::-webkit-scrollbar {
@@ -452,6 +452,7 @@ nav h2:hover::before {
     height: 100%;
     top: 0;
     transform: rotateZ(180deg);
+    border-radius: 5px 5px 5px 5px / 6px;
 }
 
 nav h2:hover {
@@ -466,6 +467,9 @@ nav a:visited {
     position: absolute;
     margin-top: -6.5%;
     scroll-snap-align: start;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0);
 }
 
 .snap-contatos {
@@ -742,6 +746,25 @@ nav a:visited {
     top: 200vh;
     cursor: none;
 }
+
+/* .museu {
+    height: 100vh;
+    scroll-snap-align: center;
+    background-color: black;
+    box-shadow: 0 0 30px black;
+} */
+
+.improviso {
+    position: absolute;
+    width: 600px;
+    height: 55px;
+    background-color: rgba(244, 241, 255, 0.909);
+    border-radius: 4px 15px 4px 15px;
+    box-shadow: 0 0 15px rgb(175, 175, 175);
+    margin-left: 60px;
+    margin-top: 13px;
+}
+
 
 /* @media (max-width: 1022px) {
     .minha-imagem {
