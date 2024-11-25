@@ -22,7 +22,7 @@
 // 	}
 // }
 
-function matematica(){
+function matematica() {
 // 		cadeia matematica
  let a, b, soma, sub, mult, div;
 // 		real a, b, soma, sub, mult, div
@@ -63,7 +63,7 @@ document.write("\nA subtração dos números é igual a: ", mult)
 document.write("\nA divisão dos números é igual a: ", div, "\n")	
 
 document.write("\nA log dos números é igual a: ", log, "\n")	
-// tem q dar 3
+// log 2 8 tem q dar 3
 
 }
 
