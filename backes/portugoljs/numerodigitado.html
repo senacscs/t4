@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles4.css">
+  <title>Número Digitado</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Número Digitado</h1>
+    <p>Digite um número e clique no botão para exibi-lo.</p>
+
+
+    <input type="number" id="numero" placeholder="Digite um número">
+
+    <button onclick="mostrarNumero()">Exibir Número</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function mostrarNumero() {
+ 
+        const numero = document.getElementById("numero").value;
+
+      
+        if (numero) {
+          document.getElementById("resultado").innerText = `O número digitado foi: ${numero}`;
+        } else {
+          document.getElementById("resultado").innerText = "Por favor, digite um número.";
+        }
+      }
+    </script>
+  </main>
+</body>
+</html>

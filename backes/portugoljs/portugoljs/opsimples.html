@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles6.css">
+  <title>Operações Aritméticas</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Operações Aritméticas</h1>
+    <p>Digite dois números para realizar as operações.</p>
+    
+    <input type="number" id="num1" placeholder="Digite o primeiro número">
+    <input type="number" id="num2" placeholder="Digite o segundo número">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function calcular() {
+        // Pega os valores dos inputs
+        const a = parseFloat(document.getElementById("num1").value);
+        const b = parseFloat(document.getElementById("num2").value);
+
+        // Verifica se os valores são números válidos
+        if (isNaN(a) || isNaN(b)) {
+          document.getElementById("resultado").innerText = "Por favor, digite valores numéricos válidos.";
+          console.log("Erro: valores inválidos inseridos.");
+          return;
+        }
+
+        // Realiza as operações aritméticas
+        const soma = a + b;
+        const sub = a - b;
+        const mult = a * b;
+        const div = b !== 0 ? (a / b).toFixed(2) : "Divisão por zero não é permitida";
+
+        // Calcula os logaritmos (base 10)
+        const logA = a > 0 ? Math.log10(a).toFixed(2) : "Logaritmo não definido";
+        const logB = b > 0 ? Math.log10(b).toFixed(2) : "Logaritmo não definido";
+
+        // Exibe os resultados
+        document.getElementById("resultado").innerHTML = `
+          <p>A soma dos números é igual a: ${soma}</p>
+          <p>A subtração dos números é igual a: ${sub}</p>
+          <p>A multiplicação dos números é igual a: ${mult}</p>
+          <p>A divisão dos números é igual a: ${div}</p>
+          <p>O logaritmo base 10 do primeiro número é: ${logA}</p>
+          <p>O logaritmo base 10 do segundo número é: ${logB}</p>
+        `;
+
+        // Registra os cálculos no console
+        console.log("Operações realizadas:");
+        console.log(`Primeiro número: ${a}`);
+        console.log(`Segundo número: ${b}`);
+        console.log(`Soma (${a} + ${b}): ${soma}`);
+        console.log(`Subtração (${a} - ${b}): ${sub}`);
+        console.log(`Multiplicação (${a} * ${b}): ${mult}`);
+        console.log(`Divisão (${a} / ${b}): ${div}`);
+        console.log(`Logaritmo base 10 do primeiro número (${a}): ${logA}`);
+        console.log(`Logaritmo base 10 do segundo número (${b}): ${logB}`);
+      }
+    </script>
+  </main>
+</body>
+</html>

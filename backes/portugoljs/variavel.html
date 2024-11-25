@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troca de Variáveis</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <main>
+    <h1>Troca de Variáveis</h1>
+  
+    <p>Digite os valores para as variáveis e veja o resultado da troca.</p>
+
+    <label for="valorA">Valor de A:</label>
+    <input type="number" id="valorA" value="5">
+    <label for="valorB">Valor de B:</label>
+    <input type="number" id="valorB" value="10">
+    
+    <button onclick="trocarVariaveis()">Trocar Variáveis</button>
+
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+
+    <script>
+      function trocarVariaveis() {
+      
+        let a = parseInt(document.getElementById("valorA").value);
+        let b = parseInt(document.getElementById("valorB").value);
+
+        document.getElementById("resultado").innerText = `Antes da troca: A = ${a}, B = ${b}`;
+
+        
+        let temp = a;
+        a = b;
+        b = temp;
+
+   
+        document.getElementById("resultado").innerText += `\nDepois da troca: A = ${a}, B = ${b}`;
+      }
+    </script>
+  </main>
+</body>
+</html>

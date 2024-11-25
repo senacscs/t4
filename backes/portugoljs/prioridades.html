@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles7.css">
+  <title>Ordem das Operações</title>
+ 
+</head>
+<body>
+  <main>
+    <h1>Ordem das Operações</h1>
+    <p>Veja como a ordem das operações afeta o resultado:</p>
+
+    <button onclick="mostrarResultados()">Calcular Operações</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function mostrarResultados() {
+        let resultado = "";
+
+        // Operação: 5 + 4 * 2
+        let operacao1 = 5.0 + 4.0 * 2.0;
+        resultado += `<p>Operação: 5 + 4 * 2 = ${operacao1}</p>`;
+
+        // Operação: (5 + 4) * 2
+        let operacao2 = (5.0 + 4.0) * 2.0;
+        resultado += `<p>Operação: (5 + 4) * 2 = ${operacao2}</p>`;
+
+        // Operação: 1 + 2 / 3 * 4
+        let operacao3 = 1.0 + 2.0 / 3.0 * 4.0;
+        resultado += `<p>Operação: 1 + 2 / 3 * 4 = ${operacao3}</p>`;
+
+        // Operação: (1 + 2) / (3 * 4)
+        let operacao4 = (1.0 + 2.0) / (3.0 * 4.0);
+        resultado += `<p>Operação: (1 + 2) / (3 * 4) = ${operacao4}</p>`;
+
+        // Exibe os resultados na div de resultado
+        document.getElementById("resultado").innerHTML = resultado;
+      }
+    </script>
+  </main>
+</body>
+</html>

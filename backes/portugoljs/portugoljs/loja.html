@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles11.css">
+  <title>Recibo de Compra</title>
+ 
+</head>
+<body>
+  <main>
+    <h1>Recibo de Compra</h1>
+    
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    
+    <input type="number" id="quantidadeParafusos" placeholder="Quantidade de parafusos">
+    <input type="number" id="quantidadeArruelas" placeholder="Quantidade de arruelas">
+    <input type="number" id="quantidadePorcas" placeholder="Quantidade de porcas">
+
+    <button onclick="calcularTotal()">Calcular Total</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      // Definição dos preços dos produtos como constantes
+      const PRECO_PARAFUSO = 1.50;
+      const PRECO_ARRUELA = 2.00;
+      const PRECO_PORCA = 2.50;
+
+      function calcularTotal() {
+        // Captura os valores dos inputs
+        const nome = document.getElementById("nome").value;
+        const quantidadeParafusos = parseInt(document.getElementById("quantidadeParafusos").value) || 0;
+        const quantidadeArruelas = parseInt(document.getElementById("quantidadeArruelas").value) || 0;
+        const quantidadePorcas = parseInt(document.getElementById("quantidadePorcas").value) || 0;
+
+        // Cálculo dos valores a serem pagos
+        const totalParafusos = PRECO_PARAFUSO * quantidadeParafusos;
+        const totalArruelas = PRECO_ARRUELA * quantidadeArruelas;
+        const totalPorcas = PRECO_PORCA * quantidadePorcas;
+
+        // Total final
+        const totalPagar = totalParafusos + totalArruelas + totalPorcas;
+
+        // Exibe o resultado formatado
+        document.getElementById("resultado").innerHTML = `
+          <p><strong>Cliente:</strong> ${nome}</p>
+          <p>===============================</p>
+          <p><strong>Parafusos:</strong> ${quantidadeParafusos}</p>
+          <p><strong>Arruelas:</strong> ${quantidadeArruelas}</p>
+          <p><strong>Porcas:</strong> ${quantidadePorcas}</p>
+          <p>===============================</p>
+          <p><strong>Total a pagar:</strong> R$ ${totalPagar.toFixed(2)}</p>
+        `;
+      }
+    </script>
+  </main>
+</body>
+</html>
