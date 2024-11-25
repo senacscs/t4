@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Dias</title>
+</head>
+<body>
+    <input type="number" id="ano" placeholder="Digite o ano">
+  <button onclick="calcularDias()">Calcular</button>
+  <p id="resultado"></p>
+  <p id="resultado"></p>
+    
+    <script>
+function calcularDias() {
+    const anoAtual = parseInt(document.getElementById("ano").value);
+
+    const qtdAnosBissextos = Math.floor(anoAtual / 4) - Math.floor(anoAtual / 100) + Math.floor(anoAtual / 400);
+
+    const dias = (anoAtual - 1) * 365 + qtdAnosBissextos;
+
+    document.getElementById("resultado").textContent = `Já se passaram ${dias} dias desde 01/01/0001`;
+  }
+    </script>
+</body>
+</html>

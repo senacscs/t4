@@ -1,0 +1,28 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Altura</title>
+</head>
+<body>
+    <input type="number" id="altura1" placeholder="Digite a altura da primeira pessoa">
+    <input type="number" id="altura2" placeholder="Digite a altura da segunda pessoa">
+    <input type="number" id="altura3" placeholder="Digite a altura da terceira pessoa">
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <p id="resultado"></p>
+    <script>
+function calcularMedia() {
+	
+	const altura1 = parseFloat(document.getElementById("altura1").value);
+	const altura2 = parseFloat(document.getElementById("altura2").value);
+	const altura3 = parseFloat(document.getElementById("altura3").value);
+
+	const media = (altura1 + altura2 + altura3) / 3;
+
+	const mediaArredondada = media.toFixed(2);
+
+	document.getElementById("resultado").textContent = `A média das alturas é: ${mediaArredondada} metros`;
+  }
+    </script>
+</body>
+</html>

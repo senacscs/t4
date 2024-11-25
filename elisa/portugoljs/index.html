@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Portugol JS</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Portugol JS</h1>
+        
+        <button onclick="texto()">Clique</button>
+        
+        <div style="margin-top: 20px;">
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <button onclick="nomedigitado()">Mostrar Nome</button>
+        </div>
+
+        <p id="resultado"></p>
+
+        <div style="margin-top: 20px;">
+            <a href="olamundo.html">Olá Mundo</a>
+            <a href="altura.html">Altura média</a>
+            <a href="dias.html">Quantos Dias</a>
+            <a href="divisoes.html">Divisões Inteiras</a>
+            <a href="loja.html">Loja de Ferramentas</a>
+            <a href="maioridade.html">Maioridade</a>
+            <a href="numerodigitado.html">Número Digitado</a>
+            <a href="opsimples.html">Operação Simples</a>
+            <a href="potencia.html">Potencia e Raiz</a>
+            <a href="prioridades.html">Prioridades</a>
+            <a href="variavel.html">Variável</a>
+
+            
+          
+           
+        
+
+        </div>
+    </div>
+
+    <script>
+        function texto() {
+            document.getElementById("resultado").innerText = "Confira os codigos em javascript!";
+        }
+
+        function nomedigitado() {
+            const nome = document.getElementById("nome").value;
+            document.getElementById("resultado").innerText = `Olá, ${nome}!`;
+        }
+    </script>
+</body>
+</html>
