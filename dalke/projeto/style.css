@@ -121,39 +121,6 @@ img {
   border-radius: 15px;
 }
 
-.custom-btn {
-  width: 100px;
-  height: 30px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 30px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 470;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-  position: relative;
-  left: 40%;
-  
- 
-}
- 
-/* 1 */
-.btn-1 {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(128, 128, 128, 0.541) 0%, rgba(150, 150, 150, 0.55) 100%);
-  border: none;
-}
-.btn-1:hover {
-   background: #000000ce;
-background: linear-gradient(0deg, #000000d4 100%);
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,39 +147,93 @@ background: linear-gradient(0deg, #000000d4 100%);
   color: #555;
   line-height: 1.5;
 }
-  
 
 
 
 
 
-@media (max-width: 900px) {
-  .profile-img {
-    float: none;
-    margin: 0 auto;
-    width: 600px;
-  }
 
-  .about-me {
-    max-width: 600px;
-    margin: 0 auto;
-  }
+.menu-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
-@media (max-width: 780px) {
-  html {
-    font-size: .85em;
-  }
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 30px; 
+  color: white; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .main-nav li {
-    margin: 0 5px;
-  }
+.menu-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  position: relative;
+}
 
-  .page {
-    margin-top: 20px;
-  }
+.menu-icon div::before,
+.menu-icon div::after {
+  content: '';
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+}
 
-  .profile-img {
-    margin-top: 25px;
-  }
+.menu-icon div::before {
+  top: -10px;
+}
+
+.menu-icon div::after {
+  top: 10px;
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu.open {
+  transform: scale(1);
+}
+
+.menu button {
+  width: 100%;
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #1b1818;
+  cursor: pointer;
+  text-align: left;
+}
+
+.menu button:last-child {
+  border-bottom: none;
+}
+
+.menu button:hover {
+  background-color: #867a7a;
 }

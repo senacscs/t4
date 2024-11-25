@@ -24,3 +24,24 @@
   // Configuração inicial ao carregar a página
   const lang = getSavedLanguage() || detectBrowserLanguage();
   setLanguage(lang);
+
+
+  
+
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('open');
+}
+
+document.querySelectorAll('.menu button').forEach(button => {
+    button.addEventListener('click', () => {
+        const menu = document.getElementById('menu');
+        menu.classList.remove('open');
+    });
+});
+
+
+
+
+  

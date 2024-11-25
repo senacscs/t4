@@ -11,10 +11,27 @@
 </head>
 
 <body>
-<br>
-<br>
-    <button class="custom-btn btn-1" onclick="setLanguage('pt')">Português</button>
-    <button class="custom-btn btn-1" onclick="setLanguage('en')">English</button>
+
+
+
+    <div class="menu-container">
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#127760; <!-- Globo representando o idioma -->
+        </div>
+            <div></div>
+        </div>
+        <div class="menu" id="menu">
+             <button class="custom-btn btn-6" onclick="setLanguage('pt')">Português</button>
+            <button class="custom-btn btn-6" onclick="setLanguage('en')">English</button>
+
+            <!-- <button onclick="alert('Botão 1 clicado!')">Botão 1</button>
+            <button onclick="alert('Botão 2 clicado!')">Botão 2</button> -->
+        </div>
+    </div>
+
+
+
+
 
     <div class="lang" id="pt">
         <h1 class="title">Sistemas Sustentáveis de Manejo Pecuário: Implementação do Pastoreio Voisin para o Consumo
@@ -25,9 +42,10 @@
             <ul>
                 <li><a id="introducao-page" data-page="introducao" href="index.html">Introdução e justificativa</a></li>
                 <li><a href="problema.html" id="problema-page" data-page="problema">Problema e Hipóteses</a></li>
-                <li><a href="objetivo.html" id="objetivo-page" data-page="objetivo">Objetivo e Resultados Esperados</a></li>
+                <li><a href="objetivo.html" id="objetivo-page" data-page="objetivo">Objetivo e Resultados Esperados</a>
+                </li>
                 <li><a href="pq.html" id="pq-page" data-page="pq">Sobre o Sistema</a></li>
-        
+
             </ul>
         </nav>
         <section data-page-name="about" class="page default">
@@ -51,14 +69,14 @@
                 adote práticas que promovam a sustentabilidade, como o sistema Voisin, que diminui o desgaste do solo e
                 aumenta a eficiência da pastagem. Essa abordagem melhora a saúde do solo e da vegetação, contribuindo
                 para um ecossistema mais equilibrado e produtivo.
+                <br>
+                <br>
 
                 </p>
             </div>
         </section>
     </div>
-<br>
-<br>
-<br>
+
 
 
 
@@ -68,7 +86,8 @@
 
 
     <div class="lang" id="en">
-        <h1 class="title">Sustainable Livestock Management Systems: Implementing Voisin Grazing for Responsible Consumption of Natural Resources
+        <h1 class="title">Sustainable Livestock Management Systems: Implementing Voisin Grazing for Responsible
+            Consumption of Natural Resources
         </h1>
         <span class="tagline">Guilherme Dalke Franck</span>
         <nav class="main-nav">
@@ -106,7 +125,9 @@
         </section>
     </div>
 
-        <script src="java.js"></script>
+    <script src="java.js"></script>
+
+
 </body>
 
 </html>
