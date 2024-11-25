@@ -8,7 +8,7 @@ function getBaseLog(x, y) {
   
   console.log(getBaseLog(5, 625));
   
-  function operacoesSimples() {
+  function calcular() {
 	let a, b, soma, sub, mult, div, log;
 	a = parseInt(document.getElementById("a").value);
 	b = parseInt(document.getElementById("b").value);
