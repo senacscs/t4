@@ -1,42 +1,176 @@
-body{
-    background-color:  #eee5c4;
-}
-hr{
-    height: 20px;
-    background-color:#453615;
-    border-color:#453615;
-}
-h5{ 
-    background-color: #453615;
-}
-h1{
-    color: #eee5c4;
-    text-align: center;
-    background-color: #453615;
-}
-img{ 
-    background-attachment: fixed;
-    background-color: #453615;
-    display: block;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
 }
-strong{
-    color: #180809;
+
+.exemplo {
+  text-align: center;
 }
-h2{
-color: #b0721e;
-text-align: center;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:  #eee5c4;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-p{
-    color: #0c0000;
-}
-header{
-    background-color: #453615;
-    background-attachment: fixed;
-}
-.ods {
-    width: 200px;
-    margin: 10px;
-    border-radius: 10px;
-    pointer-events: none;
-}
+
+section {
+  padding-block: min(20vh, 2rem);
+  width: calc(min(76.5rem, 90%));
+  margin-inline: auto;
+  color: #111;
+
+  h2 {
+    letter-spacing: 0.025em;
+    font-size: clamp(2rem, 1.8125rem + 0.75vw, 2.6rem);
+  }
+  h5{
+    color: #b0721e;
+  }
+  h6{
+    color: #b0721e;
+    font-size: clamp(2rem, 1.8125rem + 0.75vw, 2.6rem);
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .container {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+
+    .card {
+      &:nth-child(1) .box .icon .iconBox {
+        background: #c38a53;
+      }
+      &:nth-child(2) .box .icon .iconBox {
+        background: #875824;
+      }
+      &:nth-child(3) .box .icon .iconBox {
+        background: #c08103;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.625rem;
+
+        li {
+          text-transform: uppercase;
+          background: var(--clr-tag);
+          color: #282828;
+          font-weight: 700;
+          font-size: 0.8rem;
+          padding: 0.375rem 0.625rem;
+          border-radius: 0.188rem;
+        }
+
+        .branding {
+          color: darken(#c38a53, 40%);
+        }
+
+        .packaging {
+          color: darken(#875824, 40%);
+        }
+
+        .marketing {
+          color: darken(#c08103, 40%);
+        }
+      }
+
+      .content {
+        padding: 0.938rem 0.625rem;
+
+        h3 {
+          text-transform: capitalize;
+          font-size: clamp(1.5rem, 1.3909rem + 0.4364vw, 1.8rem);
+        }
+
+        p {
+          margin: 0.625rem 0 1.25rem;
+          color: #565656;
+        }
+      }
+    }
+
+    .card-inner {
+      position: relative;
+      width: inherit;
+      height: 18.75rem;
+      background: var(--clr);
+      border-radius: 1.25rem;
+      border-bottom-right-radius: 0;
+      overflow: hidden;
+
+      .box {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 1.25rem;
+        overflow: hidden;
+
+        .imgBox {
+          position: absolute;
+          inset: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .icon {
+          position: absolute;
+          bottom: -0.375rem;
+          right: -0.375rem;
+          width: 6rem;
+          height: 6rem;
+          background: var(--clr);
+          border-top-left-radius: 50%;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: -1.25rem;
+            right: 0.375rem;
+            background: transparent;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            box-shadow: 0.313rem 0.313rem 0 0.313rem var(--clr);
+          }
+
+          .iconBox {
+            position: absolute;
+            inset: 0.625rem;
+            background: #282828;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+
+            span {
+              color: #fff;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
