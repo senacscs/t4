@@ -164,3 +164,51 @@ body {
   }
 }
 
+/* Estilo do Rodapé */
+.footer {
+  background-color: #4CAF50; /* Cor verde */
+  color: white;
+  text-align: center;
+  padding: 40px 0; /* Aumenta o espaço vertical */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Não é mais necessário, pois o rodapé se posiciona naturalmente */
+  margin: 0; /* Remove margens */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Aumenta o espaço entre os ícones */
+  margin-top: 20px; /* Adiciona espaço acima dos ícones */
+}
+
+.social-icons a {
+  color: white;
+  font-size: 36px; /* Aumenta o tamanho dos ícones */
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* Aumenta ao passar o mouse */
+}
+
+/* Estilo para o conteúdo da página */
+/* body {
+  padding-bottom: 100px; 
+} */
+
+/* Estilo para a seção de contato */
+#contato {
+  padding-top: 100px; /* Adiciona espaço acima da seção de contato */
+  /* Outros estilos para a seção de contato */
+}
