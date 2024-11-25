@@ -15,7 +15,7 @@
     z-index: 5;
 }
 .ini{
-    margin-top: 66px;
+    margin-top: 54px;
 }
 .cientista {
     width: 55%;
@@ -791,5 +791,19 @@ a {
     .pdf{
         border-color: rgba(2, 2, 176, 0.253);
         height: 220px;
+    }
+}
+
+footer{
+    /* position: fixed; */
+    background-color: rgb(43, 43, 227);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+
+    bottom{
+        font-family: 'Gill Sans MT';
+        background-color: rgba(51, 119, 215, 0.954);
     }
 }
