@@ -25,8 +25,8 @@
 function calcule() {
 // real a, b, soma, sub, mult, div
 let a, b, soma, sub, mult, div
-a = document.getElementById("a").value;
-b = document.getElementById("b").value;
+a = parseFloat(document.getElementById("a").value);
+b = parseFloat(document.getElementById("b").value);
 soma = a + b
 sub  = a - b
 mult = a * b
