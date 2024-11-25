@@ -1,19 +1,21 @@
-function calcular() {
-   
-    const num1 = parseFloat(document.getElementById("num1").value);
-    const num2 = parseFloat(document.getElementById("num2").value);   
-
-
-
-    const soma = num1 + num2;
-    const subtracao = num1 - num2;
-    const multiplicacao = num1 * num2;
-    const divisao = num1 / num2;
-
-    document.getElementById("resultado").textContent = `
-        A soma dos números é igual a: ${soma}
-        A subtração dos números é igual a: ${subtracao}
-        A multiplicação dos números é igual a: ${multiplicacao}
-        A divisão dos números é igual a: ${divisao}
-    `;
-}
+function getBaseLog(x, y) {
+	return Math.log(y) / Math.log(x);
+  }
+  
+  function operacoesSimples() {
+	let a, b, soma, sub, mult, div, log;
+	a = parseInt(document.getElementById("a").value);
+	b = parseInt(document.getElementById("b").value);
+  
+	soma = a + b;
+	sub = a - b;
+	mult = a * b;
+	div = a / b;
+	log = getBaseLog(a, b);
+  
+	document.write("A soma dos números é igual a: ", soma);
+	document.write("<br>A subtração dos números é igual a: ", sub);
+	document.write("<br>A multiplicação dos números é igual a: ", mult);
+	document.write("<br>A divisão dos números é igual a: ", div);
+	document.write("<br>O log de base " + a + " do número " + b + " é igual a: ", log);
+  }

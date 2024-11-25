@@ -17,7 +17,7 @@
  * 	Logo após, pede ao usuário que informe sua idade e calcula quantos anos faltam
  * 	para ele atingir a maioridade.
  * 
- * Autores:atotao
+ * Autores:
  * 
  * 	Giordana Maria da Costa Valle
  * 	Carlos Alexandre Krueger
@@ -32,7 +32,6 @@ function calcularAnos() {
 
 	// Calcula os anos faltantes
 	const anosFaltantes = MAIORIDADE - idade;
-
 
 	// Exibe o resultado
 	if (anosFaltantes > 0) {
