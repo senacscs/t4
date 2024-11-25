@@ -38,6 +38,7 @@ function matematica() {
     log(coiso,"subtração: " + (input-input2));
     log(coiso,"multiplicação: " + (input*input2));
     log(coiso,"divisão: " + (input/input2));
+    log(coiso,`log_${input}(${input2}) = ${Math.log(input2)/Math.log(input)}`);
 }
 
 // Operação: 5 + 4 * 2 = 13
