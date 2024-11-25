@@ -47,3 +47,10 @@ function multi(){
     let resultado = fator1 + fator2;
     document.getElementById('res').innerText = `O valor de ${fator1} mais ${fator2} é = ${resultado}`
   }
+
+  function Log() {
+    let fator1 = parseInt(document.getElementById('valor1').value);
+    let fator2 = parseInt(document.getElementById('valor2').value);
+    let resultado = Math.log(fator1) / Math.log(fator2);
+    document.getElementById('res').innerText = `log de ${fator1} na base ${fator2} é ${resultado}`
+    }
