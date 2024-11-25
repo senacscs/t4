@@ -23,17 +23,21 @@
 // 	}
 // }
 
-function verificar(){
-    let maioridade = 18
-    let idade = document.getElementById('idade').value;
-    let anos = maioridade - idade;
+function inicio() {
+    const MAIORIDADE = 18;
 
-    if(anos > 0)
-        {
-        document.getElementById('res').innerText = `falta(m) ${anos} para atingir a maioridade`
-    }
-    else
-    {
-        document.getElementById('res').innerText = `você ja atingiu a maioridade`
+    let idade;
+    let anos;
+
+    idade = parseInt(prompt("Digite sua idade: "));
+
+    // Calcula quantos anos faltam para atingir a maioridade
+    anos = MAIORIDADE - idade;
+
+    if (anos > 0) {
+        alert("Falta(m) ${anos} ano(s) para você atingir a maioridade");
+    } else {
+        alert("Você já atingiu a maioridade");
     }
 }
+

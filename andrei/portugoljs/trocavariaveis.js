@@ -32,15 +32,21 @@
 // 	}
 // }
 
-function troca(){
-    let v3;
-    let v1 = document.getElementById('var1').value;
-    let v2 = document.getElementById('var2').value;
+function variaveis () {
+    let a, b, aux
 
-    v3 = v1;
-    v1 = v2; 
-    v2 = v3
+    a = document.getElementById("a").value;
+    b = document.getElementById("b").value;
+    // leia(a)
+    // leia(b)
+    // leia(aux)
+    // console.clear()
 
-    document.getElementById('res').innerText = `Valores antes da troca ${v2} e ${v1} \n valores após a troca ${v1} e ${v2}`;
+    aux = a
+    a = b
+    b = aux
 
+    alert("Variáveis foram trocadas!")
+    document.write("Os valores nesta troca foram: A = ", b, '<br>');
+    document.write("Os valores nesta troca foram: B = ", a, '<br>');
 }
