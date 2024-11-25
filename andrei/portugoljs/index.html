@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portugol</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .coluna {
+            width: 30%;
+        }
+
+        .coluna input, .coluna button {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PORTUGOL PARA JAVASCRIPT</h1>
+        <p class="desc">Botão azul liga o monitor</p>
+    </header>
+    <main>
+        <div class="borda">
+            <div id="Monitor" class="monitor">
+                <p id="res"></p>
+            </div>
+            <div class="btnLigar" onclick="ligar()" id="BTN_ligar"></div>
+        </div>
+
+        <div class="container">
+            <!-- Primeira coluna -->
+            <div class="coluna">
+                <p id="res2"></p>
+                <button onclick="bdia()">Clica</button>
+                <input maxlength="8" placeholder="Adiciona um numero ai" id="ipt" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="nmr()">dps clica aq</button>
+            </div>
+
+            <!-- Segunda coluna -->
+            <div class="coluna">
+                <input maxlength="8" type="text" placeholder="poem teu nome" id="nome" oninput="limitarCaracteres(this, 8)">
+                <button onclick="sim()">Clica tb</button>
+                <input maxlength="8" type="text" id="valor1" placeholder="primeiro numero" oninput="limitarCaracteres(this, 8)">
+                <input maxlength="8" type="number" id="valor2" placeholder="segundo numero" oninput="limitarCaracteres(this, 8)">
+                <button id="div" onclick="dividir()">÷</button>
+                <button id="soma" onclick="somar()">+</button>
+                <button onclick="multi()" id="multi">X</button>
+                <button onclick="subtrair()" id="sub">-</button>
+            </div>
+
+            <!-- Terceira coluna -->
+            <div class="coluna">
+                <input maxlength="8" type="number" id="valor0" oninput="limitarCaracteres(this, 8)">
+                <button onclick="conta()">Calcular potência e raiz</button>
+                <input maxlength="8" id="var1" placeholder="insira um valor para trocar" type="number" oninput="limitarCaracteres(this, 8)">
+                <input maxlength="8" placeholder="insira mais um valor" id="var2" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="troca()">Trocar os numeros</button>
+                <input maxlength="8" id="idade" placeholder="Idade" type="number" oninput="limitarCaracteres(this, 8)">
+                <button onclick="verificar()">verificação</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <script src="./js/olamundo.js"></script>
+        <script src="./js/nmrdigitado.js"></script>
+        <script src="./js/u name.js"></script>
+        <script src="./js/operações.js"></script>
+        <script src="./js/raizEpotencia.js"></script>
+        <script src="./js/variaveis.js"></script>
+        <script src="./js/idadeNecessaria.js"></script>
+    </footer>
+
+    <script>
+    function ligar() {
+        const ligar = document.getElementById('Monitor');
+        const button = document.getElementById('BTN_ligar');
+        
+        ligar.classList.toggle('ligaron');
+        
+        if (ligar.classList.contains('ligaron')) {
+            button.innerHTML = `<style>
+                .btnLigar {
+                    background-color: red;
+                }
+            </style>`;
+        } else {
+            button.innerHTML = `<style>
+                .btnLigar {
+                    background-color: blue;
+                }
+            </style>`;
+        }
+    }
+
+    function limitarCaracteres(input, max) {
+        if (input.value.length > max) {
+            input.value = input.value.slice(0, max);
+        }
+    }
+    </script>
+</body>
+</html>
