@@ -1,0 +1,30 @@
+* {
+    text-align: center;
+}
+
+a {
+    color: #f5d02a;
+    text-decoration: none;
+  }
+ 
+  /* a:visited {
+    color: rgba(181, 117, 157, 0.9);
+  } */
+ 
+  a:hover {
+    color: rgba(249, 217, 4, 0.9);
+  }
+ 
+  a:active {
+    color: rgba(181, 117, 157, 0.9);
+  }
+
+
+h3 {
+  color: #dc57c6;
+}
+
+h1 { 
+color: rgb(234, 36, 1);
+
+}
