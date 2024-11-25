@@ -1,8 +1,8 @@
 body {
-    background-color: black;
+    background-color: rgb(11, 19, 28);
 }
 .con  {
-    background-color: rgb(212, 178, 4);
+    background-color: rgb(255, 217, 4);
     width: 25%;
     height: 5%;
     margin-left: 70px;
@@ -10,12 +10,15 @@ body {
     padding: 10px;
     border-radius: 30px ;  
     width: 300px;
+    text-align: center;
+    margin-left: 37%;
   }
   a {
-    color: white;
+    color: rgb(0, 0, 0);
   }
   h1 {
     color: white;
     font-size: 600%;
     text-align: center;
   }
+ 
