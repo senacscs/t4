@@ -212,3 +212,33 @@ body {
   padding-top: 100px; /* Adiciona espaço acima da seção de contato */
   /* Outros estilos para a seção de contato */
 }
+
+/* Estilo da Seção Currículo */
+.curriculo {
+  background-color: #fff; /* Fundo branco para a seção */
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px 0; /* Margem superior e inferior */
+}
+
+.curriculo button {
+  background-color: #4CAF50; /* Cor do botão */
+  border: none; /* Remove borda padrão */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.curriculo button:hover {
+  background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+.curriculo a {
+  text-decoration: none; /* Remove sublinhado do link */
+  color: inherit; /* Herda a cor do botão */
+}
