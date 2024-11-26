@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* This class is added on scroll */
+.fixed {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    z-index: 1;
+}
+
+body {
+    color: #fff;
+    font-family: 'open-sans-bold', AvenirNext-Medium, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Navigation Settings */
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+
+nav li {
+    display: inline-block;
+    padding: 24px 10px;
+}
+
+nav li a {
+    color: #757575;
+    text-transform: uppercase;
+}
+
+section {
+    height: 100vh;
+    align-content: center;
+    align-items: center;
+}
+
+/* Screens Settings */
+#screen0 {
+    background-image: url(mata.jpg);
+}
+
+#screen0 p {
+    padding-top: 200px;
+}
+
+#screen1 {
+    background: #31572c;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#screen2 {
+    background: #4f772d;
+}
+
+#screen3 {
+    background: #90a955;
+}
+
+#screen4 {
+    background: #a1c181;
+}
+
+#screen5 {
+    background: #d4e09b;
+}
+
+.title {
+    font-size: 90px;
+    font-family: "Bebas Neue", serif;
+}
+
+
+
+@media only screen and (max-width: 520px) {
+
+    nav li {
+        padding: 24px 4px;
+    }
+
+    nav li a {
+        font-size: 14px;
+    }
+
+}
