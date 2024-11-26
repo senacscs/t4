@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(223, 47, 88);
+}
+h1{
+ color: rgb(123, 11, 74);
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+section{
+    color: rgb(123, 11, 74);
+    margin: 20px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style:normal;
+    font-size: 20px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255); 
+
+
+}
+h2,p{
+    color: white;
+}
+h3{
+    color: rgb(88, 3, 37);
+}
