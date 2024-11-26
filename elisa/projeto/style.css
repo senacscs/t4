@@ -792,7 +792,12 @@ a {
         border-color: rgba(2, 2, 176, 0.253);
         height: 220px;
     }
+
+    .pf{
+        color: white;
+    }
 }
+
 
 footer{
     /* position: fixed; */
