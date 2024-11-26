@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    max-width:100%;
+    color:#fff;
+  }
+
+  #portfolio{
+    background:url(https://images.unsplash.com/photo-1449709992276-24bbca940809?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c5de67a556b843958d279d2b74a09550) no-repeat center center fixed;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -moz-background-size:cover;
+    min-height:100vh;
+    position: relative;
+  }
+  /* end landing page */
+  
+  
+  /* cool name effect */
+  a:hover,a:focus{text-decoration:none;}
+  .svg-wrapper {
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 320px;
+    max-height:60px;
+    cursor:default;
+  }
+
+  .text {
+    font-family: serif;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: black;
+    top: -48px;
+    position: relative;
+    text-align:center;
+  }
+  .svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+  }
+  /* end cool name effect */
+  #port-wrapper{
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.3);
+    position:absolute;
+  }
+  .text-2 h2{
+    font-family: serif;
+    font-size: 30px;
+    color: #fff;
+  }
+  button{
+    background:none;
+    border:none;
+    padding:0 20px;
+  }
+  button:hover, button:focus{
+    background:rgba(0,0,0,0.4);
+    outline:none;
+  }
+  .content{
+    margin:50px;
+    margin-top:75px;
+    margin-bottom:0;
+  }
+  #text-changer-1{
+    max-width:750px;  
+    margin-left:75px;
+  }
+  #text-changer-3 .social{
+    margin:35px;
+  }
+  #text-changer-3 .fa{
+    margin:5px;
+    color:#fff;
+  }
+  #text-changer-3 .fa:hover{
+    color:#2e8ece;
+  }
+  #text-changer-2{
+    text-align:center;
+    height:100%;
+  }
+  .jump {
+    text-decoration: none;
+  }
+  .ft1 {
+    width: 200px;
+    height: 200px;
+    display:inline-flexbox;
+    border-radius: 50%;
+    margin-right: 7%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .ft2 {
+    margin-left: 10%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .ft1:hover {
+    transform: scale(1.2);
+  }
+  .title1 {
+    padding-top: 2%;
+    font-size: 75px;
+    max-width: 90%;
+  }
+.subtitle {
+  height:100%; width:100%;
+  padding-top: 5%;
+  font-size: 1.28rem;
+  transition: transform 0.5s ease-in-out;
+  margin-left: 3vh;
+}
+
+.subtitle:hover {
+  transform: scale(1.1);
+}
