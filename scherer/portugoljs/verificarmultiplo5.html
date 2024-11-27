@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar Múltiplo de 5</title>
+<style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 20px;
+
+            padding: 0;
+
+            background-color: #f4f4f9;
+
+            text-align: center;
+
+        }
+
+        h1 {
+
+            color: #333;
+
+        }
+
+        input {
+
+            width: 100px;
+
+            padding: 5px;
+
+            margin: 10px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            text-align: center;
+
+        }
+
+        button {
+
+            padding: 10px 20px;
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            margin-top: 10px;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        p {
+
+            font-size: 16px;
+
+            color: #555;
+
+        }
+
+        .resultado {
+
+            margin-top: 20px;
+
+            font-weight: bold;
+
+            color: #000;
+
+        }
+</style>
+</head>
+<body>
+<h1>Verificar se é Múltiplo de 5</h1>
+<p>Digite um número para verificar se é múltiplo de 5:</p>
+<input type="number" id="numeroInput" placeholder="Número">
+<br>
+<button onclick="verificarMultiplo()">Verificar</button>
+<div class="resultado" id="resultado"></div>
+ 
+    <script>
+
+        function verificarMultiplo() {
+
+            const numero = parseInt(document.getElementById("numeroInput").value);
+
+            const resultadoDiv = document.getElementById("resultado");
+ 
+            if (isNaN(numero)) {
+
+                resultadoDiv.textContent = "Por favor, insira um número válido.";
+
+                return;
+
+            }
+ 
+            if (numero % 5 === 0) {
+
+                resultadoDiv.textContent = `O número ${numero} é múltiplo de 5.`;
+
+            } else {
+
+                resultadoDiv.textContent = `O número ${numero} não é múltiplo de 5.`;
+
+            }
+
+        }
+</script>
+</body>
+</html>
+
+ 

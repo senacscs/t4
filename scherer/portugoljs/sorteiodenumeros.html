@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorteio de Números</title>
+<style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 20px;
+
+            padding: 0;
+
+            background-color: #f4f4f9;
+
+            text-align: center;
+
+        }
+
+        h1 {
+
+            color: #333;
+
+        }
+
+        input {
+
+            width: 100px;
+
+            padding: 5px;
+
+            margin: 10px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            text-align: center;
+
+        }
+
+        button {
+
+            padding: 10px 20px;
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            margin-top: 10px;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        p {
+
+            font-size: 16px;
+
+            color: #555;
+
+        }
+
+        .resultado {
+
+            margin-top: 20px;
+
+            font-weight: bold;
+
+            color: #000;
+
+        }
+
+        .erro {
+
+            color: red;
+
+        }
+</style>
+</head>
+<body>
+<h1>Verificar Sorteio de Números</h1>
+<p>Informe um número entre 0 e 6 para ver se ele corresponde ao sorteado:</p>
+<input type="number" id="numeroInput" min="0" max="6" placeholder="Número">
+<br>
+<button onclick="verificarSorteio()">Verificar Sorteio</button>
+<div class="resultado" id="resultado"></div>
+ 
+    <script>
+
+        function verificarSorteio() {
+
+            const numeroDigitado = parseInt(document.getElementById("numeroInput").value);
+
+            const resultadoDiv = document.getElementById("resultado");
+ 
+            // Gera um número aleatório entre 0 e 6
+
+            const numeroSorteado = Math.floor(Math.random() * 7);
+ 
+            // Verifica se o número digitado é válido
+
+            if (isNaN(numeroDigitado) || numeroDigitado < 0 || numeroDigitado > 6) {
+
+                resultadoDiv.innerHTML = '<p class="erro">O número digitado deve estar entre 0 e 6.</p>';
+
+                return;
+
+            }
+ 
+            // Verifica se o número digitado é igual ao sorteado
+
+            if (numeroDigitado === numeroSorteado) {
+
+                resultadoDiv.innerHTML = `<p>Os números são iguais!<br><br>Número digitado: ${numeroDigitado}<br>Número sorteado: ${numeroSorteado}</p>`;
+
+            } else {
+
+                resultadoDiv.innerHTML = `<p>Os números são diferentes!<br><br>Número digitado: ${numeroDigitado}<br>Número sorteado: ${numeroSorteado}</p>`;
+
+            }
+
+        }
+</script>
+</body>
+</html>
+
+ 

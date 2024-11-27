@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escolha uma Opção</title>
+<style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 20px;
+
+            padding: 0;
+
+            background-color: #f4f4f9;
+
+            text-align: center;
+
+        }
+
+        h1 {
+
+            color: #333;
+
+        }
+
+        button, select {
+
+            padding: 10px;
+
+            margin: 10px;
+
+            font-size: 16px;
+
+            border-radius: 5px;
+
+            border: 1px solid #ccc;
+
+        }
+
+        .resultado {
+
+            margin-top: 20px;
+
+            font-weight: bold;
+
+            color: #333;
+
+        }
+</style>
+</head>
+<body>
+ 
+    <h1>Escolha uma Opção</h1>
+ 
+    <p>Escolha uma das opções abaixo:</p>
+ 
+    <select id="opcao">
+<option value="1">Elogio</option>
+<option value="2">Ofensa</option>
+<option value="3">Sair</option>
+</select>
+ 
+    <br>
+ 
+    <button onclick="mostrarResultado()">Escolher</button>
+ 
+    <div class="resultado" id="resultado"></div>
+ 
+    <script>
+
+        function mostrarResultado() {
+
+            const opcao = document.getElementById("opcao").value;
+
+            let mensagem = "";
+ 
+            switch(opcao) {
+
+                case "1":
+
+                    mensagem = "Você é lindo(a)!";
+
+                    break;
+
+                case "2":
+
+                    mensagem = "Você é um monstro!";
+
+                    break;
+
+                case "3":
+
+                    mensagem = "Tchau!";
+
+                    break;
+
+                default:
+
+                    mensagem = "Opção Inválida!";
+
+                    break;
+
+            }
+ 
+            document.getElementById("resultado").innerText = mensagem;
+
+        }
+</script>
+ 
+</body>
+</html>
+
+ 

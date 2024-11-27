@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            width: 80px;
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Média</h1>
+    <p>Insira as três médias abaixo:</p>
+    <input type="number" id="media1" placeholder="Média 1" step="0.01">
+    <input type="number" id="media2" placeholder="Média 2" step="0.01">
+    <input type="number" id="media3" placeholder="Média 3" step="0.01">
+    <br>
+    <button onclick="calcularMedia()">Calcular</button>
+    <div class="resultado" id="resultado"></div>
+ 
+    <script>
+        function calcularMedia() {
+            const media1 = parseFloat(document.getElementById("media1").value);
+            const media2 = parseFloat(document.getElementById("media2").value);
+            const media3 = parseFloat(document.getElementById("media3").value);
+            const resultadoDiv = document.getElementById("resultado");
+ 
+            if (isNaN(media1) || isNaN(media2) || isNaN(media3)) {
+                resultadoDiv.textContent = "Por favor, insira todas as médias corretamente.";
+                return;
+            }
+ 
+            const mediaFinal = ((media1 + media2 + media3) / 3).toFixed(2);
+            let resultado = `A média final é: ${mediaFinal}<br>`;
+ 
+            if (media1 < mediaFinal) {
+                resultado += `A média 1 (${media1}) é menor que a média final.<br>`;
+            }
+            if (media2 < mediaFinal) {
+                resultado += `A média 2 (${media2}) é menor que a média final.<br>`;
+            }
+            if (media3 < mediaFinal) {
+                resultado += `A média 3 (${media3}) é menor que a média final.<br>`;
+            }
+ 
+            resultadoDiv.innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
+ 
+ 
