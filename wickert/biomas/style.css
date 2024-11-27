@@ -28,14 +28,11 @@ body {
     z-index: -1;
 
     font-size: 50px;
-    color: #fff;
+    color: #ffffff;
     font-weight: 800;
     text-shadow: 0 0 20px black;
 
 }
-
-
-
 
 section.ondas-box {
     position: relative;
@@ -90,42 +87,60 @@ section.ondas-box {
 /*? Conteudo geral */
 .conteudo {
     padding: 200px;
-    background-color: #fff;
 }
 
 .conteudo h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    color: #ffffff !important;
 }
 
 .conteudo p {
     font-size: 1.5em;
+    color: #ffffff !important;
 }
 /*! Conteudo 01 */
 .conteudo_01 {
-    background-color: #fff;
     padding-left: 200px;
-
 }
 
 .conteudo_01 h1 {
     margin-bottom: 20px;
+    color: black !important;
 }
 
 .conteudo_01 p {
     width: 70%;
-    margin-top: 50px;
+    margin-top: 50px;   
+    color: black !important;
 }
 /*! Conteudo 02 */
-.conteudo_02 {
-    background-color: #fff;
+.conteudo_02 {    
     padding: 0;
     height: 100vh;
     align-content: center;
 }
-
+.gambi {
+    animation: sla1 linear both;
+    animation-timeline: view(block);
+    animation-range: exit -125% cover 50%;
+    transition: 0.1s;
+    background-color: rgba(255, 24, 24, 0);
+    width: auto;
+    height: auto;
+}
+@keyframes sla1 {
+    from {
+        background-color: white;
+        color: black !important;
+    }
+    to {
+        background-color: #21b039;
+        color: white !important;
+    }
+}
 .conteudo_02 h1 {
-    font-size: 2.5em;
+    font-size: 2.5em;    
 }
 
 .conteudo_02 p {
@@ -222,12 +237,13 @@ section.ondas-box {
     text-align: center;
     width: 100%;
     position: absolute;
-    padding: 0;
+    padding: 0;    
+    color: black !important;
     margin-top: 0px !important;
 }
 /*! Conteudo 03 */
 .conteudo_03 {
-    background-color: #fff;
+    background-color: #21b039;
     padding: 200px;
     align-content: center;
 }
@@ -254,7 +270,7 @@ section.ondas-box {
 }
 /*! Conteudo 04 */
 .conteudo_04 {
-    background-color: #fff;
+    background-color: #21b039;
     padding: 200px;
     align-content: center;
 }
@@ -274,7 +290,7 @@ section.ondas-box {
 }
 /*! Conteudo 05 */
 .conteudo_05 {
-    background-color: #fff;
+    background-color: #21b039;
     padding: 50px;
     padding-left: 200px !important;
     padding-bottom: 200px !important;
@@ -295,8 +311,8 @@ section.ondas-box {
 footer {
     width: 100%;
     height: 50px;
-    background-color: #e7e7e7;
-    border: 3px solid rgba(0, 0, 0, 0.204);
+    background-color: #198e2d;
+    border-top: 3px solid rgba(0, 0, 0, 0.204);
     align-content: center;
 }
 
