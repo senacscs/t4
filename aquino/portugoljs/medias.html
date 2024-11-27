@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="number" id="m1" placeholder="Informe a média 1">
+    <input type="number" id="m2" placeholder="Informe a média 2">
+    <input type="number" id="m3" placeholder="Informe a média 3">
+    <button onclick="calcularMedia()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia() {
+            // Obtém as notas digitadas pelo usuário
+            let m1 = parseFloat(document.getElementById("m1").value);
+            let m2 = parseFloat(document.getElementById("m2").value);
+            let m3 = parseFloat(document.getElementById("m3").value); 1 
+
+            // Calcula a média
+            let media = (m1 + m2 + m3) / 3;
+
+            // Arredonda a média para duas casas decimais
+            media = media.toFixed(2);
+
+            // Exibe a média final
+            document.getElementById("resultado").textContent = `A média final é: ${media}`;
+
+            // Compara cada nota com a média
+            if (m1 < media) {
+                document.getElementById("resultado").textContent += "\n A média 1 é menor que a média final";
+            }
+            if (m2 < media) {
+                document.getElementById("resultado").textContent += "\n A média 2 é menor que a média final";
+            }
+            if (m3 < media) {
+                document.getElementById("campoResultado").textContent += "\n A média 3 é menor que a média final";
+            }
+        }
+    </script>
+</body>
+</html>
