@@ -34,3 +34,31 @@ function exemplo1() {
     document.getElementById("saidaContagem").textContent = "Contagem regressiva: " + resultado;
   }
   
+  // Novos exemplos de Desvios Condicionais
+  
+  function maioridadeComMsg() {
+    let idade = parseInt(prompt("Digite sua idade: "));
+    let resultado;
+    
+    if (idade >= 18) {
+      resultado = "Você é maior de idade e pode acessar conteúdos restritos.";
+    } else {
+      resultado = "Você é menor de idade. Acesso restrito.";
+    }
+  
+    document.getElementById("saidaMaioridadeMsg").textContent = resultado;
+  }
+  
+  function anoBissexto() {
+    let ano = parseInt(prompt("Digite um ano para verificar se é bissexto: "));
+    let resultado;
+  
+    if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+      resultado = ano + " é um ano bissexto.";
+    } else {
+      resultado = ano + " não é um ano bissexto.";
+    }
+  
+    document.getElementById("saidaAnoBissexto").textContent = resultado;
+  }
+  
