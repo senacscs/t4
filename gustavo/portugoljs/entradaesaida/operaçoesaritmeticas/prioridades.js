@@ -15,11 +15,10 @@ function calcular() {
     document.getElementById("multiplicacao").textContent = "A multiplicação dos números é igual a: " + mult;
     document.getElementById("divisao").textContent = "A divisão dos números é igual a: " + div;
   
-    // Exibe um alerta com os resultados
-    alert("Resultados:\n" +
-          "Soma: " + soma + "\n" +
-          "Subtração: " + sub + "\n" +
-          "Multiplicação: " + mult + "\n" +
-          "Divisão: " + div);
-  }
-  
+    // Exibe os resultados no console
+    console.log("Resultados:");
+    console.log("Soma:", soma);
+    console.log("Subtração:", sub);
+    console.log("Multiplicação:", mult);
+    console.log("Divisão:", div);
+}

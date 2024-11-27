@@ -10,11 +10,10 @@ function calcular() {
     var div = a / b; // Divide os dois valores
     var logBaseB = Math.log(a) / Math.log(b); // Logaritmo de a na base b
 
-    // Usando document.write para exibir os resultados diretamente no corpo da página
-    document.write("<h2>Resultados:</h2>");
-    document.write("A soma dos números é igual a: " + soma + "<br>");
-    document.write("A subtração dos números é igual a: " + sub + "<br>");
-    document.write("A multiplicação dos números é igual a: " + mult + "<br>");
-    document.write("A divisão dos números é igual a: " + div + "<br>");
-    document.write("O logaritmo de " + a + " na base " + b + " é: " + logBaseB + "<br>");
+    // Atualiza os parágrafos com os resultados
+    document.getElementById("soma").textContent = "A soma dos números é igual a: " + soma;
+    document.getElementById("subtracao").textContent = "A subtração dos números é igual a: " + sub;
+    document.getElementById("multiplicacao").textContent = "A multiplicação dos números é igual a: " + mult;
+    document.getElementById("divisao").textContent = "A divisão dos números é igual a: " + div;
+    document.getElementById("logaritmo").textContent = "O logaritmo de " + a + " na base " + b + " é: " + logBaseB;
 }

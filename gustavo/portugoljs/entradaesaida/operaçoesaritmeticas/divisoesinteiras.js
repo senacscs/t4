@@ -18,4 +18,6 @@ function inicio() {
     // Exibe os resultados no HTML
     document.getElementById("mensagem").textContent = "A metade inteira do número é: " + metade_inteira + 
         ", e o resto da divisão por 3 é: " + resto;
+
+        
 }

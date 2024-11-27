@@ -4,21 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altura média</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Altura média</h1>
 
-    <label for="altura">Digite altura da primeira pessoa: </label>
-    <input type="" id="altura1" placeholder="altura" required>
-    <label for="altura">Digite altura da segunda pessoa: </label>
-    <input type="" id="altura2" placeholder="altura" required>
-    <label for="altura">Digite altura da terceira pessoa: </label>
-    <input type="" id="altura3" placeholder="altura" required>
+    <label for="altura1">Digite altura da primeira pessoa: </label>
+    <input type="number" id="altura1" placeholder="altura" step="0.01" required>
+    <label for="altura2">Digite altura da segunda pessoa: </label>
+    <input type="number" id="altura2" placeholder="altura" step="0.01" required>
+    <label for="altura3">Digite altura da terceira pessoa: </label>
+    <input type="number" id="altura3" placeholder="altura" step="0.01" required>
     <button onclick="verificarAlturaMedia()">Verificar</button>
 
     <p id="resultado"></p>
 
-    <script src="alturamedia.js"></script>
+    <script>
+        function verificarAlturaMedia() {
+            // Obter os valores das alturas
+            var altura1 = parseFloat(document.getElementById("altura1").value.replace(',', '.'));
+            var altura2 = parseFloat(document.getElementById("altura2").value.replace(',', '.'));
+            var altura3 = parseFloat(document.getElementById("altura3").value.replace(',', '.'));
+
+            // Verificar se todos os valores são válidos (números)
+            if (isNaN(altura1) || isNaN(altura2) || isNaN(altura3)) {
+                alert("Por favor, insira valores válidos para todas as alturas.");
+                return;
+            }
+
+            // Calcular a altura média
+            var mediaAltura = (altura1 + altura2 + altura3) / 3;
+
+            // Exibir o resultado com base na altura média
+            alert("A altura média é: " + mediaAltura.toFixed(2));  // Exibe até 2 casas decimais
+        }
+    </script>
 </body>
 </html>
