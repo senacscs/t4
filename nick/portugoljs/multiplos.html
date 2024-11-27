@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles16.css">
+  <title>Verificar Múltiplo de 5</title>
+
+</head>
+<body>
+  <main>
+    <h1>Verificar Múltiplo de 5</h1>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="verificarMultiplo()">Verificar</button>
+    <div id="resultado"></div>
+  </main>
+
+  <script>
+    function verificarMultiplo() {
+      // Obtém o número do campo de entrada
+      const numero = parseInt(document.getElementById("numero").value);
+
+      // Verifica se o número é válido
+      if (isNaN(numero)) {
+        document.getElementById("resultado").textContent = "Por favor, insira um número válido.";
+        return;
+      }
+
+      // Verifica se o número é múltiplo de 5
+      if (numero % 5 === 0) {
+        document.getElementById("resultado").textContent = `O número ${numero} é múltiplo de 5.`;
+      } else {
+        document.getElementById("resultado").textContent = `O número ${numero} não é múltiplo de 5.`;
+      }
+    }
+  </script>
+</body>
+</html>

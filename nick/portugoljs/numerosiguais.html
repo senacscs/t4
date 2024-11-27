@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteio de Números</title>
+  <link rel="stylesheet" href="styles17.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+  <main>
+    <h1>Sorteio de Números</h1>
+    <input type="number" id="numero" placeholder="Digite um número de 0 a 6">
+    <button onclick="verificarSorteio()">Sortear</button>
+    <div id="resultado"></div>
+  </main>
+
+  <script>
+    function verificarSorteio() {
+      // Obtém o número digitado pelo usuário
+      const numDigitado = parseInt(document.getElementById("numero").value);
+
+      // Verifica se o número está no intervalo válido
+      if (isNaN(numDigitado) || numDigitado < 0 || numDigitado > 6) {
+        document.getElementById("resultado").textContent = "O número deve estar entre 0 e 6.";
+        return;
+      }
+
+      // Gera um número aleatório entre 0 e 6
+      const numSorteado = Math.floor(Math.random() * 7);
+
+      // Compara os números e exibe o resultado
+      const mensagem = (numDigitado === numSorteado)
+        ? "Os números são iguais!"
+        : "Os números são diferentes!";
+      
+      document.getElementById("resultado").innerHTML = `
+        <p>${mensagem}</p>
+        <p>Número digitado: ${numDigitado}</p>
+        <p>Número sorteado: ${numSorteado}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

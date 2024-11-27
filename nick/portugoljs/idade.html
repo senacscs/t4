@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles15.css">
+  <title>Verificar Idade</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Verificar Idade</h1>
+    <input type="number" id="idade" placeholder="Digite sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+    <div id="resultado"></div>
+  </main>
+
+  <script>
+    function verificarIdade() {
+      // Obtém a idade do campo de entrada
+      const idade = parseInt(document.getElementById("idade").value);
+
+      // Verifica se a idade é válida
+      if (isNaN(idade) || idade < 0) {
+        document.getElementById("resultado").textContent = "Por favor, insira uma idade válida.";
+        return;
+      }
+
+      // Condição para verificar maioridade
+      if (idade < 18) {
+        document.getElementById("resultado").textContent = "Você é menor de idade.";
+      } else {
+        document.getElementById("resultado").textContent = "Você é maior de idade.";
+      }
+    }
+  </script>
+</body>
+</html>

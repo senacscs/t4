@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="styles21.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Simples</h1>
+        
+        <label for="num1">Primeiro número:</label>
+        <input type="number" id="num1" placeholder="Digite o primeiro número">
+        
+        <label for="num2">Segundo número:</label>
+        <input type="number" id="num2" placeholder="Digite o segundo número">
+        
+        <label for="operator">Operação (+, -, *, /):</label>
+        <input type="text" id="operator" placeholder="Digite o operador">
+        
+        <button onclick="calcular()">Calcular</button>
+        
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcular() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operador = document.getElementById("operator").value;
+            let resultado = 0;
+            let mensagem = "";
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                mensagem = "Por favor, insira números válidos.";
+            } else {
+                if (operador === '+') {
+                    resultado = num1 + num2;
+                } else if (operador === '-') {
+                    resultado = num1 - num2;
+                } else if (operador === '*') {
+                    resultado = num1 * num2;
+                } else if (operador === '/') {
+                    if (num2 === 0) {
+                        mensagem = "Erro: Não é possível dividir por zero.";
+                    } else {
+                        resultado = num1 / num2;
+                    }
+                } else {
+                    mensagem = "Operador inválido! Por favor, insira um operador válido (+, -, *, /).";
+                }
+
+                if (mensagem === "") {
+                    mensagem = `Resultado: ${num1} ${operador} ${num2} = ${resultado}`;
+                }
+            }
+
+            document.getElementById("resultado").innerText = mensagem;
+        }
+    </script>
+</body>
+</html>

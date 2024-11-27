@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles13.css">
+  <title>Vogal ou Consoante</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Vogal ou Consoante</h1>
+    
+    <input type="text" id="letra" placeholder="Digite uma letra" maxlength="1">
+    
+    <button onclick="verificarLetra()">Verificar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+      function verificarLetra() {
+        // Captura a letra digitada pelo usuário
+        const letra = document.getElementById("letra").value;
+
+        // Verifica se o usuário digitou apenas uma letra
+        if (!letra || letra.length > 1 || !isNaN(letra)) {
+          document.getElementById("resultado").innerHTML = `
+            <p>Por favor, insira apenas uma letra.</p>
+          `;
+          return;
+        }
+
+        // Define as vogais (tanto maiúsculas quanto minúsculas)
+        const vogais = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+
+        // Verifica se a letra é uma vogal
+        if (vogais.includes(letra)) {
+          document.getElementById("resultado").innerHTML = `
+            <p>A letra '${letra}' é uma <strong>vogal</strong>.</p>
+          `;
+        } else {
+          document.getElementById("resultado").innerHTML = `
+            <p>A letra '${letra}' é uma <strong>consoante</strong>.</p>
+          `;
+        }
+      }
+    </script>
+  </main>
+</body>
+</html>

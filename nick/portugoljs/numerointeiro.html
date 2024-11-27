@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles19.css">
+    <title>Verificação de Número</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Verificação de Número</h1>
+        <form id="numeroForm">
+            <label for="numero">Digite um número inteiro:</label>
+            <input type="number" id="numero" name="numero" required>
+            <button type="submit">Verificar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        document.getElementById("numeroForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+
+            // Obtém o valor digitado no campo de entrada
+            const numero = parseInt(document.getElementById("numero").value);
+
+            let resultado = "";
+
+            // Verifica se o número é positivo, negativo ou zero
+            if (numero > 0) {
+                resultado = "O número é positivo";
+            } else if (numero < 0) {
+                resultado = "O número é negativo";
+            } else {
+                resultado = "O número é igual zero";
+            }
+
+            // Exibe o resultado
+            document.getElementById("resultado").textContent = resultado;
+        });
+    </script>
+</body>
+</html>

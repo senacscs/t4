@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Triângulos</title>
+    <link rel="stylesheet" href="styles20.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Classificação de Triângulos</h1>
+        <label for="lado_a">Informe o primeiro lado do triângulo:</label>
+        <input type="number" id="lado_a" required>
+        <br>
+        
+        <label for="lado_b">Informe o segundo lado do triângulo:</label>
+        <input type="number" id="lado_b" required>
+        <br>
+
+        <label for="lado_c">Informe o terceiro lado do triângulo:</label>
+        <input type="number" id="lado_c" required>
+        <br>
+
+        <button onclick="classificarTriangulo()">Classificar Triângulo</button>
+
+        <h3 id="resultado"></h3>
+    </div>
+
+    <script>
+        function classificarTriangulo() {
+            var ladoA = parseFloat(document.getElementById("lado_a").value);
+            var ladoB = parseFloat(document.getElementById("lado_b").value);
+            var ladoC = parseFloat(document.getElementById("lado_c").value);
+
+            if (ladoA === ladoB && ladoA === ladoC) {
+                document.getElementById("resultado").innerHTML = "Este triângulo é Equilátero";
+            } else if (ladoA === ladoB || ladoB === ladoC || ladoC === ladoA) {
+                document.getElementById("resultado").innerHTML = "Este triângulo é Isósceles";
+            } else {
+                document.getElementById("resultado").innerHTML = "Este triângulo é Escaleno";
+            }
+        }
+    </script>
+</body>
+</html>

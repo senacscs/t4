@@ -4,45 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles5.css">
-    <title>portugoljs</title>
-    
+    <title>PortugolJS</title>
 </head>
 <body>
     <div class="container">
         <h1>PortugolJS</h1>
         
-        <button onclick="texto()">Clique</button>
+        <button class="btn-main" onclick="texto()">Clique para saber mais</button>
         
-        <div style="margin-top: 20px;">
+        <div class="input-container">
             <input type="text" id="nome" placeholder="Digite seu nome">
-            <button onclick="nomedigitado()">Mostrar Nome</button>
+            <button class="btn-main" onclick="nomedigitado()">Mostrar Nome</button>
         </div>
 
         <p id="resultado"></p>
 
-        <div style="margin-top: 20px;">
-            <a href="altura.html">Altura média</a>
-            <a href="dias.html">Quantos Dias</a>
-            <a href="divisoes.html">Divisões Inteiras</a>
-            <a href="loja.html">Loja de Ferramentas</a>
-            <a href="maioridade.html">Maior idade</a>
-            <a href="numerodigitado.html">Número Digitado</a>
-            <a href="opsimples.html">Operação Simples</a>
-            <a href="potencia.html">Potencia e Raiz</a>
-            <a href="prioridades.html">Prioridades</a>
-            <a href="seunome.html">Seu Nome</a>
-            <a href="variavel.html">Variável</a>
-            <a href="textodigitado.html">Texto Digitado</a>
-            <a href="variavel.html">Variável</a>
-           
-        
-
+        <div class="links-container">
+            <a href="altura.html" class="link-btn">Altura média</a>
+            <a href="dias.html" class="link-btn">Quantos Dias</a>
+            <a href="divisoes.html" class="link-btn">Divisões Inteiras</a>
+            <a href="loja.html" class="link-btn">Loja de Ferramentas</a>
+            <a href="maioridade.html" class="link-btn">Maior idade</a>
+            <a href="numerodigitado.html" class="link-btn">Número Digitado</a>
+            <a href="opsimples.html" class="link-btn">Operação Simples</a>
+            <a href="potencia.html" class="link-btn">Potência e Raiz</a>
+            <a href="prioridades.html" class="link-btn">Prioridades</a>
+            <a href="seunome.html" class="link-btn">Seu Nome</a>
+            <a href="variavel.html" class="link-btn">Variável</a>
+            <a href="textodigitado.html" class="link-btn">Texto Digitado</a>
+            <a href="vogal.html" class="link-btn">Vogal</a>
+            <a href="media.html" class="link-btn">Média</a>
+            <a href="idade.html" class="link-btn">Idade do usuário</a>
+            <a href="multiplos.html" class="link-btn">Múltiplos de 5</a>
+            <a href="numerosiguais.html" class="link-btn">Números iguais</a>
+            <a href="mediafinal.html" class="link-btn">Média final</a>
+            <a href="numerointeiro.html" class="link-btn">Número inteiro</a>
+            <a href="tiposdetriangulo.html" class="link-btn">Tipo de triângulo</a>
+            <a href="minicalculadora.html" class="link-btn">Mini calculadora</a>
+            <a href="escolhacaso.html" class="link-btn">Escolha caso</a>
         </div>
     </div>
 
     <script>
         function texto() {
-            document.getElementById("resultado").innerText = "veja os codigos em javascript!";
+            document.getElementById("resultado").innerText = "Veja os códigos em Javascript!";
         }
 
         function nomedigitado() {

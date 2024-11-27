@@ -11,7 +11,7 @@
   <main>
     <h1>Verificação de Maioridade</h1>
    
-    <p>Digite sua idade para verificar se você é maior de idade.</p>
+    <p>Digite sua idade para verificar se você pode ir no show</p>
 
    
     <label for="idade">Idade:</label>
@@ -29,9 +29,9 @@
 
         // Verifica se a idade é maior ou igual a 18
         if (idade >= 18) {
-          document.getElementById("resultado").innerText = "Você é maior de idade.";
+          document.getElementById("resultado").innerText = "Você é maior de idade, pode ir no show";
         } else {
-          document.getElementById("resultado").innerText = "Você é menor de idade.";
+          document.getElementById("resultado").innerText = "Você é menor de idade, precisa de um termo ou responsável";
         }
       }
     </script>  
