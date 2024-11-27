@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input[type="number"] {
+            font-size: 1.2em;
+            margin: 5px 0;
+            padding: 5px;
+            width: 80px;
+            text-align: center;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 5px 15px;
+            margin-top: 15px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Média</h1>
+    <p>Informe as três médias:</p>
+    <div>
+        <input type="number" id="m1" placeholder="Média 1" step="0.01">
+        <br>
+        <input type="number" id="m2" placeholder="Média 2" step="0.01">
+        <br>
+        <input type="number" id="m3" placeholder="Média 3" step="0.01">
+    </div>
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularMedia() {
+            // Obter os valores das médias
+            const m1 = parseFloat(document.getElementById('m1').value);
+            const m2 = parseFloat(document.getElementById('m2').value);
+            const m3 = parseFloat(document.getElementById('m3').value);
+            const resultado = document.getElementById('resultado');
+
+            // Verificar se os valores são números válidos
+            if (isNaN(m1) || isNaN(m2) || isNaN(m3)) {
+                resultado.textContent = 'Por favor, insira todas as médias como números válidos.';
+                return;
+            }
+
+            // Calcular a média final
+            const media = ((m1 + m2 + m3) / 3).toFixed(2);
+
+            // Construir a saída
+            let mensagem = `A média final é: ${media}\n\n`;
+            if (m1 < media) mensagem += `A média 1 (${m1}) é menor que a média final.\n`;
+            if (m2 < media) mensagem += `A média 2 (${m2}) é menor que a média final.\n`;
+            if (m3 < media) mensagem += `A média 3 (${m3}) é menor que a média final.\n`;
+
+            // Exibir resultado
+            resultado.textContent = mensagem;
+        }
+    </script>
+</body>
+</html>

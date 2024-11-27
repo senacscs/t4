@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            font-size: 1.2em;
+            padding: 5px;
+            width: 200px;
+            margin: 5px 0;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Média</h1>
+    <p>Digite seu nome:</p>
+    <input type="text" id="nome" placeholder="Nome">
+
+    <p>Digite suas notas:</p>
+    <input type="number" id="nota1" placeholder="Nota 1" step="0.1" min="0" max="10">
+    <input type="number" id="nota2" placeholder="Nota 2" step="0.1" min="0" max="10">
+    <input type="number" id="nota3" placeholder="Nota 3" step="0.1" min="0" max="10">
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularMedia() {
+            // Obter valores do usuário
+            const nome = document.getElementById('nome').value.trim();
+            const nota1 = parseFloat(document.getElementById('nota1').value);
+            const nota2 = parseFloat(document.getElementById('nota2').value);
+            const nota3 = parseFloat(document.getElementById('nota3').value);
+            const resultado = document.getElementById('resultado');
+
+            // Verificar se os dados são válidos
+            if (!nome || isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || nota1 < 0 || nota2 < 0 || nota3 < 0 || nota1 > 10 || nota2 > 10 || nota3 > 10) {
+                resultado.textContent = 'Por favor, preencha todos os campos corretamente.';
+                return;
+            }
+
+            // Calcular a média
+            const media = (nota1 + nota2 + nota3) / 3;
+            const mediaArredondada = media.toFixed(2);
+
+            // Determinar o resultado
+            if (media >= 6) {
+                resultado.textContent = `Parabéns, ${nome}! Você foi aprovado com a média ${mediaArredondada}.`;
+            } else {
+                resultado.textConntent = `Que pena, ${nome}. Você foi reprovado com a média ${mediaArredondada}.`;
+            }
+        }
+    </script>
+</body>
+</html>

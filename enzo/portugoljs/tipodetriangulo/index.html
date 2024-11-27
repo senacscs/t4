@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Tipo de Triângulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input[type="number"] {
+            font-size: 1.2em;
+            padding: 5px;
+            width: 200px;
+            margin: 5px 0;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar Tipo de Triângulo</h1>
+    <p>Informe os lados do triângulo:</p>
+    <input type="number" id="lado_a" placeholder="Lado A" min="1">
+    <input type="number" id="lado_b" placeholder="Lado B" min="1">
+    <input type="number" id="lado_c" placeholder="Lado C" min="1">
+    <button onclick="verificarTriangulo()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function verificarTriangulo() {
+            // Obter os lados do triângulo
+            const ladoA = parseInt(document.getElementById('lado_a').value, 10);
+            const ladoB = parseInt(document.getElementById('lado_b').value, 10);
+            const ladoC = parseInt(document.getElementById('lado_c').value, 10);
+            const resultado = document.getElementById('resultado');
+
+            // Validar os lados fornecidos
+            if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC) || ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
+                resultado.textContent = 'Por favor, insira valores válidos e positivos para os lados.';
+                return;
+            }
+
+            // Verificar o tipo do triângulo
+            if (ladoA === ladoB && ladoA === ladoC) {
+                resultado.textContent = 'Este triângulo é Equilátero.';
+            } else if (ladoA === ladoB || ladoB === ladoC || ladoC === ladoA) {
+                resultado.textContent = 'Este triângulo é Isósceles.';
+            } else {
+                resultado.textContent = 'Este triângulo é Escaleno.';
+            }
+        }
+    </script>
+</body>
+</html>

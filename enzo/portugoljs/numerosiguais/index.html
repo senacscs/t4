@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input[type="number"] {
+            font-size: 1.2em;
+            padding: 5px;
+            width: 120px;
+            text-align: center;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorteio de Números</h1>
+    <p>Digite um número de 0 a 6:</p>
+    <input type="number" id="num_digitado" placeholder="Número" min="0" max="6">
+    <button onclick="sortearNumero()">Sortear</button>
+    <div id="resultado"></div>
+
+    <script>
+        function sortearNumero() {
+            // Obter o número digitado pelo usuário
+            const numDigitado = parseInt(document.getElementById('num_digitado').value, 10);
+            const resultado = document.getElementById('resultado');
+
+            // Verificar se o número está no intervalo válido
+            if (isNaN(numDigitado) || numDigitado < 0 || numDigitado > 6) {
+                resultado.textContent = 'Por favor, insira um número válido entre 0 e 6.';
+                return;
+            }
+
+            // Sortear um número entre 0 e 6
+            const numSorteado = Math.floor(Math.random() * 7);
+
+            // Comparar os números
+            let mensagem = '';
+            if (numDigitado === numSorteado) {
+                mensagem = 'Os números são iguais!';
+            } else {
+                mensagem = 'Os números são diferentes!';
+            }
+
+            // Exibir os resultados
+            mensagem += `\n\nNúmero digitado: ${numDigitado}\nNúmero sorteado: ${numSorteado}`;
+            resultado.textContent = mensagem;
+        }
+    </script>
+</body>
+</html>

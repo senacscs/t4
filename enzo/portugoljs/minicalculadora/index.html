@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input[type="number"], select {
+            font-size: 1.2em;
+            padding: 5px;
+            width: 200px;
+            margin: 10px 0;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 5px 15px;
+            margin-top: 10px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <p>Digite os números e escolha a operação:</p>
+    <input type="number" id="operando1" placeholder="Primeiro número">
+    <input type="number" id="operando2" placeholder="Segundo número">
+    <br>
+    <select id="operador">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            // Obter valores dos operandos e do operador
+            const operando1 = parseFloat(document.getElementById('operando1').value);
+            const operando2 = parseFloat(document.getElementById('operando2').value);
+            const operador = document.getElementById('operador').value;
+            const resultadoDiv = document.getElementById('resultado');
+            let resultado;
+
+            // Validar entradas
+            if (isNaN(operando1) || isNaN(operando2)) {
+                resultadoDiv.textContent = 'Por favor, insira números válidos.';
+                return;
+            }
+
+            // Realizar cálculo com base no operador
+            switch (operador) {
+                case '+':
+                    resultado = operando1 + operando2;
+                    break;
+                case '-':
+                    resultado = operando1 - operando2;
+                    break;
+                case '*':
+                    resultado = operando1 * operando2;
+                    break;
+                case '/':
+                    if (operando2 === 0) {
+                        resultadoDiv.textContent = 'Erro: divisão por zero não é permitida.';
+                        return;
+                    }
+                    resultado = operando1 / operando2;
+                    break;
+                default:
+                    resultadoDiv.textContent = 'Operação inválida.';
+                    return;
+            }
+
+            // Exibir o resultado
+            resultadoDiv.textContent = `${operando1} ${operador} ${operando2} = ${resultado.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

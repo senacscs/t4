@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Opções</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu de Opções</h1>
+    <p>Escolha uma das opções abaixo:</p>
+    <button onclick="mostrarMensagem(1)">1) Elogio</button>
+    <button onclick="mostrarMensagem(2)">2) Ofensa</button>
+    <button onclick="mostrarMensagem(3)">3) Sair</button>
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarMensagem(opcao) {
+            const resultadoDiv = document.getElementById('resultado');
+
+            switch (opcao) {
+                case 1:
+                    resultadoDiv.textContent = "Você é lindo(a)!";
+                    break;
+                case 2:
+                    resultadoDiv.textContent = "Você é um monstro!";
+                    break;
+                case 3:
+                    resultadoDiv.textContent = "Tchau!";
+                    break;
+                default:
+                    resultadoDiv.textContent = "Opção Inválida!";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
