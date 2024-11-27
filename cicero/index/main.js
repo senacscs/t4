@@ -123,6 +123,7 @@ let TRABALHOS = [
             { nome: "SITE PRA MAMÃE", url: "responsaveis", img: "ursinho.gif" },
             { nome: "POEMAS IRADOS", url: "responsaveis", img: "pirata.webp" },
             { nome: "COISAS DO PORTUGOL", url: "portugoljs", img: "computer.png" },
+            { nome: "PANTANAL", url: "biomas", img: "capivara.jpg" },
         ]
     },
     {
