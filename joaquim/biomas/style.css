@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@ a {
     text-decoration: none;
 }
 
-/* This class is added on scroll */
 .fixed {
     position: fixed;
     top: 0;
@@ -24,7 +22,6 @@ body {
     text-align: center;
 }
 
-/* Navigation Settings */
 nav {
     position: absolute;
     bottom: 0;
@@ -49,13 +46,8 @@ section {
     align-items: center;
 }
 
-/* Screens Settings */
 #screen0 {
     background-image: url(mata.jpg);
-}
-
-#screen0 p {
-    padding-top: 200px;
 }
 
 #screen1 {
@@ -94,7 +86,16 @@ h2 {
     font-family: "Bebas Neue", serif;
 }
 
+footer {
+    height: 10vh;
+    align-items: center;
+    align-content: center;
+}
 
+footer a {
+    padding: 0 10px;
+    color: #757575;
+}
 
 @media only screen and (max-width: 520px) {
 
