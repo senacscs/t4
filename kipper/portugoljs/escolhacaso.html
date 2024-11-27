@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <p>Escolha uma opção:</p>
+    <button onclick="escolherOpcao(1)">1) Elogio</button>
+    <button onclick="escolherOpcao(2)">2) Ofensa</button>
+    <button onclick="escolherOpcao(3)">3) Sair</button>
+    <p id="resultado"></p>
+ 
+    <script>
+        function escolherOpcao(opcao) {
+            switch (opcao) {
+                case 1:
+                    document.getElementById("resultado").textContent = "Você é lindo(a)!";
+                    break;
+                case 2:
+                    document.getElementById("resultado").textContent = "Você é um monstro!";
+                    break;
+                case 3:
+                    document.getElementById("resultado").textContent = "Tchau!";
+                    break;
+                default:
+                    document.getElementById("resultado").textContent = "Opção inválida!";
+            }
+        }
+    </script>
+</body>
+</html>
