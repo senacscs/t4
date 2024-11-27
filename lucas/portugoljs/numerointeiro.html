@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numerointeiro</title>
+</head>
+<body>
+    <label for="numero">Digite um número inteiro:</label>
+    <input type="number" id="numero">
+    <button onclick="verificarSinal()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarSinal() {
+    const numero = parseInt(document.getElementById('numero').value);
+    const resultado = document.getElementById('resultado');
+
+    if (numero > 0) {
+        resultado.textContent   
+= "O número é positivo";
+    } else if (numero < 0) {
+        resultado.textContent = "O número é negativo";
+    } else {
+        resultado.textContent = "O número é  igual a zero";
+    }
+}
+    </script>
+</body>
+</html>
