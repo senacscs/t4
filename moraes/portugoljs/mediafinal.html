@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Aprovação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+        .erro {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação de Aprovação</h1>
+    <p>Informe seu nome e três notas para verificar se foi aprovado:</p>
+    
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <br>
+    <input type="number" id="nota1" placeholder="Nota 1" step="0.1">
+    <br>
+    <input type="number" id="nota2" placeholder="Nota 2" step="0.1">
+    <br>
+    <input type="number" id="nota3" placeholder="Nota 3" step="0.1">
+    <br>
+    <button onclick="calcularMedia()">Verificar Aprovação</button>
+    
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function calcularMedia() {
+            const nome = document.getElementById("nome").value;
+            const nota1 = parseFloat(document.getElementById("nota1").value);
+            const nota2 = parseFloat(document.getElementById("nota2").value);
+            const nota3 = parseFloat(document.getElementById("nota3").value);
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (nome === "" || isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                resultadoDiv.innerHTML = '<p class="erro">Por favor, preencha todos os campos corretamente.</p>';
+                return;
+            }
+
+            // Calcula a média
+            const media = (nota1 + nota2 + nota3) / 3;
+            
+            // Arredonda a média para duas casas decimais
+            const mediaArredondada = media.toFixed(2);
+
+            // Exibe o resultado
+            if (media >= 6) {
+                resultadoDiv.innerHTML = `<p>Parabéns, ${nome}! Você foi aprovado com a média ${mediaArredondada}.</p>`;
+            } else {
+                resultadoDiv.innerHTML = `<p>Que pena, ${nome}! Você foi reprovado com a média ${mediaArredondada}.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

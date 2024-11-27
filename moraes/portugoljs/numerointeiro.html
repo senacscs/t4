@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Número</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação de Número</h1>
+    <p>Informe um número inteiro para verificar se ele é positivo, negativo ou igual a zero:</p>
+    
+    <input type="number" id="numero" placeholder="Digite um número inteiro">
+    <br>
+    <button onclick="verificarNumero()">Verificar</button>
+    
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function verificarNumero() {
+            const numero = parseInt(document.getElementById("numero").value);
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (isNaN(numero)) {
+                resultadoDiv.innerHTML = '<p class="erro">Por favor, insira um número inteiro válido.</p>';
+                return;
+            }
+
+            // Verifica se o número é positivo, negativo ou igual a zero
+            if (numero > 0) {
+                resultadoDiv.innerHTML = `<p>O número ${numero} é positivo.</p>`;
+            } else if (numero < 0) {
+                resultadoDiv.innerHTML = `<p>O número ${numero} é negativo.</p>`;
+            } else {
+                resultadoDiv.innerHTML = `<p>O número é igual a zero.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de Triângulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificação do Tipo de Triângulo</h1>
+    <p>Informe os três lados do triângulo:</p>
+    
+    <input type="number" id="ladoA" placeholder="Primeiro lado">
+    <input type="number" id="ladoB" placeholder="Segundo lado">
+    <input type="number" id="ladoC" placeholder="Terceiro lado">
+    <br>
+    <button onclick="identificarTriangulo()">Verificar Tipo</button>
+    
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function identificarTriangulo() {
+            const ladoA = parseInt(document.getElementById("ladoA").value);
+            const ladoB = parseInt(document.getElementById("ladoB").value);
+            const ladoC = parseInt(document.getElementById("ladoC").value);
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
+                resultadoDiv.innerHTML = '<p class="erro">Por favor, insira os três lados válidos.</p>';
+                return;
+            }
+
+            // Verifica o tipo do triângulo
+            if (ladoA === ladoB && ladoA === ladoC) {
+                resultadoDiv.innerHTML = `<p>Este triângulo é Equilátero.</p>`;
+            } else if (ladoA === ladoB || ladoB === ladoC || ladoC === ladoA) {
+                resultadoDiv.innerHTML = `<p>Este triângulo é Isósceles.</p>`;
+            } else {
+                resultadoDiv.innerHTML = `<p>Este triângulo é Escaleno.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

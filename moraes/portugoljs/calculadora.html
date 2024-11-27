@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora Simples</h1>
+
+    <p>Digite os dois números e escolha a operação desejada.</p>
+
+    <input type="number" id="num1" placeholder="Primeiro número">
+    <input type="number" id="num2" placeholder="Segundo número">
+
+    <br>
+
+    <select id="operacao">
+        <option value="+">Soma (+)</option>
+        <option value="-">Subtração (-)</option>
+        <option value="*">Multiplicação (*)</option>
+        <option value="/">Divisão (/)</option>
+    </select>
+
+    <br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function calcular() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operacao = document.getElementById("operacao").value;
+            let resultado = 0;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("resultado").innerHTML = "Por favor, insira números válidos.";
+                return;
+            }
+
+            switch (operacao) {
+                case "+":
+                    resultado = num1 + num2;
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    break;
+                case "*":
+                    resultado = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 === 0) {
+                        document.getElementById("resultado").innerHTML = "Não é possível dividir por zero.";
+                        return;
+                    }
+                    resultado = num1 / num2;
+                    break;
+                default:
+                    document.getElementById("resultado").innerHTML = "Operação inválida.";
+                    return;
+            }
+
+            document.getElementById("resultado").innerHTML = `${num1} ${operacao} ${num2} = ${resultado}`;
+        }
+    </script>
+
+</body>
+</html>
