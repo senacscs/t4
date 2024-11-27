@@ -1,0 +1,177 @@
+.titulo {
+    color: green;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 50px;
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background: url("img/fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+    margin: 0;
+    padding: 0;
+
+    header {
+        #folha {
+            width: 100vw;
+            position: fixed;
+            top: -30vh;
+            left: 0;
+            z-index: 2;
+            transform: scaleY(-1);
+
+            user-select: none;
+        }
+    }
+
+    #blur {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        backdrop-filter: blur(10px);
+    }
+
+    main {
+        margin-top: 30vh;
+
+        section {
+            width: 100vw;
+            min-height: 50vh;
+
+            padding: 50px;
+            margin-top: 30vh;
+
+            background-color: #0f611d68;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                transition: all .5s ease;
+            }
+            img:hover{
+                transform: scale(1.1);
+                box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+            }
+
+            .lateral {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                width: 80%;
+
+                img {
+                    max-width: 50%;
+                    width: 2000px;
+                    border-radius: 20px;
+                    margin: 10px;
+                }
+
+                .coluna {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 20px;
+
+                    img {
+                        max-width: 90%;
+                    }
+                }
+
+                .texto {
+                    max-width: 50%;
+                    margin: 10px;
+
+
+                    border: 2px solid #4CAF50;
+                    /* Verde representando a vegetação */
+                    background-color: #F0E68C;
+                    /* Cor de fundo lembrando o capim dourado */
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-family: 'Georgia', serif;
+                    /* Fonte com estilo rústico */
+                    color: #333;
+
+                    h1 {
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: justify;
+                        text-indent: 5rem;
+                        margin: 10px;
+                    }
+                }
+
+                /* .texto.grande {
+                    height: 100%;
+                } */
+            }
+        }
+    }
+
+    footer {
+        height: 50px;
+        background-color: #0f611daa;
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: black;
+        }
+    }
+}
+
+/* .pantanal-box {
+    border: 2px solid #4CAF50;
+    background-color: #F0E68C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    color: #333;
+} */
+
+.pantanal-box h1 {
+    font-size: 24px;
+    color: #2E8B57;
+    /* Verde escuro para o título */
+    margin-bottom: 10px;
+}
+
+.pantanal-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.slides iframe {
+    display: block;
+    width: 100vw;
+}
