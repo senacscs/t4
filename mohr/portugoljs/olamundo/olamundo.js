@@ -1,5 +1,3 @@
-function mostrarMensagem() {
-    const mensagem = "Olá, Mundo!";
-    document.getElementById("resultado").textContent = mensagem;
+function inicio() {
+	alert("Olá Mundo!");
 }
-/* Feito por: Enzo */

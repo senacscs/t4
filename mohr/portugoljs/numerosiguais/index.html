@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Iguais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Verifique se o número sorteado é igual ao número digitado</h1>
+
+    <form id="form-jogo" onsubmit="verificarNumero(event)">
+        <label for="num_digitado">Informe um número de 0 a 6:</label>
+        <input type="number" id="num_digitado" min="0" max="6" required><br><br>
+
+        <button type="submit">Verificar</button>
+    </form>
+
+    <div id="resultado" style="margin-top: 20px; font-size: 18px;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

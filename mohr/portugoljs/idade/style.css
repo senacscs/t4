@@ -1,0 +1,77 @@
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Garante que o título e o formulário fiquem um abaixo do outro */
+    height: 100vh;
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;  /* Deixa o título mais forte */
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;  /* Alinha o conteúdo do formulário de cima para baixo */
+    align-items: center;
+}
+
+/* Estilo dos labels e inputs */
+label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 10px;
+    background-color: #e7f3ff;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}

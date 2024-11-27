@@ -1,64 +1,61 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
+/* Estilo para o corpo da página */
 body {
-    background-color: rgb(183, 193, 202);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #3066b7;
+    margin: 0;
 }
 
-label {
-    margin-left: 39%;
-    position: relative;
-    top: 260px;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+/* Estilo para o contêiner principal */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-input {
-    position: relative;
-    top: 350px;
-    right: 370px;
-    width: 30%;
-    height: 5%;
-    font-size: 20px;
-    border: 0.1rem solid black;
-    background-color: white;
-    border-radius: 20px;
+/* Título */
+h1 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-::placeholder {
-    position: relative;
-    left: 10px;
-    top: 1px;
+/* Campo de entrada */
+.input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
 }
 
+/* Botão */
 button {
-    position: relative;
-    top: 400px;
-    width: 10%;
-    height: 5%;
-    left: 587px;
-    font-size: 24px;
-    font-family: 'Arial Narrow Bold';
-    background-color: blue;
-    border-radius: 20px;
-    border: none;
+    background-color: #4c82af;
     color: white;
-    box-shadow: 0 0 15px  blue;
-    transition: all ease-in-out 1s;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px white;
-    background-color: white;
-    color: blue;
+    background-color: #459da0;
 }
 
+/* Resultado */
 #resultado {
-    position: relative;
-    left: 40%;
-    font-size: 30px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
 }
