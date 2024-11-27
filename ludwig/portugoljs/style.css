@@ -1,30 +1,82 @@
-* {
-    text-align: center;
+/* Reset basic styles */
+body, h1, h2, a {
+  margin: 0;
+  padding: 0;
 }
 
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header styling */
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Section Titles Styling */
+h1.titulo {
+  font-size: 28px;
+  color: #2980b9;
+  margin-top: 30px;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 10px;
+}
+
+/* Link styling */
 a {
-    color: #f5d02a;
-    text-decoration: none;
-  }
- 
-  /* a:visited {
-    color: rgba(181, 117, 157, 0.9);
-  } */
- 
-  a:hover {
-    color: rgba(249, 217, 4, 0.9);
-  }
- 
-  a:active {
-    color: rgba(181, 117, 157, 0.9);
-  }
-
-
-h3 {
-  color: #dc57c6;
+  text-decoration: none;
+  color: #2980b9;
+  font-size: 18px;
+  display: block;
+  margin: 10px 0;
+  transition: all 0.3s ease;
 }
 
-h1 { 
-color: rgb(234, 36, 1);
+a:hover {
+  color: #fff;
+  background-color: #2980b9;
+  padding-left: 10px;
+}
 
+/* Section background */
+section {
+  margin-bottom: 40px;
+}
+
+/* Box for each link */
+.link-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+}
+
+/* Add some padding inside each section */
+section h2 {
+  margin-bottom: 10px;
+}
+
+/* Add some visual separation */
+hr {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 30px 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 16px;
+  color: #7f8c8d;
 }
