@@ -13,7 +13,7 @@ body {
 button {
     border: none;
     border-radius: 100px;
-    background-color:lightblue;
+    background-color:olivedrab;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -21,7 +21,7 @@ button {
 button.operacao {
     border: none;
     border-radius: 100px;
-    background-color:lightpink;
+    background-color:olivedrab;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -29,7 +29,15 @@ button.operacao {
 button.algoritimos {
     border: none;
     border-radius: 100px;
-    background-color:lightgreen;
+    background-color:olivedrab;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button.desvios {
+    border: none;
+    border-radius: 100px;
+    background-color:olivedrab;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -37,7 +45,7 @@ button.algoritimos {
 button.link {
     border: none;
     border-radius: 100px;
-    background-color:darkorange;
+    background-color:steelblue;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
