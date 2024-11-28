@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-image: url(images/backgrounddois.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.titulo {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: -1;
+
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 0 20px black;
+
+}
+
+section.ondas-box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.onda {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background-image: url(images/wave.png);
+    background-size: 1000px 100px;
+
+    animation: ondaAnimada 5s ease-in-out infinite alternate;
+}
+
+@keyframes ondaAnimada {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+#onda1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400;
+}
+
+#onda2 {
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+
+#onda3 {
+    z-index: 998;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+
+#onda4 {
+    z-index: 997;
+    opacity: 0.8;
+    background-position-x: 100px;
+}
+/*? Conteudo geral */
+.conteudo {
+    padding: 200px;
+}
+
+.conteudo h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff !important;
+}
+
+.conteudo p {
+    font-size: 1.5em;
+    color: #ffffff !important;
+}
+/*! Conteudo 01 */
+.conteudo_01 {
+    padding-left: 200px;
+}
+
+.conteudo_01 h1 {
+    margin-bottom: 20px;
+    color: black !important;
+}
+
+.conteudo_01 p {
+    width: 70%;
+    margin-top: 50px;   
+    color: black !important;
+}
+/*! Conteudo 02 */
+.conteudo_02 {    
+    padding: 0;
+    height: 100vh;
+    align-content: center;
+}
+.gambi {
+    animation: sla1 linear both;
+    animation-timeline: view(block);
+    animation-range: exit -125% cover 50%;
+    transition: 0.1s;
+    background-color: rgba(255, 24, 24, 0);
+    width: auto;
+    height: auto;
+}
+@keyframes sla1 {
+    from {
+        background-color: white;
+        color: black !important;
+    }
+    to {
+        background-color: #21b039;
+        color: white !important;
+    }
+}
+.conteudo_02 h1 {
+    font-size: 2.5em;    
+}
+
+.conteudo_02 p {
+    margin-top: 50px !important;
+    font-size: 1.2em;
+}
+
+.conteudo_02 .container_ff {
+    width: 70vw;
+    height: 90vh;
+    border-radius: 30px;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.fauna {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.397);
+    position: relative;
+}
+
+.fauna h1 {
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    padding-right: 40px;
+    padding-top: 20px;
+}
+
+.fauna p {
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    padding-right: 60px; 
+    padding-left: 30px;
+    padding-top: 40px; 
+}
+
+.flora {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid rgba(0, 0, 0, 0.397);
+    position: relative;
+}
+
+.flora h1 {
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.flora p {
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    padding-left: 60px;   
+    padding-right: 30px;
+    padding-top: 40px;
+}
+
+.imagens {
+    margin: auto;
+    margin-top: 240px;
+    width: 450px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.imagens .card {
+    width: 214px;
+    height: 150px;
+    background-color: rgb(246, 246, 246);
+    border: 2px solid rgba(0, 0, 0, 0.748);
+    border-radius: 3px;    
+    position: relative;
+}
+
+.imagens .card img {
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.imagens .card p {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding: 0;    
+    color: black !important;
+    margin-top: 0px !important;
+}
+/*! Conteudo 03 */
+.conteudo_03 {
+    background-color: #21b039;
+    padding: 200px;
+    align-content: center;
+}
+
+.conteudo_03 h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.conteudo_03 p {
+    font-size: 1.5em;
+    width: 70%;
+    margin-top: 50px;
+}
+/*! Parallax */
+.parallax {
+    width: 100vw;
+    height: 60vh;
+    box-shadow: 0 0 30px 10px black inset;
+    background-image: url(images/backgrounddois.svg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*! Conteudo 04 */
+.conteudo_04 {
+    background-color: #21b039;
+    padding: 200px;
+    align-content: center;
+}
+
+.conteudo_04 h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.conteudo_04 p {
+    font-size: 1.5em;
+    width: 70%;
+    margin-top: 50px;
+    text-align: right;
+    margin-left: auto;
+}
+/*! Conteudo 05 */
+.conteudo_05 {
+    background-color: #21b039;
+    padding: 50px;
+    padding-left: 200px !important;
+    padding-bottom: 200px !important;
+    align-content: center;
+}
+
+.conteudo_05 h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.conteudo_05 p {
+    font-size: 1.5em;
+    width: 70%;
+    margin-top: 50px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #198e2d;
+    border-top: 3px solid rgba(0, 0, 0, 0.204);
+    align-content: center;
+}
+
+footer p {
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
