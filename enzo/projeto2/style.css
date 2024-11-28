@@ -172,3 +172,12 @@ button:hover {
     position: relative;
     left: 450px;
 }
+
+#canva h2 {
+    position: relative;
+    top: 50px;
+}
+
+.slides {
+    width: 300px;
+}
