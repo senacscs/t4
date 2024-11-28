@@ -1,6 +1,6 @@
 function inicio() {
     // Lê o valor do input
-    var valor = parseInt(document.getElementById("numero").value); // Corrigido para "numero"
+    var valor = parseInt(document.getElementById("numero").value); 
 
     // Verifica se o valor é um número válido
     if (isNaN(valor)) {
@@ -15,9 +15,7 @@ function inicio() {
     var metade_inteira = Math.floor(valor / 2);  // Metade inteira usando Math.floor
     var resto = valor % 3;  // Resto da divisão por 3
 
-    // Exibe os resultados no HTML
+    // Exibe os resultados no HTML dentro do elemento #mensagem
     document.getElementById("mensagem").textContent = "A metade inteira do número é: " + metade_inteira + 
         ", e o resto da divisão por 3 é: " + resto;
-
-        
 }
