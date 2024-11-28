@@ -148,3 +148,106 @@ div{
       background-position: left 1400px top 25px;
     }
   }
+  .btn-container, .container {
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .btn, .btn-two {
+    margin: 9px;
+  }
+  .btn-gradient {
+    margin: 5px;
+  }
+  a[class*="btn"] {text-decoration: none;}
+  input[class*="btn"], 
+  button[class*="btn"] {border: 0;}
+  
+  /* Here you can change the button sizes */
+  .btn.large, 
+  .btn-two.large, 
+  .btn-effect.large {
+    padding: 20px 40px; 
+    font-size: 22px;
+  }
+  .btn.small, 
+  .btn-two.small, 
+  .btn-gradient.small, 
+  .btn-effect.small {
+    padding: 8px 18px;  
+    font-size: 14px;
+  }
+  .btn.mini, 
+  .btn-two.mini, 
+  .btn-gradient.mini, 
+  .btn-effect.mini {
+    padding: 4px 12px;  
+    font-size: 12px;
+  }
+  .btn.block, 
+  .btn-two.block, 
+  .btn-gradient.block, 
+  .btn-effect.block {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .btn-gradient.large {
+    padding: 15px 45px; 
+    font-size: 22px;
+  }
+  
+  /* Colors for .btn and .btn-two */
+  .btn.blue, .btn-two.blue     {background-color: #7fb1bf;}
+  .btn.green, .btn-two.green   {background-color: #9abf7f;}
+  .btn.red, .btn-two.red       {background-color: #fa5a5a;}
+  .btn.purple, .btn-two.purple {background-color: #cb99c5;}
+  .btn.cyan, .btn-two.cyan     {background-color: #7fccde;}
+  .btn.yellow, .btn-two.yellow {background-color: #f0d264;}
+  
+  .rounded {
+    border-radius: 10px;
+  }
+  
+  /* default button style */
+  .btn {
+    position: relative;
+    border: 0;
+    padding: 15px 25px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+  }
+  .btn:active {
+    top: 4px;	
+  }
+  
+  /* color classes for .btn */
+  .btn.blue {box-shadow: 0px 4px #74a3b0;}
+  .btn.blue:active {box-shadow: 0 0 #74a3b0; background-color: #709CA8;}
+  .btn-two {
+    color: white;	
+    padding: 15px 25px;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.21);
+    border-bottom-color: rgba(0,0,0,0.34);
+    text-shadow:0 1px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 
+                0 2px 0 -1px rgba(0,0,0,0.13), 
+                0 3px 0 -1px rgba(0,0,0,0.08), 
+                0 3px 13px -1px rgba(0,0,0,0.21);
+                position: relative;
+                left: 38%;
+                margin-right: 1%;
+                
+  }
+  .btn-two:active {
+    top: 1px;
+    border-color: rgba(0,0,0,0.34) rgba(0,0,0,0.21) rgba(0,0,0,0.21);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.89),0 1px rgba(0,0,0,0.05) inset;
+    position: relative;
+  }
+  
