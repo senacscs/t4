@@ -50,5 +50,13 @@ projetos = [
     { "nome": "Projeto PI", "url": "projeto" },
     { "nome": "Autocuidado", "url": "autocuidado"},
     { "nome": "Imersão", "url": "imersao1"},
-    { "nome": "Ponte Da Vinci", "url": "pontedavinci"}
+    { "nome": "Ponte Da Vinci", "url": "pontedavinci"},
+    { "nome": "TEC + MAT", "url": "tecnologiamat"},
+    { "nome": "Jogo", "url": "jogo1"},
+    { "nome": "Poemas", "url": "poema"},
+    { "nome": "Triangulos", "url": "triangulos"},
+    { "wickert": "Planejamento pv", "url": "planejamento"},
+    { "nome": "Ponte treliçada", "url": "pontetrelicada"},
+    { "nome": "Portugol", "url": "portugoljs"},
+    { "nome": "Biomas", "url": "biomas"},
 ]
