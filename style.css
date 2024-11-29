@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(180deg, rgb(0, 255, 255), rgb(0,0,0));
+    background: linear-gradient(180deg, rgb(0, 255, 255), rgb(0, 0, 0));
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
@@ -8,81 +8,129 @@ body {
     font-family: sans-serif;
     max-width: 100%;
     background-attachment: fixed;
-}
-.bar {
-    width: 200px;
-    height: 25px;
-    background-color: rgb(255, 255, 255);
-    margin: 20px auto 0 auto;
-    border-radius: 30px;
-    align-content: center;
-    padding: 7px;
-    display: flex;
-}
-.bar input {
-    margin: 4px;
-    background-color: transparent;
-    outline: none;
-    border: transparent;
-}
-.ali {
-    margin: auto 2px auto 0;
-}
-h1{
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
-}
-nav{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 8vh;
-   color: white;
-}
-.nav-list{
-    list-style: none;
-    display: flex;
-}
-.nav-list{
-    letter-spacing: 3px;
-     margin-right: 910px;
-}
-header{
-    background-color: rgba(37, 37, 37, 1);
+
+
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+    header {
+        background-color: rgba(37, 37, 37, 1);
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 8vh;
+            color: white;
+
+            .nav-list {
+                list-style: none;
+                display: flex;
+                letter-spacing: 3px;
+                margin-right: 910px;
+            }
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+
+        .main {
+            width: 80vw;
+            height: 92vh;
+
+            .bar {
+                width: 200px;
+                height: 25px;
+                background-color: rgb(255, 255, 255);
+                margin: 20px auto 0 auto;
+                border-radius: 30px;
+                align-content: center;
+                padding: 7px;
+                display: flex;
+
+                input {
+                    margin: 4px;
+                    background-color: transparent;
+                    outline: none;
+                    border: transparent;
+                }
+
+                .ali {
+                    margin: auto 2px auto 0;
+                }
+            }
+
+            .alunos {
+                padding: 1%;
+                text-align: center;
+
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                .nomes {
+                    width: 120px;
+                    height: 60px;
+                    background-color: rgb(20, 181, 181);
+                    color: black;
+                    display: inline-block;
+                    margin: 6px;
+                    text-align: center;
+                    border-radius: 3px;
+                    border: 1px solid rgb(6, 1, 46);
+                }
+
+
+                .nomes:hover {
+                    animation: animacao-rgb 3s infinite;
+                }
+            }
+        }
+
+        .side {
+            width: 20vw;
+            height: 92vh;
+            background-color: #3A3B3D;
+            padding: 20px;
+
+            #filters {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: start;
+
+                color: #DDDBC6;
+
+            }
+        }
+
+    }
 }
 
-.alunos {
-    padding: 1%;
-    text-align: center;
-}
-.nomes{
-    width: 120px;
-    height: 60px;
-    background-color: rgb(20, 181, 181);
-    color: black;
-    display: inline-block;
-    margin: 6px;
-    text-align: center;
-    border-radius: 3px;
-    border: 1px solid rgb(6, 1, 46);
-}
-span{
-    color: white;
-    padding-bottom: 1vw;
-    /* text-align: center; */
-}
 @keyframes animacao-rgb {
-    0% { background-color: rgb(0, 255, 255); }
-    33% { background-color: rgb(255, 255, 0); }
-    66% { background-color: rgb(255, 0, 200); }
-    100% { background-color: rgb(0, 255, 255); }
-  }
-  
-  .nomes:hover {
-    animation: animacao-rgb 3s infinite;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-  }
+    0% {
+        background-color: rgb(0, 255, 255);
+    }
+
+    33% {
+        background-color: rgb(255, 255, 0);
+    }
+
+    66% {
+        background-color: rgb(255, 0, 200);
+    }
+
+    100% {
+        background-color: rgb(0, 255, 255);
+    }
+}
