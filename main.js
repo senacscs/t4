@@ -61,6 +61,7 @@ const projetos = [
     { "nome": "Tecnologia em mat.", "url": "tecnologiamat"},
     { "nome": "Site no Papel", "url": "teste_ods"},
     { "nome": "Triângulos", "url": "triangulos"},
+    { "wickert": "Planejamento pv", "url": "planejamento"},
 ];
 
 // ----------------------------
