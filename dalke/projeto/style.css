@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Open Sans';
+  margin-top: 85px;
 }
 
 img {
@@ -47,6 +48,37 @@ img {
   width: 350px;
   margin-right: 1.5em;
   display: block;
+}
+
+/* Estilização do cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Cor de fundo do cabeçalho */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+  z-index: 1000; /* Garante que fique sobre outros elementos */
+  padding: 10px 20px; /* Ajusta o espaçamento interno */
+  display: flex;
+  align-items: center;
+}
+
+/* Estilização da logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px; /* Ajuste o tamanho da logo */
+  margin-right: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo span {
+  font-size: 18px; /* Tamanho do texto */
+  font-weight: bold;
+  color: #000; /* Cor do texto */
 }
 
 .main-nav {
@@ -155,7 +187,7 @@ img {
 
 .menu-container {
   position: fixed;
-  top: 20px;
+  top: 12px;
   right: 20px;
   z-index: 1000;
 }
@@ -163,7 +195,7 @@ img {
 .menu-icon {
   width: 50px;
   height: 50px;
-  background-color: #000000;
+  background-color: #0c0b0b;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -172,6 +204,7 @@ img {
   font-size: 30px; 
   color: white; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
 }
 
 .menu-icon div {
@@ -207,12 +240,13 @@ img {
   right: 20px;
   width: 200px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   overflow: hidden;
   transform: scale(0);
   transform-origin: top right;
   transition: transform 0.3s ease-in-out;
+  
 }
 
 .menu.open {
