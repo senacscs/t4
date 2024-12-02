@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média Final</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e4f3;
+            color: #666666;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #d5006b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #b20055;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo da Média Final</h1>
+    <p>Digite as notas do aluno:</p>
+
+    <input type="number" id="nota1" placeholder="Nota 1" />
+    <input type="number" id="nota2" placeholder="Nota 2" />
+    <input type="number" id="nota3" placeholder="Nota 3" />
+    <br>
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <h3>Resultado</h3>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia() {
+            const nota1 = parseFloat(document.getElementById("nota1").value);
+            const nota2 = parseFloat(document.getElementById("nota2").value);
+            const nota3 = parseFloat(document.getElementById("nota3").value);
+
+            const media = (nota1 + nota2 + nota3) / 3;
+            let resultado = '';
+
+            if (media >= 7) {
+                resultado = `Aprovado! Média: ${media.toFixed(6)}`;
+            } else if (media >= 4) {
+                resultado = `Em recuperação. Média: ${media.toFixed(5)}`;
+            } else {
+                resultado = `Reprovado. Média: ${media.toFixed(4)}`;
+            }
+
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

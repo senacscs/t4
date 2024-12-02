@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média de 3 Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e4f3;
+            color: #666666;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #d5006b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #b20055;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algoritmo Sequencial - Cálculo da Média</h1>
+    <p>Digite três números para calcular a média:</p>
+    
+    <input type="number" id="numero1" placeholder="Número 1" />
+    <input type="number" id="numero2" placeholder="Número 2" />
+    <input type="number" id="numero3" placeholder="Número 3" />
+    
+    <br>
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <h3>Resultado da Média</h3>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia() {
+            const numero1 = parseFloat(document.getElementById("numero1").value);
+            const numero2 = parseFloat(document.getElementById("numero2").value);
+            const numero3 = parseFloat(document.getElementById("numero3").value);
+            
+            const media = (numero1 + numero2 + numero3) / 3;
+            
+            document.getElementById("resultado").innerText = "A média é: " + media;
+        }
+    </script>
+</body>
+</html>

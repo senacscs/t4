@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Caso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e4f3; /* Cor de fundo semelhante ao site */
+            color: #666666; /* Texto em cinza claro */
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            background-color: #d5006b; /* Cor de fundo roxa do site */
+            color: white;
+            padding: 15px 32px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #b20055; /* Cor ao passar o mouse, um tom mais escuro de rosa */
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Escolha uma opção</h1>
+    <button class="button" onclick="escolher(1)">Elogio</button>
+    <button class="button" onclick="escolher(2)">Ofensa</button>
+    <button class="button" onclick="escolher(3)">Sair</button>
+
+    <div id="result"></div>
+
+    <script>
+        function escolher(opcao) {
+            let resultado;
+            switch (opcao) {
+                case 1:
+                    resultado = "Você é lindo(a)!";
+                    break;
+                case 2:
+                    resultado = "Você é um monstro!";
+                    break;
+                case 3:
+                    resultado = "Tchau!";
+                    break;
+            }
+            document.getElementById("result").innerText = resultado;
+        }
+    </script>
+
+</body>
+</html>

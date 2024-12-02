@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Vogal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e4f3;
+            color: #666666;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #d5006b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #b20055;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Vogal</h1>
+    <p>Digite uma letra para saber se é uma vogal:</p>
+
+    <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra" />
+    
+    <br>
+    <button onclick="verificarVogal()">Verificar</button>
+
+    <h3>Resultado</h3>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarVogal() {
+            const letra = document.getElementById("letra").value.toLowerCase();
+
+            // Verificando se é uma vogal
+            if (["a", "e", "i", "o", "u"].includes(letra)) {
+                document.getElementById("resultado").innerText = "A letra " + letra.toUpperCase() + " é uma vogal.";
+            } else if (letra >= "a" && letra <= "z") {
+                document.getElementById("resultado").innerText = "A letra " + letra.toUpperCase() + " não é uma vogal.";
+            } else {
+                document.getElementById("resultado").innerText = "Por favor, insira uma letra válida.";
+            }
+        }
+    </script>
+</body>
+</html>

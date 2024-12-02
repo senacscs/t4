@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Números Sorteados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e4f3;
+            color: #666666;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #d5006b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #b20055;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar Números Sorteados</h1>
+    <p>Informe um número entre 0 e 6:</p>
+
+    <input type="number" id="numero" placeholder="Digite um número" min="0" max="6" />
+    <br>
+    <button onclick="verificarNumero()">Verificar</button>
+
+    <h3>Resultado</h3>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            const numDigitado = parseInt(document.getElementById("numero").value);
+            const numSorteado = Math.floor(Math.random() * 7); // Sorteia número de 0 a 6
+
+            if (numDigitado >= 0 && numDigitado <= 6) {
+                if (numDigitado === numSorteado) {
+                    document.getElementById("resultado").innerText = 
+                        `Os números são iguais!\nNúmero digitado: ${numDigitado}\nNúmero sorteado: ${numSorteado}`;
+                } else {
+                    document.getElementById("resultado").innerText = 
+                        `Os números são diferentes!\nNúmero digitado: ${numDigitado}\nNúmero sorteado: ${numSorteado}`;
+                }
+            } else {
+                document.getElementById("resultado").innerText = 
+                    "O número digitado deve estar entre 0 e 6.";
+            }
+        }
+    </script>
+</body>
+</html>
