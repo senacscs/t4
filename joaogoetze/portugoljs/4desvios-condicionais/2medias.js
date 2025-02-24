@@ -37,9 +37,9 @@ function medias() {
 
 	let m1, m2, m3, media
 
-    media = parseInt(document.getElementById("medida1").value)
-    media = parseInt(document.getElementById("medida2").value)
-    media = parseInt(document.getElementById("medida3").value)
+     m1 = parseFloat(document.getElementById("medida1").value)
+     m2 = parseFloat(document.getElementById("medida2").value)
+     m3 = parseFloat(document.getElementById("medida3").value)
 
  	 media = (m1 + m2 + m3) / 3 
 
