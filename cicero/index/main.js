@@ -7,8 +7,10 @@ let main = document.getElementById("main");
 let anos = document.getElementById("anos");
 
 let doodad = document.getElementById("doodad");
+let spamton = document.getElementById("spamton");
 
 let act1 = document.getElementById("act1");
+let act2 = document.getElementById("act2");
 
 let ato1;
 let ato2;
@@ -33,7 +35,7 @@ function criarElem(tag, classe = null, atrib = null) {
     if (classe != null) {
         elem.setAttribute("class", classe)
     }
-    if(atrib != null){
+    if (atrib != null) {
         for (j = 0; j < atrib.length; j++) {
             elem.setAttribute(atrib[j][0], atrib[j][1]);
         }
@@ -42,14 +44,51 @@ function criarElem(tag, classe = null, atrib = null) {
     return elem;
 }
 
+let bodyBg = {
+    posX: 0,
+    posY: 0,
+    velX: 0,
+    velY: 0
+};
+setInterval(function(){
+    bodyBg.posX += bodyBg.velX;
+    bodyBg.posY += bodyBg.velY;
+    // if(bodyBg.posX >= 150) {
+    //     bodyBg.posX = 50;
+    // }
+    // if(bodyBg.posY >= 150) {
+    //     bodyBg.posY = 50;
+    // }
+    body.style.backgroundPosition = `${bodyBg.posX}px ${bodyBg.posY}px`
+},10);
+
+let simX = 0;
+let simY = 0;
+
+setInterval(function(){
+    simX += 0.1;
+    simY += 0.1;
+    document.getElementById("sim").style.backgroundPosition = `${simX}px ${simY}px`
+},10);
+
+function setBgSpeed(posX, posY, velX,velY){
+    bodyBg.posX = posX;
+    bodyBg.posY = posY;
+    bodyBg.velX = velX;
+    bodyBg.velY = velY;
+}
+setBgSpeed(0,0,1,1);
+
 //PLAY
 let tela = "menu";
 play.addEventListener("click", function () {
     if (tela == "menu") {
         main.style.display = "none";
         anos.style.display = "flex";
-        doodad.style.display = "none";
+        // doodad.style.display = "none";
         tela = "anos";
+        document.body.style.background = 'url("./img/elevador.bmp")';
+        setBgSpeed(window.innerWidth/2,0,0,20);
     }
 });
 
@@ -59,12 +98,16 @@ window.addEventListener("keydown", function (e) {
             main.style.display = "flex";
             anos.style.display = "none";
             tela = "menu";
+            document.body.style.background = 'url("img/coiso.png")';
+            setBgSpeed(0,0,1,1);
         }
-        if (tela.startsWith("act")){
+        if (tela.startsWith("act")) {
             anos.style.display = "flex";
             ato1.style.display = "none";
 
             tela = "anos";
+            document.body.style.background = 'url("./img/elevador.bmp")';
+            setBgSpeed(window.innerWidth/2,0,0,20);
         }
     }
 })
@@ -83,9 +126,20 @@ options.addEventListener("click", function () {
 });
 
 //CREDITS
+
+var dancinha = "não";
+
 credits.addEventListener("click", function () {
-    doodad.src = "./img/ha/" + lImageHumouristique[getRandomInt(6)];
-    doodad.style.display = "inline";
+    // doodad.src = "./img/ha/" + lImageHumouristique[getRandomInt(6)];
+    // doodad.style.display = "inline";
+    if(dancinha === "não") {
+        dancinha = "sim";
+        spamton.src = "img/spamton.webp";
+    }
+    else {
+        dancinha = "não";
+        spamton.src = "img/him.gif";
+    }
 });
 
 
@@ -94,56 +148,37 @@ quit.addEventListener("click", function () {
     window.close();
 });
 
-//LISTA DE TRABALHOS
-
-let TRABALHOS = [
-    {
-        nome: "LAYER 1: BESTEIRAS",
-        content: [
-            { nome: "SITE DA OFICINA", url: "oficina", img: "esqueleto.jpg" },
-            { nome: "PRIMEIRO SITE", url: "olamundo", img: "grug.jpg" },
-            { nome: "SITE NO PAPEL", url: "teste_ods", img: "emoji.jpg"},
-            { nome: "TABELA PERIÓDICA 3.0", url: "tabela-periodica-3", img: "ciencia.jpg" },
-        ]
-    },
-    {
-        nome: "LAYER 2: MATEMÁTICA",
-        content: [
-            { nome: "4-1: SLAVES TO POWER", url: "jogo1", img: "egito.jpg" },
-            { nome: "polia", url: "tecnologiamat", img: "polia.bmp" },
-            { nome: "DA VINKI?", url: "pontedavinci", img: "davinki.jpg" },
-            { nome: "TRIÂNGULO = ILUMINATTI?!?!?!?!", url: "triangulos", img: "iluminatti.jpg" },
-        ]
-    },
-    {
-        nome: "LAYER 3: TÉCNICO",
-        content: [
-            { nome: "INDICAÇÕES HTML", url: "indicacoeshtml", img: "design.webp" },
-            { nome: "INDICAÇÕES CSS", url: "indicacoescss", img: "design.jpg" },
-            { nome: "SITE PRA MAMÃE", url: "responsaveis", img: "ursinho.gif" },
-            { nome: "POEMAS IRADOS", url: "responsaveis", img: "pirata.webp" },
-            { nome: "COISAS DO PORTUGOL", url: "portugoljs", img: "computer.png" },
-            { nome: "PANTANAL", url: "biomas", img: "capivara.jpg" },
-        ]
-    },
-    {
-        nome: "LAYER 4: COISAS DE ÚTIL PRA VIDA",
-        content: [
-            { nome: "PROJETO DE PI", url: "projeto" }
-        ]
-    }
-]
-
 //CRIAR TELA DE LEVELS
 
-function criarLevel(lista){
+function getLevelImg(lista,pasta) {
+    if (lista.img) {
+        if (lista.img.charAt(0) === "#") {
+            return lista.img.substring(1);
+        }
+        return "./img/level/" + pasta + "/" + lista.img
+    }
+    return "./img/ha/kratos.gif"
+}
+
+function getLevelUrl(lista,pasta) {
+    if(lista.url.charAt(0) === "#") {
+        return "../" + lista.url.substring(1);
+    }
+    if(lista.url.charAt(0) === "&") {
+        return lista.url.substring(1);
+    }
+    return "../" + pasta + "/" + lista.url;
+
+}
+
+function criarLevel(lista, pasta) {
     let level = criarElem("div", "nivel");
     let p = criarElem("p");
     p.innerHTML = lista.nome;
-    let a = criarElem("a", null, atrib = [["href","../"+lista.url], ["target","_blank"]])
-    let img = criarElem("img", null, atrib = [["src",lista.img ? "./img/level/"+lista.img : "./img/ha/kratos.gif"]]);
-    let nominho = criarElem("span","nominho");
-    nominho.innerHTML = lista.url;
+    let a = criarElem("a", null, atrib = [["href", getLevelUrl(lista,pasta)], ["target", "_blank"]])
+    let img = criarElem("img", null, atrib = [["src", getLevelImg(lista,pasta)]]);
+    let nominho = criarElem("span", "nominho");
+    nominho.innerHTML = lista.url.charAt(0) === "&" || lista.url.charAt(0) === "#" ? "" : lista.url;
 
     a.appendChild(img)
     level.appendChild(p);
@@ -153,15 +188,15 @@ function criarLevel(lista){
     return level;
 }
 
-function criarCamada(lista){
-    let layer = criarElem("div","layer");
+function criarCamada(lista, pasta) {
+    let layer = criarElem("div", "layer");
     let galbo = criarElem("div", "galbo");
     let niveis = criarElem("div", "niveis");
     let p = criarElem("p");
     p.innerHTML = lista.nome;
 
     lista.content.forEach(elem => {
-        niveis.appendChild(criarLevel(elem));
+        niveis.appendChild(criarLevel(elem,pasta));
     });
     galbo.appendChild(p);
 
@@ -171,29 +206,37 @@ function criarCamada(lista){
     return layer;
 }
 
-function criarAto(nome, niveis){
-    let ato = criarElem("div", "levels", atrib = [["id",nome]]);
+function criarAto(nome, niveis) {
+    let ato = criarElem("div", "levels", atrib = [["id", nome]]);
     let goobert = criarElem("div", "goobert");
 
-    niveis.forEach(elem => {
-        goobert.appendChild(criarCamada(elem));
+    let pasta = niveis[0]
+
+    niveis[1].forEach(elem => {
+        goobert.appendChild(criarCamada(elem,pasta));
     });
 
     ato.appendChild(goobert);
 
     return ato;
-    
+
 }
 
-ato1 = criarAto("ato1", TRABALHOS);
+ato1 = criarAto("ato1", ANO1);
 body.appendChild(ato1);
+
+ato2 = criarAto("ato2", ANO2);
+body.appendChild(ato2);
 
 // ACT SELECT
 
-act1.addEventListener("click", function(){
+act1.addEventListener("click", function () {
     anos.style.display = "none";
     ato1.style.display = "flex";
     tela = "act1";
 });
-
-//oi :3
+act2.addEventListener("click", function () {
+    anos.style.display = "none";
+    ato2.style.display = "flex";
+    tela = "act2";
+});
