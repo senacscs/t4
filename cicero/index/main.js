@@ -195,3 +195,5 @@ act1.addEventListener("click", function(){
     ato1.style.display = "flex";
     tela = "act1";
 });
+
+//oi :3
