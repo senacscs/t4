@@ -66,7 +66,7 @@ main {
 .text-container {
     z-index: 100;
     width: 100%;
-    height: 130vh;
+    height: 150vh;
     /* display: flex; */
     position: absolute;
     top: 0;
