@@ -44,6 +44,7 @@ body {
         align-items: start;
 
         min-width: 30%;
+        max-width: 50vw;
         padding-top: 50px;
 
         .titulo {
@@ -53,14 +54,20 @@ body {
 
             h1 {
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                color: red;
+                color: rgb(215, 215, 215);
                 font-size: 80px;
                 margin: 0;
             }
 
+            img {
+                width: 75%;
+                height: 75%;
+            }
+
             p {
-                font-size: 30px;
+                font-size: 16px;
                 margin: 0;
+                color:rgb(120, 119, 119)
             }
         }
 
@@ -75,7 +82,7 @@ body {
                 align-items: center;
                 justify-content: center;
                 background-color: rgb(206, 206, 206);
-                width: 100%;
+                width: 70%;
                 margin: 5px;
                 clip-path: polygon(5% 0, 95% 0, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%);
 
@@ -86,7 +93,7 @@ body {
                     align-items: center;
                     justify-content: center;
 
-                    background-color: rgb(40, 40, 40);
+                    background-color: rgb(8, 8, 8);
                     width: 100%;
                     margin: 5px;
                     clip-path: polygon(5% 0, 95% 0, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%);

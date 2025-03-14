@@ -88,7 +88,7 @@ play.addEventListener("click", function () {
         // doodad.style.display = "none";
         tela = "anos";
         document.body.style.background = 'url("./img/elevador.bmp")';
-        setBgSpeed(window.innerWidth/2,0,0,20);
+        setBgSpeed(window.innerWidth/2,0,0,-40);
     }
 });
 
@@ -107,7 +107,7 @@ window.addEventListener("keydown", function (e) {
 
             tela = "anos";
             document.body.style.background = 'url("./img/elevador.bmp")';
-            setBgSpeed(window.innerWidth/2,0,0,20);
+            setBgSpeed(window.innerWidth/2,0,0,-40);
         }
     }
 })
@@ -157,7 +157,7 @@ function getLevelImg(lista,pasta) {
         }
         return "./img/level/" + pasta + "/" + lista.img
     }
-    return "./img/ha/kratos.gif"
+    return "./img/him.gif"
 }
 
 function getLevelUrl(lista,pasta) {
