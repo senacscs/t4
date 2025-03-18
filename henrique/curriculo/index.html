@@ -1,39 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon.jpg" type="icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Adicionando Font Awesome -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+    .container {
+      background-color: #fff;
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 20px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+    }
+    .contact-info,
+    .education,
+    .complementary-education,
+    .skills {
+      font-size: 14px;
+      list-style-type: none;
+      margin-top: 10px;
+    }
+    .contact-info li,
+    .education li,
+    .complementary-education li,
+    .skills li {
+      margin-bottom: 5px;
+    }
+    .contact-info a {
+      text-decoration: none;
+      color: #333;
+    }
+    .contact-info a:hover {
+      color: #007bff;
+    }
+    footer {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+    .profile-icon {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 40px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-    <header>
-    <h1>Currículo Henrique Bender</h1>
-    </header>
-    <main>
-        <section class="itens">
-            <h1 id="dados">Dados:</h1>
-            <h2>Nome: Henrique Bender</h2>
-            <h2>Cidade: Santa Cruz do Sul</h2>
-            <h2>Estado: Rio Grande do Sul</h2>
-            <h2>Email: henriquebender2000@gmail.com</h2>
-            <h2>Telefone: 51 99460-8020</h2>
-            <h2>Perfil FreeCodeCamp: <a href="https://www.freecodecamp.org/henriquebenderr">@henriquebenderr</a></h2>
-            <h2>Perfil GitHub: <a href="https://github.com/henriquebender">@henriquebender</a></h2>
-        </section>
-        <section class="itens">
-            <h1 id="basica">Educação Basica:</h1>
-            <h2>Curso Técnico: Técnico em informática para internet | Senac Santa Cruz do Sul | em andamento</h2>
-            <h2>Ensino Médio: Ensino Médio integrado com curso técnico | Senac Santa Cruz do Sul | em andamento</h2>
-            <h2>Ensino fundamental: Colegio Mauá | Santa Cruz do Sul | 2017-2023</h2>
-            <h2>Ensino fundamental: Colégio Marista São Luís | Santa Cruz do Sul | 2014-2016</h2>
-        </section>
-        <section class="itens">
-            <h1 id="complementar">Educação Complemtentar:<//h1>
-            <h2>Curso: FreeCodeCamp: Design responsivo para a web | em andamento</h2>
-        </section>
-        <h1 id="pdf"><a href="currículo.pdf">Currículo em PDF</a></h1>
-    </main>
+  <div class="container">
+    <div class="profile-icon">
+      <i class="fas fa-user-circle"></i>
+    </div>
+
+    <h1>Henrique Bender</h1>
+    <p><strong>Profissão:</strong> Estudante de Ensino Médio com Técnico em Informática</p>
+
+    <div class="section-title">Contato</div>
+    <ul class="contact-info">
+      <li>Email: henriquebender2000@gmail.com</li>
+      <li>Telefone: +55 51 99460-8020</li>
+      <li>Cidade: Santa Cruz do Sul, RS</li>
+      <li>Perfil FreeCodeCamp: <a href="https://www.freecodecamp.org/henriquebenderr" target="_blank">@henriquebenderr</a></li>
+      <li>Perfil GitHub: <a href="https://github.com/henriquebender" target="_blank">@henriquebender</a></li>
+    </ul>
+
+    <div class="section-title">Educação Básica</div>
+    <ul class="education">
+      <li><strong>Ensino Médio:</strong> Ensino Médio Integrado com Curso Técnico | Senac Santa Cruz do Sul | em andamento</li>
+      <li><strong>Ensino Fundamental:</strong> Colégio Mauá | Santa Cruz do Sul | 2017-2023</li>
+      <li><strong>Ensino Fundamental:</strong> Colégio Marista São Luís | Santa Cruz do Sul | 2014-2016</li>
+    </ul>
+
+    <div class="section-title">Educação Complementar</div>
+    <ul class="complementary-education">
+      <li><strong>Curso:</strong> FreeCodeCamp: Design Responsivo para a Web | em andamento</li>
+    </ul>
+
+    <div class="section-title">Habilidades</div>
+    <ul class="skills">
+      <li><strong>Desenvolvimento Web:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Ferramentas:</strong> Visual Studio Code</li>
+      <li><strong>Outras habilidades:</strong> Criatividade, organização e aprendizado rápido.</li>
+    </ul>
+
+    <footer>
+      <p>2025 Henrique Bender.</p>
+    </footer>
+  </div>
 </body>
 </html>
