@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Clique aqui!</button>
+<style>
+    button {
+        position: absolute;
+    }
+</style>
+    <script>
+     const button = document.querySelector('button');
+
+document.addEventListener('mousemove', function(event) {
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  const buttonX = button.offsetLeft + button.offsetWidth / 2;
+  const buttonY = button.offsetTop + button.offsetHeight / 2;
+
+  const dx = mouseX - buttonX;
+  const dy = mouseY - buttonY;
+
+  const angle = Math.atan2(dy, dx);
+
+  const speed = 5; 
+  const moveX = Math.cos(angle + Math.PI) * speed;
+  const moveY = Math.sin(angle + Math.PI) * speed;
+
+  button.style.left = `${button.offsetLeft + moveX}px`;
+  button.style.top = `${button.offsetTop + moveY}px`;
+});
+
+    </script>
+</body>
+
+</html>

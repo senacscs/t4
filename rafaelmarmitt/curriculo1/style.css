@@ -1,0 +1,27 @@
+body {
+  background-color: #d3d3d3;
+}
+.content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1% 2%;
+    margin: 2% 10%;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pfp {
+  width: 120px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  position:absolute;
+  margin-left: 60%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 20;
+}
