@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(242, 242, 242);
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 50px;
+}
+.container {
+    background-color: white;
+    max-width: auto;
+    border-radius: 7px;
+    padding: 100px;
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.389);
+}
+table {
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    text-align: center;
+    max-width: auto;
+    margin: auto;
+}
+td, th {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+
+}
