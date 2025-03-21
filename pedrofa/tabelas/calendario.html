@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+
+    <style>
+         body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+table {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color: #ccc;
+}
+.cinza td {
+    font-weight: bold;
+    background-color: #ccc;
+}
+
+.feriado {
+    background-color: red;
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Calendário - Mês Abril</h1>
+            <table>
+                <tr>
+                    <th colspan="7">Abril 2025</th>
+                </tr>
+                <tr class="cinza">
+                    <td>Domingo</td>
+                    <td>Segunda</td>
+                    <td>Terça</td>
+                    <td>Quarta</td>
+                    <td>Quinta</td>
+                    <td>Sexta</td>
+                    <td>Sábado</td>
+                </tr>
+                <tr class="direita">
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr class="direita">
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr class="direita">
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td class="feriado">18</td>
+                    <td>19</td>
+                </tr>
+                <tr class="direita">
+                    <td class="feriado">20</td>
+                    <td class="feriado">21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td colspan="4"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>

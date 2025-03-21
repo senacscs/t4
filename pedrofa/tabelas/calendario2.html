@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--table>thead>tr>th{Dom}+th{Seg}+th{Ter}+th{Qua}+th{Qui}+th{Sex}+th{Sáb}+tbody>tr*5>td*7-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-image: url(https://i.pinimg.com/736x/be/d1/0a/bed10a080b98c364ec2f324d3453337e---html.jpg);
+            background-size: cover; /* Faz com que a imagem de fundo cubra toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Impede que a imagem se repita */
+        }
+
+        table {
+            width: 22%;
+            margin: auto;
+            border-collapse: collapse;
+            height: 250px; 
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+            width: 100px;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #ccc;
+            font-weight: bold;
+        }
+
+        .container {
+            flex-wrap: wrap;
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 100%;
+        }
+
+        .feriado {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Calendário de 2025</h1>
+        <div class="container">
+            <section class="janeiro">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="7">Janeiro</th>
+                        </tr>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+
+            <section class="fevereiro">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="7">Fevereiro</th>
+                        </tr>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+
+            <section class="marco">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="7">Março</th>
+                        </tr>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="feriado">3</td>
+                            <td class="feriado">4</td>
+                            <td class="feriado">5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>31</td>
+                            <td colspan="5"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+
+            <section class="abril">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="7">Abril</th>
+                        </tr>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td class="feriado">18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td class="feriado">21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+
+            <section class="maio">
+                <table>
+                    <thead>
+                        <th colspan="7">Maio</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="feriado">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="junho">
+                <table>
+                    <thead>
+                        <th colspan="7">Junho</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td class="feriado">19</td>
+                            <td>20</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td colspan="5"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="julho">
+                <table>
+                    <thead>
+                        <th colspan="7">Julho</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="agosto">
+                <table>
+                    <thead>
+                        <th colspan="7">Agosto</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td colspan="6"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="setembro">
+                <table>
+                    <thead>
+                        <th colspan="7">Setembro</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td colspan="4"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="outubro">
+                <table>
+                    <thead>
+                        <th colspan="7">Outubro</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td class="feriado">28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="novembro">
+                <table>
+                    <thead>
+                        <th colspan="7">Novembro</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="feriado">15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td class="feriado">20</td>
+                            <td>21</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td colspan="6"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+            <section class="dezembro">
+                <table>
+                    <thead>
+                        <th colspan="7">Dezembro</th>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td class="feriado">24</td>
+                            <td class="feriado">25</td>
+                            <td>26</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="feriado">31</td>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </section>
+        </div>
+    </main>
+</body>

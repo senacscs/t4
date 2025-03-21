@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+     body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+table {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color: #ccc;
+}
+</style>
+<body>
+    <div class="container">
+<h1>Tabela de Dados</h1>
+    <table>
+        <tr>
+            <th colspan="2">Nome e Idade</th>
+            <th>Profissão</th>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>28</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Carlos</td>
+            <td>40</td>
+            <td>Advogado</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>Empresário</td>
+        </tr>
+    </table> 
+</div>
+</body>
+</html>
