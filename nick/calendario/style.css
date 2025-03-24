@@ -1,0 +1,69 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Alteração na fonte */
+    text-align: center;
+    background-color: #f0f0f0; /* Fundo suave para o corpo da página */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Cor mais suave para as bordas */
+    text-align: center;
+    padding: 12px; /* Maior padding para mais espaçamento */
+    font-size: 1rem; /* Fonte mais legível */
+}
+
+th {
+    background-color: #6a4c93; /* Nova cor de fundo para o cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+}
+
+.feriado {
+    background-color: #b12b6b; /* Cor diferente para os feriados */
+    color: white;
+}
+
+.gabarito {
+    background-color: #f2f2f2; /* Fundo mais claro para o gabarito */
+    margin: 4vh auto;
+    padding: 2vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    width: 60%; /* Tamanho ajustado */
+}
+
+h2 {
+    font-size: 1.4rem; /* Aumentei o tamanho da fonte */
+    color: #333; /* Cor mais suave */
+}
+
+h1 {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Sombra mais leve */
+    color: #4a4a4a; /* Cor de texto mais suave */
+}
+
+.cols {
+    background-color: #4c2a53; /* Nova cor para as colunas */
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Ajuste no espaço entre os itens */
+}
+
+.table {
+    width: 28%; /* Largura da tabela ajustada */
+    margin: 15px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc; /* Cor mais suave para as bordas das células */
+    padding: 10px; /* Maior padding */
+    font-size: 0.9rem; /* Ajuste no tamanho da fonte */
+}
+
+.table th {
+    background-color: #4a2f63; /* Novo fundo para cabeçalhos das tabelas */
+    color: white;
+}
