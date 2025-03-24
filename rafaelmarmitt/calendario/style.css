@@ -3,15 +3,6 @@ body {
     text-align: center;
 }
 
-table {
-    border-collapse: collapse;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-    background-color: #f3f2f2;
-    box-shadow: 0 0 10px #949494;
-}
-
 th,
 td {
     border: 1px solid black;
@@ -40,7 +31,7 @@ h2 {
 }
 
 h1 {
-    text-shadow:0 0 10px rgb(176, 67, 67) ;
+    text-shadow: 0 0 10px rgb(61, 61, 61);
 }
 
 .cols {
@@ -68,4 +59,23 @@ td[title]:hover::after {
 
 .feriado {
     background-color: rgb(83, 164, 180);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.table {
+    width: 23%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
 }
