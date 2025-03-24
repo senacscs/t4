@@ -15,7 +15,7 @@ function atualizarCards(p, f) {
     for (let i = 0; i < alunos.length; i++) {
         let elem1 = document.createElement("a");
         elem1.setAttribute("class", "card");
-        elem1.setAttribute("href", "/" + alunos[i].pasta + "/" + f);
+        elem1.setAttribute("href", "t4/" + alunos[i].pasta + "/" + f);
         let elem2 = document.createElement("div");
         let elem3 = document.createElement("p");
         elem3.innerText = alunos[i].nome;
