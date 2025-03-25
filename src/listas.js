@@ -64,5 +64,6 @@ const ProjetosP = [
 const ProjetosS = [  
     //? Projetos Segundo Ano
     { "nome": "Index", "url": "../index.html"},
-    { "nome": "Calendario", "url": "calendario"}
+    { "nome": "Calendario", "url": "calendario"},
+    { "nome": "Tabela P.", "url": "tabela"}
 ]
