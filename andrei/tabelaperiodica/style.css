@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+.tabela-periodica {
+    display: grid;
+    grid-template-columns: repeat(18, 65px);
+    gap: 4px;
+    margin: 0 auto;
+    width: fit-content;
+}
+.elemento {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.elemento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.numero {
+    font-size: 10px;
+    text-align: left;
+    color: #555;
+}
+.simbolo {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 3px 0;
+}
+.nome {
+    font-size: 9px;
+    margin-top: 3px;
+    color: #333;
+}
+.vazio {
+    border: none;
+}
+
+/* Cores por categoria */
+.metal-alcalino { background-color: #ff6666; }
+.metal-alcalino-terroso { background-color: #ffcc66; }
+.metal-transicao { background-color: #ffb6c1; }
+.outros-metais { background-color: #ccccff; }
+.semimetal { background-color: #99cc99; }
+.nao-metal { background-color: #99ff99; }
+.halogenio { background-color: #ffff99; }
+.gas-nobre { background-color: #99ccff; }
+.lantanidio { background-color: #ff99cc; }
+.actinidio { background-color: #ff77aa; }
+.pos-transicao { background-color: #cc99ff; }
+.desconhecido { background-color: #e0e0e0; }
+
+.legenda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+    gap: 10px;
+}
+.legenda-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.legenda-cor {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #999;
+}
