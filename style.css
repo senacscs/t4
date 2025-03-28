@@ -77,8 +77,17 @@ main {
     font-weight: 450;
     transition: .3s;
 }
-.titulot:hover {
-    transform: rotate(2.5deg);
+.titulot::before {
+    content: "V 1.01";
+    position: absolute;
+    font-size: 1vw;
+    top: 50%;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.titulo:hover ::before {
+    top: 100%;
+    opacity: 1;
 }
 
 /*? Barra de pesquisa e filtros */
@@ -352,9 +361,6 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
         margin: 0;
-    }
-    .filtros.aberto2 {
-        width: calc(var(--ww));
     }
 }
 @media (max-width: 500px) {

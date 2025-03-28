@@ -1,5 +1,5 @@
 //! Cards, Pesquisa e Filtros
-function atualizarCards(p, f) {   
+function atualizarCards(p, f) {
     const cD = document.getElementById("cd");
     cD.innerHTML = "";
     alunos.sort((a, b) => a.nome.localeCompare(b.nome));
@@ -16,12 +16,13 @@ function atualizarCards(p, f) {
         let elem1 = document.createElement("a");
         elem1.setAttribute("class", "card");
         elem1.setAttribute("href", "../t4/" + alunos[i].pasta + "/" + f);
+        elem1.target = "blank_"
         let elem2 = document.createElement("div");
         let elem3 = document.createElement("p");
         elem3.innerText = alunos[i].nome;
         cD.appendChild(elem1);
         elem1.appendChild(elem2);
-        elem2.appendChild(elem3); 
+        elem2.appendChild(elem3);
         if (p) {
             if (alunos[i].nome.toLowerCase().includes(p.toLowerCase())) {
                 elem1.style.display = "block";
@@ -32,7 +33,7 @@ function atualizarCards(p, f) {
             elem1.style.display = "block";
         }
     }
-} 
+}
 
 //! Filtros
 //? Abrir a aba de filtros
@@ -51,6 +52,17 @@ function abrirFiltros() {
     }
 }
 
+//* Fechar os filtros ao clicar fora
+// document.addEventListener('click', function (event) {
+//     var div = document.getElementById('filtros');
+//     if (filtros.classList.contains("aberto2")) {
+//         if (!div.contains(event.target)) {
+//             let filtros = document.getElementById("filtros");
+//             abrirFiltros()
+//         }
+//     }
+// });
+
 //? Responsividade da aba de filtros
 function filtroWidth() {
     let barraW = document.getElementById("barraDePesquisa").offsetWidth;
@@ -66,10 +78,10 @@ function filtrosCards(t) {
     let sp = document.getElementsByClassName("anpalr").length > 0 ? "p" : "s";
     let proj = sp === "p" ? ProjetosP : ProjetosS;
     let primeiroB = sp === "p" ? "primeiro/" : "segundo/"
-    for(let i = 0; i < proj.length; i++) {
+    for (let i = 0; i < proj.length; i++) {
         let filbtn = document.createElement("button")
         filbtn.setAttribute("class", "fil");
-        if(i === 0) {
+        if (i === 0) {
             filbtn.classList.add("sele");
         };
         filbtn.setAttribute("onclick", "selecionado(this)");
@@ -94,6 +106,9 @@ function selecionado(a) {
     a.classList.add("sele");
     let pesvValue = document.getElementById("pesquisa").value;
     atualizarCards(pesvValue, a.value);
+    setTimeout(() => {
+        abrirFiltros()
+    }, 300);
 };
 
 function troca() {
@@ -104,3 +119,4 @@ function troca() {
 
 //! Chamar a função pra spawnar os cards IMPORTANTE ESTAR NO FINAL
 atualizarCards();
+
