@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.table-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 5px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.element {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    color: black;
+}
+
+.element:hover {
+    filter: brightness(1.2);
+}
+
+.metal-alcalino {
+    background-color: #ff9999; /* Vermelho claro */
+}
+
+.metal-alcalino-terroso {
+    background-color: #ffcc99; /* Laranja claro */
+}
+
+.metal-transicao {
+    background-color: #ff99ff; /* Roxo claro */
+}
+
+.lantanideo,
+.actinideo {
+    background-color: #cccccc; /* Cinza claro */
+}
+
+.outros-metais {
+    background-color: #693d3d; /* Cinza médio */
+}
+
+.semi-metal {
+    background-color: #ffff99; /* Amarelo claro */
+}
+
+.nao-metal {
+    background-color: #99ff99; /* Verde claro */
+}
+
+.halogênio {
+    background-color: #99ccff; /* Azul claro */
+}
+
+.gas-nobre {
+    background-color: #99ccff; /* Azul claro */
+}
+
+.solido {
+    color: black; /* Cor do texto para elementos sólidos */
+}
+
+.liquido {
+    color: #0000ff; /* Cor do texto para elementos líquidos */
+}
+
+.gasoso {
+    color: #ff0000; /* Cor do texto para elementos gasosos */
+}
+
+.legenda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.legenda-item {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
