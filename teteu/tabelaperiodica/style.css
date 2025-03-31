@@ -1,0 +1,50 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.05);
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td:hover {
+    transform: scale(1.2);
+}
+
+.metal {
+    background-color: #ff6f61;
+}
+
+.nao-metal {
+    background-color: #6bcb77;
+}
+
+.gas-nobre {
+    background-color: #42a5f5;
+}
+
+.semi-metal {
+    background-color: #ffca28;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+.Lantemidios{
+    background-color: #003e71;
+}
+.Admidios{
+    background-color: #71096a;
+}
