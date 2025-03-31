@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(255, 216, 216);
+    justify-items: center;
+    padding: 5%;
+    font-family: monospace;
+    color: maroon;
+}
+
+table {
+    border: 1px solid rgb(255, 216, 216);
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 1220px;
+    height: 500px;
+}
+
+td, th {
+    border: 1px solid rgb(255, 216, 216);
+    padding: 8px;
+    text-align: center;
+}
+
+th{
+    background-color: rgb(212, 97, 135);
+}
+
+td {
+    position: relative;
+    transition: .3s;
+    z-index: 1;
+}
+td:hover {
+    transform: scale(1.2);
+    z-index: 100;
+    box-shadow: 0 0 10px black;
+}
+
+a {
+    color: maroon;
+    text-decoration: none;
+}
+
+.blank:hover {
+    transform: scale(1) !important;
+}
+
+.sigla {
+    text-align: center;
+}
+
+.nome {
+    text-align: center;
+    font-size: 7px;
+}
+
+.numero{
+    font-size: 7px;
+    text-align: left;
+    position: absolute;
+}
+
+.massa {
+    font-size: 7px;
+    text-align: right;
+    right: 1px;
+    position: absolute;
+}
+
+
+.semi {
+    background-color: rgb(221, 34, 81);
+    color: rgb(255, 216, 216);
+}
+
+.trans {
+    background-color: rgb(234, 107, 133);
+}
+
+.blank {
+    background-color: rgb(255, 216, 216);
+
+}
+
+.alcano{
+    background-color: rgb(255, 165, 180);
+    color: maroon;;
+}
+
+.alcato {
+    background-color: rgb(238, 89, 131);
+}
+
+.nobre {
+    background-color: rgb(226, 43, 83);
+    color: rgb(255, 216, 216);
+}
+
+.hidro {
+    background-color: rgb(252, 41, 108);
+    color: rgb(255, 216, 216);
+}
+
+.nao {
+    background-color: rgb(227, 60, 102);
+    color: rgb(255, 216, 216);
+}
+
+.outro {
+    background-color: rgb(252, 139, 158);
+}
+
+.lan {
+    background-color: rgb(217, 62, 101);
+    color: rgb(255, 216, 216);
+}
+
+.ax {
+    background-color: rgb(255, 76, 154);
+    color: rgb(255, 216, 216);
+}
