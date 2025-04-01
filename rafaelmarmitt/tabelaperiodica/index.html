@@ -1,0 +1,1425 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica Completa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000000;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .periodic-table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            table-layout: fixed;
+            min-width: 100%;
+        }
+        
+        .periodic-table td {
+            position: relative;
+            height: 80px;
+            width: 5.5%;
+            padding: 2;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .element {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+        
+        .element:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        
+        .number {
+            font-size: 10px;
+            text-align: left;
+            position: absolute;
+            top: 3px;
+            left: 5px;
+        }
+        
+        .symbol {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .name {
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        
+        .mass {
+            font-size: 10px;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        
+        .alkali-metal { background-color: #FF9D9D; }
+        .alkaline-earth { background-color: #FFDEAD; }
+        .transition-metal { background-color: #FFC0C0; }
+        .post-transition-metal { background-color: #CCCCCC; }
+        .metalloid { background-color: #CCFFCC; }
+        .nonmetal { background-color: #A0FFA0; }
+        .halogen { background-color: #FFFF99; }
+        .noble-gas { background-color: #C0FFFF; }
+        .lanthanide { background-color: #FFBFFF; }
+        .actinide { background-color: #FF99CC; }
+        .unknown { background-color: #E0E0E0; }
+        
+        .empty { border: none; }
+        
+        .legend {
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            color: #ffffff;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border: 1px solid #999;
+            color: white;
+        }
+        
+        .series-labels {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            color: white;
+        }
+        
+        .lanthanide-actinide-container {
+            margin-top: 10px;
+        }
+        
+        .lanthanide-actinide-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .lanthanide-actinide-table td {
+            height: 80px;
+            text-align: center;
+        }
+
+        .element-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela Periódica dos Elementos</h1>
+    
+    <table class="periodic-table">
+        <!-- Linha 1 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Hidrog%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">1</div>
+                        <div class="symbol">H</div>
+                        <div class="name">Hidrogênio</div>
+                        <div class="mass">1.008</div>
+                    </div>
+                </a>
+            </td>
+            <td class="empty" colspan="16"></td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/H%C3%A9lio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">2</div>
+                        <div class="symbol">He</div>
+                        <div class="name">Hélio</div>
+                        <div class="mass">4.0026</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        
+        <!-- Linha 2 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/L%C3%ADtio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">3</div>
+                        <div class="symbol">Li</div>
+                        <div class="name">Lítio</div>
+                        <div class="mass">6.94</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ber%C3%ADlio" class="element-link" target="_blank">
+                    <div class="element alkaline-earth">
+                        <div class="number">4</div>
+                        <div class="symbol">Be</div>
+                        <div class="name">Berílio</div>
+                        <div class="mass">9.0122</div>
+                    </div>
+                </a>
+            </td>
+            <td class="empty" colspan="10"></td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Boro" class="element-link" target="_blank">
+                    <div class="element metalloid">
+                        <div class="number">5</div>
+                        <div class="symbol">B</div>
+                        <div class="name">Boro</div>
+                        <div class="mass">10.81</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Carbono" class="element-link" target="_blank">
+                    <div class="element nonmetal">
+                        <div class="number">6</div>
+                        <div class="symbol">C</div>
+                        <div class="name">Carbono</div>
+                        <div class="mass">12.011</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Nitrog%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element nonmetal">
+                        <div class="number">7</div>
+                        <div class="symbol">N</div>
+                        <div class="name">Nitrogênio</div>
+                        <div class="mass">14.007</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Oxig%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element nonmetal">
+                        <div class="number">8</div>
+                        <div class="symbol">O</div>
+                        <div class="name">Oxigênio</div>
+                        <div class="mass">15.999</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Fl%C3%BAor" class="element-link" target="_blank">
+                    <div class="element halogen">
+                        <div class="number">9</div>
+                        <div class="symbol">F</div>
+                        <div class="name">Flúor</div>
+                        <div class="mass">18.998</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ne%C3%B3nio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">10</div>
+                        <div class="symbol">Ne</div>
+                        <div class="name">Neônio</div>
+                        <div class="mass">20.180</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        
+        <!-- Linha 3 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/S%C3%B3dio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">11</div>
+                        <div class="symbol">Na</div>
+                        <div class="name">Sódio</div>
+                        <div class="mass">22.990</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Magn%C3%A9sio" class="element-link" target="_blank">
+                    <div class="element alkaline-earth">
+                        <div class="number">12</div>
+                        <div class="symbol">Mg</div>
+                        <div class="name">Magnésio</div>
+                        <div class="mass">24.305</div>
+                    </div>
+                </a>
+            </td>
+            <td class="empty" colspan="10"></td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Alum%C3%ADnio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">13</div>
+                        <div class="symbol">Al</div>
+                        <div class="name">Alumínio</div>
+                        <div class="mass">26.982</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Sil%C3%ADcio" class="element-link" target="_blank">
+                    <div class="element metalloid">
+                        <div class="number">14</div>
+                        <div class="symbol">Si</div>
+                        <div class="name">Silício</div>
+                        <div class="mass">28.085</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/F%C3%B3sforo" class="element-link" target="_blank">
+                    <div class="element nonmetal">
+                        <div class="number">15</div>
+                        <div class="symbol">P</div>
+                        <div class="name">Fósforo</div>
+                        <div class="mass">30.974</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Enxofre" class="element-link" target="_blank">
+                    <div class="element nonmetal">
+                        <div class="number">16</div>
+                        <div class="symbol">S</div>
+                        <div class="name">Enxofre</div>
+                        <div class="mass">32.06</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Cloro" class="element-link" target="_blank">
+                    <div class="element halogen">
+                        <div class="number">17</div>
+                        <div class="symbol">Cl</div>
+                        <div class="name">Cloro</div>
+                        <div class="mass">35.45</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Arg%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">18</div>
+                        <div class="symbol">Ar</div>
+                        <div class="name">Argônio</div>
+                        <div class="mass">39.948</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        
+        <!-- Linha 4 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Pot%C3%A1ssio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">19</div>
+                        <div class="symbol">K</div>
+                        <div class="name">Potássio</div>
+                        <div class="mass">39.098</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/C%C3%A1lcio" class="element-link" target="_blank">
+                    <div class="element alkaline-earth">
+                        <div class="number">20</div>
+                        <div class="symbol">Ca</div>
+                        <div class="name">Cálcio</div>
+                        <div class="mass">40.078</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Esc%C3%A2ndio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">21</div>
+                        <div class="symbol">Sc</div>
+                        <div class="name">Escândio</div>
+                        <div class="mass">44.956</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Tit%C3%A2nio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">22</div>
+                        <div class="symbol">Ti</div>
+                        <div class="name">Titânio</div>
+                        <div class="mass">47.867</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Van%C3%A1dio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">23</div>
+                        <div class="symbol">V</div>
+                        <div class="name">Vanádio</div>
+                        <div class="mass">50.942</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Cromo" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">24</div>
+                        <div class="symbol">Cr</div>
+                        <div class="name">Cromo</div>
+                        <div class="mass">51.996</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Mangan%C3%AAs" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">25</div>
+                        <div class="symbol">Mn</div>
+                        <div class="name">Manganês</div>
+                        <div class="mass">54.938</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ferro" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">26</div>
+                        <div class="symbol">Fe</div>
+                        <div class="name">Ferro</div>
+                        <div class="mass">55.845</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Cobalto" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">27</div>
+                        <div class="symbol">Co</div>
+                        <div class="name">Cobalto</div>
+                        <div class="mass">58.933</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/N%C3%ADquel" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">28</div>
+                        <div class="symbol">Ni</div>
+                        <div class="name">Níquel</div>
+                        <div class="mass">58.693</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Cobre" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">29</div>
+                        <div class="symbol">Cu</div>
+                        <div class="name">Cobre</div>
+                        <div class="mass">63.546</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Zinco" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">30</div>
+                        <div class="symbol">Zn</div>
+                        <div class="name">Zinco</div>
+                        <div class="mass">65.38</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/G%C3%A1lio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">31</div>
+                        <div class="symbol">Ga</div>
+                        <div class="name">Gálio</div>
+                        <div class="mass">69.723</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Germ%C3%A2nio" class="element-link" target="_blank">
+                    <div class="element metalloid">
+                        <div class="number">32</div>
+                        <div class="symbol">Ge</div>
+                        <div class="name">Germânio</div>
+                        <div class="mass">72.630</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ars%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element metalloid">
+                        <div class="number">33</div>
+                        <div class="symbol">As</div>
+                        <div class="name">Arsênio</div>
+                        <div class="mass">74.922</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Sel%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element nonmetal">
+                        <div class="number">34</div>
+                        <div class="symbol">Se</div>
+                        <div class="name">Selênio</div>
+                        <div class="mass">78.971</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Bromo" class="element-link" target="_blank">
+                    <div class="element halogen">
+                        <div class="number">35</div>
+                        <div class="symbol">Br</div>
+                        <div class="name">Bromo</div>
+                        <div class="mass">79.904</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Cript%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">36</div>
+                        <div class="symbol">Kr</div>
+                        <div class="name">Criptônio</div>
+                        <div class="mass">83.798</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        
+        <!-- Linha 5 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Rub%C3%ADdio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">37</div>
+                        <div class="symbol">Rb</div>
+                        <div class="name">Rubídio</div>
+                        <div class="mass">85.468</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Estroncio" class="element-link" target="_blank">
+                    <div class="element alkaline-earth">
+                        <div class="number">38</div>
+                        <div class="symbol">Sr</div>
+                        <div class="name">Estrôncio</div>
+                        <div class="mass">87.62</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/%C3%8Dtrio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">39</div>
+                        <div class="symbol">Y</div>
+                        <div class="name">Ítrio</div>
+                        <div class="mass">88.906</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Zirc%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">40</div>
+                        <div class="symbol">Zr</div>
+                        <div class="name">Zircônio</div>
+                        <div class="mass">91.224</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ni%C3%B3bio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">41</div>
+                        <div class="symbol">Nb</div>
+                        <div class="name">Nióbio</div>
+                        <div class="mass">92.906</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Molibd%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">42</div>
+                        <div class="symbol">Mo</div>
+                        <div class="name">Molibdênio</div>
+                        <div class="mass">95.95</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Tecn%C3%A9cio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">43</div>
+                        <div class="symbol">Tc</div>
+                        <div class="name">Tecnécio</div>
+                        <div class="mass">[98]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Rut%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">44</div>
+                        <div class="symbol">Ru</div>
+                        <div class="name">Rutênio</div>
+                        <div class="mass">101.07</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/R%C3%B3dio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">45</div>
+                        <div class="symbol">Rh</div>
+                        <div class="name">Ródio</div>
+                        <div class="mass">102.91</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Pal%C3%A1dio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">46</div>
+                        <div class="symbol">Pd</div>
+                        <div class="name">Paládio</div>
+                        <div class="mass">106.42</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Prata" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">47</div>
+                        <div class="symbol">Ag</div>
+                        <div class="name">Prata</div>
+                        <div class="mass">107.87</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/C%C3%A1dmio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">48</div>
+                        <div class="symbol">Cd</div>
+                        <div class="name">Cádmio</div>
+                        <div class="mass">112.41</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/%C3%8Dndio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">49</div>
+                        <div class="symbol">In</div>
+                        <div class="name">Índio</div>
+                        <div class="mass">114.82</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Estanho" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">50</div>
+                        <div class="symbol">Sn</div>
+                        <div class="name">Estanho</div>
+                        <div class="mass">118.71</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Antim%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element metalloid">
+                        <div class="number">51</div>
+                        <div class="symbol">Sb</div>
+                        <div class="name">Antimônio</div>
+                        <div class="mass">121.76</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Tel%C3%BArio" class="element-link" target="_blank">
+                    <div class="element metalloid">
+                        <div class="number">52</div>
+                        <div class="symbol">Te</div>
+                        <div class="name">Telúrio</div>
+                        <div class="mass">127.60</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Iodo" class="element-link" target="_blank">
+                    <div class="element halogen">
+                        <div class="number">53</div>
+                        <div class="symbol">I</div>
+                        <div class="name">Iodo</div>
+                        <div class="mass">126.90</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Xen%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">54</div>
+                        <div class="symbol">Xe</div>
+                        <div class="name">Xenônio</div>
+                        <div class="mass">131.29</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        
+        <!-- Linha 6 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/C%C3%A9sio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">55</div>
+                        <div class="symbol">Cs</div>
+                        <div class="name">Césio</div>
+                        <div class="mass">132.91</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/B%C3%A1rio" class="element-link" target="_blank">
+                    <div class="element alkaline-earth">
+                        <div class="number">56</div>
+                        <div class="symbol">Ba</div>
+                        <div class="name">Bário</div>
+                        <div class="mass">137.33</div>
+                    </div>
+                </a>
+            </td>
+            <td class="series-labels">Lantanídeos</td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/H%C3%A1fnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">72</div>
+                        <div class="symbol">Hf</div>
+                        <div class="name">Háfnio</div>
+                        <div class="mass">178.49</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/T%C3%A2ntalo_(elemento_qu%C3%ADmico)" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">73</div>
+                        <div class="symbol">Ta</div>
+                        <div class="name">Tântalo</div>
+                        <div class="mass">180.95</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Tungst%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">74</div>
+                        <div class="symbol">W</div>
+                        <div class="name">Tungstênio</div>
+                        <div class="mass">183.84</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/R%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">75</div>
+                        <div class="symbol">Re</div>
+                        <div class="name">Rênio</div>
+                        <div class="mass">186.21</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/%C3%93smio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">76</div>
+                        <div class="symbol">Os</div>
+                        <div class="name">Ósmio</div>
+                        <div class="mass">190.23</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ir%C3%ADdio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">77</div>
+                        <div class="symbol">Ir</div>
+                        <div class="name">Irídio</div>
+                        <div class="mass">192.22</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Platina" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">78</div>
+                        <div class="symbol">Pt</div>
+                        <div class="name">Platina</div>
+                        <div class="mass">195.08</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Ouro" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">79</div>
+                        <div class="symbol">Au</div>
+                        <div class="name">Ouro</div>
+                        <div class="mass">196.97</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Merc%C3%BArio_(elemento_qu%C3%ADmico)" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">80</div>
+                        <div class="symbol">Hg</div>
+                        <div class="name">Mercúrio</div>
+                        <div class="mass">200.59</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/T%C3%A1lio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">81</div>
+                        <div class="symbol">Tl</div>
+                        <div class="name">Tálio</div>
+                        <div class="mass">204.38</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Chumbo" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">82</div>
+                        <div class="symbol">Pb</div>
+                        <div class="name">Chumbo</div>
+                        <div class="mass">207.2</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Bismuto" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">83</div>
+                        <div class="symbol">Bi</div>
+                        <div class="name">Bismuto</div>
+                        <div class="mass">208.98</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Pol%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">84</div>
+                        <div class="symbol">Po</div>
+                        <div class="name">Polônio</div>
+                        <div class="mass">[209]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Astato" class="element-link" target="_blank">
+                    <div class="element halogen">
+                        <div class="number">85</div>
+                        <div class="symbol">At</div>
+                        <div class="name">Astato</div>
+                        <div class="mass">[210]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Rad%C3%B3nio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">86</div>
+                        <div class="symbol">Rn</div>
+                        <div class="name">Radônio</div>
+                        <div class="mass">[222]</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        
+        <!-- Linha 7 -->
+        <tr>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Fr%C3%A2ncio" class="element-link" target="_blank">
+                    <div class="element alkali-metal">
+                        <div class="number">87</div>
+                        <div class="symbol">Fr</div>
+                        <div class="name">Frâncio</div>
+                        <div class="mass">[223]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/R%C3%A1dio" class="element-link" target="_blank">
+                    <div class="element alkaline-earth">
+                        <div class="number">88</div>
+                        <div class="symbol">Ra</div>
+                        <div class="name">Rádio</div>
+                        <div class="mass">[226]</div>
+                    </div>
+                </a>
+            </td>
+            <td class="series-labels">Actinídeos</td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Rutherf%C3%B3rdio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">104</div>
+                        <div class="symbol">Rf</div>
+                        <div class="name">Rutherfórdio</div>
+                        <div class="mass">[267]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/D%C3%BAnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">105</div>
+                        <div class="symbol">Db</div>
+                        <div class="name">Dúbnio</div>
+                        <div class="mass">[268]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Seab%C3%B3rgio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">106</div>
+                        <div class="symbol">Sg</div>
+                        <div class="name">Seabórgio</div>
+                        <div class="mass">[269]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/B%C3%B3hrio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">107</div>
+                        <div class="symbol">Bh</div>
+                        <div class="name">Bóhrio</div>
+                        <div class="mass">[270]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/H%C3%A1ssio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">108</div>
+                        <div class="symbol">Hs</div>
+                        <div class="name">Hássio</div>
+                        <div class="mass">[269]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Meitn%C3%A9rio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">109</div>
+                        <div class="symbol">Mt</div>
+                        <div class="name">Meitnério</div>
+                        <div class="mass">[278]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Darmst%C3%A1dio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">110</div>
+                        <div class="symbol">Ds</div>
+                        <div class="name">Darmstádio</div>
+                        <div class="mass">[281]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Roentg%C3%AAnio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">111</div>
+                        <div class="symbol">Rg</div>
+                        <div class="name">Roentgênio</div>
+                        <div class="mass">[282]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Copern%C3%ADcio" class="element-link" target="_blank">
+                    <div class="element transition-metal">
+                        <div class="number">112</div>
+                        <div class="symbol">Cn</div>
+                        <div class="name">Copernício</div>
+                        <div class="mass">[285]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Nih%C3%B4nio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">113</div>
+                        <div class="symbol">Nh</div>
+                        <div class="name">Nihônio</div>
+                        <div class="mass">[286]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Fler%C3%B3vio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">114</div>
+                        <div class="symbol">Fl</div>
+                        <div class="name">Fleróvio</div>
+                        <div class="mass">[289]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Mosc%C3%B3vio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">115</div>
+                        <div class="symbol">Mc</div>
+                        <div class="name">Moscóvio</div>
+                        <div class="mass">[290]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Liverm%C3%B3rio" class="element-link" target="_blank">
+                    <div class="element post-transition-metal">
+                        <div class="number">116</div>
+                        <div class="symbol">Lv</div>
+                        <div class="name">Livermório</div>
+                        <div class="mass">[293]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Tenesso" class="element-link" target="_blank">
+                    <div class="element unknown">
+                        <div class="number">117</div>
+                        <div class="symbol">Ts</div>
+                        <div class="name">Tenesso</div>
+                        <div class="mass">[294]</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="https://pt.wikipedia.org/wiki/Oganess%C3%B3nio" class="element-link" target="_blank">
+                    <div class="element noble-gas">
+                        <div class="number">118</div>
+                        <div class="symbol">Og</div>
+                        <div class="name">Oganessônio</div>
+                        <div class="mass">[294]</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Lantanídeos e Actinídeos -->
+    <div class="lanthanide-actinide-container">
+        <table class="lanthanide-actinide-table">
+            <tr>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Lant%C3%A2nio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">57</div>
+                            <div class="symbol">La</div>
+                            <div class="name">Lantânio</div>
+                            <div class="mass">138.91</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/C%C3%A9rio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">58</div>
+                            <div class="symbol">Ce</div>
+                            <div class="name">Cério</div>
+                            <div class="mass">140.12</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Praseod%C3%ADmio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">59</div>
+                            <div class="symbol">Pr</div>
+                            <div class="name">Praseodímio</div>
+                            <div class="mass">140.91</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Neod%C3%ADmio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">60</div>
+                            <div class="symbol">Nd</div>
+                            <div class="name">Neodímio</div>
+                            <div class="mass">144.24</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Prom%C3%A9cio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">61</div>
+                            <div class="symbol">Pm</div>
+                            <div class="name">Promécio</div>
+                            <div class="mass">[145]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Sam%C3%A1rio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">62</div>
+                            <div class="symbol">Sm</div>
+                            <div class="name">Samário</div>
+                            <div class="mass">150.36</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Eur%C3%B3pio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">63</div>
+                            <div class="symbol">Eu</div>
+                            <div class="name">Európio</div>
+                            <div class="mass">151.96</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Gadol%C3%ADnio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">64</div>
+                            <div class="symbol">Gd</div>
+                            <div class="name">Gadolínio</div>
+                            <div class="mass">157.25</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/T%C3%A9rbio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">65</div>
+                            <div class="symbol">Tb</div>
+                            <div class="name">Térbio</div>
+                            <div class="mass">158.93</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Dispr%C3%B3sio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">66</div>
+                            <div class="symbol">Dy</div>
+                            <div class="name">Disprósio</div>
+                            <div class="mass">162.50</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/H%C3%B3lmio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">67</div>
+                            <div class="symbol">Ho</div>
+                            <div class="name">Hólmio</div>
+                            <div class="mass">164.93</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/%C3%89rbio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">68</div>
+                            <div class="symbol">Er</div>
+                            <div class="name">Érbio</div>
+                            <div class="mass">167.26</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/T%C3%BAlio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">69</div>
+                            <div class="symbol">Tm</div>
+                            <div class="name">Túlio</div>
+                            <div class="mass">168.93</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/It%C3%A9rbio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">70</div>
+                            <div class="symbol">Yb</div>
+                            <div class="name">Itérbio</div>
+                            <div class="mass">173.05</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Lut%C3%A9cio" class="element-link" target="_blank">
+                        <div class="element lanthanide">
+                            <div class="number">71</div>
+                            <div class="symbol">Lu</div>
+                            <div class="name">Lutécio</div>
+                            <div class="mass">174.97</div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        
+        <table class="lanthanide-actinide-table">
+            <tr>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Act%C3%ADnio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">89</div>
+                            <div class="symbol">Ac</div>
+                            <div class="name">Actínio</div>
+                            <div class="mass">[227]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/T%C3%B3rio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">90</div>
+                            <div class="symbol">Th</div>
+                            <div class="name">Tório</div>
+                            <div class="mass">232.04</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Protact%C3%ADnio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">91</div>
+                            <div class="symbol">Pa</div>
+                            <div class="name">Protactínio</div>
+                            <div class="mass">231.04</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Ur%C3%A2nio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">92</div>
+                            <div class="symbol">U</div>
+                            <div class="name">Urânio</div>
+                            <div class="mass">238.03</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Nept%C3%BAnio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">93</div>
+                            <div class="symbol">Np</div>
+                            <div class="name">Neptúnio</div>
+                            <div class="mass">[237]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Plut%C3%B4nio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">94</div>
+                            <div class="symbol">Pu</div>
+                            <div class="name">Plutônio</div>
+                            <div class="mass">[244]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Amer%C3%ADcio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">95</div>
+                            <div class="symbol">Am</div>
+                            <div class="name">Amerício</div>
+                            <div class="mass">[243]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/C%C3%BArio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">96</div>
+                            <div class="symbol">Cm</div>
+                            <div class="name">Cúrio</div>
+                            <div class="mass">[247]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Berqu%C3%A9lio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">97</div>
+                            <div class="symbol">Bk</div>
+                            <div class="name">Berquélio</div>
+                            <div class="mass">[247]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Calif%C3%B3rnio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">98</div>
+                            <div class="symbol">Cf</div>
+                            <div class="name">Califórnio</div>
+                            <div class="mass">[251]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Einst%C3%AAnio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">99</div>
+                            <div class="symbol">Es</div>
+                            <div class="name">Einstênio</div>
+                            <div class="mass">[252]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/F%C3%A9rmio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">100</div>
+                            <div class="symbol">Fm</div>
+                            <div class="name">Férmio</div>
+                            <div class="mass">[257]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Mendel%C3%A9vio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">101</div>
+                            <div class="symbol">Md</div>
+                            <div class="name">Mendelévio</div>
+                            <div class="mass">[258]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Nob%C3%A9lio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">102</div>
+                            <div class="symbol">No</div>
+                            <div class="name">Nobélio</div>
+                            <div class="mass">[259]</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://pt.wikipedia.org/wiki/Laur%C3%AAncio" class="element-link" target="_blank">
+                        <div class="element actinide">
+                            <div class="number">103</div>
+                            <div class="symbol">Lr</div>
+                            <div class="name">Laurêncio</div>
+                            <div class="mass">[266]</div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color alkali-metal"></div>
+            <span>Metais alcalinos</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color alkaline-earth"></div>
+            <span>Metais alcalino-terrosos</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color transition-metal"></div>
+            <span>Metais de transição</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color post-transition-metal"></div>
+            <span>Metais pós-transição</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color metalloid"></div>
+            <span>Metaloides</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color nonmetal"></div>
+            <span>Não metais</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color halogen"></div>
+            <span>Halogênios</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color noble-gas"></div>
+            <span>Gases nobres</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color lanthanide"></div>
+            <span>Lantanídeos</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color actinide"></div>
+            <span>Actinídeos</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color unknown"></div>
+            <span>Desconhecido</span>
+        </div>
+    </div>
+</body>
+</html>
