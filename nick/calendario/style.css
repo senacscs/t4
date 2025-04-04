@@ -12,12 +12,12 @@ th, td {
 }
 
 th {
-    background-color: #6a4c93; /* Nova cor de fundo para o cabeçalho */
+    background-color: #1f1884; /* Nova cor de fundo para o cabeçalho */
     color: white; /* Cor do texto no cabeçalho */
 }
 
 .feriado {
-    background-color: #b12b6b; /* Cor diferente para os feriados */
+    background-color: #417bad; /* Cor diferente para os feriados */
     color: white;
 }
 
@@ -41,7 +41,7 @@ h1 {
 }
 
 .cols {
-    background-color: #4c2a53; /* Nova cor para as colunas */
+    background-color: #1e1b5c; /* Nova cor para as colunas */
     color: white;
 }
 
@@ -64,6 +64,6 @@ h1 {
 }
 
 .table th {
-    background-color: #4a2f63; /* Novo fundo para cabeçalhos das tabelas */
+    background-color: #484850; /* Novo fundo para cabeçalhos das tabelas */
     color: white;
 }
