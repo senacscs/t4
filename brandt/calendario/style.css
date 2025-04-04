@@ -1,0 +1,109 @@
+body {
+    padding: 40px;
+    font-family: monospace;
+    color: maroon;
+    text-align: center;
+    background-image: url(pics/doodle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.ano {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+table {
+    border: 1px solid rgb(21, 7, 93);
+    font-size: 20px;
+    background-color: rgba(204, 210, 244, 0.732);
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+td, th {
+    border: 1px solid rgb(159, 27, 27);
+    padding: 8px;
+    text-align: center;
+}
+
+td:hover {
+    transform: scale(1.2);
+    z-index: 100;
+    box-shadow: 0 0 10px black;
+}
+
+th{
+    background-color: rgba(249, 164, 145, 0.886);
+}
+
+.feriado {
+    background-color: rgba(109, 135, 240, 0.874);
+    color: rgba(85, 51, 180, 0.889);
+}
+
+.aniver {
+    background-color: rgba(240, 79, 98, 0.884);
+    color: rgb(254, 189, 189);
+}
+
+#theme-toggle {
+    display: none;
+}
+
+
+body:has(#theme-toggle:checked){
+    background-image: url('pics/verdinho.jpg'); 
+    background-color: #222;
+    color: rgb(185, 215, 250);
+    table{
+        border: 1px solid rgb(92, 45, 7);
+        font-size: 20px;
+        background-color: rgba(144, 243, 129, 0.633);
+        border-collapse: collapse;
+        margin: 20px;
+        color: rgb(92, 45, 7);
+    }
+    td, th {
+        border: 1px solid rgb(92, 45, 7);
+        padding: 8px;
+        text-align: center;
+    }
+    th{
+        background-color: rgba(25, 111, 90, 0.866);
+    }
+    .aniver {
+        background-color: rgba(25, 111, 90, 0.866);
+        color: rgba(167, 237, 148, 0.915);
+    }
+    .feriado {
+        background-color: rgba(41, 106, 13, 0.919);
+        color: rgba(151, 218, 153, 0.962);
+    }
+    .toggle-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: rgb(25, 111, 89);
+        color: white;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
+
+.toggle-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(173, 191, 243);
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
