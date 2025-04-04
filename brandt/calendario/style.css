@@ -32,6 +32,7 @@ td, th {
     text-align: center;
 }
 
+
 td:hover {
     transform: scale(1.2);
     z-index: 100;
@@ -45,11 +46,13 @@ th{
 .feriado {
     background-color: rgba(109, 135, 240, 0.874);
     color: rgba(85, 51, 180, 0.889);
+    transition: .3s;
 }
 
 .aniver {
     background-color: rgba(240, 79, 98, 0.884);
     color: rgb(254, 189, 189);
+    transition: .3s;
 }
 
 #theme-toggle {
