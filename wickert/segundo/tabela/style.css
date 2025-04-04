@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(210, 225, 250);
+    justify-items: center;
+    padding: 5%;
+    font-family: monospace;
+    color: navy;
+}
+
+table {
+    border: 1px solid rgba(180, 200, 250, 0);
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 1220px;
+    height: 500px;
+}
+
+td, th {
+    border: 1px solid rgba(180, 200, 250, 0);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(80, 120, 200);
+    color: white;
+}
+
+td {
+    position: relative;
+    transition: .4s;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+td:hover {
+    transform: scale(1.2) rotateZ(2deg);
+    z-index: 100;
+    filter: drop-shadow(0 0 5px);
+    border-radius: 5px;
+}
+
+a {
+    color: rgba(0, 49, 58, 0.936);
+    text-decoration: none;
+}
+
+.blank:hover {
+    transform: scale(1) !important;
+}
+
+.sigla {
+    text-align: center;
+}
+
+.nome {
+    text-align: center;
+    font-size: 7px;
+}
+
+.numero {
+    font-size: 7px;
+    text-align: left;
+    position: absolute;
+}
+
+.massa {
+    font-size: 7px;
+    text-align: right;
+    right: 1px;
+    position: absolute;
+}
+
+/* Cores ajustadas para tons de azul */
+.semi {
+    background-color: rgb(60, 130, 210);
+    color: rgba(0, 18, 46, 0.936);    
+}
+
+.trans {
+    background-color: rgb(90, 170, 230);
+}
+
+.blank {
+    background-color: rgba(216, 244, 255, 0);
+}
+
+.alcano {
+    background-color: rgb(120, 180, 255);
+}
+
+.alcato {
+    background-color: rgb(70, 140, 240);
+}
+
+.nobre {
+    background-color: rgb(40, 110, 210);
+    color: rgba(0, 37, 44, 0.936);
+    
+}
+
+.hidro {
+    background-color: rgb(30, 150, 240);
+    
+}
+
+.nao {
+    background-color: rgb(50, 140, 220);
+    
+}
+
+.outro {
+    background-color: rgb(100, 190, 250);
+}
+
+.lan {
+    background-color: rgb(50, 110, 200);
+    color: rgba(0, 24, 28, 0.936);
+    
+}
+
+.ax {
+    background-color: rgb(80, 160, 240);
+    
+}

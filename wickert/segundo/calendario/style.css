@@ -1,0 +1,504 @@
+* {
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    background-color: rgba(213, 228, 255, 0.875);
+    overflow: hidden;
+}
+
+/* ! Painel */
+.painel {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(202, 230, 255);
+    border-right: 2px solid rgba(0, 0, 0, 0.112);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.44);
+    align-content: center;
+    justify-items: center;
+    position: relative;
+
+}
+.mes-atual {
+    width: 85%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.173);
+    border: 2px solid rgba(0, 0, 0, 0.352);
+    border-radius: 50px;
+    position: relative;
+    align-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.505);
+}
+.mes-atual::before {
+    content: "Janeiro";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 0px;
+}
+.label {
+    width: 60%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.173);
+    border: 2px solid rgba(0, 0, 0, 0.352);
+    position: absolute;
+    margin-left: calc((100% / 2) - (60% / 2));
+    align-content: center;
+    opacity: 0;
+    text-align: center;
+    font-size: 2.4vw;
+    margin-top: 30px;
+    transition: .3s, .1s opacity;
+    animation: down 3s ease-in-out infinite;
+    z-index: 1;
+}
+.label.down {
+    transform: translateY(-52px);
+    margin-top: -30px;
+    animation: up 3s ease-in-out infinite;
+}
+@keyframes down {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(-52px);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(-52px);
+    }
+}
+.label.down:hover {
+    transform: scale(1.05) translateY(-52px);
+    margin-top: -35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.901);
+}
+.label.up:hover {
+    transform: scale(1.03);
+    margin-top: 35px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.901);
+}
+#janeiro:checked ~ .painel .mes-atual::before {
+    content: "Janeiro";
+}
+#fevereiro:checked ~ .painel .mes-atual::before {
+    content: "Fevereiro";
+}
+#março:checked ~ .painel .mes-atual::before {
+    content: "Março";
+}
+#abril:checked ~ .painel .mes-atual::before {
+    content: "Abril";
+}
+#maio:checked ~ .painel .mes-atual::before {
+    content: "Maio";
+}
+#junho:checked ~ .painel .mes-atual::before {
+    content: "Junho";
+}
+#julho:checked ~ .painel .mes-atual::before {
+    content: "Julho";
+}
+#agosto:checked ~ .painel .mes-atual::before {
+    content: "Agosto";
+}
+#setembro:checked ~ .painel .mes-atual::before {
+    content: "Setembro";
+}
+#outubro:checked ~ .painel .mes-atual::before {
+    content: "Outubro";
+}
+#novembro:checked ~ .painel .mes-atual::before {
+    content: "Novembro";
+}
+#dezembro:checked ~ .painel .mes-atual::before {
+    content: "Dezembro";
+}
+
+#janeiro:checked ~ .painel label.up.fevereiro {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#janeiro:checked ~ .painel label.down {
+    display: none;
+}
+#fevereiro:checked ~ .painel label.up.março,
+#fevereiro:checked ~ .painel label.down.janeiro  {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#março:checked ~ .painel label.up.abril,
+#março:checked ~ .painel label.down.fevereiro  {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#abril:checked ~ .painel label.up.maio,
+#abril:checked ~ .painel label.down.março {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#maio:checked ~ .painel label.up.junho,
+#maio:checked ~ .painel label.down.abril {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#junho:checked ~ .painel label.up.julho,
+#junho:checked ~ .painel label.down.maio {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#julho:checked ~ .painel label.up.agosto,
+#julho:checked ~ .painel label.down.junho {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#agosto:checked ~ .painel label.up.setembro,
+#agosto:checked ~ .painel label.down.julho {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#setembro:checked ~ .painel label.up.outubro,
+#setembro:checked ~ .painel label.down.agosto {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#outubro:checked ~ .painel label.up.novembro,
+#outubro:checked ~ .painel label.down.setembro {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#novembro:checked ~ .painel label.up.dezembro,
+#novembro:checked ~ .painel label.down.outubro {
+    opacity: 1;
+    z-index: 100 !important;
+}
+#dezembro:checked ~ .painel label.down.novembro {
+    opacity: 1;
+    z-index: 100 !important;
+}
+
+/* ! Calendario */
+.resultado {
+    width: 70%;
+    height: 99%;
+    padding-top: 1%;
+    display: grid;
+    overflow: auto;
+    place-content: center;
+}
+
+.calendario {
+    width: 38vw;
+    height: 42vw;
+    background-color: rgb(173, 210, 255);
+    border-radius: 5.5vw;
+    position: relative;
+    z-index: 1;
+}
+
+.sombra {
+    width: 38vw;
+    height: 42vw;
+    background-color: rgba(173, 210, 255, 0.525);
+    border-radius: 5.5vw;
+    transform: translate(10px, 10px);
+    position: absolute;
+    z-index: -1;
+}
+
+.argolas {
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.argola {
+    width: 5vw;
+    height: 5vw;
+    perspective: 1000px;
+    border-radius: 50%;
+}
+
+.circulos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 210, 255);
+    border-radius: 20%;
+    transform-style: preserve-3d;
+    z-index: -2;
+}
+.circulo {
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    border-radius: 50%;
+    transform: rotate3d(0, 1, 0, 60deg) translate(0px, -2vw) translateZ(0px);
+    box-shadow: 0 0 1px .9vw rgb(0, 0, 0);
+    z-index: 10;
+}
+.circulo1 {
+    transform: rotate3d(0, 1, 0, 60deg) translate(0px, -2vw) translateZ(-.4vw);
+}
+.buraco {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(46, 175, 255);
+    top: 51%;
+    left: 28%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.buraco::after {
+    content: "";
+    position: absolute;
+    width: 110%;
+    top: 27%;
+    height: 62%;
+    left: 43%;
+    background-color: rgb(0, 0, 0);
+}
+.buraco::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -30%;
+    left: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.container {
+    width: 90%;
+    height: 85%;
+    background-color: rgba(255, 0, 0, 0);
+    margin: auto;
+    border-radius: 4vw;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.calendariom {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0);
+    align-content: end;
+    border-radius: 30px;
+    position: relative;
+    transition: .6s;
+}
+
+.calendariom h1 {
+    font-size: 3vw;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: right;
+    margin-left: -20px;
+    color: red;
+    transform: translatey(-2.5vw);
+}
+
+.calendariom h1:nth-child(1) {
+    position: absolute;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 0;
+    margin-left: 20px;
+    font-size: 3vw;
+    color: black;
+    transform: translate(0px);
+}
+
+table {
+    min-width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    height: auto;
+    background-color: rgb(243, 250, 255);
+    border-radius: 3.4vw 3.4vw 3vw 3vw;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.9vw;
+    margin-bottom: 10px;
+}
+
+thead {
+    background-color: rgb(146, 197, 238);
+}
+
+thead td::before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+td {
+    height: 4.7vw;
+    position: relative;
+    color: rgb(0, 5, 57);
+}
+.bug td {
+    height: 3.9vw !important;
+}
+
+td::before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    top: calc(100% - 1px);
+    left: calc(100% - 1px);
+}
+
+.r {
+    color: rgb(255, 0, 0);
+}
+
+.b {
+    opacity: .2;
+}
+
+input {
+    display: none;
+}
+
+#janeiro:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: 0;
+    opacity: 1;
+}
+#fevereiro:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 1);
+}
+#fevereiro:checked ~ .resultado .calendario .container .fevereiro {
+    opacity: 1;
+}
+#março:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 2);
+}
+#março:checked ~ .resultado .calendario .container .março {
+    opacity: 1;
+}
+#abril:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 3);
+}
+#abril:checked ~ .resultado .calendario .container .abril {
+    opacity: 1;
+}
+#maio:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 4);
+}
+#maio:checked ~ .resultado .calendario .container .maio {
+    opacity: 1;
+}
+#junho:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 5);
+}
+#junho:checked ~ .resultado .calendario .container .junho {
+    opacity: 1;
+}
+#julho:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 6);
+}
+#julho:checked ~ .resultado .calendario .container .julho {
+    opacity: 1;
+}
+#agosto:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 7);
+}
+#agosto:checked ~ .resultado .calendario .container .agosto {
+    opacity: 1;
+}
+#setembro:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 8);
+}
+#setembro:checked ~ .resultado .calendario .container .setembro {
+    opacity: 1;
+}
+#outubro:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 9);
+}
+#outubro:checked ~ .resultado .calendario .container .outubro {
+    opacity: 1;
+}
+#novembro:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 10);
+}
+#novembro:checked ~ .resultado .calendario .container .novembro {
+    opacity: 1;
+}
+#dezembro:checked ~ .resultado .calendario .container .janeiro {
+    margin-top: calc(-104.3% * 11);
+}
+#dezembro:checked ~ .resultado .calendario .container .dezembro {
+    opacity: 1;
+}
+.calendariom {
+    opacity: 0;
+}
+
+.f {
+    color: rgb(0, 123, 255);
+    -webkit-text-stroke: 2px rgba(0, 123, 255, 0.445);
+    border-radius: 50%;
+}
+img {
+    position: absolute;
+    width: 14vw;
+    top: -1.5vw;
+    left: 46%;
+    z-index: -1;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: flexbox;
+        flex-direction: column-reverse;
+    }
+    .painel {
+        height: 50%;
+        width: 60%;
+        padding-left: 20%;
+        padding-right: 20%;
+        
+    }
+    .label {
+        margin-left: calc((100% / 2) - (70% / 2));
+        width: 30%;
+    }
+    .resultado {
+        height: 70%;
+        width: 100%;
+    }
+}

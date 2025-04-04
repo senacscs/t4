@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="radio" name="mes" id="janeiro" checked>
+    <input type="radio" name="mes" id="fevereiro">
+    <input type="radio" name="mes" id="março">
+    <input type="radio" name="mes" id="abril">
+    <input type="radio" name="mes" id="maio">
+    <input type="radio" name="mes" id="junho">
+    <input type="radio" name="mes" id="julho">
+    <input type="radio" name="mes" id="agosto">
+    <input type="radio" name="mes" id="setembro">
+    <input type="radio" name="mes" id="outubro">
+    <input type="radio" name="mes" id="novembro">
+    <input type="radio" name="mes" id="dezembro">
+
+    <section class="painel">
+
+        <label for="janeiro" class="label down janeiro">Janeiro</label>
+        <label for="fevereiro" class="label down fevereiro">Fevereiro</label>
+        <label for="março" class="label down março">Março</label>
+        <label for="abril" class="label down abril">Abril</label>
+        <label for="maio" class="label down maio">Maio</label>
+        <label for="junho" class="label down junho">Junho</label>
+        <label for="julho" class="label down julho">Julho</label>
+        <label for="agosto" class="label down agosto">Agosto</label>
+        <label for="setembro" class="label down setembro">Setembro</label>
+        <label for="outubro" class="label down outubro">Outubro</label>
+        <label for="novembro" class="label down novembro">Novembro</label>
+        <label for="dezembro" class="label down dezembro">Dezembro</label>
+
+        <div class="mes-atual"></div>
+
+        <label for="fevereiro" class="label up fevereiro">Fevereiro</label>
+        <label for="março" class="label up março">Março</label>
+        <label for="abril" class="label up abril">Abril</label>
+        <label for="maio" class="label up maio">Maio</label>
+        <label for="junho" class="label up junho">Junho</label>
+        <label for="julho" class="label up julho">Julho</label>
+        <label for="agosto" class="label up agosto">Agosto</label>
+        <label for="setembro" class="label up setembro">Setembro</label>
+        <label for="outubro" class="label up outubro">Outubro</label>
+        <label for="novembro" class="label up novembro">Novembro</label>
+        <label for="dezembro" class="label up dezembro">Dezembro</label>
+
+    </section>
+    <section class="resultado">
+        <div class="calendario">
+            <div class="sombra"></div>
+            <div class="argolas">
+                <div class="argola">
+                    <div class="circulos">
+                        <div class="circulo circulo1"></div>
+                        <div class="circulo circulo2"></div>
+                        <div class="buraco"></div>
+                    </div>
+                </div>
+                <div class="argola">
+                    <div class="circulos">
+                        <div class="circulo circulo1"></div>
+                        <div class="circulo circulo2"></div>
+                        <div class="buraco"></div>
+                    </div>
+                </div>
+                <div class="argola">
+                    <div class="circulos">
+                        <div class="circulo circulo1"></div>
+                        <div class="circulo circulo2"></div>
+                        <div class="buraco"></div>
+                    </div>
+                </div>
+                <div class="argola">
+                    <div class="circulos">
+                        <div class="circulo circulo1"></div>
+                        <div class="circulo circulo2"></div>
+                        <div class="buraco"></div>
+                    </div>
+                </div>
+                <div class="argola">
+                    <div class="circulos">
+                        <div class="circulo circulo1"></div>
+                        <div class="circulo circulo2"></div>
+                        <div class="buraco"></div>
+                    </div>
+                </div>
+                <div class="argola">
+                    <div class="circulos">
+                        <div class="circulo circulo1"></div>
+                        <div class="circulo circulo2"></div>
+                        <div class="buraco"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="calendariom janeiro">
+                    <h1>Janeiro</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            </tr>
+                            <td class="r">Dom</td>
+                            <td>Seg</td>
+                            <td>Ter</td>
+                            <td>Qua</td>
+                            <td>Qui</td>
+                            <td>Sex</td>
+                            <td>Sab</td>
+                            <tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">29</td>
+                                <td class="b">30</td>
+                                <td class="b">31</td>
+                                <td class="f" title="Confraternização Universal">1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="r">5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="r">12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="r">19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td class="r">26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td class="b">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom fevereiro">
+                    <h1>Fevereiro</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            </tr>
+                            <td class="r">Dom</td>
+                            <td>Seg</td>
+                            <td>Ter</td>
+                            <td>Qua</td>
+                            <td>Qui</td>
+                            <td>Sex</td>
+                            <td>Sab</td>
+                            <tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">26</td>
+                                <td class="b">27</td>
+                                <td class="b">28</td>
+                                <td class="b">29</td>
+                                <td class="b">30</td>
+                                <td class="b">31</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="r">2</td>
+                                <td class="f" title="Nossa Senhora dos Navegantes">2</td>
+                                <td>4</td>
+                                <td class="f" title="Carnaval">4</td>
+                                <td class="f" title="Carnaval">5</td>
+                                <td>6</td>
+                                <td class="ff f" title="Cinzas">7</td>
+                            </tr>
+                            <tr>
+                                <td class="r">9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="r">16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td class="r">23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td class="b">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom março bug">
+                    <h1>Março</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">23</td>
+                                <td class="b">24</td>
+                                <td class="b">25</td>
+                                <td class="b">26</td>
+                                <td class="b">27</td>
+                                <td class="b">28</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="r">2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="r">9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="r">16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td class="r">23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <td class="r">30</td>
+                                <td>31</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                                <td class="b">3</td>
+                                <td class="b">4</td>
+                                <td class="b">5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom abril">
+                    <h1>Abril</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">30</td>
+                                <td class="b">31</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="r">6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="r">13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td class="r f" title="Sexta-feira Santa">18</td>
+                            </tr>
+                            <tr>
+                                <td class="r">20</td>
+                                <td>21</td>
+                                <td class="f" title="Tiradentes">21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td class="r">26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td class="b">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom maio">
+                    <h1>Maio</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">27</td>
+                                <td class="b">28</td>
+                                <td class="b">29</td>
+                                <td class="b">30</td>
+                                <td class="f" title="Dia do Trabalho">1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td class="r">4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="r">11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td class="r">18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td class="r">25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom junho">
+                    <h1>Junho</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r">1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="r">8</td>
+                                <td class="f" title="Dia do Sagrado Coração de Jesus">8</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td class="r">15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td class="r">22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td class="r">29</td>
+                                <td class="f" title="Corpus Christi">30</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                                <td class="b">3</td>
+                                <td class="b">4</td>
+                                <td class="b">5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom julho">
+                    <h1>Julho</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">29</td>
+                                <td class="b">30</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="r">6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="r">13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td class="r">20</td>
+                                <td class="ff f" title="Dia do Gaúcho Tradicionalista">20</td>
+                                <td class="f" title="Revolução Farroupilha">20</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td class="r">27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom agosto bug">
+                    <h1>Agosto</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">27</td>
+                                <td class="b">28</td>
+                                <td class="b">29</td>
+                                <td class="b">30</td>
+                                <td class="b">31</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="r">3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td class="r">10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td class="r">17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td class="r">24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td class="r">31</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                                <td class="b">3</td>
+                                <td class="b">4</td>
+                                <td class="b">5</td>
+                                <td class="b">6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom setembro">
+                    <h1>Setembro</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">31</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="r">7</td>
+                                <td class="f" title="Independência do Brasil">7</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td class="r">14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td class="r">21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td class="r">28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                                <td class="b">3</td>
+                                <td class="b">4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom outubro">
+                    <h1>Outubro</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">28</td>
+                                <td class="b">29</td>
+                                <td class="b">30</td>
+                                <td>1</td>
+                                <td class="f" title="Aniverssário do Luìs">2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="r">5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="r">12</td>
+                                <td class="f" title="Nossa Senhora Aparecida">12</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td class="f" title="Aniverssário do Iuri">18</td>
+                            </tr>
+                            <tr>
+                                <td class="r">19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td class="r">26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td class="b">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom novembro bug">
+                    <h1>Novembro</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">26</td>
+                                <td class="b">27</td>
+                                <td class="b">28</td>
+                                <td class="b">29</td>
+                                <td class="b">30</td>
+                                <td class="b">31</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="r">2</td>
+                                <td class="f" title="Finados">2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="r">9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="r">16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td class="r">23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <td class="r">30</td>
+                                <td class="f" title="Proclamação da República">15</td>
+                                <td class="f" title="Dia da Consciência Negra">20</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                                <td class="b">3</td>
+                                <td class="b">4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendariom dezembro">
+                    <h1>Dezembro</h1>
+                    <img src="img/bolsonaro.png" alt="Bolsonaro">
+                    <h1>2025</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="r">Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sab</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="r b">30</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="r">7</td>
+                                <td>8</td>
+                                <td class="f" title="Nossa Senhora da Imaculada Conceição">8</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td class="r">14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td class="r">21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td class="f" title="Natal">25</td>
+                                <td>26</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td class="r">28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td class="ff f" title="Véspera de Ano Novo">31</td>
+                                <td class="b">1</td>
+                                <td class="b">2</td>
+                                <td class="b">3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
