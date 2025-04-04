@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(imagens/fundo.png);
+    background-size: cover;
+    font: 100;
+    font-family: mctext;
+    width: 100%;
+    height: 100vh;
+}
+@font-face {
+    font-family: mctext;
+    src: url(font/minecraft.ttf);
+}
+.titulo-img {
+    width: 600px;
+    margin-left: calc(50% - 300px);
+    margin-top: 7vh;
+    user-select: none;
+}
+.bt-principais {
+    width: 500px;
+    height: 300px;
+    background-color: rgba(175, 30, 30, 0);
+    margin: auto;
+    margin-top: 16vh;
+}
+.bor{
+    width: 450px;
+    margin: auto;
+    height: 46px;
+    background-color: black;
+    transition: 0.02s;
+    margin-top: 12px;
+    align-content: center;
+}
+.inbor {
+    width: calc(100% - 13px);
+    height: calc(100% - 11px);
+    background-color: gray;
+    align-content: center;
+    border-top: 3px inset rgb(255, 255, 255) !important;
+    border-right: 4px inset rgba(96, 96, 96, 0.962) !important;
+    border-bottom: 4px inset rgba(96, 96, 96, 0.962) !important;
+    border-left: 3px inset rgb(255, 255, 255) !important; 
+    background-image: url(imagens/texturai.png);
+    background-size: 200px;
+    border-radius: 1px;
+    margin: auto;
+}
+.inbor-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.726);
+    margin: auto;
+    user-select: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+.bor:hover, .bord:hover {
+    background-color: white;
+}
+.ed {
+    color: yellow;
+    text-shadow: 2px 2px 1px rgb(91, 86, 0);
+    letter-spacing: 1px;
+    margin-left: 56vw;
+    font-size: 26px;
+    position: absolute;
+    margin-top: -65px;
+    animation: ed 1s infinite ease-in-out;
+}
+@keyframes ed {
+    0% {
+        transform: scale(1) rotateZ(-30deg);
+    }    
+    50% {
+        transform: scale(0.95 ) rotateZ(-30deg);
+    }
+    100% {
+        transform: scale(1) rotateZ(-30deg);
+    }
+}
+.bt-secundario {
+    width: 450px;
+    display: flex;
+    height: 1;
+    margin: auto;
+    margin-top: 10px;
+}
+.bord {
+    width: 49%;
+    height: 46px;
+    background-color: black;
+    transition: 0.02s;
+    margin-top: 12px;
+    align-content: center;
+}
+.sla1-border {
+    margin-right: 1%;
+}
+.sla2-border {
+    margin-left: 1%;
+}
+.inbord {
+    width: calc(100% - 13px);
+    height: calc(100% - 11px);
+    background-color: gray;
+    align-content: center;
+    border-top: 3px solid rgb(255, 255, 255);
+    border-right: 4px solid rgba(96, 96, 96, 0.962);
+    border-bottom: 4px solid rgba(96, 96, 96, 0.962);
+    border-left: 3px solid rgb(255, 255, 255); 
+    background-image: url(imagens/texturai.png);
+    background-size: 200px;
+    border-radius: 1px;
+    margin: auto;
+}
+.inbord-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.726);
+    margin: auto;
+    user-select: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+a {
+    text-decoration: none;
+}
+.mim {
+    position: absolute;
+    height: 560px;
+    width: 668.25px;
+    margin-left: -111.375px;
+    background-color: rgb(0, 0, 0);
+    margin-top: -350px;
+    display: none;
+}
+.mim-border {
+    width: calc(100% - 13px);
+    height: calc(100% - 13px);
+    margin-left: 3px;
+    margin-top: 3px;
+    background-image: url(imagens/terrae.png);
+    position: absolute;
+    background-size: 80px;
+    border-top: 3px inset rgba(255, 255, 255, 0.76) !important;
+    border-right: 4px inset rgba(96, 96, 96, 0.76) !important;
+    border-bottom: 4px inset rgba(96, 96, 96, 0.76) !important;
+    border-left: 3px inset rgba(255, 255, 255, 0.76) !important; 
+}
+.fechar {
+    position: absolute;
+    z-index: 9999;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    background-image: url(imagens/texturai.png);
+    background-color: rgb(117, 117, 117);
+    padding: 3px;
+    border-top: 3px inset rgba(255, 255, 255, 0.76) !important;
+    border-right: 4px inset rgba(96, 96, 96, 0.76) !important;
+    border-bottom: 4px inset rgba(96, 96, 96, 0.76) !important;
+    border-left: 3px inset rgba(255, 255, 255, 0.76) !important; 
+    cursor: pointer;
+    left: 86.3%;
+    top: -11px;
+}
+.cabeca {
+    width: 90%;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.473);
+    border-radius: 2px;
+}
+.imgeu {
+    width: 90px;
+    height: 90px;
+    background-image: url(imagens/eu2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px 0 0 2px;
+}
+.eu p{
+    line-height: 10px;
+    color: rgb(221, 221, 221);
+    text-shadow: 2px 2px 1px black;
+    margin-left: 10px;
+}
+.mim-border hr {
+    width: 95%;
+}
+.outras {
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 90%;
+    margin: auto;
+    height: 70%;
+    text-align: center;
+    align-content: center;
+}
+.outras p {
+    color: rgb(221, 221, 221);
+    text-shadow: 2px 2px 1px black;
+    margin-left: 10px;
+    line-height: 22px;
+}
+.outras hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

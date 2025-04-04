@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Minha index</title>
+</head>
+
+<body>
+    <img src="imagens/title.png" alt="Minecraft" class="titulo-img">
+    <p class="ed">My Index Edition !!!</p>
+    <section class="bt-principais">
+        <div class="bor projetos-border">
+            <a href="projeto/index.html">
+                <div class="inbor projetos">
+                    <p class="inbor-text">Projetos</p>
+                </div>
+            </a>
+        </div>
+        <div class="bor sobre-mim-border" id="ope">
+            <div class="inbor sobre-mim">
+                <p class="inbor-text">Sobre Mim</p>
+            </div>
+        </div>
+        <section class="mim" id="mim">
+            <p class="fechar" id="fec">Fechar</p>
+            <div class="mim-border">
+                <div class="cabeca">
+                    <div class="imgeu"></div>
+                    <div class="eu">
+                        <p>Nome: Iuri Machado Wickert</p>
+                        <p>Idade: 15 | Nascido em: 18/10/2008</p>
+                        <p>Escola: Ensino médio técnico Senac RS SCS</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="outras">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis autem quibusdam aut modi
+                        voluptates, tenetur totam eveniet aliquid necessitatibus quo iure ea delectus corporis
+                        accusamus excepturi dolorem labore praesentium omnis.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, neque commodi nesciunt sequi
+                        ea soluta quibusdam, vero possimus ab ipsum totam doloremque sapiente vitae tenetur enim
+                        tempore natus ad voluptas.</p>
+                </div>
+            </div>
+        </section>
+        <div class="bor curriculo-border">
+            <div class="inbor curriculo">
+                <p class="inbor-text">Meu curriculo</p>
+            </div>
+        </div>
+        <div class="bt-secundario">
+            <div class="bord bor sla1-border">
+                <div class="inbord inbor sla1">
+                    <p class="inbord-text inbor-text">Voltar</p>
+                </div>
+            </div>
+            <div class="bord bor sla2-border">
+                <div class="inbord inbor sla2">
+                    <p class="inbord-text inbor-text">Contato</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById("fec").addEventListener("click", function () {
+            document.getElementById("mim").style.display = "none";
+        });
+        document.getElementById("ope").addEventListener("click", function () {
+            document.getElementById("mim").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
