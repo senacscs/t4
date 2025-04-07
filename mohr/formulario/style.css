@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif; 
+    /* define a fonte do texto */
+    background: #f0f2f5;
+    /* define o fundo do corpo do site */
+    display: flex;
+    /* muda o jeito que os elementos são organizados */
+    justify-content: center;
+    /* vai colocar no centro da tela na horizontal */
+    align-items: center;
+    /* vai alinhar os itens no centro */
+    height: 100vh;
+    /* define a altura */
+    margin: 0;
+    /* define o espaço externo de um elemento */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* muda a direção dos elementos dentro de um container flex */
+}
+
+button {
+    background-color: rgb(251, 174, 250);
+    border-radius: 5vb;
+    /* faz o elemento ficar com uma borda arredondada */
+    border-color: rgb(251, 174, 250);
+    /* define a cor da borda */
+    margin-top: 1vw;
+}
+
+h1 {
+    padding-bottom: 0.5vw;
+    /* define o espaço interno do elemento */
+    justify-content: center;
+    margin-left: 3.5vw;
+}
+
+input {
+    margin-bottom: 1vw;
+    /* da um espaçamento entre os textos */
+    width: 20vw;
+}
+

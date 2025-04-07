@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="#" method="get"> 
+        <!-- 
+        form: Define o início de um formulário HTML.
+        action="#": Diz para onde os dados do formulário devem ser enviados quando o usuário clicar em “Enviar”.
+        method="get": Indica que os dados do formulário serão enviados via URL.
+         -->
+        <h1>Formulário</h1>
+
+        <label for="nome">Nome:</label>
+        <!-- Cria uma etiqueta que identifica o campo a seguir. -->
+        <input type="nome" placeholder="Digite seu nome" required>
+        <!-- deixa essa escrita dentro do campo, cinza -->
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="sobrenome" placeholder="Digite seu sobrenome" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="endereco" placeholder="Digite seu endereço" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" placeholder="Digite seu e-mail" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Digite sua idade" required min="12">
+        <!-- min:12 define que a idade minima é 12 -->
+
+        <button type="submit">Enviar</button>
+        <!-- Cria um botão que envia o formulário. -->
+
+    </form>
+
+
+</body>
+
+</html>
