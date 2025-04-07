@@ -1,0 +1,21 @@
+body {
+    background-image: url("star.jpg")
+  }
+ 
+h1{
+    color: black;
+    text-align: center;
+}
+
+h2{
+    color: black;
+    text-align: center;
+}
+
+h3{
+    color: black;
+}
+
+p{
+    text-align: center;
+}
