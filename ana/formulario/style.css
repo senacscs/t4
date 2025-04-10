@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffeef8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #c71585;
+    margin-bottom: 10px;
+  }
+  
+  .subtitulo {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #6a1b4d;
+  }
+  
+  .caixas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .box {
+    background-color: #fff0f6;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+    width: 450px;
+    text-align: left;
+  }
+  
+  p {
+    color: #6a1b4d;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #c71585;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #d88ca4;
+    border-radius: 8px;
+    background-color: #fffafa;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #d88ca4;
+  border-radius: 8px;
+  background-color: #fffafa;
+}
+
+  
+  button {
+    background-color: #f48fb1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ec407a;
+  }
+
+  .cor-opcoes {
+    display: flex;
+    gap: 20px;
+  }
+
+  .cor-opcoes input {
+    margin-right: 5px;
+  }
+  

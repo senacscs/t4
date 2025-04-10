@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário Simples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-container">
+    <h1>Formulário Simples</h1>
+    <p class="subtitulo">Este é um exemplo de formulário simples em HTML</p>
+
+    <div class="caixas">
+      <div class="box info">
+        <p>1. &lt;form&gt;&lt;/form&gt;: Define o início e o fim de um formulário.</p>
+        <p>2. &lt;input&gt;: Usado para criar campos de entrada, como texto, senhas, botões, etc.</p>
+        <p>3. &lt;button&gt;&lt;/button&gt;: Cria um botão que pode ser clicado.</p>
+        <br>
+        <p>&lt;form action="#" method="get"&gt;&lt;/form&gt;</p>
+        <br>
+        <p>&lt;label for="nome"&gt;Nome:&lt;/label&gt;</p>
+        <p>&lt;input type="text" id="nome" name="nome"&gt;</p>
+        <br>
+        <p>&lt;label for="sobrenome"&gt;Sobrenome:&lt;/label&gt;</p>
+        <p>&lt;input type="text" id="sobrenome" name="sobrenome"&gt;</p>
+        <br>
+        <p>&lt;label for="endereco"&gt;Endereço:&lt;/label&gt;</p>
+        <p>&lt;input type="text" id="endereco" name="endereco"&gt;</p>
+        <br>
+        <p>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</p>
+        <br>
+        <p>&lt;/form&gt;</p>
+      </div>
+
+      <div class="box formulario">
+        <form action="#" method="get">
+          <label for="nome">Nome:</label>
+          <input type="text" placeholder="Digite seu nome" id="nome" name="nome" />
+
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" placeholder="Digite seu sobrenome" id="sobrenome" name="sobrenome" />
+
+          <label for="endereco">Endereço:</label>
+          <input type="text" placeholder="Digite seu endereço" id="endereco" name="endereco" />
+
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Digite seu email" id="email" name="email" />
+
+          <label for="idade">Idade:</label>
+          <input type="number" placeholder="Digite sua idade" id="idade" name="idade" required min="12" />
+
+          <label for="termos">Aceito os termos:</label>
+          <input type="checkbox" id="termos" name="termos" />
+
+          <label for="cor">Escolha uma cor:</label>
+          <div class="cor-opcoes">
+            <input type="radio" id="cor1" name="cor" value="rosa" />
+            <label for="cor1">Rosa</label>
+            <input type="radio" id="cor2" name="cor" value="azul" />
+            <label for="cor2">Azul</label>
+          </div>
+        
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
