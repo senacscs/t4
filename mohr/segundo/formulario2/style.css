@@ -18,6 +18,7 @@ body {
     gap: 40px;
     background-color: transparent; /* remove o fundo branco daqui */
     padding: 20px;
+    /* espaçamento interno dentro da div */
 }
 
 .formulario {
@@ -32,13 +33,16 @@ body {
 
 .formulario h2 {
     margin-bottom: 15px;
+    /* espaço abaixo do titulo */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .formulario label {
     margin-top: 10px;
     margin-bottom: 5px;
+    /* espaço embaixo do label */
     font-weight: bold;
+    /* deixa o texto em negrito */
 }
 
 .formulario input,
@@ -51,6 +55,7 @@ body {
 
 .formulario textarea {
     resize: vertical;
+    /* pesquisar melhor, ainda n entendi */
 }
 
 .formulario input[type="checkbox"] {
@@ -64,8 +69,10 @@ body {
     background-color: #c65de7;
     color: white;
     border: none;
+    /* remove a borda padrao */
     border-radius: 5px;
     cursor: pointer;
+    /* muda o cursor quando passa por cima */
 }
 
 .formulario button:hover {

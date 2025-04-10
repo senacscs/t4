@@ -10,13 +10,15 @@
 
 <body>
     <div class="container">
-        
+
         <!-- Formulário de Contato -->
         <form class="formulario">
             <h2>Formulário de Contato</h2>
 
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <!-- placeholder é o texto cinza de dentro do campo;
+             required torna obrigatorio -->
 
             <label for="email">E-mail:</label>
             <input type="email" id="email" placeholder="Digite seu e-mail" required>
@@ -25,21 +27,28 @@
             <input type="tel" id="telefone" placeholder="Digite seu telefone" required>
 
             <label for="assunto">Assunto:</label>
-            <select id="assunto">
+            <select id="assunto"> 
+                <!-- cria uma caixa de seleçao -->
                 <option value="duvida">Dúvida</option>
                 <option value="sugestao">Sugestão</option>
                 <option value="reclamacao">Reclamação</option>
+                <!-- value é o valor enviado no formulário -->
             </select>
 
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+            <!-- campo de texto grande;
+             rows define a altura -->
 
             <label for="arquivo">Anexar Arquivo:</label>
             <input type="file" id="arquivo">
+            <!-- permite o envio de arquivos -->
 
             <label><input type="checkbox" required> Aceito os termos e condições</label>
+            <!-- checkbox o usuario precisa marcar pra enviar o formulario -->
 
             <button type="submit">Enviar</button>
+            <!-- vai enfiar os formularios -->
         </form>
 
         <!-- Cadastro de Usuário -->
@@ -54,12 +63,14 @@
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" required>
+            <!-- campo que esconde os caracteres -->
 
             <label for="confirmarSenha">Confirmar Senha:</label>
             <input type="password" id="confirmarSenha" required>
 
             <label for="dataNascimento">Data de Nascimento:</label>
             <input type="date" id="dataNascimento" required>
+            <!-- abre o calendario -->
 
             <label for="genero">Gênero:</label>
             <select id="genero">
