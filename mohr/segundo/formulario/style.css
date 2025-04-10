@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    /* o padding e border nao aumentam o tamanho real do elemento */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f3f6;
+    display: flex;
+    /* centraliza o conteudo na tela */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* alinha os itens */
+    min-height: 100vh;
+    /* define a altura minima da tela toda */
+    margin: 0;
+    /* remove margens padraos */
+}
+
+form {
+    background-color: white;
+    padding: 40px;
+    /* espaço interno */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    /* limita a largura maxima */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    /* quebra linha */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    /* isso vai aumentar o tamanho dos botoes */
+}
+
+
+/* Grupo de opções */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    /* deixa lado a lado */
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    /* espaço entre os itens */
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Botão estilizado */
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #f78bd1, #eda1f7);
+    /* é um degrade */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    /* é o cursor */
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* animaçao suave no hover */
+}
+
+button:hover {
+    background: linear-gradient(to right, #e469c1, #d98ce9);
+    /* muda a cor do fundo no hover */
+    /* efeito quando passa o mouse no botao */
+}
