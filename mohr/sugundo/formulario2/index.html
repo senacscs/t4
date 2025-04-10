@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <!-- Formulário de Contato -->
+        <form class="formulario">
+            <h2>Formulário de Contato</h2>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" placeholder="Digite seu telefone" required>
+
+            <label for="assunto">Assunto:</label>
+            <select id="assunto">
+                <option value="duvida">Dúvida</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="reclamacao">Reclamação</option>
+            </select>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+
+            <label for="arquivo">Anexar Arquivo:</label>
+            <input type="file" id="arquivo">
+
+            <label><input type="checkbox" required> Aceito os termos e condições</label>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Cadastro de Usuário -->
+        <form class="formulario">
+            <h2>Cadastro de Usuário</h2>
+
+            <label for="nomeCompleto">Nome Completo:</label>
+            <input type="text" id="nomeCompleto" placeholder="Digite seu nome completo" required>
+
+            <label for="emailCadastro">E-mail:</label>
+            <input type="email" id="emailCadastro" placeholder="Digite seu e-mail" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required>
+
+            <label for="confirmarSenha">Confirmar Senha:</label>
+            <input type="password" id="confirmarSenha" required>
+
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" required>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero">
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" placeholder="Digite sua cidade" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" placeholder="Digite seu estado" required>
+
+            <label><input type="checkbox" required> Aceito os termos e condições</label>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+
+</html>

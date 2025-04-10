@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+    border: solid 2px black;
+    margin: 0 auto;
+    height: 20%;
+    width: 40%;
+    font-size: 2vw;
+    margin-top: 30vh;
+}
+
+td, th{
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+.cinza{
+    background-color: rgb(150, 144, 144);
+}

@@ -1,0 +1,50 @@
+body {
+    background-color: #a2f0ffa8;
+}
+ 
+th, td {
+    text-align: center;
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
+th {
+    background-color: #4be1ffa8;
+}
+ 
+.feriado {
+    background-color: rgba(0, 195, 255, 0.572);
+}
+
+ 
+h2 {
+    font-size: 1.2rem;
+}
+ 
+h1 {
+    text-shadow: 0 0 10px rgb(0, 208, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
+ 
+.content {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza os meses horizontalmente */
+  gap: 20px; /* espaçamento entre os meses */
+}
+ 
+.table {
+    width: 23%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+ 
+.table th,
+.table td {
+    border: 1px solid #0077ff;
+    padding: 5px;
+    text-align: center;
+}

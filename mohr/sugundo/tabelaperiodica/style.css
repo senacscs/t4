@@ -1,0 +1,332 @@
+body {
+    margin: 0px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+
+    width: 100vw;
+}
+
+section {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-collapse: separete;
+    width: 95%;
+    table-layout: fixed;
+    border-spacing: 8px;
+
+
+}
+
+td {
+
+    border-radius: 15px;
+    padding: 5px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+td:hover {
+
+    transform: scale(1.1);
+
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+
+
+}
+
+h4 {
+    text-align: center;
+    color: white;
+
+    font-size: 10px;
+
+
+}
+
+p {
+
+    color: white;
+}
+
+n {
+    font-size: 9px;
+    color: white;
+}
+
+/* vw e vh Define o tamanho do elemento como 100% da largura da janela do navegador. 
+overflow: auto;: Define o comportamento de rolagem do conteúdo dentro do elemento. 
+display: none;: Define o elemento como oculto, ou seja, ele não será exibido na página inicialmente.
+*/
+.modal {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    /*
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.75);
+  
+  overflow: auto;*/
+
+
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 10px 20px;
+    background: #151515;
+    border-radius: 15px;
+
+
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 60px;
+    text-decoration: none;
+}
+
+/* metodo para fechar o modal caso não for clicado, o display block*/
+#h:target,
+#he:target,
+#li:target,
+#be:target,
+#b:target,
+#c:target,
+#n:target,
+#o:target,
+#f:target,
+#ne:target,
+#na:target,
+#mg:target,
+#ai:target,
+#si:target,
+#p:target,
+#s:target,
+#cl:target,
+#ar:target,
+#k:target,
+#ca:target,
+#sc:target,
+#ti:target,
+#v:target,
+#cr:target,
+#mn:target,
+#fe:target,
+#co:target,
+#ni:target,
+#cu:target,
+#zn:target,
+#ga:target,
+#ge:target,
+#as:target,
+#se:target,
+#br:target,
+#kr:target,
+#rb:target,
+#sr:target,
+#y:target,
+#zr:target,
+#nb:target,
+#mo:target,
+#tc:target,
+#ru:target,
+#rh:target,
+#pd:target,
+#ag:target,
+#cd:target,
+#in:target,
+#sn:target,
+#sb:target,
+#te:target,
+#i:target,
+#xe:target,
+#cs:target,
+#ba:target,
+#la:target,
+#ce:target,
+#pr:target,
+#nd:target,
+#pm:target,
+#sm:target,
+#eu:target,
+#gd:target,
+#tb:target,
+#dy:target,
+#ho:target,
+#er:target,
+#tm:target,
+#yb:target,
+#lu:target,
+#hf:target,
+#ta:target,
+#w:target,
+#re:target,
+#os:target,
+#ir:target,
+#pt:target,
+#au:target,
+#hg:target,
+#tl:target,
+#pb:target,
+#bi:target,
+#po:target,
+#at:target,
+#rn:target,
+#fr:target,
+#ra:target,
+#ac:target,
+#th:target,
+#pa:target,
+#u:target,
+#np:target,
+#pu:target,
+#am:target,
+#cm:target,
+#bk:target,
+#cf:target,
+#es:target,
+#fm:target,
+#md:target,
+#no:target,
+#lr:target,
+#rf:target,
+#db:target,
+#sg:target,
+#bh:target,
+#hs:target,
+#mt:target,
+#ds:target,
+#rg:target,
+#cn:target,
+#nh:target,
+#fl:target,
+#mc:target,
+#lv:target,
+#ts:target,
+#og:target {
+    display: block;
+}
+
+tfoot {
+    margin-top: 100px;
+}
+
+tbody {
+    margin-bottom: 100px;
+}
+
+
+.nm {
+    background-color: #3b56a6;
+}
+
+.gn {
+    background-color: #d4ba0e;
+}
+
+.ma {
+    background-color: #7b5ba7;
+}
+
+.mat {
+    background-color: #f27eb2;
+}
+
+.sm {
+    background-color: #38b66b;
+}
+
+.hl {
+    background-color: #447c26;
+
+}
+
+.mr {
+    background-color: #b2e09a;
+}
+
+.mt {
+    background-color: #f58132;
+}
+
+.ln {
+    background-color: #8f1010;
+}
+
+.ac {
+    background-color: #0f403f;
+}
+
+.table-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 90%;
+}
+
+.col1 {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.col1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col2 {
+
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px;
+    flex: 2;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+
+div {
+
+    margin: 10px;
+}
