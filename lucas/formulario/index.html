@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulários</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+
+    form {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-container input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #8d1010;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8d1010;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+
+    <form>
+      <h2>Formulário de Contato</h2>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone">
+
+      <label for="assunto">Assunto:</label>
+      <select id="assunto" name="assunto">
+        <option value="duvida">Dúvida</option>
+        <option value="sugestao">Sugestão</option>
+        <option value="reclamacao">Reclamação</option>
+      </select>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <label for="arquivo">Anexar Arquivo:</label>
+      <input type="file" id="arquivo" name="arquivo">
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="termos1" required>
+        <label for="termos1">Aceito os termos e condições</label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <form>
+      <h2>Cadastro de Usuário</h2>
+
+      <label for="nome-completo">Nome Completo:</label>
+      <input type="text" id="nome-completo" name="nome-completo" required>
+
+      <label for="email2">E-mail:</label>
+      <input type="email" id="email2" name="email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="confirmar-senha">Confirmar Senha:</label>
+      <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+      <label for="data-nascimento">Data de Nascimento:</label>
+      <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero">
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade">
+
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" name="estado">
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="termos2" required>
+        <label for="termos2">Aceito os termos e condições</label>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+  </div>
+</body>
+</html>
