@@ -1,0 +1,402 @@
+'<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .forms-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .file-input {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 3vh;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+        
+        .password-container {
+            position: relative;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .row .form-group {
+            flex: 1;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        
+        .terms-link {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .terms-link:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        @media (max-width: 900px) {
+            .forms-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .container {
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"],
+            input[type="date"],
+            select,
+            textarea,
+            input[type="file"] {
+                padding: 10px;
+                font-size: 13px;
+            }
+            
+            .btn-submit {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="forms-container">
+        <div class="container">
+            <h1>Formulário de Contato</h1>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nome" class="required">Nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto" class="required">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="" disabled selected>Selecione um assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem" class="required">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="anexo">Anexar arquivo</label>
+                    <input type="file" id="anexo" name="anexo" class="file-input">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h1>Cadastro de Usuário</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="nome-completo" class="required">Nome completo</label>
+                    <input type="text" id="nome-completo" name="nome-completo" required placeholder="Digite seu nome completo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email-cadastro" class="required">E-mail</label>
+                    <input type="email" id="email-cadastro" name="email-cadastro" required placeholder="Digite seu e-mail">
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha" class="required">Senha</label>
+                    <div class="password-container">
+                        <input type="password" id="senha" name="senha" required placeholder="Crie uma senha">
+                        <span class="password-toggle" onclick="togglePassword('senha')">👁️</span>
+                    </div>
+                    <div class="error-message" id="senha-error">A senha deve ter pelo menos 6 caracteres</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmar-senha" class="required">Confirmar senha</label>
+                    <div class="password-container">
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Confirme sua senha">
+                        <span class="password-toggle" onclick="togglePassword('confirmar-senha')">👁️</span>
+                    </div>
+                    <div class="error-message" id="confirmar-senha-error">As senhas não coincidem</div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label for="data-nascimento" class="required">Data de nascimento</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="genero">Gênero</label>
+                        <select id="genero" name="genero">
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="outro">Outro</option>
+                            <option value="nao-informar">Prefiro não informar</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Aceito os <a href="#" class="terms-link">Termos</a> e <a href="#" class="terms-link">Política</a></label>
+                </div>
+                
+                <button type="submit" class="btn-submit">Criar Conta</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+            } else {
+                field.type = "password";
+            }
+        }
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            let valid = true;
+            
+            const senha = document.getElementById('senha').value;
+            if (senha.length < 6) {
+                document.getElementById('senha-error').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('senha-error').style.display = 'none';
+            }
+            
+            const confirmarSenha = document.getElementById('confirmar-senha').value;
+            if (senha !== confirmarSenha) {
+                document.getElementById('confirmar-senha-error').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('confirmar-senha-error').style.display = 'none';
+            }
+            
+            if (!document.getElementById('termos').checked) {
+                alert('Você deve aceitar os termos e condições para se registrar.');
+                valid = false;
+            }
+            
+            if (!valid) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
