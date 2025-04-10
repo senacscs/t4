@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários Simples</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+   
+    <form class="formulario" action="#" method="post" enctype="multipart/form-data">
+      <h2>Formulário de Contato</h2>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone">
+
+      <label for="assunto">Assunto:</label>
+     <select id="assunto" name="assunto" required>
+     <option value="">Selecione</option>
+     <option value="duvida">Dúvida</option>
+     <option value="sugestao">Sugestão</option>
+     <option value="reclamacao">Reclamação</option>
+     <option value="outro">Outro</option>
+</select>
+
+        
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <label for="arquivo">Anexar arquivo:</label>
+      <input type="file" id="arquivo" name="arquivo">
+
+      <label class="checkbox">
+        <input type="checkbox" name="termos" required>
+        Aceito os termos e condições
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+   
+    <form class="formulario" action="#" method="post">
+      <h2>Cadastro de Usuário</h2>
+
+      <label for="nomeCompleto">Nome completo:</label>
+      <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+      <label for="emailCadastro">Email:</label>
+      <input type="email" id="emailCadastro" name="email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="confirmarSenha">Confirmar senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+
+      <label for="nascimento">Data de nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" required>
+
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero" required>
+        <option value="">Selecione</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+        <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+      </select>
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required>
+
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" name="estado" required>
+
+      <label class="checkbox">
+        <input type="checkbox" name="termosCadastro" required>
+        Aceito os termos e condições
+      </label>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+</body>
+</html>

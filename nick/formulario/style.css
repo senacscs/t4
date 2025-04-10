@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffe6f0;
+    padding: 20px;
+  }
+  
+  h1, p {
+    text-align: center;
+    color: #8714ad;
+  }
+  
+  form {
+    background-color: #fff0f5; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 0 8px #d48fbf;
+  }
+  
+  label {
+    display: block;
+    margin-top: 12px;
+    color: #6a1b9a; 
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+  
+  form p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #6a1b9a;
+  }
+  
+  .checkbox {
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #a018c2; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #a314ad;
+  }
+  
