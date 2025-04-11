@@ -1,0 +1,143 @@
+body {
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  background-color: #ffe6f0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #d63384;
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff0f5;
+  border-left: 6px solid #ff99cc;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #c2185b;
+  font-size: 1.2rem;
+}
+
+.section div > div {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: #f06292;
+  color: white;
+  font-weight: 500;
+  margin: 4px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.block-demo div {
+  display: block;
+  background: #f06292;
+}
+
+.inline-demo span {
+  display: inline;
+  background: #ec407a;
+  margin-right: 6px;
+}
+
+.inline-block-demo div {
+  display: inline-block;
+  background: #f48fb1;
+  margin-right: 6px;
+}
+
+.none-demo div {
+  background: #f8bbd0;
+}
+.none-demo .invisivel {
+  display: none;
+}
+
+.flex-only {
+  display: flex;
+  gap: 10px;
+  background: #ffd6e8;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.flex-row-only {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: #ffe6f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: #ffdeeb;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffdce2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.justify-space-around {
+  display: flex;
+  justify-content: space-around;
+  background: #ffe0ef;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: #ffeaf2;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #fff0f5;
+  padding: 10px;
+  border-radius: 10px;
+}
+.flex-wrap div {
+  width: 80px;
+}
+
+.align-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 180px;
+  background: #ffe3ed;
+  border-radius: 10px;
+  padding: 10px;
+}
+.align-content div {
+  width: 60px;
+  height: 40px;
+  margin: 5px;
+  line-height: 40px;
+}
