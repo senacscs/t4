@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Display's</title>
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .bloco {
+      display: block;
+      background-color: purple;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .linha {
+      display: inline;
+      background-color: rgb(212, 212, 0);
+      padding: 5px;
+    }
+
+    .inline-block {
+      display: inline-block;
+      background-color: blue;
+      padding: 10px;
+      margin: 5px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+      background-color: #f0f0f0;
+      height: 300px;
+      border: 2px dashed #ccc;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .flex-item {
+      background-color: green;
+      padding: 20px;
+      margin: 10px;
+      width: 100px;
+      text-align: center;
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Tipos de Display em CSS</h1>
+
+  <h2>Display: block</h2>
+  <div class="bloco">Listra 1</div>
+  <div class="bloco">Listra 2</div>
+
+  <h2>Display: inline</h2>
+  <span class="linha">Inline 1</span>
+  <span class="linha">Inline 2</span>
+  <span class="linha">Inline 3</span>
+
+  <h2>Display: inline-block</h2>
+  <div class="inline-block">Bloco 1</div>
+  <div class="inline-block">Bloco 2</div>
+  <div class="inline-block">Bloco 3</div>
+
+  <h2>Display: none</h2>
+  <div class="oculto">nao estou aqui kkkkkkkkk</div>
+
+  <h2>Display: flex</h2>
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+  </div>
+</body>
+</html>
