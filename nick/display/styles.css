@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .secao {
+    margin: 20px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .block div {
+    background-color: rgb(184, 30, 81);
+    color: white;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .inline div {
+    background-color: rgb(184, 30, 81);
+    color: white;
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .inline-block div {
+    background-color: rgb(184, 30, 81);
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .none div {
+    background-color: rgb(184, 30, 81);
+    color: white;
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .space-around {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .center-items {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .wrap div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .align-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 250px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .box {
+    background-color: rgb(184, 30, 81);
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
