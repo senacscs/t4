@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Display CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff4f4;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            text-shadow: 0 0 10px #a9a9a9;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .section:hover {
+            transform: scale(1.1);
+        }
+
+        .example {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .block-example div {
+            display: block;
+            background-color: #27455a;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .inline-example span {
+            display: inline;
+            background-color: #27455a;
+            color: white;
+            padding: 5px;
+        }
+
+        .inline-block-example div {
+            display: inline-block;
+            background-color: #27455a;
+            color: white;
+            padding: 10px;
+            width: 100px;
+            margin: 5px;
+        }
+
+        .flex-example {
+            display: flex;
+            background-color: #48545c;
+            padding: 10px;
+        }
+
+        .flex-example div {
+            background-color: #27455a;
+            color: white;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        .grid-example {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-color: #48545c;
+            padding: 10px;
+        }
+
+        .grid-example div {
+            background-color: #27455a;
+            color: white;
+            padding: 15px;
+        }
+
+        .none-example div {
+            display: none;
+            background-color: #27455a;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tipos de Display em CSS</h1>
+
+    <div class="section">
+        <h2>Display: Block</h2>
+        <p>Elementos block ocupam toda a largura disponível e começam em uma nova linha.</p>
+        <div class="example block-example">
+            <div>Elemento Block 1</div>
+            <div>Elemento Block 2</div>
+            <div>Elemento Block 3</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: Inline</h2>
+        <p>Elementos inline ocupam apenas o espaço necessário e ficam na mesma linha.</p>
+        <div class="example inline-example">
+            <span>Elemento Inline 1</span>
+            <span>Elemento Inline 2</span>
+            <span>Elemento Inline 3</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: Inline-Block</h2>
+        <p>Elementos inline-block combinam características de block e inline.</p>
+        <div class="example inline-block-example">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: Flex</h2>
+        <p>Flexbox permite layouts flexíveis em uma dimensão.</p>
+        <div class="example flex-example">
+            <div>Flex 1</div>
+            <div>Flex 2</div>
+            <div>Flex 3</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: Grid</h2>
+        <p>CSS Grid permite layouts complexos em duas dimensões.</p>
+        <div class="example grid-example">
+            <div>Grid 1</div>
+            <div>Grid 2</div>
+            <div>Grid 3</div>
+            <div>Grid 4</div>
+            <div>Grid 5</div>
+            <div>Grid 6</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display: None</h2>
+        <p>O elemento não é exibido e não ocupa espaço no layout.</p>
+        <div class="example none-example">
+            <div>Este elemento está oculto</div>
+        </div>
+    </div>
+</body>
+
+</html>
