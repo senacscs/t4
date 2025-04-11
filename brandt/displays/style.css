@@ -1,0 +1,146 @@
+body {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(255, 250, 243);
+    color: rgb(29, 29, 29);
+    font-family: monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.secao {
+    border: 1px dashed rgb(29, 29, 29);
+    padding: 20px 20px;
+    margin: 10px;
+}
+
+.block div {
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(202, 118, 255);
+    border-radius: 10px;
+}
+
+.inline div {
+    display: inline;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(255, 119, 198);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.inline-block div {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(255, 119, 119);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.none div {
+    display: none;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(255, 119, 119);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.flex-direction-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-direction-row div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(255, 160, 119);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.flex-direction-collum {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-direction-collum div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(255, 214, 119);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.around{
+    display: flex;
+    justify-content: space-around;
+}
+
+.around div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(194, 255, 119);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.align-center {
+    display: flex;
+    align-content: center;
+}
+
+.align-center div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(119, 255, 173);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(119, 219, 255);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.between div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(119, 121, 255);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
