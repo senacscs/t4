@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Displays e Flex em CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header p,
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .display-inline,
+        .display-block,
+        .display-inline-block,
+        .display-none,
+        .display-flex,
+        .flex-direction-row,
+        .flex-direction-column,
+        .flex-wrap,
+        .justify-content,
+        .align-items,
+        .align-items-center,
+        .justify-content-space-between,
+        .align-items-space-between {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        .inline-exemplo,
+        .block-exemplo,
+        .inline-block-exemplo,
+        .none-exemplo,
+        .flex-exemplo,
+        .flex-row-exemplo,
+        .flex-column-exemplo,
+        .flex-wrap-exemplo,
+        .justify-content-exemplo,
+        .justify-space-between-exemplo,
+        .align-items-exemplo,
+        .align-center-exemplo,
+        .align-space-between-exemplo {
+            padding: 20px;
+            background-color: rgb(250, 240, 240);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .inline-exemplo span {
+            display: inline-block;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Guia de Displays e Flex em CSS</h1>
+            <p>Aprenda a usar as propriedades de display e flex em CSS para criar layouts responsivos e flexíveis.</p>
+        </header>
+
+        <div class="display-inline">
+            <h2>Display: Inline</h2>
+            <p>Elementos em linha. Ficam um ao lado do outro, respeitam apenas largura do conteúdo e não aceitam altura
+                ou
+                largura personalizada</p>
+            <div class="inline-exemplo">
+                <span>Elemento 1</span>
+                <span>Elemento 2</span>
+                <span>Elemento 3</span>
+            </div>
+        </div>
+
+        <div class="display-block">
+            <h2>Display: Block</h2>
+            <p>Cada item ocupa 100% da largura disponível. Elementos de bloco sempre quebram a linha.</p>
+            <div class="block-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="display-inline-block">
+            <h2>Display: Inline-Block</h2>
+            <p>Elementos em linha, mas aceitam height e width personalizadas. Permitem margens e preenchimentos.
+            </p>
+            <div class="inline-block-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="display-none">
+            <h2>Display: None</h2>
+            <p>O elemento simplesmente desaparece da tela e não ocupa nenhum espaço</p>
+            <div class="none-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+
+        <div class="display-flex">
+            <h2>Display: Flex</h2>
+            <p>Flexbox é um modelo de layout unidimensional que permite distribuir espaço entre os itens de
+                um
+                contêiner.</p>
+            <div class="flex-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="flex-direction-row">
+            <h2>Flex Direction: Row</h2>
+            <p>Os itens são organizados em uma linha horizontal.</p>
+            <div class="flex-row-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="flex-direction-column">
+            <h2>Flex Direction: Column</h2>
+            <p>Os itens são organizados em uma coluna vertical.</p>
+            <div class="flex-column-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="flex-wrap">
+            <h2>Flex Wrap</h2>
+            <p>Permite que os itens se movam para a próxima linha quando não há espaço
+                suficiente.
+            </p>
+            <div class="flex-wrap-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+                <div>Elemento 4</div>
+            </div>
+        </div>
+
+        <div class="justify-content">
+            <h2>Justify Content</h2>
+            <p>Alinha os itens ao longo do eixo principal.</p>
+            <div class="justify-content-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="justify-content-space-between">
+            <h2>Justify Content: Space Between</h2>
+            <p>Distribui o espaço restante entre os itens.</p>
+            <div class="justify-space-between-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="align-items">
+            <h2>Align Items</h2>
+            <p>Alinha os itens ao longo do eixo transversal.</p>
+            <div class="align-items-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="align-items-center">
+            <h2>Align Items: Center</h2>
+            <p>Centraliza os itens ao longo do eixo transversal.</p>
+            <div class="align-center-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+
+
+        <div class="align-items-space-between">
+            <h2>Align Items: Space Between</h2>
+            <p>Distribui o espaço restante entre os itens ao longo do eixo transversal.
+            </p>
+            <div class="align-space-between-exemplo">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+            </div>
+        </div>
+</body>
