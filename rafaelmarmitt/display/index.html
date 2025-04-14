@@ -1,167 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipos de Display CSS</title>
+    <title>Exemplos de Display CSS (Estilizado)</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
 
-        h1 {
+        h1, h2 {
             color: #2c3e50;
             text-align: center;
-            text-shadow: 0 0 10px #a9a9a9;
+            margin-bottom: 30px;
         }
 
-        .section {
-            background-color: white;
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
+            margin-bottom: 30px;
         }
 
-        .section:hover {
-            transform: scale(1.1);
-        }
-
-        .example {
-            border: 2px dashed #ccc;
-            padding: 10px;
-            margin: 10px 0;
-        }
-
-        .block-example div {
+        .block-element {
             display: block;
-            background-color: #27455a;
-            color: white;
-            padding: 10px;
-            margin: 5px 0;
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+            border-radius: 5px;
         }
 
-        .inline-example span {
+        .inline-element {
             display: inline;
-            background-color: #27455a;
-            color: white;
-            padding: 5px;
+            background-color: #27ae60;
+            color: #fff;
+            padding: 8px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
         }
 
-        .inline-block-example div {
+        .inline-block-element {
             display: inline-block;
-            background-color: #27455a;
-            color: white;
-            padding: 10px;
-            width: 100px;
-            margin: 5px;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            margin-right: 10px;
+            text-align: center;
+            border-radius: 5px;
         }
 
-        .flex-example {
+        .none-element {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .flex-container {
             display: flex;
-            background-color: #48545c;
-            padding: 10px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #ecf0f1;
         }
 
-        .flex-example div {
-            background-color: #27455a;
-            color: white;
+        .flex-item {
+            background-color: #9b59b6;
+            color: #fff;
             padding: 15px;
+            border-radius: 5px;
+            text-align: center;
             margin: 5px;
         }
 
-        .grid-example {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
-            background-color: #48545c;
-            padding: 10px;
+        .flex-row-container {
+            flex-direction: row;
         }
 
-        .grid-example div {
-            background-color: #27455a;
-            color: white;
-            padding: 15px;
+        .flex-column-container {
+            flex-direction: column;
+            height: 250px;
+            align-items: stretch; /* Para os itens preencherem a largura */
         }
 
-        .none-example div {
-            display: none;
-            background-color: #27455a;
-            color: white;
+        .justify-around-container {
+            justify-content: space-around;
+        }
+
+        .align-center-container {
+            align-items: center;
+            height: 120px;
+        }
+
+        .wrap-container {
+            flex-wrap: wrap;
+        }
+
+        .align-content-container {
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 250px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .note {
+            background-color: #f9e79f;
             padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #777;
         }
     </style>
 </head>
-
 <body>
-    <h1>Tipos de Display em CSS</h1>
 
-    <div class="section">
-        <h2>Display: Block</h2>
-        <p>Elementos block ocupam toda a largura disponível e começam em uma nova linha.</p>
-        <div class="example block-example">
-            <div>Elemento Block 1</div>
-            <div>Elemento Block 2</div>
-            <div>Elemento Block 3</div>
-        </div>
+    <h1>Exemplos de Tipos de Display CSS</h1>
+
+    <div class="container">
+        <h2>display: block</h2>
+        <div class="block-element">Elemento Block 1</div>
+        <div class="block-element">Elemento Block 2</div>
+        <p class="note">Elementos block ocupam toda a largura disponível e iniciam em uma nova linha. Eles também respeitam propriedades de largura e altura.</p>
     </div>
 
-    <div class="section">
-        <h2>Display: Inline</h2>
-        <p>Elementos inline ocupam apenas o espaço necessário e ficam na mesma linha.</p>
-        <div class="example inline-example">
-            <span>Elemento Inline 1</span>
-            <span>Elemento Inline 2</span>
-            <span>Elemento Inline 3</span>
-        </div>
+    <div class="container">
+        <h2>display: inline</h2>
+        <p>Texto antes do <span class="inline-element">Elemento Inline 1</span> e depois <span class="inline-element">Elemento Inline 2</span>.</p>
+        <p class="note">Elementos inline ocupam apenas o espaço necessário para seu conteúdo e não iniciam em uma nova linha. Largura e altura não têm efeito.</p>
     </div>
 
-    <div class="section">
-        <h2>Display: Inline-Block</h2>
-        <p>Elementos inline-block combinam características de block e inline.</p>
-        <div class="example inline-block-example">
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-        </div>
+    <div class="container">
+        <h2>display: inline-block</h2>
+        <div class="inline-block-element">Inline-Block 1</div>
+        <div class="inline-block-element">Inline-Block 2</div>
+        <p class="note">Elementos inline-block se comportam como inline no fluxo, mas permitem definir largura e altura, além de respeitar margens e paddings verticais.</p>
     </div>
 
-    <div class="section">
-        <h2>Display: Flex</h2>
-        <p>Flexbox permite layouts flexíveis em uma dimensão.</p>
-        <div class="example flex-example">
-            <div>Flex 1</div>
-            <div>Flex 2</div>
-            <div>Flex 3</div>
-        </div>
+    <div class="container">
+        <h2>display: none</h2>
+        <p>Este texto contém um elemento <span class="none-element">ESCONDIDO</span>.</p>
+        <p class="note">Elementos com display: none não são exibidos e não ocupam espaço no layout. É diferente de `visibility: hidden`, que ocupa o espaço mas não é visível.</p>
     </div>
 
-    <div class="section">
-        <h2>Display: Grid</h2>
-        <p>CSS Grid permite layouts complexos em duas dimensões.</p>
-        <div class="example grid-example">
-            <div>Grid 1</div>
-            <div>Grid 2</div>
-            <div>Grid 3</div>
-            <div>Grid 4</div>
-            <div>Grid 5</div>
-            <div>Grid 6</div>
+    <div class="container">
+        <h2>display: flex; flex-direction: row</h2>
+        <div class="flex-container flex-row-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
         </div>
+        <p class="note">Elementos dispostos em linha (direção padrão do flexbox).</p>
     </div>
 
-    <div class="section">
-        <h2>Display: None</h2>
-        <p>O elemento não é exibido e não ocupa espaço no layout.</p>
-        <div class="example none-example">
-            <div>Este elemento está oculto</div>
+    <div class="container">
+        <h2>display: flex; flex-direction: column</h2>
+        <div class="flex-container flex-column-container">
+            <div class="flex-item">Item A</div>
+            <div class="flex-item">Item B</div>
+            <div class="flex-item">Item C</div>
         </div>
+        <p class="note">Elementos dispostos em coluna.</p>
     </div>
+
+    <div class="container">
+        <h2>display: flex; justify-content: space-around</h2>
+        <div class="flex-container justify-around-container">
+            <div class="flex-item">Item X</div>
+            <div class="flex-item">Item Y</div>
+            <div class="flex-item">Item Z</div>
+        </div>
+        <p class="note">Espaço igualitário ao redor de cada item ao longo do eixo principal.</p>
+    </div>
+
+    <div class="container">
+        <h2>display: flex; align-items: center</h2>
+        <div class="flex-container align-center-container">
+            <div class="flex-item">Um</div>
+            <div class="flex-item">Dois</div>
+            <div class="flex-item">Três</div>
+        </div>
+        <p class="note">Itens alinhados verticalmente ao centro dentro do container flexível.</p>
+    </div>
+
+    <div class="container">
+        <h2>display: flex; flex-wrap: wrap</h2>
+        <div class="flex-container wrap-container">
+            <div class="flex-item" style="width: 120px;">Item 1</div>
+            <div class="flex-item" style="width: 120px;">Item 2</div>
+            <div class="flex-item" style="width: 120px;">Item 3</div>
+            <div class="flex-item" style="width: 120px;">Item 4</div>
+            <div class="flex-item" style="width: 120px;">Item 5</div>
+            <div class="flex-item" style="width: 120px;">Item 6</div>
+        </div>
+        <p class="note">Os itens quebram para a próxima linha quando não há espaço suficiente na linha atual.</p>
+    </div>
+
+    <div class="container">
+        <h2>display: flex; flex-wrap: wrap; align-content: space-between</h2>
+        <div class="flex-container align-content-container">
+            <div class="flex-item" style="width: 120px;">Item 1</div>
+            <div class="flex-item" style="width: 120px;">Item 2</div>
+            <div class="flex-item" style="width: 120px;">Item 3</div>
+            <div class="flex-item" style="width: 120px;">Item 4</div>
+            <div class="flex-item" style="width: 120px;">Item 5</div>
+            <div class="flex-item" style="width: 120px;">Item 6</div>
+        </div>
+        <p class="note">Espaço é distribuído entre as linhas de itens, empurrando a primeira linha para o início e a última para o final do container.</p>
+    </div>
+
 </body>
-
 </html>
