@@ -121,7 +121,7 @@ h2 {
     display: flex;
     gap: 10px;
     background-color: #e0e0e0;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
 }
 
@@ -132,7 +132,7 @@ h2 {
     display: flex;
     gap: 10px;
     background-color: #e0e0e0;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
 }
 
@@ -149,4 +149,16 @@ h2 {
     flex: 1 0 auto;
     border-radius: 6px;
     /* margin-right: 10px; */
+}
+
+.flex-wrap div {
+    flex: 1 0 100px;
+    /* margin-right: 10px;
+    margin-bottom: 10px; */
+    padding: 30px;
+}
+
+.flex-align-content div {
+    flex: 1 0 100px;
+    padding: 30px;
 }
