@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  border: 1px solid lightgray;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+
+.exemplo1 > p {
+  background-color: #d4fcd4;
+  padding: 5px;
+}
+
+
+.exemplo2 p {
+  background-color: #cce7ff;
+  padding: 5px;
+}
+
+
+.exemplo3 div + p {
+  background-color: #ffdede;
+  padding: 5px;
+}
+
+
+.exemplo4 p + ul li {
+  background-color: #ffe4e1;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+
+.exemplo5 div,
+.exemplo5 p {
+  background-color: #e4d1ff;
+  padding: 5px;
+}

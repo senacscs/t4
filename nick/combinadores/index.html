@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos de Combinadores CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Combinadores CSS</h1>
+
+  
+  <h2>1. Combinador de Filho Direto (&gt;)</h2>
+  <div class="exemplo1">
+    <p>Parágrafo filho direto <span>(selecionado)</span></p>
+    <span><p>Parágrafo dentro do span <span>(não filho direto)</span></p></span>
+  </div>
+
+  
+  <h2>2. Combinador de Descendente (espaço)</h2>
+  <div class="exemplo2">
+    <p>Parágrafo descendente <span>(selecionado)</span></p>
+    <div>
+      <p>Outro descendente <span>(também selecionado)</span></p>
+    </div>
+  </div>
+
+  
+  <h2>3. Combinador de Irmão Adjacente (+)</h2>
+  <div class="exemplo3">
+    <div>Elemento DIV</div>
+    <p>Parágrafo logo após a DIV <span>(selecionado)</span></p>
+    <p>Outro parágrafo <span>(não selecionado)</span></p>
+  </div>
+
+  
+  <h2>4. Combinador de Irmãos Seguintes (~)</h2>
+  <div class="exemplo4">
+    <p>Parágrafo antes das listas</p>
+    <ul>
+      <li>Lista 1 <span>(selecionada)</span></li>
+      <li>Lista 2 <span>(selecionada)</span></li>
+    </ul>
+  </div>
+
+ 
+  <h2>5. Lista de Seletores (,)</h2>
+  <div class="exemplo5">
+    <div>DIV <span>selecionada</span></div>
+    <p>Parágrafo <span>selecionado</span></p>
+    <span>SPAN <span>não selecionado</span></span>
+  </div>
+
+</body>
+</html>
