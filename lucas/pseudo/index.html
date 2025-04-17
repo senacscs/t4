@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combinadores CSS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="conteudo">
+<h1>Exemplos Combinadores CSS</h1>
+ 
+        <div class="caixa">
+<div class="section">
+<h2>Combinador de Filho Direto (>)</h2>
+<p>Seleciona elementos que são filhos diretos de outro elemento.</p>
+<div class="example-box filho-direto">
+<div><p>Filho direto (selecionado)</p></div>
+<div><span><p>Parágrafo dentro do span (não selecionado)</p></span></div>
+</div>
+</div>
+ 
+            <div class="section">
+<h2>Combinador de Descendente (espaço)</h2>
+<p>Seleciona todos os elementos descendentes, independentemente do nível.</p>
+<div class="example-box descendente">
+<div><p>Descendente (selecionado)</p></div>
+<div><span><p>Outro descendente (selecionado)</p></span></div>
+</div>
+</div>
+ 
+            <div class="section">
+<h2>Combinador de Irmão Adjacente (+)</h2>
+<p>Seleciona o próximo irmão imediato de um elemento.</p>
+<div class="example-box irmao-adjacente">
+<div>Elemento Base</div>
+<p>Irmão direto (selecionado)</p>
+<p>Outro irmão (não selecionado)</p>
+</div>
+</div>
+ 
+            <div class="section">
+<h2>Combinador de Irmãos Seguintes (~)</h2>
+<p>Seleciona todos os irmãos que vêm depois do elemento base.</p>
+<div class="example-box irmaos-seguintes">
+<p>Elemento base</p>
+<p>Primeiro irmão (selecionado)</p>
+<p>Segundo irmão (selecionado)</p>
+</div>
+</div>
+ 
+            <div class="section">
+<h2>Lista de Seletores (,)</h2>
+<p>Aplica estilos a vários elementos de uma vez.</p>
+<div class="example-box seletores">
+<div>DIV (selecionado)</div>
+<p>Parágrafo (selecionado)</p>
+<span>SPAN (não selecionado)</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+ <style>
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    background-color: #f7f7f7;
+
+    margin: 0;
+
+    padding: 30px;
+
+}
+ 
+.conteudo {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+ 
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 2em;
+
+    color: #333;
+
+}
+ 
+.caixa {
+
+    background-color: #e9ecef;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+}
+ 
+.section {
+
+    margin-bottom: 40px;
+
+}
+ 
+.section h2 {
+
+    font-size: 1.5em;
+
+    margin-bottom: 12px;
+
+    color: #444;
+
+}
+ 
+.section p {
+
+    font-size: 1.1em;
+
+    margin-bottom: 15px;
+
+    color: #666;
+
+}
+ 
+.example-box {
+
+    background-color: #fafafa;
+
+    border: 1px solid #ddd;
+
+    padding: 20px;
+
+    border-radius: 5px;
+
+    font-size: 1.1em;
+
+    color: #555;
+
+}
+ 
+.filho-direto > div > p {
+
+    background-color: #d4f8d4;
+
+    padding: 6px;
+
+    margin-bottom: 6px;
+
+    border-radius: 4px;
+
+}
+ 
+.descendente p {
+
+    background-color: #b0e0f0;
+
+    padding: 6px;
+
+    margin-bottom: 6px;
+
+    border-radius: 4px;
+
+}
+ 
+.irmao-adjacente div + p {
+
+    background-color: #f8b0b0;
+
+    padding: 6px;
+
+    margin-bottom: 6px;
+
+    border-radius: 4px;
+
+}
+ 
+.irmaos-seguintes p ~ p {
+
+    background-color: #fff4b0;
+
+    padding: 6px;
+
+    margin-bottom: 6px;
+
+    border-radius: 4px;
+
+}
+ 
+.seletores div,
+
+.seletores p {
+
+    background-color: #d1d9e6;
+
+    padding: 6px;
+
+    margin-bottom: 6px;
+
+    border-radius: 4px;
+
+}
+</style>
+ 
