@@ -1,50 +1,48 @@
 body {
-    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color: #ffffff;
     margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 20px;
 }
 
 .conteudo {
-    background-color: #e5e5e5;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 620px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h1 {
     text-align: center;
-    font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.caixa {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
 }
 
 .section {
-    background-color: #e5e5e5;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .section h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .section p {
-    font-size: 15px;
-    margin-bottom: 8px;
+    font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .example-box {
-    background-color: #e5e5e5;
-    padding: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #bbb;
+    padding: 15px;
     border-radius: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
 .filho-direto > div > p {
