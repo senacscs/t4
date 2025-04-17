@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Para o posicionamento correto do fundo */
+}
+
+.star-container {
+    position: absolute; /* Muda para absolute para cobrir toda a página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Impede que as estrelas interfiram em cliques */
+    overflow: hidden; /* Garante que as estrelas que caem não saiam da tela */
+}
+
+.star {
+    position: absolute;
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    );
+    animation: fall var(--fall-duration) linear infinite, blink var(--blink-duration) ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -20px; /* Começa acima da tela */
+        left: calc(100% * var(--random-x));
+        transform: rotate(0deg); /* Rotação inicial */
+    }
+    100% {
+        top: 100%; /* Cai até o fundo */
+        left: calc(100% * var(--random-x));
+        transform: rotate(360deg); /* Rotação completa */
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Opacidade total */
+    }
+    50% {
+        opacity: 0; /* Piscar */
+    }
+}
+
+#container {
+    width: 100%;
+    height: 60pt; /* Ajuste a altura conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url(#threshold) blur(0.6px);
+    position: relative; /* Para garantir que fique acima do fundo */
+    z-index: 2; /* Agora está acima das estrelas */
+    margin-top: 90px; /* Aumenta o espaço acima do título */
+    margin-bottom: 20px;
+}
+
+
+#text1, #text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-size: 50pt;
+    text-align: center;
+    user-select: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%; /* Adiciona largura total para os cards */
+    z-index: 2; /* Mantém os cards acima das estrelas */
+}
+
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.10); 
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+@keyframes rainbow {
+    0% { color: #FF0000; }   /* Vermelho */
+    14% { color: #FF7F00; }  /* Laranja */
+    28% { color: #FFFF00; }  /* Amarelo */
+    42% { color: #00FF00; }  /* Verde */
+    57% { color: #00FFFF; }  /* Ciano */
+    71% { color: #0000FF; }  /* Azul */
+    85% { color: #7F00FF; }  /* Violeta */
+    100% { color: #FF0000; } /* Vermelho */
+}
+
+.card:hover h2 {
+    animation: rainbow 4s infinite; /* Duração de 3 segundos e loop infinito */
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Estilizando cada estrela com tamanhos, posições e tempos de queda e piscar aleatórios */
+.star:nth-child(1) {
+    --random-x: 0.1;
+    --fall-duration: 12s;
+    --blink-duration: 3s;
+    width: 22px; height: 22px;
+    animation-delay: 1.0s;
+    background-color: #FF5733; /* Vermelho */
+}
+
+.star:nth-child(2) {
+    --random-x: 0.3;
+    --fall-duration: 12.5s;
+    --blink-duration: 2.5s;
+    width: 18px; height: 18px;
+    animation-delay: 1.2s;
+    background-color: #33FF57; /* Verde vibrante */
+}
+
+.star:nth-child(3) {
+    --random-x: 0.5;
+    --fall-duration: 13s;
+    --blink-duration: 2s;
+    width: 20px; height: 20px;
+    animation-delay: 1.4s;
+    background-color: #3357FF; /* Azul vibrante */
+}
+
+.star:nth-child(4) {
+    --random-x: 0.7;
+    --fall-duration: 13.5s;
+    --blink-duration: 2.8s;
+    width: 22px; height: 22px;
+    animation-delay: 1.6s;
+    background-color: #F1C40F; /* Amarelo vivo */
+}
+
+.star:nth-child(5) {
+    --random-x: 0.9;
+    --fall-duration: 12.2s;
+    --blink-duration: 2.3s;
+    width: 20px; height: 20px;
+    animation-delay: 1.8s;
+    background-color: #9B59B6; /* Roxo vibrante */
+}
+
+.star:nth-child(6) {
+    --random-x: 0.2;
+    --fall-duration: 11.8s;
+    --blink-duration: 2.4s;
+    width: 22px; height: 22px;
+    animation-delay: 2.0s;
+    background-color: #E67E22; /* Laranja vibrante */
+}
+
+.star:nth-child(7) {
+    --random-x: 0.4;
+    --fall-duration: 13.1s;
+    --blink-duration: 2.1s;
+    width: 20px; height: 20px;
+    animation-delay: 2.2s;
+    background-color: #1ABC9C; /* Turquesa vibrante */
+}
+
+.star:nth-child(8) {
+    --random-x: 0.6;
+    --fall-duration: 12.8s;
+    --blink-duration: 2.6s;
+    width: 22px; height: 22px;
+    animation-delay: 2.4s;
+    background-color: #FF7F50; /* Coral */
+}
+
+.star:nth-child(9) {
+    --random-x: 0.8;
+    --fall-duration: 12s;
+    --blink-duration: 2.5s;
+    width: 20px; height: 20px;
+    animation-delay: 2.6s;
+    background-color: #FF69B4; /* Rosa vibrante */
+}
+
+.star:nth-child(10) {
+    --random-x: 0.15;
+    --fall-duration: 12.3s;
+    --blink-duration: 2.7s;
+    width: 22px; height: 22px;
+    animation-delay: 2.8s;
+    background-color: #F39C12; /* Amarelo-alaranjado */
+}
+
+.star:nth-child(11) {
+    --random-x: 0.25;
+    --fall-duration: 12.6s;
+    --blink-duration: 2.2s;
+    width: 24px; height: 24px;
+    animation-delay: 3.0s;
+    background-color: #8E44AD; /* Violeta */
+}
+
+.star:nth-child(12) {
+    --random-x: 0.35;
+    --fall-duration: 11.5s;
+    --blink-duration: 2.3s;
+    width: 22px; height: 22px;
+    animation-delay: 3.2s;
+    background-color: #C0392B; /* Vermelho escuro */
+}
+
+.star:nth-child(13) {
+    --random-x: 0.45;
+    --fall-duration: 13.3s;
+    --blink-duration: 2.2s;
+    width: 20px; height: 20px;
+    animation-delay: 3.4s;
+    background-color: #D35400; /* Laranja escuro */
+}
+
+.star:nth-child(14) {
+    --random-x: 0.55;
+    --fall-duration: 12.9s;
+    --blink-duration: 2.1s;
+    width: 22px; height: 22px;
+    animation-delay: 3.6s;
+    background-color: #7D3C98; /* Roxo escuro */
+}
+
+.star:nth-child(15) {
+    --random-x: 0.65;
+    --fall-duration: 12.1s;
+    --blink-duration: 2.5s;
+    width: 20px; height: 20px;
+    animation-delay: 3.8s;
+    background-color: #27AE60; /* Verde escuro */
+}
+
+.star:nth-child(16) {
+    --random-x: 0.12;
+    --fall-duration: 11s;
+    --blink-duration: 2.2s;
+    width: 24px; height: 24px;
+    animation-delay: 4.0s;
+    background-color: #2980B9; /* Azul escuro */
+}
+
+.star:nth-child(17) {
+    --random-x: 0.24;
+    --fall-duration: 10.8s;
+    --blink-duration: 1.9s;
+    width: 20px; height: 20px;
+    animation-delay: 4.2s;
+    background-color: #8E44AD; /* Roxo */
+}
+
+.star:nth-child(18) {
+    --random-x: 0.36;
+    --fall-duration: 10.2s;
+    --blink-duration: 1.8s;
+    width: 22px; height: 22px;
+    animation-delay: 4.4s;
+    background-color: #D5DBDB; /* Um pouco mais claro */
+}
+
+.star:nth-child(19) {
+    --random-x: 0.48;
+    --fall-duration: 11.2s;
+    --blink-duration: 1.6s;
+    width: 20px; height: 20px;
+    animation-delay: 4.6s;
+    background-color: #F1948A; /* Rosa claro */
+}
+
+.star:nth-child(20) {
+    --random-x: 0.6;
+    --fall-duration: 9.9s;
+    --blink-duration: 1.3s;
+    width: 22px; height: 22px;
+    animation-delay: 4.8s;
+    background-color: #AAB7B8; /* Um pouco mais claro */
+}
+
+.star:nth-child(21) {
+    --random-x: 0.72;
+    --fall-duration: 10.6s;
+    --blink-duration: 1.5s;
+    width: 24px; height: 24px;
+    animation-delay: 5.0s;
+    background-color: #F7DC6F; /* Amarelo claro */
+}
+
+.star:nth-child(22) {
+    --random-x: 0.84;
+    --fall-duration: 10.1s;
+    --blink-duration: 1.8s;
+    width: 20px; height: 20px;
+    animation-delay: 5.2s;
+    background-color: #E67E22; /* Laranja vibrante */
+}
+
+.star:nth-child(23) {
+    --random-x: 0.16;
+    --fall-duration: 9.4s;
+    --blink-duration: 1.9s;
+    width: 24px; height: 24px;
+    animation-delay: 5.4s;
+    background-color: #3498DB; /* Azul vibrante */
+}
+
+.star:nth-child(24) {
+    --random-x: 0.28;
+    --fall-duration: 9.1s;
+    --blink-duration: 2.2s;
+    width: 20px; height: 20px;
+    animation-delay: 5.6s;
+    background-color: #E74C3C; /* Vermelho claro */
+}
+
+.star:nth-child(25) {
+    --random-x: 0.4;
+    --fall-duration: 8.7s;
+    --blink-duration: 1.0s;
+    width: 22px; height: 22px;
+    animation-delay: 5.8s;
+    background-color: #8E44AD; /* Roxo */
+}
+
+.star:nth-child(26) {
+    --random-x: 0.52;
+    --fall-duration: 10.4s;
+    --blink-duration: 2.0s;
+    width: 20px; height: 20px;
+    animation-delay: 6.0s;
+    background-color: #FF7F50; /* Coral */
+}
+
+.star:nth-child(27) {
+    --random-x: 0.64;
+    --fall-duration: 9.3s;
+    --blink-duration: 2.5s;
+    width: 24px; height: 24px;
+    animation-delay: 6.2s;
+    background-color: #27AE60; /* Verde claro */
+}
+
+.star:nth-child(28) {
+    --random-x: 0.76;
+    --fall-duration: 11.5s;
+    --blink-duration: 1.4s;
+    width: 22px; height: 22px;
+    animation-delay: 6.4s;
+    background-color: #D35400; /* Laranja escuro */
+}
+
+.star:nth-child(29) {
+    --random-x: 0.88;
+    --fall-duration: 10.2s;
+    --blink-duration: 1.8s;
+    width: 20px; height: 20px;
+    animation-delay: 6.6s;
+    background-color: #FF69B4; /* Rosa vibrante */
+}
+
+.star:nth-child(30) {
+    --random-x: 0.18;
+    --fall-duration: 13.9s;
+    --blink-duration: 2.8s;
+    width: 18px; height: 18px;
+    animation-delay: 6.8s;
+    background-color: #F39C12; /* Amarelo-alaranjado */
+}
+
+/* Novas estrelas 31 a 60 */
+.star:nth-child(31) {
+    --random-x: 0.2;
+    --fall-duration: 12.1s;
+    --blink-duration: 1.9s;
+    width: 22px; height: 22px;
+    animation-delay: 7.0s;
+    background-color: #FF4500; /* Laranja vivo */
+}
+
+.star:nth-child(32) {
+    --random-x: 0.4;
+    --fall-duration: 11.3s;
+    --blink-duration: 2.4s;
+    width: 20px; height: 20px;
+    animation-delay: 7.2s;
+    background-color: #FFD700; /* Dourado */
+}
+
+.star:nth-child(33) {
+    --random-x: 0.6;
+    --fall-duration: 13s;
+    --blink-duration: 1.7s;
+    width: 24px; height: 24px;
+    animation-delay: 7.4s;
+    background-color: #00BFFF; /* Azul céu */
+}
+
+.star:nth-child(34) {
+    --random-x: 0.8;
+    --fall-duration: 12.5s;
+    --blink-duration: 2.2s;
+    width: 22px; height: 22px;
+    animation-delay: 7.6s;
+    background-color: #32CD32; /* Verde limão */
+}
+
+.star:nth-child(35) {
+    --random-x: 0.1;
+    --fall-duration: 11.8s;
+    --blink-duration: 1.8s;
+    width: 20px; height: 20px;
+    animation-delay: 7.8s;
+    background-color: #FF1493; /* Rosa intenso */
+}
+
+.star:nth-child(36) {
+    --random-x: 0.3;
+    --fall-duration: 10.9s;
+    --blink-duration: 1.5s;
+    width: 24px; height: 24px;
+    animation-delay: 8.0s;
+    background-color: #FF8C00; /* Laranja escuro */
+}
+
+.star:nth-child(37) {
+    --random-x: 0.5;
+    --fall-duration: 9.6s;
+    --blink-duration: 2.0s;
+    width: 22px; height: 22px;
+    animation-delay: 8.2s;
+    background-color: #7FFF00; /* Verde limão claro */
+}
+
+.star:nth-child(38) {
+    --random-x: 0.7;
+    --fall-duration: 12.7s;
+    --blink-duration: 1.2s;
+    width: 20px; height: 20px;
+    animation-delay: 8.4s;
+    background-color: #BA55D3; /* Roxo claro */
+}
+
+.star:nth-child(39) {
+    --random-x: 0.9;
+    --fall-duration: 11.1s;
+    --blink-duration: 1.4s;
+    width: 24px; height: 24px;
+    animation-delay: 8.6s;
+    background-color: #FF6347; /* Tomate */
+}
+
+.star:nth-child(40) {
+    --random-x: 0.15;
+    --fall-duration: 12.4s;
+    --blink-duration: 1.9s;
+    width: 20px; height: 20px;
+    animation-delay: 8.8s;
+    background-color: #FFD700; /* Dourado */
+}
+
+.star:nth-child(41) {
+    --random-x: 0.25;
+    --fall-duration: 10.6s;
+    --blink-duration: 1.8s;
+    width: 22px; height: 22px;
+    animation-delay: 9.0s;
+    background-color: #DC143C; /* Vermelho */
+}
+
+.star:nth-child(42) {
+    --random-x: 0.35;
+    --fall-duration: 11.9s;
+    --blink-duration: 2.3s;
+    width: 20px; height: 20px;
+    animation-delay: 9.2s;
+    background-color: #1E90FF; /* Azul profundo */
+}
+
+.star:nth-child(43) {
+    --random-x: 0.45;
+    --fall-duration: 13.1s;
+    --blink-duration: 1.7s;
+    width: 24px; height: 24px;
+    animation-delay: 9.4s;
+    background-color: #FF1493; /* Rosa intenso */
+}
+
+.star:nth-child(44) {
+    --random-x: 0.55;
+    --fall-duration: 12.8s;
+    --blink-duration: 2.0s;
+    width: 22px; height: 22px;
+    animation-delay: 9.6s;
+    background-color: #FF4500; /* Laranja vivo */
+}
+
+.star:nth-child(45) {
+    --random-x: 0.65;
+    --fall-duration: 11.6s;
+    --blink-duration: 1.9s;
+    width: 20px; height: 20px;
+    animation-delay: 9.8s;
+    background-color: #FF69B4; /* Rosa vibrante */
+}
+
+.star:nth-child(46) {
+    --random-x: 0.75;
+    --fall-duration: 10.4s;
+    --blink-duration: 2.2s;
+    width: 24px; height: 24px;
+    animation-delay: 10.0s;
+    background-color: #FFD700; /* Dourado */
+}
+
+.star:nth-child(47) {
+    --random-x: 0.85;
+    --fall-duration: 11.0s;
+    --blink-duration: 1.3s;
+    width: 22px; height: 22px;
+    animation-delay: 10.2s;
+    background-color: #7CFC00; /* Verde claro */
+}
+
+.star:nth-child(48) {
+    --random-x: 0.95;
+    --fall-duration: 12.2s;
+    --blink-duration: 1.5s;
+    width: 20px; height: 20px;
+    animation-delay: 10.4s;
+    background-color: #8A2BE2; /* Azul violeta */
+}
+
+.star:nth-child(49) {
+    --random-x: 0.12;
+    --fall-duration: 13.5s;
+    --blink-duration: 2.0s;
+    width: 24px; height: 24px;
+    animation-delay: 10.6s;
+    background-color: #FFB6C1; /* Rosa claro */
+}
+
+.star:nth-child(50) {
+    --random-x: 0.24;
+    --fall-duration: 12.3s;
+    --blink-duration: 2.1s;
+    width: 22px; height: 22px;
+    animation-delay: 10.8s;
+    background-color: #00FF7F; /* Verde água */
+}
+
+.star:nth-child(51) {
+    --random-x: 0.36;
+    --fall-duration: 10.5s;
+    --blink-duration: 1.6s;
+    width: 20px; height: 20px;
+    animation-delay: 11.0s;
+    background-color: #FF6347; /* Tomate */
+}
+
+.star:nth-child(52) {
+    --random-x: 0.48;
+    --fall-duration: 9.3s;
+    --blink-duration: 2.2s;
+    width: 22px; height: 22px;
+    animation-delay: 11.2s;
+    background-color: #32CD32; /* Verde limão */
+}
+
+.star:nth-child(53) {
+    --random-x: 0.6;
+    --fall-duration: 11.1s;
+    --blink-duration: 1.8s;
+    width: 20px; height: 20px;
+    animation-delay: 11.4s;
+    background-color: #FF69B4; /* Rosa vibrante */
+}
+
+.star:nth-child(54) {
+    --random-x: 0.72;
+    --fall-duration: 12.0s;
+    --blink-duration: 1.2s;
+    width: 24px; height: 24px;
+    animation-delay: 11.6s;
+    background-color: #DC143C; /* Vermelho */
+}
+
+.star:nth-child(55) {
+    --random-x: 0.84;
+    --fall-duration: 10.9s;
+    --blink-duration: 2.4s;
+    width: 20px; height: 20px;
+    animation-delay: 11.8s;
+    background-color: #FF4500; /* Laranja vivo */
+}
+
+.star:nth-child(56) {
+    --random-x: 0.96;
+    --fall-duration: 11.5s;
+    --blink-duration: 1.5s;
+    width: 22px; height: 22px;
+    animation-delay: 12.0s;
+    background-color: #FF1493; /* Rosa intenso */
+}
+
+.star:nth-child(57) {
+    --random-x: 0.19;
+    --fall-duration: 12.6s;
+    --blink-duration: 1.7s;
+    width: 20px; height: 20px;
+    animation-delay: 12.2s;
+    background-color: #FFD700; /* Dourado */
+}
+
+.star:nth-child(58) {
+    --random-x: 0.21;
+    --fall-duration: 11.8s;
+    --blink-duration: 1.3s;
+    width: 22px; height: 22px;
+    animation-delay: 12.4s;
+    background-color: #DA70D6; /* Rosa violeta */
+}
+
+.star:nth-child(59) {
+    --random-x: 0.43;
+    --fall-duration: 12.1s;
+    --blink-duration: 1.8s;
+    width: 20px; height: 20px;
+    animation-delay: 12.6s;
+    background-color: #8A2BE2; /* Azul violeta */
+}
+
+.star:nth-child(60) {
+    --random-x: 0.55;
+    --fall-duration: 11.3s;
+    --blink-duration: 1.6s;
+    width: 24px; height: 24px;
+    animation-delay: 12.8s;
+    background-color: #FF69B4; /* Rosa vibrante */
+}

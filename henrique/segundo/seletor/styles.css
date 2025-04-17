@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.caixa {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.example-box {
+    background-color: #f0f0f0;
+    border: 1px solid #bbb;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.filho-direto > div > p {
+    background-color: #b2f2bb;
+    padding: 4px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+
+.descendente p {
+    background-color: #a5d8ff;
+    padding: 4px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+
+.irmao-adjacente div + p {
+    background-color: #ffa8a8;
+    padding: 4px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+
+.irmaos-seguintes p ~ p {
+    background-color: #ffe066;
+    padding: 4px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+
+.seletores div,
+.seletores p {
+    background-color: #ced4da;
+    padding: 4px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}

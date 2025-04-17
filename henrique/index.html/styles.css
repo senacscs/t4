@@ -1,0 +1,95 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+}
+
+/* Cabeçalho e Menu */
+header {
+    margin-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 32px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+/* Projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.projeto-card {
+    background-color: #1a1a1a;
+    padding: 16px;
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.04);
+}
+
+.projeto-card:hover {
+    transform: translateY(-4px);
+    background-color: #2a2a2a;
+}
+
+.projeto-card h2 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.projeto-card p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.projeto-card a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}

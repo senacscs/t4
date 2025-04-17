@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="view view--1">
+                <div class="production">
+                    <h1>Produção</h1>
+                    <div class="image-container">
+                        <img src="produção1 (1).png" alt="Produção 1" class="image">
+                        <img src="produção 2.png" alt="Produção 2" class="image">
+                    </div>
+                </div>
+                <div class="results">
+                    <h1>Resultados</h1>
+                    <div class="image-container">
+                        <img src="pontefoto1.jpg" alt="Resultado 1" class="image">
+                        <img src="pontefoto2.jpg" alt="Resultado 2" class="image">
+                    </div>
+                </div>
+            </div>
+            <button onclick="location.href='informacoes.html'" type="button" class="unbutton button button--open" aria-label="Open other view">Mais Informações</button>
+        </main>
+    </div>
+    <div class="lightbox" id="lightbox" style="display: none;">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="Lightbox Image">
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        const images = document.querySelectorAll('.image');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+    
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                lightboxImage.src = image.src; // Define a imagem da lightbox para a imagem clicada
+                lightbox.style.display = 'flex'; // Mostra a lightbox
+            });
+        });
+    
+        function closeLightbox() {
+            lightbox.style.display = 'none'; // Esconde a lightbox
+        }
+    </script>
+    
+</body>
+</html>
