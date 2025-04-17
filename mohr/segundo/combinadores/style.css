@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.box h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filho-direto > p {
+    background-color: #b3ecb3;
+    padding: 5px;
+}
+
+.descendente p {
+    background-color: #cce0ff;
+    padding: 5px;
+}
+
+.irmao-adjacente div + p {
+    background-color: #f9c2cc;
+    padding: 5px;
+}
+
+.irmaos-seguintes .lista ~ p {
+    background-color: #ffb3a7;
+    padding: 5px;
+}
+
+.lista-seletores div, .lista-seletores p.destacado, .lista-seletores span {
+    border: 1px dashed #666;
+    padding: 3px;
+    margin-bottom: 3px;
+}
