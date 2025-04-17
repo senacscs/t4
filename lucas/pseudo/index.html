@@ -1,63 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"> 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Combinadores CSS</title>
+<title>Pseudo-classes CSS - Exemplos</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="conteudo">
-<h1>Exemplos Combinadores CSS</h1>
+<div class="container">
+<h1>Exemplos de Pseudo-classes CSS</h1>
  
         <div class="caixa">
-<div class="section">
-<h2>Combinador de Filho Direto (>)</h2>
-<p>Seleciona elementos que são filhos diretos de outro elemento.</p>
-<div class="example-box filho-direto">
-<div><p>Filho direto (selecionado)</p></div>
-<div><span><p>Parágrafo dentro do span (não selecionado)</p></span></div>
+<section>
+<h2>1. :hover</h2>
+<div class="exemplo">
+<p>Passe o cursor sobre o link abaixo para ver o efeito:</p>
+<a href="#">Passe o mouse aqui</a>
 </div>
-</div>
+</section>
  
-            <div class="section">
-<h2>Combinador de Descendente (espaço)</h2>
-<p>Seleciona todos os elementos descendentes, independentemente do nível.</p>
-<div class="example-box descendente">
-<div><p>Descendente (selecionado)</p></div>
-<div><span><p>Outro descendente (selecionado)</p></span></div>
+            <section class="exemplo-first">
+<h2>2. :first-child</h2>
+<div class="exemplo">
+<p>Primeiro parágrafo (destacado)</p>
+<p>Segundo parágrafo (sem destaque)</p>
+<p>Terceiro parágrafo (sem destaque)</p>
 </div>
-</div>
+</section>
  
-            <div class="section">
-<h2>Combinador de Irmão Adjacente (+)</h2>
-<p>Seleciona o próximo irmão imediato de um elemento.</p>
-<div class="example-box irmao-adjacente">
-<div>Elemento Base</div>
-<p>Irmão direto (selecionado)</p>
-<p>Outro irmão (não selecionado)</p>
+            <section class="exemplo-nth">
+<h2>3. :nth-child()</h2>
+<div class="exemplo">
+<p>Primeiro parágrafo (sem destaque)</p>
+<p>Segundo parágrafo (sem destaque)</p>
+<p>Terceiro parágrafo (destacado)</p>
+<p>Quarto parágrafo (sem destaque)</p>
 </div>
-</div>
+</section>
  
-            <div class="section">
-<h2>Combinador de Irmãos Seguintes (~)</h2>
-<p>Seleciona todos os irmãos que vêm depois do elemento base.</p>
-<div class="example-box irmaos-seguintes">
-<p>Elemento base</p>
-<p>Primeiro irmão (selecionado)</p>
-<p>Segundo irmão (selecionado)</p>
+            <section>
+<h2>4. :checked</h2>
+<div class="exemplo">
+<input type="checkbox" id="item1" checked>
+<label for="item1">Item 1 (marcado)</label><br>
+<input type="checkbox" id="item2">
+<label for="item2">Item 2 (desmarcado)</label>
 </div>
-</div>
+</section>
  
-            <div class="section">
-<h2>Lista de Seletores (,)</h2>
-<p>Aplica estilos a vários elementos de uma vez.</p>
-<div class="example-box seletores">
-<div>DIV (selecionado)</div>
-<p>Parágrafo (selecionado)</p>
-<span>SPAN (não selecionado)</span>
+            <section>
+<h2>5. :focus</h2>
+<div class="exemplo">
+<p>Clique no campo de texto para ver o foco em ação:</p>
+<input type="text" placeholder="Digite algo...">
 </div>
+</section>
+ 
+            <section class="exemplo-not">
+<h2>6. :not()</h2>
+<div class="exemplo">
+<p>Este parágrafo receberá o estilo :not()</p>
+<p class="ignorar">Este não será afetado pelo :not()</p>
 </div>
+</section>
 </div>
 </div>
 </body>
@@ -76,7 +81,7 @@ body {
 
 }
  
-.conteudo {
+.container {
 
     max-width: 900px;
 
@@ -116,13 +121,13 @@ h1 {
 
 }
  
-.section {
+section {
 
     margin-bottom: 40px;
 
 }
  
-.section h2 {
+h2 {
 
     font-size: 1.5em;
 
@@ -132,17 +137,7 @@ h1 {
 
 }
  
-.section p {
-
-    font-size: 1.1em;
-
-    margin-bottom: 15px;
-
-    color: #666;
-
-}
- 
-.example-box {
+.exemplo {
 
     background-color: #fafafa;
 
@@ -158,66 +153,60 @@ h1 {
 
 }
  
-.filho-direto > div > p {
+a {
 
-    background-color: #d4f8d4;
-
-    padding: 6px;
-
-    margin-bottom: 6px;
-
-    border-radius: 4px;
+    text-decoration: none;
 
 }
  
-.descendente p {
+a:hover {
 
-    background-color: #b0e0f0;
+    color: #ff7043;
 
-    padding: 6px;
-
-    margin-bottom: 6px;
-
-    border-radius: 4px;
+    text-decoration: underline;
 
 }
  
-.irmao-adjacente div + p {
+.exemplo-first .exemplo p:first-child {
 
-    background-color: #f8b0b0;
+    color: #d32f2f;
 
-    padding: 6px;
-
-    margin-bottom: 6px;
-
-    border-radius: 4px;
+    font-weight: bold;
 
 }
  
-.irmaos-seguintes p ~ p {
+.exemplo-nth .exemplo p:nth-child(3) {
 
-    background-color: #fff4b0;
+    color: #1976d2;
 
-    padding: 6px;
-
-    margin-bottom: 6px;
-
-    border-radius: 4px;
+    font-weight: bold;
 
 }
  
-.seletores div,
+input:checked + label {
 
-.seletores p {
+    color: #ff7043;
 
-    background-color: #d1d9e6;
+    font-weight: bold;
 
-    padding: 6px;
+}
+ 
+input:focus {
 
-    margin-bottom: 6px;
+    border: 2px solid #4caf50;
+
+}
+ 
+.exemplo-not .exemplo p:not(.ignorar) {
+
+    background-color: #2e3b4e;
+
+    color: #fff;
+
+    padding: 8px;
 
     border-radius: 4px;
 
 }
+
 </style>
- 
