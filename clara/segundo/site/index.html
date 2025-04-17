@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos de Pseudo-classes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    /* 1. :hover */
+    a:hover {
+      color: orange;
+    }
+
+    /* 2. :first-child */
+    #first-child-example p:first-child {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 3. :nth-child() */
+    #nth-child-example p:nth-child(3) {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. :hover</h2>
+  <p>Passe o mouse sobre o link abaixo:</p>
+  <a href="#">Link com :hover</a>
+
+  <h2>2. :first-child</h2>
+  <div id="first-child-example">
+    <p>Este é o primeiro parágrafo (selecionado)</p>
+    <p>Este é o segundo parágrafo</p>
+    <p><em>Outro exemplo</em> de <strong>primeiro filho</strong></p>
+  </div>
+
+  <h2>3. :nth-child()</h2>
+  <div id="nth-child-example">
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Parágrafo 3 (selecionado)</p>
+    <p>Parágrafo 4</p>
+  </div>
+
+
+  <style>
+    
+
+a:hover {
+  color: orange;
+}
+
+
+#first-child-example p:first-child {
+  color: red;
+  font-weight: bold;
+}
+
+/* 3. :nth-child() */
+#nth-child-example p:nth-child(3) {
+  color: blue;
+  font-weight: bold;
+}
+
+/* 4. :checked */
+#checked-example input:checked + label {
+  color: orange;
+  font-weight: bold;
+}
+
+/* 5. :focus */
+#focus-example input:focus {
+  border: 2px solid #5555ff;
+  outline: none;
+}
+
+/* 6. :not() */
+#not-example p:not(.ignorar) {
+  background-color: #dde2e6;
+  padding: 5px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h2>1. :hover</h2>
+<p>Passe o mouse sobre o link abaixo:</p>
+<a href="#">Link com :hover</a>
+
+<h2>2. :first-child</h2>
+<div id="first-child-example">
+<p>Este é o primeiro parágrafo (selecionado)</p>
+<p>Este é o segundo parágrafo</p>
+<p><em>Outro exemplo</em> de <strong>primeiro filho</strong></p>
+</div>
+
+<h2>3. :nth-child()</h2>
+<div id="nth-child-example">
+<p>Parágrafo 1</p>
+<p>Parágrafo 2</p>
+<p>Parágrafo 3 (selecionado)</p>
+<p>Parágrafo 4</p>
+</div>
+
+<h2>4. :checked</h2>
+<div id="checked-example">
+<input type="checkbox" id="opcao1">
+<label for="opcao1">Opção 1</label><br>
+<input type="checkbox" id="opcao2">
+<label for="opcao2">Opção 2</label>
+</div>
+
+<h2>5. :focus</h2>
+<div id="focus-example">
+<p>Clique no campo para ver o :focus em ação:</p>
+<input type="text" placeholder="Digite algo aqui...">
+</div>
+
+<h2>6. :not()</h2>
+<div id="not-example">
+<p>Este parágrafo será estilizado com :not()</p>
+<p class="ignorar">Este será ignorado</p>
+</div>
+
+</body>
+</html>
