@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* 1. :hover */
+.hover-example a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.hover-example a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* 2. :first-child */
+.first-child-example p:first-child {
+    background-color: #f1c40f;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.first-child-example em:first-child {
+    color: #e74c3c;
+    font-style: normal;
+}
+
+/* 3. :nth-child() */
+.nth-child-example p:nth-child(3) {
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px;
+}
+
+/* 4. :checked */
+.checked-example input[type="checkbox"]:checked + label {
+    color: #9b59b6;
+    font-weight: bold;
+}
+
+/* 5. :focus */
+.focus-example input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.focus-example input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* 6. :not() */
+.not-example p:not(.ignore) {
+    background-color: #e67e22;
+    color: white;
+    padding: 5px;
+}
+
+.example-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
