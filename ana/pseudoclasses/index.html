@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pseudo Classes</h1>
+    <div class="container">
+        <div class="box">
+            <h2>1. :hover</h2>
+            <p>Passe o mouse sobre o link abaixo:</p>
+            <a href="#">Link com :hover</a>
+        </div>
+ 
+        <div class="box first-child">
+            <h2>2. :first-child</h2>
+            <p>Este é o primeiro parágrafo (selecionado)</p>
+            <p>Este é o segundo parágrafo</p>
+            <div>
+                <p>Outro exemplo de primeiro filho</p>
+            </div>
+        </div>
+ 
+        <div class="box nth-child">
+            <h2>3. :nth-child()</h2>
+            <p>Parágrafo 1</p>
+            <p>Parágrafo 2</p>
+            <p>Parágrafo 3 (selecionado)</p>
+            <p>Parágrafo 4</p>
+        </div>
+ 
+        <div class="box">
+            <h2>4. :checked</h2>
+            <input type="checkbox" id="chk1">
+            <label for="chk1">Opção 1</label><br>
+            <input type="checkbox" id="chk2">
+            <label for="chk2">Opção 2</label>
+        </div>
+ 
+        <div class="box">
+            <h2>5. :focus</h2>
+            <p>Clique no campo para ver o :focus em ação:</p>
+            <input type="text" placeholder="Digite algo...">
+        </div>
+ 
+        <div class="box not">
+            <h2>6. :not()</h2>
+            <p>Este parágrafo será estilizado com :not()</p>
+            <p class="ignorado">Este será ignorado</p>
+        </div>
+    </div>
+</body>
+</html>
+ 

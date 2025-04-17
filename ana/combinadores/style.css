@@ -1,0 +1,83 @@
+/* Reset e base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffeaf4;
+    color: #d63384;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #d63384;
+    margin-bottom: 30px;
+}
+
+/* Container geral */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Caixas estilo cartão */
+.box {
+    background-color: #fff0f6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(214, 51, 132, 0.1);
+    border-left: 8px solid #f06292;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.01);
+}
+
+.box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c2185b;
+}
+
+/* Estilização específica dos combinadores */
+.filho-direto > p {
+    background-color: #b3ecb3;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.descendente p {
+    background-color: #cce0ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.irmao-adjacente div + p {
+    background-color: #f9c2cc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.irmaos-seguintes .lista ~ p {
+    background-color: #ffb3a7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.lista-seletores div,
+.lista-seletores p.destacado,
+.lista-seletores span {
+    border: 1px dashed #666;
+    padding: 10px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    background-color: #fce4ec;
+}

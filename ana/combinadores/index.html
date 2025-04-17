@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Combinadores</h1>
+    <div class="container">
+        <div class="box">
+            <h2>1. Combinador de Filho Direto (>)</h2>
+            <div class="filho-direto">
+                <p>Parágrafo filho direto (selecionado)</p>
+                <div>
+                    <p>Parágrafo neto da div-pai (não é filho direto)</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="box">
+            <h2>2. Combinador de Descendente (espaço)</h2>
+            <div class="descendente">
+                <p>Parágrafo descendente (selecionado)</p>
+                <div>
+                    <p>Outro descendente (também selecionado)</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="box">
+            <h2>3. Combinador de Irmão Adjacente (+)</h2>
+            <div class="irmao-adjacente">
+                <div>Elemento DIV</div>
+                <p>Parágrafo logo após a DIV (selecionado)</p>
+                <p>Outro parágrafo (não selecionado)</p>
+            </div>
+        </div>
+ 
+        <div class="box">
+            <h2>4. Combinador de Irmãos Seguintes (~)</h2>
+            <div class="irmaos-seguintes">
+                <p class="lista">Parágrafo antes da lista</p>
+                <p>1º irmão (selecionado)</p>
+                <p>2º irmão (selecionado)</p>
+            </div>
+        </div>
+ 
+        <div class="box">
+            <h2>5. Lista de Seletores (,)</h2>
+            <div class="lista-seletores">
+                <div>DIV selecionada</div>
+                <p class="destacado">Parágrafo destacado</p>
+                <span>SPAN não selecionado</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

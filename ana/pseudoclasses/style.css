@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffeaf4;
+    color: #d63384;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #d63384;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    background-color: #fff0f6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.2);
+    border-left: 8px solid #f06292;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.01);
+}
+
+.box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c2185b;
+}
+
+a {
+    text-decoration: none;
+    color: #d63384;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ff6f91;
+    border-bottom: 2px solid #ff6f91;
+}
+
+.first-child p:first-child {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.nth-child p:nth-child(3) {
+    color: #3f51b5;
+    font-weight: bold;
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+input[type="checkbox"]:checked + label {
+    color: #d63384;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3f51b5;
+    outline: none;
+}
+
+.not p:not(.ignorado) {
+    background-color: #f8bbd0;
+    padding: 10px;
+    border-radius: 8px;
+}
