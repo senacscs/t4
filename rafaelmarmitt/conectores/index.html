@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores CSS</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .container-filho > p {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .container-descendente span {
+            background-color: yellow;
+            padding: 5px;
+        }
+
+        h2 + li {
+            border-left: 5px solid green;
+            padding-left: 10px;
+        }
+
+        h2 ~ p {
+            font-style: italic;
+            color: gray;
+        }
+
+        li, .destaque {
+            margin-bottom: 5px;
+            padding: 8px;
+            border: 1px dashed #aaa;
+        }
+
+        .destaque {
+            background-color: lightcoral;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplo de Combinadores CSS</h1>
+
+    <div class="container container-filho">
+        <h2>Filho Direto (>)</h2>
+        <div>
+            <p>Este parágrafo NÃO será estilizado diretamente.</p>
+            <p>Este também não.</p>
+            <section>
+                <p>Este parágrafo dentro de uma section NÃO será estilizado diretamente.</p>
+            </section>
+        </div>
+        <p>Este parágrafo SERÁ estilizado (filho direto de .container-filho).</p>
+        <p>E este também.</p>
+    </div>
+
+    <div class="container container-descendente">
+        <h2>Descendente (espaço)</h2>
+        <div>
+            <span>Este span será estilizado.</span>
+            <p>Um parágrafo com um <span>span dentro</span> que também será estilizado.</p>
+        </div>
+        <span>Este span também será estilizado.</span>
+    </div>
+
+    <div class="container container-irmaos-adjacentes">
+        <h2>Irmão Adjacente (+)</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Este item NÃO será estilizado.</li>
+        </ul>
+        <li>Este item SERÁ estilizado (irmão adjacente de <h2>).</li>
+        <li>Este também não.</li>
+    </div>
+
+    <div class="container container-irmaos-seguintes">
+        <h2>Irmãos Seguintes (~)</h2>
+        <p>Este parágrafo NÃO será estilizado.</p>
+        <p>Este parágrafo SERÁ estilizado (irmão seguinte de <h2>).</p>
+        <div>
+            <p>Este parágrafo dentro de uma div NÃO será estilizado.</p>
+        </div>
+        <p>Este parágrafo também SERÁ estilizado.</p>
+    </div>
+
+    <div class="container container-lista-seletores">
+        <h2>Lista de Seletores (,)</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li class="destaque">Item 3 (destaque)</li>
+            <li>Item 4</li>
+        </ul>
+        <p class="destaque">Este parágrafo também está destacado.</p>
+        <p>Este não.</p>
+    </div>
+
+</body>
+</html>
