@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Combinadores</h1>
+    <div class="section">
+
+        <h2> Combinador Filho Direto</h2>
+        <div class="corp">
+        <div class="fi">
+            <p>Paragrafo filho direto</p>
+            <span>
+                <p>Parágrafo não filho direto</p>
+            </span>
+            </div>
+        </div>
+        </div>
+        
+        <h2>Combinador de Descendente</h2>
+        <div class="corp">
+            <div class="descendente">
+                <p>Parágrafo descendente</p>
+                <p>Parágrafo também descendente</p>
+            </div>
+        </div>
+
+        <h2>Combinador Irmão Adjacente</h2>
+        <div class="corp">
+            <div class="adj">
+                <p>Elemento DIV</p>
+            </div>
+            <p>Parágrafo após a DIV</p>
+            <p>Outro parágrafo</p>
+        </div>
+
+        <h2>Combinador Irmão Seguinte</h2>
+        <div class="corp">
+            <div class="seg"></div>
+            <p>Parágrafo antes das listas</p>
+                <ul>
+                    <li>Célula 1</li>
+                    <li>Célula 2</li>
+                </ul>
+        </div>
+
+        <h2>Lista de Seletores</h2>
+        <div class="corp">
+            <div class="lista">
+                <p>DIV Selecionada</p>
+            </div>
+            <p class="lista">Parágrafo Selecionado</p>
+            <span>Span não selecionado</span>
+        </div>
+
+    </div>
+</body>
+</html>

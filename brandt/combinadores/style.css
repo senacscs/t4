@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(255, 252, 240);
+    font-family: monospace;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(26, 26, 26);
+    font-size: 50px;
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+}
+
+.corp {
+    border: 2px dashed rgb(255, 158, 224);
+    padding: 20px 20px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.fi > p {
+    background-color: rgb(255, 126, 126);
+    border-radius: 3px;
+}
+
+.descendente p {
+    background-color: rgb(255, 180, 126);
+    border-radius: 3px;
+}
+
+.adj + p {
+    background-color: rgb(255, 244, 126);
+    border-radius: 3px;
+}
+
+.seg ~ ul {
+    background-color: rgb(143, 255, 126);
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+.lista div, .lista  {
+    background-color: rgb(168, 247, 251);
+    border-radius: 3px;
+}

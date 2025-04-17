@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(255, 252, 240);
+    font-family: monospace;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(26, 26, 26);
+    font-size: 50px;
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+}
+
+.corp {
+    border: 2px dashed rgb(255, 158, 224);
+    padding: 20px 20px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    font-size: 20px;
+}
+
+.hover a:hover + .oculto{
+    color: rgb(255, 72, 173);
+    font-size: 25px;
+    display: block;
+}
+
+.hover>a {
+    color: rgb(221, 31, 151);
+    text-decoration: none;
+}
+
+.hover> a:visited{
+    color: rgb(124, 237, 144);
+}
+
+.oculto{
+    display: none;
+}
+
+.first-child p:first-child, .first-child i:first-child{
+    background-color: rgb(253, 192, 196);
+}
+
+.esp p:nth-child(3){
+    color: rgb(255, 72, 173);
+}
+
+label {
+    font-size: 20px;
+}
+
+input:checked + label{
+    color: lightcoral;
+}
+
+input:focus {
+    border: 4px solid lightcoral
+}
+
+.ignorar p:not(.nao){
+    background-color: rgb(253, 192, 196);
+}

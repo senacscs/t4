@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pseudo-Classes</h1>
+    <div class="section">
+
+        <div class="corp hover" >
+            <h2>1. :hover</h2>
+            <p>Passe o Mouse pelo link:</p>
+            <a href="https://youtu.be/6_hl8AB7Uf0?si=ESJzG4U99pRe7t6r" target="_blank">Link com :hover</a>
+            <div class="oculto">
+                <p>Testo oculto</p>
+            </div>
+        </div>
+
+        <div class="corp">
+            <h2>2. :first-child</h2>
+            <div class="first-child">
+                <p>Este é o primeiro parágrafo</p>
+                <p>Este é o segundo parágrafo</p>
+            <p>Outro exemplo de <i class="first-child">first-child</i></p>
+            </div>
+        </div>
+
+        <div class="corp">
+            <h2>3. :nth-child()</h2>
+            <div class="esp">
+                <p>Parágrafo 1</p>
+                <p>Parágrafo 2</p>
+                <p>Parágrafo 3</p>
+                <p>Parágrafo 4</p>
+            </div>
+        </div>
+
+        <div class="corp">
+            <h2>4. :checked</h2>
+            <input type="checkbox" id="nome" name="nome">
+            <label for="nome">Opção 1</label><br>
+            <input type="checkbox" id="eba" name="eba">
+            <label for="eba">Opção 2</label>
+        </div>
+
+        <div class="corp">
+            <h2>5. :focus</h2>
+            <label for="message">Clique no campo de texto</label><br>
+            <input type="text"><br>
+        </div>
+
+        <div class="corp">
+            <h2>6. :not()</h2>
+            <div class="ignorar">
+                <p>Este parágrafo será estilizado com :not()</p>
+                <p class="nao">Este será ignorado</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
