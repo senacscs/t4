@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .box {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .box h2 {
+    margin-top: 0;
+  }
+  a:hover {
+    color: orange;
+  }
+  .first-child-example p:first-child {
+    color: red;
+    font-weight: bold;
+  }
+  .first-child-example em:first-child {
+    color: red;
+  }
+  .nth-child-example p:nth-child(3) {
+    color: blue;
+  }
+  input:checked + label {
+    color: orange;
+    font-weight: bold;
+  }
+  input:focus {
+    border: 2px solid gray;
+  }
+  .not-example p:not(.ignore) {
+    background: #556270;
+    color: #fff;
+    padding: 5px;
+  }
