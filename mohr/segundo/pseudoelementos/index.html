@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-elementos CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pseudo-elementos CSS - Exemplos</h1>
+    <div class="container">
+        <div class="box first-line">
+            <h2>1. p::first-line</h2>
+            <p>Esta linha ficará com destaque. O restante do parágrafo mantém o estilo padrão. Você pode ver a diferença ao redimensionar a janela.</p>
+        </div>
+
+        <div class="box first-letter">
+            <h2>2. p::first-letter</h2>
+            <p>A primeira letra deste parágrafo será maior e colorida, simulando o estilo de livros antigos ou revistas.</p>
+        </div>
+
+        <div class="box before">
+            <h2>3. p::before</h2>
+            <p>Este parágrafo possui um símbolo adicionado antes do seu conteúdo com ::before.</p>
+        </div>
+
+        <div class="box after">
+            <h2>4. p::after</h2>
+            <p>Este parágrafo adiciona um ícone no final usando ::after.</p>
+        </div>
+
+        <div class="box selection">
+            <h2>5. ::selection</h2>
+            <p>Selecione este texto com o mouse para ver o efeito do pseudo-elemento ::selection.</p>
+        </div>
+    </div>
+</body>
+</html>

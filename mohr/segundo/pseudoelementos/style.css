@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.box h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+.first-line p::first-line {
+    color: orange;
+    font-weight: bold;
+}
+
+.first-letter p::first-letter {
+    color: crimson;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.before p::before {
+    content: "👉 ";
+    color: goldenrod;
+}
+
+.after p::after {
+    content: " ✔";
+    color: blueviolet;
+}
+
+.selection p::selection {
+    background-color: yellow;
+    color: black;
+}
