@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+
+
+.linha::first-line {
+    color: orange;
+    
+}
+
+.primeira-letra::first-letter {
+    font-size: 2em;
+    color: crimson;
+    
+}
+
+.antes::before {
+    content: "👉 ";
+    color: goldenrod;
+    
+}
+
+.depois::after {
+    content: " ✔️";
+    color: purple;
+    
+}
+
+.selecionar::selection {
+    background-color: red;
+    color: white;
+}
