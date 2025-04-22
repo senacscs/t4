@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração de Pseudo-elementos CSS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #3498db;
+            margin: 10px auto;
+        }
+        
+        .first-line-demo {
+            width: 80%;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        
+        .first-line-demo::first-line {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .first-letter-demo {
+            width: 80%;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .first-letter-demo::first-letter {
+            font-size: 3em;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .before-after-demo {
+            width: 80%;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2ecc71;
+            position: relative;
+        }
+        
+        .before-after-demo::before {
+            content: "«";
+            font-size: 2em;
+            color: #2ecc71;
+            position: absolute;
+            left: -15px;
+            top: 10px;
+        }
+        
+        .before-after-demo::after {
+            content: "»";
+            font-size: 2em;
+            color: #2ecc71;
+            position: absolute;
+            right: -15px;
+            bottom: 10px;
+        }
+        
+        .selection-demo {
+            width: 80%;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .selection-demo::selection {
+            background-color: #9b59b6;
+            color: white;
+        }
+        
+        .note {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 4px solid #ffd600;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .note::before {
+            content: "Observação: ";
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demonstração de Pseudo-elementos CSS</h1>
+    
+    <div class="note">
+        Esta página demonstra o uso dos pseudo-elementos CSS abordados em aula.
+    </div>
+    
+    <section class="first-line-demo">
+        <h2>::first-line</h2>
+        <p>Este pseudo-elemento aplica estilos à primeira linha de um elemento de bloco. Observe como apenas a primeira linha deste parágrafo tem aparência diferente das demais. O estilo é aplicado dinamicamente conforme o tamanho da janela é alterado. Se você redimensionar o navegador, verá que a formatação da primeira linha se ajusta automaticamente.</p>
+    </section>
+    
+    <section class="first-letter-demo">
+        <h2>::first-letter</h2>
+        <p>Este pseudo-elemento aplica estilos à primeira letra de um elemento de bloco. É comumente usado para criar efeitos de letra capitular, como em livros e revistas. A primeira letra deste parágrafo foi ampliada e estilizada para se destacar visualmente, criando um ponto focal interessante para o texto.</p>
+    </section>
+    
+    <section class="before-after-demo">
+        <h2>::before e ::after</h2>
+        <p>Estes pseudo-elementos permitem inserir conteúdo antes ou depois do conteúdo de um elemento. Eles são frequentemente usados para adicionar ícones, elementos decorativos ou texto adicional sem modificar o HTML. Neste exemplo, adicionamos aspas decorativas no início e no final deste bloco de texto.</p>
+    </section>
+    
+    <section class="selection-demo">
+        <h2>::selection</h2>
+        <p>Este pseudo-elemento aplica estilos ao texto selecionado pelo usuário. Selecione parte deste texto para ver o efeito. Em vez do padrão (geralmente azul com texto branco), configuramos uma cor roxa com texto branco para a seleção. Isso pode ser usado para melhorar a experiência do usuário e manter a consistência com a identidade visual do site.</p>
+    </section>
+    
+    <div class="note">
+        Pseudo-elementos são poderosas ferramentas CSS que permitem estilizar partes específicas dos elementos sem a necessidade de adicionar markup extra ao HTML.
+    </div>
+</body>
+</html>
