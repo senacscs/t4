@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.caixa {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.exemplo {
+    background-color: #f0f0f0;
+    border: 1px solid #bbb;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Estilos de pseudo-elementos */
+.exemplo1::first-line {
+    color: orange;
+    font-weight: bold;
+}
+
+.exemplo2::first-letter {
+    font-size: 32px;
+    color: crimson;
+    font-weight: bold;
+}
+
+.exemplo3::before {
+    content: "👉 ";
+    color: orange;
+}
+
+.exemplo4::after {
+    content: " ✔";
+    color: purple;
+}
+
+.exemplo5::selection {
+    background: yellow;
+    color: black;
+}

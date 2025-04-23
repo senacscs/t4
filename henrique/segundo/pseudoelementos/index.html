@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pseudo-elementos CSS - Exemplos</h1>
+        <div class="caixa">
+            <section>
+                <h2>1. p::first-line</h2>
+                <div class="exemplo">
+                    <p class="exemplo1">
+                        A primeira linha deste texto será estilizada com uma cor diferente para destacar seu conteúdo inicial.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2>2. p::first-letter</h2>
+                <div class="exemplo">
+                    <p class="exemplo2">
+                        Veja como a primeira letra deste parágrafo é destacada, simulando o estilo de início de capítulos de livros.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2>3. p::before</h2>
+                <div class="exemplo">
+                    <p class="exemplo3">
+                        Este texto recebe um símbolo antes de ser exibido, apenas com CSS, sem alterar o HTML diretamente.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2>4. p::after</h2>
+                <div class="exemplo">
+                    <p class="exemplo4">
+                        Um ícone aparece no final desta frase como se fosse parte do conteúdo, mas é inserido pelo CSS.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2>5. p::selection</h2>
+                <div class="exemplo">
+                    <p class="exemplo5">
+                        Ao selecionar este parágrafo com o mouse, o fundo mudará de cor, graças ao uso do ::selection.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
