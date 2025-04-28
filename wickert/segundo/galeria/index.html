@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="perfil" src="arvore.png" alt="">
+        <div class="conteudo_principal">
+            <h1>Galeria GW</h1> <button class="seguir" onclick="seguir(this)">Seguir</button><button class="mensagem">Enviar mensagem</button>
+        </div>
+        <div class="seguidores">
+            <p class="strong">35</p>
+            <p class="fraco">Publicações</p>
+            <p class="strong" id="seg" data-index="3727">3726</p>
+            <p class="fraco">Seguidores</p>
+            <p class="strong">203</p>
+            <p class="fraco">Seguindo</p>
+        </div>
+        <div class="descricao">
+            <p><strong>Galeria GW</strong><br>
+                🌳 Tipuanas pelo caminho <br>
+                📸 Um olhar poético sobre a beleza das Tipuanas <br>
+                💛 Flores amarelas, sombras acolhedoras e histórias que o vento conta <br>
+                📍Cenas urbanas & naturais <br>
+                #Tipuana #NaturezaUrbana #ÁrvoreDaVida</p>
+        </div>
+    </header>
+    <div class="pubs">
+        <hr>
+        <hr class="strong menor">
+        <h2>Publicações</h2>
+    </div>
+    <main>
+        <div class="janela">
+            <div class="janelaimg">
+                <img src="arvore.png" alt="">
+                <div class="b"></div>
+                <img src="arvore.png" alt="">
+            </div>
+            <div class="lateral">
+                <ion-icon class="fechar" onclick="fecharJanela()" name="close-outline"></ion-icon>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet necessitatibus expedita vero nemo itaque! Nam, quam voluptatibus? Esse cumque quisquam repellat, iste, nemo fugit, obcaecati doloribus iure debitis expedita tenetur?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa iure inventore modi tenetur distinctio nostrum odit vero optio, beatae, fugiat et repudiandae? Sequi, pariatur temporibus. Ratione veritatis dolor quisquam sapiente!
+                </p>
+                <ion-icon onclick="curtir(this)" class="curtida" name="heart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="imagens" id="galeria">
+            <img src="arvore.png" alt="" class="imagem" data-index="0" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="1" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="2" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="3" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="4" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="5" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="6" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="7" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="8" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="9" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="10" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="11" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="12" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="13" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="14" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="15" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="16" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="17" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="18" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="19" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="20" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="21" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="22" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="23" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="24" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="25" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="26" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="27" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="28" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="29" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="30" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="31" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="32" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="33" onclick="verJanela(this)">
+            <img src="arvore.png" alt="" class="imagem" data-index="34" onclick="verJanela(this)">
+        </div>
+        <script src="main.js"></script>
+    </main>
+</body>
+
+</html>
