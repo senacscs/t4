@@ -1,0 +1,481 @@
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(220, 224, 255);
+    font-family: sans-serif;
+    display: flex;
+}
+
+.cont {
+    background: linear-gradient(-160deg, rgb(0, 140, 255), rgb(41, 111, 177));
+    height: var(total);
+    width: 300px;
+    box-shadow: 0 0 5px 1px rgb(0, 0, 23);
+    transition: 0.5s;
+    min-width: 300px;
+    max-width: 300px;
+    margin-right: auto;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.perfil {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin: 10px 0 0 9px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 100%;
+}
+
+.cont hr {
+    width: 80%;
+    border-color: rgb(48, 48, 48);
+    border-style: solid;
+    margin: 20px auto 20px auto;
+}
+
+.foto {
+    display: flex;
+}
+.redes {
+    height: 100px;
+    margin-top: 11px
+}
+
+.soci {
+    width: 150px;
+    height: 25px;
+    background-color: black;
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+    display: flex;
+    transition: 0.3s;
+}
+
+.soci p {
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.soci1 p {
+    color: rgb(0, 0, 0);
+}
+
+.soci2 p {
+    color: white;
+}
+
+.soci3 p {
+    color: white;
+}
+
+.soci img {
+    height: 23px;
+    width: 23px;
+    margin-left: 3px;
+    border-radius: 10px;
+    margin-top: 1px;
+}
+
+.soci1 {
+    background-color: white;
+}
+
+.soci2 {
+    background-color: rgb(0, 3, 29);
+}
+
+.soci3 {
+    background-color: #364475;
+}
+
+a {
+    text-decoration: none;
+}
+
+.soci:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px -2px black;
+}
+
+.mnome h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 3px;
+}
+
+.mnome {
+    padding: 2px;
+    background-color: #00000025;
+    width: 250px;
+    height: 30px;
+    margin: 10px auto 0 auto;
+    border-radius: 10px;
+}
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(0, 0, 0);
+}
+.ope {
+    height: 43px;
+    width: 43px;
+    border-bottom-right-radius: 15px;
+    position: fixed;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    background-color: #364475;
+}
+.clo {
+    height: 43px;
+    width: 43px;
+    display: none;
+    border-bottom-right-radius: 15px;
+    position: fixed;
+    cursor: pointer;
+    margin-left: 300px;
+    background-color: #364475;
+    z-index: 9999;
+}
+.more {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.minu {
+    width: 30px;
+    height: 30px;
+    margin: 5px;    
+}
+.blr {
+    filter: blur(20px);
+    width: 100%;
+    height: 100%;
+}
+.ticon {
+    width: 280px;
+    height: 35px;
+    background-color: #00000025;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px 10px 3px 3px;
+    font-size: 14px;
+    align-content: center;
+}
+.ticon h2{
+    margin: 0;
+}
+.con {  
+    width: 280px;
+    height: 156px;
+    background-color: #00000025;
+    margin: auto;
+    border-radius: 3px 3px 10px 10px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.contac h3 {
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.ic {
+    width: 25px;
+    height: 25px;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+.contac {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 7px;
+    padding-top: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.contac:hover {
+    background-color: antiquewhite;
+}
+.zap:hover {
+    color: rgb(0, 203, 0);
+    border-radius: 3px 3px 0 0;
+}
+.mail:hover {
+    color: rgb(0, 119, 255);
+}
+.githu:hover {
+    color: #364475;
+}
+.edin:hover {
+    color: rgb(10, 0, 84);
+    border-radius: 0 0 10px 10px;
+}
+.tiform {
+    width: 280px;
+    height: 35px;
+    background-color: #00000025;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px 10px 3px 3px;
+    font-size: 14px;
+    align-content: center;
+}
+.tiform h2{
+    margin: 0;
+}
+.formacoes {
+    width: 280px;
+    height: 155x;
+    background-color: #00000025;
+    margin: auto;
+    border-radius: 3px 3px 10px 10px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.formacoes h3 {
+    margin: 0 0 0 10px ;
+    font-size: 15px;
+    padding: 10px 0 7px 0;
+}
+.formacoes a{
+    font-style: none;
+    color: black;
+    transition: 0.3s;
+}
+.formacoes a:visited {
+    color: black;
+}
+.formacoes .form a:hover {
+    color: antiquewhite;
+}
+.form a {
+    position: relative;
+    text-decoration: none;
+}
+.form a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Ajuste conforme necessário */
+    width: 0;
+    height: 2px;
+    background-color: antiquewhite; /* Cor do sublinhado */
+    transition: width 0.5s ease; /* Animação de surgimento */
+}
+.form a:hover::before {
+    width: 100%;
+}
+.tiintere {
+    width: 280px;
+    height: 35px;
+    background-color: #00000025;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px 10px 3px 3px;
+    font-size: 14px;
+    align-content: center;
+}
+.tiintere h2 {
+    margin: 0;
+}
+.intere {
+    width: 280px;
+    height: 155x;
+    background-color: #00000025;
+    margin: auto;
+    border-radius: 3px 3px 10px 10px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.intere h3 {
+    margin: 0 0 0 10px;
+}
+.inte {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 7px;
+    padding-top: 4px;
+    margin-left: 15px;
+}
+main {
+    width: calc(100vw - 300px);
+    background-color: rgb(175, 184, 205);
+    display: block;
+    height: calc(100%) = var(total);
+    z-index: 1;
+}
+main hr {
+    width: 80%;
+    border-color: rgba(0, 0, 0, 0.418);
+    margin-top: 30px;
+}
+.ticurri {
+    margin: auto;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.148);
+    width: 350px;
+    height: 40px;
+    margin-top: 14px;
+    border-radius: 10px;
+}
+.ticurri h1 {
+    text-align: center;
+    font-size: 300%;
+    margin: -7px;
+}
+.sobmim {
+    width: 90%;
+    padding: 5px 1% 5px 1%;
+    background-color: rgb(172, 185, 204);
+    margin: 30px auto 0  auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -6px black;
+}
+.sobmim h1 {
+    font-size: 25px;
+    line-height: 40px;
+    margin: 10px;
+}
+.sobmim h3 {
+    margin: 10px;
+}
+.aaa {
+    width: 30%;
+    margin: -5px 0 5px 10px;
+    border-color: black;
+    color: black;
+    background-color: black;
+}
+.bu {
+    background-color: rgba(150, 155, 179, 0.516);
+    text-align: center;
+    border-radius: 30px;
+    width: 60%;
+    border: 2px solid black;
+    margin: auto;
+    font-size: 1,5vw;
+    max-width: 650px;
+    min-width: 310px;
+}
+.objet {
+    width: 90%;
+    padding: 5px 1% 5px 1%;
+    background-color: rgb(172, 185, 204);
+    margin: 30px auto 0  auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -6px black;
+}
+.objet h1 {
+    font-size: 25px;
+    line-height: 40px;
+    margin: 10px;
+}
+.objet h3 {
+    margin: 10px;
+}
+.tititi {
+    width: 30px;
+    height: 30px;
+    margin-bottom: -8px;
+}
+.expe {
+    width: 90%;
+    padding: 5px 1% 5px 1%;
+    background-color: rgb(172, 185, 204);
+    margin: 30px auto 0  auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -6px black;
+}
+.expe h1 {
+    font-size: 25px;
+    line-height: 40px;
+    margin: 10px;
+}
+.expe1 {
+    width: 80%;
+    background-color: rgba(150, 155, 179, 0.516);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.expe1 h3 {
+    margin-top: -15px;
+}
+.ativ {
+    width: 90%;
+    padding: 5px 1% 5px 1%;
+    background-color: rgb(172, 185, 204);
+    margin: 30px auto 0  auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -6px black;
+}
+.ativ h1 {
+    font-size: 25px;
+    line-height: 40px;
+    margin: 10px;
+}
+.poro {
+    width: 85%;
+    padding: 1px 10px 1px 10px;
+    border-radius: 10px;
+    background-color: rgba(150, 155, 179, 0.516);
+    margin: 20px;
+    overflow: hidden;
+    height: 50px;
+    transition: 0.4s;
+    position: static;
+}
+.poro h2 {
+    margin-bottom: 0px;
+    line-height: 10px;
+}
+.poro:hover {
+    height: 200px;
+    border-radius: 20px;
+}
+.ro {
+    position: absolute;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 90%;
+}
+@media (max-width: 700px) {
+    .ope {
+        margin-right: auto;
+        position: fixed;
+    }
+    .clo {
+        display: none;
+        position: fixed;
+        background-color: #364475;
+    }
+    .cont {
+        margin-left: -330px;
+        position: absolute;
+    }
+    main {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+@media (min-width: 700px) {
+    .clo {
+        display: none;
+    }
+    .cont {
+        margin-left: 0px;
+    }
+}
