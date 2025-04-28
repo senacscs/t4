@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychonauts - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/psychonauts.jpeg" alt="Psychonauts" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>Psychonauts</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 13/04/2005</p>
+                        <p><strong>Gênero:</strong> Ação-aventura, Plataforma</p>
+                        <p><strong>Desenvolvedora:</strong> Double Fine Productions</p>
+                        <p><strong>Publicadora:</strong> Majesco Entertainment</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Psychonauts é um jogo de ação-aventura desenvolvido pela Double Fine Productions. O jogador assume o papel de Razputin "Raz" Aquato, um jovem que foge de um circo para se inscrever em um campo de treinamento de elite para psíquicos, os "Psychonauts". O jogo segue Raz enquanto ele explora as mentes de várias pessoas, enfrentando seus próprios medos e lidando com um mistério envolvendo uma ameaça à organização Psychonauts.</p>
+
+                <p>Com um estilo único de arte, humor irreverente e mecânicas de jogabilidade criativas, Psychonauts se tornou um clássico cult. O jogo mistura elementos de plataforma com puzzles e combates, e apresenta uma variedade de personagens e cenários excêntricos que fazem parte do universo psicodélico do jogo.</p>
+            </section>
+
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Exploração de ambientes psicodélicos dentro das mentes das pessoas</li>
+                    <li>Plataforma e mecânicas de combate criativas</li>
+                    <li>Humor único e personagens excêntricos</li>
+                    <li>Jogabilidade diversificada com resolução de enigmas e desafios de plataforma</li>
+                    <li>História envolvente com mistérios e temas de autodescoberta</li>
+                    <li>Estilo artístico marcante e visual único</li>
+                </ul>
+            </section>
+
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/psychonauts1.jpg" alt="Psychonauts Screenshot 1">
+                    <img src="../imagens/psychonauts2.jpg" alt="Psychonauts Screenshot 2">
+                    <img src="../imagens/psychonauts3.jpg" alt="Psychonauts Screenshot 3">
+                </div>
+            </div>
+
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

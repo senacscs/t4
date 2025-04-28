@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash Twinsanity - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/crash.jpeg" alt="Crash Twinsanity" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>Crash Twinsanity</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span>3.5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 28/09/2004</p>
+                        <p><strong>Gênero:</strong> Plataforma, Aventura</p>
+                        <p><strong>Desenvolvedora:</strong> Traveller's Tales Oxford Studio</p>
+                        <p><strong>Publicadora:</strong> Vivendi Universal Games</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Crash Twinsanity é um jogo de plataforma em 3D que coloca o icônico Crash Bandicoot em uma aventura caótica ao lado de seu maior inimigo, o Dr. Neo Cortex. Forçados a cooperar contra um novo inimigo comum, os dois devem explorar ilhas tropicais, laboratórios subterrâneos e até o próprio subconsciente.</p>
+
+                <p>O jogo é conhecido por seu humor exagerado, design criativo de níveis conectados sem telas de carregamento e a mecânica de dupla jogabilidade, onde Crash e Cortex interagem de maneiras inusitadas. Tudo isso embalado por uma trilha sonora marcante com instrumentos vocais inusitados.</p>
+            </section>
+            
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Jogabilidade em mundo semiaberto com transições suaves entre fases</li>
+                    <li>Crash e Cortex trabalham juntos em diversas situações hilárias</li>
+                    <li>Desafios de plataforma, combate e puzzles com variações criativas</li>
+                    <li>Trilha sonora composta inteiramente com vocais humanos</li>
+                    <li>Exploração de ambientes variados como ilhas, cavernas e bases científicas</li>
+                    <li>Humor autêntico e estilo cartunesco marcante da franquia Crash</li>
+                </ul>
+            </section>
+            
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/crash1.jpg" alt="Crash Twinsanity Screenshot 1">
+                    <img src="../imagens/crash2.jpg" alt="Crash Twinsanity Screenshot 2">
+                    <img src="../imagens/crash3.jpg" alt="Crash Twinsanity Screenshot 3">
+                </div>
+            </div>
+            
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA San Andreas - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/gta-sa.jpeg" alt="GTA San Andreas" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>GTA San Andreas</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 26/10/2004</p>
+                        <p><strong>Gênero:</strong> Ação-aventura, Mundo aberto</p>
+                        <p><strong>Desenvolvedora:</strong> Rockstar North</p>
+                        <p><strong>Publicadora:</strong> Rockstar Games</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Grand Theft Auto: San Andreas é um jogo eletrônico de ação-aventura desenvolvido pela Rockstar North e publicado pela Rockstar Games. Lançado em outubro de 2004 para PlayStation 2, é o sétimo título da série Grand Theft Auto e o terceiro da trilogia em 3D.</p>
+                
+                <p>A história se passa no estado fictício de San Andreas, baseado na Califórnia e Nevada, em 1992. O jogador controla Carl "CJ" Johnson, um ex-membro de gangue que retorna a Los Santos após cinco anos para o funeral de sua mãe. CJ descobre que sua família e antigos amigos estão em problemas e, ao tentar resolver tudo, se envolve em uma trama complexa que abrange as três principais cidades do estado: Los Santos, San Fierro e Las Venturas.</p>
+            </section>
+            
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Mundo aberto enorme com três cidades principais e áreas rurais</li>
+                    <li>Sistema de RPG com habilidades que melhoram com o uso</li>
+                    <li>Diversas atividades secundárias e missões</li>
+                    <li>Multiplataformas incluindo veículos terrestres, aéreos e aquáticos</li>
+                    <li>Trilha sonora com mais de 150 músicas em 11 estações de rádio</li>
+                    <li>Customização de personagem (roupas, cortes de cabelo, tatuagens)</li>
+                </ul>
+            </section>
+            
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/gta1.jpg" alt="GTA San Andreas Screenshot 1">
+                    <img src="../imagens/gta2.jpg" alt="GTA San Andreas Screenshot 2">
+                    <img src="../imagens/gta3.jpg" alt="GTA San Andreas Screenshot 3">
+                </div>
+            </div>
+            
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Vice City - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/gt-vc.jpeg" alt="GTA Vice City" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>GTA Vice City</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 29/10/2002</p>
+                        <p><strong>Gênero:</strong> Ação-aventura, Mundo aberto</p>
+                        <p><strong>Desenvolvedora:</strong> Rockstar North</p>
+                        <p><strong>Publicadora:</strong> Rockstar Games</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Grand Theft Auto: Vice City é um jogo de ação e aventura desenvolvido pela Rockstar North. O jogo se passa na fictícia cidade de Vice City, inspirada em Miami dos anos 80. O jogador controla Tommy Vercetti, um ex-membro de gangue que, após ser libertado da prisão, tenta tomar o controle do submundo criminal de Vice City, enfrentando gangues rivais e se envolvendo em uma trama de traições e vingança.</p>
+
+                <p>Com um vasto mundo aberto, missões variadas, uma trilha sonora dos anos 80 e uma narrativa envolvente, o jogo é considerado um dos melhores títulos da série Grand Theft Auto e um dos maiores clássicos dos videogames.</p>
+            </section>
+
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Ambiente aberto e expansivo inspirado nos anos 80</li>
+                    <li>Variedade de veículos, desde carros a motos e barcos</li>
+                    <li>Trilha sonora com músicas icônicas dos anos 80</li>
+                    <li>Diversas missões principais e secundárias</li>
+                    <li>Sistema de combate melhorado e mais fluído</li>
+                    <li>Liberdade para personalizar o personagem e interagir com o mundo</li>
+                </ul>
+            </section>
+
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/gta-vc1.jpg" alt="GTA Vice City Screenshot 1">
+                    <img src="../imagens/gta-vc2.jpg" alt="GTA Vice City Screenshot 2">
+                    <img src="../imagens/gta-vc3.jpg" alt="GTA Vice City Screenshot 3">
+                </div>
+            </div>
+
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

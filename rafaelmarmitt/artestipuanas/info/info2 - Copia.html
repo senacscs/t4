@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ape Escape 3 - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/ape-scaper.jpeg" alt="Ape Escape 3" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>Ape Escape 3</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 14/07/2005</p>
+                        <p><strong>Gênero:</strong> Plataforma, Ação</p>
+                        <p><strong>Desenvolvedora:</strong> Japan Studio</p>
+                        <p><strong>Publicadora:</strong> Sony Computer Entertainment</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Ape Escape 3 é o terceiro título principal da série Ape Escape. No jogo, você controla Kei ou Yumi em uma missão para capturar centenas de macacos que escaparam e estão tentando dominar o mundo com transmissões televisivas hipnotizantes criadas pelo macaco Specter.</p>
+
+                <p>Utilizando uma variedade de gadgets criativos e habilidades especiais, os jogadores viajam por diferentes mundos temáticos, enfrentando desafios cômicos, armadilhas engenhosas e encontros hilariantes com os macacos mais travessos já vistos.</p>
+            </section>
+            
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Mais de 400 macacos para capturar em fases únicas e divertidas</li>
+                    <li>Transformações especiais que concedem habilidades únicas aos protagonistas</li>
+                    <li>Estilo visual colorido e cartunesco, com muito humor</li>
+                    <li>Mini-games extras, incluindo paródias de outros gêneros e mídias</li>
+                    <li>Trilha sonora energética e ambientes criativos</li>
+                    <li>Jogo totalmente dublado em inglês com opções de legendas</li>
+                </ul>
+            </section>
+
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

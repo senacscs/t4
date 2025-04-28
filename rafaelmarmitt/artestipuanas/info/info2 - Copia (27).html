@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Hill 2 - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/sh2.jpeg" alt="Silent Hill 2" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>Silent Hill 2</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 24/09/2001</p>
+                        <p><strong>Gênero:</strong> Survival Horror</p>
+                        <p><strong>Desenvolvedora:</strong> Konami</p>
+                        <p><strong>Publicadora:</strong> Konami</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Silent Hill 2 é um jogo de survival horror que segue James Sunderland, um homem que viaja para a cidade misteriosa de Silent Hill após receber uma carta de sua falecida esposa, Mary. Ao explorar a cidade, James enfrenta criaturas monstruosas e começa a descobrir os segredos sombrios de Silent Hill e de sua própria vida.</p>
+
+                <p>Com uma atmosfera pesada, uma narrativa complexa e temas psicológicos profundos, Silent Hill 2 é considerado um dos melhores jogos de horror já feitos. O jogo se destaca pela sua abordagem emocional e pela maneira como lida com o medo psicológico, ao invés de apenas sustos repentinos.</p>
+            </section>
+
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Ambiente de jogo denso e atmosférico</li>
+                    <li>História profunda e cheia de reviravoltas psicológicas</li>
+                    <li>Inimigos bizarros e criaturas aterrorizantes</li>
+                    <li>Jogabilidade focada em exploração, combate e resolução de puzzles</li>
+                    <li>Trilha sonora e efeitos sonoros imersivos</li>
+                    <li>Personagens complexos e realistas com motivações sombrias</li>
+                </ul>
+            </section>
+
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/sh2_1.jpg" alt="Silent Hill 2 Screenshot 1">
+                    <img src="../imagens/sh2_2.jpg" alt="Silent Hill 2 Screenshot 2">
+                    <img src="../imagens/sh2_3.jpg" alt="Silent Hill 2 Screenshot 3">
+                </div>
+            </div>
+
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

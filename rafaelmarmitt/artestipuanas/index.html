@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legado PS2 - A Maior Biblioteca de Jogos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="ps2.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Reviva os Clássicos do PlayStation 2</h2>
+                <p>Explore nossa coleção completa dos melhores jogos da era de ouro dos videogames</p>
+                <a href="galeria.html" class="btn"><i class="fas fa-joystick"></i> Ver Jogos</a>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+
+        <section class="highlights">
+            <h2 class="section-title">Categorias <span>Populares</span></h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-running"></i></div>
+                    <h3>Ação</h3>
+                    <p>God of War, Devil May Cry, GTA</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-hat-wizard"></i></div>
+                    <h3>RPG</h3>
+                    <p>Final Fantasy, Kingdom Hearts, Dark Cloud</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-car-crash"></i></div>
+                    <h3>Corrida</h3>
+                    <p>Gran Turismo, Need for Speed, Burnout</p>
+                </div>
+            </div>
+        </section>
+        <section class="css-effect">
+            <h2 class="section-title">Jogo <span>Destaque</span></h2>
+            <div class="game-card">
+                <div class="game-front">
+                    <img src="imagens/god-of-war.jpeg" alt="God of War">
+                </div>
+                <div class="game-back">
+                    <h3>God of War</h3>
+                    <p>Lançamento: 2005</p>
+                    <p>Desenvolvedora: SCE Santa Monica</p>
+                    <p>Gênero: Ação-aventura</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

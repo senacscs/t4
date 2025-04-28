@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Cloud - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/dark-cloud.jpeg" alt="Dark Cloud" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>Dark Cloud</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 14/03/2001</p>
+                        <p><strong>Gênero:</strong> RPG de ação</p>
+                        <p><strong>Desenvolvedora:</strong> Level-5</p>
+                        <p><strong>Publicadora:</strong> Sony Computer Entertainment</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Dark Cloud é um RPG de ação onde o jogador controla o jovem Toan, que deve viajar por vários mundos para reconstruir cidades destruídas pelo malvado vilão, Dark Genie. O jogo mistura exploração, combate em tempo real e um sistema de construção de cidades que é um dos pontos fortes da experiência.</p>
+
+                <p>Durante sua jornada, Toan coleta materiais, resolve enigmas, enfrenta inimigos e usa suas habilidades para restaurar os mundos que foram devastados. O jogo apresenta um estilo visual único, com gráficos cel-shading, e se tornou um clássico cult para os fãs de RPGs no PlayStation 2.</p>
+            </section>
+            
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Combate em tempo real com uma grande variedade de armas e habilidades</li>
+                    <li>Sistema de reconstrução de cidades, onde o jogador deve recolocar edifícios e itens</li>
+                    <li>Exploração de masmorras geradas proceduralmente, com um sistema de progressão de nível</li>
+                    <li>História envolvente e personagens cativantes com múltiplas histórias paralelas</li>
+                    <li>Visuais únicos com estilo gráfico cel-shading e design de personagens carismáticos</li>
+                    <li>Sistema de troca e coleta de itens, com muitas armas e equipamentos para melhorar</li>
+                </ul>
+            </section>
+            
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/darkcloud1.jpg" alt="Dark Cloud Screenshot 1">
+                    <img src="../imagens/darkcloud2.jpg" alt="Dark Cloud Screenshot 2">
+                    <img src="../imagens/darkcloud3.jpg" alt="Dark Cloud Screenshot 3">
+                </div>
+            </div>
+            
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

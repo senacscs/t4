@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Jogos - Legado PS2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="ps2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="galeria.html" class="active"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="gallery-container">
+            <h2 class="section-title">Galeria de <span>Jogos</span></h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar jogos...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="filter-options">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Ação</button>
+                <button class="filter-btn">Aventura</button>
+                <button class="filter-btn">RPG</button>
+                <button class="filter-btn">Esportes</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="game-item">
+                    <input type="checkbox" id="zoom1" class="zoom-check">
+                    <label for="zoom1" class="zoom-label">
+                        <img src="imagens/god-of-war.jpeg" alt="God of War">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>God of War</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2005</span>
+                        <span class="game-genre">Ação</span>
+                    </div>
+                    <a href="info/info1.html" class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom2" class="zoom-check">
+                    <label for="zoom2" class="zoom-label">
+                        <img src="imagens/gta-sa.jpeg" alt="GTA: San Andreas">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>GTA: San Andreas</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2004</span>
+                        <span class="game-genre">Ação</span>
+                    </div>
+                    <a href="info/info2.html" class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-ape" class="zoom-check">
+                    <label for="zoom-ape" class="zoom-label">
+                        <img src="imagens/ape-scaper.jpeg" alt="Ape Scaper 3">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Ape Scaper 3</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2005</span>
+                        <span class="game-genre">Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia.html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-batman" class="zoom-check">
+                    <label for="zoom-batman" class="zoom-label">
+                        <img src="imagens/batman-lego.jpeg" alt="LEGO Batman - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>LEGO Batman</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2008</span>
+                        <span class="game-genre">Ação/Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia (2).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-bge" class="zoom-check">
+                    <label for="zoom-bge" class="zoom-label">
+                        <img src="imagens/beyond.jpeg" alt="Beyond Good & Evil - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Beyond Good & Evil</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2003</span>
+                        <span class="game-genre">Ação/Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia (3).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-bully" class="zoom-check">
+                    <label for="zoom-bully" class="zoom-label">
+                        <img src="imagens/bully.jpeg" alt="Bully - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Bully</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2006</span>
+                        <span class="game-genre">Ação/Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia (4).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-burnout3" class="zoom-check">
+                    <label for="zoom-burnout3" class="zoom-label">
+                        <img src="imagens/burnout.jpeg" alt="Burnout 3: Takedown - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Burnout 3: Takedown</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2004</span>
+                        <span class="game-genre">Corrida/Ação</span>
+                    </div>
+                    <a href="info/info2 - Copia (5).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-twinsanity" class="zoom-check">
+                    <label for="zoom-twinsanity" class="zoom-label">
+                        <img src="imagens/crash.jpeg" alt="Crash Twinsanity - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Crash Twinsanity</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2004</span>
+                        <span class="game-genre">Plataforma/Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia (6).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-darkcloud" class="zoom-check">
+                    <label for="zoom-darkcloud" class="zoom-label">
+                        <img src="imagens/dark-cloud.jpeg" alt="Dark Cloud - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Dark Cloud</h3>
+                    <br>
+                    <div class="game-meta">
+                        <span class="game-year">2000</span>
+                        <span class="game-genre">RPG/Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia (7).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-dbzbt3" class="zoom-check">
+                    <label for="zoom-dbzbt3" class="zoom-label">
+                        <img src="imagens/dbz-budokai3.jpeg" alt="Dragon Ball Z: Budokai Tenkaichi 3 - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Dragon Ball Z: Budokai Tenkaichi 3</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2007</span>
+                        <span class="game-genre">Luta/Ação</span>
+                    </div>
+                    <a href="info/info2 - Copia (8).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-devilmaycry" class="zoom-check">
+                    <label for="zoom-devilmaycry" class="zoom-label">
+                        <img src="imagens/dmc.jpeg" alt="Devil May Cry - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Devil May Cry</h3>
+                    <br>
+                    <div class="game-meta">
+                        <span class="game-year">2001</span>
+                        <span class="game-genre">Ação/Hack and Slash</span>
+                    </div>
+                    <a href="info/info2 - Copia (9).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-dmc3" class="zoom-check">
+                    <label for="zoom-dmc3" class="zoom-label">
+                        <img src="imagens/dmc3.jpeg" alt="Devil May Cry 3: Dante's Awakening - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Devil May Cry 3: Dante's Awakening</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2005</span>
+                        <span class="game-genre">Ação/Hack and Slash</span>
+                    </div>
+                    <a href="info/info2 - Copia (10).html" class="game-info-btn">
+                        <i class="fas fa-info-circle"></i> Detalhes
+                    </a>
+                </div>
+
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-ffx" class="zoom-check">
+                    <label for="zoom-ffx" class="zoom-label">
+                        <img src="imagens/final-fantasy-x.jpeg" alt="Final Fantasy X - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Final Fantasy X</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2001</span>
+                        <span class="game-genre">RPG</span>
+                    </div>
+                    <a href="info/info2 - Copia (11).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-gh3" class="zoom-check">
+                    <label for="zoom-gh3" class="zoom-label">
+                        <img src="imagens/gitar-hero3.jpeg" alt="Guitar Hero 3 - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Guitar Hero 3</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2007</span>
+                        <span class="game-genre">Música</span>
+                    </div>
+                    <a href="info/info2 - Copia (12).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-gow" class="zoom-check">
+                    <label for="zoom-gow" class="zoom-label">
+                        <img src="imagens/god-of-war1.jpeg" alt="God of War - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>God of War</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2005</span>
+                        <span class="game-genre">Ação</span>
+                    </div>
+                    <a href="info/info2 - Copia (13).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-gtavc" class="zoom-check">
+                    <label for="zoom-gtavc" class="zoom-label">
+                        <img src="imagens/gt-vc.jpeg" alt="GTA: Vice City - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>GTA: Vice City</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2002</span>
+                        <span class="game-genre">Ação</span>
+                    </div>
+                    <a href="info/info2 - Copia (14).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-rac" class="zoom-check">
+                    <label for="zoom-rac" class="zoom-label">
+                        <img src="imagens/hatchet-clank.jpeg" alt="Ratchet & Clank - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Ratchet & Clank</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2002</span>
+                        <span class="game-genre">Ação/Plataforma</span>
+                    </div>
+                    <a href="info/info2 - Copia (15).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item">
+                    <input type="checkbox" id="zoom-ico" class="zoom-check">
+                    <label for="zoom-ico" class="zoom-label">
+                        <img src="imagens/ico.jpeg" alt="Ico - PS2">
+                        <div class="game-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </label>
+                    <h3>Ico</h3>
+                    <div class="game-meta">
+                        <span class="game-year">2001</span>
+                        <span class="game-genre">Aventura</span>
+                    </div>
+                    <a href="info/info2 - Copia (16).html" class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-kh1" class="zoom-check"><label for="zoom-kh1"
+                        class="zoom-label"><img src="imagens/king-hearts.jpeg" alt="Kingdom Hearts 1 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Kingdom Hearts 1</h3>
+                    <div class="game-meta"><span class="game-year">2002</span><span class="game-genre">RPG/Ação</span>
+                    </div><a href="info/info2 - Copia (17).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-kh2" class="zoom-check"><label for="zoom-kh2"
+                        class="zoom-label"><img src="imagens/king-hearts2.jpeg" alt="Kingdom Hearts 2 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Kingdom Hearts 2</h3>
+                    <div class="game-meta"><span class="game-year">2005</span><span class="game-genre">RPG/Ação</span>
+                    </div><a href="info/info2 - Copia (18).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-mgs2" class="zoom-check"><label for="zoom-mgs2"
+                        class="zoom-label"><img src="imagens/metal-gear2.jpeg" alt="Metal Gear Solid 2 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Metal Gear Solid 2</h3>
+                    <div class="game-meta"><span class="game-year">2001</span><span
+                            class="game-genre">Ação/Furtivo</span></div><a href="info/info2 - Copia (19).html"
+                        class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-mgs3" class="zoom-check"><label for="zoom-mgs3"
+                        class="zoom-label"><img src="imagens/metal-gear3.jpeg" alt="Metal Gear Solid 3 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Metal Gear Solid 3</h3>
+                    <div class="game-meta"><span class="game-year">2004</span><span
+                            class="game-genre">Ação/Furtivo</span></div><a href="info/info2 - Copia (20).html"
+                        class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-nfs2" class="zoom-check"><label for="zoom-nfs2"
+                        class="zoom-label"><img src="imagens/need-4-speed-2.jpeg" alt="Need for Speed 2 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Need for Speed 2</h3>
+                    <div class="game-meta"><span class="game-year">1997</span><span class="game-genre">Corrida</span>
+                    </div><a href="info/info2 - Copia (21).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-okami" class="zoom-check"><label for="zoom-okami"
+                        class="zoom-label"><img src="imagens/okami.jpeg" alt="Okami - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Okami</h3>
+                    <div class="game-meta"><span class="game-year">2006</span><span class="game-genre">Aventura</span>
+                    </div><a href="info/info2 - Copia (22).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-p3" class="zoom-check"><label for="zoom-p3"
+                        class="zoom-label"><img src="imagens/p3.jpeg" alt="Persona 3 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Persona 3</h3>
+                    <div class="game-meta"><span class="game-year">2006</span><span class="game-genre">RPG</span></div>
+                    <a href="info/info2 - Copia (23).html" class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-p4" class="zoom-check"><label for="zoom-p4"
+                        class="zoom-label"><img src="imagens/p4.jpeg" alt="Persona 4 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Persona 4</h3>
+                    <div class="game-meta"><span class="game-year">2008</span><span class="game-genre">RPG</span></div>
+                    <a href="info/info2 - Copia (24).html" class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-psychonauts" class="zoom-check"><label
+                        for="zoom-psychonauts" class="zoom-label"><img src="imagens/psychonauts.jpeg"
+                            alt="Psychonauts - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Psychonauts</h3>
+                    <div class="game-meta"><span class="game-year">2005</span><span
+                            class="game-genre">Ação/Plataforma</span></div><a href="info/info2 - Copia (25).html"
+                        class="game-info-btn"><i class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-re4" class="zoom-check"><label for="zoom-re4"
+                        class="zoom-label"><img src="imagens/re4.jpeg" alt="Resident Evil 4 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Resident Evil 4</h3>
+                    <div class="game-meta"><span class="game-year">2005</span><span class="game-genre">Survival
+                            Horror</span></div><a href="info/info2 - Copia (26).html" class="game-info-btn"><i
+                            class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-sh2" class="zoom-check"><label for="zoom-sh2"
+                        class="zoom-label"><img src="imagens/sh2.jpeg" alt="Silent Hill 2 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Silent Hill 2</h3>
+                    <div class="game-meta"><span class="game-year">2001</span><span class="game-genre">Survival
+                            Horror</span></div><a href="info/info2 - Copia (27).html" class="game-info-btn"><i
+                            class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-sh3" class="zoom-check"><label for="zoom-sh3"
+                        class="zoom-label"><img src="imagens/sh3.jpeg" alt="Silent Hill 3 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Silent Hill 3</h3>
+                    <div class="game-meta"><span class="game-year">2003</span><span class="game-genre">Survival
+                            Horror</span></div><a href="info/info2 - Copia (28).html" class="game-info-btn"><i
+                            class="fas fa-info-circle"></i> Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-shadowhearts" class="zoom-check"><label
+                        for="zoom-shadowhearts" class="zoom-label"><img src="imagens/shadow-hearts.jpeg"
+                            alt="Shadow Hearts - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Shadow Hearts</h3>
+                    <div class="game-meta"><span class="game-year">2001</span><span class="game-genre">RPG</span></div>
+                    <a href="info/info2 - Copia (29).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-sotc" class="zoom-check"><label for="zoom-sotc"
+                        class="zoom-label"><img src="imagens/shadow-of-colossus.jpeg"
+                            alt="Shadow of the Colossus - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Shadow of the Colossus</h3>
+                    <div class="game-meta"><span class="game-year">2005</span><span class="game-genre">Aventura</span>
+                    </div><a href="info/info2 - Copia (30).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-sly" class="zoom-check"><label for="zoom-sly"
+                        class="zoom-label"><img src="imagens/slycooper.jpeg" alt="Sly Cooper - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Sly Cooper</h3>
+                    <div class="game-meta"><span class="game-year">2002</span><span class="game-genre">Plataforma</span>
+                    </div><a href="info/info2 - Copia (31).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-tekken4" class="zoom-check"><label
+                        for="zoom-tekken4" class="zoom-label"><img src="imagens/tekken4.jpeg" alt="Tekken 4 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Tekken 4</h3>
+                    <div class="game-meta"><span class="game-year">2001</span><span class="game-genre">Luta</span></div>
+                    <a href="info/info2 - Copia (32).html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+                <div class="game-item"><input type="checkbox" id="zoom-thps3" class="zoom-check"><label for="zoom-thps3"
+                        class="zoom-label"><img src="imagens/tony-3.jpeg" alt="Tony Hawk Pro Skater 3 - PS2">
+                        <div class="game-overlay"><i class="fas fa-expand"></i></div>
+                    </label>
+                    <h3>Tony Hawk Pro Skater 3</h3>
+                    <div class="game-meta"><span class="game-year">2001</span><span class="game-genre">Esporte</span>
+                    </div><a href="info/info3.html" class="game-info-btn"><i class="fas fa-info-circle"></i>
+                        Detalhes</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('zoom-label') || e.target.closest('.zoom-label')) return;
+            const checks = document.querySelectorAll('.zoom-check');
+            checks.forEach(check => {
+                if (check.checked) check.checked = false;
+            });
+        });
+    </script>
+</body>
+
+</html>

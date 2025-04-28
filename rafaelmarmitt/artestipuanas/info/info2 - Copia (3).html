@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Good & Evil - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/beyond.jpeg" alt="Beyond Good & Evil" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>Beyond Good & Evil</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 11/11/2003</p>
+                        <p><strong>Gênero:</strong> Ação-aventura</p>
+                        <p><strong>Desenvolvedora:</strong> Ubisoft Montpellier</p>
+                        <p><strong>Publicadora:</strong> Ubisoft</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>Beyond Good & Evil é um jogo de ação e aventura que acompanha Jade, uma jornalista e artista marcial que se envolve em uma conspiração intergaláctica enquanto luta para salvar seu planeta da dominação alienígena.</p>
+
+                <p>O jogo combina exploração em mundo semiaberto, resolução de enigmas, combates em tempo real e fotografia investigativa. Com uma narrativa envolvente, personagens carismáticos e trilha sonora memorável, o título se tornou cult com o passar dos anos, sendo lembrado por seu estilo artístico e temas maduros.</p>
+            </section>
+            
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Explore o planeta Hillys com veículos terrestres e aéreos</li>
+                    <li>Sistema de fotografia para investigação e coleta de provas</li>
+                    <li>Combates dinâmicos com uso de bastão e aliados</li>
+                    <li>Narrativa profunda com temas políticos e sociais</li>
+                    <li>Visual estilizado e trilha sonora imersiva</li>
+                    <li>Jogabilidade variada com exploração, enigmas e ação</li>
+                </ul>
+            </section>
+
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

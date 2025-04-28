@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of War - Legado PS2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-gamepad"></i> Legado <span>PS2</span></h1>
+                <p class="author">por Rafael M. e Theo C. | Turma 2ºAno</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="../galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="game-info-container">
+            <div class="game-info-header">
+                <img src="../imagens/god-of-war1.jpeg" alt="God of War" class="game-cover">
+                <div class="game-info-meta">
+                    <h2>God of War</h2>
+                    <div class="game-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="game-details">
+                        <p><strong>Lançamento:</strong> 22/03/2005</p>
+                        <p><strong>Gênero:</strong> Ação, Hack and Slash</p>
+                        <p><strong>Desenvolvedora:</strong> Santa Monica Studio</p>
+                        <p><strong>Publicadora:</strong> Sony Computer Entertainment</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="game-description">
+                <h3>Sinopse</h3>
+                <p>God of War é um jogo de ação baseado na mitologia grega, no qual o jogador assume o controle de Kratos, um guerreiro espartano atormentado pelo seu passado. Em busca de redenção, ele embarca em uma jornada para derrotar Ares, o Deus da Guerra, com a ajuda dos deuses do Olimpo.</p>
+
+                <p>Com combate visceral, puzzles inteligentes e uma narrativa cinematográfica, o jogo se tornou um marco na história do PlayStation 2 e deu início a uma das franquias mais aclamadas da indústria dos games.</p>
+            </section>
+
+            <section class="game-features">
+                <h3>Características Principais</h3>
+                <ul>
+                    <li>Combate intenso com as icônicas Lâminas do Caos</li>
+                    <li>Puzzles e desafios inspirados na mitologia grega</li>
+                    <li>Inimigos e chefes lendários, como a Hidra e Minotauros</li>
+                    <li>Gráficos impressionantes para a geração PS2</li>
+                    <li>Trilha sonora épica e ambientação cinematográfica</li>
+                    <li>História profunda de vingança e redenção</li>
+                </ul>
+            </section>
+
+            <div class="game-media">
+                <h3>Imagens Adicionais</h3>
+                <div class="media-grid">
+                    <img src="../imagens/gow1.jpg" alt="God of War Screenshot 1">
+                    <img src="../imagens/gow2.jpg" alt="God of War Screenshot 2">
+                    <img src="../imagens/gow3.jpg" alt="God of War Screenshot 3">
+                </div>
+            </div>
+
+            <a href="../galeria.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar para Galeria</a>
+        </main>
+
+        <footer>
+            <p>© 2025 Legado PS2 - Todos os direitos reservados</p>
+            <div class="footer-icons">
+                <i class="fab fa-playstation"></i>
+                <i class="fas fa-gamepad"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
