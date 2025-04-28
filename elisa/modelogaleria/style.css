@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-tit {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.img-bot {
+  width: 170px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#header {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 1s ease, max-height 1s ease, padding 1s ease;
+  max-height: 100vh;
+  opacity: 1;
+  padding: 40px 0;
+  background-color: white;
+}
+
+
+/* Quando clicado no botão (toggle ativado) */
+#toggle:checked~#header {
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+#toggle:checked~section {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 5000px;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+}
+
+.fotos {
+  width: 1190px;
+  margin-left: 45px;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease 1s, max-height 1s ease 1s;
+}
+
+.moldura {
+  width: 225px;
+  position: relative;
+  z-index: 10;
+}
+
+.zoom-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Quando clicado, a imagem se expande e vai para o centro */
+.zoom-toggle:checked + label .foto {
+  position: fixed;  /* Fixa a imagem na tela */
+  top: 50%;  /* Posiciona no meio da tela */
+  left: 50%;
+  transform: translate(70%, -50%) scale(2.5);  /* Expande e centraliza */
+  z-index: 110;  /* Garante que a imagem fique em cima */
+  opacity: 1;
+  /* max-width: 90vw;  /* Limita o tamanho máximo da imagem */
+  height: auto;
+}
+
+/* Quando a checkbox estiver desmarcada, retorna à posição original */
+.zoom-toggle:checked + label .foto {
+  z-index: 14;  /* A imagem volta para o fundo quando desmarcada */
+}
+
+.zoom-toggle:checked + label::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 14;
+}
+  
+.foto {
+  width: 210px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 36px;
+  margin-left: -220px;
+  transition: transform 0.4s ease, z-index 0.1s ease;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.mm {
+  margin-right: 15px;
+  display: inline;
+}
+
+.saiba{
+  position: relative;
+  z-index: 12;
+  margin-left: -30px;
+  font-size: 13px;
+  top: -10px;
+  left: -7px;
+  color: white;
+  display: inline;
+}
+
+.text-info {
+  display: none; /* Inicialmente escondido */
+  position: absolute;
+  position: fixed;  /* Fixa a imagem na tela */
+  top: 50%;  /* Posiciona no meio da tela */
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Expande e centraliza */
+  background-color: #0b4d1acb;;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 100;
+  width: 200px;
+  text-align: center;
+}
