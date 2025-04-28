@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.932);
+    font-family: 'Outfit', sans-serif;
+}
+
+p {
+    font-weight: 600 !important;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(2, 0, 35, 0.269);
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #263238;
+    z-index: -1;
+    border-top: solid 2px rgba(0, 0, 0, 0.71);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.71);
+    border-radius: 2px;
+}
+
+.roboto-condensed-tit {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-225deg, rgb(23, 28, 54) 50%, rgb(16, 21, 45) 50%);
+    align-content: center;
+}
+
+.conteudo {
+    box-shadow: 0 0 20px rgba(1, 1, 5, 0.445);
+    position: relative;
+    width: 70vw;
+    height: 75vh;
+    background-color: rgba(0, 5, 36, 0.34);
+    border-radius: 7px;
+    border: 2px solid rgba(0, 0, 0, 0.311);
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
+.divisoes {
+    width: 20vw;
+    height: calc(100% - 12px);
+    background-color: #121e24;
+    border-right: 3px solid rgba(0, 5, 36, 0.34);
+    align-content: start;
+    padding-top: 12px;
+    overflow-y: auto;
+}
+
+.subdiv {
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+    margin-top: 10px;
+}
+
+#cat1 {
+    margin-top: 0 !important;
+}
+
+.subdivt {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.subdivt ion-icon {
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.683);
+}
+
+.subdivt ion-icon:hover {
+    background-color: rgba(180, 180, 180, 0.334);
+    transition: 0.1s;
+}
+
+.subdivt p {
+    margin-top: 0;
+    margin: auto;
+    margin-left: 0;
+    font-size: 20px;
+    font-weight: 550;
+    width: calc(100% - 30px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subdive {
+    width: 80%;
+    padding-left: 20%;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.subdive:hover {
+    transform: translateX(10px);
+}
+
+.subdive ion-icon {
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+    border-radius: 50%;
+    margin: auto 5px auto 0;
+    color: rgba(255, 255, 255, 0.683);
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.subdive p {
+    margin-top: 0;
+    margin: auto;
+    margin-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    width: calc(100% - 30px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 550 !important;
+}
+
+.exibidor {
+    width: 60vw;
+    height: 100%;
+    position: relative;
+    background-color: #182025;
+
+}
+
+.exibido {
+    background-color: #263238;
+    border-radius: 7px;
+    opacity: 0;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transition: opacity 0.3s ease-out;
+    display: none;
+    align-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.368);
+}
+
+.exibido.visible {
+    opacity: 1;
+    transition: opacity 0s;
+    display: block;
+}
+
+.exibido a {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.exibido a img {
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 2px 0;
+}

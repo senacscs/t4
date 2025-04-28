@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head id="he">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="background">
+        <section class="conteudo">
+            <section class="divisoes">
+                <div class="subdiv" id="cat1">
+                    <div class="subdivt" id="testes" onclick=" opendiv(event)">
+                        <ion-icon name="chevron-forward" class="icon"></ion-icon>
+                        <p>Entrada e Saída</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Olá Mundo</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Número Digitado</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Seu Nome</p>
+                    </div>
+                </div>
+                <div class="subdiv" id="cat2">
+                    <div class="subdivt" id="testes" onclick=" opendiv(event)">
+                        <ion-icon name="chevron-forward" class="icon"></ion-icon>
+                        <p>Operações Aritméticas</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Operações Simples</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Prioridades</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Divisões Inteiras</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Potencia e Raiz</p>
+                    </div>
+                </div>
+                <div class="subdiv" id="cat3">
+                    <div class="subdivt" id="testes" onclick=" opendiv(event)">
+                        <ion-icon name="chevron-forward" class="icon"></ion-icon>
+                        <p>Algoritimos Sequenciais</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Troca Variáveis</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Maioridade Penal</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Altura Média</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Loja de Ferramentas</p>
+                    </div>
+                    <div class="subdive">
+                        <ion-icon onclick="animacao(event)" name="sync-outline"></ion-icon>
+                        <p>Quantos Dias</p>
+                    </div>
+                </div>
+            </section>
+            <section class="exibidor">
+                <div class="exibido" id="ola">
+                    <a href="linkjs" target="_blank"><img src="js.png" alt="Logo JS"></a>
+                    <link rel="stylesheet" href="aplicacoes/olamundo/olamundo.css">
+                    <script src="aplicacoes/olamundo/olamundo.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="displayn">
+                        <input type="number" id="valordonumero" placeholder="Digite um número aqui">
+                        <button onclick="numerolegal()">Aperte-me...</button>
+                        <div class="exibidorn">
+                            <p class="num" id="exibi"></p>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/numerodigitado/numerodigitado.css">
+                    <script src="aplicacoes/numerodigitado/numerodigitado.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="displayno">
+                        <input type="text" id="valordonome" placeholder="Digite seu nome aqui">
+                        <button onclick="nome()">Aperte-me...</button>
+                        <div class="exibidorno">
+                            <p class="nom" id="exibir"></p>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/seunome/seunome.css">
+                    <script src="aplicacoes/seunome/seunome.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="calculadora">
+                        <div class="displayos">
+                            <p id="printopresult"></p>
+                        </div>
+                        <div class="inputs">
+                            <input type="number" id="numbera" placeholder="Primeiro número">
+                            <input type="number" id="numberb" placeholder="Segundo número">
+                        </div>
+                        <div class="operacoes">
+                            <button onclick="soma()" id="soma"><ion-icon name="add-outline"></ion-icon></button>
+                            <button onclick="sub()" id="sub"><ion-icon name="remove-outline"></ion-icon></button>
+                            <button onclick="mult()" id="mult"><ion-icon name="close-outline"></ion-icon></button>
+                            <button onclick="div()" id="div">/</button>
+                            <button onclick="log()" id="log">Log</button>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/operacoessimples/operacoessimples.css">
+                    <script src="aplicacoes/operacoessimples/operacoessimples.js"></script>
+                </div>
+                <div class="exibido">
+                    Sla, desnessesario, é só regras da própria matemática.
+                </div>
+                <div class="exibido">
+                    Já incluso na calculadora...
+                </div>
+                <div class="exibido">
+                    <div class="calculadora">
+                        <div class="displayos">
+                            <p id="prresult"></p>
+                        </div>
+                        <div class="inputs">
+                            <input type="number" id="numeroa" placeholder="Primeiro número">
+                            <input type="number" id="numerob" placeholder="Segundo Número">
+                        </div>
+                        <div class="operacoes">
+                            <button onclick="po()" id="po">XX</button>
+                            <button onclick="ra()" id="ra">Raiz</button>
+                        </div>
+                    </div>
+                    <script src="aplicacoes/potenciaeraiz/potenciaeraiz.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="displayvar">
+                        <input type="text" id="var1" placeholder="Variavel 01">
+                        <input type="text" id="var2" placeholder="Variavel 02">
+                        <button onclick="trocar()"> Trocar </button>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/trocadevariaveis/trocadevariaveis.css">
+                    <script src="aplicacoes/trocadevariaveis/trocadevariaveis.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="displaymai">
+                        <div>
+                            <input type="number" placeholder="Sua idade" id="idinput">
+                            <button onclick="verif()">Verificar</button>
+                        </div>
+                        <div class="exe">
+                            <p id="disresult"></p>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/maioridade/maioridade.css">
+                    <script src="aplicacoes/maioridade/maioridade.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="displaymedia">
+                        <input type="text" placeholder="Média 1" id="me1">
+                        <input type="text" placeholder="Média 2" id="me2">
+                        <input type="text" placeholder="Média 3" id="me3">
+                        <button onclick="tm()">Tirar a média</button>
+                        <div class="exex">
+                            <p id="exmedia"></p>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/media/media.css">
+                    <script src="aplicacoes/media/media.js"></script>
+                </div>
+                <div class="exibido">
+                    <div class="dsiplayloja">
+                        <div class="divsla">
+                            <input type="number" placeholder="Parafusos = 0.30$" id="f1">
+                            <input type="number" placeholder="Arroelas = 0.20$" id="f2">
+                            <input type="number" placeholder="Porcas = 0.35$" id="f3">
+                            <input type="number" placeholder="Bucha = 0.10$" id="f4">
+                            <button onclick="finalizar()">Finalizar o pedido</button>
+                        </div>
+                        <div class="displayprec">
+                            <p id="resultpre">Pedido <br>
+                                ================= <br>
+                                Parafusos: 0 <br>
+                                Arroelas: 0 <br>
+                                Porcas: 0 <br>
+                                Buchas: 0 <br>
+                                ================= <br>
+                                Total: R$ 0</p>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="aplicacoes/ferramentas/ferramentas.css">
+                    <script src="aplicacoes/ferramentas/ferramentas.js"></script>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+
+<!-- Icons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- Script da index -->
+<script src="script.js"></script>
+
+<!-- Script exemplos -->
+
+</html>
