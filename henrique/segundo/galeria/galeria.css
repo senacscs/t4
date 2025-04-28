@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow-y: scroll;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 170px);
+  grid-gap: 10px;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.img {
+  width: 170px;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0%);
+}
+
+.voltar, .info {
+  position: fixed;
+  font-size: 14px;
+  color: #fff;
+  z-index: 10;
+}
+
+.voltar {
+  bottom: 10%;
+  left: 10%;
+}
+
+.info {
+  bottom: 10%;
+  right: 10%;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

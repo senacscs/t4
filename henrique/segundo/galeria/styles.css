@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.nome, .titulo, .turma {
+  position: absolute;
+}
+
+.titulo {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.titulo h1 {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.nome {
+  left: 25%;
+  top: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.turma {
+  right: 25%;
+  top: 50%;
+  transform: translateX(50%);
+  font-size: 14px;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

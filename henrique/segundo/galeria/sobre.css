@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.titulo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  width: 60%;
+}
+
+.titulo h1 {
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.paragrafo {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.voltar, .acessar {
+  position: absolute;
+  bottom: 20%;
+  font-size: 14px;
+}
+
+.voltar {
+  left: 10%;
+}
+
+.acessar {
+  right: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
