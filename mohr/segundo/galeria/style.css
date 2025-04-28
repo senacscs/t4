@@ -144,12 +144,6 @@ h2 {
     font-size: 1.2rem;
 }
 
-.insta:hover {
-    margin-right: 1em;
-    width: 120px;
-    height: 90px;
-}
-
 .text {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
@@ -179,26 +173,10 @@ h2 {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-/* 
-.card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s;
-}
 
-.card:hover {
-    transform: scale(1.02);
-}
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    cursor: pointer;
-} */
+
+
 
 /* Modal */
 .modal {
@@ -234,7 +212,6 @@ h2 {
     /* display: block; */
     margin: 0 auto;
     border-radius: 10px;
-    
 }
 
 .modal-conteudo p {
