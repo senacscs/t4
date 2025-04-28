@@ -1,17 +1,19 @@
-
 let tex = document.getElementById("t")
 let num = document.getElementById("n")
 let folha = document.getElementById("folha")
 let ar = document.getElementById("ar")
 
-const lista = []
+// Carregar a lista do localStorage ao iniciar
+const savedList = localStorage.getItem("lista");
+const lista = savedList ? JSON.parse(savedList) : [];
 
+// Atualizar a exibição e salvar no localStorage
 function atualizar() {
-    folha.innerHTML = ""
-    ar.textContent = lista.join(" - ")
+    folha.innerHTML = "";
+    ar.textContent = lista.join(" - ");
     for (i = 0; i < lista.length; i++) {
-        let u = i + 1
-        let r = i
+        let u = i + 1;
+        let r = i;
         let item = document.createElement("div");
         item.classList.add("item");
         let numb = document.createElement("h3");
@@ -37,8 +39,10 @@ function atualizar() {
         item.appendChild(iconDown);
         item.appendChild(iconClose);
         folha.appendChild(item);
-        
     }
+
+    // Salvar a lista no localStorage
+    localStorage.setItem("lista", JSON.stringify(lista));
 }
 
 function pu() {
@@ -101,3 +105,4 @@ function fla() {
     lista.reverse()
     atualizar()
 }
+atualizar()
