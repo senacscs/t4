@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('cinema.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.titulo:hover {
+    color: #ddd;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px #000;
+}
