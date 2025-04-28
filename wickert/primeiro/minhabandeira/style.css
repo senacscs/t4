@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(205, 211, 217);
+    text-align: center;
+}
+img {
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 100px;
+    box-shadow: 8px 8px 30px black;
+}
+h2 {
+    font-size: 35px;
+    font-family: sans-serif;
+    font-weight: 700;
+    transition: 0.5s;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
+}
+h2:hover {
+    animation: sla 0.5s ease-in-out forwards;
+}
+@keyframes sla {
+    0% {
+        text-shadow: 0px 0px 30px black;
+    }
+    100% {
+        text-shadow: 8px 8px 30px black;
+    }
+}
