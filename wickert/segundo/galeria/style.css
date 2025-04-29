@@ -120,13 +120,15 @@ h2 {
     flex-wrap: wrap;
     gap: 3px;
     z-index: 2;
+    width: 80vw;
+    margin: 3vw auto;
 }
 
 .imagens img {
-    width: 30vw;
-    height: 40vw;
-    border-radius: 5px;
+    width: 25vw;
+    height: 35vw;
     cursor: pointer;
+    object-fit: cover;
 }
 
 

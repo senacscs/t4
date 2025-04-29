@@ -65,17 +65,20 @@ const des = [
     { nome: "Imagem 35", descricao: "Descrição da imagem 35" }
 ];
 
-let i = 3726
+let i = 3727        
 function seguir(a) {
     let seguidores = document.getElementById("seg")
-
     if(i > 3726) {
         seguidores.innerText = i--
-        a.innerText = "Seguindo"
+        a.innerText = "Seguindo";
+        a.style.background = '#3d3d3d';
+        a.style.color = 'white';
+
     }
     else {
         seguidores.innerText = i++
         a.innerText = "Seguir"
+        a.style.background = '#3d4aff'
     }
 
 }
