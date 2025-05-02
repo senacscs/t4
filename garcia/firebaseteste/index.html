@@ -1,70 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
   <title>Votação</title>
-</head>
-<body>
-    <h1>Vote em uma opção:</h1>
-    <button id="btn-a">Opção A</button>
-    <button id="btn-b">Opção B</button>
-  
-    <h2>Resultados:</h2>
-    <p>Opção A: <span id="count-a">0</span> votos</p>
-    <p>Opção B: <span id="count-b">0</span> votos</p>
-</body>
-</html>
-<style>
+  <style>
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
     button {
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #007BFF;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px;
     }
 
     button:hover {
-        background-color: #0056b3;
+      background-color: #0056b3;
     }
 
     button:active {
-        background-color: #003f7f;
+      background-color: #003f7f;
     }
-</style>
-<script type="module">
-    // Import the functions you need from the SDKs you need
+  </style>
+</head>
+<body>
+  <h1>Vote em uma opção:</h1>
+  <button id="btn-a">Opção A</button>
+  <button id="btn-b">Opção B</button>
+
+  <h2>Resultados:</h2>
+  <p>Opção A: <span id="count-a">0</span> votos</p>
+  <p>Opção B: <span id="count-b">0</span> votos</p>
+
+  <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
     const firebaseConfig = {
       apiKey: "AIzaSyAx78shLCE0VyNkB7nZ8Wq0yU6-UB2C7I8",
       authDomain: "teste-senac-7fcd3.firebaseapp.com",
       projectId: "teste-senac-7fcd3",
-      storageBucket: "teste-senac-7fcd3.firebasestorage.app",
+      storageBucket: "teste-senac-7fcd3.appspot.com",
       messagingSenderId: "687441576323",
       appId: "1:687441576323:web:aae20f52d8f2247e65f6b6",
       measurementId: "G-7MGSWYS44H"
     };
-  
-    // Initialize Firebase
+
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+    const votosRef = collection(db, "votos");
+
     async function votar(opcao) {
       try {
         await addDoc(votosRef, {
@@ -76,11 +80,9 @@
       }
     }
 
-    // Botões
     document.getElementById("btn-a").addEventListener("click", () => votar("A"));
     document.getElementById("btn-b").addEventListener("click", () => votar("B"));
 
-    // Atualização em tempo real
     onSnapshot(votosRef, (snapshot) => {
       let contA = 0;
       let contB = 0;
@@ -93,3 +95,5 @@
       document.getElementById("count-b").textContent = contB;
     });
   </script>
+</body>
+</html>
