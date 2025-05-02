@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos CSS - Exemplos</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        p {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        
+        /* 1. ::first-line */
+        section:nth-of-type(1) p {
+            color: #555;
+        }
+        
+        section:nth-of-type(1) p::first-line {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.1em;
+        }
+        
+        /* 2. ::first-letter */
+        section:nth-of-type(2) p::first-letter {
+            font-size: 2.5em;
+            color: #9b59b6;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        /* 3. ::before */
+        section:nth-of-type(3) p::before {
+            content: "★ ";
+            color: #f1c40f;
+            font-size: 1.2em;
+        }
+        
+        /* 4. ::after */
+        section:nth-of-type(4) p::after {
+            content: " ❤";
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        /* 5. ::selection */
+        section:nth-of-type(5) p::selection {
+            background-color: #3498db;
+            color: white;
+            text-shadow: none;
+        }
+        
+        /* Removendo pseudo-elementos dos títulos */
+        h1::before, h1::after,
+        h2::before, h2::after,
+        h1::first-letter, h2::first-letter,
+        h1::first-line, h2::first-line {
+            all: unset;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-elementos CSS - Exemplos</h1>
+    
+    <section>
+        <h2>1. p::first-line</h2>
+        <p><strong>Esta linha ficará com destaque. O restante do parágrafo mantém o estilo padrão. Você pode ver a diferença ao redimensionar a janela.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+    </section>
+    
+    <section>
+        <h2>2. p::first-letter</h2>
+        <p>A primeira letra deste parágrafo será maior e colorida, simulando o estilo de livros antigos ou revistas. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+    
+    <section>
+        <h2>3. p::before</h2>
+        <p>Este parágrafo possui um símbolo adicionado antes do seu conteúdo com ::before. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </section>
+    
+    <section>
+        <h2>4. p::after</h2>
+        <p>Este parágrafo adiciona um ícone no final usando ::after. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    
+    <section>
+        <h2>5. p::selection</h2>
+        <p>Selecione este texto com o mouse para ver o efeito do pseudo-elemento ::selection. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+</body>
+</html>
