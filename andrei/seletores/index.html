@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores CSS - Exemplos Práticos</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+            color: #2980b9;
+        }
+        
+        .example {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        
+        /* 1. Combinador de Filho Direto (>) */
+        .child-example > p {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        
+        /* 2. Combinador de Descendente (espaço) */
+        .descendant-example p {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        
+        /* 3. Combinador de Irmão Adjacente (+) */
+        .adjacent-example div + p {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        
+        /* 4. Combinador de Irmãos Seguintes (~) */
+        .sibling-example p ~ ul {
+            background-color: #f1c40f;
+            color: #333;
+            padding: 10px 10px 10px 30px;
+            border-radius: 3px;
+        }
+        
+        /* 5. Lista de Seletores (,) */
+        .selector-list div, 
+        .selector-list p {
+            background-color: #9b59b6;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        
+        /* Estilos para elementos não selecionados */
+        .example p, 
+        .example div,
+        .example ul {
+            margin: 10px 0;
+        }
+        
+        .example span {
+            display: block;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 3px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combinadores CSS - Exemplos Práticos</h1>
+    
+    <div class="example child-example">
+        <h2>1. Combinador de Filho Direto (&gt;)</h2>
+        <p><strong>Parágrafo filho direto (seleccionado)</strong></p>
+        <span>
+            <p>Parágrafo dentro do span (não é filho direto)</p>
+        </span>
+    </div>
+    
+    <div class="example descendant-example">
+        <h2>2. Combinador de Descendente (espaço)</h2>
+        <div>
+            <p><strong>Parágrafo descendente (seleccionado)</strong></p>
+        </div>
+        <p>Outro descendente (também selecionado)</p>
+    </div>
+    
+    <div class="example adjacent-example">
+        <h2>3. Combinador de Irmão Adjacente (+)</h2>
+        <div><strong>Elemento DIV</strong></div>
+        <p>Parágrafo logo após a DIV (seleccionado)</p>
+        <p>Outro parágrafo (não selecionado)</p>
+    </div>
+    
+    <div class="example sibling-example">
+        <h2>4. Combinador de Irmãos Seguintes (~)</h2>
+        <p><strong>Parágrafo antes das listas</strong></p>
+        <ul>
+            <li>Lista 1 (seleccionada)</li>
+            <li>Lista 2 (seleccionada)</li>
+        </ul>
+        <ul>
+            <li>Outra lista (também selecionada)</li>
+        </ul>
+    </div>
+    
+    <div class="example selector-list">
+        <h2>5. Lista de Seletores (,)</h2>
+        <div><strong>DIV selecionada</strong></div>
+        <p>Parágrafo selecionado</p>
+        <span>SPAN não selecionado</span>
+    </div>
+</body>
+</html>
