@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Display CSS</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1, h2 {
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .example {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px dashed #ccc;
+        }
+        
+        /* Exemplos de display tradicional */
+        .block-example div {
+            display: block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        
+        .inline-example span {
+            display: inline;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+        }
+        
+        .inline-block-example div {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+            height: 60px;
+        }
+        
+        .none-example div {
+            display: none;
+            background-color: #9b59b6;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        
+        /* Exemplos de Flexbox */
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            background-color: #f1c40f;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            background-color: #1abc9c;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .flex-space-around {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e67e22;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .flex-align-center {
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            padding: 10px;
+            margin: 10px 0;
+            height: 100px;
+        }
+        
+        .flex-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #9b59b6;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .flex-align-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            background-color: #2ecc71;
+            padding: 10px;
+            margin: 10px 0;
+            height: 200px;
+        }
+        
+        /* Itens comuns para os exemplos */
+        .item {
+            background-color: white;
+            color: #333;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .tall-item {
+            height: 60px;
+        }
+        
+        .wide-item {
+            width: 80px;
+        }
+        
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de Display CSS</h1>
+    
+    <div class="container">
+        <h2>Display Tradicional</h2>
+        
+        <div class="example block-example">
+            <h3>display: block</h3>
+            <div>Item 1 (block)</div>
+            <div>Item 2 (block)</div>
+            <div>Item 3 (block)</div>
+            <p class="note">Elementos block ocupam toda a largura e começam em nova linha.</p>
+        </div>
+        
+        <div class="example inline-example">
+            <h3>display: inline</h3>
+            <span>Item 1 (inline)</span>
+            <span>Item 2 (inline)</span>
+            <span>Item 3 (inline)</span>
+            <p class="note">Elementos inline fluem como texto e não aceitam width/height.</p>
+        </div>
+        
+        <div class="example inline-block-example">
+            <h3>display: inline-block</h3>
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <p class="note">Elementos inline-block fluem como inline mas aceitam width/height.</p>
+        </div>
+        
+        <div class="example none-example">
+            <h3>display: none</h3>
+            <div>Este elemento está com display: none</div>
+            <p>O elemento acima não é renderizado na página.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Flexbox Layout</h2>
+        
+        <div class="example">
+            <h3>flex-direction: row (padrão)</h3>
+            <div class="flex-row">
+                <div class="item">1</div>
+                <div class="item tall-item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h3>flex-direction: column</h3>
+            <div class="flex-column">
+                <div class="item">1</div>
+                <div class="item wide-item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h3>justify-content: space-around</h3>
+            <div class="flex-space-around">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h3>align-items: center</h3>
+            <div class="flex-align-center">
+                <div class="item" style="height: 40px;">1</div>
+                <div class="item" style="height: 60px;">2</div>
+                <div class="item" style="height: 30px;">3</div>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h3>flex-wrap: wrap</h3>
+            <div class="flex-wrap">
+                <div class="item" style="width: 120px;">1</div>
+                <div class="item" style="width: 120px;">2</div>
+                <div class="item" style="width: 120px;">3</div>
+                <div class="item" style="width: 120px;">4</div>
+                <div class="item" style="width: 120px;">5</div>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h3>align-content: space-between</h3>
+            <div class="flex-align-content">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
