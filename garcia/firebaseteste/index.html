@@ -46,13 +46,12 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
     import {
-      getFirestore,
-      collection,
-      addDoc,
-      onSnapshot
-    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+      getDatabase,
+      ref,
+      onValue,
+      runTransaction
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyAx78shLCE0VyNkB7nZ8Wq0yU6-UB2C7I8",
@@ -61,39 +60,36 @@
       storageBucket: "teste-senac-7fcd3.appspot.com",
       messagingSenderId: "687441576323",
       appId: "1:687441576323:web:aae20f52d8f2247e65f6b6",
-      measurementId: "G-7MGSWYS44H"
+      databaseURL: "https://teste-senac-7fcd3-default-rtdb.firebaseio.com"
     };
 
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const db = getFirestore(app);
-    const votosRef = collection(db, "votos");
+    const database = getDatabase(app);
 
-    async function votar(opcao) {
-      try {
-        await addDoc(votosRef, {
-          opcao: opcao,
-          data: new Date()
-        });
-      } catch (error) {
-        console.error("Erro ao votar:", error);
-      }
+    const votosRefA = ref(database, "votos/A");
+    const votosRefB = ref(database, "votos/B");
+
+    // Função para votar
+    function votar(opcao) {
+      const refEscolhido = opcao === "A" ? votosRefA : votosRefB;
+      runTransaction(refEscolhido, (valorAtual) => {
+        return (valorAtual || 0) + 1;
+      });
     }
+
+    // Listeners em tempo real
+    onValue(votosRefA, (snapshot) => {
+      const valor = snapshot.val() || 0;
+      document.getElementById("count-a").textContent = valor;
+    });
+
+    onValue(votosRefB, (snapshot) => {
+      const valor = snapshot.val() || 0;
+      document.getElementById("count-b").textContent = valor;
+    });
 
     document.getElementById("btn-a").addEventListener("click", () => votar("A"));
     document.getElementById("btn-b").addEventListener("click", () => votar("B"));
-
-    onSnapshot(votosRef, (snapshot) => {
-      let contA = 0;
-      let contB = 0;
-      snapshot.forEach((doc) => {
-        const data = doc.data();
-        if (data.opcao === "A") contA++;
-        if (data.opcao === "B") contB++;
-      });
-      document.getElementById("count-a").textContent = contA;
-      document.getElementById("count-b").textContent = contB;
-    });
   </script>
 </body>
 </html>
