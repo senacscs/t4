@@ -4,9 +4,13 @@
   <title>Votação</title>
 </head>
 <body>
-  <h1>Em quem você vota?</h1>
-  <button id="btn-opcao-a">Opção A</button>
-  <button id="btn-opcao-b">Opção B</button>
+    <h1>Vote em uma opção:</h1>
+    <button id="btn-a">Opção A</button>
+    <button id="btn-b">Opção B</button>
+  
+    <h2>Resultados:</h2>
+    <p>Opção A: <span id="count-a">0</span> votos</p>
+    <p>Opção B: <span id="count-b">0</span> votos</p>
 </body>
 </html>
 <style>
@@ -61,4 +65,31 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+    async function votar(opcao) {
+      try {
+        await addDoc(votosRef, {
+          opcao: opcao,
+          data: new Date()
+        });
+      } catch (error) {
+        console.error("Erro ao votar:", error);
+      }
+    }
+
+    // Botões
+    document.getElementById("btn-a").addEventListener("click", () => votar("A"));
+    document.getElementById("btn-b").addEventListener("click", () => votar("B"));
+
+    // Atualização em tempo real
+    onSnapshot(votosRef, (snapshot) => {
+      let contA = 0;
+      let contB = 0;
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.opcao === "A") contA++;
+        if (data.opcao === "B") contB++;
+      });
+      document.getElementById("count-a").textContent = contA;
+      document.getElementById("count-b").textContent = contB;
+    });
   </script>
