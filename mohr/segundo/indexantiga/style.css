@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+    background-color: rgb(182, 118, 200);
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    color: aliceblue;
+    background: linear-gradient(to right, #d9cddd, #8f459c);
+    height: 610px;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 80px;
+}
+
+#primeirotitulo {
+    position: relative;
+    top: 220px;
+    font-size: 120px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+#cabecario {
+    width: 100%;
+    background-color: #e284fe;
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    z-index: 1000;
+    border-bottom: 0.2rem solid white;
+}
+
+nav ul li a:hover {
+    color: #b871b3;
+    transform: scale(1.1);
+}
+
+li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+ 
+nav ul li {
+    margin: 0 10px;
+}
+  
+nav ul li a {
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+  
+/* Efeito de hover */
+nav ul li a:hover {
+    color: #d900ff;
+    transform: scale(1.1);
+}
+  
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #d900ff;
+}
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#primeiralinha {
+    position: relative;
+    bottom: 90px;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+
+/* trabalhos */
+
+
+#title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+    color: white;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    bottom: 50px;
+}
+
+#segundalinha {
+    position: relative;
+    bottom: 60px;
+    width: 140px;
+    overflow: hidden;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+}
+  
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+  
+section {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaçamento entre as seções */
+}
+
+#photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0; /* Remover o padding */
+}
+
+#photo-gallery img {
+    width: 280px; /* Largura das imagens */
+    height: 290px; /* Altura das imagens */
+    object-fit: cover; /* Manter a proporção das imagens */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição do efeito */
+    border: 0.2rem solid white;
+}
+
+#photo-gallery img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    box-shadow: #ffffff;
+}
+
+/* sobre mim */
+
+#terceiralinha {
+    position: relative;
+    bottom: 20px;
+    overflow: hidden;
+    height: 3px;
+    background-color: white;
+}
+
+#sobremim {
+    position: relative;
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    color: white;
+}
+
+#escrita {
+    position: relative;
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    color: white;
+    font-size: 8px;
+    
+}
+
+#mim {
+    background-color: #ceaddc9a;
+    width: 60%;
+    position: relative;
+    top: 120px;
+    border-radius: 30px;
+    left: 21%;
+}
+
+marquee {
+    position: relative;
+    top: 200px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+  
+#doguinhos {
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    position: relative;
+    top: 190px;
+    text-align: center;
+    color: white;
+    background-color: #d8b3e7;
+}
+  
+.fotos {
+    border-radius: 10px;
+    margin-right: 50px;
+}
+  
+.contatos {
+    color: white;
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    top: 130px;
+    font-size: 10px;
+}
