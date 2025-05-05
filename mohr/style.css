@@ -144,8 +144,8 @@ header ion-icon{
     background-size: 200% 100%;
     background-position: 0% 50%;
     animation: cor 10s linear infinite;
-    left: calc(-4px / 2);
-    top: -1.25px;
+    left: calc(-5px / 2);
+    top: -1.5px;
     z-index: -10;
 }
 
@@ -190,9 +190,10 @@ header ion-icon{
 }
 
 .introducao {
-    width: 40%;
-    height: 60%;
-    margin-left: 10%;
+    width: 42%;
+    height: 100%;
+    margin-left: 8%;
+    align-content: center;
 }
 
 .introducao h1 {
@@ -401,11 +402,11 @@ header ion-icon{
     display: grid;
     width: 80%;
     margin: auto;
-    grid-template-columns: repeat(3, 1fr); /* Limit to 3 cards per row */
-    gap: 30px; /* Spacing between cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    position: absolute;
     justify-content: center;
     align-items: center;
-    padding: 60px; /* Spacing from edges */
     box-sizing: border-box;
 }
 .sim {
@@ -417,8 +418,8 @@ header ion-icon{
 .card {
     margin: auto;
     max-width: 100%;
+    min-width: 360px;
     box-sizing: border-box;
-    width: 400px; /* Reduced width */
     height: 250px;
     background-color: rgba(240, 248, 255, 0.242);
     border: 2px solid rgba(220, 220, 220, 0.338);
