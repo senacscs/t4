@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nome = prompt("Qual o seu nome?");
+        let distancia = prompt("Qual a distância da sua viagem em km?");
+        let velocidade = prompt("Qual a velocidade média do seu carro em km/h?");
+        let consumo = prompt("Qual o consumo do seu carro em km/l?");
+        let gasolina = prompt("Qual o preço da gasolina em R$?");
+
+        let tempo = distancia / velocidade;
+        let litros = distancia / consumo;
+        let valor = litros * gasolina;
+
+        alert("Olá " + nome + ", a sua viagem levará " + tempo.toFixed(1) + " horas, consumirá " + litros.toFixed(2) + " litros de gasolina e custará R$" + valor.toFixed(2) + ".");
+
+    </script>
+</body>
+
+</html>

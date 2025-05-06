@@ -77,6 +77,12 @@ const projetos = [
         icon: "images-outline",
         padrao: "tia"
     },
+    
+    {name: "Aprendendo JavaScript",
+        descricao: "site incial pra aprender JavaScript",
+        icon: "logo-javascript",
+        padrao: "javascript"
+    },
 ]
 
 function renderProjetos() {
