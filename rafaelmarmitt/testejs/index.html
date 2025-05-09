@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Viagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4fc;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Viagem</h1>
+        <button onclick="calcularViagem()">Calcular Viagem</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function calcularViagem() {
+            let nome = prompt("Qual o seu nome?");
+            let distancia = prompt("Qual a distância percorrida (em Km)?");
+            let vm = prompt("Qual a velocidade média na viagem?");
+            let consumo = prompt("Quantos Km por litro de gasolina?");
+            let preco = prompt("Qual o valor do litro da gasolina?");
+
+            distancia = parseFloat(distancia);
+            vm = parseFloat(vm);
+            consumo = parseFloat(consumo);
+            preco = parseFloat(preco);
+
+            let tempo = (distancia / vm);
+            let litros = (distancia / consumo);
+            let gastos = (litros * preco);
+
+            tempo = tempo.toFixed(2);
+            litros = litros.toFixed(2);
+            gastos = gastos.toFixed(2);
+
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `
+                <h2>Resultado da Viagem</h2>
+                <p>Olá ${nome},</p>
+                <p>O tempo estimado de sua viagem é ${tempo} horas.</p>
+                <p>Você irá gastar ${litros} litros de gasolina.</p>
+                <p>Valor total: R$ ${gastos}</p>
+            `;
+            resultadoDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
