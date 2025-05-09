@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Entrada de dados
+let nome = prompt("Qual é o seu nome?");
+let distancia = parseFloat(prompt("Qual a distância da viagem (em km)?"));
+let velocidade = parseFloat(prompt("Qual a velocidade média (em km/h)?"));
+let consumo = parseFloat(prompt("Qual o consumo do carro (km por litro)?"));
+let preco = parseFloat(prompt("Qual o preço da gasolina (por litro)?"));
+
+// Cálculos
+let tempo = distancia / velocidade;
+let litros = distancia / consumo;
+let gasto = litros * preco;
+
+// Exibição dos resultados
+let mensagem = "Olá, " + nome + "!\n" +
+               "Tempo estimado de viagem: " + tempo.toFixed(2) + " horas\n" +
+               "Litros de gasolina necessários: " + litros.toFixed(2) + " L\n" +
+               "Gasto total em gasolina: R$ " + gasto.toFixed(2);
+
+let mensagemTemplate = `Olá, ${nome}!
+Tempo estimado de viagem: ${tempo.toFixed(2)} horas
+Litros de gasolina necessários: ${litros.toFixed(2)} L
+Gasto total em gasolina: R$ ${gasto.toFixed(2)}`;
+
+// Usando alert e console.log
+alert(mensagemTemplate);
+console.log(mensagem); // concatenação simples
+console.log(mensagemTemplate); // template string moderna
+
+
+    </script>
+</body>
+</html>
