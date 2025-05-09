@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Seu nome:");
+        let distancia = parseFloat(prompt("Distância da viagem (km):"));
+        let velocidade = parseFloat(prompt("Velocidade média (km/h):"));
+        let consumo = parseFloat(prompt("Consumo do carro (km/l):"));
+        let precoGasolina = parseFloat(prompt("Preço da gasolina:"));
+
+        let tempo = distancia / velocidade;
+        let litros = distancia / consumo;
+        let total = litros * precoGasolina;
+
+        console.log("Olá, " + nome);
+        console.log("Tempo estimado de viagem: " + tempo.toFixed(2) + " horas");
+        console.log("Litros de gasolina necessários: " + litros.toFixed(2) + " litros");
+        console.log("Gasto total: R$ " + total.toFixed(2));
+
+        alert("Olá, " + nome + "\n\n" +
+              "Tempo estimado de viagem: " + tempo.toFixed(2) + " horas\n" +
+              "Litros necessários: " + litros.toFixed(2) + " litros\n" +
+              "Gasto total: R$ " + total.toFixed(2));
+    </script>
+</body>
+</html>
