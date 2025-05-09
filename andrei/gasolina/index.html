@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Viagem - Gasto com Gasolina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4fc;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculadora de Viagem</h1>
+        <p>Calcule o gasto estimado com gasolina para sua viagem</p>
+        
+        <div class="form-group">
+            <label for="distance">Distância da viagem (km):</label>
+            <input type="number" id="distance" placeholder="Digite a distância em quilômetros">
+        </div>
+        
+        <div class="form-group">
+            <label for="consumption">Consumo do veículo (km/l):</label>
+            <input type="number" id="consumption" placeholder="Digite quantos km seu carro faz por litro">
+        </div>
+        
+        <div class="form-group">
+            <label for="price">Preço da gasolina (R$/litro):</label>
+            <input type="number" id="price" step="0.01" placeholder="Digite o preço por litro">
+        </div>
+        
+        <button onclick="calculate()">Calcular Gasto</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            // Obter valores dos inputs
+            const distance = parseFloat(document.getElementById('distance').value);
+            const consumption = parseFloat(document.getElementById('consumption').value);
+            const price = parseFloat(document.getElementById('price').value);
+            
+            // Validar os valores
+            if (isNaN(distance) || isNaN(consumption) || isNaN(price) || 
+                distance <= 0 || consumption <= 0 || price <= 0) {
+                alert("Por favor, preencha todos os campos com valores válidos e positivos!");
+                return;
+            }
+            
+            // Calcular litros necessários e custo total
+            const litersNeeded = distance / consumption;
+            const totalCost = litersNeeded * price;
+            
+            // Exibir o resultado
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `
+                <h3>Resultado:</h3>
+                <p><strong>Distância:</strong> ${distance.toFixed(1)} km</p>
+                <p><strong>Consumo:</strong> ${consumption.toFixed(1)} km/l</p>
+                <p><strong>Preço da gasolina:</strong> R$ ${price.toFixed(2)}</p>
+                <p><strong>Litros necessários:</strong> ${litersNeeded.toFixed(1)} litros</p>
+                <p><strong>Custo total estimado:</strong> R$ ${totalCost.toFixed(2)}</p>
+            `;
+            
+            resultElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
