@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let nome = prompt("Seu nome (Completo)!")
+        let distancia = parseInt(prompt("Distância a percorrer"))
+        let velocidade = parseInt(prompt("Velocidade média"))
+        let consumo = parseInt(prompt("Consumo de Litros por Km"))
+        let preco = parseInt(prompt("Valor da gasolida"))
+
+        let tempo = (distancia / velocidade) + " Hora"
+        let consumoTotal = (distancia * consumo)
+        let gasto = "R$" + (consumoTotal * preco) + ",00"
+
+        alert(
+            nome + "\n"
+            + "=================== \n"
+            + "Dados da viagem: \n"
+            + "Distancia: " + distancia + " Km; \n"
+            + "Velocidade média: " + velocidade + " Km/Hora; \n"
+            + "Consumo por Km: " + consumo + " L/Km; \n"
+            + "Preço da gasolina: R$" + preco + ",00; \n"
+            + "=================== \n"
+            + "Extimativas:"
+            + "Duração da viagem: " + tempo + "; \n"
+            + "Combustivel gasto: " + consumoTotal + " L; \n"
+            + "Gastos da viagem" + gasto + "; \n"
+        )
+    </script>
+</body>
+
+</html>
