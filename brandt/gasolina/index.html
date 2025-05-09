@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de gasolina</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite o seu nome.");
+        let dist = parseInt(prompt("Digite a distância da viagem em km."));
+        let vel = parseInt(prompt("Digite a velocidade média do carro em km/h."));
+        let cons = parseInt(prompt("Digite o consumo de gasolina do carro."));
+        let preco = parseInt(prompt("Digite o preço da gasolina."));
+
+        alert(nome + ", o tempo estimado da viagem é de " + dist / vel + " horas.")
+        alert("Será necessário " + dist / cons + " litros de gasolina para a viagem.")
+        alert("Você irá gastar " + cons * preco + " reais na viagem.")
+    </script>
+</body>
+</html>
