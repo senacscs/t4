@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Seu nome:");
+        let idade = parseInt(prompt("Sua idade:"));
+        let respostaCadastro = prompt("Você já tem cadastro?").toLowerCase();
+
+        let possuiCadastro = respostaCadastro === "sim";
+
+        if (idade < 12) {
+            alert("Acesso negado: idade insuficiente para cadastro.");
+
+        } else if (idade >= 12 && idade <= 17 && possuiCadastro === true) {
+            alert("Acesso permitido com restrições para menores.");
+
+        } else if (idade >= 18 && possuiCadastro === true) {
+            alert("Acesso completo permitido.");
+            
+        } else {
+            alert("Usuário precisa se cadastrar primeiro.");
+        }
+    </script>
+</body>
+</html>
