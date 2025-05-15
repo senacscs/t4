@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <p>Clique no botão abaixo para calcular seu Índice de Massa Corporal</p>
+    <button onclick="calcularIMC()">Calcular IMC</button>
+
+    <script>
+        function calcularIMC() {
+            // Solicita os dados ao usuário
+            let peso = prompt("Digite seu peso em kg (ex: 70):");
+            let altura = prompt("Digite sua altura em metros (ex: 1.75):");
+
+            // Converte os valores para números
+            peso = parseFloat(peso);
+            altura = parseFloat(altura);
+
+            // Verifica se os valores são válidos
+            if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+                alert("Por favor, insira valores válidos para peso e altura.");
+            } else {
+                // Calcula o IMC
+                let imc = peso / (altura * altura);
+                
+                // Classifica o IMC
+                let classificacao;
+                if (imc < 18.5) {
+                    classificacao = "Abaixo do peso";
+                } else if (imc >= 18.5 && imc <= 24.9) {
+                    classificacao = "Peso normal";
+                } else if (imc >= 25 && imc <= 29.9) {
+                    classificacao = "Sobrepeso";
+                } else if (imc >= 30 && imc <= 34.9) {
+                    classificacao = "Obesidade grau 1";
+                } else if (imc >= 35 && imc <= 39.9) {
+                    classificacao = "Obesidade grau 2";
+                } else {
+                    classificacao = "Obesidade grau 3 (mórbida)";
+                }
+                
+                // Exibe o resultado
+                alert(`Seu IMC é ${imc.toFixed(2)} (${classificacao}).`);
+            }
+        }
+    </script>
+</body>
+</html>
