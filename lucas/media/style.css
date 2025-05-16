@@ -1,0 +1,37 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+
+  button {
+    background-color: #00c3ff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #009ec1;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
