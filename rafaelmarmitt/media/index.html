@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conceitos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Conceitos</h1>
+        <button onclick="calcularConceito()">Calcular Conceito</button>
+    </div>
+
+    <script>
+        function calcularConceito() {
+            const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+            const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+            
+            if (isNaN(nota1) || isNaN(nota2)) {
+                alert("Por favor, insira valores numéricos válidos.");
+                return;
+            }
+            
+            const media = Math.floor((nota1 + nota2) / 2);
+            let conceito;
+            
+            switch (true) {
+                case (media >= 9):
+                    conceito = "A";
+                    break;
+                case (media >= 8):
+                    conceito = "B";
+                    break;
+                case (media >= 7):
+                    conceito = "C";
+                    break;
+                case (media >= 6):
+                    conceito = "D";
+                    break;
+                case (media >= 4):
+                    conceito = "E";
+                    break;
+                default:
+                    conceito = "F";
+            }
+            
+            alert(`Média: ${media}\nConceito: ${conceito}`);
+        }
+    </script>
+</body>
+</html>
