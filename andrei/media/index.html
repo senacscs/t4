@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média e Conceito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Média e Conceito</h1>
+    <p>Clique no botão abaixo para inserir suas notas e verificar seu conceito.</p>
+    <button onclick="calcularConceito()">Calcular Conceito</button>
+
+    <script>
+        function calcularConceito() {
+            // Solicita as duas notas ao usuário
+            const nota1 = parseFloat(prompt("Digite a primeira nota (0-10):"));
+            const nota2 = parseFloat(prompt("Digite a segunda nota (0-10):"));
+
+            // Verifica se as notas são válidas
+            if (isNaN(nota1) || isNaN(nota2) || nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10) {
+                alert("Por favor, insira notas válidas entre 0 e 10.");
+                return;
+            }
+
+            // Calcula a média aritmética
+            const media = (nota1 + nota2) / 2;
+
+            // Arredonda a média para baixo
+            const mediaArredondada = Math.floor(media);
+
+            let conceito;
+
+            // Determina o conceito usando switch
+            switch (mediaArredondada) {
+                case 10:
+                case 9:
+                    conceito = "A";
+                    break;
+                case 8:
+                case 7:
+                    conceito = "B";
+                    break;
+                case 6:
+                case 5:
+                    conceito = "C";
+                    break;
+                case 4:
+                case 3:
+                    conceito = "D";
+                    break;
+                case 2:
+                case 1:
+                case 0:
+                    conceito = "E";
+                    break;
+                default:
+                    conceito = "Média inválida (fora do intervalo 0-10)";
+            }
+
+            // Exibe o conceito
+            alert(`Média: ${media.toFixed(1)}\nConceito: ${conceito}`);
+        }
+    </script>
+</body>
+</html>
