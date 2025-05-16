@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média</title>
+</head>
+<body>
+    <script>
+        let primeiranota = parseInt(prompt("Digite sua primeira nota."));
+        let segundanota = parseInt(prompt("Digite sua segunda nota."));
+        let  media = Math.floor((primeiranota + segundanota) / 2);
+        let conceito;
+
+        switch (media) {
+        case 10:
+        case 9:
+        conceito = 'A';
+        break;
+        case 8:
+        case 7:
+        conceito = 'B';
+        break;
+        case 6:
+        case 5:
+        conceito = 'C';
+        break;
+        case 4:
+        case 3:
+        conceito = 'D';
+        break;
+        case 2:
+        case 1:
+        conceito = 'E';
+        break;
+        default:
+        conceito = 'Nota inválida';
+        }
+
+        alert("Média: " + media + ". Conceito: " + conceito);
+    </script>
+</body>
+</html>
