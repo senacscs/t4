@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>Ano de nascimento: <input type="number" id="nascimento"></p>
+    <p>Ano atual: <input type="number" id="atual"></p>
+    <button onclick="verificar()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var nascimento = parseInt(document.getElementById("nascimento").value)
+            var atual = parseInt(document.getElementById("atual").value)
+            var resultado = document.getElementById("resultado")
+
+            if (isNaN(nascimento) || isNaN(atual) || atual <= nascimento) {
+                resultado.innerText = "Dados inválidos."
+                return
+            }
+
+            var idade = atual - nascimento
+            var categoria = ""
+
+            if (idade < 12) {
+                categoria = "Criança"
+            } else if (idade <= 17) {
+                categoria = "Adolescente"
+            } else if (idade <= 59) {
+                categoria = "Adulto"
+            } else {
+                categoria = "Idoso"
+            }
+
+            resultado.innerText = "Idade: " + idade + " , Categoria: " + categoria
+        }
+    </script>
+</body>
+</html>
