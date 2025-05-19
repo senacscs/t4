@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Idade e Categoria</title>
+  <style>
+    body {
+      background-color: #1b003d;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #7b2cbf;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #9d4edd;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Idade e Categoria</h1>
+  <label for="anoAtual">Ano Atual:</label>
+  <input type="number" id="anoAtual" placeholder="Ex: 2025"><br>
+
+  <label for="anoNascimento">Ano de Nascimento:</label>
+  <input type="number" id="anoNascimento" placeholder="Ex: 2008"><br>
+
+  <button onclick="verificarIdade()">Calcular</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarIdade() {
+      const anoAtual = parseInt(document.getElementById("anoAtual").value);
+      const anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+      const resultado = document.getElementById("resultado");
+
+      if (isNaN(anoAtual) || isNaN(anoNascimento)) {
+        resultado.innerText = "Por favor, preencha ambos os campos com números válidos.";
+        return;
+      }
+
+      if (anoNascimento > anoAtual) {
+        resultado.innerText = "O ano de nascimento não pode ser maior que o ano atual.";
+        return;
+      }
+
+      const idade = anoAtual - anoNascimento;
+      let categoria = "";
+
+      if (idade < 12) {
+        categoria = "Criança";
+      } else if (idade >= 12 && idade <= 17) {
+        categoria = "Adolescente";
+      } else if (idade >= 18 && idade <= 59) {
+        categoria = "Adulto";
+      } else {
+        categoria = "Idoso";
+      }
+
+      resultado.innerText = `Idade: ${idade} anos | Categoria: ${categoria}`;
+    }
+  </script>
+</body>
+</html>
