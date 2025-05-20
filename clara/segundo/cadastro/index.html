@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .aluno {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .aprovado {
+            color: green;
+            font-weight: bold;
+        }
+        .reprovado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro e Análise de Alunos</h1>
+    <button onclick="iniciarCadastro()">Iniciar Cadastro</button>
+    <div id="resultado"></div>
+
+    <script>
+        function iniciarCadastro() {
+            // Solicitar quantidade de alunos
+            let qtdAlunos;
+            while (true) {
+                qtdAlunos = parseInt(prompt("Quantos alunos deseja cadastrar?"));
+                if (!isNaN(qtdAlunos) && qtdAlunos > 0) {
+                    break;
+                }
+                alert("Por favor, digite um número válido maior que zero.");
+            }
+
+            // Limpar resultado anterior
+            document.getElementById("resultado").innerHTML = "";
+            
+            // Cadastrar cada aluno
+            for (let i = 1; i <= qtdAlunos; i++) {
+                let nome, nota1, nota2;
+                
+                // Validar nome
+                while (true) {
+                    nome = prompt(`Digite o nome do aluno ${i}:`);
+                    if (nome && nome.trim() !== "") {
+                        break;
+                    }
+                    alert("Nome não pode estar vazio. Por favor, digite novamente.");
+                }
+                
+                // Validar nota 1
+                while (true) {
+                    nota1 = parseFloat(prompt(`Digite a nota 1 do aluno ${nome}:`));
+                    if (!isNaN(nota1) && nota1 >= 0 && nota1 <= 10) {
+                        break;
+                    }
+                    alert("Nota inválida. Por favor, digite um número entre 0 e 10.");
+                }
+                
+                // Validar nota 2
+                while (true) {
+                    nota2 = parseFloat(prompt(`Digite a nota 2 do aluno ${nome}:`));
+                    if (!isNaN(nota2) && nota2 >= 0 && nota2 <= 10) {
+                        break;
+                    }
+                    alert("Nota inválida. Por favor, digite um número entre 0 e 10.");
+                }
+                
+                // Calcular média e situação
+                const media = calcularMedia(nota1, nota2);
+                const situacao = media >= 6 ? "Aprovado" : "Reprovado";
+                
+                // Exibir resultado
+                const resultadoDiv = document.getElementById("resultado");
+                resultadoDiv.innerHTML += `
+                    <div class="aluno">
+                        <h3>Aluno: ${nome}</h3>
+                        <p>Nota 1: ${nota1.toFixed(1)}</p>
+                        <p>Nota 2: ${nota2.toFixed(1)}</p>
+                        <p>Média: ${media.toFixed(1)}</p>
+                        <p class="${situacao.toLowerCase()}">Situação: ${situacao}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function calcularMedia(n1, n2) {
+            return (n1 + n2) / 2;
+        }
+    </script>
+</body>
+</html>
