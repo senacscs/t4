@@ -20,7 +20,7 @@
         <div class="informacoes">
             <div class="titulo">
                 <h1>Galeria GW</h1>
-                <p onclick="solicitarCPF()">Seguir</p>
+                <p id="seguir-btn">Seguir</p>
                 <p>Enviar mensageeeem</p>
             </div>
             <div class="subtitulo">
@@ -104,23 +104,27 @@
 
 <script type="module">
 import { db } from './link.js';
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+import { collection, addDoc, getDocs, query, where } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
+
+document.addEventListener('DOMContentLoaded', function() {
+    const seguirBtn = document.getElementById('seguir-btn');
+    if (seguirBtn) {
+        seguirBtn.onclick = solicitarCPF;
+    }
+});
 
 async function solicitarCPF() {
     let cpf = prompt("Digite seu CPF:");
     if (!cpf) return;
     cpf = cpf.replace(/\D/g, '');
-    // Verifica se o CPF tem 11 dígitos
     if (cpf.length !== 11) {
         alert("CPF inválido. Deve conter 11 dígitos.");
         return;
     }
-    // Verifica se todos os dígitos são iguais
     if (/^(\d)\1{10}$/.test(cpf)) {
         alert("CPF inválido. Todos os dígitos são iguais.");
         return;
     }
-    // Validação do CPF
     let soma = 0;
     let peso = 10;
     for (let i = 0; i < 9; i++) {
@@ -143,19 +147,17 @@ async function solicitarCPF() {
         alert("CPF inválido.");
         return;
     }
-    // Verifica se o CPF já foi usado (localStorage)
-    if (localStorage.getItem("cpf_usado") === cpf) {
-        alert("CPF já foi usado para votar.");
-        return;
-    }
-    // Salva o CPF como usado
-    localStorage.setItem("cpf_usado", cpf);
-    alert("CPF válido: " + cpf);
-    // Salva no Firestore
     try {
+        const q = query(collection(db, "cpfs_validos"), where("cpf", "==", cpf));
+        const querySnapshot = await getDocs(q);
+        if (!querySnapshot.empty) {
+            alert("CPF já foi usado para votar.");
+            return;
+        }
         await addDoc(collection(db, "cpfs_validos"), { cpf: cpf, data: new Date().toISOString() });
+        alert("CPF válido e salvo com sucesso!");
     } catch (e) {
-        alert("Erro ao salvar no banco de dados: " + e);
+        alert("Erro ao acessar o banco de dados: " + e);
     }
 }
 </script>
