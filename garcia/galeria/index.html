@@ -20,7 +20,7 @@
         <div class="informacoes">
             <div class="titulo">
                 <h1>Galeria GW</h1>
-                <p onclick="validarCPF()">Seguir</p>
+                <p onclick="solicitarCPF()">Seguir</p>
                 <p>Enviar mensagem</p>
             </div>
             <div class="subtitulo">
@@ -97,23 +97,67 @@
     <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module"></script>
+    <script type="module" src="link.js"></script>
 </body>
 
 
 
-<script>
+<script type="module">
+import { db } from './link.js';
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-    function validarCPF(){
-        let cpf = prompt("Digite seu CPF (apenas números):");
-        if (!isNaN(cpf) && cpf.toString().length === 11) {
-            alert("CPF válido!");
-        } else {
-            alert("CPF inválido. Digite 11 números.");
-        }
-
+window.solicitarCPF = async function() {
+    let cpf = prompt("Digite seu CPF:");
+    if (!cpf) return;
+    cpf = cpf.replace(/\D/g, '');
+    // Verifica se o CPF tem 11 dígitos
+    if (cpf.length !== 11) {
+        alert("CPF inválido. Deve conter 11 dígitos.");
+        return;
     }
-
+    // Verifica se todos os dígitos são iguais
+    if (/^(\d)\1{10}$/.test(cpf)) {
+        alert("CPF inválido. Todos os dígitos são iguais.");
+        return;
+    }
+    // Validação do CPF
+    let soma = 0;
+    let peso = 10;
+    for (let i = 0; i < 9; i++) {
+        soma += parseInt(cpf[i]) * peso--;
+    }
+    let primeiroDigitoVerificador = (soma * 10) % 11;
+    if (primeiroDigitoVerificador === 10) primeiroDigitoVerificador = 0;
+    if (parseInt(cpf[9]) !== primeiroDigitoVerificador) {
+        alert("CPF inválido.");
+        return;
+    }
+    soma = 0;
+    peso = 11;
+    for (let i = 0; i < 10; i++) {
+        soma += parseInt(cpf[i]) * peso--;
+    }
+    let segundoDigitoVerificador = (soma * 10) % 11;
+    if (segundoDigitoVerificador === 10) segundoDigitoVerificador = 0;
+    if (parseInt(cpf[10]) !== segundoDigitoVerificador) {
+        alert("CPF inválido.");
+        return;
+    }
+    // Verifica se o CPF já foi usado (localStorage)
+    if (localStorage.getItem("cpf_usado") === cpf) {
+        alert("CPF já foi usado para votar.");
+        return;
+    }
+    // Salva o CPF como usado
+    localStorage.setItem("cpf_usado", cpf);
+    alert("CPF válido: " + cpf);
+    // Salva no Firestore
+    try {
+        await addDoc(collection(db, "cpfs_validos"), { cpf: cpf, data: new Date().toISOString() });
+    } catch (e) {
+        alert("Erro ao salvar no banco de dados: " + e);
+    }
+}
 </script>
 
 
