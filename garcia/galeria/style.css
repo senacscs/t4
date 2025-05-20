@@ -1,0 +1,331 @@
+body {
+    width: 100vw;
+    height: 100dvh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    color: rgb(244, 239, 239);
+    background-color: #080909;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 350;
+}
+.roboto-condensed-tit {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.topo {
+    width: calc(100% - 80px);
+    height: 50%;
+    position: relative;
+    background-color: #080909;
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.502);
+}
+.topo::before {
+    content: "Publicações";
+    text-align: center;
+    position: absolute;
+    line-height: 27px;
+    font-weight: 600;
+    width: 150px;
+    height: 1.5px;
+    background-color: white;
+    margin-top: 50vh;
+    margin-left: calc(((100vw - 80px) / 2) - 75px);
+}
+.topo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: calc(50vw - 500px);
+}
+.informacoes {
+    width: 50%;
+    
+    margin-left: 10%;
+    align-content: center;
+}
+.titulo {
+    display: flex;
+    height: 15%;
+    align-items: center;
+}
+.titulo h1 {
+    font-size: 30px;
+}
+.titulo p {
+    padding: 7px 10px 7px 10px;
+    background-color: rgb(35, 62, 198);
+    border-radius: 5px; 
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    margin-left: 220px;
+    transform: scale(0.8);
+}
+.titulo p:nth-child(3) {
+    margin-left: 280px !important;
+}
+.subtitulo {
+    display: flex;
+    height: 15%;
+    align-items: center;
+}
+.subtitulo h3 {
+    margin-right: 30px;
+    color: rgb(205, 204, 213);
+    font-size: 14px;
+    font-weight: 500;
+}
+.subtitulo h3 span {
+    color: rgb(244, 239, 239);
+}
+.descricao {
+    height: calc(250px - 30%);
+}
+.descricao h3 {
+    margin-top: 0;
+    margin-bottom: -7px;
+}
+.pub {
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    width: 100vw;
+    padding-top: 50px;
+    background-color: #080909;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+}
+.pub img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+
+
+.focof {
+    width: 80vw;
+    height: 80dvh;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 10dvh;
+    left: 10vw;
+    border-radius: 3px;
+    border: 1.3px solid rgba(95, 95, 95, 0.368);
+    z-index: 801;
+    visibility: hidden;
+    transform: scale(0);
+    overflow: hidden;
+}
+
+.foco {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+
+.foco .img {
+    width: 50%;
+    height: 100%;
+    background-image: url(arvore.png);
+    background-size: cover;
+}
+.foco .img img {
+    width: 100%;
+    height: calc(100% + 1px);
+    object-fit: contain;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 020px solid black;
+    background-color: rgba(0, 0, 0, 0.217);
+}
+
+
+.lateral {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.linha1 {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.3px solid rgba(101, 101, 101, 0.511);
+}
+.linha1 img {
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.linha1 h3 {
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0px;
+}
+.linha1 ion-icon {
+    margin-left: auto;
+    margin-right: 30px;
+    font-size: 28px;
+}
+
+.linha2 {
+    width: 100%;
+    height: calc(100% - (180px + 18px));
+    overflow-y: auto;
+    display: flex;
+}
+.linha2::-webkit-scrollbar {
+    width: 4px;
+}
+
+.linha2::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.linha2::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.linha2::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+.linha2 img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.linha2-text {
+    width: calc(100% - 100px);
+    margin-left: 20px;
+}
+.linha2-text p {
+    font-size: 14px;
+}
+.linha2-text .link {
+    color: rgb(64, 96, 255);
+    padding-bottom: 20px;
+}
+
+.linha3 {
+    height: 140px;
+    width: 100%;
+    border-top: 1.3px solid rgba(101, 101, 101, 0.511);
+}
+.linha3 .fun-icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.fun-icons button {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    gap: 0  ;
+}
+.fun-icons button ion-icon  {
+    margin-left: 0;
+}
+.fun-icons ion-icon{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+}
+.fun-icons :nth-of-type(3) {
+    margin-left: auto;
+    transform: translateX(-20px);
+}
+.linha3 h3 {
+    margin-top: 16px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    margin-left: 15px;
+}
+.linha3 p {
+    margin-top: 0;
+    font-size: 13px;
+    font-weight: 450;
+    color: rgba(255, 255, 255, 0.664);
+    margin-left: 15px;
+}
+.linha3 .comentar {
+    height: 40px;
+    display: flex;
+    border-top: 1.3px solid rgba(101, 101, 101, 0.511);
+    align-items: center;
+}
+.comentar ion-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+}
+.comentar input {
+    height: 40px;
+    padding: 0;
+    border: none;
+    width: 70%;
+    background-color: transparent;
+    margin-left: 10px;
+}
+.comentar p {
+    display: flex;
+    font-size: 15px;
+    height: 40px;
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.close {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 800;
+    display: none;
+    backdrop-filter: blur(3px);
+}
+body.focus-active .close {
+    display: block;
+}
+
+#focus {
+    transition: 0.3s ease;
+}
+
+#focus.fechado {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+}
+
+#focus.aberto {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+
+}

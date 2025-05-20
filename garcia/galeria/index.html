@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="close" onclick="closeCard()"></div>
+    <section class="topo">
+        <img src="img/arvore.png" alt="Arvore">
+        <div class="informacoes">
+            <div class="titulo">
+                <h1>Galeria GW</h1>
+                <p onclick="validarCPF()">Seguir</p>
+                <p>Enviar mensagem</p>
+            </div>
+            <div class="subtitulo">
+                <h3><span>35</span> Publicações</h3>
+                <h3><span>3726</span> Seguidores</h3>
+                <h3><span>203</span> Seguindo</h3>
+            </div>
+            <div class="descricao">
+                <h3>Galeria T4</h3>
+                <p>
+                    🌳 Tipuanas pelo caminho <br>
+                    📸 Um olhar poético sobre a beleza das Tipuanas <br>
+                    💛 Flores amarelas, sombras acolhedoras e histórias que o vento conta <br>
+                    📍Cenas urbanas & naturais <br>
+                    #Tipuana #NaturezaUrbana #ÁrvoreDaVida
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="pub">
+        <div class="focof" id="focus">
+            <div class="foco">
+                <div class="img">
+                    <img src="img/arvore.png" alt="" class="igm">
+                </div>
+                <div class="lateral">
+                    <div class="linha1">
+                        <img src="img/arvore.png" alt="" class="igm">
+                        <h3>Entre Luzes e Folhagens</h3>
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                    <div class="linha2">
+                        <img src="img/arvore.png" alt="" class="igm">
+                        <div class="linha2-text">
+                            <p><strong>Entre Luzes e Folhagens</strong> 🌳 A imagem captura uma cena ensolarada em um espaço público, com uma Tipuana imponente, galhos escuros e retorcidos — alguns cobertos de musgo — que espalham sombras únicas no chão.<br>
+                                As folhas verde-claras permitem que a luz do sol da tarde passe, criando um belo efeito de luz e sombra no chão da praça. ✨<br><br>
+                                
+                                📍 Praça da Catedral – Santa Cruz do Sul, RS<br>
+                                🌳 Tipuana frondosa com galhos escuros e retorcidos<br>
+                                🌿 Musgos e epífitas nos galhos, indicando umidade<br>
+                                ☀️ Folhas verde-claras que filtram a luz do sol<br>
+                                ✨ Efeito de luz e sombra no chão da praça</p>
+                            <p class="link">#Tipuanas #SantaCruzdoSul #TunelVerde #MeioAmbiente #ViverAquiÉBomDeMais</p>
+                            
+                        </div>
+                    </div>
+                    <div class="linha3">
+                        <div class="fun-icons">
+                            <button>
+                                <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                        </div>
+                        <h3>--- curtidas</h3>
+                        <p>há 1 dia</p>
+                        <div class="comentar">
+                            <ion-icon name="happy-outline"></ion-icon>
+                            <input type="text" placeholder="Adicione um comentário...">
+                            <p>Postar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="img/arvore.png" alt="Arvore" onclick="open(this)"> -->
+    </section>
+
+
+
+    <!--! Script JS -->
+    <script src="lista.js"></script>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module"></script>
+</body>
+
+
+
+<script>
+
+    function validarCPF(){
+        let cpf = prompt("Digite seu CPF (apenas números):");
+        if (!isNaN(cpf) && cpf.toString().length === 11) {
+            alert("CPF válido!");
+        } else {
+            alert("CPF inválido. Digite 11 números.");
+        }
+
+    }
+
+</script>
+
+
+
+
+</html>
