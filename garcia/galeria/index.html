@@ -21,7 +21,7 @@
             <div class="titulo">
                 <h1>Galeria GW</h1>
                 <p onclick="solicitarCPF()">Seguir</p>
-                <p>Enviar mensagem</p>
+                <p>Enviar mensageeeem</p>
             </div>
             <div class="subtitulo">
                 <h3><span>35</span> Publicações</h3>
@@ -106,7 +106,7 @@
 import { db } from './link.js';
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-window.solicitarCPF = async function() {
+async function solicitarCPF() {
     let cpf = prompt("Digite seu CPF:");
     if (!cpf) return;
     cpf = cpf.replace(/\D/g, '');
