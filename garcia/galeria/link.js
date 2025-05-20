@@ -1,20 +1,21 @@
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import {
-      getDatabase,
-      ref,
-      onValue,
-      runTransaction
-    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyAx78shLCE0VyNkB7nZ8Wq0yU6-UB2C7I8",
-      authDomain: "teste-senac-7fcd3.firebaseapp.com",
-      projectId: "teste-senac-7fcd3",
-      storageBucket: "teste-senac-7fcd3.appspot.com",
-      messagingSenderId: "687441576323",
-      appId: "1:687441576323:web:aae20f52d8f2247e65f6b6",
-      databaseURL: "https://teste-senac-7fcd3-default-rtdb.firebaseio.com"
-    };
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCmSGZt2q7pEK8QYq8vD7r13tcHanVEPJ8",
+  authDomain: "galeria-oficial.firebaseapp.com",
+  projectId: "galeria-oficial",
+  storageBucket: "galeria-oficial.firebasestorage.app",
+  messagingSenderId: "131213089591",
+  appId: "1:131213089591:web:5577f79df2f3aac67758b2",
+  measurementId: "G-WPH53JL39R"
+};
 
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
