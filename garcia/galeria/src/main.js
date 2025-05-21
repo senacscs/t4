@@ -1,4 +1,4 @@
-import { db, collection, addDoc } from './link.js';
+import { dbRealtime, ref, set } from './link.js';
 import { lista } from './lista.js';
 
 // Função para validar CPF
@@ -84,8 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             alert("CPF válido!");
             try {
-                await addDoc(collection(db, "seguidores"), { cpf });
-                alert("CPF cadastrado com sucesso!");
+                // Envia para o Realtime Database usando o CPF como chave
+                await set(ref(dbRealtime, 'seguidores/' + cpf), { cpf });
+                alert("CPF cadastrado com sucesso no Realtime Database!");
             } catch (e) {
                 alert("Erro ao cadastrar CPF: " + (e?.message || e));
                 console.error("Erro ao cadastrar CPF:", e);
