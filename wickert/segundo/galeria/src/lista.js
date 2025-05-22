@@ -4,7 +4,12 @@ const lista = [
         name: "Sombras e luzes da Marechal Floriano 🌳",
         link: "img/img1.png",
         descicao: `
-            Linda a foto né?
+            A imagem mostra uma calçada comercial sombreada por árvores densas e altas, com galhos inclinados cobrindo parte das fachadas das lojas. A luz do sol penetra entre as folhas, criando contrastes suaves no chão e nas vitrines. A presença urbana é marcada por placas de lojas tecnológicas e cafés.
+            📍 Rua comercial arborizada – Santa Cruz do Sul, RS
+            🌳 Troncos grossos com galhos alongados e musgo aparente
+            🌿 Folhagem densa, de tons verde-escuros, formando cobertura natural
+            ☀️ Iluminação lateral do sol em fim de tarde
+            ✨ Luz difusa e sombra fragmentada entre as copas
         `
     },
     {
@@ -184,13 +189,13 @@ const lista = [
     name: "Árvores e flores 🌳🌸",
     link: "img/img14.png",
     descicao: `
-        A imagem destaca a harmonia entre a força das árvores urbanas e a delicadeza das flores que as acompanham. Galhos robustos se entrelaçam com ramos floridos, criando um contraste de texturas e cores vivas. A luz natural evidencia os detalhes das folhas e pétalas, enquanto o cenário urbano ao fundo reforça a convivência entre natureza e cidade.
-
-        📍 Local não especificado – Santa Cruz do Sul, RS
-        🌳 Árvores frondosas e flores em destaque
-        🌸 Contraste entre troncos, folhas e pétalas coloridas
-        ☀️ Iluminação natural ressaltando as cores
-        ✨ Integração entre vegetação e ambiente urbano
+            A imagem retrata uma alameda arborizada em um parque urbano, com canteiros floridos em destaque. As árvores altas formam um túnel de copas, enquanto a luz solar suavemente filtrada realça os tons vivos das flores cor-de-rosa.
+            📍 Parque urbano – Santa Cruz do Sul, RS
+            🌳 Árvores altas com copas amplas formando sombra contínua
+            🌺 Canteiro central com flores vívidas em tons de rosa
+            🌿 Folhagem densa em contraste com o chão pavimentado
+            ☀️ Iluminação suave de fim de tarde entre as árvores        
+            ✨ Atmosfera serena e colorida, com leveza natural
     `
     },
     {
