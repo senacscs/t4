@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="iniciarCadastro()">cadastrar alunos</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularMedia(n1, n2) {
+            return (n1 + n2) / 2;
+        }
+
+        function iniciarCadastro() {
+            let qtd = parseInt(prompt("Quantos alunos deseja cadastrar:"));
+
+            while (isNaN(qtd) || qtd <= 0) {
+                qtd = parseInt(prompt("Digite um número válido"));
+            }
+
+            let resultado = "";
+
+            for (let i = 1; i <= qtd; i++) {
+                let nome = prompt("Nome do aluno " + i + ":");
+                while (!nome) {
+                    nome = prompt("Nome não pode ser vazio. Digite novamente:");
+                }
+
+                let nota1 = parseFloat(prompt("Nota 1"));
+                while (isNaN(nota1)) {
+                    nota1 = parseFloat(prompt("Digite uma nota válida"));
+                }
+
+                let nota2 = parseFloat(prompt("Nota 2"));
+                while (isNaN(nota2)) {
+                    nota2 = parseFloat(prompt("Digite uma nota válida"));
+                }
+
+                let media = calcularMedia(nota1, nota2);
+                let situacao = media >= 6 ? "Aprovado" : "Reprovado";
+
+                resultado += "<p>" + nome + " - Média: " + media.toFixed(2) + " - " + situacao + "</p>";
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
