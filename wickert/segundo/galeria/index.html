@@ -1,97 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Galeria</title>
 </head>
 
 <body>
-    <header>
-        <img class="perfil" src="arvore.png" alt="">
-        <div class="conteudo_principal">
-            <h1>Galeria GW</h1> <button class="seguir" onclick="seguir(this)">Seguir</button><button class="mensagem" id="en">Enviar mensagem</button>
-        </div>
-        <div class="seguidores">
-            <p class="strong">35</p>
-            <p class="fraco">Publicações</p>
-            <p class="strong" id="seg" data-index="3727">3726</p>
-            <p class="fraco">Seguidores</p>
-            <p class="strong">203</p>
-            <p class="fraco">Seguindo</p>
-        </div>
-        <div class="descricao">
-            <p><strong>Galeria GW</strong><br>
-                🌳 Tipuanas pelo caminho <br>
-                📸 Um olhar poético sobre a beleza das Tipuanas <br>
-                💛 Flores amarelas, sombras acolhedoras e histórias que o vento conta <br>
-                📍Cenas urbanas & naturais <br>
-                #Tipuana #NaturezaUrbana #ÁrvoreDaVida</p>
-        </div>
-    </header>
-    <div class="pubs">
-        <hr class="fraco">
-        <hr class="strong menor centro">
-        <h2>Publicações</h2>
-    </div>
-    <main>
-        <div class="janela">
-            <div class="janelaimg">
-                <img src="arvore.png" alt="">
-                <div class="b"></div>
-                <img src="arvore.png" alt="">
+    <div class="close" onclick="closeCard()"></div>
+    <section class="topo">
+        <img src="img/arvore.png" alt="Arvore">
+        <div class="informacoes">
+            <div class="titulo">
+                <h1>Galeria T4</h1>
+                <p id="btn-seguir">Seguir</p>
+                <p>Enviar mensagem</p>
             </div>
-            <div class="lateral">
-                <ion-icon class="fechar" onclick="fecharJanela()" name="close-outline"></ion-icon>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet necessitatibus expedita vero nemo itaque! Nam, quam voluptatibus? Esse cumque quisquam repellat, iste, nemo fugit, obcaecati doloribus iure debitis expedita tenetur?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa iure inventore modi tenetur distinctio nostrum odit vero optio, beatae, fugiat et repudiandae? Sequi, pariatur temporibus. Ratione veritatis dolor quisquam sapiente!
+            <div class="subtitulo">
+                <h3><span>35</span> Publicações</h3>
+                <h3><span>3726</span> Seguidores</h3>
+                <h3><span>203</span> Seguindo</h3>
+            </div>
+            <div class="descricao">
+                <h3>Galeria T4</h3>
+                <p>
+                    🌳 Tipuanas pelo caminho <br>
+                    📸 Um olhar poético sobre a beleza das Tipuanas <br>
+                    💛 Flores amarelas, sombras acolhedoras e histórias que o vento conta <br>
+                    📍Cenas urbanas & naturais <br>
+                    #Tipuana #NaturezaUrbana #ÁrvoreDaVida
                 </p>
-                <ion-icon onclick="curtir(this)" class="curtida" name="heart-outline"></ion-icon>
             </div>
         </div>
-        <div class="imagens" id="galeria">
-            <img src="arvore.png" alt="" class="imagem" data-index="0" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="1" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="2" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="3" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="4" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="5" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="6" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="7" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="8" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="9" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="10" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="11" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="12" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="13" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="14" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="15" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="16" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="17" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="18" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="19" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="20" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="21" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="22" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="23" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="24" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="25" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="26" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="27" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="28" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="29" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="30" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="31" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="32" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="33" onclick="verJanela(this)">
-            <img src="arvore.png" alt="" class="imagem" data-index="34" onclick="verJanela(this)">
+    </section>
+    <section class="pub">
+        <div class="focof" id="focus">
+            <div class="foco">
+                <div class="img">
+                    <img src="img/arvore.png" alt="" class="igm">
+                </div>
+                <div class="lateral">
+                    <div class="linha1">
+                        <img src="img/arvore.png" alt="" class="igm">
+                        <h3>Entre Luzes e Folhagens</h3>
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                    <div class="linha2">
+                        <img src="img/arvore.png" alt="" class="igm">
+                        <div class="linha2-text">
+                            <p><strong>Entre Luzes e Folhagens</strong> 🌳 A imagem captura uma cena ensolarada em um espaço público, com uma Tipuana imponente, galhos escuros e retorcidos — alguns cobertos de musgo — que espalham sombras únicas no chão.<br>
+                                As folhas verde-claras permitem que a luz do sol da tarde passe, criando um belo efeito de luz e sombra no chão da praça. ✨<br><br>
+                                
+                                📍 Praça da Catedral – Santa Cruz do Sul, RS<br>
+                                🌳 Tipuana frondosa com galhos escuros e retorcidos<br>
+                                🌿 Musgos e epífitas nos galhos, indicando umidade<br>
+                                ☀️ Folhas verde-claras que filtram a luz do sol<br>
+                                ✨ Efeito de luz e sombra no chão da praça</p>
+                            <p class="link">#Tipuanas #SantaCruzdoSul #TunelVerde #MeioAmbiente #ViverAquiÉBomDeMais</p>
+                            
+                        </div>
+                    </div>
+                    <div class="linha3">
+                        <div class="fun-icons">
+                            <button>
+                                <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                        </div>
+                        <h3>--- curtidas</h3>
+                        <p>há 1 dia</p>
+                        <div class="comentar">
+                            <ion-icon name="happy-outline"></ion-icon>
+                            <input type="text" placeholder="Adicione um comentário...">
+                            <p>Postar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="main.js"></script>
-    </main>
+        <!-- <img src="img/arvore.png" alt="Arvore" onclick="open(this)"> -->
+    </section>
+
+    <div id="custom-alert" class="custom-alert" style="display:none;">
+        <div class="custom-alert-content">
+            <span id="custom-alert-message"></span>
+            <button id="custom-alert-ok">OK</button>
+        </div>
+    </div>
+    <div id="notification-toast-list" class="notification-toast-list"></div>
+
+    <!--! Script JS -->
+    <script src="src/link.js" type="module"></script>
+    <script src="src/lista.js" type="module"></script>
+    <script src="src/main.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
