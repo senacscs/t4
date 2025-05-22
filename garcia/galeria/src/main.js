@@ -1,6 +1,8 @@
 import { dbRealtime, ref, set } from './link.js';
 import { lista } from './lista.js';
 
+let cpfSeguidor = null;
+
 // Função para validar CPF
 function validarCPF(cpf) {
     cpf = cpf.replace(/[^\d]+/g, '');
@@ -16,6 +18,21 @@ function validarCPF(cpf) {
     if ((resto === 10) || (resto === 11)) resto = 0;
     if (resto !== parseInt(cpf.substring(10, 11))) return false;
     return true;
+}
+
+// Função para curtir uma imagem
+async function curtirImagem(index) {
+    if (!cpfSeguidor) {
+        alert("Você precisa seguir a página e validar seu CPF antes de curtir uma imagem.");
+        return;
+    }
+    try {
+        await set(ref(dbRealtime, 'curtidas/' + cpfSeguidor), { cpf: cpfSeguidor, imagem: index });
+        alert("Curtida registrada para a imagem " + (parseInt(index) + 1) + "!");
+    } catch (e) {
+        alert("Erro ao registrar curtida: " + (e?.message || e));
+        console.error("Erro ao registrar curtida:", e);
+    }
 }
 
 function openCard(card) {
@@ -41,6 +58,12 @@ function openCard(card) {
     lateralTitle.textContent = item.name;
     lateralDescription.innerHTML = `<strong>${item.name}</strong> ${item.descicao.replace(/\n/g, "<br>")}`;
 
+    // Adiciona evento ao botão de curtir do modal
+    const btnCurtir = focus.querySelector('.fun-icons button');
+    if (btnCurtir) {
+        btnCurtir.onclick = () => curtirImagem(index);
+    }
+
     document.body.classList.add("focus-active");
 }
 
@@ -63,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         img.addEventListener('click', function() {
             openCard(this);
         });
+        // Adiciona evento de curtir direto na grade (opcional)
+        // img.addEventListener('dblclick', () => curtirImagem(index));
         pubSection.appendChild(img);
     });
 
@@ -71,22 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnSeguir) {
         btnSeguir.addEventListener('click', async () => {
             const cpf = prompt("Digite seu CPF para seguir:");
-            console.log("CPF digitado:", cpf);
             if (!cpf) {
                 alert("Operação cancelada.");
                 return;
             }
             const valido = validarCPF(cpf);
-            console.log("CPF válido?", valido);
             if (!valido) {
                 alert("CPF inválido!");
                 return;
             }
             alert("CPF válido!");
             try {
-                // Envia para o Realtime Database usando o CPF como chave
                 await set(ref(dbRealtime, 'seguidores/' + cpf), { cpf });
-                alert("CPF cadastrado com sucesso no Realtime Database!");
+                cpfSeguidor = cpf;
+                alert("CPF cadastrado com sucesso no Realtime Database! Agora você pode curtir imagens.");
             } catch (e) {
                 alert("Erro ao cadastrar CPF: " + (e?.message || e));
                 console.error("Erro ao cadastrar CPF:", e);
