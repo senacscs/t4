@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Análise de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .aluno {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .aprovado {
+            color: green;
+            font-weight: bold;
+        }
+        .reprovado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>ATIVIDADE: CADASTRO E ANÁLISE DE ALUNOS</h1>
+    
+    <button onclick="iniciarCadastro()">Iniciar Cadastro</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function iniciarCadastro() {
+            // Limpa resultados anteriores
+            document.getElementById("resultado").innerHTML = "";
+            
+            // Solicita a quantidade de alunos
+            let qtdAlunos;
+            while (true) {
+                qtdAlunos = parseInt(prompt("Quantos alunos deseja cadastrar?"));
+                if (!isNaN(qtdAlunos) && qtdAlunos > 0) {
+                    break;
+                }
+                alert("Por favor, digite um número válido maior que zero.");
+            }
+            
+            // Cadastra cada aluno
+            for (let i = 1; i <= qtdAlunos; i++) {
+                let nome;
+                while (true) {
+                    nome = prompt(`Digite o nome do aluno ${i}:`);
+                    if (nome && nome.trim() !== "") {
+                        break;
+                    }
+                    alert("O nome não pode estar vazio. Por favor, digite novamente.");
+                }
+                
+                let nota1;
+                while (true) {
+                    nota1 = parseFloat(prompt(`Digite a nota 1 do aluno ${nome}:`));
+                    if (!isNaN(nota1) && nota1 >= 0 && nota1 <= 10) {
+                        break;
+                    }
+                    alert("Por favor, digite uma nota válida entre 0 e 10.");
+                }
+                
+                let nota2;
+                while (true) {
+                    nota2 = parseFloat(prompt(`Digite a nota 2 do aluno ${nome}:`));
+                    if (!isNaN(nota2) && nota2 >= 0 && nota2 <= 10) {
+                        break;
+                    }
+                    alert("Por favor, digite uma nota válida entre 0 e 10.");
+                }
+                
+                // Calcula a média
+                const media = calcularMedia(nota1, nota2);
+                const situacao = media >= 6 ? "Aprovado" : "Reprovado";
+                
+                // Exibe o resultado
+                const situacaoClass = media >= 6 ? "aprovado" : "reprovado";
+                
+                document.getElementById("resultado").innerHTML += `
+                    <div class="aluno">
+                        <p><strong>Aluno:</strong> ${nome}</p>
+                        <p><strong>Nota 1:</strong> ${nota1.toFixed(1)}</p>
+                        <p><strong>Nota 2:</strong> ${nota2.toFixed(1)}</p>
+                        <p><strong>Média:</strong> ${media.toFixed(1)}</p>
+                        <p><strong>Situação:</strong> <span class="${situacaoClass}">${situacao}</span></p>
+                    </div>
+                `;
+            }
+        }
+        
+        function calcularMedia(n1, n2) {
+            return (n1 + n2) / 2;
+        }
+    </script>
+</body>
+</html>
