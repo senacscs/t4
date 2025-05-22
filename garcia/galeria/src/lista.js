@@ -237,7 +237,7 @@ const lista = [
     {
         // Larissa
         name: "De baixo do nosso céu 🌳",
-        link: "img/img18.HEIC",
+        link: "img/img18.png",
         descicao: `
             Foto tirada na esquina da Rua Marechal Floriano com a Rua Júlio de Castilhos, no centro de Santa Cruz do Sul, às 07:56 da manhã. A imagem se destaca pela posição privilegiada que captura várias Tipuanas alinhadas, revelando o famoso túnel verde da cidade. A luz do sol da manhã reflete suavemente sobre as copas e galhos, criando um efeito visual encantador. Além da natureza, a foto também registra comércios e espaços urbanos importantes, reforçando o vínculo entre o ambiente natural e a vida cotidiana. Essa foi, sem dúvidas, a melhor foto do dia!
 

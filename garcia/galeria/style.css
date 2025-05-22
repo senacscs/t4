@@ -66,11 +66,16 @@ body {
     font-size: 17px;
     font-weight: 500;
     position: absolute;
-    margin-left: 220px;
+    margin-left: 200px;
     transform: scale(0.8);
 }
 .titulo p:nth-child(3) {
     margin-left: 280px !important;
+}
+.titulo p.seguindo {
+    background-color: #888 !important;
+    color: #eee !important;
+    cursor: not-allowed !important;
 }
 .subtitulo {
     display: flex;
@@ -146,7 +151,7 @@ body {
     width: 100%;
     height: calc(100% + 1px);
     object-fit: contain;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     box-shadow: 0 020px solid black;
     background-color: rgba(0, 0, 0, 0.217);
 }
@@ -290,6 +295,12 @@ body {
     width: 70%;
     background-color: transparent;
     margin-left: 10px;
+    color: #ffffffed;
+    font-size: 15px;
+}
+.comentar input::placeholder {
+    color: #ffffffed;
+    opacity: 1;
 }
 .comentar p {
     display: flex;
@@ -366,6 +377,9 @@ body.focus-active .close {
         position: static;
         margin-left: 10px !important;
         transform: scale(1);
+    }
+    .topo::before {
+        display: none;
     }
 }
 
@@ -445,4 +459,298 @@ body.focus-active .close {
     .comentar input {
         font-size: 13px;
     }
+    .linha3 .comentar {
+        display: none !important;
+    }
+    .linha2 {
+        height: calc(100% - (130px + 18px));
+    }
+}
+
+.custom-alert {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-alert-content {
+    background: #222;
+    color: #fff;
+    padding: 24px 32px;
+    border-radius: 8px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 24px #0008;
+}
+.custom-alert-content button {
+    margin-top: 18px;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 4px;
+    background: #ff4444;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.notification-toast-list {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    pointer-events: none;
+    max-height: calc(4 * 72px + 3 * 12px); /* 4 toasts + gaps */
+}
+.notification-toast {
+    min-width: 220px;
+    max-width: 350px;
+    background: linear-gradient(90deg, #000000 60%, #0c0c0c 100%);
+    color: #f8fafc;
+    box-shadow: 0 4px 24px #000a, 0 1.5px 0 #4f8cff inset;
+    padding: 16px 28px 10px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px #0008;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(100%) scale(0.98);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: auto;
+    margin-bottom: 0;
+    position: relative;
+    will-change: transform, opacity;
+}
+.notification-toast.show {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    animation: toast-in-right 0.35s cubic-bezier(.4,1.4,.6,1) both;
+}
+.notification-toast.hide {
+    opacity: 0;
+    transform: translateY(-60%) scale(0.96);
+    animation: toast-out-up 0.35s cubic-bezier(.4,1.4,.6,1) both;
+}
+@keyframes toast-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes toast-out-up {
+    from {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-60%) scale(0.96);
+    }
+}
+.notification-toast .toast-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background: #38e38a; /* Começa verde */
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: background 0.2s linear;
+    animation: toast-bar-anim linear forwards, toast-bar-color-anim linear forwards;
+    border-radius: 0 0 8px 8px;
+}
+@keyframes toast-bar-anim {
+    from { transform: scaleX(1);}
+    to   { transform: scaleX(0);}
+}
+@keyframes toast-bar-color-anim {
+    from { background: #38e38a; } /* Verde */
+    50%  { background: #ffa434; } /* Amarelo */
+    to   { background: #ff4f4f; } /* Vermelho */
+}
+
+/* Animação do botão de curtida (coração) */
+@keyframes like-heart-pop {
+    0% {
+        transform: scale(1);
+        color: #fff;
+        filter: drop-shadow(0 0 0 #ff4f4f00);
+    }
+    40% {
+        transform: scale(1.3);
+        color: #ff4f4f;
+        filter: drop-shadow(0 0 8px #ff4f4f88);
+    }
+    70% {
+        transform: scale(0.95);
+        color: #ff4f4f;
+        filter: drop-shadow(0 0 4px #ff4f4f44);
+    }
+    100% {
+        transform: scale(1);
+        color: #ff4f4f;
+        filter: none;
+    }
+}
+.btn-curtida-animada > ion-icon,
+.fun-icons button.curtido > ion-icon {
+    color: #ff4f4f !important;
+    font-variation-settings: 'FILL' 1;
+    filter: drop-shadow(0 0 6px #ff4f4f55);
+    transition: color 0.2s, filter 0.2s;
+    animation: like-heart-fill 0.3s cubic-bezier(.4,1.4,.6,1);
+}
+@keyframes like-heart-fill {
+    from {
+        color: #fff;
+        font-variation-settings: 'FILL' 0;
+        filter: none;
+    }
+    to {
+        color: #ff4f4f;
+        font-variation-settings: 'FILL' 1;
+        filter: drop-shadow(0 0 6px #ff4f4f55);
+    }
+}
+
+/* Comentário (chatbubble) */
+.fun-icons ion-icon[name="chatbubble-outline"]:hover,
+.fun-icons ion-icon[name="chatbubble-outline"].ativo {
+    color: #4f8cff;
+    font-variation-settings: 'FILL' 1;
+    filter: drop-shadow(0 0 4px #4f8cff55);
+    transition: color 0.2s, filter 0.2s;
+}
+
+/* Compartilhar (paper-plane) */
+.fun-icons ion-icon[name="paper-plane-outline"]:hover,
+.fun-icons ion-icon[name="paper-plane-outline"].ativo {
+    color: #38e38a;
+    font-variation-settings: 'FILL' 1;
+    filter: drop-shadow(0 0 4px #38e38a55);
+    transition: color 0.2s, filter 0.2s;
+}
+
+/* Favoritar (bookmark) */
+.fun-icons ion-icon[name="bookmark-outline"]:hover,
+.fun-icons ion-icon[name="bookmark-outline"].ativo {
+    color: #ffe734;
+    font-variation-settings: 'FILL' 1;
+    filter: drop-shadow(0 0 4px #ffe73455);
+    transition: color 0.2s, filter 0.2s;
+}
+
+/* Emoji (happy) */
+.comentar ion-icon[name="happy-outline"]:hover,
+.comentar ion-icon[name="happy-outline"].ativo {
+    color: #ffb84f;
+    font-variation-settings: 'FILL' 1;
+    filter: drop-shadow(0 0 4px #ffb84f55);
+    transition: color 0.2s, filter 0.2s;
+}
+
+/* Botão de postar comentário */
+.comentar p:hover {
+    color: #4f8cff;
+    text-shadow: 0 0 4px #4f8cff88;
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.cpf-modal-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.cpf-modal-content {
+    background: #090909;
+    color: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px #000b;
+    padding: 32px 28px 24px 28px;
+    min-width: 320px;
+    max-width: 90vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: cpf-modal-in 0.3s cubic-bezier(.4,1.4,.6,1);
+}
+@keyframes cpf-modal-in {
+    from { opacity: 0; transform: scale(0.92);}
+    to   { opacity: 1; transform: scale(1);}
+}
+.cpf-modal-content h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.947);
+}
+.cpf-modal-content p {
+    font-size: 1em;
+    color: #e0e6f0;
+    margin-bottom: 8px;
+    /* ...existing code... */
+}
+.cpf-modal-content .cpf-info-extra {
+    color: #ffe734;
+    font-size: 0.98em;
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+.cpf-modal-content input[type="text"] {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1.5px solid #00072bcd;
+    font-size: 1.1em;
+    outline: none;
+    margin-bottom: 8px;
+    background: #1e293b;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+.cpf-modal-content input[type="text"]:focus {
+    border: 1.5px solid #0e0d16;
+}
+.cpf-modal-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 8px;
+}
+.cpf-modal-actions button {
+    padding: 8px 22px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    background: #4f8cff;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+.cpf-modal-actions button#cpf-cancel {
+    background: #888;
+    color: #fff;
+}
+.cpf-modal-actions button:hover {
+    background: #38e37a;
+    color: #232b3b;
 }
