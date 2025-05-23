@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .forms {
+            background-color: #c9c9c9;
+            margin: 25vh;
+            margin-top: 15vh;
+            padding: 5vh;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+        }
+
+        input {
+            margin-bottom: 2vh;
+            display: block;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            border: none;
+            height: 30px;
+            margin-top: 1vh;
+            box-shadow: 0 0 10px #000;
+        }
+
+        label {
+            margin-left: 8%;
+            font-weight: 400;
+            color: #393939;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            color: #393939;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            background-color: aquamarine;
+            border: none;
+            box-shadow: 0 0 10px #000;
+            height: 40px;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="forms">
+        <h1>Log In</h1>
+        <form action="#" method="get">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <br>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="idade">Idade:</label>
+            <input type="number" min="12" name="idade" id="idade">
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

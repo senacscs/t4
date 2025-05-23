@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipuanas de Santa Cruz do Sul - Entrevistas de Rua</title>
+    <link rel="shortcut icon" href="tree (1).png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            transition: background-color 0.5s;
+        }
+
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            transition: transform 0.3s;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #2e8b57;
+            border-bottom: 2px solid #2e8b57;
+            padding-bottom: 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        h2:hover {
+            color: #1f5a3a;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .intro:hover {
+            transform: translateY(-5px);
+        }
+
+        .interview {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interview:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .person {
+            font-weight: bold;
+            color: #2e8b57;
+            transition: color 0.3s;
+        }
+
+        .interview:hover .person {
+            color: #1f5a3a;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            margin-left: 12%;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #2e8b57;
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.5s;
+        }
+
+        footer:hover {
+            background-color: #1f5a3a;
+        }
+
+        .theme-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: transform 0.3s;
+        }
+
+        .theme-btn:hover {
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 50px;
+            animation: zoom 0.3s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #searchInput {
+            padding: 10px;
+            width: 300px;
+            border-radius: 20px;
+            border: 1px solid #2e8b57;
+            outline: none;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffecec;
+            border-radius: 8px;
+            color: #000;
+            margin: 20px 0;
+        }
+
+        .like-btn {
+            background-color: transparent;
+            border: none;
+            color: #2e8b57;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+
+        .like-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .liked {
+            color: #ff4081;
+        }
+
+        .interview-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 100%;
+            }
+
+            #searchInput {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-btn" id="themeBtn">🌓</button>
+
+    <header id="mainHeader">
+        <h1>As Tipuanas de Santa Cruz do Sul</h1>
+        <p>Entrevistas de rua sobre essa árvore emblemática da nossa cidade</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar entrevistas...">
+        </div>
+    </header>
+
+    <div class="no-results" id="noResults">
+        <h3>Nenhum resultado encontrado</h3>
+        <p>Tente usar palavras-chave diferentes</p>
+    </div>
+    <section class="interviews" id="interviewsSection">
+        <h2 onclick="toggleSection('interviewsContent')">Depoimentos dos Moradores <span>▼</span></h2>
+        <div id="interviewsContent">
+            <div class="interview" data-search="joana silva comerciante praça folhas">
+                <p class="person">Joana Silva, 58 anos, comerciante</p>
+                <p>"Eu adoro as tipuanas da praça! Quando florescem no verão, é um espetáculo de cores. Mas confesso que
+                    às vezes reclamo quando tenho que varrer as folhas caídas na frente da minha loja."</p>
+                <div class="interview-footer">
+                    <span>Publicado em: 15/03/2023</span>
+                    <button class="like-btn" onclick="toggleLike(this)">❤️ <span>0</span></button>
+                </div>
+            </div>
+
+            <div class="interview" data-search="carlos mendes motorista trânsito poda">
+                <p class="person">Carlos Mendes, 32 anos, motorista de aplicativo</p>
+                <p>"As árvores são lindas, mas algumas estão muito grandes e às vezes atrapalham a visão no trânsito,
+                    principalmente naquela curva perto do centro. Talvez precisasse de uma poda cuidadosa."</p>
+                <div class="interview-footer">
+                    <span>Publicado em: 18/03/2023</span>
+                    <button class="like-btn" onclick="toggleLike(this)">❤️ <span>0</span></button>
+                </div>
+            </div>
+
+            <div class="interview" data-search="ana lúcia professora aulas ecossistema">
+                <p class="person">Professora Ana Lúcia, 45 anos</p>
+                <p>"Uso as tipuanas como exemplo nas minhas aulas de ciências. Elas são perfeitas para explicar sobre
+                    ecossistema urbano e a importância das árvores nas cidades. Meus alunos sempre fazem trabalhos sobre
+                    elas."</p>
+                <div class="interview-footer">
+                    <span>Publicado em: 20/03/2023</span>
+                    <button class="like-btn" onclick="toggleLike(this)">❤️ <span>0</span></button>
+                </div>
+            </div>
+
+            <div class="interview" data-search="roberto estudante bike primavera">
+                <p class="person">Roberto, 19 anos, estudante universitário</p>
+                <p>"Sou novo na cidade e fiquei impressionado com essas árvores quando cheguei. Não temos nada parecido
+                    onde eu morava. Agora na primavera, quando passo de bike pela avenida principal, parece que estou
+                    num túnel amarelo - é incrível!"</p>
+                <div class="interview-footer">
+                    <span>Publicado em: 22/03/2023</span>
+                    <button class="like-btn" onclick="toggleLike(this)">❤️ <span>0</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro" id="intro">
+        <h2 onclick="toggleSection('introContent')">Sobre o Projeto <span>▼</span></h2>
+        <div id="introContent">
+            <p>Este trabalho apresenta entrevistas realizadas com moradores de Santa Cruz do Sul sobre as tipuanas,
+                parte importante da paisagem urbana.
+                Durante o mês de março, nosso grupo foi às ruas para ouvir o que a população pensa sobre essas árvores.
+            </p>
+
+            <h3>O que são Tipuanas?</h3>
+            <p>A tipuana (Tipuana tipu) é uma árvore de grande porte, originária da América do Sul, conhecida por sua
+                copa ampla e floração amarela intensa. Em Santa Cruz do Sul, elas são especialmente presentes no centro
+                da cidade.</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2 onclick="toggleSection('galleryContent')">Galeria de Fotos <span>▼</span></h2>
+        <div class="gallery" id="galleryContent">
+            <img src="img1.jpg" alt="Tipuana florida em Santa Cruz do Sul" onclick="openModal(this)">
+            <img src="download (1).jpg" alt="Detalhe das flores amarelas" onclick="openModal(this)">
+            <img src="download (2).jpg" alt="Rua arborizada com tipuanas" onclick="openModal(this)">
+            <img src="download (3).jpg" alt="Equipe realizando entrevistas" onclick="openModal(this)">
+            <img src="download.jpg" alt="Morador dando entrevista" onclick="openModal(this)">
+            <img src="Decreto-Recuperacao-do-Tunel-Verde-014-180307.jpg" alt="Tipuanas na praça central"
+                onclick="openModal(this)">
+        </div>
+    </section>
+
+    <section class="conclusion">
+        <h2 onclick="toggleSection('conclusionContent')">Conclusões <span>▼</span></h2>
+        <div id="conclusionContent">
+            <p>Através das entrevistas realizadas, percebemos que as tipuanas são um elemento marcante na paisagem de
+                Santa Cruz do Sul, gerando tanto admiração por sua beleza quanto algumas preocupações relacionadas à
+                manutenção. A maioria dos entrevistados demonstrou apego a essas árvores, que fazem parte da identidade
+                visual da cidade.</p>
+            <p>Este trabalho nos mostrou a importância de discutir o planejamento urbano e a arborização das cidades,
+                buscando equilibrar beleza, convivência e segurança.</p>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>Trabalho realizado por: Rafael Marmitt, Eduardo Moraes, Gabriel Ludwig e Guilherme Dalke</p>
+        <p>Disciplina: Projeto de Vida - Professor(a): Carlos</p>
+        <p>Santa Cruz do Sul, 2025</p>
+    </footer>
+
+    <script>
+        document.getElementById('themeBtn').addEventListener('click', function () {
+            document.body.classList.toggle('dark-theme');
+            const header = document.getElementById('mainHeader');
+            const footer = document.querySelector('footer');
+            const intro = document.getElementById('intro');
+            const dep = document.getElementById('interviewsContent');
+
+            if (document.body.classList.contains('dark-theme')) {
+                document.body.style.backgroundColor = '#222';
+                document.body.style.color = '#fff';
+                header.style.backgroundColor = '#1f5a3a';
+                footer.style.backgroundColor = '#1f5a3a';
+                intro.style.backgroundColor = '#222';
+                dep.style.color = '#000'
+                this.textContent = '🌞';
+            } else {
+                document.body.style.backgroundColor = '#f5f5f5';
+                document.body.style.color = '#333';
+                header.style.backgroundColor = '#2e8b57';
+                footer.style.backgroundColor = '#2e8b57';
+                intro.style.backgroundColor = '#fff';
+                dep.style.color = '#000'
+                this.textContent = '🌓';
+            }
+        });
+
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const arrow = event.currentTarget.querySelector('span');
+
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                section.style.display = 'none';
+                arrow.textContent = '▶';
+            }
+        }
+
+
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const interviews = document.querySelectorAll('.interview');
+            let hasResults = false;
+
+            interviews.forEach(interview => {
+                const interviewText = interview.getAttribute('data-search').toLowerCase();
+                if (interviewText.includes(searchTerm)) {
+                    interview.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    interview.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
+        });
+
+
+        function toggleLike(button) {
+            const likeCount = button.querySelector('span');
+            if (button.classList.contains('liked')) {
+                button.classList.remove('liked');
+                likeCount.textContent = parseInt(likeCount.textContent) - 1;
+            } else {
+                button.classList.add('liked');
+                likeCount.textContent = parseInt(likeCount.textContent) + 1;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('introContent').style.display = 'block';
+            document.getElementById('interviewsContent').style.display = 'none';
+            document.getElementById('galleryContent').style.display = 'none';
+            document.getElementById('conclusionContent').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.vidro {
+    width: 270px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.vidro h2 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.vidro p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.vidro button {
+    margin-top: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #00f2fe;
+    background-image: linear-gradient(45deg, #4facfe, #00f2fe);
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.vidro button:hover {
+    opacity: 0.85
+}
