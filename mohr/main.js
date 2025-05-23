@@ -77,11 +77,25 @@ const projetos = [
         icon: "images-outline",
         padrao: "tia"
     },
-    
-    {name: "Aprendendo JavaScript",
-        descricao: "site incial pra aprender JavaScript",
-        icon: "logo-javascript",
-        padrao: "javascript"
+    {name: "Calculadora idade",
+        descricao: "",
+        icon: "",
+        padrao: "calculadoraidade"
+    },
+    {name: "cadastro e analise",
+        descricao: "",
+        icon: "",
+        padrao: "cadastroeanalise"
+    },
+    {name: "Calculadora Média",
+        descricao: "",
+        icon: "",
+        padrao: "calculadoramedia"
+    },
+    {name: "Verificador",
+        descricao: "",
+        icon: "",
+        padrao: "verificador"
     },
 ]
 
