@@ -75,7 +75,7 @@ const projetos = [
     {name: "Galeria Tipuanas",
         descricao: "",
         icon: "images-outline",
-        padrao: "tia"
+        padrao: "tipuana"
     },
     {name: "Calculadora idade",
         descricao: "",
