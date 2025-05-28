@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.exemplo {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+/* 1. Combinador de Filho Direto (>) */
+.exemplo:nth-child(1) div > p {
+    background-color: #b2f2bb;
+    padding: 5px;
+}
+
+/* 2. Combinador de Descendente (espaço) */
+.exemplo:nth-child(2) div p {
+    background-color: #a5d8ff;
+    padding: 5px;
+}
+
+/* 3. Combinador de Irmão Adjacente (+) */
+.exemplo:nth-child(3) div + p {
+    background-color: #faa2c1;
+    padding: 5px;
+}
+
+/* 4. Combinador de Irmãos Seguintes (~) */
+.exemplo:nth-child(4) p ~ ul li {
+    background-color: #ffa8a8;
+    padding: 5px;
+}
+
+/* 5. Lista de Seletores (,) */
+.exemplo:nth-child(5) div,
+.exemplo:nth-child(5) p {
+    border: 1px dashed #888;
+    padding: 5px;
+}

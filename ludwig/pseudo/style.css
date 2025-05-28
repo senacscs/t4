@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.exemplo {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+/* 1. :hover */
+a:hover {
+    color: orange;
+}
+
+/* 2. :first-child */
+.exemplo:nth-child(2) p:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+/* 3. :nth-child() */
+.exemplo:nth-child(3) p:nth-child(3) {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 4. :checked */
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:checked {
+    color: orange;
+}
+
+/* 5. :focus */
+input:focus {
+    border: 2px solid #339af0;
+    outline: none;
+}
+
+/* 6. :not() */
+.exemplo:nth-child(6) p:not(:last-child) {
+    background-color: #ced4da;
+    color: #000;
+    padding: 5px;
+}

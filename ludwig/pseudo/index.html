@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes CSS - Exemplos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pseudo-classes CSS - Exemplos</h1>
+
+    <div class="container">
+        <!-- 1. :hover -->
+        <div class="exemplo">
+            <h2>1. :hover</h2>
+            <p>Passe o mouse sobre o link abaixo:</p>
+            <a href="#">Link com :hover</a>
+        </div>
+
+        <!-- 2. :first-child -->
+        <div class="exemplo">
+            <h2>2. :first-child</h2>
+            <div>
+                <p>Este é o primeiro parágrafo (selecionado)</p>
+                <p>Este é o segundo parágrafo</p>
+                <em>Outro exemplo de <code>primeiro filho</code></em>
+            </div>
+        </div>
+
+        <!-- 3. :nth-child() -->
+        <div class="exemplo">
+            <h2>3. :nth-child()</h2>
+            <div>
+                <p>Parágrafo 1</p>
+                <p>Parágrafo 2</p>
+                <p>Parágrafo 3 (selecionado)</p>
+                <p>Parágrafo 4</p>
+            </div>
+        </div>
+
+        <!-- 4. :checked -->
+        <div class="exemplo">
+            <h2>4. :checked</h2>
+            <form>
+                <label><input type="checkbox" checked> Opção 1</label><br>
+                <label><input type="checkbox"> Opção 2</label>
+            </form>
+        </div>
+
+        <!-- 5. :focus -->
+        <div class="exemplo">
+            <h2>5. :focus</h2>
+            <p>Clique no campo para ver o :focus em ação:</p>
+            <input type="text" placeholder="Digite algo aqui">
+        </div>
+
+        <!-- 6. :not() -->
+        <div class="exemplo">
+            <h2>6. :not()</h2>
+            <div>
+                <p class="destaque">Este parágrafo será estilizado com :not()</p>
+                <p>Este será ignorado</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinadores CSS - Exemplos Práticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Combinadores CSS - Exemplos Práticos</h1>
+
+    <div class="container">
+        <!-- Combinador de Filho Direto (>) -->
+        <div class="exemplo">
+            <h2>1. Combinador de Filho Direto (&gt;)</h2>
+            <div>
+                <p>Parágrafo filho direto (selecionado)</p>
+                <span>
+                    <p>Parágrafo dentro do span (não é filho direto)</p>
+                </span>
+            </div>
+        </div>
+
+        <!-- Combinador de Descendente (espaço) -->
+        <div class="exemplo">
+            <h2>2. Combinador de Descendente (espaço)</h2>
+            <div>
+                <p>Parágrafo descendente (selecionado)</p>
+                <div>
+                    <p>Outro descendente (também selecionado)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combinador de Irmão Adjacente (+) -->
+        <div class="exemplo">
+            <h2>3. Combinador de Irmão Adjacente (+)</h2>
+            <div>Elemento DIV</div>
+            <p>Parágrafo logo após a DIV (selecionado)</p>
+            <p>Outro parágrafo (não selecionado)</p>
+        </div>
+
+        <!-- Combinador de Irmãos Seguintes (~) -->
+        <div class="exemplo">
+            <h2>4. Combinador de Irmãos Seguintes (~)</h2>
+            <p>Parágrafo antes das listas</p>
+            <ul>
+                <li>LiBA 1 (selecionado)</li>
+                <li>LiBA 2 (selecionado)</li>
+            </ul>
+        </div>
+
+        <!-- Lista de Seletores (,) -->
+        <div class="exemplo">
+            <h2>5. Lista de Seletores (,)</h2>
+            <div>DIV selecionada</div>
+            <p>Parágrafo selecionado</p>
+            <span>SPAN não selecionado</span>
+        </div>
+    </div>
+</body>
+</html>

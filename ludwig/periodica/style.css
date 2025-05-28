@@ -1,0 +1,124 @@
+table {
+  width: 100%;
+  border-spacing: 4px;
+  padding: 10px;
+}
+
+caption {
+  margin: 20px;
+  font-family: Arial;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.elemento {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.hover elemento {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.numero {
+  font-size: 6px;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  font-family: arial;
+}
+
+.simbolo {
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: border;
+  text-align: center;
+  display: block;
+  font-family: times new roman;
+}
+
+.nome {
+  font-size: 6px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+}
+
+.asterisco {
+  font-size: 18px;
+  font-style: bold;
+  font-weight: border;
+  text-align: right;
+  display: block;
+  font-family: times new roman;
+}
+
+.elemento2 {
+  padding: 5px;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+}
+
+.nome2 {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  position: absolute;
+}
+
+.verde {
+  background-color: #99C879;
+}
+
+.azul {
+  Background-color: #97C7F3;
+}
+
+.lilas {
+  background-color: #C99DCC;
+}
+
+.rosa {
+  background-color: #E69DC7;
+}
+
+.abacate {
+  background-color: #D6DC16;
+}
+
+.azul-esverdeado {
+  background-color: #8ECCCA;
+}
+
+.amarelo {
+  background-color: #FDD900;
+}
+
+.laranja {
+  background-color: #F7B812;
+}
+
+.laranja2 {
+  background-color: #F09946;
+}
+
+.cinza {
+  background-color: #E8E8E8;
+}
+
+.rosa2 {
+  background-color: #ED917C;
+}
+
+.cinza2 {
+  background-color: #D2D0D1;
+}
+td{
+  position: relative;
+}

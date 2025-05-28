@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Viagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Calculadora de Viagem</h2>
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="number" id="distancia" placeholder="Distância (km)">
+    <input type="number" id="velocidade" placeholder="Velocidade média (km/h)">
+    <input type="number" id="consumo" placeholder="Consumo do carro (km/l)">
+    <input type="number" id="preco" placeholder="Preço da gasolina (R$/l)">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
