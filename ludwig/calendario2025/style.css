@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+ 
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+ 
+th {
+    background-color: #c9c9c9;
+}
+ 
+.feriado {
+    background-color: rgb(65, 157, 126);
+}
+ 
+.gabarito {
+    background-color: #c9c9c9;
+    margin: 3vh 55vh;
+    padding: 1vh;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+ 
+h2 {
+    font-size: 1.2rem;
+}
+ 
+h1 {
+    text-shadow: 0 0 10px rgb(61, 61, 61);
+}
+ 
+.cols {
+    background-color: #263f4a;
+}
+ 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ 
+.table {
+    width: 23%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+ 
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
