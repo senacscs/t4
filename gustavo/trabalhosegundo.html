@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho do 1 ano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+  gap: 20px; /* Define o espaçamento entre as linhas e colunas dos itens */
+}
+
+.square-container {
+  /* Opcional: Defina uma largura base para os quadrados.
+     Use flex-basis para melhor integração com o flexbox. */
+  flex-basis: calc(33.33% - 20px); /* Aproximadamente 3 por linha, subtraindo o gap */
+  /* Ou uma largura fixa se preferir: */
+  /* width: 300px; */
+  margin-bottom: 20px; /* Mantém o espaço inferior entre as linhas */
+}
+
+/* Ajuste para telas menores (opcional) */
+@media (max-width: 768px) {
+  .square-container {
+    flex-basis: calc(50% - 20px); /* 2 por linha em telas médias */
+  }
+}
+
+@media (max-width: 480px) {
+  .square-container {
+    flex-basis: 100%; /* 1 por linha em telas pequenas */
+  }
+}
+    </style>
+</head>
+<h1>Trabalhos do técnico</h1>
+<!-- Contêiner para os quadrados -->
+<div class="container">
+    <!-- Contêiner quadrado com título, descrição e link -->
+    <div class="square-container">
+        <h2>Calendário HTML-CSS</h2>
+        <p>Calendário com os 12 meses utilizando HTML e CSS, estilizado de maneira própria.</p>
+        <a href="calendario/index.html">Veja o Projeto</a>
+    </div>
+
+</section>
