@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Gale Times</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #fff;
+      color: #000;
+    }
+    header {
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin: 0;
+    }
+    .date {
+      font-size: 14px;
+      color: #555;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      font-size: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      padding: 30px;
+    }
+    .main-news {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .sidebar-news {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    .sidebar-news:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .subheadline {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .image {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sidebar-news .desc {
+      font-size: 14px;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="date">Friday, July 4, 2025</div>
+    <h1>The Gale Times</h1>
+  </header>
+
+  <nav>
+    <span>Local Life</span>
+    <span>Forecast</span>
+    <span>Horoscope</span>
+    <span>Highlights</span>
+  </nav>
+
+  <main>
+    <div>
+      <article class="main-news">
+        <h2 class="headline">Students Explore Nature at Parque Witeck</h2>
+        <h3 class="subheadline">A day of learning, fresh air, and discovery guided by SENAC teachers</h3>
+        <p class="text">
+          On June 11, 2025, students from SENAC visited Parque Witeck, located in Novos Cabrais, on a school field trip. The group left Santa Cruz do Sul at 8:00 a.m. and arrived at the park around 9:00 a.m. Even though the weather was cold, the morning was sunny, with a bit of fog and clean air, perfect for exploring nature.
+          <br><br>
+          Guided by teachers Carlos, Poliana, and Kauane, students walked through different areas full of trees, plants, and animals. They took part in a photo activity to capture the natural beauty and also looked closely at tree leaves to study their shapes and textures. The trip was not only educational but also a great chance to enjoy nature and spend time with classmates.
+        </p>
+        <div class="image">
+          <img src="witeck.jpg" alt="Parque Witeck" />
+        </div>
+      </article>
+
+      <aside class="sidebar-news">
+        <h3 class="subheadline">
+          <a href="https://www.calendarr.com/brasil/datas-comemorativas-2025/#para-jul" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+            July Celebrations Remind Us of Health, Unity, and Freedom
+          </a>
+        </h3>
+        <p class="desc">
+          From Hospital Day to World Friendship Day, July is packed with cultural, civic, and symbolic observances. On this day, Americans celebrate Independence, and telemarketers are honored too. These dates highlight both personal rights and collective care.
+        </p>
+        <div class="image" style="height: 300px;">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=en.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FSao_Paulo"
+            style="border: 0"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </aside>
+    </div>
+
+    <div>
+      <aside class="sidebar-news">
+        <h3 class="subheadline">
+          <a href="https://metsul.com/2025-06-30-clima-julho-brasil/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+            Chilly Skies and Gentle Breezes Mark This Friday
+          </a>
+        </h3>
+        <p class="desc">
+          On July 4th, weather conditions remain calm. In Santa Cruz do Sul, skies are partly cloudy with 18°C, 78% humidity, and light winds. In São Paulo, temperatures will range from 16°C to 21°C with no rain expected. A cold wave might affect southern regions until the weekend.
+        </p>
+        <div class="image" style="height: 250px;">
+          <a
+            class="weatherwidget-io"
+            href="https://forecast7.com/pt/n29d72n52d43/santa-cruz-do-sul/"
+            data-label_1="SANTA CRUZ DO SUL"
+            data-label_2="Previsão do Tempo"
+            data-theme="original"
+            >Previsão do Tempo</a
+          >
+        </div>
+      </aside>
+
+      <aside class="sidebar-news">
+        <h3 class="subheadline">
+          <a href="https://www.personare.com.br/conteudo/horoscopo-julho-2025-m258654" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+            Stars Align for Emotional Growth and New Beginnings
+          </a>
+        </h3>
+        <p class="desc">
+          Venus favors reconciliation and meaningful conversations today. For Aries, inner growth continues; Geminis shine socially; and Cancers expand personal goals. Each sign will experience unique lessons as July unfolds.
+        </p>
+        <div class="image">
+          <img src="horoscope.webp" alt="Horoscope Illustration" />
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 The Gale Times - Ana, Henrique & Larissa
+  </footer>
+
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
+
+</body>
+</html>
