@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Reset and General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Header */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+}
+
+.search-bar button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.subscribe-btn {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #d23354;
+}
+
+/* Main Headline */
+.headline {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-news {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.featured-news img {
+    width: 50%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 400px;
+}
+
+.headline-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.headline-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.headline-text button {
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.headline-text button:hover {
+    background-color: #0f0f1a;
+}
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin: 2rem 0;
+}
+
+.main-news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.main-news article {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.main-news article:hover {
+    transform: translateY(-5px);
+}
+
+.main-news img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.main-news h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    padding: 1rem 1rem 0;
+    color: #1a1a2e;
+}
+
+.main-news p {
+    padding: 0.5rem 1rem 1rem;
+    color: #666;
+}
+
+.secondary-news {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.secondary-news article {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-news h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.advertisement {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-self: start;
+    position: sticky;
+    top: 100px;
+}
+
+.advertisement img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.advertisement p {
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+}
+
+.quick-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.quick-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: #e94560;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+.contact-info {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .main-news {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advertisement {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .featured-news {
+        flex-direction: column;
+    }
+    
+    .featured-news img {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .headline-text h2 {
+        font-size: 2rem;
+    }
+    
+    .main-news {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Special Effects */
+::selection {
+    background-color: #e94560;
+    color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0a001c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a001c;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <h1>SENAC NEWS</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search news...">
+        <button>🔍</button>
+    </div>
+</header>
+<section class="headline">
+    <div class="featured-news">
+        <img src="WhatsApp Image 2025-07-11 at 08.27.06.jpeg" alt="Main Headline">
+        <div class="headline-text">
+            <h2>SECOND-YEAR STUDENTS FROM SENAC SCS SCHOOL VISIT WITECK PARK</h2>
+            <p>Students show extreme happiness after the outing</p>
+            <a href="noticia.html"><button>READ MORE →</button></a>
+        </div>
+    </div>
+</section>
+<section class="news-grid">
+    <div class="main-news">
+        <article>
+            <img src="trump.jpg" alt="News 1">
+        <h3>Trump says US attacked three nuclear facilities in Iran</h3>
+            <p>Former US President Donald Trump claimed at a rally in Florida that the American government carried out strikes against three nuclear facilities in Iran during his term. </p>
+        </article>
+        <article>
+<img src="balao.jpg" alt="News 2">            
+<h3>Video shows moment hot air balloon with 22 people crashes in Santa Catarina; fatalities reported</h3>
+            <p>An accident involving a sightseeing hot air balloon carrying 22 people ended in tragedy this Saturday (21) in Santa Catarina, Brazil.</p>
+        </article>
+        <article>
+<img src="luz.jpg" alt="News 3">  
+          <h3>New Revolutionary Technology Promises to Reduce Energy Consumption by 50%</h3>
+            <p>São Paulo, March 15, 2024 — A Brazilian startup has just launched an innovative energy management system that promises to reduce electricity consumption in homes and businesses by up to 50%.</p>
+        </article>
+    </div>
+    <div class="secondary-news">
+        <article>
+            <h4>Film festival starts today</h4>
+            <p>Check the schedule.</p>
+        </article>
+        <article>
+            <h4>Dollar rises to R$ 5.20</h4>
+            <p>Experts warn about impacts.</p>
+        </article>
+    </div>
+</section>
+<footer>
+    <div class="quick-links">
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </div>
+    <div class="social-media">
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="contact-info">
+        <p>Email: contact@senacnews.com</p>
+        <p>Phone: (51) 1234-5678</p>
+    </div>
+</footer>
+</body>
+</html>

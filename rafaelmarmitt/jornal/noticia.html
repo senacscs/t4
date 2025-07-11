@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAC SCS Students Visit Witeck Park | SENAC NEWS</title>
+    <style>
+        /* Reset and General Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Custom Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        /* Header */
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e94560;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background-color: #e94560;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .subscribe-btn {
+            background-color: #e94560;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #d23354;
+        }
+
+        /* News Article Content */
+        .news-article {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .article-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-quote {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #e94560;
+            padding-left: 1rem;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .quick-links a:hover {
+            color: #e94560;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-media img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .logo h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            
+            .article-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SENAC NEWS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search news...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <main class="news-article">
+        <div class="article-header">
+            <h1>Second-year students from SENAC SCS School visit Witeck Park</h1>
+            <div class="article-meta">
+                <span>By SENAC NEWS Editorial</span> | 
+                <span>June 11</span> | 
+                <span>Education</span>
+            </div>
+        </div>
+
+        <img src="3a832b11-f124-4b75-8dd7-05dd07355fd2.jpg" alt="Students at Witeck Park" class="article-image">
+
+        <div class="article-content">
+            <p>Last Friday, second-year technical course students from SENAC Santa Cruz do Sul had the opportunity to visit the renowned Witeck Park in an extracurricular activity that combined learning and fun.</p>
+
+            <p>The field trip, organized by Biology and Sociology teachers, aimed to provide students with practical experience of contact with nature and ecological awareness.</p>
+
+            <div class="article-quote">
+                "It was amazing to see the students' excitement throughout the tour. They were able to apply many of the concepts we've seen in class in practice," said teacher Poliana, one of the activity organizers.
+            </div>
+
+            <p>During the visit, students participated in various activities, including:</p>
+            
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Guided ecological trail</li>
+                <li>Native species identification workshop</li>
+                <li>Environmental awareness activities</li>
+                <li>Sustainable picnic</li>
+            </ul>
+            <p>The school administration has already announced that they are planning new outdoor activities for the coming months, continuing the experiential learning project that has been a success among students.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="quick-links">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        </div>
+        <div class="contact-info">
+            <p>Email: contact@senacnews.com</p>
+            <p>Phone: (11) 1234-5678</p>
+        </div>
+    </footer>
+</body>
+</html>
