@@ -1,18 +1,29 @@
 <?php
 require 'config.php';
+session_start();
 
-function getProducts($pdo) {
+// Verifica se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
+// Funções para buscar dados
+function getProducts($pdo)
+{
     $stmt = $pdo->query('SELECT * FROM products');
     return $stmt->fetchAll();
 }
 
-function getUsers($pdo) {
-    $stmt = $pdo->query('SELECT * FROM users');
+function getUsers($pdo)
+{
+    $stmt = $pdo->query('SELECT id, name, email, phone FROM users');
     return $stmt->fetchAll();
 }
 
-function getOrders($pdo) {
-    $stmt = $pdo->query('SELECT o.id, u.name as user_name, o.order_date, o.status 
+function getOrders($pdo)
+{
+    $stmt = $pdo->query('SELECT o.id, u.name as user_name, o.order_date, o.status, o.total 
                          FROM orders o 
                          JOIN users u ON o.user_id = u.id');
     return $stmt->fetchAll();
@@ -31,12 +42,281 @@ $orders = getOrders($pdo);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Contas Valorant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #ff4655;
+            --primary-dark: #d33c4a;
+            --dark: #0f1923;
+            --darker: #0a141e;
+            --light: #ece8e1;
+            --gray: #768079;
+            --success: #2ecc71;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #productDesc {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        header {
+            background-color: var(--darker);
+            color: var(--light);
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            overflow: hidden;
+        }
+
+        .card {
+            background: var(--darker);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th,
+        td {
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 70, 85, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.7rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--light);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(255, 70, 85, 0.2);
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: transparent;
+            cursor: pointer;
+            margin-right: 2px;
+            font-weight: 500;
+            color: var(--gray);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            color: var(--light);
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            background-color: rgba(255, 70, 85, 0.1);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--light);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .status-completed {
+            color: var(--success);
+        }
+
+        .status-pending {
+            color: #f39c12;
+        }
+
+        .status-cancelled {
+            color: #e74c3c;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .action-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 5px;
+            }
+
+            .tab {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>LOJA DE CONTAS VALORANT</h1>
+        <div style="text-align: right; margin-top: -40px;">
+            <a href="logout.php" style="color: white; text-decoration: none;">Sair</a>
+        </div>
     </header>
 
     <div class="container">
@@ -63,17 +343,17 @@ $orders = getOrders($pdo);
                     </thead>
                     <tbody>
                         <?php foreach ($products as $product): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($product['id']) ?></td>
-                            <td><?= htmlspecialchars($product['name']) ?></td>
-                            <td><?= htmlspecialchars($product['rank']) ?></td>
-                            <td><?= htmlspecialchars($product['skin_count']) ?></td>
-                            <td class="price">R$ <?= number_format($product['price'], 2, ',', '.') ?></td>
-                            <td>
-                                <button class="action-btn" onclick="editProduct(<?= $product['id'] ?>)">Editar</button>
-                                <button class="action-btn" onclick="deleteProduct(<?= $product['id'] ?>)">Excluir</button>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?= htmlspecialchars($product['id']) ?></td>
+                                <td><?= htmlspecialchars($product['name']) ?></td>
+                                <td><?= htmlspecialchars($product['ranque']) ?></td>
+                                <td><?= htmlspecialchars($product['skin_count']) ?></td>
+                                <td class="price">R$ <?= number_format($product['price'], 2, ',', '.') ?></td>
+                                <td>
+                                    <button class="action-btn" onclick="editProduct(<?= $product['id'] ?>)">Editar</button>
+                                    <button class="action-btn" onclick="deleteProduct(<?= $product['id'] ?>)">Excluir</button>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
@@ -94,12 +374,12 @@ $orders = getOrders($pdo);
                     </thead>
                     <tbody>
                         <?php foreach ($users as $user): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($user['id']) ?></td>
-                            <td><?= htmlspecialchars($user['name']) ?></td>
-                            <td><?= htmlspecialchars($user['email']) ?></td>
-                            <td><?= htmlspecialchars($user['phone']) ?></td>
-                        </tr>
+                            <tr>
+                                <td><?= htmlspecialchars($user['id']) ?></td>
+                                <td><?= htmlspecialchars($user['name']) ?></td>
+                                <td><?= htmlspecialchars($user['email']) ?></td>
+                                <td><?= htmlspecialchars($user['phone']) ?></td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
@@ -110,28 +390,38 @@ $orders = getOrders($pdo);
             <h2>Pedidos Realizados</h2>
             <div class="card">
                 <table id="ordersTable">
+                    <!-- Dentro da tabela de pedidos (procure por <table id="ordersTable">) -->
                     <thead>
                         <tr>
                             <th>ID Pedido</th>
                             <th>Usuário</th>
                             <th>Data</th>
+                            <th>Total</th>
                             <th>Status</th>
-                            <th>Detalhes</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($orders as $order): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($order['id']) ?></td>
-                            <td><?= htmlspecialchars($order['user_name']) ?></td>
-                            <td><?= date('d/m/Y', strtotime($order['order_date'])) ?></td>
-                            <td class="status-<?= htmlspecialchars($order['status']) ?>">
-                                <?= ucfirst(htmlspecialchars($order['status'])) ?>
-                            </td>
-                            <td>
-                                <button class="action-btn" onclick="viewOrderDetails(<?= $order['id'] ?>)">Ver</button>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?= htmlspecialchars($order['id']) ?></td>
+                                <td><?= htmlspecialchars($order['user_name']) ?></td>
+                                <td><?= date('d/m/Y H:i', strtotime($order['order_date'])) ?></td>
+                                <td>R$ <?= number_format($order['total'], 2, ',', '.') ?></td>
+                                <td class="status-<?= htmlspecialchars($order['status']) ?>">
+                                    <?= ucfirst(htmlspecialchars($order['status'])) ?>
+                                </td>
+                                <td>
+                                    <button class="action-btn" onclick="viewOrderDetails(<?= $order['id'] ?>)">
+                                        <i class="fas fa-eye"></i> Ver
+                                    </button>
+                                    <?php if ($order['status'] == 'pendente'): ?>
+                                        <button class="action-btn success" onclick="completeOrder(<?= $order['id'] ?>)">
+                                            <i class="fas fa-check"></i> Concluir
+                                        </button>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
@@ -141,7 +431,7 @@ $orders = getOrders($pdo);
         <div id="add" class="tab-content">
             <h2>Adicionar Novo</h2>
             <div class="card">
-                <form id="addForm" method="post" action="adicionar-produto.php">
+                <form id="addForm" method="post" onsubmit="return false;">
                     <div class="form-group">
                         <label>Tipo:</label>
                         <select id="addType" onchange="changeAddForm()">
@@ -158,7 +448,7 @@ $orders = getOrders($pdo);
                         </div>
                         <div class="form-group">
                             <label>Descrição:</label>
-                            <input type="text" name="desc" id="productDesc" placeholder="Descrição detalhada da conta" required>
+                            <textarea name="desc" id="productDesc" placeholder="Descrição detalhada da conta" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>Rank:</label>
@@ -181,7 +471,7 @@ $orders = getOrders($pdo);
                             <label>Preço (R$):</label>
                             <input type="number" step="0.01" name="price" id="productPrice" placeholder="Preço em reais" required>
                         </div>
-                        <button type="submit">Adicionar Conta</button>
+                        <button type="button" onclick="addProduct()">Adicionar Conta</button>
                     </div>
 
                     <div id="userForm" style="display: none;">
@@ -199,11 +489,11 @@ $orders = getOrders($pdo);
                         </div>
                         <div class="form-group">
                             <label>Endereço:</label>
-                            <input type="text" name="address" id="userAddress" placeholder="Endereço de entrega" required>
+                            <input type="text" name="address" id="userAddress" placeholder="Endereço de entrega">
                         </div>
                         <div class="form-group">
                             <label>Telefone:</label>
-                            <input type="text" name="phone" id="userPhone" placeholder="Número de telefone" required>
+                            <input type="text" name="phone" id="userPhone" placeholder="Número de telefone">
                         </div>
                         <button type="button" onclick="addUser()">Adicionar Usuário</button>
                     </div>
@@ -213,7 +503,7 @@ $orders = getOrders($pdo);
                             <label>Usuário:</label>
                             <select id="orderUser" name="user_id" required>
                                 <?php foreach ($users as $user): ?>
-                                <option value="<?= $user['id'] ?>"><?= htmlspecialchars($user['name']) ?></option>
+                                    <option value="<?= $user['id'] ?>"><?= htmlspecialchars($user['name']) ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -221,12 +511,20 @@ $orders = getOrders($pdo);
                             <label>Contas:</label>
                             <div id="orderProducts">
                                 <?php foreach ($products as $product): ?>
-                                <div>
-                                    <input type="checkbox" name="products[]" value="<?= $product['id'] ?>">
-                                    <label><?= htmlspecialchars($product['name']) ?> (R$ <?= number_format($product['price'], 2, ',', '.') ?>)</label>
-                                </div>
+                                    <div style="margin-bottom: 10px;">
+                                        <input type="checkbox" name="products[]" value="<?= $product['id'] ?>"
+                                            data-price="<?= $product['price'] ?>"
+                                            onchange="calculateTotal()">
+                                        <label><?= htmlspecialchars($product['name']) ?> (R$ <?= number_format($product['price'], 2, ',', '.') ?>)</label>
+                                        <input type="number" name="quantities[]" value="1" min="1" style="width: 60px; margin-left: 10px;"
+                                            onchange="calculateTotal()">
+                                    </div>
                                 <?php endforeach; ?>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Total:</label>
+                            <input type="text" id="orderTotal" value="R$ 0,00" readonly>
                         </div>
                         <div class="form-group">
                             <label>Status:</label>
@@ -266,461 +564,289 @@ $orders = getOrders($pdo);
         // Função para alternar entre formulários de adição
         function changeAddForm() {
             const addType = document.getElementById('addType').value;
-            
+
             // Esconde todos os formulários
             document.getElementById('productForm').style.display = 'none';
             document.getElementById('userForm').style.display = 'none';
             document.getElementById('orderForm').style.display = 'none';
-            
+
             // Mostra o formulário selecionado
             document.getElementById(addType + 'Form').style.display = 'block';
-        }
 
-        // Funções para adicionar dados (seriam implementadas com AJAX)
-        function addProduct() {
-            // Implementação com AJAX para adicionar produto
-            alert('Produto adicionado com sucesso!');
-        }
-
-        function addUser() {
-            // Implementação com AJAX para adicionar usuário
-            alert('Usuário adicionado com sucesso!');
-        }
-
-        function addOrder() {
-            // Implementação com AJAX para adicionar pedido
-            alert('Pedido realizado com sucesso!');
-        }
-
-        // Funções para editar/excluir
-        function editProduct(id) {
-            alert('Editar produto ID: ' + id);
-            // Implementação com AJAX para editar produto
-        }
-
-        function deleteProduct(id) {
-            if (confirm('Tem certeza que deseja excluir este produto?')) {
-                alert('Produto ID: ' + id + ' excluído com sucesso!');
-                // Implementação com AJAX para excluir produto
+            // Se for o formulário de pedido, calcula o total
+            if (addType === 'order') {
+                calculateTotal();
             }
         }
 
-        function viewOrderDetails(id) {
-            alert('Visualizar detalhes do pedido ID: ' + id);
-            // Implementação com AJAX para visualizar detalhes do pedido
-        }
-        async function loadProducts() {
-    try {
-        const response = await fetch('get_products.php');
-        const products = await response.json();
+        // Função para calcular o total do pedido
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('#orderProducts input[type="checkbox"]:checked');
+            let total = 0;
 
-        const table = document.getElementById('productsTable').getElementsByTagName('tbody')[0];
-        table.innerHTML = '';
-
-        products.forEach(product => {
-            const row = table.insertRow();
-            row.innerHTML = `
-                <td>${product.id}</td>
-                <td>${product.name}</td>
-                <td>${product.rank}</td>
-                <td>${product.skin_count}</td>
-                <td class="price">R$${product.price.toFixed(2)}</td>
-                <td><button class="action-btn" onclick="viewProduct(${product.id})">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5z"/></svg>
-                    Ver
-                </button></td>
-            `;
-        });
-    } catch (error) {
-        console.error('Erro ao carregar produtos:', error);
-    }
-}
-
-async function addProduct() {
-    const product = {
-        name: document.getElementById('productName').value,
-        desc: document.getElementById('productDesc').value,
-        rank: document.getElementById('productRank').value,
-        skin_count: document.getElementById('productSkins').value,
-        price: document.getElementById('productPrice').value
-    };
-
-    if (!product.name || !product.price) {
-        alert('Preencha todos os campos obrigatórios!');
-        return;
-    }
-
-    try {
-        const response = await fetch('add_product.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(product)
-        });
-
-        const result = await response.json();
-        alert(result.message);
-
-        // Limpar formulário
-        document.getElementById('productName').value = '';
-        document.getElementById('productDesc').value = '';
-        document.getElementById('productSkins').value = '';
-            document.getElementById('productPrice').value = '';
-            // You may want to reload the products after adding
-            loadProducts();
-            // Optionally, switch to the products tab if you have tab logic
-            // openTab('products');
-        } catch (error) {
-            console.error('Erro ao adicionar produto:', error);
-            alert('Erro ao adicionar produto!');
-        }
-    }
-    
-    // The following functions should be defined at the top level, not inside another function or try/catch
-    
-    function openTab(tabName) {
-        const tabContents = document.getElementsByClassName('tab-content');
-        for (let i = 0; i < tabContents.length; i++) {
-            tabContents[i].classList.remove('active');
-        }
-    
-        const tabs = document.getElementsByClassName('tab');
-        for (let i = 0; i < tabs.length; i++) {
-            tabs[i].classList.remove('active');
-        }
-    
-        document.getElementById(tabName).classList.add('active');
-        event.currentTarget.classList.add('active');
-    
-        if (tabName === 'products') {
-            loadProducts();
-        } else if (tabName === 'users') {
-            loadUsers();
-        } else if (tabName === 'orders') {
-            loadOrders();
-        } else if (tabName === 'add') {
-            changeAddForm();
-        }
-    }
-    
-    function changeAddForm() {
-        const type = document.getElementById('addType').value;
-        document.getElementById('productForm').style.display = 'none';
-        document.getElementById('userForm').style.display = 'none';
-        document.getElementById('orderForm').style.display = 'none';
-    
-        if (type === 'product') {
-            document.getElementById('productForm').style.display = 'block';
-        } else if (type === 'user') {
-            document.getElementById('userForm').style.display = 'block';
-        } else if (type === 'order') {
-            document.getElementById('orderForm').style.display = 'block';
-            loadUsersForOrder();
-            loadProductsForOrder();
-        }
-    }
-    
-    function loadUsers() {
-        const users = [
-            { id: 1, name: "João Silva", email: "joao@exemplo.com", phone: "(11) 98765-4321" },
-            { id: 2, name: "Maria Souza", email: "maria@exemplo.com", phone: "(21) 99876-5432" }
-        ];
-    
-        const table = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
-        table.innerHTML = '';
-    
-        users.forEach(user => {
-            const row = table.insertRow();
-            row.innerHTML = `
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-                <td>${user.phone}</td>
-            `;
-        });
-    }
-    
-    function loadOrders() {
-        const orders = [
-            { id: 1, user_id: 1, user_name: "João Silva", date: "15/05/2023", status: "completo" },
-            { id: 2, user_id: 2, user_name: "Maria Souza", date: "16/05/2023", status: "pendente" }
-        ];
-    
-        const table = document.getElementById('ordersTable').getElementsByTagName('tbody')[0];
-        table.innerHTML = '';
-    
-        orders.forEach(order => {
-            const row = table.insertRow();
-            row.innerHTML = `
-                <td>${order.id}</td>
-                <td>${order.user_name}</td>
-                <td>${order.date}</td>
-                <td class="status-${order.status}">${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</td>
-                <td><button class="action-btn" onclick="viewOrder(${order.id})">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5z"/></svg>
-                    Detalhes
-                </button></td>
-            `;
-        });
-    }
-    
-    function loadUsersForOrder() {
-        const select = document.getElementById('orderUser');
-        select.innerHTML = '<option value="">Selecione um usuário</option>';
-    
-        const users = [
-            { id: 1, name: "João Silva" },
-            { id: 2, name: "Maria Souza" }
-        ];
-    
-        users.forEach(user => {
-            const option = document.createElement('option');
-            option.value = user.id;
-            option.textContent = user.name;
-            select.appendChild(option);
-        });
-    }
-    
-    function loadProductsForOrder() {
-        const container = document.getElementById('orderProducts');
-        container.innerHTML = '';
-    
-        const products = [
-            { id: 1, name: "Conta Radiante", price: 1499.99 },
-            { id: 2, name: "Smurf Imortal", price: 799.99 },
-            { id: 3, name: "Diamante com Skins", price: 999.99 }
-        ];
-    
-        products.forEach(product => {
-            const div = document.createElement('div');
-            div.style.marginBottom = '10px';
-            div.style.display = 'flex';
-            div.style.alignItems = 'center';
-            div.style.gap = '10px';
-            div.innerHTML = `
-                <input type="checkbox" id="product_${product.id}" value="${product.id}">
-                <label for="product_${product.id}" style="margin-bottom: 0; flex-grow: 1;">${product.name} (R$${product.price.toFixed(2)})</label>
-                <input type="number" id="qty_${product.id}" min="1" value="1" style="width: 80px;">
-            `;
-            container.appendChild(div);
-        });
-    }
-    
-    function addUser() {
-        const user = {
-            name: document.getElementById('userName').value,
-            email: document.getElementById('userEmail').value,
-            password: document.getElementById('userPassword').value,
-            address: document.getElementById('userAddress').value,
-            phone: document.getElementById('userPhone').value
-        };
-    
-        if (!user.name || !user.email || !user.password) {
-            alert('Preencha todos os campos obrigatórios!');
-            return;
-        }
-    
-        alert('Usuário adicionado com sucesso!');
-        document.getElementById('userName').value = '';
-        document.getElementById('userEmail').value = '';
-        document.getElementById('userPassword').value = '';
-        document.getElementById('userAddress').value = '';
-        document.getElementById('userPhone').value = '';
-    
-        loadUsers();
-        openTab('users');
-    }
-    
-    function addOrder() {
-        const userId = document.getElementById('orderUser').value;
-        const status = document.getElementById('orderStatus').value;
-    
-        if (!userId) {
-            alert('Selecione um usuário!');
-            return;
-        }
-    
-        const products = [];
-        const checkboxes = document.querySelectorAll('#orderProducts input[type="checkbox"]:checked');
-    
-        if (checkboxes.length === 0) {
-            alert('Selecione pelo menos uma conta!');
-            return;
-        }
-    
-        checkboxes.forEach(checkbox => {
-            const productId = checkbox.value;
-            const quantity = document.getElementById(`qty_${productId}`).value;
-            products.push({ productId, quantity });
-        });
-    
-        alert('Pedido realizado com sucesso!');
-        loadOrders();
-        openTab('orders');
-    }
-    
-    function viewProduct(id) {
-        alert(`Detalhes da conta ID: ${id}\n\nEsta função exibiria mais detalhes em uma implementação completa.`);
-    }
-    
-    function viewOrder(id) {
-        alert(`Detalhes do pedido ID: ${id}\n\nEsta função exibiria os itens do pedido em uma implementação completa.`);
-    }
-    
-    window.onload = function () {
-        loadProducts();
-    };
-    // Funções para adicionar dados
-function addProduct() {
-    const formData = {
-        name: document.getElementById('productName').value,
-        desc: document.getElementById('productDesc').value,
-        rank: document.getElementById('productRank').value,
-        skin_count: document.getElementById('productSkins').value,
-        price: document.getElementById('productPrice').value
-    };
-
-    fetch('adicionar-produto.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-            location.reload();
-        } else {
-            alert('Erro: ' + data.message);
-        }
-    })
-    .catch(error => console.error('Error:', error));
-}
-
-function addUser() {
-    const formData = {
-        name: document.getElementById('userName').value,
-        email: document.getElementById('userEmail').value,
-        password: document.getElementById('userPassword').value,
-        address: document.getElementById('userAddress').value,
-        phone: document.getElementById('userPhone').value
-    };
-
-    fetch('adicionar-usuario.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-            location.reload();
-        } else {
-            alert('Erro: ' + data.message);
-        }
-    })
-    .catch(error => console.error('Error:', error));
-}
-
-function addOrder() {
-    const products = [];
-    document.querySelectorAll('#orderProducts input[type="checkbox"]:checked').forEach(checkbox => {
-        products.push(checkbox.value);
-    });
-
-    const formData = {
-        user_id: document.getElementById('orderUser').value,
-        products: products,
-        status: document.getElementById('orderStatus').value
-    };
-
-    fetch('adicionar-pedido.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-            location.reload();
-        } else {
-            alert('Erro: ' + data.message);
-        }
-    })
-    .catch(error => console.error('Error:', error));
-}
-
-// Funções para editar/excluir
-function editProduct(id) {
-    // Aqui você implementaria a lógica para buscar os dados do produto
-    // e preencher um formulário de edição
-    const newName = prompt("Digite o novo nome do produto:");
-    if (newName) {
-        fetch('editar-produto.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ id: id, name: newName })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            if (data.success) location.reload();
-        })
-        .catch(error => console.error('Error:', error));
-    }
-}
-
-function deleteProduct(id) {
-    if (confirm('Tem certeza que deseja excluir este produto?')) {
-        fetch('excluir-produto.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ id: id })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            if (data.success) location.reload();
-        })
-        .catch(error => console.error('Error:', error));
-    }
-}
-
-function viewOrderDetails(id) {
-    fetch(`detalhes-pedido.php?id=${id}`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            let message = `Pedido #${data.data.id}\n`;
-            message += `Usuário: ${data.data.user_name}\n`;
-            message += `Data: ${data.data.order_date}\n`;
-            message += `Status: ${data.data.status}\n\n`;
-            message += `Produtos:\n`;
-            
-            data.data.products.forEach(product => {
-                message += `- ${product.name} (R$ ${product.price.toFixed(2)})\n`;
+            checkboxes.forEach(checkbox => {
+                const quantity = checkbox.nextElementSibling.nextElementSibling.value;
+                const price = parseFloat(checkbox.dataset.price);
+                total += price * quantity;
             });
 
-            alert(message);
-        } else {
-            alert('Erro: ' + data.message);
+            document.getElementById('orderTotal').value = 'R$ ' + total.toFixed(2).replace('.', ',');
         }
-    })
-    .catch(error => console.error('Error:', error));
-}
+
+        // Funções para adicionar dados via AJAX
+        async function addProduct() {
+            const product = {
+                name: document.getElementById('productName').value,
+                desc: document.getElementById('productDesc').value,
+                ranque: document.getElementById('productRank').value,
+                skin_count: document.getElementById('productSkins').value,
+                price: document.getElementById('productPrice').value
+            };
+
+            try {
+                const response = await fetch('adicionar-produto.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(product)
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (result.success) {
+                    // Limpar formulário
+                    document.getElementById('productName').value = '';
+                    document.getElementById('productDesc').value = '';
+                    document.getElementById('productSkins').value = '';
+                    document.getElementById('productPrice').value = '';
+
+                    // Recarregar a página para atualizar a lista
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar produto');
+            }
+        }
+
+        async function addUser() {
+            const user = {
+                name: document.getElementById('userName').value,
+                email: document.getElementById('userEmail').value,
+                password: document.getElementById('userPassword').value,
+                address: document.getElementById('userAddress').value,
+                phone: document.getElementById('userPhone').value
+            };
+
+            try {
+                const response = await fetch('adicionar-usuario.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(user)
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (result.success) {
+                    // Limpar formulário
+                    document.getElementById('userName').value = '';
+                    document.getElementById('userEmail').value = '';
+                    document.getElementById('userPassword').value = '';
+                    document.getElementById('userAddress').value = '';
+                    document.getElementById('userPhone').value = '';
+
+                    // Recarregar a página para atualizar a lista
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar usuário');
+            }
+        }
+
+        async function addOrder() {
+            const userId = document.getElementById('orderUser').value;
+            const status = document.getElementById('orderStatus').value;
+            const products = [];
+
+            document.querySelectorAll('#orderProducts input[type="checkbox"]:checked').forEach(checkbox => {
+                const productId = checkbox.value;
+                const quantity = checkbox.nextElementSibling.nextElementSibling.value;
+                products.push({
+                    productId,
+                    quantity
+                });
+            });
+
+            if (products.length === 0) {
+                alert('Selecione pelo menos um produto!');
+                return;
+            }
+
+            try {
+                const response = await fetch('adicionar-pedido.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_id: userId,
+                        products,
+                        status
+                    })
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (result.success) {
+                    // Recarregar a página para atualizar a lista
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar pedido');
+            }
+        }
+
+        // Funções para editar/excluir
+        async function editProduct(id) {
+            try {
+                // 1. Busca os dados atuais do produto
+                const response = await fetch(`buscar-produto.php?id=${id}`);
+                const product = await response.json();
+
+                if (!product) {
+                    alert('Produto não encontrado!');
+                    return;
+                }
+
+                // 2. Exibe um formulário de edição
+                const newName = prompt("Editar nome do produto:", product.name);
+                if (!newName) return;
+
+                const newRank = prompt("Editar rank:", product.ranque);
+                if (!newRank) return;
+
+                const newSkins = prompt("Editar quantidade de skins:", product.skin_count);
+                if (!newSkins) return;
+
+                const newPrice = prompt("Editar preço:", product.price);
+                if (!newPrice) return;
+
+                // 3. Envia os dados atualizados
+                
+                const updateResponse = await fetch('editar-produto.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        id: id,
+                        name: newName,
+                        ranque: newRank,
+                        skin_count: newSkins,
+                        price: newPrice
+                    })
+                });
+
+                const result = await updateResponse.json();
+                alert(result.message);
+
+                if (result.success) {
+                    location.reload(); // Atualiza a página
+                }
+            } catch (error) {
+                console.error('Erro ao editar produto:', error);
+                alert('Erro ao editar produto');
+            }
+        }
+        async function deleteProduct(id) {
+            if (!confirm('Tem certeza que deseja excluir este produto?')) return;
+
+            try {
+                const response = await fetch('excluir-produto.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        id
+                    })
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (result.success) {
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao excluir produto');
+            }
+        }
+
+        async function viewOrderDetails(id) {
+            try {
+                const response = await fetch(`detalhes-pedido.php?id=${id}`);
+                const result = await response.json();
+
+                if (result.success) {
+                    let message = `Pedido #${result.data.id}\n`;
+                    message += `Usuário: ${result.data.user_name}\n`;
+                    message += `Data: ${new Date(result.data.order_date).toLocaleString()}\n`;
+                    message += `Status: ${result.data.status}\n`;
+                    message += `Total: R$ ${parseFloat(result.data.total).toFixed(2)}\n\n`;
+                    message += `Produtos:\n`;
+
+                    result.data.products.forEach(product => {
+                        message += `- ${product.name} (R$ ${parseFloat(product.price).toFixed(2)})\n`;
+                    });
+
+                    alert(message);
+                } else {
+                    alert('Erro: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao carregar detalhes do pedido');
+            }
+        }
+        async function completeOrder(orderId) {
+            if (!confirm('Deseja realmente marcar este pedido como concluído?')) {
+                return;
+            }
+
+            try {
+                const response = await fetch('concluir-pedido.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        order_id: orderId
+                    })
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (result.success) {
+                    // Atualiza a página para mostrar as mudanças
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao concluir pedido');
+            }
+        }
     </script>
 </body>
+
 </html>

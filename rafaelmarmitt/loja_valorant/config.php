@@ -5,7 +5,7 @@ define('ENVIRONMENT', 'development');
 $host = 'localhost';
 $db   = 'loja_valorant';
 $user = 'root';
-$pass = 'admin';
+$pass = 'Rafachick1';
 
 // Verifica a versão do MySQL para definir o charset adequado
 $charset = 'utf8';
@@ -70,4 +70,12 @@ function getPDO() {
 function closeConnection() {
     global $pdo;
     $pdo = null;
+}
+
+// Se estiver tentando acessar login/register já estando logado
+if (basename($_SERVER['PHP_SELF']) == 'login.php' || basename($_SERVER['PHP_SELF']) == 'register.php') {
+    if (isset($_SESSION['user_id'])) {
+        header('Location: index.php');
+        exit;
+    }
 }

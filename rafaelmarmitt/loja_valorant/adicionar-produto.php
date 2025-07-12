@@ -5,11 +5,11 @@ header('Content-Type: application/json');
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-$stmt = $pdo->prepare('INSERT INTO products (name, description, rank, skin_count, price) VALUES (?, ?, ?, ?, ?)');
+$stmt = $pdo->prepare('INSERT INTO products (name, description, ranque, skin_count, price) VALUES (?, ?, ?, ?, ?)');
 $stmt->execute([
     $data['name'],
     $data['desc'],
-    $data['rank'],
+    $data['ranque'],
     $data['skin_count'],
     $data['price']
 ]);
