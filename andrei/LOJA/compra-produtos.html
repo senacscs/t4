@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Produtos</title>
+    <link rel="stylesheet" href="compraprodutos.css">
+</head>
+<body>
+    <header>
+        <h1>Comprar Produtos</h1>
+        <nav>
+            <a href="index.html">Voltar</a>
+            <a href="visualizar-produtos.html">Ver Todos Produtos</a>
+        </nav>
+    </header>
+    <main>
+        <div id="usuarioInfo" style="display: none;">
+            <h2>Olá, <span id="nomeUsuario"></span>!</h2>
+            <button id="logout">Sair</button>
+        </div>
+        
+        <div id="loginSection">
+            <h2>Faça login para comprar</h2>
+            <form id="formLogin">
+                <div>
+                    <label for="loginUsuario">Usuário:</label>
+                    <input type="text" id="loginUsuario" required>
+                </div>
+                <div>
+                    <label for="loginSenha">Senha:</label>
+                    <input type="password" id="loginSenha" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        
+        <div id="produtosSection" style="display: none;">
+            <h2>Produtos Disponíveis</h2>
+            <div id="listaProdutos" class="grid-produtos">
+                <!-- Produtos serão carregados aqui via JavaScript -->
+            </div>
+            
+            <h2>Carrinho de Compras</h2>
+            <div id="carrinho">
+                <table id="tabelaCarrinho">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço Unitário</th>
+                            <th>Subtotal</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total:</td>
+                            <td id="totalCarrinho">R$ 0,00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button id="finalizarCompra" disabled>Finalizar Compra</button>
+            </div>
+        </div>
+    </main>
+    <script src="compra-produtos.js"></script>
+</body>
+</html>

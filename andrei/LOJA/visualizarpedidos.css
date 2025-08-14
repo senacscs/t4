@@ -1,0 +1,177 @@
+/* visualizar-pedidos.css */
+body {
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: 500;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+}
+
+#loginSection {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#pedidosSection {
+    display: none;
+}
+
+.pedido-container {
+    margin-bottom: 2rem;
+}
+
+.pedido-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.pedido-header {
+    background: #34495e;
+    color: white;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pedido-id {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.pedido-data {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.pedido-status {
+    background: #f1c40f;
+    color: #34495e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.pedido-body {
+    padding: 1.5rem;
+}
+
+.pedido-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.pedido-itens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 1rem;
+}
+
+.item-pedido {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.item-nome {
+    font-weight: 500;
+}
+
+.item-detalhes {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.item-subtotal {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Estilo para o formulário de login */
+#formLoginPedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#formLoginPedidos div {
+    display: flex;
+    flex-direction: column;
+}
+
+#formLoginPedidos label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+#formLoginPedidos input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#formLoginPedidos button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#formLoginPedidos button:hover {
+    background: #5649c0;
+}
+
+@media (max-width: 600px) {
+    .pedido-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .item-pedido {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}

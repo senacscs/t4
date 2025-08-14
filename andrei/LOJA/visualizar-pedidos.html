@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos</title>
+    <link rel="stylesheet" href="visualizarpedidos.css">
+</head>
+<body>
+    <header>
+        <h1>Meus Pedidos</h1>
+        <nav>
+            <a href="index.html">Voltar</a>
+            <a href="compra-produtos.html">Comprar Mais Produtos</a>
+        </nav>
+    </header>
+    <main>
+        <div id="loginSection" style="display: none;">
+            <h2>Faça login para ver seus pedidos</h2>
+            <form id="formLoginPedidos">
+                <div>
+                    <label for="loginUsuarioPedidos">Usuário:</label>
+                    <input type="text" id="loginUsuarioPedidos" required>
+                </div>
+                <div>
+                    <label for="loginSenhaPedidos">Senha:</label>
+                    <input type="password" id="loginSenhaPedidos" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        
+        <div id="pedidosSection" style="display: none;">
+            <h2>Pedidos de <span id="nomeUsuarioPedidos"></span></h2>
+            <div id="listaPedidos">
+                <!-- Pedidos serão carregados aqui via JavaScript -->
+            </div>
+        </div>
+    </main>
+    <script src="visualizar-pedidos.js"></script>
+</body>
+</html>
