@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #232629;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#equipesContainer {
+    margin: 30px auto;
+    max-width: 500px;
+    background: #2d2f31;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1.1em;
+    width: 100%;
+    max-width: 440px;
+}
+
+.equipe:last-child {
+    border-bottom: none;
+}
+
+.equipe span.cronometro {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    color: #00bfff;
+    margin: 0 16px;
+    min-width: 110px;
+    text-align: right;
+}
+
+.equipe button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+
+.equipe button:hover {
+    background: #0056b3;
+}
+
+input#nomeEquipe {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #444;
+    background: #232629;
+    color: #e0e0e0;
+    border-radius: 4px;
+    margin: 24px 0 0 20px;
+    width: 220px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[onclick^="adicionarEquipe"] {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 1em;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+button[onclick^="adicionarEquipe"]:hover {
+    background: #1e7e34;
+}
