@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Meu Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html" class="active"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Meu Perfil</h1>
+            <p class="tagline">Gerencie suas informações e preferências</p>
+        </header>
+        
+        <div class="profile-header">
+            <div class="avatar-container">
+                <div class="avatar"><img class= "pfp"src="data:image/jpeg;base64,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" alt=""></div>
+                <button class="change-avatar">Alterar Foto</button>
+            </div>
+            
+            <div class="profile-info">
+                <h2>João da Silva</h2>
+                <p class="profile-meta">9º Ano A • Escola Municipal Professora Maria</p>
+                <p class="profile-bio">Estudante dedicado com foco em melhorar em matemática e história. Adoro ler e praticar esportes.</p>
+                
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="number">78%</span>
+                        <span class="label">Taxa de Acertos</span>
+                    </div>
+                    
+                    <div class="stat">
+                        <span class="number">15</span>
+                        <span class="label">Atividades</span>
+                    </div>
+                    
+                    <div class="stat">
+                        <span class="number">3</span>
+                        <span class="label">Metas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-sections">
+            <div class="profile-section">
+                <h2>Minhas Matérias</h2>
+                
+                <div class="subjects-grid">
+                    <div class="subject-card math">
+                        <h3>Matemática</h3>
+                        <div class="subject-progress">
+                            <div class="progress-bar" style="width: 65%"></div>
+                            <span>65% domínio</span>
+                        </div>
+                        <p>Área de melhoria: Equações de 2º grau</p>
+                    </div>
+                    
+                    <div class="subject-card portuguese">
+                        <h3>Português</h3>
+                        <div class="subject-progress">
+                            <div class="progress-bar" style="width: 82%"></div>
+                            <span>82% domínio</span>
+                        </div>
+                        <p>Área de melhoria: Concordância verbal</p>
+                    </div>
+                    
+                    <div class="subject-card history">
+                        <h3>História</h3>
+                        <div class="subject-progress">
+                            <div class="progress-bar" style="width: 75%"></div>
+                            <span>75% domínio</span>
+                        </div>
+                        <p>Área de melhoria: Revolução Industrial</p>
+                    </div>
+                    
+                    <div class="subject-card science">
+                        <h3>Ciências</h3>
+                        <div class="subject-progress">
+                            <div class="progress-bar" style="width: 88%"></div>
+                            <span>88% domínio</span>
+                        </div>
+                        <p>Sem áreas críticas identificadas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h2>Meus Interesses</h2>
+                
+                <div class="interests-tags">
+                    <span class="tag">Matemática</span>
+                    <span class="tag">Leitura</span>
+                    <span class="tag">História</span>
+                    <span class="tag">Esportes</span>
+                    <span class="tag add-tag">+ Adicionar</span>
+                </div>
+                
+                <div class="learning-style">
+                    <h3>Estilo de Aprendizado Preferido</h3>
+                    <div class="style-options">
+                        <label class="style-option">
+                            <input type="radio" name="learning-style" checked>
+                            <span>Visual (vídeos, imagens)</span>
+                        </label>
+                        
+                        <label class="style-option">
+                            <input type="radio" name="learning-style">
+                            <span>Auditivo (áudios, explicações)</span>
+                        </label>
+                        
+                        <label class="style-option">
+                            <input type="radio" name="learning-style">
+                            <span>Prático (exercícios, mão na massa)</span>
+                        </label>
+                        
+                        <label class="style-option">
+                            <input type="radio" name="learning-style">
+                            <span>Teórico (textos, leitura)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h2>Atividades Recentes</h2>
+                
+                <div class="activity-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Hoje</div>
+                        <div class="timeline-content">
+                            <h3>Exercícios de Matemática concluídos</h3>
+                            <p>Você completou 15/20 exercícios de equações</p>
+                            <span class="timeline-badge math">Matemática</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Ontem</div>
+                        <div class="timeline-content">
+                            <h3>Novo material visualizado</h3>
+                            <p>Você assistiu ao vídeo "Revolução Industrial"</p>
+                            <span class="timeline-badge history">História</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2 dias atrás</div>
+                        <div class="timeline-content">
+                            <h3>Participação em discussão</h3>
+                            <p>Você respondeu no tópico "Dúvidas sobre equações"</p>
+                            <span class="timeline-badge math">Matemática</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="see-all">Ver todas as atividades</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Precisa atualizar informações da escola? <a href="configuracoes.html">Acesse Configurações</a></p>
+        </footer>
+    </div>
+</body>
+</html>

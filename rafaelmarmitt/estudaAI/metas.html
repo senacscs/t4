@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Metas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html" class="active"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Suas Metas</h1>
+            <p class="tagline">Defina objetivos e acompanhe seu progresso</p>
+        </header>
+        
+        <div class="goals-summary">
+            <div class="summary-card">
+                <h3>Metas Ativas</h3>
+                <div class="big-number">4</div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>Metas Concluídas</h3>
+                <div class="big-number">2</div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>Próximo Prazo</h3>
+                <div class="big-number">3 dias</div>
+                <p>Melhorar em Equações</p>
+            </div>
+        </div>
+        
+        <div class="current-goals">
+            <h2>Metas em Andamento</h2>
+            
+            <div class="goal-card">
+                <div class="goal-header">
+                    <h3>Melhorar em Equações de 2º Grau</h3>
+                    <span class="deadline">Prazo: 15/10</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 45%"></div>
+                    <span>45% concluído</span>
+                </div>
+                <div class="goal-details">
+                    <p><strong>Objetivo:</strong> Atingir pelo menos 80% de acertos nos exercícios de equações</p>
+                    <p><strong>Ações recomendadas:</strong></p>
+                    <ul>
+                        <li>Praticar 10 exercícios por dia</li>
+                        <li>Revisar a aula sobre Fórmula de Bhaskara</li>
+                        <li>Participar do grupo de estudos</li>
+                    </ul>
+                </div>
+                <div class="goal-actions">
+                    <button class="update-button">Atualizar Progresso</button>
+                    <button class="see-materials">Ver Materiais</button>
+                </div>
+            </div>
+            
+            <div class="goal-card">
+                <div class="goal-header">
+                    <h3>Ler 5 Livros no Ano</h3>
+                    <span class="deadline">Prazo: 31/12</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 60%"></div>
+                    <span>60% concluído</span>
+                </div>
+                <div class="goal-details">
+                    <p><strong>Objetivo:</strong> Desenvolver hábito de leitura e interpretação de texto</p>
+                    <p><strong>Livros lidos:</strong> 3/5</p>
+                    <ul>
+                        <li>Vidas Secas - Graciliano Ramos</li>
+                        <li>Dom Casmurro - Machado de Assis</li>
+                        <li>O Alienista - Machado de Assis</li>
+                    </ul>
+                </div>
+                <div class="goal-actions">
+                    <button class="update-button">Adicionar Livro</button>
+                    <button class="see-materials">Sugestões</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="completed-goals">
+            <h2>Metas Concluídas</h2>
+            
+            <div class="goal-card completed">
+                <div class="goal-header">
+                    <h3>Melhor Nota em História</h3>
+                    <span class="completion-date">Concluído em 05/09</span>
+                </div>
+                <div class="goal-details">
+                    <p><strong>Resultado:</strong> Atingiu média 8.5 em História no 3º bimestre</p>
+                    <p><strong>Recompensa:</strong> Escolher o próximo tema de estudo</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="new-goal">
+            <h2>Criar Nova Meta</h2>
+            <form class="goal-form">
+                <div class="form-group">
+                    <label for="goal-title">Título da Meta</label>
+                    <input type="text" id="goal-title" placeholder="Ex: Melhorar em Matemática" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goal-description">Descrição</label>
+                    <textarea id="goal-description" placeholder="O que você deseja alcançar?"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="goal-deadline">Prazo</label>
+                        <input type="date" id="goal-deadline" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goal-metric">Métrica de Sucesso</label>
+                        <select id="goal-metric">
+                            <option>Porcentagem de acertos</option>
+                            <option>Nota mínima</option>
+                            <option>Quantidade de atividades</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="cta-button">Criar Meta</button>
+            </form>
+        </div>
+        
+        <footer>
+            <p>Precisa de ajuda para definir metas? <a href="ajuda.html">Veja nossas sugestões</a></p>
+        </footer>
+    </div>
+</body>
+</html>

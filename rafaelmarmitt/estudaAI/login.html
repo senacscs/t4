@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html" class="active"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Acesse sua conta</h1>
+            <p class="tagline">Entre para continuar sua jornada de aprendizado</p>
+        </header>
+        
+        <div class="form-container">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+                
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Lembrar de mim
+                    </label>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                
+                <a href="perfil.html"><button class="cta-button full-width">Entrar</button></a>
+                
+                <div class="divider">ou</div>
+                
+                <button type="button" class="social-login google">
+                    <span class="icon">G</span> Continuar com Google
+                </button>
+                
+                <button type="button" class="social-login microsoft">
+                    <span class="icon">M</span> Continuar com Microsoft
+                </button>
+                
+                <p class="register-link">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </form>
+        </div>
+        
+        <footer>
+            <p>Problemas para acessar? <a href="ajuda.html">Obter ajuda</a></p>
+            <p>© 2023 EducaAI - Todos os direitos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>

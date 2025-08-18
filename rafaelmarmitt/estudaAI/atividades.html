@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Atividades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html" class="active"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Suas Atividades</h1>
+            <p class="tagline">Acompanhe e realize suas tarefas</p>
+        </header>
+        
+        <div class="activity-filters">
+            <div class="filter-group">
+                <label for="materia">Matéria:</label>
+                <select id="materia">
+                    <option>Todas</option>
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>História</option>
+                    <option>Ciências</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option>Todas</option>
+                    <option>Pendentes</option>
+                    <option>Concluídas</option>
+                    <option>Atrasadas</option>
+                </select>
+            </div>
+            
+            <button class="filter-button">Aplicar</button>
+        </div>
+        
+        <div class="activity-list">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Exercícios de Equações</h3>
+                    <span class="due-date">Prazo: 15/10</span>
+                    <span class="subject-badge math">Matemática</span>
+                </div>
+                <p>Resolva as equações de segundo grau propostas e envie as soluções.</p>
+                <div class="activity-footer">
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 65%"></div>
+                        <span>65% concluído</span>
+                    </div>
+                    <button class="continue-button">Continuar</button>
+                </div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Análise de Texto</h3>
+                    <span class="due-date">Prazo: 18/10</span>
+                    <span class="subject-badge portuguese">Português</span>
+                </div>
+                <p>Leia o texto "Vidas Secas" e responda às questões de interpretação.</p>
+                <div class="activity-footer">
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 20%"></div>
+                        <span>20% concluído</span>
+                    </div>
+                    <button class="continue-button">Iniciar</button>
+                </div>
+            </div>
+            
+            <div class="activity-card completed">
+                <div class="activity-header">
+                    <h3>Revolução Industrial</h3>
+                    <span class="due-date">Concluído em 10/10</span>
+                    <span class="subject-badge history">História</span>
+                </div>
+                <p>Questionário sobre as causas e consequências da Revolução Industrial.</p>
+                <div class="activity-footer">
+                    <div class="score">Nota: 8.5</div>
+                    <button class="review-button">Revisar</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Dúvidas sobre alguma atividade? <a href="ajuda.html">Peça ajuda ao EducaAI</a></p>
+        </footer>
+    </div>
+</body>
+</html>

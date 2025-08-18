@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Turma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html" class="active"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Sua Turma</h1>
+            <p class="tagline">Interaja e acompanhe o progresso coletivo</p>
+        </header>
+        
+        <div class="class-info">
+            <div class="info-card">
+                <h3>Turma 9ºA</h3>
+                <p><strong>Professor:</strong> Carlos Silva</p>
+                <p><strong>Ano Letivo:</strong> 2025</p>
+                <p><strong>Alunos:</strong> 32</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>Média da Turma</h3>
+                <div class="big-number">7.2</div>
+                <p>Sua média: <span class="highlight">7.8</span> (+0.6 acima da turma)</p>
+            </div>
+        </div>
+        
+        <div class="class-ranking">
+            <h2>Ranking da Turma</h2>
+            <div class="ranking-header">
+                <span>Posição</span>
+                <span>Aluno</span>
+                <span>Média</span>
+                <span>Progresso</span>
+            </div>
+            
+            <div class="ranking-list">
+                <div class="ranking-item you">
+                    <span>5º</span>
+                    <span>Você</span>
+                    <span>7.8</span>
+                    <span class="trend up">+0.5</span>
+                </div>
+                
+                <div class="ranking-item">
+                    <span>1º</span>
+                    <span>Ana Oliveira</span>
+                    <span>8.9</span>
+                    <span class="trend up">+0.3</span>
+                </div>
+                
+                <div class="ranking-item">
+                    <span>2º</span>
+                    <span>Pedro Santos</span>
+                    <span>8.5</span>
+                    <span class="trend neutral">0.0</span>
+                </div>
+                
+                <div class="ranking-item">
+                    <span>3º</span>
+                    <span>Mariana Costa</span>
+                    <span>8.1</span>
+                    <span class="trend up">+0.7</span>
+                </div>
+                
+                <div class="ranking-item">
+                    <span>4º</span>
+                    <span>Lucas Pereira</span>
+                    <span>8.0</span>
+                    <span class="trend down">-0.2</span>
+                </div>
+            </div>
+            
+            <button class="see-more">Ver ranking completo</button>
+        </div>
+        
+        <div class="class-discussions">
+            <h2>Discussões Recentes</h2>
+            
+            <div class="discussion-card">
+                <div class="discussion-header">
+                    <span class="author">Professor Carlos</span>
+                    <span class="time">2 horas atrás</span>
+                </div>
+                <h3>Dúvidas sobre a atividade de Matemática</h3>
+                <p>Alunos, criem este tópico para tirar dúvidas sobre os exercícios de equações que passamos hoje.</p>
+                <div class="discussion-footer">
+                    <span>5 comentários</span>
+                    <button class="join-discussion">Participar</button>
+                </div>
+            </div>
+            
+            <div class="discussion-card">
+                <div class="discussion-header">
+                    <span class="author">Ana Oliveira</span>
+                    <span class="time">Ontem</span>
+                </div>
+                <h3>Alguém pode explicar a Revolução Industrial?</h3>
+                <p>Estou com dificuldade para entender as causas da Revolução Industrial, alguém pode ajudar?</p>
+                <div class="discussion-footer">
+                    <span>3 comentários</span>
+                    <button class="join-discussion">Participar</button>
+                </div>
+            </div>
+            
+            <div class="new-discussion">
+                <input type="text" placeholder="Inicie uma nova discussão...">
+                <button class="cta-button small">Postar</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Precisa de ajuda com algo? <a href="ajuda.html">Converse com o EducaAI</a></p>
+        </footer>
+    </div>
+</body>
+</html>

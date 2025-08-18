@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Materiais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html" class="active"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Materiais de Estudo</h1>
+            <p class="tagline">Conteúdos personalizados para seu aprendizado</p>
+        </header>
+        
+        <div class="materials-filters">
+            <div class="filter-group">
+                <label for="subject-filter">Matéria:</label>
+                <select id="subject-filter">
+                    <option>Todas</option>
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>História</option>
+                    <option>Ciências</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="type-filter">Tipo:</label>
+                <select id="type-filter">
+                    <option>Todos</option>
+                    <option>Vídeos</option>
+                    <option>Textos</option>
+                    <option>Exercícios</option>
+                    <option>Aulas</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="difficulty-filter">Dificuldade:</label>
+                <select id="difficulty-filter">
+                    <option>Todas</option>
+                    <option>Iniciante</option>
+                    <option>Intermediário</option>
+                    <option>Avançado</option>
+                </select>
+            </div>
+            
+            <button class="filter-button">Filtrar</button>
+        </div>
+        
+        <div class="recommended-materials">
+            <h2>Recomendados para Você</h2>
+            <p class="section-description">Baseado em seu desempenho recente e áreas de melhoria</p>
+            
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-thumbnail math"></div>
+                    <div class="material-info">
+                        <span class="material-type video">Vídeo</span>
+                        <h3>Equações de 2º Grau - Explicação Completa</h3>
+                        <p class="material-description">Aprenda a resolver equações quadráticas passo a passo com exemplos práticos.</p>
+                        <div class="material-meta">
+                            <span class="duration">15 min</span>
+                            <span class="difficulty intermediate">Intermediário</span>
+                        </div>
+                        <button class="access-button">Assistir</button>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-thumbnail portuguese"></div>
+                    <div class="material-info">
+                        <span class="material-type exercise">Exercícios</span>
+                        <h3>Concordância Verbal - Prática</h3>
+                        <p class="material-description">Série de exercícios focados em concordância verbal com feedback imediato.</p>
+                        <div class="material-meta">
+                            <span class="duration">20 questões</span>
+                            <span class="difficulty beginner">Iniciante</span>
+                        </div>
+                        <button class="access-button">Praticar</button>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-thumbnail history"></div>
+                    <div class="material-info">
+                        <span class="material-type text">Texto</span>
+                        <h3>Revolução Industrial - Resumo</h3>
+                        <p class="material-description">Resumo completo com causas, consequências e principais inovações.</p>
+                        <div class="material-meta">
+                            <span class="duration">10 min leitura</span>
+                            <span class="difficulty beginner">Iniciante</span>
+                        </div>
+                        <button class="access-button">Ler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="all-materials">
+            <h2>Todos os Materiais</h2>
+            
+            <div class="materials-list">
+                <div class="list-item">
+                    <div class="item-info">
+                        <h3>Aula: Funções Quadráticas</h3>
+                        <p class="item-meta">Matemática • Aula • 25 min</p>
+                    </div>
+                    <button class="access-button small">Acessar</button>
+                </div>
+                
+                <div class="list-item">
+                    <div class="item-info">
+                        <h3>Exercícios: Análise Sintática</h3>
+                        <p class="item-meta">Português • Exercícios • 15 questões</p>
+                    </div>
+                    <button class="access-button small">Acessar</button>
+                </div>
+                
+                <div class="list-item">
+                    <div class="item-info">
+                        <h3>Vídeo: Segunda Guerra Mundial</h3>
+                        <p class="item-meta">História • Vídeo • 18 min</p>
+                    </div>
+                    <button class="access-button small">Acessar</button>
+                </div>
+                
+                <div class="list-item">
+                    <div class="item-info">
+                        <h3>Infográfico: Sistema Solar</h3>
+                        <p class="item-meta">Ciências • Infográfico • 5 min leitura</p>
+                    </div>
+                    <button class="access-button small">Acessar</button>
+                </div>
+            </div>
+            
+            <button class="load-more">Carregar mais materiais</button>
+        </div>
+        
+        <footer>
+            <p>Não encontrou o que procurava? <a href="ajuda.html">Peça ajuda ao EducaAI</a></p>
+        </footer>
+    </div>
+</body>
+</html>

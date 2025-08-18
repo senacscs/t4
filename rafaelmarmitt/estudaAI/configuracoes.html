@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Configurações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="perfil.html"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href="configuracoes.html" class="active"><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Configurações</h1>
+            <p class="tagline">Personalize sua experiência na plataforma</p>
+        </header>
+        
+        <div class="settings-tabs">
+            <button class="tab-button active" data-tab="account">Conta</button>
+            <button class="tab-button" data-tab="privacy">Privacidade</button>
+            <button class="tab-button" data-tab="notifications">Notificações</button>
+            <button class="tab-button" data-tab="accessibility">Acessibilidade</button>
+        </div>
+        
+        <div class="tab-content active" id="account">
+            <h2>Informações da Conta</h2>
+            
+            <form class="account-form">
+                <div class="form-group">
+                    <label for="profile-name">Nome Completo</label>
+                    <input type="text" id="profile-name" value="João da Silva">
+                </div>
+                
+                <div class="form-group">
+                    <label for="profile-email">E-mail</label>
+                    <input type="email" id="profile-email" value="joao@escola.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="profile-school">Escola</label>
+                    <input type="text" id="profile-school" value="Escola Municipal Professora Maria">
+                </div>
+                
+                <div class="form-group">
+                    <label for="profile-grade">Série/Turma</label>
+                    <input type="text" id="profile-grade" value="9º Ano A">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-button">Cancelar</button>
+                    <button type="submit" class="save-button">Salvar Alterações</button>
+                </div>
+            </form>
+            
+            <div class="password-change">
+                <h3>Alterar Senha</h3>
+                <form class="password-form">
+                    <div class="form-group">
+                        <label for="current-password">Senha Atual</label>
+                        <input type="password" id="current-password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="new-password">Nova Senha</label>
+                        <input type="password" id="new-password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirme a Nova Senha</label>
+                        <input type="password" id="confirm-password">
+                    </div>
+                    
+                    <button type="submit" class="save-button">Alterar Senha</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="privacy">
+            <h2>Configurações de Privacidade</h2>
+            
+            <div class="privacy-settings">
+                <div class="privacy-option">
+                    <h3>Visibilidade do Perfil</h3>
+                    <p>Quem pode ver seu perfil e atividades públicas</p>
+                    <select>
+                        <option>Somente eu</option>
+                        <option selected>Minha turma</option>
+                        <option>Todos os usuários</option>
+                    </select>
+                </div>
+                
+                <div class="privacy-option">
+                    <h3>Compartilhamento de Dados</h3>
+                    <p>Permitir que o EducaAI use seus dados anônimos para melhorar o sistema</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="privacy-option">
+                    <h3>Conectar com Redes Sociais</h3>
+                    <p>Permitir login e compartilhamento com redes sociais</p>
+                    <div class="social-connections">
+                        <div class="social-connection">
+                            <span class="icon">G</span> Google
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="social-connection">
+                            <span class="icon">M</span> Microsoft
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="save-button">Salvar Configurações</button>
+        </div>
+        
+        <div class="tab-content" id="notifications">
+            <h2>Configurações de Notificação</h2>
+            
+            <div class="notification-settings">
+                <div class="notification-option">
+                    <h3>Notificações por E-mail</h3>
+                    <p>Receber alertas e atualizações por e-mail</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-option">
+                    <h3>Alertas de Atividades</h3>
+                    <p>Notificar sobre novas atividades e prazos</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-option">
+                    <h3>Atualizações de Desempenho</h3>
+                    <p>Receber relatórios semanais de desempenho</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-option">
+                    <h3>Mensagens da Turma</h3>
+                    <p>Notificar sobre novas mensagens e discussões</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="notification-frequency">
+                <h3>Frequência de Notificações</h3>
+                <select>
+                    <option>Imediato (assim que disponível)</option>
+                    <option selected>Resumo Diário</option>
+                    <option>Resumo Semanal</option>
+                </select>
+            </div>
+            
+            <button class="save-button">Salvar Configurações</button>
+        </div>
+        
+        <div class="tab-content" id="accessibility">
+            <h2>Configurações de Acessibilidade</h2>
+            
+            <div class="accessibility-options">
+                <div class="accessibility-option">
+                    <h3>Tamanho do Texto</h3>
+                    <p>Ajuste o tamanho da fonte para melhor legibilidade</p>
+                    <select>
+                        <option>Pequeno</option>
+                        <option selected>Médio</option>
+                        <option>Grande</option>
+                        <option>Extra Grande</option>
+                    </select>
+                </div>
+                
+                <div class="accessibility-option">
+                    <h3>Modo de Contraste</h3>
+                    <p>Altere o contraste da interface para melhor visibilidade</p>
+                    <select>
+                        <option selected>Padrão</option>
+                        <option>Alto Contraste</option>
+                        <option>Modo Escuro</option>
+                        <option>Modo Claro</option>
+                    </select>
+                </div>
+                
+                <div class="accessibility-option">
+                    <h3>Leitor de Tela</h3>
+                    <p>Otimizações para uso com leitores de tela</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="accessibility-option">
+                    <h3>Atalhos de Teclado</h3>
+                    <p>Ativar navegação por teclado</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="save-button">Aplicar Configurações</button>
+        </div>
+        
+        <div class="danger-zone">
+            <h2>Zona de Perigo</h2>
+            
+            <div class="danger-option">
+                <h3>Exportar Dados</h3>
+                <p>Baixe todos os seus dados da plataforma em formato JSON</p>
+                <button class="export-button">Exportar Meus Dados</button>
+            </div>
+            
+            <div class="danger-option">
+                <h3>Excluir Conta</h3>
+                <p>Esta ação é permanente e removerá todos os seus dados do EducaAI</p>
+                <button class="delete-button">Excluir Minha Conta</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Dúvidas sobre configurações? <a href="ajuda.html">Consulte nossa central de ajuda</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaAI - Plataforma Educacional com IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html"><h2>EducaAI</h2></a>   
+            <span>IA Educacional</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="#" class="active"><span class="icon">👤</span> Meu Perfil</a></li>
+            <li><a href="login.html"><span class="icon">🔑</span> Login</a></li>
+            <li><a href="atividades.html"><span class="icon">📚</span> Atividades</a></li>
+            <li><a href="desempenho.html"><span class="icon">📊</span> Desempenho</a></li>
+            <li><a href="turma.html"><span class="icon">👥</span> Turma</a></li>
+            <li><a href="metas.html"><span class="icon">🎯</span> Metas</a></li>
+            <li><a href="materiais.html"><span class="icon">📖</span> Materiais</a></li>
+            <li><a href="ajuda.html"><span class="icon">❓</span> Ajuda</a></li>
+            <li><a href=""><span class="icon">⚙️</span> Configurações</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>EducaAI</h1>
+            <p class="tagline">Inteligência Artificial para aprendizagem personalizada</p>
+        </header>
+        
+        <div class="hero">
+            <p>O EducaAI vai além de fornecer respostas, ele analisa seus padrões de aprendizado, identifica lacunas específicas e sugere conteúdos direcionados para superar suas dificuldades.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>Análise Inteligente</h3>
+                <p>Identifica padrões em seus erros, mostrando não apenas o que você errou, mas por que errou e como melhorar.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>Conteúdo Personalizado</h3>
+                <p>Alinhado com os materiais dos seus professores e da sua escola, garantindo relevância para seu contexto.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>Recomendações Específicas</h3>
+                <p>Sugere exercícios e conteúdos focados nos pontos onde você mais precisa.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <div class="terminal-dot red"></div>
+                    <div class="terminal-dot yellow"></div>
+                    <div class="terminal-dot green"></div>
+                </div>
+                <div class="terminal-title">Educa AI - Terminal Interativo</div>
+            </div>
+            <div class="terminal-body">
+                <div>
+                    <span class="prompt">></span>
+                    <span class="command">bem_vindo()</span>
+                </div>
+                <div class="response">
+                    <p>Bem-vindo ao EducaAI! Analisei seu desempenho recente e identifiquei oportunidades de melhoria em:</p>
+                    <ul>
+                        <li>Equações de segundo grau (Matemática)</li>
+                        <li>Período Colonial (História)</li>
+                        <li>Concordância verbal (Português)</li>
+                    </ul>
+                    <p>Deseja que eu sugira materiais específicos para essas áreas?</p>
+                </div>
+                <div class="typing">
+                    <span class="prompt">></span>
+                    <span class="command">analisar_lacunas()</span>
+                    <div class="cursor"></div>
+                </div>
+            </div>
+            <div class="terminal-input">
+                <span>></span>
+                <input type="text" placeholder="Digite sua consulta...">
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <a href="login.html" class="cta-button">Experimente Gratuitamente</a>
+        </div>
+        
+        <footer>
+            <p>Interessado em levar o EducaAI para sua escola ou instituição?</p>
+            <p>contato@educai.com | © 2023 EducaAI</p>
+        </footer>
+    </div>
+
+    <script>
+        const typingElement = document.querySelector('.typing .command');
+        const text = "analisar_lacunas()";
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                typingElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        setTimeout(() => {
+            typeWriter();
+        }, 2000);
+        
+        setTimeout(() => {
+            document.querySelector('.typing .cursor').style.display = 'none';
+        }, 3500);
+    </script>
+</body>
+</html>
