@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Clara</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="qc-app">
+      <header class="qc-header" aria-label="Cabeçalho do Quiz Clara">
+        <h1>Quiz Clara</h1>
+        <p class="lead">Responda 8 perguntas rápidas e veja um resumo com orientações objetivas.</p>
+      </header>
+
+      <main class="qc-main" aria-label="Conteúdo principal do quiz">
+        <section class="qc-panel" aria-live="polite">
+          <div class="qc-progress">
+            <div id="progressBar" class="qc-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" style="width:0%"></div>
+            <div id="progressLabel" class="qc-progress-label">0/8</div>
+          </div>
+
+          <div id="stage" class="qc-stage">
+            <!-- A primeira pergunta será renderizada via JS -->
+          </div>
+
+          <div class="qc-controls">
+            <button id="backBtn" class="btn btn-ghost" type="button" disabled>Voltar</button>
+            <div class="spacer"></div>
+            <button id="nextBtn" class="btn btn-primary" type="button" disabled>Próxima</button>
+            <button id="contactCtlBtn" class="btn btn-primary" type="button" hidden>Quero ser contatado(a)</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="qc-footer" aria-label="Rodapé informativo">
+        <small>Privado e local: suas respostas não são enviadas para nenhum servidor.</small>
+      </footer>
+    </div>
+
+        <!-- Firebase config placeholders (preencha com seus dados do projeto) -->
+        <script>
+          window.FIREBASE_CONFIG = window.FIREBASE_CONFIG || {
+            /*
+            apiKey: "<API_KEY>",
+            authDomain: "<PROJECT_ID>.firebaseapp.com",
+            projectId: "<PROJECT_ID>",
+            storageBucket: "<PROJECT_ID>.appspot.com",
+            messagingSenderId: "<SENDER_ID>",
+            appId: "<APP_ID>",
+            */
+          };
+          window.FIREBASE_DB_URL = window.FIREBASE_DB_URL || ""; // Ex.: https://<PROJECT_ID>-default-rtdb.firebaseio.com
+        </script>
+
+        <!-- Firebase (Realtime Database) setup: expõe window.sendContactData(payload) -->
+        <script type="module">
+          import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+          import { getDatabase, ref, push, set, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+
+          let app = null;
+          let db = null;
+          try{
+            if(window.FIREBASE_CONFIG && window.FIREBASE_DB_URL){
+              app = initializeApp(window.FIREBASE_CONFIG);
+              db = getDatabase(app, window.FIREBASE_DB_URL);
+            }
+          }catch(err){
+            console.warn('Firebase init falhou:', err);
+          }
+
+          window.sendContactData = async function(payload){
+            if(!db) throw new Error('Firebase não configurado. Defina FIREBASE_CONFIG e FIREBASE_DB_URL.');
+            const contactsRef = ref(db, 'contacts');
+            const newRef = push(contactsRef);
+            await set(newRef, {
+              ...payload,
+              createdAt: serverTimestamp()
+            });
+            return { key: newRef.key };
+          }
+        </script>
+
+    <script>
+      (function(){
+        const questions = [
+          {
+            text: 'Você está empregado?',
+            yes: 'Você está trabalhando, parabéns! Estar empregado já é um passo importante para manter sua experiência ativa e abrir portas para novas oportunidades. Continue investindo em si mesmo para não apenas se manter no mercado, mas também crescer.',
+            no: 'Você desempregado, mas não desanime. Segundo dados do IBGE, cerca de 7,5% dos brasileiros estão desempregados (2025). Isso mostra que a competição é grande, mas também que quem se qualifica aumenta muito suas chances de voltar ao mercado. Talvez seja a hora de investir em cursos profissionalizantes para reverter essa condição.'
+          },
+          {
+            text: 'Atualmente você está estudando?',
+            yes: 'Estudar é uma das maiores vantagens competitivas no mundo do trabalho. Quem estuda aumenta em até 73% as chances de conquistar melhores salários, segundo pesquisas do Ipea. Você já está no caminho certo!',
+            no: 'Atenção: deixar de estudar pode ser um freio na sua carreira. Em um mundo em que as profissões mudam rapidamente, quem não estuda fica para trás. Que tal começar com algo acessível, acesse as oficinas online gratuitas do Senac em senacrs.com.br'
+          },
+          {
+            text: 'Você domina o uso do computador (pacote Office)?',
+            yes: 'O domínio do Excel, Word e PowerPoint é praticamente uma necessidade universal no mercado de trabalho. Esse conhecimento torna você mais produtivo e preparado para qualquer vaga.',
+            no: 'Se você ainda não domina o uso do computador vale a pena aprender. O pacote Office é exigido em 8 de cada 10 vagas de emprego administrativo no Brasil. Hoje existem cursos que podem ser concluídos em poucas semanas.'
+          },
+          {
+            text: 'Já utiliza Inteligência Artificial em seu dia a dia?',
+            yes: 'Você sabia que o uso de IA é cada vez mais valorizado pelas empresas? Segundo a PwC, até 2030, a IA pode adicionar até 15,7 trilhões de dólares à economia global. Você já está surfando essa onda!',
+            no: 'Atenção, você está deixando passar uma grande oportunidade. A IA já está transformando o mercado de trabalho em todas as áreas. Aprender a usá-la não exige formação em tecnologia: qualquer pessoa pode começar com ferramentas simples para aumentar sua produtividade.'
+          },
+          {
+            text: 'Fez algum curso de atualização nos últimos 2 anos?',
+            yes: 'Parabéns por ter feito um curso nos últimos 2 anos! Esse é o espírito de um profissional atualizado. Estudos mostram que quem investe regularmente em capacitação tem até 30% mais chances de progressão na carreira.',
+            no: 'O conhecimento envelhece cada vez mais rapidamente. Em muitas áreas, o que você aprendeu há 5 anos pode já estar ultrapassado. Pequenos cursos podem reabrir portas para novas oportunidades.'
+          },
+          {
+            text: 'Possui aplicativos em celular utilizados para o seu trabalho e organização do dia a dia?',
+            yes: 'Hoje o celular é uma ferramenta essencial na vida da gente e no trabalho. Profissionais que utilizam aplicativos para otimizar tarefas ganham em produtividade e organização.',
+            no: 'Se você ainda não possui apps em seu celular utilizados para o trabalho e organização do dia a dia você pode estar perdendo tempo. Há aplicativos gratuitos que ajudam desde organização de tarefas até controle de finanças. Inserir essa prática no dia a dia também é um diferencial importante.'
+          },
+          {
+            text: 'Você compreende minimamente um outro idioma?',
+            yes: 'Por fim, dentre as competências necessárias atualmente, dominar outro idioma é abrir portas para o mundo. O inglês, por exemplo, pode aumentar o salário em até 61% no Brasil, segundo a Catho.',
+            no: 'Dominar um segundo idioma é, também, uma habilidade estratégica atualmente. Mesmo aprender o básico já faz diferença.'
+          },
+          {
+            text: 'Já tem um objetivo profissional definido?',
+            yes: 'Você tem um objtivo profissional definido, parabéns! Ter clareza do objetivo ajuda a focar energia e esforços, transformando passos em conquistas. Isso mostra que você tem visão de futuro.',
+            no: 'Sem metas claras, é fácil andar em círculos. Definir um objetivo profissional é como traçar um mapa: você pode até mudar o caminho, mas sabe para onde quer ir. Reflita sobre o que realmente deseja alcançar.'
+          }
+        ];
+
+        const finalMessages = {
+          moreYes: 'Agora é a sua vez de crescer! Suas respostas indicam que você está no caminho certo, já construiu uma boa base e deve continuar se atualizando. O próximo passo pode ser buscar especializações e ampliar seu networking.',
+          balanced: 'Agora é a sua vez de inovar! Suas respostas indicam que você já tem conquistas, mas precisa acelerar a qualificação para não perder espaço. Um plano de estudos e a adoção de novas ferramentas tecnológicas podem fazer a diferença.',
+          moreNo: 'Agora é a sua vez de mudar! Suas respostas mostram que é hora de agir! Comece por algo simples: um curso online, aprender a usar uma IA ou aplicativos no celular. Cada pequeno passo abre novas oportunidades.'
+        };
+
+        const $ = s => document.querySelector(s);
+  const stage = $('#stage');
+  const panel = document.querySelector('.qc-panel');
+        const progressBar = $('#progressBar');
+        const progressLabel = $('#progressLabel');
+        const backBtn = $('#backBtn');
+        const nextBtn = $('#nextBtn');
+
+        let index = 0;
+        const choices = new Array(questions.length).fill(null); // 'sim'|'nao'|null
+
+        function updateProgress(){
+          progressBar.style.width = `${index/questions.length*100}%`;
+          progressBar.setAttribute('aria-valuenow', index);
+          progressLabel.textContent = `${index}/${questions.length}`;
+        }
+
+        function renderIntro(){
+          panel.classList.add('is-intro');
+          stage.innerHTML = `
+            <div class="intro">
+              <h2 class="intro-title">Você quer fazer o quiz agora?</h2>
+              <p class="intro-text">São 8 perguntas rápidas com orientações diretas ao final. Leva menos de 1 minuto.</p>
+              <div class="intro-actions">
+                <button id="startQuizBtn" class="btn btn-primary btn-large" type="button">Começar agora</button>
+                <button id="skipQuizBtn" class="btn btn-ghost btn-large" type="button">Não agora</button>
+              </div>
+            </div>
+          `;
+          backBtn.disabled = true;
+          nextBtn.disabled = true;
+        }
+
+        function renderQuestion(){
+          panel.classList.remove('is-intro');
+          const q = questions[index];
+          const prev = choices[index];
+          stage.innerHTML = `
+            <div class="q-wrap">
+              <div class="q-head">
+                <div class="q-count">Pergunta ${index+1} de ${questions.length}</div>
+                <h2 class="q-text">${q.text}</h2>
+              </div>
+              <div class="answers" role="group" aria-label="Escolha Sim ou Não">
+                <input id="ansYes" type="radio" name="ans" value="sim" ${prev==='sim'?'checked':''} />
+                <label for="ansYes" class="chip yes" data-val="sim">Sim</label>
+                <input id="ansNo" type="radio" name="ans" value="nao" ${prev==='nao'?'checked':''} />
+                <label for="ansNo" class="chip no" data-val="nao">Não</label>
+              </div>
+              <div id="feedback" class="feedback" aria-live="polite" hidden></div>
+            </div>
+          `;
+
+          const feedback = $('#feedback');
+          if(prev){
+            feedback.textContent = prev==='sim' ? q.yes : q.no;
+            feedback.hidden = false;
+          }
+
+          backBtn.hidden = false;
+          nextBtn.hidden = false;
+          const contactCtlBtn = document.getElementById('contactCtlBtn');
+          if(contactCtlBtn) contactCtlBtn.hidden = true;
+
+          backBtn.disabled = index === 0;
+          nextBtn.disabled = !choices[index];
+          nextBtn.textContent = index === questions.length-1 ? 'Ver resultado' : 'Próxima';
+          updateProgress();
+        }
+
+        function renderResult(){
+          const yesCount = choices.filter(c=>c==='sim').length;
+          const noCount = choices.length - yesCount;
+          let bucket = 'balanced';
+          if(yesCount > noCount) bucket = 'moreYes';
+          else if(noCount > yesCount) bucket = 'moreNo';
+
+          progressBar.style.width = '100%';
+          progressBar.setAttribute('aria-valuenow', questions.length);
+          progressLabel.textContent = `${questions.length}/${questions.length}`;
+
+          stage.innerHTML = `
+            <div class="result">
+              <h2 class="result-title">Seu resultado</h2>
+              <p class="result-kpi"><strong>Resumo:</strong> ${yesCount} Sim • ${noCount} Não</p>
+              <p class="result-msg">${finalMessages[bucket]}</p>
+              <div class="result-actions">
+                <button id="restartBtn" class="btn btn-ghost" type="button">Refazer</button>
+              </div>
+            </div>
+          `;
+
+          backBtn.hidden = true;
+          nextBtn.hidden = true;
+          const contactCtlBtn = document.getElementById('contactCtlBtn');
+          if(contactCtlBtn) contactCtlBtn.hidden = false;
+        }
+
+  function showContactModal(){
+          if(panel.querySelector('.modal')) return; // already open
+          const modal = document.createElement('div');
+          modal.className = 'modal';
+          modal.setAttribute('role','dialog');
+          modal.setAttribute('aria-modal','true');
+          modal.setAttribute('aria-labelledby','contactTitle');
+          modal.innerHTML = `
+            <div class="modal-backdrop" data-close></div>
+            <div class="modal-card">
+              <button class="modal-close" type="button" aria-label="Fechar" data-close>×</button>
+              <h3 id="contactTitle" class="modal-title">Deixe seus dados</h3>
+              <form id="contactForm" novalidate>
+                <label class="label" for="fullName">Nome completo</label>
+                <input class="input" id="fullName" type="text" required />
+
+                <label class="label" for="email">E-mail</label>
+                <input class="input" id="email" type="email" required />
+
+                <label class="label" for="phone">Celular (com DDD)</label>
+                <input class="input" id="phone" type="tel" inputmode="numeric" pattern="[0-9 ]*" placeholder="(11) 91234-5678" required />
+
+                <label class="check">
+                  <input id="consent" type="checkbox" required />
+                  <span>Autorizo o uso dos meus dados para contato conforme a política de privacidade.</span>
+                </label>
+
+                <div id="formError" class="form-error" aria-live="polite" hidden></div>
+
+                <div class="modal-actions">
+                  <button id="contactCancel" type="button" class="btn btn-ghost">Cancelar</button>
+                  <button id="contactSubmit" type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+              </form>
+            </div>`;
+          panel.appendChild(modal);
+          // focus first input
+          const first = modal.querySelector('#fullName');
+          if(first) first.focus();
+        }
+
+        function hideContactModal(){
+          const modal = panel.querySelector('.modal');
+          if(modal) modal.remove();
+        }
+
+        function selectAnswer(val){
+          const q = questions[index];
+          choices[index] = val; // persist selection
+          const feedback = $('#feedback');
+          feedback.textContent = val==='sim' ? q.yes : q.no;
+          feedback.hidden = false;
+          nextBtn.disabled = false;
+        }
+
+        // Event delegation inside stage
+        stage.addEventListener('click', (e)=>{
+          const t = e.target;
+          if(!(t instanceof HTMLElement)) return;
+          if(t.matches('.chip')){
+            const val = t.getAttribute('data-val');
+            const input = stage.querySelector(`input[name="ans"][value="${val}"]`);
+            input.checked = true;
+            selectAnswer(val);
+          }
+          if(t.id === 'startQuizBtn'){
+            index = 0;
+            renderQuestion();
+            updateProgress();
+          }
+          if(t.id === 'skipQuizBtn'){
+            stage.innerHTML = `
+              <div class="intro intro-muted">
+                <p class="intro-text">Sem problemas. Quando quiser, clique em <strong>Começar agora</strong>.</p>
+                <div class="intro-actions">
+                  <button id="startQuizBtn" class="btn btn-primary btn-large" type="button">Começar agora</button>
+                </div>
+              </div>
+            `;
+            backBtn.disabled = true;
+            nextBtn.disabled = true;
+          }
+          if(t.id === 'restartBtn'){
+            index = 0;
+            for(let i=0;i<choices.length;i++) choices[i] = null;
+            updateProgress();
+            renderIntro();
+          }
+          if(t.id === 'contactCancel' || t.hasAttribute('data-close')){
+            hideContactModal();
+          }
+        });
+
+        stage.addEventListener('change', (e)=>{
+          const target = e.target;
+          if(!(target instanceof HTMLInputElement)) return;
+          if(target.name === 'ans') selectAnswer(target.value);
+        });
+
+        backBtn.addEventListener('click', ()=>{
+          if(index > 0){ index--; renderQuestion(); }
+        });
+
+        nextBtn.addEventListener('click', ()=>{
+          if(index < questions.length-1){
+            index++;
+            renderQuestion();
+          }else{
+            renderResult();
+          }
+        });
+
+        // Ação de contato no rodapé
+        const contactCtlBtn = document.getElementById('contactCtlBtn');
+        if(contactCtlBtn){
+          contactCtlBtn.addEventListener('click', ()=>{
+            showContactModal();
+          });
+        }
+
+        document.addEventListener('keydown', (e)=>{
+          if(e.key === 'Enter'){
+            const onResult = stage.querySelector('.result');
+            if(onResult) return;
+            if(!nextBtn.disabled){ e.preventDefault(); nextBtn.click(); }
+          }
+          if(e.key === 'Escape'){
+            if(panel.querySelector('.modal')) hideContactModal();
+          }
+        });
+
+        // Fechar modal por clique no X, no fundo (data-close) ou no botão Cancelar
+        document.addEventListener('click', (e)=>{
+          const t = e.target;
+          if(!(t instanceof HTMLElement)) return;
+          if(t.hasAttribute('data-close') || t.id === 'contactCancel'){
+            e.preventDefault();
+            hideContactModal();
+          }
+        });
+
+        // Contact form handlers (submit + basic validation)
+        document.addEventListener('submit', (e)=>{
+          const form = e.target;
+          if(!(form instanceof HTMLFormElement)) return;
+          if(form.id !== 'contactForm') return;
+          e.preventDefault();
+          const name = form.querySelector('#fullName')?.value?.trim() || '';
+          const email = form.querySelector('#email')?.value?.trim() || '';
+          const phoneRaw = form.querySelector('#phone')?.value || '';
+          const consent = form.querySelector('#consent')?.checked;
+          const errorBox = form.querySelector('#formError');
+          const digits = (phoneRaw.match(/\d/g) || []).join('');
+          const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email);
+          const phoneOk = digits.length >= 10 && digits.length <= 11; // DDD + número
+          let msg = '';
+          if(name.length < 5) msg = 'Informe seu nome completo (mínimo 5 caracteres).';
+          else if(!emailOk) msg = 'Informe um e-mail válido.';
+          else if(!phoneOk) msg = 'Informe DDD + número (10 ou 11 dígitos).';
+          else if(!consent) msg = 'É necessário autorizar o uso dos dados para contato.';
+
+          if(msg){
+            if(errorBox){ errorBox.textContent = msg; errorBox.hidden = false; }
+            return;
+          }
+
+          // Envia para Firebase Realtime Database (se configurado)
+          const submitBtn = form.querySelector('#contactSubmit');
+          if(submitBtn) submitBtn.disabled = true;
+          if(errorBox) errorBox.hidden = true;
+
+          const summary = {
+            choices: [...choices],
+            yes: choices.filter(c=>c==='sim').length,
+            no: choices.filter(c=>c==='nao').length
+          };
+
+          const payload = { name, email, phone: digits, consent: !!consent, summary };
+
+          const finishOk = ()=>{
+            const card = form.closest('.modal-card');
+            if(card){
+              card.innerHTML = `
+                <button class="modal-close" type="button" aria-label="Fechar" data-close>×</button>
+                <h3 class="modal-title">Dados enviados</h3>
+                <p>Obrigado! Entraremos em contato em breve.</p>
+                <div class="modal-actions">
+                  <button class="btn btn-primary" data-close type="button">Fechar</button>
+                </div>`;
+            }
+          };
+
+          if(typeof window.sendContactData === 'function'){
+            window.sendContactData(payload)
+              .then(finishOk)
+              .catch((err)=>{
+                if(errorBox){ errorBox.textContent = 'Falha ao enviar. Verifique a configuração do Firebase e tente novamente.'; errorBox.hidden = false; }
+                if(submitBtn) submitBtn.disabled = false;
+                console.error(err);
+              });
+          }else{
+            if(errorBox){ errorBox.textContent = 'Firebase não configurado. Defina FIREBASE_CONFIG e FIREBASE_DB_URL.'; errorBox.hidden = false; }
+            if(submitBtn) submitBtn.disabled = false;
+          }
+        });
+
+        // Optional: clear error on typing
+        document.addEventListener('input', (e)=>{
+          const t = e.target;
+          if(!(t instanceof HTMLElement)) return;
+          if(t.closest('#contactForm')){
+            const form = t.closest('form');
+            const errorBox = form?.querySelector('#formError');
+            if(errorBox) errorBox.hidden = true;
+          }
+        });
+
+  // Inicia com a tela de confirmação
+  renderIntro();
+      })();
+    </script>
+
+
+    <script>
+      // Configuração real do projeto (substitui os placeholders acima)
+      window.FIREBASE_CONFIG = {
+        apiKey: "AIzaSyBhxgqHq2elVUPKnvM1Eie1Xp29HR2Six8",
+        authDomain: "senac-lajeado-a64c0.firebaseapp.com",
+        projectId: "senac-lajeado-a64c0",
+        storageBucket: "senac-lajeado-a64c0.firebasestorage.app",
+        messagingSenderId: "616043992646",
+        appId: "1:616043992646:web:d2a78e3911c7cb72531c47",
+      };
+      // URL do Realtime Database
+      window.FIREBASE_DB_URL = 'https://senac-lajeado-a64c0-default-rtdb.firebaseio.com';
+    </script>
+  </body>
+</html>
