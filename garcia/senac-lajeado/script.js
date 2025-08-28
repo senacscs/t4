@@ -1,7 +1,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
-  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+  import { getDatabase, ref, push, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,13 +20,15 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  const db = getFirestore(app);
+  // Realtime Database (adicione databaseURL no firebaseConfig se necessário)
+  const db = getDatabase(app);
 
-  // Save to Firestore only after the user submits the contact form successfully
+  // Save to Realtime Database only after the user submits the contact form successfully
   document.addEventListener('contact:submitted', async (evt) => {
-    try{
+    try {
       const { nome, email, cel, yesCount, noCount } = evt.detail || {};
-      await addDoc(collection(db, 'quizResponses'), {
+      const newRef = push(ref(db, 'quizResponses'));
+      await set(newRef, {
         nome,
         email,
         celular: cel,
@@ -35,8 +37,8 @@
         createdAt: serverTimestamp(),
         userAgent: navigator.userAgent
       });
-      console.log('[quiz] Dados enviados para o Firebase');
-    }catch(err){
-      console.error('[quiz] Erro ao enviar para o Firebase', err);
+      console.log('[quiz] Dados enviados para o Realtime Database');
+    } catch (err) {
+      console.error('[quiz] Erro ao enviar para o Realtime Database', err);
     }
   });
