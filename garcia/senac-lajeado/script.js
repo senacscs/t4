@@ -14,7 +14,8 @@
     storageBucket: "senac-lajeado.firebasestorage.app",
     messagingSenderId: "735105605341",
     appId: "1:735105605341:web:69ec8f755b01b8fe928534",
-    measurementId: "G-CVD9BJVHQC"
+  measurementId: "G-CVD9BJVHQC",
+  databaseURL: "https://senac-lajeado-default-rtdb.firebaseio.com"
   };
 
   // Initialize Firebase
@@ -22,6 +23,7 @@
   const analytics = getAnalytics(app);
   // Realtime Database (adicione databaseURL no firebaseConfig se necessário)
   const db = getDatabase(app);
+  try{ console.log('[quiz] Realtime DB URL:', ref(db).toString()); } catch(_){}
 
   // Save to Realtime Database only after the user submits the contact form successfully
   document.addEventListener('contact:submitted', async (evt) => {
