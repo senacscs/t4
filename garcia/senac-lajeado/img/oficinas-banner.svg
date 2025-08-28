@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="242" viewBox="0 0 1440 242">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#3b33ff"/>
+      <stop offset="1" stop-color="#ff3bb0"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="242" fill="url(#g)"/>
+  <g opacity="0.25">
+    <circle cx="124" cy="70" r="46" fill="#fff"/>
+    <circle cx="210" cy="178" r="26" fill="#fff"/>
+    <rect x="1280" y="48" width="98" height="64" rx="12" fill="#fff"/>
+    <path d="M1312 64h34v32h-34z" fill="#3b33ff" opacity="0.65"/>
+  </g>
+  <text x="72" y="112" font-size="64" font-family="Segoe UI, Roboto, Arial" font-weight="800" fill="#fff">OFICINAS</text>
+  <text x="72" y="172" font-size="64" font-family="Segoe UI, Roboto, Arial" font-weight="800" fill="#fff">ON-LINE</text>
+  <rect x="0" y="0" width="1440" height="242" fill="url(#g2)"/>
+</svg>

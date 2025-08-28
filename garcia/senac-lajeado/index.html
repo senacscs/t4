@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Réplica de Header</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- Header (não funcional) -->
+	<header class="senac-header" role="banner">
+		<!-- Barra azul superior -->
+		<div class="topbar">
+			<div class="container">
+				<nav class="topnav" aria-label="Atalhos do sistema">
+					<a href="https://www.senacrs.com.br/home" class="topnav-link active">SENAC-RS</a>
+					<a href="https://www.senacrs.com.br/home" class="topnav-link">SESC-RS</a>
+					<a href="https://www.senacrs.com.br/home" class="topnav-link">FECOMÉRCIO-RS</a>
+					<a href="https://www.senacrs.com.br/home" class="topnav-link">CNC</a>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Barra branca principal -->
+		<div class="mainbar">
+			<div class="container">
+				<a class="brand" href="https://www.senacrs.com.br/home" aria-label="Senac-RS">
+					<img class="brand-img" src="img/senacLogo.png" alt="Logo Senac-RS" />
+				</a>
+
+				<nav class="mainnav" aria-label="Menu principal">
+					<a href="https://www.senacrs.com.br/home" class="mainnav-link">Escolas</a>
+					<a href="https://www.senacrs.com.br/home" class="mainnav-link">Cursos</a>
+					<a href="https://www.senacrs.com.br/home" class="mainnav-link">Serviços</a>
+					<a href="https://www.senacrs.com.br/home" class="mainnav-link">Institucional</a>
+					<a href="https://www.senacrs.com.br/home" class="mainnav-link">Contatos</a>
+					<a href="https://www.senacrs.com.br/home" class="mainnav-link">Publicações</a>
+				</nav>
+
+				<div class="main-actions">
+					<a href="https://www.senacrs.com.br/home" class="action search" aria-label="Pesquisar">
+						<svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+							<circle cx="10.5" cy="10.5" r="7.5" stroke="currentColor" stroke-width="2" />
+						</svg>
+						<span>Pesquisar</span>
+					</a>
+					<a href="https://www.senacrs.com.br/home" class="action account" aria-label="Minha conta">
+						<svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="2" />
+							<path d="M19 19c0-3.314-3.134-6-7-6s-7 2.686-7 6" stroke="currentColor" stroke-width="2"
+								stroke-linecap="round" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Banner Oficinas -->
+	<section class="oficinas-banner" aria-label="Oficinas on-line">
+		<img src="img/oficinas.png" alt="Oficinas on-line" width="1440" height="242"
+			style="width:100%;height:auto;display:block" />
+	</section>
+
+	<main class="container quiz-wrap">
+		<!-- ÚNICO CARD do quiz; o conteúdo troca com animação -->
+		<section id="quiz-card" class="quiz-card mod-intro" aria-live="polite">
+			<div id="cardMedia" class="card-media" aria-hidden="true"></div>
+			<div class="card-body">
+				<div id="stage" class="stage animate-in"><!-- conteúdo dinâmico --></div>
+			</div>
+			<aside class="progress" aria-label="Progresso">
+				<ul id="dots" class="dots" role="list"></ul>
+			</aside>
+			<!-- CTA de contato aparece somente no resultado -->
+			<div id="contactCta" class="contact-cta" hidden>
+				<div class="cta-text">Gostaria que o Senac entrasse em contato com você?</div>
+				<button id="openContactBtn" class="btn btn-primary btn-cta" type="button">Quero ser contatado</button>
+			</div>
+		</section>
+	</main>
+
+	<!-- Modal de Contato -->
+	<div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle" hidden>
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h4 id="contactTitle" class="modal-title">Deixe seus dados</h4>
+				<button id="closeModalBtn" class="modal-close" aria-label="Fechar">×</button>
+			</div>
+			<div class="modal-body">
+				<form id="contactForm" class="form-grid" novalidate>
+					<div class="form-field">
+						<label for="nome">Nome completo</label>
+						<input id="nome" name="nome" type="text" autocomplete="name" required />
+					</div>
+					<div class="form-field">
+						<label for="email">E-mail</label>
+						<input id="email" name="email" type="email" autocomplete="email" required />
+					</div>
+					<div class="form-field">
+						<label for="cel">Celular (com DDD)</label>
+						<input id="cel" name="cel" type="tel" inputmode="numeric" placeholder="(11) 91234-5678"
+							required />
+						<span class="help">Somente números serão considerados.</span>
+					</div>
+					<div class="form-field">
+						<label class="terms"><input type="checkbox" id="termsChk" />
+							Autorizo o uso dos meus dados para contato conforme a política de privacidade.
+						</label>
+					</div>
+					<div class="modal-actions">
+						<button type="button" id="cancelContact" class="btn btn-outline">Cancelar</button>
+						<button type="submit" id="submitContact" class="btn btn-primary" disabled>Enviar</button>
+					</div>
+				</form>
+				<div id="contactSuccess" class="success-note" hidden>
+					<h4>Obrigado! 🚀</h4>
+					<p>Recebemos seus dados e em breve o Senac entrará em contato.</p>
+					<div class="modal-actions">
+						<button type="button" id="closeSuccess" class="btn btn-primary">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		(function () {
+			const questions = [
+				{
+					text: 'Você está empregado?',
+					yes: 'Você está trabalhando, parabéns! Estar empregado já é um passo importante para manter sua experiência ativa e abrir portas para novas oportunidades. Continue investindo em si mesmo para não apenas se manter no mercado, mas também crescer.',
+					no: 'Você desempregado, mas não desanime. Segundo dados do IBGE, cerca de 7,5% dos brasileiros estão desempregados (2025). Isso mostra que a competição é grande, mas também que quem se qualifica aumenta muito suas chances de voltar ao mercado. Talvez seja a hora de investir em cursos profissionalizantes para reverter essa condição.'
+				},
+				{
+					text: 'Atualmente você está estudando?',
+					yes: 'Estudar é uma das maiores vantagens competitivas no mundo do trabalho. Quem estuda aumenta em até 73% as chances de conquistar melhores salários, segundo pesquisas do Ipea. Você já está no caminho certo!',
+					no: 'Atenção: deixar de estudar pode ser um freio na sua carreira. Em um mundo em que as profissões mudam rapidamente, quem não estuda fica para trás. Que tal começar com algo acessível, acesse as oficinas online gratuitas do Senac em senacrs.com.br'
+				},
+				{
+					text: 'Você domina o uso do computador (pacote Office)?',
+					yes: 'O domínio do Excel, Word e PowerPoint é praticamente uma necessidade universal no mercado de trabalho. Esse conhecimento torna você mais produtivo e preparado para qualquer vaga.',
+					no: 'Se você ainda não domina o uso do computador vale a pena aprender. O pacote Office é exigido em 8 de cada 10 vagas de emprego administrativo no Brasil. Hoje existem cursos que podem ser concluídos em poucas semanas.'
+				},
+				{
+					text: 'Já utiliza Inteligência Artificial em seu dia a dia?',
+					yes: 'Você sabia que o uso de IA é cada vez mais valorizado pelas empresas? Segundo a PwC, até 2030, a IA pode adicionar até 15,7 trilhões de dólares à economia global. Você já está surfando essa onda!',
+					no: 'Atenção, você está deixando passar uma grande oportunidade. A IA já está transformando o mercado de trabalho em todas as áreas. Aprender a usá-la não exige formação em tecnologia: qualquer pessoa pode começar com ferramentas simples para aumentar sua produtividade.'
+				},
+				{
+					text: 'Fez algum curso de atualização nos últimos 2 anos?',
+					yes: 'Parabéns por ter feito um curso nos últimos 2 anos! Esse é o espírito de um profissional atualizado. Estudos mostram que quem investe regularmente em capacitação tem até 30% mais chances de progressão na carreira.',
+					no: 'O conhecimento envelhece cada vez mais rapidamente. Em muitas áreas, o que você aprendeu há 5 anos pode já estar ultrapassado. Pequenos cursos podem reabrir portas para novas oportunidades.'
+				},
+				{
+					text: 'Possui aplicativos em celular utilizados para o seu trabalho e organização do dia a dia?',
+					yes: 'Hoje o celular é uma ferramenta essencial na vida da gente e no trabalho. Profissionais que utilizam aplicativos para otimizar tarefas ganham em produtividade e organização.',
+					no: 'Se você ainda não possui apps em seu celular utilizados para o trabalho e organização do dia a dia você pode estar perdendo tempo. Há aplicativos gratuitos que ajudam desde organização de tarefas até controle de finanças. Inserir essa prática no dia a dia também é um diferencial importante.'
+				},
+				{
+					text: 'Você compreende minimamente um outro idioma?',
+					yes: 'Por fim, dentre as competências necessárias atualmente, dominar outro idioma é abrir portas para o mundo. O inglês, por exemplo, pode aumentar o salário em até 61% no Brasil, segundo a Catho.',
+					no: 'Dominar um segundo idioma é, também, uma habilidade estratégica atualmente. Mesmo aprender o básico já faz diferença.'
+				},
+				{
+					text: 'Já tem um objetivo profissional definido?',
+					yes: 'Você tem um objtivo profissional definido, parabéns! Ter clareza do objetivo ajuda a focar energia e esforços, transformando passos em conquistas. Isso mostra que você tem visão de futuro.',
+					no: 'Sem metas claras, é fácil andar em círculos. Definir um objetivo profissional é como traçar um mapa: você pode até mudar o caminho, mas sabe para onde quer ir. Reflita sobre o que realmente deseja alcançar.'
+				}
+			];
+
+			const finalMessages = {
+				moreYes: 'Agora é a sua vez de crescer! Suas respostas indicam que você está no caminho certo, já construiu uma boa base e deve continuar se atualizando. O próximo passo pode ser buscar especializações e ampliar seu networking. Conte com o Senac para seguir nessa jornada de crescimento!',
+				balanced: 'Agora é a sua vez de inovar! Suas respostas indicam que você já tem conquistas, mas precisa acelerar a qualificação para não perder espaço. Um plano de estudos e a adoção de novas ferramentas tecnológicas podem fazer a diferença. Conte com o Senac para acelerar essa jornada de crescimento!',
+				moreNo: 'Agora é a sua vez de mudar! Suas respostas mostram que é hora de agir! Não encare como crítica, mas como ponto de partida. Comece por algo simples: um curso online, aprender a usar uma IA ou aplicativos no celular. Cada pequeno passo abre novas oportunidades e o Senac está aqui para te ajudar.'
+			};
+
+			const $ = (sel) => document.querySelector(sel);
+			const quizCard = $('#quiz-card');
+			const cardMedia = $('#cardMedia');
+			const stage = $('#stage');
+			const dots = $('#dots');
+
+			let index = 0;
+			let choices = []; // 'sim' | 'nao'
+			let animating = false;
+
+			function buildDots() {
+				dots.innerHTML = '';
+				for (let i = 0; i < questions.length; i++) {
+					const li = document.createElement('li');
+					li.className = 'dot';
+					dots.appendChild(li);
+				}
+			}
+
+			function markDots() {
+				[...dots.children].forEach((d, i) => {
+					d.classList.toggle('active', i === index);
+					d.classList.toggle('done', i < index);
+				});
+			}
+
+			function stageSwap(html, mode) {
+				if (animating) return;
+				animating = true;
+				stage.classList.remove('animate-in');
+				stage.classList.add('animate-out');
+				const onEnd = () => {
+					stage.removeEventListener('animationend', onEnd);
+					stage.innerHTML = html;
+					quizCard.classList.remove('mod-intro', 'mod-question', 'mod-result');
+					quizCard.classList.add(mode);
+					stage.classList.remove('animate-out');
+					requestAnimationFrame(() => {
+						stage.classList.add('animate-in');
+						animating = false;
+					});
+				};
+				stage.addEventListener('animationend', onEnd, { once: true });
+			}
+
+			function renderIntro() {
+				const html = `
+							<div class="intro-top">
+								<h3 class="card-title">Encontre o curso ideal para você</h3>
+								<p class="card-sub">Responda 8 perguntas rápidas e receba uma orientação clara sobre como acelerar sua evolução profissional com apoio do Senac.</p>
+								<ul class="intro-points" role="list">
+									<li><span>Menos de 1 minuto para concluir</span></li>
+									<li><span>Recomendações práticas e atualizadas</span></li>
+									<li><span>Sem cadastro e sem complicação</span></li>
+								</ul>
+							</div>
+							<div class="intro-bottom">
+								<div class="intro-meta">
+									<span class="meta">8 perguntas rápidas</span>
+									<span class="meta">Privacidade garantida</span>
+								</div>
+								<div class="card-actions"><button id="startQuizBtn" class="btn btn-primary">Começar agora</button></div>
+							</div>
+						`;
+				stageSwap(html, 'mod-intro');
+				dots.innerHTML = '';
+			}
+
+			function renderQuestion() {
+				const q = questions[index];
+				const isLast = index === questions.length - 1;
+				const html = `
+							<div class="q-head"><h3 class="q-title">QUESTÃO ${index + 1}:</h3><p class="q-text">${q.text}</p></div>
+							<!-- Feedback acima dos botões -->
+							<div id="feedback" class="feedback collapsible" hidden></div>
+							<form id="answers" class="answers" aria-label="Escolha Sim ou Não">
+								<!-- invertido: Não à esquerda, Sim à direita -->
+								<input type="radio" name="ans" id="ansNo" value="nao" />
+								<label for="ansNo" class="choice">Não</label>
+								<input type="radio" name="ans" id="ansYes" value="sim" />
+								<label for="ansYes" class="choice">Sim</label>
+								<button type="button" id="nextBtn" class="btn btn-primary next-inline" disabled>${isLast ? 'Ver resultado' : 'Próxima'}</button>
+							</form>
+							<div class="card-actions">
+								<button id="toggleFb" class="btn btn-outline btn-xs" hidden>Ver mais</button>
+							</div>`;
+				stageSwap(html, 'mod-question');
+				markDots();
+			}
+
+			function renderResult() {
+				const yesCount = choices.filter(c => c === 'sim').length;
+				const noCount = choices.length - yesCount;
+				let bucket = 'balanced';
+				if (yesCount > noCount) bucket = 'moreYes';
+				else if (noCount > yesCount) bucket = 'moreNo';
+				const html = `
+							<h3 class="card-title">Seu resultado</h3>
+							<div class="result-text">
+								<p><strong>Resumo:</strong> ${yesCount} Sim • ${noCount} Não</p>
+							</div>
+							<hr class="sep" />
+							<p class="summary">${finalMessages[bucket]}</p>
+							<div class="card-actions"><button id="restartBtn" class="btn btn-outline">Refazer</button></div>
+						`;
+				stageSwap(html, 'mod-result');
+				// Mostrar CTA de contato no canto inferior direito
+				const cta = document.getElementById('contactCta');
+				if (cta) { cta.hidden = false; }
+			}
+
+			function start() {
+				index = 0; choices = [];
+				buildDots();
+				renderQuestion();
+			}
+
+			function onAnswer(value) {
+				const feedback = stage.querySelector('#feedback');
+				const answers = stage.querySelector('#answers');
+				const nextBtn = stage.querySelector('#nextBtn');
+				const toggleFb = stage.querySelector('#toggleFb');
+				const q = questions[index];
+				// manter o texto correspondente à escolha
+				feedback.textContent = value === 'sim' ? q.yes : q.no;
+				feedback.hidden = false;
+				feedback.classList.remove('revealed');
+				// wait a tick to let the browser register the state change
+				requestAnimationFrame(() => feedback.classList.add('revealed'));
+				// botão "ver mais" desativado nessa versão
+				toggleFb.hidden = true;
+				nextBtn.disabled = false;
+				answers.querySelectorAll('.choice').forEach(l => l.classList.remove('selected'));
+				const selectedLabel = value === 'sim' ? answers.querySelector('label[for="ansYes"]') : answers.querySelector('label[for="ansNo"]');
+				selectedLabel?.classList.add('selected');
+			}
+
+			// Delegação de eventos na "stage" (conteúdo dinâmico)
+			stage.addEventListener('click', (e) => {
+				const t = e.target;
+				if (!(t instanceof HTMLElement)) return;
+				if (t.id === 'startQuizBtn') {
+					start();
+				}
+				if (t.id === 'nextBtn') {
+					e.preventDefault();
+					const selected = stage.querySelector('input[name="ans"]:checked');
+					if (!selected) return;
+					choices[index] = selected.value;
+					if (index < questions.length - 1) {
+						index++;
+						renderQuestion();
+					} else {
+						renderResult();
+					}
+				}
+				if (t.id === 'toggleFb') {
+					e.preventDefault();
+					const fb = stage.querySelector('#feedback');
+					fb.classList.toggle('expanded');
+					if (fb.classList.contains('expanded')) t.textContent = 'Ver menos'; else t.textContent = 'Ver mais';
+				}
+				if (t.id === 'restartBtn') {
+					renderIntro();
+					// esconder CTA se estava visível
+					const cta = document.getElementById('contactCta');
+					if (cta) cta.hidden = true;
+				}
+			});
+
+			// Clicks fora da stage (CTA e modal)
+			document.addEventListener('click', (e) => {
+				const t = e.target;
+				if (!(t instanceof HTMLElement)) return;
+				if (t.id === 'openContactBtn') {
+					document.getElementById('contactModal')?.removeAttribute('hidden');
+					setTimeout(() => document.getElementById('nome')?.focus(), 50);
+				}
+				if (t.id === 'closeModalBtn' || t.id === 'cancelContact' || t.id === 'closeSuccess') {
+					document.getElementById('contactModal')?.setAttribute('hidden', '');
+				}
+				// fechar ao clicar no backdrop
+				const modal = document.getElementById('contactModal');
+				if (modal && t === modal) { modal.setAttribute('hidden', ''); }
+			});
+
+			// habilitar envio apenas com termos aceitos
+			document.addEventListener('change', (e) => {
+				const t = e.target;
+				if (!(t instanceof HTMLInputElement)) return;
+				if (t.id === 'termsChk') {
+					const btn = document.getElementById('submitContact');
+					if (btn && 'disabled' in btn) { btn.disabled = !t.checked; }
+				}
+			});
+
+			stage.addEventListener('change', (e) => {
+				const target = e.target;
+				if (!(target instanceof HTMLInputElement)) return;
+				if (target.name === 'ans') onAnswer(target.value);
+			});
+
+			// Atalho de teclado: Enter vai para a próxima questão (se houver seleção)
+			document.addEventListener('keydown', (e) => {
+				if (e.key !== 'Enter') return;
+				const card = document.querySelector('#quiz-card.mod-question');
+				if (!card) return; // só quando estamos numa pergunta
+				const stg = card.querySelector('#stage');
+				if (!stg) return;
+				const nextBtn = stg.querySelector('#nextBtn');
+				const selected = stg.querySelector('input[name="ans"]:checked');
+				if (selected && nextBtn && !nextBtn.disabled) { e.preventDefault(); nextBtn.click(); }
+			});
+
+			// Máscaras simples e validação leve
+			document.addEventListener('input', (e) => {
+				const t = e.target;
+				if (!(t instanceof HTMLInputElement)) return;
+				if (t.id === 'cel') {
+					// manter apenas números e formatar (DD) 90000-0000
+					let v = t.value.replace(/\D/g, '').slice(0, 11);
+					if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+					if (v.length > 10) v = `${v.slice(0, 10)}${v.slice(10, 11)}${v.length > 11 ? '-' : ''}${v.slice(11)}`;
+					if (v.replace(/\D/g, '').length > 6) {
+						const d = v.replace(/[()\s-]/g, '');
+						const ddd = d.slice(0, 2), num = d.slice(2);
+						const p1 = num.length > 5 ? num.slice(0, 5) : num;
+						const p2 = num.length > 5 ? `-${num.slice(5, 9)}` : '';
+						v = `(${ddd}) ${p1}${p2}`;
+					}
+					t.value = v;
+				}
+			});
+
+			// submissão do formulário (mock local)
+			document.addEventListener('submit', (e) => {
+				const form = e.target;
+				if (!(form instanceof HTMLFormElement)) return;
+				if (form.id !== 'contactForm') return;
+				e.preventDefault();
+				const nomeEl = document.getElementById('nome');
+				const emailEl = document.getElementById('email');
+				const celEl = document.getElementById('cel');
+				const termsEl = document.getElementById('termsChk');
+				const nome = nomeEl && 'value' in nomeEl ? nomeEl.value.trim() : '';
+				const email = emailEl && 'value' in emailEl ? emailEl.value.trim() : '';
+				const cel = celEl && 'value' in celEl ? celEl.value.replace(/\D/g, '') : '';
+				const agreed = termsEl && 'checked' in termsEl ? termsEl.checked : false;
+				const ok = nome && /.+@.+\..+/.test(email) && cel.length >= 10 && agreed;
+				if (!ok) {
+					alert('Por favor, preencha os dados corretamente.');
+					return;
+				}
+				// Aqui você poderia enviar via fetch para sua API
+				// fetch('/api/contato', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({nome,email,cel, resumo:{choices}})})
+				form.setAttribute('hidden', '');
+				document.getElementById('contactSuccess')?.removeAttribute('hidden');
+			});
+
+			// Iniciar com a tela de introdução
+			renderIntro();
+		})();
+	</script>
+</body>
+
+</html>
