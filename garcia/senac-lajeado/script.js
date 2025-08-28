@@ -1,7 +1,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
-  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+  import { getDatabase, ref, push, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,15 +21,21 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  // Firestore Database
-  const db = getFirestore(app);
-  try { console.log('[quiz] Firestore inicializado'); } catch (_) {}
+  // Realtime Database
+  const db = getDatabase(app);
+  try {
+    const rootRef = ref(db);
+    console.log('[quiz] Realtime Database inicializado');
+    console.log('[quiz] DB root URL:', rootRef.toString());
+  } catch (_) {}
 
-  // Save to Firestore only after the user submits the contact form successfully
+  // Save to Realtime Database only after the user submits the contact form successfully
   document.addEventListener('contact:submitted', async (evt) => {
     try {
       const { nome, email, cel, yesCount, noCount } = evt.detail || {};
-      await addDoc(collection(db, 'quizResponses'), {
+      console.log('[quiz] Evento recebido com payload:', { nome, email, cel, yesCount, noCount });
+      const newRef = push(ref(db, 'quizResponses'));
+      await set(newRef, {
         nome,
         email,
         celular: cel,
@@ -38,8 +44,13 @@
         createdAt: serverTimestamp(),
         userAgent: navigator.userAgent
       });
-      console.log('[quiz] Dados enviados para o Firestore');
+      console.log('[quiz] Dados enviados para o Realtime Database em:', newRef.toString());
     } catch (err) {
-      console.error('[quiz] Erro ao enviar para o Firestore', err);
+      console.error('[quiz] Erro ao enviar para o Realtime Database', {
+        code: err?.code,
+        message: err?.message,
+        name: err?.name,
+        err
+      });
     }
   });
