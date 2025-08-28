@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Utilizadores - Quiz SENAC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .table-container::-webkit-scrollbar { height: 8px; width: 8px; }
+        .table-container::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
+        .table-container::-webkit-scrollbar-track { background-color: #f1f5f9; }
+        .answer-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; font-weight: bold; color: white; }
+        .icon-yes { background-color: #10b981; }
+        .icon-no { background-color: #ef4444; }
+        /* Esconde o conteúdo até a verificação do login */
+        #main-content { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 md:p-8">
+
+    <!-- Mensagem de Carregamento -->
+    <div id="loading-message" class="text-center">
+        <p class="text-lg text-gray-500">A verificar autenticação...</p>
+    </div>
+
+    <!-- Conteúdo Principal do Dashboard (inicialmente escondido) -->
+    <div id="main-content">
+        <header class="mb-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="logo-senac.png" alt="Logo Senac" class="h-10">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Relatório de Participantes</h1>
+            </div>
+            <div class="flex items-center gap-4 mt-4 md:mt-0">
+                <span id="user-email" class="text-sm text-gray-600 dark:text-gray-300"></span>
+                <button id="logout-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+                    Sair
+                </button>
+            </div>
+        </header>
+
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6">
+            <div class="table-container overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <thead class="bg-gray-50 dark:bg-gray-700">
+                        <tr id="table-header-row">
+                            <th scope="col" class="sticky left-0 bg-gray-50 dark:bg-gray-700 px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Email</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">CPF</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Telefone</th>
+                            <!-- Cabeçalhos das perguntas serão inseridos aqui -->
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Perfil Final</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-data-table-body" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="status-message" class="mt-4 text-center text-gray-500 dark:text-gray-400">A carregar dados...</div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, getDocs, orderBy, query, limit } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+             apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
+             authDomain: "quiz-senac-vocacional.firebaseapp.com",
+             projectId: "quiz-senac-vocacional",
+             storageBucket: "quiz-senac-vocacional.firebasestorage.app",
+             messagingSenderId: "816696913380",
+             appId: "1:816696913380:web:024f6514b94ca5b75b2bf1",
+             measurementId: "G-SNE93NYTFQ"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        const loadingMessage = document.getElementById('loading-message');
+        const mainContent = document.getElementById('main-content');
+        const userEmailElem = document.getElementById('user-email');
+        const logoutButton = document.getElementById('logout-button');
+
+        // VERIFICA O ESTADO DA AUTENTICAÇÃO
+        onAuthStateChanged(auth, user => {
+            if (user) {
+                // Utilizador está autenticado, mostra o conteúdo do dashboard
+                loadingMessage.style.display = 'none';
+                mainContent.style.display = 'block';
+                userEmailElem.textContent = user.email;
+                
+                // Carrega os dados da tabela
+                loadDashboardData();
+            } else {
+                // Utilizador não está autenticado, redireciona para a página de login
+                window.location.href = 'login.html';
+            }
+        });
+
+        logoutButton.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // O onAuthStateChanged irá detetar a saída e redirecionar automaticamente
+            } catch (error) {
+                console.error("Erro ao sair:", error);
+            }
+        });
+        
+        // Função que carrega e exibe os dados
+        async function loadDashboardData() {
+            const questions = [
+                { question: "Você está empregado?" }, { question: "Atualmente você está estudando?" }, { question: "Você domina o uso do computador (pacote Office)?" }, { question: "Já utiliza Inteligência Artificial em seu dia a dia?" }, { question: "Fez algum curso de atualização nos últimos 2 anos?" }, { question: "Possui aplicativos em celular utilizados para o seu trabalho e organização do dia a dia?" }, { question: "Você compreende minimamente um outro idioma?" }, { question: "Já tem um objetivo profissional definido?" },
+            ];
+            const appId = 'senac-quiz-local'; 
+            const usersCollection = collection(db, "artifacts", appId, "users");
+            const tableHeaderRow = document.getElementById("table-header-row");
+            const tableBody = document.getElementById("user-data-table-body");
+            const statusMessage = document.getElementById("status-message");
+
+            function createTableHeaders() {
+                const profileHeader = tableHeaderRow.lastElementChild; 
+                tableHeaderRow.removeChild(profileHeader);
+                questions.forEach((q, index) => {
+                    const th = document.createElement("th");
+                    th.scope = "col";
+                    th.className = "px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider";
+                    th.textContent = `Q${index + 1}`;
+                    th.title = q.question; 
+                    tableHeaderRow.appendChild(th);
+                });
+                tableHeaderRow.appendChild(profileHeader);
+            }
+
+            async function fetchUsers() {
+                statusMessage.textContent = "A carregar dados...";
+                tableBody.innerHTML = ""; 
+                try {
+                    const userSnapshot = await getDocs(usersCollection);
+                    if (userSnapshot.empty) {
+                        statusMessage.textContent = "Nenhum utilizador encontrado.";
+                        return;
+                    }
+                    for (const userDoc of userSnapshot.docs) {
+                        const userData = userDoc.data();
+                        const userId = userDoc.id;
+                        const quizResultsCollection = collection(db, "artifacts", appId, "users", userId, "quizResults");
+                        const quizQuery = query(quizResultsCollection, orderBy("completedAt", "desc"), limit(1));
+                        const quizSnapshot = await getDocs(quizQuery);
+                        let quizResult = {}; 
+                        if (!quizSnapshot.empty) {
+                            quizResult = quizSnapshot.docs[0].data();
+                        }
+                        const newRow = createTableRow(userData, quizResult);
+                        tableBody.appendChild(newRow);
+                    }
+                    statusMessage.textContent = `Dados carregados. Total de participantes: ${userSnapshot.size}`;
+                } catch (e) {
+                    console.error("Erro ao buscar documentos: ", e);
+                    statusMessage.textContent = "Erro ao buscar dados. Verifique o console e as regras de segurança do Firebase.";
+                }
+            }
+
+            function createTableRow(userData, quizResult) {
+                const row = document.createElement("tr");
+                row.className = "hover:bg-gray-50 dark:hover:bg-gray-700/50";
+                let rowHTML = `<td class="sticky left-0 bg-white dark:bg-gray-800 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">${userData.email || 'N/A'}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${userData.cpf || 'N/A'}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${userData.phone || 'N/A'}</td>`;
+                const answers = quizResult.answers || {};
+                questions.forEach((q, index) => {
+                    const answer = answers[index];
+                    let answerCell = '<td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">';
+                    if (answer === true) {
+                        answerCell += '<span class="answer-icon icon-yes" title="Sim">S</span>';
+                    } else if (answer === false) {
+                        answerCell += '<span class="answer-icon icon-no" title="Não">N</span>';
+                    } else {
+                        answerCell += '<span>-</span>';
+                    }
+                    answerCell += '</td>';
+                    rowHTML += answerCell;
+                });
+                rowHTML += `<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${quizResult.profile || 'N/A'}</td>`;
+                row.innerHTML = rowHTML;
+                return row;
+            }
+
+            createTableHeaders();
+            fetchUsers();
+        }
+    </script>
+</body>
+</html>

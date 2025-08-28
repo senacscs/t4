@@ -55,6 +55,12 @@
                 transform: rotate(360deg);
             }
         }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin: 0 auto 20px;
+        }
     </style>
 </head>
 
@@ -63,16 +69,12 @@
 
     <div class="w-full max-w-2xl mx-auto">
         <!-- Card Principal -->
-        <div id="quiz-container"
+        <div id="main-container"
             class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transition-all duration-500">
 
             <!-- Tela Inicial -->
             <div id="start-screen" class="p-8 md:p-12 text-center fade-in">
-                <svg class="w-20 h-20 mx-auto mb-4 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a7.5 7.5 0 00-7.5 0c.045.21.1.42.155.632m7.5-2.943c.54-.23.99-.532 1.374-.887m-1.374.887c.385.355.737.758 1.048 1.21m-1.048-1.21c.31.452.546.95.708 1.48m-11.25-2.148a.998.998 0 00.323.512m-3.228-6.19c.577.212 1.2.328 1.85.328m9.45 0a9.023 9.023 0 00-2.43-5.132M5.106 7.668a9.023 9.023 0 012.43-5.132" />
-                </svg>
+                <img class="logo" src="logo-senac.png" alt="Logo Senac">
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Descubra seu Curso Ideal
                 </h1>
                 <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-md mx-auto">Responda algumas perguntas e veja qual
@@ -85,33 +87,29 @@
 
             <!-- Tela do Quiz -->
             <div id="quiz-screen" class="hidden p-8 md:p-12 fade-in">
-                <div class="mb-6">
+                 <div class="mb-6">
                     <div class="flex justify-between items-center mb-2">
                         <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">Pergunta <span
-                                id="question-number"></span> de <span id="total-questions"></span></span>
+                                id="question-number">1</span> de <span id="total-questions">8</span></span>
                     </div>
                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                        <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-500"></div>
+                        <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
                     </div>
                 </div>
-                <h2 id="question-text" class="text-2xl font-semibold text-gray-900 dark:text-white mb-8 min-h-[96px]">
-                </h2>
-                <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                <h2 id="question-text" class="text-2xl font-semibold text-gray-900 dark:text-white mb-8 min-h-[96px]"></h2>
+                <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Botões de Sim/Não serão inseridos aqui pelo JS -->
+                </div>
             </div>
 
             <!-- Tela de Resultado -->
             <div id="result-screen" class="hidden p-8 md:p-12 text-center fade-in">
                 <div id="result-content">
-                    <div id="result-icon" class="w-20 h-20 mx-auto mb-4 text-blue-600 dark:text-blue-400"></div>
+                    <img id="result-icon" src="logo-senac.png" alt="logo senac" class="logo">
                     <h2 class="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-1">Seu perfil é:</h2>
                     <h1 id="result-category-title"
                         class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"></h1>
                     <p id="result-description" class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto"></p>
-                    <div class="bg-gray-100 dark:bg-gray-700/50 p-6 rounded-lg text-left">
-                        <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Sugestões de Cursos:</h3>
-                        <ul id="suggested-courses"
-                            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1"></ul>
-                    </div>
                 </div>
 
                 <!-- Seção de Login Opcional -->
@@ -135,7 +133,7 @@
                     </div>
 
                     <!-- Formulário de Informações do Usuário -->
-                    <div id="user-info-form" class="hidden text-left">
+                    <div id="user-info-form-container" class="hidden text-left">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4 text-center">Complete
                             seus dados</h3>
                         <form id="info-form" class="space-y-4">
@@ -191,278 +189,218 @@
     <script type="module">
         // Importações do Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getFirestore, doc, setDoc, serverTimestamp, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"; // <-- ADICIONADO
+        import { getFirestore, doc, setDoc, addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // --- CONFIGURAÇÃO DO QUIZ (mesma de antes) ---
-        const questions = [
-            {
-                question: "No seu tempo livre, o que você mais gosta de fazer?",
-                answers: [
-                    { text: "Criar um app ou automatizar tarefas no computador.", category: "tecnologia" },
-                    { text: "Organizar um evento ou planejar minhas finanças.", category: "gestao" },
-                    { text: "Desenhar, pintar ou visitar uma galeria de arte.", category: "design" },
-                    { text: "Ajudar pessoas ou aprender sobre bem-estar.", category: "saude" },
-                    { text: "Ler, escrever ou conversar com amigos.", category: "comunicacao" },
-                ],
-            },
-            {
-                question: "Qual tipo de desafio mais te atrai?",
-                answers: [
-                    { text: "Resolver um quebra-cabeça lógico complexo.", category: "tecnologia" },
-                    { text: "Liderar uma equipe para atingir uma meta.", category: "gestao" },
-                    { text: "Criar algo visualmente bonito do zero.", category: "design" },
-                    { text: "Cuidar e apoiar alguém que precisa.", category: "saude" },
-                    { text: "Apresentar uma ideia e convencer os outros.", category: "comunicacao" },
-                ],
-            },
-            {
-                question: "Em um projeto em grupo, qual seria seu papel ideal?",
-                answers: [
-                    { text: "O especialista técnico que resolve os problemas.", category: "tecnologia" },
-                    { text: "O líder que organiza as tarefas e motiva a equipe.", category: "gestao" },
-                    { text: "O criativo que cuida da parte visual e da identidade.", category: "design" },
-                    { text: "O que garante que todos estão bem e se sentindo incluídos.", category: "saude" },
-                    { text: "O porta-voz que apresenta o projeto final.", category: "comunicacao" },
-                ],
-            },
-            {
-                question: "Que tipo de ambiente de trabalho você prefere?",
-                answers: [
-                    { text: "Um lugar inovador, cheio de tecnologia e dados.", category: "tecnologia" },
-                    { text: "Um escritório dinâmico, focado em metas e resultados.", category: "gestao" },
-                    { text: "Um estúdio ou agência com liberdade para criar.", category: "design" },
-                    { text: "Um hospital, clínica ou espaço de cuidado com pessoas.", category: "saude" },
-                    { text: "Um ambiente social, com muita interação e networking.", category: "comunicacao" },
-                ],
-            },
-            {
-                question: "Se você fosse criar algo novo, seria...",
-                answers: [
-                    { text: "Um software que soluciona um problema do dia a dia.", category: "tecnologia" },
-                    { text: "Um novo modelo de negócio ou uma startup.", category: "gestao" },
-                    { text: "Uma obra de arte, uma marca ou uma campanha visual.", category: "design" },
-                    { text: "Um programa de apoio comunitário ou de saúde.", category: "saude" },
-                    { text: "Um podcast, um blog ou um canal de conteúdo.", category: "comunicacao" },
-                ],
-            }
-        ];
-        const resultsData = {
-            tecnologia: {
-                title: "Inovador(a) Digital",
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg>`,
-                description: "Você tem um perfil analítico e adora resolver problemas com lógica e tecnologia. O mundo digital é o seu playground e você se sente à vontade criando soluções inovadoras.",
-                courses: ["Análise e Desenvolvimento de Sistemas", "Redes de Computadores", "Ciência de Dados", "Segurança da Informação"]
-            },
-            gestao: {
-                title: "Líder Estrategista",
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>`,
-                description: "Seu talento está em organizar, planejar e liderar. Você tem uma visão estratégica e gosta de gerenciar recursos e pessoas para alcançar grandes objetivos.",
-                courses: ["Administração", "Logística", "Recursos Humanos", "Processos Gerenciais"]
-            },
-            design: {
-                title: "Criativo(a) Visual",
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.998 15.998 0 011.622-3.385m5.043 5.043a15.998 15.998 0 01-1.622-3.385m3.386 1.62a15.998 15.998 0 00-5.043-5.043m-3.386-1.622a15.998 15.998 0 015.043-5.043m0 5.043a15.998 15.998 0 013.386-1.62m-5.043 5.043a15.998 15.998 0 00-3.386-1.622m0 0a15.998 15.998 0 00-5.043 5.043m5.043-5.043a15.998 15.998 0 01-5.043 5.043" /></svg>`,
-                description: "Sua mente é um turbilhão de ideias visuais. Você se expressa através de formas, cores e imagens, e tem um talento natural para a estética e a comunicação visual.",
-                courses: ["Design Gráfico", "Design de Interiores", "Moda", "Produção Audiovisual"]
-            },
-            saude: {
-                title: "Cuidador(a) Humanista",
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>`,
-                description: "Você é uma pessoa empática e se realiza ajudando os outros. Seu foco está no bem-estar, na saúde e na qualidade de vida das pessoas ao seu redor.",
-                courses: ["Enfermagem", "Radiologia", "Farmácia", "Estética e Cosmética"]
-            },
-            comunicacao: {
-                title: "Conector(a) de Ideias",
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" /></svg>`,
-                description: "Sua força está na palavra, seja ela falada ou escrita. Você adora se conectar com pessoas, contar histórias, trocar informações e construir relacionamentos.",
-                courses: ["Publicidade e Propaganda", "Jornalismo", "Relações Públicas", "Marketing"]
-            }
+        // --- CONFIGURAÇÃO DO FIREBASE ---
+        const firebaseConfig = {
+             apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
+             authDomain: "quiz-senac-vocacional.firebaseapp.com",
+             projectId: "quiz-senac-vocacional",
+             storageBucket: "quiz-senac-vocacional.firebasestorage.app",
+             messagingSenderId: "816696913380",
+             appId: "1:816696913380:web:024f6514b94ca5b75b2bf1",
+             measurementId: "G-SNE93NYTFQ"
         };
+        
+        let db;
+        let auth; // <-- ADICIONADO
+        const appId = 'senac-quiz-local';
+        
+        // A variável userId agora será definida após a autenticação
+        let userId; 
 
-        // --- LÓGICA DO QUIZ ---
+        // --- FUNÇÃO DE INICIALIZAÇÃO ATUALIZADA ---
+        async function initializeFirebase() {
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app); // <-- ADICIONADO
+                
+                // Autentica o utilizador de forma anónima
+                await signInAnonymously(auth);
+                
+                // Pega o ID do utilizador anónimo para usar como identificador único
+                userId = auth.currentUser.uid;
+                console.log("Firebase inicializado e utilizador anónimo autenticado:", userId);
 
-        // Elementos da DOM
+            } catch (error) {
+                console.error("Erro ao inicializar ou autenticar no Firebase:", error);
+            }
+        }
+
+        // --- CONFIGURAÇÃO DO QUIZ ---
+        const questions = [
+            { question: "Você está empregado?" },
+            { question: "Atualmente você está estudando?" },
+            { question: "Você domina o uso do computador (pacote Office)?" },
+            { question: "Já utiliza Inteligência Artificial em seu dia a dia?" },
+            { question: "Fez algum curso de atualização nos últimos 2 anos?" },
+            { question: "Possui aplicativos em celular utilizados para o seu trabalho e organização do dia a dia?" },
+            { question: "Você compreende minimamente um outro idioma?" },
+            { question: "Já tem um objetivo profissional definido?" },
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // Objeto para armazenar as respostas (true/false)
+
+        // --- ELEMENTOS DO DOM ---
         const startScreen = document.getElementById('start-screen');
         const quizScreen = document.getElementById('quiz-screen');
         const resultScreen = document.getElementById('result-screen');
         const startButton = document.getElementById('start-button');
+        
+        const questionNumber = document.getElementById('question-number');
+        const totalQuestionsElem = document.getElementById('total-questions');
+        const progressBar = document.getElementById('progress-bar');
         const questionText = document.getElementById('question-text');
         const optionsContainer = document.getElementById('options-container');
-        const progressBar = document.getElementById('progress-bar');
-        const questionNumber = document.getElementById('question-number');
-        const totalQuestions = document.getElementById('total-questions');
-        // Novos elementos da DOM
+
+        const resultCategoryTitle = document.getElementById('result-category-title');
+        const resultDescription = document.getElementById('result-description');
+        
         const postQuizOptions = document.getElementById('post-quiz-options');
-        const userInfoFormContainer = document.getElementById('user-info-form');
-        const infoForm = document.getElementById('info-form');
         const showFormButton = document.getElementById('show-form-button');
+        const userInfoFormContainer = document.getElementById('user-info-form-container');
+        const infoForm = document.getElementById('info-form');
         const skipFormButton = document.getElementById('skip-form-button');
         const saveInfoButton = document.getElementById('save-info-button');
         const finalOptions = document.getElementById('final-options');
         const successMessage = document.getElementById('success-message');
 
-        // Estado do Quiz
-        let currentQuestionIndex = 0;
-        let scores = {};
-        let lastResultId = null;
-
-        // --- FIREBASE ---
-        let db, auth, userId, appId;
-
-        async function initializeFirebase() {
-            try {
-                const firebaseConfig = {
-                    apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
-                    authDomain: "quiz-senac-vocacional.firebaseapp.com",
-                    projectId: "quiz-senac-vocacional",
-                    storageBucket: "quiz-senac-vocacional.firebasestorage.app",
-                    messagingSenderId: "816696913380",
-                    appId: "1:816696913380:web:024f6514b94ca5b75b2bf1",
-                    measurementId: "G-SNE93NYTFQ"
-                };
-                appId = typeof __app_id !== 'undefined' ? __app_id : 'senac-quiz-local';
-                const app = initializeApp(firebaseConfig);
-                db = getFirestore(app);
-                auth = getAuth(app);
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
-                userId = auth.currentUser.uid;
-                console.log("Firebase inicializado e usuário autenticado:", userId);
-            } catch (error) {
-                console.error("Erro ao inicializar o Firebase:", error);
-            }
-        }
-
-        async function saveResultToFirestore(resultCategory) {
-            if (!db || !userId) return;
-            try {
-                lastResultId = Date.now().toString();
-                const resultRef = doc(db, 'artifacts', appId, 'users', userId, 'quizResults', lastResultId);
-                await setDoc(resultRef, {
-                    userId: userId,
-                    finalScores: scores,
-                    resultCategory: resultCategory,
-                    completedAt: serverTimestamp()
-                });
-                console.log("Resultado salvo com sucesso no Firestore!");
-            } catch (error) {
-                console.error("Erro ao salvar resultado:", error);
-            }
-        }
-
-        // Nova função para salvar informações do usuário
-        async function saveUserInfo(email, cpf, phone) {
-            if (!db || !userId) {
-                console.error("Firestore não está pronto.");
-                return;
-            }
-            try {
-                // Salva as informações pessoais em um documento separado
-                const userInfoRef = doc(db, 'artifacts', appId, 'users', userId);
-                await setDoc(userInfoRef, {
-                    email: email,
-                    cpf: cpf,
-                    phone: phone,
-                    updatedAt: serverTimestamp()
-                }, { merge: true }); // merge: true para não sobrescrever outros dados do usuário
-
-                // Opcional: Atualiza o resultado do quiz com um marcador de que os dados foram preenchidos
-                if (lastResultId) {
-                    const resultRef = doc(db, 'artifacts', appId, 'users', userId, 'quizResults', lastResultId);
-                    await updateDoc(resultRef, { userInfoCompleted: true });
-                }
-
-                console.log("Informações do usuário salvas com sucesso!");
-            } catch (error) {
-                console.error("Erro ao salvar informações do usuário:", error);
-            }
-        }
-
         // --- FUNÇÕES DO QUIZ ---
-
         function startQuiz() {
             currentQuestionIndex = 0;
-            scores = { tecnologia: 0, gestao: 0, design: 0, saude: 0, comunicacao: 0 };
-            lastResultId = null;
-
-            // Reseta a UI
+            userAnswers = {};
             startScreen.classList.add('hidden');
             resultScreen.classList.add('hidden');
-            userInfoFormContainer.classList.add('hidden');
-            finalOptions.classList.add('hidden');
-            postQuizOptions.classList.remove('hidden');
             quizScreen.classList.remove('hidden');
-
-            showQuestion();
+            totalQuestionsElem.textContent = questions.length;
+            displayQuestion();
         }
 
-        function showQuestion() {
-            const currentQuestion = questions[currentQuestionIndex];
-            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
-            progressBar.style.width = `${progress}%`;
-            questionNumber.textContent = currentQuestionIndex + 1;
-            totalQuestions.textContent = questions.length;
-            questionText.textContent = currentQuestion.question;
-            optionsContainer.innerHTML = '';
-            currentQuestion.answers.forEach(answer => {
-                const button = document.createElement('button');
-                button.textContent = answer.text;
-                button.className = "w-full text-left p-4 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400";
-                button.onclick = () => selectAnswer(answer.category);
-                optionsContainer.appendChild(button);
-            });
-        }
-
-        function selectAnswer(category) {
-            scores[category]++;
-            currentQuestionIndex++;
+        function displayQuestion() {
             if (currentQuestionIndex < questions.length) {
-                showQuestion();
+                const currentQuestion = questions[currentQuestionIndex];
+                questionNumber.textContent = currentQuestionIndex + 1;
+                questionText.textContent = currentQuestion.question;
+                
+                const progressPercentage = ((currentQuestionIndex) / questions.length) * 100;
+                progressBar.style.width = `${progressPercentage}%`;
+
+                optionsContainer.innerHTML = ''; // Limpa as opções anteriores
+
+                const yesButton = document.createElement('button');
+                yesButton.textContent = "Sim";
+                yesButton.className = "w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105";
+                yesButton.onclick = () => selectAnswer(true);
+                
+                const noButton = document.createElement('button');
+                noButton.textContent = "Não";
+                noButton.className = "w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105";
+                noButton.onclick = () => selectAnswer(false);
+
+                optionsContainer.appendChild(yesButton);
+                optionsContainer.appendChild(noButton);
+
             } else {
                 showResult();
             }
         }
 
-        function showResult() {
-            let maxScore = -1;
-            let resultCategory = '';
-            for (const category in scores) {
-                if (scores[category] > maxScore) {
-                    maxScore = scores[category];
-                    resultCategory = category;
-                }
-            }
-            const result = resultsData[resultCategory];
-            document.getElementById('result-icon').innerHTML = result.icon;
-            document.getElementById('result-category-title').textContent = result.title;
-            document.getElementById('result-description').textContent = result.description;
-            const coursesList = document.getElementById('suggested-courses');
-            coursesList.innerHTML = '';
-            result.courses.forEach(course => {
-                const li = document.createElement('li');
-                li.textContent = course;
-                coursesList.appendChild(li);
-            });
-            quizScreen.classList.add('hidden');
-            resultScreen.classList.remove('hidden');
-            saveResultToFirestore(resultCategory);
+        function selectAnswer(answer) {
+            // Armazena a resposta booleana
+            userAnswers[currentQuestionIndex] = answer;
+            currentQuestionIndex++;
+            displayQuestion();
         }
 
-        // --- EVENT LISTENERS ---
+        async function showResult() {
+            quizScreen.classList.add('hidden');
+            resultScreen.classList.remove('hidden');
+            progressBar.style.width = '100%';
 
+            const yesCount = Object.values(userAnswers).filter(answer => answer === true).length;
+            const totalQuestions = questions.length;
+            
+            let profileName = '';
+            let resultMessage = '';
+
+            if (yesCount > totalQuestions / 2) {
+                profileName = "Crescimento";
+                resultMessage = "Você busca constantemente por desenvolvimento e novas oportunidades. Cursos em áreas de gestão e liderança podem impulsionar sua carreira.";
+            } else if (yesCount === totalQuestions / 2) {
+                profileName = "Inovação";
+                resultMessage = "Você tem uma mente criativa e se adapta bem a novas tecnologias. Carreiras em TI, design e marketing digital são ideais para você.";
+            } else {
+                profileName = "Mudança";
+                resultMessage = "Você está aberto a novas experiências e pronto para transformar sua carreira. Explore cursos técnicos e profissionalizantes para uma rápida inserção no mercado.";
+            }
+
+            resultCategoryTitle.textContent = profileName;
+            resultDescription.textContent = resultMessage;
+            
+            // Salva o resultado detalhado no Firebase
+            await saveQuizResult(yesCount, totalQuestions, profileName, userAnswers);
+        }
+
+        function restartQuiz() {
+            // Esconde todas as seções pós-quiz e mostra a tela inicial
+            resultScreen.classList.add('hidden');
+            postQuizOptions.style.display = 'block';
+            userInfoFormContainer.classList.add('hidden');
+            finalOptions.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+
+        // --- FUNÇÕES DO FIREBASE ---
+        async function saveQuizResult(yesCount, totalQuestions, profileName, answers) {
+            if (!db || !userId) {
+                console.error("Firestore ou userId não estão inicializados.");
+                return;
+            }
+            try {
+                const quizResultsCollection = collection(db, "artifacts", appId, "users", userId, "quizResults");
+                
+                // Objeto de dados que será salvo no Firebase
+                const resultData = {
+                    yesCount: yesCount,
+                    totalQuestions: totalQuestions,
+                    profile: profileName,
+                    answers: answers, // Salva o objeto com as respostas (ex: {0: true, 1: false, ...})
+                    completedAt: serverTimestamp()
+                };
+                
+                await addDoc(quizResultsCollection, resultData);
+                console.log("Resultado do quiz salvo com sucesso!", resultData);
+            } catch (error) {
+                console.error("Erro ao salvar o resultado do quiz: ", error);
+            }
+        }
+
+        async function saveUserInfo(email, cpf, phone) {
+             if (!db || !userId) {
+                console.error("Firestore ou userId não estão inicializados.");
+                return;
+            }
+            try {
+                const userDocRef = doc(db, "artifacts", appId, "users", userId);
+                await setDoc(userDocRef, { email, cpf, phone }, { merge: true });
+                console.log("Informações do usuário salvas com sucesso!");
+            } catch (error) {
+                console.error("Erro ao salvar informações do usuário: ", error);
+            }
+        }
+        
+        // --- EVENT LISTENERS ---
         startButton.addEventListener('click', startQuiz);
 
-        // Adiciona evento para todos os botões de refazer
         document.querySelectorAll('.restart-button').forEach(button => {
-            button.addEventListener('click', startQuiz);
+            button.addEventListener('click', restartQuiz);
         });
 
         showFormButton.addEventListener('click', () => {
-            postQuizOptions.classList.add('hidden');
+            postQuizOptions.style.display = 'none'; // Usa display para evitar problemas de layout
             userInfoFormContainer.classList.remove('hidden');
         });
 
@@ -478,16 +416,17 @@
             const cpf = document.getElementById('cpf').value;
             const phone = document.getElementById('phone').value;
 
-            // Mostra o spinner e desabilita o botão
-            saveInfoButton.querySelector('.button-text').textContent = 'Salvando...';
-            saveInfoButton.querySelector('.loader').classList.remove('hidden');
+            const buttonText = saveInfoButton.querySelector('.button-text');
+            const loader = saveInfoButton.querySelector('.loader');
+
+            buttonText.textContent = 'Salvando...';
+            loader.classList.remove('hidden');
             saveInfoButton.disabled = true;
 
             await saveUserInfo(email, cpf, phone);
 
-            // Esconde o spinner e reabilita o botão
-            saveInfoButton.querySelector('.button-text').textContent = 'Salvar';
-            saveInfoButton.querySelector('.loader').classList.add('hidden');
+            buttonText.textContent = 'Salvar';
+            loader.classList.add('hidden');
             saveInfoButton.disabled = false;
 
             userInfoFormContainer.classList.add('hidden');
@@ -500,5 +439,4 @@
 
     </script>
 </body>
-
 </html>
