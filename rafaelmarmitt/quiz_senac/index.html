@@ -15,9 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Estilo customizado para a fonte e transições suaves */
         body {
             font-family: 'Inter', sans-serif;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .fade-in {
@@ -36,13 +39,12 @@
             }
         }
 
-        /* Estilo para o spinner de carregamento */
         .loader {
             border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
+            border-top: 4px solid #3b82f6;
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             animation: spin 1s linear infinite;
         }
 
@@ -55,12 +57,6 @@
                 transform: rotate(360deg);
             }
         }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin: 0 auto 20px;
-        }
     </style>
 </head>
 
@@ -68,168 +64,126 @@
     class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen p-4">
 
     <div class="w-full max-w-2xl mx-auto">
-        <!-- Card Principal -->
-        <div id="main-container"
-            class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transition-all duration-500">
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="text-center bg-white dark:bg-gray-800 p-8 sm:p-12 rounded-2xl shadow-xl fade-in">
+            <img src="logo-senac.png" alt="Logo Senac" class="w-48 mx-auto mb-6">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">Quiz Vocacional</h1>
+            <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-md mx-auto">Descubra o seu perfil profissional e
+                explore novas oportunidades de carreira com o Senac.</p>
+            <button id="start-button"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full text-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+                Começar Agora
+            </button>
+        </div>
 
-            <!-- Tela Inicial -->
-            <div id="start-screen" class="p-8 md:p-12 text-center fade-in">
-                <img class="logo" src="logo-senac.png" alt="Logo Senac">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Descubra seu Curso Ideal
-                </h1>
-                <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-md mx-auto">Responda algumas perguntas e veja qual
-                    área do SENAC mais combina com você!</p>
-                <button id="start-button"
-                    class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full text-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
-                    Começar o Quiz
-                </button>
+        <!-- Tela do Quiz -->
+        <div id="quiz-screen" class="hidden bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-xl fade-in">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Pergunta <span id="question-number">1</span> de <span id="total-questions">9</span>
+                </span>
             </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <h2 id="question-text" class="text-2xl sm:text-3xl font-bold text-center mb-8 min-h-[100px]">Carregando
+                pergunta...</h2>
+            <div id="options-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+        </div>
 
-            <!-- Tela do Quiz -->
-            <div id="quiz-screen" class="hidden p-8 md:p-12 fade-in">
-                 <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">Pergunta <span
-                                id="question-number">1</span> de <span id="total-questions">8</span></span>
-                    </div>
-                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                        <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
-                    </div>
-                </div>
-                <h2 id="question-text" class="text-2xl font-semibold text-gray-900 dark:text-white mb-8 min-h-[96px]"></h2>
-                <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Botões de Sim/Não serão inseridos aqui pelo JS -->
+        <!-- Tela de Resultado -->
+        <div id="result-screen"
+            class="hidden text-center bg-white dark:bg-gray-800 p-8 sm:p-12 rounded-2xl shadow-xl fade-in">
+            <h2 class="text-2xl font-semibold text-gray-500 dark:text-gray-400 mb-2">Seu Perfil é:</h2>
+            <h1 id="result-category-title" class="text-4xl sm:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-4">
+                Perfil</h1>
+            <p id="result-description" class="text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto">Descrição do
+                perfil.</p>
+            <div id="post-quiz-options">
+                <p class="font-semibold mb-4">Gostaria de receber mais informações sobre os cursos do Senac?</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="show-form-button"
+                        class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Sim,
+                        por favor!</button>
+                    <button id="skip-form-button"
+                        class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Não,
+                        obrigado</button>
                 </div>
             </div>
-
-            <!-- Tela de Resultado -->
-            <div id="result-screen" class="hidden p-8 md:p-12 text-center fade-in">
-                <div id="result-content">
-                    <img id="result-icon" src="logo-senac.png" alt="logo senac" class="logo">
-                    <h2 class="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-1">Seu perfil é:</h2>
-                    <h1 id="result-category-title"
-                        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"></h1>
-                    <p id="result-description" class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto"></p>
-                </div>
-
-                <!-- Seção de Login Opcional -->
-                <div id="post-quiz-section" class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
-                    <!-- Opções Iniciais (Salvar ou Refazer) -->
-                    <div id="post-quiz-options">
-                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Gostou do resultado?
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">Salve seu resultado para receber novidades e
-                            ofertas de cursos.</p>
-                        <div class="flex flex-col md:flex-row gap-4 justify-center">
-                            <button id="show-form-button"
-                                class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
-                                Quero Salvar
-                            </button>
-                            <button id="restart-button-1"
-                                class="restart-button w-full md:w-auto bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
-                                Refazer o Quiz
-                            </button>
-                        </div>
+            <div id="user-info-form-container" class="hidden mt-8 text-left max-w-md mx-auto">
+                <h3 class="text-xl font-bold text-center mb-4">Preencha seus dados</h3>
+                <form id="info-form">
+                    <div class="mb-4">
+                        <label for="email"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                        <input type="email" id="email" required
+                            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
-
-                    <!-- Formulário de Informações do Usuário -->
-                    <div id="user-info-form-container" class="hidden text-left">
-                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4 text-center">Complete
-                            seus dados</h3>
-                        <form id="info-form" class="space-y-4">
-                            <div>
-                                <label for="email"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
-                                <input type="email" id="email" required
-                                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="cpf"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">CPF</label>
-                                <input type="text" id="cpf" required
-                                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="phone"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Telefone</label>
-                                <input type="tel" id="phone" required
-                                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div class="flex items-center justify-center gap-4 pt-4">
-                                <button type="button" id="skip-form-button"
-                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full">
-                                    Agora não
-                                </button>
-                                <button type="submit" id="save-info-button"
-                                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full flex items-center justify-center">
-                                    <span class="button-text">Salvar</span>
-                                    <div class="loader hidden ml-2"></div>
-                                </button>
-                            </div>
-                        </form>
+                    <div class="mb-4">
+                        <label for="cpf" class="block text-sm font-medium text-gray-700 dark:text-gray-300">CPF</label>
+                        <input type="text" id="cpf" required
+                            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
-
-                    <!-- Mensagem de Sucesso e Opção de Refazer -->
-                    <div id="final-options" class="hidden text-center">
-                        <p id="success-message" class="text-green-600 dark:text-green-400 font-semibold mb-6"></p>
-                        <button id="restart-button-2"
-                            class="restart-button bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-10 rounded-full text-lg transition-transform transform hover:scale-105">
-                            Refazer o Quiz
-                        </button>
+                    <div class="mb-4">
+                        <label for="phone"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Telefone</label>
+                        <input type="tel" id="phone" required
+                            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
+                    <button id="save-info-button" type="submit"
+                        class="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full transition-colors disabled:bg-blue-400">
+                        <span class="button-text">Salvar e Finalizar</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                </form>
+            </div>
+            <div id="final-options" class="hidden mt-8">
+                <p id="success-message" class="text-green-600 dark:text-green-400 font-semibold text-lg mb-6"></p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://www.senac.br" target="_blank"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Visitar
+                        Site do Senac</a>
+                    <button
+                        class="restart-button bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Refazer
+                        o Quiz</button>
                 </div>
             </div>
         </div>
-        <footer class="text-center mt-6 text-sm text-gray-500 dark:text-gray-400">
-            <p>Desenvolvido para o SENAC</p>
-        </footer>
     </div>
 
     <!-- Firebase SDK -->
     <script type="module">
-        // Importações do Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"; // <-- ADICIONADO
-        import { getFirestore, doc, setDoc, addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, addDoc, collection, serverTimestamp, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // --- CONFIGURAÇÃO DO FIREBASE ---
         const firebaseConfig = {
-             apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
-             authDomain: "quiz-senac-vocacional.firebaseapp.com",
-             projectId: "quiz-senac-vocacional",
-             storageBucket: "quiz-senac-vocacional.firebasestorage.app",
-             messagingSenderId: "816696913380",
-             appId: "1:816696913380:web:024f6514b94ca5b75b2bf1",
-             measurementId: "G-SNE93NYTFQ"
+            apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
+            authDomain: "quiz-senac-vocacional.firebaseapp.com",
+            projectId: "quiz-senac-vocacional",
+            storageBucket: "quiz-senac-vocacional.appspot.com",
+            messagingSenderId: "816696913380",
+            appId: "1:816696913380:web:024f6414b94ca5b75b2bf1",
+            measurementId: "G-SNE93NYTFQ"
         };
-        
-        let db;
-        let auth; // <-- ADICIONADO
-        const appId = 'senac-quiz-local';
-        
-        // A variável userId agora será definida após a autenticação
-        let userId; 
 
-        // --- FUNÇÃO DE INICIALIZAÇÃO ATUALIZADA ---
+        let db;
+        let auth;
+        let userId;
+
         async function initializeFirebase() {
             try {
                 const app = initializeApp(firebaseConfig);
                 db = getFirestore(app);
-                auth = getAuth(app); // <-- ADICIONADO
-                
-                // Autentica o utilizador de forma anónima
+                auth = getAuth(app);
                 await signInAnonymously(auth);
-                
-                // Pega o ID do utilizador anónimo para usar como identificador único
                 userId = auth.currentUser.uid;
-                console.log("Firebase inicializado e utilizador anónimo autenticado:", userId);
-
+                console.log("Firebase inicializado e usuário anônimo autenticado:", userId);
             } catch (error) {
                 console.error("Erro ao inicializar ou autenticar no Firebase:", error);
             }
         }
 
-        // --- CONFIGURAÇÃO DO QUIZ ---
         const questions = [
             { question: "Você está empregado?" },
             { question: "Atualmente você está estudando?" },
@@ -242,23 +196,19 @@
         ];
 
         let currentQuestionIndex = 0;
-        let userAnswers = {}; // Objeto para armazenar as respostas (true/false)
+        let userAnswers = {};
 
-        // --- ELEMENTOS DO DOM ---
         const startScreen = document.getElementById('start-screen');
         const quizScreen = document.getElementById('quiz-screen');
         const resultScreen = document.getElementById('result-screen');
         const startButton = document.getElementById('start-button');
-        
         const questionNumber = document.getElementById('question-number');
         const totalQuestionsElem = document.getElementById('total-questions');
         const progressBar = document.getElementById('progress-bar');
         const questionText = document.getElementById('question-text');
         const optionsContainer = document.getElementById('options-container');
-
         const resultCategoryTitle = document.getElementById('result-category-title');
         const resultDescription = document.getElementById('result-description');
-        
         const postQuizOptions = document.getElementById('post-quiz-options');
         const showFormButton = document.getElementById('show-form-button');
         const userInfoFormContainer = document.getElementById('user-info-form-container');
@@ -268,7 +218,6 @@
         const finalOptions = document.getElementById('final-options');
         const successMessage = document.getElementById('success-message');
 
-        // --- FUNÇÕES DO QUIZ ---
         function startQuiz() {
             currentQuestionIndex = 0;
             userAnswers = {};
@@ -284,32 +233,25 @@
                 const currentQuestion = questions[currentQuestionIndex];
                 questionNumber.textContent = currentQuestionIndex + 1;
                 questionText.textContent = currentQuestion.question;
-                
                 const progressPercentage = ((currentQuestionIndex) / questions.length) * 100;
                 progressBar.style.width = `${progressPercentage}%`;
-
-                optionsContainer.innerHTML = ''; // Limpa as opções anteriores
-
+                optionsContainer.innerHTML = '';
                 const yesButton = document.createElement('button');
                 yesButton.textContent = "Sim";
                 yesButton.className = "w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105";
                 yesButton.onclick = () => selectAnswer(true);
-                
                 const noButton = document.createElement('button');
                 noButton.textContent = "Não";
                 noButton.className = "w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105";
                 noButton.onclick = () => selectAnswer(false);
-
                 optionsContainer.appendChild(yesButton);
                 optionsContainer.appendChild(noButton);
-
             } else {
                 showResult();
             }
         }
 
         function selectAnswer(answer) {
-            // Armazena a resposta booleana
             userAnswers[currentQuestionIndex] = answer;
             currentQuestionIndex++;
             displayQuestion();
@@ -319,13 +261,10 @@
             quizScreen.classList.add('hidden');
             resultScreen.classList.remove('hidden');
             progressBar.style.width = '100%';
-
             const yesCount = Object.values(userAnswers).filter(answer => answer === true).length;
             const totalQuestions = questions.length;
-            
             let profileName = '';
             let resultMessage = '';
-
             if (yesCount > totalQuestions / 2) {
                 profileName = "Crescimento";
                 resultMessage = "Você busca constantemente por desenvolvimento e novas oportunidades. Cursos em áreas de gestão e liderança podem impulsionar sua carreira.";
@@ -336,16 +275,13 @@
                 profileName = "Mudança";
                 resultMessage = "Você está aberto a novas experiências e pronto para transformar sua carreira. Explore cursos técnicos e profissionalizantes para uma rápida inserção no mercado.";
             }
-
             resultCategoryTitle.textContent = profileName;
             resultDescription.textContent = resultMessage;
-            
-            // Salva o resultado detalhado no Firebase
+            await saveMainQuizStructure();
             await saveQuizResult(yesCount, totalQuestions, profileName, userAnswers);
         }
 
         function restartQuiz() {
-            // Esconde todas as seções pós-quiz e mostra a tela inicial
             resultScreen.classList.add('hidden');
             postQuizOptions.style.display = 'block';
             userInfoFormContainer.classList.add('hidden');
@@ -353,90 +289,89 @@
             startScreen.classList.remove('hidden');
         }
 
-        // --- FUNÇÕES DO FIREBASE ---
-        async function saveQuizResult(yesCount, totalQuestions, profileName, answers) {
-            if (!db || !userId) {
-                console.error("Firestore ou userId não estão inicializados.");
-                return;
-            }
+        async function saveMainQuizStructure() {
+            if (!db) return;
             try {
-                const quizResultsCollection = collection(db, "artifacts", appId, "users", userId, "quizResults");
-                
-                // Objeto de dados que será salvo no Firebase
+                const quizDocRef = doc(db, "quizzes", "mainQuiz");
+                const quizDocSnap = await getDoc(quizDocRef);
+                if (!quizDocSnap.exists()) {
+                    console.log("Criando documento 'quizzes/mainQuiz'...");
+                    const questionTexts = questions.map(q => q.question);
+                    await setDoc(quizDocRef, { questions: questionTexts });
+                    console.log("Documento 'quizzes/mainQuiz' criado com sucesso!");
+                }
+            } catch (error) {
+                console.error("Erro ao verificar ou salvar a estrutura do quiz: ", error);
+            }
+        }
+
+        async function saveQuizResult(yesCount, totalQuestions, profileName, answers) {
+            if (!db || !userId) return;
+            try {
+                // ESTA É A LINHA CORRIGIDA
+                const resultsCollection = collection(db, "quizResults");
                 const resultData = {
+                    userId: userId,
                     yesCount: yesCount,
                     totalQuestions: totalQuestions,
                     profile: profileName,
-                    answers: answers, // Salva o objeto com as respostas (ex: {0: true, 1: false, ...})
+                    answers: answers,
                     completedAt: serverTimestamp()
                 };
-                
-                await addDoc(quizResultsCollection, resultData);
-                console.log("Resultado do quiz salvo com sucesso!", resultData);
+                await addDoc(resultsCollection, resultData);
+                console.log("Resultado do quiz salvo com sucesso!");
             } catch (error) {
+                // A linha 388 no seu ficheiro antigo estaria aqui, causando o erro.
                 console.error("Erro ao salvar o resultado do quiz: ", error);
             }
         }
 
         async function saveUserInfo(email, cpf, phone) {
-             if (!db || !userId) {
-                console.error("Firestore ou userId não estão inicializados.");
-                return;
-            }
+            if (!db || !userId) return;
             try {
-                const userDocRef = doc(db, "artifacts", appId, "users", userId);
+                // ESTA É A LINHA CORRIGIDA
+                const userDocRef = doc(db, "users", userId);
                 await setDoc(userDocRef, { email, cpf, phone }, { merge: true });
                 console.log("Informações do usuário salvas com sucesso!");
             } catch (error) {
                 console.error("Erro ao salvar informações do usuário: ", error);
             }
         }
-        
-        // --- EVENT LISTENERS ---
-        startButton.addEventListener('click', startQuiz);
 
+        startButton.addEventListener('click', startQuiz);
         document.querySelectorAll('.restart-button').forEach(button => {
             button.addEventListener('click', restartQuiz);
         });
-
         showFormButton.addEventListener('click', () => {
-            postQuizOptions.style.display = 'none'; // Usa display para evitar problemas de layout
+            postQuizOptions.style.display = 'none';
             userInfoFormContainer.classList.remove('hidden');
         });
-
         skipFormButton.addEventListener('click', () => {
             userInfoFormContainer.classList.add('hidden');
             successMessage.textContent = "Obrigado por participar!";
             finalOptions.classList.remove('hidden');
         });
-
         infoForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const email = document.getElementById('email').value;
             const cpf = document.getElementById('cpf').value;
             const phone = document.getElementById('phone').value;
-
             const buttonText = saveInfoButton.querySelector('.button-text');
             const loader = saveInfoButton.querySelector('.loader');
-
             buttonText.textContent = 'Salvando...';
             loader.classList.remove('hidden');
             saveInfoButton.disabled = true;
-
             await saveUserInfo(email, cpf, phone);
-
             buttonText.textContent = 'Salvar';
             loader.classList.add('hidden');
             saveInfoButton.disabled = false;
-
             userInfoFormContainer.classList.add('hidden');
             successMessage.textContent = "Seus dados foram salvos com sucesso!";
             finalOptions.classList.remove('hidden');
         });
 
-        // --- INICIALIZAÇÃO ---
         initializeFirebase();
-
     </script>
 </body>
+
 </html>

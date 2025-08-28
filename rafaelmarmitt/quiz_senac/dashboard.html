@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Utilizadores - Quiz SENAC</title>
+    <title>Painel de Usuários - Quiz SENAC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,183 +13,207 @@
         .table-container::-webkit-scrollbar { height: 8px; width: 8px; }
         .table-container::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
         .table-container::-webkit-scrollbar-track { background-color: #f1f5f9; }
-        .answer-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; font-weight: bold; color: white; }
-        .icon-yes { background-color: #10b981; }
-        .icon-no { background-color: #ef4444; }
-        /* Esconde o conteúdo até a verificação do login */
-        #main-content { display: none; }
+        .dark .table-container::-webkit-scrollbar-thumb { background-color: #4b5563; }
+        .dark .table-container::-webkit-scrollbar-track { background-color: #1f2937; }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 md:p-8">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
 
-    <!-- Mensagem de Carregamento -->
-    <div id="loading-message" class="text-center">
-        <p class="text-lg text-gray-500">A verificar autenticação...</p>
-    </div>
-
-    <!-- Conteúdo Principal do Dashboard (inicialmente escondido) -->
-    <div id="main-content">
-        <header class="mb-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="logo-senac.png" alt="Logo Senac" class="h-10">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Relatório de Participantes</h1>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <header class="flex justify-between items-center mb-6">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Painel de Respostas</h1>
+                <p class="text-gray-600 dark:text-gray-400">Visualize os resultados do Quiz Vocacional.</p>
             </div>
-            <div class="flex items-center gap-4 mt-4 md:mt-0">
-                <span id="user-email" class="text-sm text-gray-600 dark:text-gray-300"></span>
-                <button id="logout-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
-                    Sair
-                </button>
-            </div>
+            <img src="logo-senac.png" alt="Logo Senac" class="w-32">
         </header>
-
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6">
-            <div class="table-container overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                    <thead class="bg-gray-50 dark:bg-gray-700">
-                        <tr id="table-header-row">
-                            <th scope="col" class="sticky left-0 bg-gray-50 dark:bg-gray-700 px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Email</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">CPF</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Telefone</th>
-                            <!-- Cabeçalhos das perguntas serão inseridos aqui -->
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Perfil Final</th>
-                        </tr>
-                    </thead>
-                    <tbody id="user-data-table-body" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700"></tbody>
-                </table>
+        
+        <!-- Seção de Relatório por Questão -->
+        <div id="questions-report-container" class="mb-8">
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Relatório por Questão</h2>
+            <div id="questions-report" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Cards do relatório serão inseridos aqui -->
             </div>
         </div>
-        <div id="status-message" class="mt-4 text-center text-gray-500 dark:text-gray-400">A carregar dados...</div>
+
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Respostas Individuais</h2>
+        <div id="status-message" class="text-center py-4 text-gray-600 dark:text-gray-400">Carregando dados...</div>
+
+        <!-- Container da Tabela com scroll -->
+        <div class="table-container overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow">
+            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                <thead class="bg-gray-50 dark:bg-gray-700">
+                    <tr id="table-header">
+                        <!-- Cabeçalhos serão gerados dinamicamente -->
+                    </tr>
+                </thead>
+                <tbody id="user-table-body" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                    <!-- Linhas da tabela serão inseridas aqui -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
+    <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, getDocs, orderBy, query, limit } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, collection, getDocs, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
+        // --- CONFIGURAÇÃO DO FIREBASE ---
         const firebaseConfig = {
              apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
-             authDomain: "quiz-senac-vocacional.firebaseapp.com",
-             projectId: "quiz-senac-vocacional",
-             storageBucket: "quiz-senac-vocacional.firebasestorage.app",
-             messagingSenderId: "816696913380",
-             appId: "1:816696913380:web:024f6514b94ca5b75b2bf1",
-             measurementId: "G-SNE93NYTFQ"
+             authDomain: "quiz-senac-vocacional.firebaseapp.com",
+             projectId: "quiz-senac-vocacional",
+             storageBucket: "quiz-senac-vocacional.appspot.com",
+             messagingSenderId: "816696913380",
+             appId: "1:816696913380:web:024f6414b94ca5b75b2bf1",
+             measurementId: "G-SNE93NYTFQ"
         };
-        
+
         const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
         const db = getFirestore(app);
+        const auth = getAuth(app);
 
-        const loadingMessage = document.getElementById('loading-message');
-        const mainContent = document.getElementById('main-content');
-        const userEmailElem = document.getElementById('user-email');
-        const logoutButton = document.getElementById('logout-button');
-
-        // VERIFICA O ESTADO DA AUTENTICAÇÃO
-        onAuthStateChanged(auth, user => {
+        // --- LÓGICA DE AUTENTICAÇÃO ---
+        onAuthStateChanged(auth, (user) => {
             if (user) {
-                // Utilizador está autenticado, mostra o conteúdo do dashboard
-                loadingMessage.style.display = 'none';
-                mainContent.style.display = 'block';
-                userEmailElem.textContent = user.email;
-                
-                // Carrega os dados da tabela
-                loadDashboardData();
+                fetchAndDisplayData();
             } else {
-                // Utilizador não está autenticado, redireciona para a página de login
                 window.location.href = 'login.html';
             }
         });
 
-        logoutButton.addEventListener('click', async () => {
+        // --- FUNÇÃO PRINCIPAL PARA BUSCAR E EXIBIR DADOS ---
+        const fetchAndDisplayData = async () => {
+            const statusMessage = document.getElementById('status-message');
+            const tableHeader = document.getElementById('table-header');
+            const tableBody = document.getElementById('user-table-body');
+            const reportContainer = document.getElementById('questions-report');
+            
+            tableBody.innerHTML = '';
+            tableHeader.innerHTML = '';
+            reportContainer.innerHTML = '';
+            statusMessage.style.display = 'block';
+            statusMessage.textContent = 'Carregando estrutura do quiz...';
+
             try {
-                await signOut(auth);
-                // O onAuthStateChanged irá detetar a saída e redirecionar automaticamente
-            } catch (error) {
-                console.error("Erro ao sair:", error);
-            }
-        });
-        
-        // Função que carrega e exibe os dados
-        async function loadDashboardData() {
-            const questions = [
-                { question: "Você está empregado?" }, { question: "Atualmente você está estudando?" }, { question: "Você domina o uso do computador (pacote Office)?" }, { question: "Já utiliza Inteligência Artificial em seu dia a dia?" }, { question: "Fez algum curso de atualização nos últimos 2 anos?" }, { question: "Possui aplicativos em celular utilizados para o seu trabalho e organização do dia a dia?" }, { question: "Você compreende minimamente um outro idioma?" }, { question: "Já tem um objetivo profissional definido?" },
-            ];
-            const appId = 'senac-quiz-local'; 
-            const usersCollection = collection(db, "artifacts", appId, "users");
-            const tableHeaderRow = document.getElementById("table-header-row");
-            const tableBody = document.getElementById("user-data-table-body");
-            const statusMessage = document.getElementById("status-message");
-
-            function createTableHeaders() {
-                const profileHeader = tableHeaderRow.lastElementChild; 
-                tableHeaderRow.removeChild(profileHeader);
-                questions.forEach((q, index) => {
-                    const th = document.createElement("th");
-                    th.scope = "col";
-                    th.className = "px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider";
-                    th.textContent = `Q${index + 1}`;
-                    th.title = q.question; 
-                    tableHeaderRow.appendChild(th);
-                });
-                tableHeaderRow.appendChild(profileHeader);
-            }
-
-            async function fetchUsers() {
-                statusMessage.textContent = "A carregar dados...";
-                tableBody.innerHTML = ""; 
-                try {
-                    const userSnapshot = await getDocs(usersCollection);
-                    if (userSnapshot.empty) {
-                        statusMessage.textContent = "Nenhum utilizador encontrado.";
-                        return;
-                    }
-                    for (const userDoc of userSnapshot.docs) {
-                        const userData = userDoc.data();
-                        const userId = userDoc.id;
-                        const quizResultsCollection = collection(db, "artifacts", appId, "users", userId, "quizResults");
-                        const quizQuery = query(quizResultsCollection, orderBy("completedAt", "desc"), limit(1));
-                        const quizSnapshot = await getDocs(quizQuery);
-                        let quizResult = {}; 
-                        if (!quizSnapshot.empty) {
-                            quizResult = quizSnapshot.docs[0].data();
-                        }
-                        const newRow = createTableRow(userData, quizResult);
-                        tableBody.appendChild(newRow);
-                    }
-                    statusMessage.textContent = `Dados carregados. Total de participantes: ${userSnapshot.size}`;
-                } catch (e) {
-                    console.error("Erro ao buscar documentos: ", e);
-                    statusMessage.textContent = "Erro ao buscar dados. Verifique o console e as regras de segurança do Firebase.";
+                // 1. Buscar a estrutura de perguntas do quiz
+                const quizDocRef = doc(db, 'quizzes', 'mainQuiz');
+                const quizDocSnap = await getDoc(quizDocRef);
+                let questions = [];
+                if (quizDocSnap.exists()) {
+                    questions = quizDocSnap.data().questions || [];
+                } else {
+                    console.error("Documento 'quizzes/mainQuiz' não encontrado.");
+                    statusMessage.textContent = 'Estrutura do quiz não encontrada. Responda a um quiz para criá-la.';
+                    document.getElementById('questions-report-container').style.display = 'none';
+                    return;
                 }
-            }
 
-            function createTableRow(userData, quizResult) {
-                const row = document.createElement("tr");
-                row.className = "hover:bg-gray-50 dark:hover:bg-gray-700/50";
-                let rowHTML = `<td class="sticky left-0 bg-white dark:bg-gray-800 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">${userData.email || 'N/A'}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${userData.cpf || 'N/A'}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${userData.phone || 'N/A'}</td>`;
-                const answers = quizResult.answers || {};
-                questions.forEach((q, index) => {
-                    const answer = answers[index];
-                    let answerCell = '<td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 dark:text-gray-300">';
-                    if (answer === true) {
-                        answerCell += '<span class="answer-icon icon-yes" title="Sim">S</span>';
-                    } else if (answer === false) {
-                        answerCell += '<span class="answer-icon icon-no" title="Não">N</span>';
-                    } else {
-                        answerCell += '<span>-</span>';
-                    }
-                    answerCell += '</td>';
-                    rowHTML += answerCell;
+                // 2. Montar o cabeçalho da tabela detalhada
+                let headerHTML = `
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Email</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">CPF</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Telefone</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Perfil</th>
+                `;
+                questions.forEach(q => {
+                    headerHTML += `<th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">${q}</th>`;
                 });
-                rowHTML += `<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${quizResult.profile || 'N/A'}</td>`;
-                row.innerHTML = rowHTML;
-                return row;
-            }
+                tableHeader.innerHTML = headerHTML;
 
-            createTableHeaders();
-            fetchUsers();
-        }
+                // 3. Buscar todas as informações de usuários
+                statusMessage.textContent = 'Carregando informações dos usuários...';
+                // **CORREÇÃO: Caminho simplificado para a coleção de usuários**
+                const usersCollectionRef = collection(db, "users");
+                const userDocsSnap = await getDocs(usersCollectionRef);
+                const usersMap = new Map();
+                userDocsSnap.forEach(doc => {
+                    usersMap.set(doc.id, doc.data());
+                });
+
+                // 4. Buscar todos os resultados de quizzes
+                statusMessage.textContent = 'Carregando resultados dos quizzes...';
+                // **CORREÇÃO: Caminho simplificado para a coleção de resultados**
+                const resultsCollectionRef = collection(db, "quizResults");
+                const quizResultsSnap = await getDocs(query(resultsCollectionRef));
+
+                if (quizResultsSnap.empty) {
+                    statusMessage.textContent = 'Nenhum resultado de quiz encontrado.';
+                    document.getElementById('questions-report-container').style.display = 'none';
+                    return;
+                }
+
+                // 5. Processar dados para o relatório e para a tabela
+                const questionsSummary = questions.map(q => ({ question: q, yes: 0, no: 0, total: 0 }));
+
+                quizResultsSnap.forEach(resultDoc => {
+                    const quizData = resultDoc.data();
+                    const userInfo = usersMap.get(quizData.userId) || {};
+
+                    // Preenche a tabela detalhada
+                    const row = document.createElement('tr');
+                    row.className = "hover:bg-gray-50 dark:hover:bg-gray-700";
+                    let rowHTML = `
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">${userInfo.email || 'Anônimo'}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${userInfo.cpf || '-'}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${userInfo.phone || '-'}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">${quizData.profile || '-'}</td>
+                    `;
+                    questions.forEach((q, index) => {
+                        const answer = quizData.answers[index];
+                        // Atualiza o resumo para o relatório
+                        if (answer === true || answer === false) {
+                            questionsSummary[index].total++;
+                            if (answer === true) questionsSummary[index].yes++;
+                            else questionsSummary[index].no++;
+                        }
+                        // Monta a célula da tabela
+                        let answerCellHTML = '<td class="px-6 py-4 whitespace-nowrap text-sm text-center">';
+                        if (answer === true) {
+                            answerCellHTML += '<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">Sim</span>';
+                        } else if (answer === false) {
+                            answerCellHTML += '<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100">Não</span>';
+                        } else {
+                            answerCellHTML += '<span class="text-gray-400">-</span>';
+                        }
+                        answerCellHTML += '</td>';
+                        rowHTML += answerCellHTML;
+                    });
+                    row.innerHTML = rowHTML;
+                    tableBody.appendChild(row);
+                });
+
+                // 6. Renderizar o relatório de questões
+                questionsSummary.forEach(summary => {
+                    const yesPercent = summary.total > 0 ? (summary.yes / summary.total) * 100 : 0;
+                    const noPercent = summary.total > 0 ? (summary.no / summary.total) * 100 : 0;
+
+                    const card = document.createElement('div');
+                    card.className = "bg-white dark:bg-gray-800 p-4 rounded-lg shadow";
+                    card.innerHTML = `
+                        <p class="font-semibold text-sm text-gray-800 dark:text-gray-200 truncate mb-3">${summary.question}</p>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-2">
+                            <div class="bg-green-500 h-2.5 rounded-full" style="width: ${yesPercent}%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 dark:text-gray-400">
+                            <span>Sim: ${summary.yes} (${yesPercent.toFixed(0)}%)</span>
+                            <span>Não: ${summary.no} (${noPercent.toFixed(0)}%)</span>
+                        </div>
+                    `;
+                    reportContainer.appendChild(card);
+                });
+
+
+                statusMessage.style.display = 'none';
+
+            } catch (error) {
+                console.error("Erro ao carregar dados: ", error);
+                statusMessage.textContent = 'Falha ao carregar os dados. Verifique o console para mais detalhes.';
+                statusMessage.style.color = 'red';
+            }
+        };
     </script>
 </body>
 </html>
