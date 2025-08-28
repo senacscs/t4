@@ -433,8 +433,11 @@
 					alert('Por favor, preencha os dados corretamente.');
 					return;
 				}
-				// Aqui você poderia enviar via fetch para sua API
-				// fetch('/api/contato', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({nome,email,cel, resumo:{choices}})})
+				// Enviar para o Firebase apenas após o usuário confirmar o envio
+				const yesCount = choices.filter(c=>c==='sim').length;
+				const noCount = choices.length - yesCount;
+				const evt = new CustomEvent('contact:submitted', { detail: { nome, email, cel, yesCount, noCount } });
+				document.dispatchEvent(evt);
 				form.setAttribute('hidden', '');
 				document.getElementById('contactSuccess')?.removeAttribute('hidden');
 			});
@@ -443,6 +446,7 @@
 			renderIntro();
 		})();
 	</script>
+	<script type="module" src="script.js"></script>
 </body>
 
 </html>
