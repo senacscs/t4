@@ -10,43 +10,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
+        /* Estilos para a barra de rolagem */
         .table-container::-webkit-scrollbar {
             height: 8px;
             width: 8px;
-
         }
 
         .table-container::-webkit-scrollbar-thumb {
             background-color: #4b5563;
-            /* Cor da barra de rolagem no modo escuro */
             border-radius: 4px;
         }
 
         .table-container::-webkit-scrollbar-track {
             background-color: #1f2937;
-            /* Fundo da barra de rolagem no modo escuro */
-
         }
+
+        /* Removido o estilo .w-32, pois o posicionamento agora é feito via flexbox no HTML */
     </style>
 </head>
 
 <body class="bg-gray-900 text-gray-200">
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <header class="flex justify-between items-center mb-6">
-            <div>
+        <!-- Cabeçalho atualizado com logo centralizada e botão de logout à direita -->
+        <header class="flex items-center justify-between mb-6">
+            <!-- Título e Subtítulo à esquerda -->
+            <div class="flex-1">
                 <h1 class="text-2xl font-bold text-white">Painel de Respostas</h1>
                 <p class="text-gray-400">Visualize os resultados do Quiz Vocacional.</p>
             </div>
-            <div class="flex items-center">
-                <button id="logout-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105 mr-4">
+
+            <!-- Logo centralizada -->
+            <div class="flex-1 flex justify-center">
+                <img src="logo-senac.png" alt="Logo Senac" class="w-32">
+            </div>
+
+            <!-- Botão de Sair à direita -->
+            <div class="flex-1 flex justify-end">
+                <button id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105">
                     Sair
                 </button>
-                <img src="logo-senac.png" alt="Logo Senac" class="w-32">
             </div>
         </header>
 
@@ -106,7 +110,13 @@
                 window.location.href = 'login.html';
             } catch (error) {
                 console.error("Erro ao fazer logout:", error);
-                alert("Ocorreu um erro ao sair. Tente novamente.");
+                // Substituindo o 'alert()' por uma mensagem na tela, pois 'alert' pode não funcionar em todos os ambientes
+                const statusMessage = document.getElementById('status-message');
+                if (statusMessage) {
+                    statusMessage.textContent = 'Ocorreu um erro ao sair. Tente novamente.';
+                    statusMessage.style.color = 'red';
+                    statusMessage.style.display = 'block';
+                }
             }
         });
 
@@ -236,7 +246,6 @@
                     `;
                     reportContainer.appendChild(card);
                 });
-
 
                 statusMessage.style.display = 'none';
 
