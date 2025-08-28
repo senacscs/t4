@@ -1,7 +1,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
-  import { getDatabase, ref, push, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,16 +21,15 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  // Realtime Database (adicione databaseURL no firebaseConfig se necessário)
-  const db = getDatabase(app);
-  try{ console.log('[quiz] Realtime DB URL:', ref(db).toString()); } catch(_){}
+  // Firestore Database
+  const db = getFirestore(app);
+  try { console.log('[quiz] Firestore inicializado'); } catch (_) {}
 
-  // Save to Realtime Database only after the user submits the contact form successfully
+  // Save to Firestore only after the user submits the contact form successfully
   document.addEventListener('contact:submitted', async (evt) => {
     try {
       const { nome, email, cel, yesCount, noCount } = evt.detail || {};
-      const newRef = push(ref(db, 'quizResponses'));
-      await set(newRef, {
+      await addDoc(collection(db, 'quizResponses'), {
         nome,
         email,
         celular: cel,
@@ -39,8 +38,8 @@
         createdAt: serverTimestamp(),
         userAgent: navigator.userAgent
       });
-      console.log('[quiz] Dados enviados para o Realtime Database');
+      console.log('[quiz] Dados enviados para o Firestore');
     } catch (err) {
-      console.error('[quiz] Erro ao enviar para o Realtime Database', err);
+      console.error('[quiz] Erro ao enviar para o Firestore', err);
     }
   });
