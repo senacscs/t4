@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cursos Técnicos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #E6F0FA;
+      color: #1E3A5F;
+      padding: 40px 16px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .quiz-container {
+      max-width: 700px;
+      width:100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .quiz-question {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .quiz-option {
+      background: #FF7A29;
+      color: #fff;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      user-select:none;
+      transition: background 0.2s;
+    }
+
+    .quiz-option:hover { background:#e76818; }
+
+    .result-text {
+      font-size: 16px;
+      font-weight: 600;
+      text-align:center;
+    }
+
+    .quiz-restart {
+      margin-top:14px;
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:6px;
+      border:1px solid rgba(30,58,95,0.08);
+      background:#f2f6fa;
+      color:#1E3A5F;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div id="quiz">
+      <!-- Perguntas dinâmicas -->
+    </div>
+
+    <div id="result" style="display:none;">
+      <!-- Resultado será gerado aqui -->
+    </div>
+  </div>
+
+  <script>
+    const quizData = [
+      { q: "Como você prefere se expressar?", opts: [
+        {k:"a", t:"Liderando, organizando e fazendo a gestão de pessoas ou processos."},
+        {k:"b", t:"Com lógica, tecnologia ou atenção a detalhes técnicos."},
+        {k:"c", t:"Através da criatividade, estética ou comunicação visual."},
+        {k:"d", t:"De forma prática, resolvendo problemas do dia a dia com impacto real."}
+      ]},
+      { q: "O que mais te dá satisfação em uma atividade?", opts: [
+        {k:"a", t:"Ajudar equipes a se desenvolverem e ver tudo funcionando em harmonia."},
+        {k:"b", t:"Resolver um problema técnico, fazer cálculos ou programar uma solução."},
+        {k:"c", t:"Transformar ideias em projetos visuais, ambientes ou apresentações."},
+        {k:"d", t:"Proteger pessoas, otimizar processos ou garantir resultados sustentáveis."}
+      ]},
+      { q: "Como você lida melhor com desafios?", opts: [
+        {k:"a", t:"Assumindo a liderança e organizando o time para alcançar objetivos."},
+        {k:"b", t:"Analisando dados, usando lógica e seguindo normas com precisão."},
+        {k:"c", t:"Pensando de forma inovadora, criativa e fora da caixa."},
+        {k:"d", t:"Encarando com responsabilidade, segurança e foco em soluções práticas."}
+      ]},
+      { q: "Se tivesse que escolher um ambiente de trabalho, qual te atrai mais?", opts: [
+        {k:"a", t:"Escritórios, departamentos de RH, reuniões ou gestão de projetos."},
+        {k:"b", t:"Setores técnicos, contábeis, de TI ou controle de qualidade."},
+        {k:"c", t:"Ambientes criativos, de design, eventos ou negociações."},
+        {k:"d", t:"Obras, empresas de segurança, meio ambiente ou logística."}
+      ]},
+      { q: "O que mais te motiva a aprender algo novo?", opts: [
+        {k:"a", t:"Crescer profissionalmente com habilidades de gestão e relacionamento."},
+        {k:"b", t:"Aprender técnicas específicas que garantam excelência e precisão."},
+        {k:"c", t:"Usar minha criatividade em algo visual, dinâmico ou inovador."},
+        {k:"d", t:"Contribuir com segurança, sustentabilidade ou eficiência."}
+      ]},
+      { q: "Qual dessas frases poderia ser sua?", opts: [
+        {k:"a", t:"“Quero ser a ponte entre pessoas e resultados.”"},
+        {k:"b", t:"“Sou movido por lógica, técnica e precisão.”"},
+        {k:"c", t:"“Vejo o mundo com criatividade e gosto de expressar isso.”"},
+        {k:"d", t:"“Quero causar impacto real na segurança, no planeta ou nos processos.”"}
+      ]}
+    ];
+
+    const resultsMap = {
+      a: "Perfil de Gestão e Relacionamento – Você gosta de liderar, colaborar e ver o todo funcionando. Cursos ideais: Técnico em Administração, Técnico em Recursos Humanos, Técnico em Secretariado.",
+      b: "Perfil Técnico e Analítico – Você prefere lidar com dados, lógica e precisão. Cursos ideais: Técnico em Contabilidade, Técnico em Desenvolvimento de Sistemas, Técnico em Qualidade.",
+      c: "Perfil Criativo e Visual – Você é criativo, gosta de estética e de se comunicar visualmente. Cursos ideais: Técnico em Design de Interiores, Técnico em Transações Imobiliárias.",
+      d: "Perfil Prático e Operacional – Você gosta de colocar a mão na massa e gerar impacto direto. Cursos ideais: Técnico em Logística, Técnico em Meio Ambiente, Técnico em Segurança do Trabalho."
+    };
+
+    let current = 0;
+    let answers = [];
+    const quizEl = document.getElementById('quiz');
+    const resultEl = document.getElementById('result');
+
+    function showQuestion(i){
+      const q = quizData[i];
+      quizEl.innerHTML = `
+        <div class="quiz-question">${q.q}</div>
+        ${q.opts.map(o => `<div class="quiz-option" data-key="${o.k}">${o.t}</div>`).join('')}
+      `;
+      document.querySelectorAll('.quiz-option').forEach(el => {
+        el.addEventListener('click', () => choose(el.dataset.key));
+      });
+    }
+
+    function choose(key){
+      answers.push(key);
+      current++;
+      if(current < quizData.length) {
+        showQuestion(current);
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult(){
+      quizEl.style.display = 'none';
+      resultEl.style.display = 'block';
+
+      const counts = { a:0, b:0, c:0, d:0 };
+      answers.forEach(k => { if(counts[k] !== undefined) counts[k]++; });
+
+      const max = Math.max(...Object.values(counts));
+      const winners = Object.keys(counts).filter(k => counts[k] === max);
+
+      const cursos = winners.map(k => resultsMap[k]).join("\n\n");
+      resultEl.innerHTML = `
+        <div class="result-text">Você tem perfil de:<br><br>${cursos.replace(/\n/g,'<br>')}</div>
+        <div style="text-align:center;margin-top:12px">
+          <button id="restartBtn" class="quiz-restart">Refazer quiz</button>
+        </div>
+      `;
+
+      document.getElementById('restartBtn').addEventListener('click', restartQuiz);
+    }
+
+    function restartQuiz(){
+      current = 0;
+      answers = [];
+      resultEl.style.display = 'none';
+      quizEl.style.display = 'block';
+      showQuestion(current);
+    }
+
+    showQuestion(current);
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubra Seu Curso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="banner">
+    DESCUBRA SEU CURSO!!!
+  </div>
+
+  <!-- SLIDES -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="imagens/comunicacao.jpg" alt="Dicção, Desinibição e Oratória">
+      <div class="slide-title">Dicção, Desinibição e Oratória</div>
+    </div>
+    <div class="slide fade">
+      <img src="imagens/tecnologia.jpg" alt="Pilotagem de Drones">
+      <div class="slide-title">Pilotagem de Drones</div>
+    </div>
+    <div class="slide fade">
+      <img src="imagens/reels.jpg" alt="Produção de Reels">
+      <div class="slide-title">Produção de Reels</div>
+    </div>
+    <div class="slide fade">
+      <img src="imagens/gastronomia.jpg" alt="Técnicas Culinárias">
+      <div class="slide-title">Técnicas Culinárias da Cozinha Profissional</div>
+    </div>
+  </div>
+
+  <!-- QUIZZES -->
+  <div class="quiz-section">
+    <h2>TESTES</h2>
+    <p>Faça os testes e descubra seu curso ideal</p>
+    <div class="quiz-list">
+
+      <!-- Quiz 1 -->
+      <div class="quiz-item">
+        <a href="livres.html">
+          <img src="imagens/livres.png" alt="Quiz cursos livres">
+        </a>
+        <div class="quiz-text">
+          <a href="livres.html">
+            <h3>Qual curso livre combina mais com você?</h3>
+          </a>
+          <p>Descubra se você se identifica mais com Dicção, Desinibição e Oratória, Pilotagem de Drones, Produção de Reels ou Técnicas Culinárias.</p>
+        </div>
+      </div>
+
+      <!-- Quiz 2 -->
+      <div class="quiz-item">
+        <a href="tecnicos.html">
+          <img src="imagens/tecnicos.jpg" alt="Quiz cursos técnicos">
+        </a>
+        <div class="quiz-text">
+          <a href="tecnicos.html">
+            <h3>Qual curso técnico é a sua cara?</h3>
+          </a>
+          <p>Descubra seu perfil: Gestão e Relacionamento, Técnico e Analítico, Criativo e Visual ou Prático e Operacional, e veja os cursos ideais para você.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SLIDES SCRIPT -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+</body>
+</html>
