@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Vocacional SENAC</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="perguntas-frequentes.png" type="image/x-icon">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS E ANIMAÇÕES --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            /* dark:bg-gray-900 */
+            color: #e5e7eb;
+            /* dark:text-gray-200 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #ffffff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .main-container {
+            width: 100%;
+            max-width: 42rem;
+            /* max-w-2xl */
+            margin: auto;
+        }
+
+        /* --- CARDS DE TELA (INÍCIO, QUIZ, RESULTADO) --- */
+        .screen-card {
+            background-color: #1f2937;
+            /* dark:bg-gray-800 */
+            border-radius: 1rem;
+            /* rounded-2xl */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            /* shadow-xl */
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .screen-card {
+                padding: 3rem;
+                /* sm:p-12 */
+            }
+
+            #quiz-screen.screen-card {
+                padding: 2.5rem;
+                /* sm:p-10 */
+            }
+        }
+
+        /* --- ELEMENTOS DA TELA INICIAL --- */
+        #start-screen img {
+            width: 12rem;
+            /* w-48 */
+            margin: 0 auto 1.5rem;
+            /* mx-auto mb-6 */
+        }
+
+        #start-screen h1 {
+            font-size: 1.875rem;
+            /* text-3xl */
+            font-weight: 700;
+            /* font-bold */
+            color: #ffffff;
+            /* dark:text-white */
+            margin-bottom: 0.75rem;
+            /* mb-3 */
+        }
+
+        @media (min-width: 640px) {
+            #start-screen h1 {
+                font-size: 2.25rem;
+                /* sm:text-4xl */
+            }
+        }
+
+        #start-screen p {
+            color: #d1d5db;
+            /* dark:text-gray-300 */
+            margin: 0 auto 2rem;
+            /* mb-8 mx-auto */
+            max-width: 28rem;
+            /* max-w-md */
+        }
+
+        /* --- ELEMENTOS DA TELA DO QUIZ --- */
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        .quiz-counter {
+            font-size: 0.875rem;
+            /* text-sm */
+            font-weight: 500;
+            /* font-medium */
+            color: #9ca3af;
+            /* dark:text-gray-400 */
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #374151;
+            /* dark:bg-gray-700 */
+            border-radius: 9999px;
+            /* rounded-full */
+            height: 0.625rem;
+            /* h-2.5 */
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+
+        #progress-bar {
+            background-color: #2563eb;
+            /* bg-blue-600 */
+            height: 0.625rem;
+            /* h-2.5 */
+            border-radius: 9999px;
+            /* rounded-full */
+        }
+
+        #question-text {
+            font-size: 1.5rem;
+            /* text-2xl */
+            font-weight: 700;
+            /* font-bold */
+            text-align: center;
+            margin-bottom: 2rem;
+            /* mb-8 */
+            min-height: 100px;
+        }
+
+        @media (min-width: 640px) {
+            #question-text {
+                font-size: 1.875rem;
+                /* sm:text-3xl */
+            }
+        }
+
+        #options-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            /* gap-4 */
+        }
+
+        @media (min-width: 640px) {
+            #options-container {
+                grid-template-columns: 1fr 1fr;
+                /* sm:grid-cols-2 */
+            }
+        }
+
+        /* --- ELEMENTOS DA TELA DE RESULTADO --- */
+        #result-screen h2 {
+            font-size: 1.5rem;
+            /* text-2xl */
+            font-weight: 600;
+            /* font-semibold */
+            color: #9ca3af;
+            /* dark:text-gray-400 */
+            margin-bottom: 0.5rem;
+            /* mb-2 */
+        }
+
+        #result-category-title {
+            font-size: 2.25rem;
+            /* text-4xl */
+            font-weight: 700;
+            /* font-bold */
+            color: #60a5fa;
+            /* dark:text-blue-400 */
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        @media (min-width: 640px) {
+            #result-category-title {
+                font-size: 3rem;
+                /* sm:text-5xl */
+            }
+        }
+
+        #result-description {
+            color: #d1d5db;
+            /* dark:text-gray-300 */
+            margin: 0 auto 2rem;
+            /* mb-8 mx-auto */
+            max-width: 32rem;
+            /* max-w-lg */
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .options-container {
+                flex-direction: row;
+            }
+        }
+
+        #post-quiz-options p {
+            font-weight: 600;
+            /* font-semibold */
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        /* --- FORMULÁRIO --- */
+        #user-info-form-container {
+            margin: 2rem auto 0;
+            /* mt-8 mx-auto */
+            text-align: left;
+            max-width: 28rem;
+            /* max-w-md */
+        }
+
+        #user-info-form-container h3 {
+            font-size: 1.25rem;
+            /* text-xl */
+            font-weight: 700;
+            /* font-bold */
+            text-align: center;
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            /* text-sm */
+            font-weight: 500;
+            /* font-medium */
+            color: #d1d5db;
+            /* dark:text-gray-300 */
+        }
+
+        .form-input {
+            margin-top: 0.25rem;
+            /* mt-1 */
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background-color: #374151;
+            /* dark:bg-gray-700 */
+            border: 1px solid #4b5563;
+            /* dark:border-gray-600 */
+            border-radius: 0.375rem;
+            /* rounded-md */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            color: #e5e7eb;
+            box-sizing: border-box;
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+            /* placeholder-gray-400 */
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            /* focus:border-blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+            /* focus:ring-blue-500 */
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            transition: all 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-lg {
+            font-size: 1.125rem;
+            /* text-lg */
+            padding: 0.75rem 2.5rem;
+            /* py-3 px-10 */
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            /* bg-blue-600 */
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            /* hover:bg-blue-700 */
+        }
+
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px #1e40af;
+            /* dark:focus:ring-blue-800 */
+        }
+
+        .btn-primary:disabled {
+            background-color: #60a5fa;
+            /* disabled:bg-blue-400 */
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-green {
+            background-color: #22c55e;
+            /* bg-green-500 */
+            color: white;
+        }
+
+        .btn-green:hover {
+            background-color: #16a34a;
+            /* hover:bg-green-600 */
+        }
+
+        .btn-red {
+            background-color: #ef4444;
+            /* bg-red-500 */
+            color: white;
+        }
+
+        .btn-red:hover {
+            background-color: #dc2626;
+            /* hover:bg-red-600 */
+        }
+
+        .btn-outline-green {
+            background-color: transparent;
+            color: #22c55e;
+            border: 2px solid #22c55e;
+        }
+
+        .btn-outline-green:hover {
+            background-color: #22c55e;
+            color: white;
+        }
+
+        .btn-outline-red {
+            background-color: transparent;
+            color: #ef4444;
+            border: 2px solid #ef4444;
+        }
+
+        .btn-outline-red:hover {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #374151;
+            /* dark:bg-gray-700 */
+            color: #e5e7eb;
+            /* dark:text-gray-200 */
+        }
+
+        .btn-secondary:hover {
+            background-color: #4b5563;
+            /* dark:hover:bg-gray-600 */
+        }
+
+        .btn-gray {
+            background-color: #6b7280;
+            /* bg-gray-500 */
+            color: white;
+        }
+
+        .btn-gray:hover {
+            background-color: #4b5563;
+            /* hover:bg-gray-600 */
+        }
+
+        #save-info-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- ELEMENTOS FINAIS --- */
+        #final-options {
+            margin-top: 2rem;
+            /* mt-8 */
+        }
+
+        #success-message {
+            color: #4ade80;
+            /* dark:text-green-400 */
+            font-weight: 600;
+            /* font-semibold */
+            font-size: 1.125rem;
+            /* text-lg */
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="screen-card fade-in">
+            <img src="logo-senac.png" alt="Logo Senac">
+            <h1>Quiz Vocacional</h1>
+            <p>Descubra o seu perfil profissional e explore novas oportunidades de carreira com o Senac.</p>
+            <button id="start-button" class="btn btn-primary btn-lg">
+                Começar Agora
+            </button>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="quiz-screen" class="screen-card hidden fade-in">
+            <div class="quiz-header">
+                <span class="quiz-counter">
+                    Pergunta <span id="question-number">1</span> de <span id="total-questions">9</span>
+                </span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" style="width: 0%"></div>
+            </div>
+            <h2 id="question-text">Carregando pergunta...</h2>
+            <div id="options-container"></div>
+        </div>
+
+        <!-- Tela de Resultado -->
+        <div id="result-screen" class="screen-card hidden fade-in">
+            <h2>Seu Perfil é:</h2>
+            <h1 id="result-category-title">Perfil</h1>
+            <p id="result-description">Descrição do perfil.</p>
+            <div id="post-quiz-options">
+                <p>Gostaria de receber mais informações sobre os cursos do Senac?</p>
+                <div class="options-container">
+                    <button id="show-form-button" class="btn btn-green">Sim, por favor!</button>
+                    <button id="skip-form-button" class="btn btn-gray">Não, obrigado</button>
+                </div>
+            </div>
+            <div id="user-info-form-container" class="hidden">
+                <h3>Preencha seus dados</h3>
+                <form id="info-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                    <button id="save-info-button" type="submit" class="btn btn-primary">
+                        <span class="button-text">Salvar e Finalizar</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                </form>
+            </div>
+            <div id="final-options" class="hidden">
+                <p id="success-message"></p>
+                <div class="options-container">
+                    <a href="https://www.senac.br" target="_blank" class="btn btn-primary">Visitar Site do Senac</a>
+                    <button class="restart-button btn btn-secondary">Refazer o Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, addDoc, collection, serverTimestamp, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
+            authDomain: "quiz-senac-vocacional.firebaseapp.com",
+            projectId: "quiz-senac-vocacional",
+            storageBucket: "quiz-senac-vocacional.appspot.com",
+            messagingSenderId: "816696913380",
+            appId: "1:816696913380:web:024f6414b94ca5b75b2bf1",
+            measurementId: "G-SNE93NYTFQ"
+        };
+
+        let db;
+        let auth;
+        let userId;
+
+        async function initializeFirebase() {
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                await signInAnonymously(auth);
+                userId = auth.currentUser.uid;
+                console.log("Firebase inicializado e usuário anônimo autenticado:", userId);
+            } catch (error) {
+                console.error("Erro ao inicializar ou autenticar no Firebase:", error);
+            }
+        }
+
+        const questions = [
+            { question: "Você está empregado?" },
+            { question: "Atualmente você está estudando?" },
+            { question: "Você domina o uso do computador (pacote Office)?" },
+            { question: "Já utiliza Inteligência Artificial em seu dia a dia?" },
+            { question: "Fez algum curso de atualização nos últimos 2 anos?" },
+            { question: "Possui aplicativos em celular utilizados para o seu trabalho e organização do dia a dia?" },
+            { question: "Você compreende minimamente um outro idioma?" },
+            { question: "Já tem um objetivo profissional definido?" },
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+
+        const startScreen = document.getElementById('start-screen');
+        const quizScreen = document.getElementById('quiz-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const startButton = document.getElementById('start-button');
+        const questionNumber = document.getElementById('question-number');
+        const totalQuestionsElem = document.getElementById('total-questions');
+        const progressBar = document.getElementById('progress-bar');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const resultCategoryTitle = document.getElementById('result-category-title');
+        const resultDescription = document.getElementById('result-description');
+        const postQuizOptions = document.getElementById('post-quiz-options');
+        const showFormButton = document.getElementById('show-form-button');
+        const userInfoFormContainer = document.getElementById('user-info-form-container');
+        const infoForm = document.getElementById('info-form');
+        const skipFormButton = document.getElementById('skip-form-button');
+        const saveInfoButton = document.getElementById('save-info-button');
+        const finalOptions = document.getElementById('final-options');
+        const successMessage = document.getElementById('success-message');
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            startScreen.classList.add('hidden');
+            resultScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            totalQuestionsElem.textContent = questions.length;
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const currentQuestion = questions[currentQuestionIndex];
+                questionNumber.textContent = currentQuestionIndex + 1;
+                questionText.textContent = currentQuestion.question;
+                const progressPercentage = ((currentQuestionIndex) / questions.length) * 100;
+                progressBar.style.width = `${progressPercentage}%`;
+                optionsContainer.innerHTML = '';
+                const yesButton = document.createElement('button');
+                yesButton.textContent = "Sim";
+                yesButton.className = "btn btn-outline-green";
+                yesButton.onclick = () => selectAnswer(true);
+                const noButton = document.createElement('button');
+                noButton.textContent = "Não";
+                noButton.className = "btn btn-outline-red";
+                noButton.onclick = () => selectAnswer(false);
+                optionsContainer.appendChild(yesButton);
+                optionsContainer.appendChild(noButton);
+            } else {
+                showResult();
+            }
+        }
+
+        function selectAnswer(answer) {
+            userAnswers[currentQuestionIndex] = answer;
+            currentQuestionIndex++;
+            displayQuestion();
+        }
+
+        async function showResult() {
+            quizScreen.classList.add('hidden');
+            resultScreen.classList.remove('hidden');
+            progressBar.style.width = '100%';
+            const yesCount = Object.values(userAnswers).filter(answer => answer === true).length;
+            const totalQuestions = questions.length;
+            let profileName = '';
+            let resultMessage = '';
+            if (yesCount > totalQuestions / 2) {
+                profileName = "Crescimento";
+                resultMessage = "Você busca constantemente por desenvolvimento e novas oportunidades. Cursos em áreas de gestão e liderança podem impulsionar sua carreira.";
+            } else if (yesCount === totalQuestions / 2) {
+                profileName = "Inovação";
+                resultMessage = "Você tem uma mente criativa e se adapta bem a novas tecnologias. Carreiras em TI, design e marketing digital são ideais para você.";
+            } else {
+                profileName = "Mudança";
+                resultMessage = "Você está aberto a novas experiências e pronto para transformar sua carreira. Explore cursos técnicos e profissionalizantes para uma rápida inserção no mercado.";
+            }
+            resultCategoryTitle.textContent = profileName;
+            resultDescription.textContent = resultMessage;
+            await saveMainQuizStructure();
+            await saveQuizResult(yesCount, totalQuestions, profileName, userAnswers);
+        }
+
+        function restartQuiz() {
+            resultScreen.classList.add('hidden');
+            postQuizOptions.style.display = 'block';
+            userInfoFormContainer.classList.add('hidden');
+            finalOptions.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+
+        async function saveMainQuizStructure() {
+            if (!db) return;
+            try {
+                const quizDocRef = doc(db, "quizzes", "mainQuiz");
+                const quizDocSnap = await getDoc(quizDocRef);
+                if (!quizDocSnap.exists()) {
+                    console.log("Criando documento 'quizzes/mainQuiz'...");
+                    const questionTexts = questions.map(q => q.question);
+                    await setDoc(quizDocRef, { questions: questionTexts });
+                    console.log("Documento 'quizzes/mainQuiz' criado com sucesso!");
+                }
+            } catch (error) {
+                console.error("Erro ao verificar ou salvar a estrutura do quiz: ", error);
+            }
+        }
+
+        async function saveQuizResult(yesCount, totalQuestions, profileName, answers) {
+            if (!db || !userId) return;
+            try {
+                const resultsCollection = collection(db, "quizResults");
+                const resultData = {
+                    userId: userId,
+                    yesCount: yesCount,
+                    totalQuestions: totalQuestions,
+                    profile: profileName,
+                    answers: answers,
+                    completedAt: serverTimestamp()
+                };
+                await addDoc(resultsCollection, resultData);
+                console.log("Resultado do quiz salvo com sucesso!");
+            } catch (error) {
+                console.error("Erro ao salvar o resultado do quiz: ", error);
+            }
+        }
+
+        async function saveUserInfo(email, cpf, phone) {
+            if (!db || !userId) return;
+            try {
+                const userDocRef = doc(db, "users", userId);
+                await setDoc(userDocRef, { email, cpf, phone }, { merge: true });
+                console.log("Informações do usuário salvas com sucesso!");
+            } catch (error) {
+                console.error("Erro ao salvar informações do usuário: ", error);
+            }
+        }
+
+        startButton.addEventListener('click', startQuiz);
+        document.querySelectorAll('.restart-button').forEach(button => {
+            button.addEventListener('click', restartQuiz);
+        });
+        showFormButton.addEventListener('click', () => {
+            postQuizOptions.style.display = 'none';
+            userInfoFormContainer.classList.remove('hidden');
+        });
+        skipFormButton.addEventListener('click', () => {
+            postQuizOptions.style.display = 'none';
+            userInfoFormContainer.classList.add('hidden');
+            successMessage.textContent = "Obrigado por participar!";
+            finalOptions.classList.remove('hidden');
+        });
+        infoForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const cpf = document.getElementById('cpf').value;
+            const phone = document.getElementById('phone').value;
+            const buttonText = saveInfoButton.querySelector('.button-text');
+            const loader = saveInfoButton.querySelector('.loader');
+            buttonText.textContent = 'Salvando...';
+            loader.classList.remove('hidden');
+            saveInfoButton.disabled = true;
+            await saveUserInfo(email, cpf, phone);
+            buttonText.textContent = 'Salvar e Finalizar';
+            loader.classList.add('hidden');
+            saveInfoButton.disabled = false;
+            userInfoFormContainer.classList.add('hidden');
+            successMessage.textContent = "Seus dados foram salvos com sucesso!";
+            finalOptions.classList.remove('hidden');
+        });
+
+        initializeFirebase();
+    </script>
+</body>
+
+</html>

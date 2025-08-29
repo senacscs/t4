@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Dashboard SENAC</title>
+    <link rel="shortcut icon" href="perguntas-frequentes.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            /* bg-gray-900 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 28rem;
+            /* max-w-md */
+            background-color: #1f2937;
+            /* dark:bg-gray-800 */
+            border-radius: 1rem;
+            /* rounded-2xl */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            /* shadow-2xl */
+            padding: 2rem;
+            /* p-8 */
+        }
+
+        .login-card img {
+            width: 10rem;
+            /* w-40 */
+            margin: 0 auto 1.5rem;
+            /* mx-auto mb-6 */
+            display: flex;
+            -ms-flex-align: center;
+        }
+
+        .login-card h2 {
+            font-size: 1.5rem;
+            /* text-2xl */
+            font-weight: 700;
+            /* font-bold */
+            text-align: center;
+            color: #ffffff;
+            /* dark:text-white */
+            margin-bottom: 0.25rem;
+            /* mb-1 */
+        }
+
+        .login-card p {
+            text-align: center;
+            color: #9ca3af;
+            /* dark:text-gray-400 */
+            margin-bottom: 2rem;
+            /* mb-8 */
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        .form-group.last {
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            /* text-sm */
+            font-weight: 500;
+            /* font-medium */
+            color: #d1d5db;
+            /* dark:text-gray-300 */
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            margin-top: 0.25rem;
+            /* mt-1 */
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            /* px-3 py-2 */
+            background-color: #374151;
+            /* dark bg */
+            border: 1px solid #4b5563;
+            /* dark border */
+            border-radius: 0.375rem;
+            /* rounded-md */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            /* shadow-sm */
+            color: #e5e7eb;
+            box-sizing: border-box;
+            /* Garante que padding não afete a largura total */
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #3b82f6;
+            /* focus:border-blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+            /* focus:ring-blue-500 */
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #2563eb;
+            /* bg-blue-600 */
+            color: white;
+            font-weight: 700;
+            /* font-bold */
+            padding: 0.75rem 1rem;
+            /* py-3 px-4 */
+            border: none;
+            border-radius: 9999px;
+            /* rounded-full */
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1d4ed8;
+            /* hover:bg-blue-700 */
+            transform: scale(1.05);
+            /* hover:scale-105 */
+        }
+
+        #error-message {
+            color: #ef4444;
+            /* text-red-500 */
+            font-size: 0.875rem;
+            /* text-sm */
+            margin-top: 1rem;
+            /* mt-4 */
+            text-align: center;
+            height: 1.25rem;
+            /* Garante espaço mesmo quando vazio */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+        <img src="logo-senac.png" alt="Logo Senac">
+        <h2>Acesso ao Dashboard</h2>
+        <p>Por favor, insira as suas credenciais.</p>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group last">
+                <label for="password">Senha</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">
+                Entrar
+            </button>
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
+            authDomain: "quiz-senac-vocacional.firebaseapp.com",
+            projectId: "quiz-senac-vocacional",
+            storageBucket: "quiz-senac-vocacional.appspot.com",
+            messagingSenderId: "816696913380",
+            appId: "1:816696913380:web:024f6414b94ca5b75b2bf1",
+            measurementId: "G-SNE93NYTFQ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginForm = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorMessage.textContent = '';
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                window.location.href = 'dashboard.html'; 
+            } catch (error) {
+                console.error("Erro de login:", error.code);
+                if (error.code === 'auth/wrong-password' || error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
+                    errorMessage.textContent = 'Email ou senha inválidos.';
+                } else {
+                    errorMessage.textContent = 'Ocorreu um erro ao tentar fazer login.';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

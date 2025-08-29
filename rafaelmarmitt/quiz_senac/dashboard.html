@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Usuários - Quiz SENAC</title>
+    <!-- O script do Tailwind não é mais necessário, mas o deixo comentado caso queira reverter -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="perguntas-frequentes.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- ESTILOS GERAIS (SOMENTE DARK MODE) --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            /* dark:bg-gray-900 */
+            color: #e5e7eb;
+            /* dark:text-gray-200 */
+        }
+
+        /* --- LAYOUT DO CONTAINER --- */
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem 1rem;
+            /* py-8 px-4 */
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            /* sm:px-6 */
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            /* lg:px-8 */
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+
+        header img {
+            width: 8rem;
+            /* w-32 */
+            margin-left: auto;
+            margin-right: 36%;
+            ;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            /* text-2xl */
+            font-weight: 700;
+            /* font-bold */
+            color: #ffffff;
+            /* dark:text-white */
+        }
+
+        header p {
+            color: #9ca3af;
+            /* dark:text-gray-400 */
+        }
+
+        /* --- SEÇÕES DE CONTEÚDO --- */
+        h2 {
+            font-size: 1.25rem;
+            /* text-xl */
+            font-weight: 700;
+            /* font-bold */
+            color: #ffffff;
+            /* dark:text-white */
+            margin-bottom: 1rem;
+            /* mb-4 */
+        }
+
+        #questions-report-container {
+            margin-bottom: 2rem;
+            /* mb-8 */
+        }
+
+        #status-message {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            /* py-4 */
+            color: #9ca3af;
+            /* dark:text-gray-400 */
+        }
+
+        /* --- RELATÓRIO POR QUESTÃO (CARDS) --- */
+        #questions-report {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            /* grid-cols-1 */
+            gap: 1rem;
+            /* gap-4 */
+        }
+
+        @media (min-width: 768px) {
+            #questions-report {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            /* md:grid-cols-2 */
+        }
+
+        @media (min-width: 1024px) {
+            #questions-report {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            /* lg:grid-cols-3 */
+        }
+
+        .report-card {
+            background-color: #1f2937;
+            /* dark:bg-gray-800 */
+            padding: 1rem;
+            /* p-4 */
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            /* shadow */
+        }
+
+        .report-card-question {
+            font-weight: 600;
+            /* font-semibold */
+            font-size: 0.875rem;
+            /* text-sm */
+            color: #e5e7eb;
+            /* dark:text-gray-200 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            /* truncate */
+            margin-bottom: 0.75rem;
+            /* mb-3 */
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            /* w-full */
+            background-color: #991b1b;
+            /* dark:bg-gray-700 */
+            border-radius: 9999px;
+            /* rounded-full */
+            height: 0.625rem;
+            /* h-2.5 */
+            margin-bottom: 0.5rem;
+            /* mb-2 */
+        }
+
+        .progress-bar {
+            background-color: #22c55e;
+            /* bg-green-500 */
+            height: 0.625rem;
+            /* h-2.5 */
+            border-radius: 9999px;
+            /* rounded-full */
+        }
+
+        .report-card-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            /* text-xs */
+            color: #9ca3af;
+            /* dark:text-gray-400 */
+        }
+
+        /* --- TABELA E SCROLLBAR --- */
+        .table-container {
+            overflow-x: auto;
+            background-color: #1f2937;
+            /* dark:bg-gray-800 */
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            /* shadow */
+        }
+
+        table {
+            min-width: 100%;
+            border-collapse: collapse;
+            /* Essencial para que as bordas do 'divide-y' funcionem */
+        }
+
+        thead {
+            background-color: #374151;
+            /* dark:bg-gray-700 */
+        }
+
+        tbody {
+            background-color: #1f2937;
+            /* dark:bg-gray-800 */
+        }
+
+        /* Simula o divide-y */
+        tbody tr+tr {
+            border-top: 1px solid #374151;
+            /* dark:divide-gray-700 */
+        }
+
+        tbody tr:hover {
+            background-color: #374151;
+            /* dark:hover:bg-gray-700 */
+        }
+
+        /* Células da Tabela (geradas via JS) */
+        .th-cell {
+            padding: 0.75rem 1.5rem;
+            /* px-6 py-3 */
+            text-align: left;
+            font-size: 0.75rem;
+            /* text-xs */
+            font-weight: 500;
+            /* font-medium */
+            color: #d1d5db;
+            /* dark:text-gray-300 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            /* tracking-wider */
+        }
+
+        .th-cell-center {
+            text-align: center;
+        }
+
+        .td-cell {
+            padding: 1rem 1.5rem;
+            /* px-6 py-4 */
+            white-space: nowrap;
+            font-size: 0.875rem;
+            /* text-sm */
+        }
+
+        .td-cell-main {
+            font-weight: 500;
+            /* font-medium */
+            color: #ffffff;
+            /* dark:text-white */
+        }
+
+        .td-cell-secondary {
+            color: #d1d5db;
+            /* dark:text-gray-300 */
+        }
+
+        .td-cell-center {
+            text-align: center;
+        }
+
+        /* Badges (gerados via JS) */
+        .badge {
+            display: inline-flex;
+            padding: 0.25rem 0.75rem;
+            /* px-3 py-1 */
+            font-size: 0.75rem;
+            /* text-xs */
+            line-height: 1.25rem;
+            /* leading-5 */
+            font-weight: 600;
+            /* font-semibold */
+            border-radius: 9999px;
+            /* rounded-full */
+        }
+
+        .badge-yes {
+            background-color: #166534;
+            /* dark:bg-green-800 */
+            color: #dcfce7;
+            /* dark:text-green-100 */
+        }
+
+        .badge-no {
+            background-color: #991b1b;
+            /* dark:bg-red-800 */
+            color: #fee2e2;
+            /* dark:text-red-100 */
+        }
+
+        .badge-neutral {
+            color: #9ca3af;
+            /* text-gray-400 */
+        }
+
+        /* Estilos da Scrollbar */
+        .table-container::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb {
+            background-color: #4b5563;
+            border-radius: 4px;
+        }
+
+        .table-container::-webkit-scrollbar-track {
+            background-color: #1f2937;
+        }
+
+        /* --- BOTÃO DE SAIR --- */
+        #logout-button {
+            background-color: #991b1b;
+            /* red-800 */
+            color: #fee2e2;
+            /* red-100 */
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            width: 7rem;
+            height: 3rem;
+            border: none;
+            border-radius: 0.375rem;
+            /* rounded-md */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #logout-button:hover {
+            background-color: #7f1d1d;
+            /* red-900 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>Painel de Respostas</h1>
+                <p>Visualize os resultados do Quiz Vocacional.</p>
+            </div>
+            <img src="logo-senac.png" alt="Logo Senac">
+            <button id="logout-button">Sair</button>
+        </header>
+
+        <!-- Seção de Relatório por Questão -->
+        <div id="questions-report-container">
+            <h2>Relatório por Questão</h2>
+            <div id="questions-report">
+                <!-- Cards do relatório serão inseridos aqui -->
+            </div>
+        </div>
+
+        <h2>Respostas Individuais</h2>
+        <div id="status-message">Carregando dados...</div>
+
+        <!-- Container da Tabela com scroll -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr id="table-header">
+                        <!-- Cabeçalhos serão gerados dinamicamente -->
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    <!-- Linhas da tabela serão inseridas aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, collection, getDocs, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- CONFIGURAÇÃO DO FIREBASE ---
+        const firebaseConfig = {
+            apiKey: "AIzaSyBDFhmDLth8b5RUHluJgopvf6iFTdKYhxI",
+            authDomain: "quiz-senac-vocacional.firebaseapp.com",
+            projectId: "quiz-senac-vocacional",
+            storageBucket: "quiz-senac-vocacional.appspot.com",
+            messagingSenderId: "816696913380",
+            appId: "1:816696913380:web:024f6414b94ca5b75b2bf1",
+            measurementId: "G-SNE93NYTFQ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        // --- LÓGICA DO BOTÃO DE SAIR ---
+        const logoutButton = document.getElementById('logout-button');
+        logoutButton.addEventListener('click', () => {
+            signOut(auth).catch(error => {
+                console.error('Erro ao sair:', error);
+            });
+        });
+
+        // --- LÓGICA DE AUTENTICAÇÃO ---
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                fetchAndDisplayData();
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+
+        // --- FUNÇÃO PRINCIPAL PARA BUSCAR E EXIBIR DADOS ---
+        const fetchAndDisplayData = async () => {
+            const statusMessage = document.getElementById('status-message');
+            const tableHeader = document.getElementById('table-header');
+            const tableBody = document.getElementById('user-table-body');
+            const reportContainer = document.getElementById('questions-report');
+
+            tableBody.innerHTML = '';
+            tableHeader.innerHTML = '';
+            reportContainer.innerHTML = '';
+            statusMessage.style.display = 'block';
+            statusMessage.textContent = 'Carregando estrutura do quiz...';
+
+            try {
+                // 1. Buscar a estrutura de perguntas do quiz
+                const quizDocRef = doc(db, 'quizzes', 'mainQuiz');
+                const quizDocSnap = await getDoc(quizDocRef);
+                let questions = [];
+                if (quizDocSnap.exists()) {
+                    questions = quizDocSnap.data().questions || [];
+                } else {
+                    console.error("Documento 'quizzes/mainQuiz' não encontrado.");
+                    statusMessage.textContent = 'Estrutura do quiz não encontrada. Responda a um quiz para criá-la.';
+                    document.getElementById('questions-report-container').style.display = 'none';
+                    return;
+                }
+
+                // 2. Montar o cabeçalho da tabela detalhada
+                let headerHTML = `
+                    <th scope="col" class="th-cell">Email</th>
+                    <th scope="col" class="th-cell">CPF</th>
+                    <th scope="col" class="th-cell">Telefone</th>
+                    <th scope="col" class="th-cell">Perfil</th>
+                `;
+                questions.forEach(q => {
+                    headerHTML += `<th scope="col" class="th-cell th-cell-center">${q}</th>`;
+                });
+                tableHeader.innerHTML = headerHTML;
+
+                // 3. Buscar todas as informações de usuários
+                statusMessage.textContent = 'Carregando informações dos usuários...';
+                const usersCollectionRef = collection(db, "users");
+                const userDocsSnap = await getDocs(usersCollectionRef);
+                const usersMap = new Map();
+                userDocsSnap.forEach(doc => {
+                    usersMap.set(doc.id, doc.data());
+                });
+
+                // 4. Buscar todos os resultados de quizzes
+                statusMessage.textContent = 'Carregando resultados dos quizzes...';
+                const resultsCollectionRef = collection(db, "quizResults");
+                const quizResultsSnap = await getDocs(query(resultsCollectionRef));
+
+                if (quizResultsSnap.empty) {
+                    statusMessage.textContent = 'Nenhum resultado de quiz encontrado.';
+                    document.getElementById('questions-report-container').style.display = 'none';
+                    return;
+                }
+
+                // 5. Processar dados para o relatório e para a tabela
+                const questionsSummary = questions.map(q => ({ question: q, yes: 0, no: 0, total: 0 }));
+
+                quizResultsSnap.forEach(resultDoc => {
+                    const quizData = resultDoc.data();
+                    const userInfo = usersMap.get(quizData.userId) || {};
+
+                    // Preenche a tabela detalhada
+                    const row = document.createElement('tr');
+                    let rowHTML = `
+                        <td class="td-cell td-cell-main">${userInfo.email || 'Anônimo'}</td>
+                        <td class="td-cell td-cell-secondary">${userInfo.cpf || '-'}</td>
+                        <td class="td-cell td-cell-secondary">${userInfo.phone || '-'}</td>
+                        <td class="td-cell td-cell-secondary">${quizData.profile || '-'}</td>
+                    `;
+                    questions.forEach((q, index) => {
+                        const answer = quizData.answers[index];
+
+                        if (answer === true || answer === false) {
+                            questionsSummary[index].total++;
+                            if (answer === true) questionsSummary[index].yes++;
+                            else questionsSummary[index].no++;
+                        }
+
+                        let answerCellHTML = '<td class="td-cell td-cell-center">';
+                        if (answer === true) {
+                            answerCellHTML += '<span class="badge badge-yes">Sim</span>';
+                        } else if (answer === false) {
+                            answerCellHTML += '<span class="badge badge-no">Não</span>';
+                        } else {
+                            answerCellHTML += '<span class="badge-neutral">-</span>';
+                        }
+                        answerCellHTML += '</td>';
+                        rowHTML += answerCellHTML;
+                    });
+                    row.innerHTML = rowHTML;
+                    tableBody.appendChild(row);
+                });
+
+                // 6. Renderizar o relatório de questões
+                questionsSummary.forEach(summary => {
+                    const yesPercent = summary.total > 0 ? (summary.yes / summary.total) * 100 : 0;
+                    const noPercent = summary.total > 0 ? (summary.no / summary.total) * 100 : 0;
+
+                    const card = document.createElement('div');
+                    card.className = "report-card";
+                    card.innerHTML = `
+                        <p class="report-card-question">${summary.question}</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: ${yesPercent}%"></div>
+                        </div>
+                        <div class="report-card-footer">
+                            <span>Sim: ${summary.yes} (${yesPercent.toFixed(0)}%)</span>
+                            <span>Não: ${summary.no} (${noPercent.toFixed(0)}%)</span>
+                        </div>
+                    `;
+                    reportContainer.appendChild(card);
+                });
+
+
+                statusMessage.style.display = 'none';
+
+            } catch (error) {
+                console.error("Erro ao carregar dados: ", error);
+                statusMessage.textContent = 'Falha ao carregar os dados. Verifique o console para mais detalhes.';
+                statusMessage.style.color = 'red';
+            }
+        };
+    </script>
+</body>
+
+</html>
