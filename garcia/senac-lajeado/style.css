@@ -194,7 +194,7 @@ body {
 	display: none;
 }
 
-.quiz-card.mod-intro .card-media { background-image:url('img/question-illustration.svg'); }
+.quiz-card.mod-intro .card-media { background-image:url('img/duvida.png'); }
 
 /* Intro: ocupar melhor o espaço visual */
 .quiz-card.mod-intro .card-body {
