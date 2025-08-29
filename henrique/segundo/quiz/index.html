@@ -1,87 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descubra Seu Curso</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Profissional</title>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Urbanist, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2em 1em;
+    overflow: hidden;
+  }
+
+  img#quizImage {
+    max-width: 160px;
+    max-height: 160px;
+    object-fit: contain;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+  }
+
+  h2 em {
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: 700;
+    color: hsl(210, 80%, 40%);
+  }
+
+  p {
+    margin-bottom: 1em;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+
+  .quiz-actions {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+  }
+
+  button {
+    background-color: transparent;
+    border: 2px solid hsl(210, 80%, 40%);
+    border-radius: 1.5em;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5em 1.2em;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+
+  button:hover { background-color: hsl(210, 80%, 40%); color: #fff; }
+
+  #message {
+    max-width: 600px;
+    min-height: 100px;
+    margin-top: 1em;
+    transition: opacity 0.3s;
+  }
+
+  #finalResult {
+    max-width: 600px;
+    margin-top: 2em;
+    display: none;
+  }
+</style>
 </head>
 <body>
-  <div class="banner">
-    DESCUBRA SEU CURSO!!!
-  </div>
 
-  <!-- SLIDES -->
-  <div class="slideshow-container">
-    <div class="slide fade">
-      <img src="imagens/comunicacao.jpg" alt="Dicção, Desinibição e Oratória">
-      <div class="slide-title">Dicção, Desinibição e Oratória</div>
-    </div>
-    <div class="slide fade">
-      <img src="imagens/tecnologia.jpg" alt="Pilotagem de Drones">
-      <div class="slide-title">Pilotagem de Drones</div>
-    </div>
-    <div class="slide fade">
-      <img src="imagens/reels.jpg" alt="Produção de Reels">
-      <div class="slide-title">Produção de Reels</div>
-    </div>
-    <div class="slide fade">
-      <img src="imagens/gastronomia.jpg" alt="Técnicas Culinárias">
-      <div class="slide-title">Técnicas Culinárias da Cozinha Profissional</div>
-    </div>
-  </div>
+<img id="quizImage" src="https://assets.codepen.io/416221/gba.webp" alt="Quiz Imagem">
+<h2 id="quizQuestion">Você está <em>empregado</em>?</h2>
+<p id="quizText">Escolha a opção que melhor representa sua situação.</p>
 
-  <!-- QUIZZES -->
-  <div class="quiz-section">
-    <h2>TESTES</h2>
-    <p>Faça os testes e descubra seu curso ideal</p>
-    <div class="quiz-list">
+<div class="quiz-actions">
+  <button id="yesButton">Sim</button>
+  <button id="noButton">Não</button>
+</div>
 
-      <!-- Quiz 1 -->
-      <div class="quiz-item">
-        <a href="livres.html">
-          <img src="imagens/livres.png" alt="Quiz cursos livres">
-        </a>
-        <div class="quiz-text">
-          <a href="livres.html">
-            <h3>Qual curso livre combina mais com você?</h3>
-          </a>
-          <p>Descubra se você se identifica mais com Dicção, Desinibição e Oratória, Pilotagem de Drones, Produção de Reels ou Técnicas Culinárias.</p>
-        </div>
-      </div>
+<div id="message"></div>
+<div id="finalResult"></div>
 
-      <!-- Quiz 2 -->
-      <div class="quiz-item">
-        <a href="tecnicos.html">
-          <img src="imagens/tecnicos.jpg" alt="Quiz cursos técnicos">
-        </a>
-        <div class="quiz-text">
-          <a href="tecnicos.html">
-            <h3>Qual curso técnico é a sua cara?</h3>
-          </a>
-          <p>Descubra seu perfil: Gestão e Relacionamento, Técnico e Analítico, Criativo e Visual ou Prático e Operacional, e veja os cursos ideais para você.</p>
-        </div>
-      </div>
+<script>
+const quiz = [
+  { question: "Você está <em>empregado</em>?", yes: "Você está trabalhando, parabéns! Estar empregado já é um passo importante para manter sua experiência ativa e abrir portas para novas oportunidades. Continue investindo em si mesmo para não apenas se manter no mercado, mas também crescer.", no: "Você desempregado, mas não desanime. Segundo dados do IBGE, cerca de 7,5% dos brasileiros estão desempregados (2025). Isso mostra que a competição é grande, mas também que quem se qualifica aumenta muito suas chances de voltar ao mercado. Talvez seja a hora de investir em cursos profissionalizantes para reverter essa condição.", image: "1.png" },
+  { question: "Atualmente você está <em>estudando</em>?", yes: "Estudar é uma das maiores vantagens competitivas no mundo do trabalho. Quem estuda aumenta em até 73% as chances de conquistar melhores salários, segundo pesquisas do Ipea. Você já está no caminho certo!", no: "Atenção: deixar de estudar pode ser um freio na sua carreira. Em um mundo em que as profissões mudam rapidamente, quem não estuda fica para trás. Que tal começar com algo acessível, acesse as oficinas online gratuitas do Senac em senacrs.com.br", image: "2.png" },
+  { question: "Você domina o uso do <em>computador</em> (pacote Office)?", yes: "O domínio do Excel, Word e PowerPoint é praticamente uma necessidade universal no mercado de trabalho. Esse conhecimento torna você mais produtivo e preparado para qualquer vaga.", no: "Se você ainda não domina o uso do computador vale a pena aprender. O pacote Office é exigido em 8 de cada 10 vagas de emprego administrativo no Brasil. Hoje existem cursos que podem ser concluídos em poucas semanas.", image: "3.png" },
+  { question: "Já utiliza <em>Inteligência Artificial</em> em seu dia a dia?", yes: "Você sabia que o uso de IA é cada vez mais valorizado pelas empresas? Segundo a PwC, até 2030, a IA pode adicionar até 15,7 trilhões de dólares à economia global. Você já está surfando essa onda!", no: "Atenção, você está deixando passar uma grande oportunidade. A IA já está transformando o mercado de trabalho em todas as áreas. Aprender a usá-la não exige formação em tecnologia: qualquer pessoa pode começar com ferramentas simples para aumentar sua produtividade.", image: "4.png" },
+  { question: "Fez algum <em>curso de atualização</em> nos últimos 2 anos?", yes: "Parabéns por ter feito um curso nos últimos 2 anos! Esse é o espírito de um profissional atualizado. Estudos mostram que quem investe regularmente em capacitação tem até 30% mais chances de progressão na carreira.", no: "O conhecimento envelhece cada vez mais rapidamente. Em muitas áreas, o que você aprendeu há 5 anos pode já estar ultrapassado. Pequenos cursos podem reabrir portas para novas oportunidades.", image: "5.png" },
+  { question: "Possui <em>aplicativos</em> em celular utilizados para o seu trabalho e organização do dia a dia?", yes: "Hoje o celular é uma ferramenta essencial na vida da gente e no trabalho. Profissionais que utilizam aplicativos para otimizar tarefas ganham em produtividade e organização.", no: "Se você ainda não possui apps em seu celular utilizados para o trabalho e organização do dia a dia você pode estar perdendo tempo. Há aplicativos gratuitos que ajudam desde organização de tarefas até controle de finanças. Inserir essa prática no dia a dia também é um diferencial importante.", image: "6.png" },
+  { question: "Você compreende minimamente <em>um outro idioma</em>?", yes: "Por fim, dentre as competências necessárias atualmente, dominar outro idioma é abrir portas para o mundo. O inglês, por exemplo, pode aumentar o salário em até 61% no Brasil, segundo a Catho.", no: "Dominar um segundo idioma é, também, uma habilidade estratégica atualmente. Mesmo aprender o básico já faz diferença.", image: "7.png" },
+  { question: "Já tem um <em>objetivo profissional</em> definido?", yes: "Você tem um objetivo profissional definido, parabéns! Ter clareza do objetivo ajuda a focar energia e esforços, transformando passos em conquistas. Isso mostra que você tem visão de futuro.", no: "Sem metas claras, é fácil andar em círculos. Definir um objetivo profissional é como traçar um mapa: você pode até mudar o caminho, mas sabe para onde quer ir. Reflita sobre o que realmente deseja alcançar.", image: "8.png" }
+];
 
-    </div>
-  </div>
+let currentQuestion = 0;
+let answers = [];
+let buttonsEnabled = true; // controla se os botões podem ser clicados
 
-  <!-- SLIDES SCRIPT -->
-  <script>
-    let slideIndex = 0;
-    showSlides();
+const quizImage = document.getElementById("quizImage");
+const quizQuestion = document.getElementById("quizQuestion");
+const quizText = document.getElementById("quizText");
+const messageDiv = document.getElementById("message");
+const finalResultDiv = document.getElementById("finalResult");
+const yesButton = document.getElementById("yesButton");
+const noButton = document.getElementById("noButton");
 
-    function showSlides() {
-      let slides = document.getElementsByClassName("slide");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000);
-    }
-  </script>
+function showQuestion(index) {
+  quizQuestion.innerHTML = quiz[index].question;
+  messageDiv.innerHTML = ""; 
+  quizImage.src = quiz[index].image;
+  quizImage.style.display = "block";
+  buttonsEnabled = true; // habilita os botões
+}
+
+function nextQuestion(answer) {
+  if (!buttonsEnabled) return; // bloqueia cliques múltiplos
+  buttonsEnabled = false; // desativa temporariamente
+
+  const idx = currentQuestion; // congela índice
+  answers.push(answer);
+
+  messageDiv.style.opacity = "0";
+  setTimeout(() => {
+    messageDiv.innerHTML = answer === "yes" ? quiz[idx].yes : quiz[idx].no;
+    messageDiv.style.opacity = "1";
+  }, 150);
+
+  currentQuestion++;
+  if(currentQuestion < quiz.length) {
+    setTimeout(() => showQuestion(currentQuestion), 3000);
+  } else {
+    setTimeout(showFinalResult, 3000);
+  }
+}
+
+function showFinalResult() {
+  // esconder elementos do quiz
+  quizImage.style.display = "none";
+  quizQuestion.style.display = "none";
+  quizText.style.display = "none";
+  yesButton.style.display = "none";
+  noButton.style.display = "none";
+  messageDiv.style.display = "none";
+
+  const yesCount = answers.filter(a => a === "yes").length;
+  const noCount = answers.length - yesCount;
+  let resultMessage = "";
+
+  if (yesCount > noCount) {
+    resultMessage = "Agora é a sua vez de crescer! Suas respostas indicam que você está no caminho certo, já construiu uma boa base e deve continuar se atualizando. O próximo passo pode ser buscar especializações e ampliar seu networking. Conte com o Senac para seguir nessa jornada de crescimento!";
+  } else if (yesCount === noCount) {
+    resultMessage = "Agora é a sua vez de inovar! Suas respostas indicam que você já tem conquistas, mas precisa acelerar a qualificação para não perder espaço. Um plano de estudos e a adoção de novas ferramentas tecnológicas podem fazer a diferença. Conte com o Senac para acelerar essa jornada de crescimento!";
+  } else {
+    resultMessage = "Agora é a sua vez de mudar! Suas respostas mostram que é hora de agir! Não encare como crítica, mas como ponto de partida. Comece por algo simples: um curso online, aprender a usar uma IA ou aplicativos no celular. Cada pequeno passo abre novas oportunidades e o Senac está aqui para te ajudar.";
+  }
+
+  finalResultDiv.style.display = "block";
+  finalResultDiv.innerHTML = `<h2>Resultado do Quiz</h2><p>${resultMessage}</p>`;
+}
+
+yesButton.addEventListener("click", () => nextQuestion("yes"));
+noButton.addEventListener("click", () => nextQuestion("no"));
+
+showQuestion(currentQuestion);
+</script>
+
 </body>
 </html>
