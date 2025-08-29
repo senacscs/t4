@@ -189,6 +189,8 @@
         /* --- TABELA E SCROLLBAR --- */
         .table-container {
             overflow-x: auto;
+            overflow-y: auto; /* Adicionado para rolagem vertical */
+            max-height: 70vh; /* Define uma altura máxima para ativar a rolagem */
             background-color: #1f2937;
             /* dark:bg-gray-800 */
             border-radius: 0.5rem;
@@ -206,6 +208,9 @@
         thead {
             background-color: #374151;
             /* dark:bg-gray-700 */
+            position: sticky; /* Torna o cabeçalho fixo */
+            top: 0; /* Posiciona no topo do container de rolagem */
+            z-index: 10; /* Garante que fique sobre o conteúdo */
         }
 
         tbody {
