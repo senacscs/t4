@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Questionário de Avaliação Roblox</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Avaliação de Itens (0 a 10)</h1>
+    <p class="intro">Clique em uma pílula (item) para abrir e atribuir uma nota decimal entre 0 e 10 (ex: 9.7). Use a barra de pesquisa para filtrar. Nick e @ são obrigatórios.</p>
+
+    <form id="ratingForm" novalidate>
+      <fieldset class="identification">
+        <legend>Identificação</legend>
+        <div class="field">
+          <label for="nick">Nick / Apelido *</label>
+          <input id="nick" name="nick" type="text" maxlength="40" required placeholder="Seu nick" />
+        </div>
+        <div class="field">
+          <label for="atHandle">@ do Roblox *</label>
+          <input id="atHandle" name="atHandle" type="text" maxlength="40" required placeholder="@SeuUsuario" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Itens</legend>
+        <div class="field">
+          <label for="globalSearch">Pesquisar</label>
+          <input id="globalSearch" type="text" placeholder="Digite parte do nome (ex: f117, m1a2, abrams)..." />
+        </div>
+        <div id="chips" class="chip-list" aria-live="polite"></div>
+      </fieldset>
+
+      <div id="panel" class="rating-panel hidden" aria-hidden="true">
+        <div class="panel-header">
+          <h2 id="panelItemName">Item</h2>
+          <button type="button" id="closePanel" class="close-btn" aria-label="Fechar">×</button>
+        </div>
+        <p class="panel-path" id="panelPath"></p>
+        <div class="panel-body">
+          <div class="rating-decimal">
+            <label for="rangeInput">Nota (0 a 10, decimais): <strong id="liveValue">0.0</strong></label>
+            <input id="rangeInput" type="range" min="0" max="10" step="0.1" value="0" />
+            <div class="dual-input">
+              <input id="numberInput" type="number" min="0" max="10" step="0.1" value="0" />
+              <button type="button" id="roundBtn" class="mini">Arredondar .0/.5</button>
+              <button type="button" id="clearRating" class="mini secondary">Limpar</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="comment">Comentário (opcional)</label>
+            <textarea id="comment" rows="3" maxlength="500" placeholder="Observações sobre este item..."></textarea>
+          </div>
+          <div class="actions inline">
+            <button type="submit" id="submitBtn">Enviar Avaliação</button>
+          </div>
+        </div>
+        <p id="status" class="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <details class="privacy">
+      <summary>Sobre privacidade / uso dos dados</summary>
+      <p>Serão armazenados: nick, @ do Roblox, item selecionado (categoria, subcategoria, nome, slug), nota decimal (0–10), comentário (opcional), timestamps e userAgent. Não insira dados sensíveis.</p>
+    </details>
+  </main>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
