@@ -8,15 +8,15 @@
 </head>
 <body>
   <main class="container">
-    <h1>Avaliação de Itens (0 a 10)</h1>
-    <p class="intro">Clique em uma pílula (item) para abrir e atribuir uma nota decimal entre 0 e 10 (ex: 9.7). Use a barra de pesquisa para filtrar. Nick e @ são obrigatórios.</p>
+  <h1>Deixe sua avaliação</h1>
+  <p class="intro">Selecione um veículo, arma, equipamento ou outro item que você realmente já tenha utilizado de forma consistente e sobre o qual possua experiência suficiente para atribuir uma nota justa. Atribua uma nota geral decimal entre 0 e 10 (ex.: 9.7) e, se desejar, inclua um comentário. Utilize a pesquisa para localizar rapidamente. Nick e @ do Roblox são obrigatórios.</p>
 
     <form id="ratingForm" novalidate>
       <fieldset class="identification">
-        <legend>Identificação</legend>
+        <legend>Dados do Participante</legend>
         <div class="field">
-          <label for="nick">Nick / Apelido *</label>
-          <input id="nick" name="nick" type="text" maxlength="40" required placeholder="Seu nick" />
+          <label for="nick">Nick / Apelido (Roblox) *</label>
+          <input id="nick" name="nick" type="text" maxlength="40" required placeholder="Ex.: GhostRider" />
         </div>
         <div class="field">
           <label for="atHandle">@ do Roblox *</label>
@@ -25,9 +25,9 @@
       </fieldset>
 
       <fieldset>
-        <legend>Itens</legend>
+        <legend>Catálogo de Itens</legend>
         <div class="field">
-          <label for="globalSearch">Pesquisar</label>
+          <label for="globalSearch">Pesquisa (ignora símbolos)</label>
           <input id="globalSearch" type="text" placeholder="Digite parte do nome (ex: f117, m1a2, abrams)..." />
         </div>
         <div id="chips" class="chip-list" aria-live="polite"></div>
@@ -41,20 +41,20 @@
         <p class="panel-path" id="panelPath"></p>
         <div class="panel-body">
           <div class="rating-decimal">
-            <label for="rangeInput">Nota (0 a 10, decimais): <strong id="liveValue">0.0</strong></label>
+            <label for="rangeInput">Nota Geral (0 a 10, permite decimais): <strong id="liveValue">0.0</strong></label>
             <input id="rangeInput" type="range" min="0" max="10" step="0.1" value="0" />
             <div class="dual-input">
               <input id="numberInput" type="number" min="0" max="10" step="0.1" value="0" />
-              <button type="button" id="roundBtn" class="mini">Arredondar .0/.5</button>
-              <button type="button" id="clearRating" class="mini secondary">Limpar</button>
+              <button type="button" id="roundBtn" class="mini">Ajustar para .0/.5</button>
+              <button type="button" id="clearRating" class="mini secondary">Zerar Nota</button>
             </div>
           </div>
           <div class="field">
             <label for="comment">Comentário (opcional)</label>
-            <textarea id="comment" rows="3" maxlength="500" placeholder="Observações sobre este item..."></textarea>
+            <textarea id="comment" rows="3" maxlength="500" placeholder="Observações adicionais (até 500 caracteres)..."></textarea>
           </div>
           <div class="actions inline">
-            <button type="submit" id="submitBtn">Enviar Avaliação</button>
+            <button type="submit" id="submitBtn">Registrar Avaliação</button>
           </div>
         </div>
         <p id="status" class="status" aria-live="polite"></p>
@@ -62,8 +62,8 @@
     </form>
 
     <details class="privacy">
-      <summary>Sobre privacidade / uso dos dados</summary>
-      <p>Serão armazenados: nick, @ do Roblox, item selecionado (categoria, subcategoria, nome, slug), nota decimal (0–10), comentário (opcional), timestamps e userAgent. Não insira dados sensíveis.</p>
+      <summary>Privacidade e Uso dos Dados</summary>
+      <p>Serão registrados: nick, @ do Roblox, item (categoria, subcategoria, nome e slug), nota decimal (0–10), comentário opcional, data e hora (local e ISO), offset de fuso, userAgent e timestamp de servidor. Não inclua informações sensíveis. Para solicitar remoção, contate o administrador.</p>
     </details>
   </main>
 
