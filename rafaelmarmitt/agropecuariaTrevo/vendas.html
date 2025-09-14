@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTrevo | Vendas</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <!-- Google Fonts: Poppins para uma aparência moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #689f38;
+            --accent: #8d6e63;
+            --success: #43a047;
+            --warning: #ffb300;
+            --danger: #e53935;
+            --info: #1e88e5;
+            --light: #ffffff;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            color: var(--dark);
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: var(--light);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sidebar .logo i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+
+        .sidebar .menu a,
+        .sidebar .logout-link a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar .menu a.active,
+        .sidebar .menu a:hover,
+        .sidebar .logout-link a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .sidebar .menu a i,
+        .sidebar .logout-link a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card .icon {
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card.sales-today .icon {
+            background-color: var(--success);
+        }
+
+        .card.revenue-today .icon {
+            background-color: var(--primary);
+        }
+
+        .card.revenue-month .icon {
+            background-color: var(--secondary);
+        }
+
+        .card.avg-ticket .icon {
+            background-color: var(--info);
+        }
+
+        .card .card-info h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .card .card-info .card-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .sales-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .sales-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sales-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .sales-table th,
+        .sales-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .sale-modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .product-search-results {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 10vh;
+        }
+
+        .product-search-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .product-search-item:hover {
+            background-color: var(--bg-light);
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr 1fr auto;
+            gap: 10px;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cart-item input[type="number"] {
+            width: 60px;
+            text-align: center;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: var(--danger);
+            color: white;
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+
+        .details-modal-body {
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+        <nav class="menu">
+            <a href="dashboard_agrovet.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="estoque.html"><i class="fas fa-boxes-stacked"></i> Estoque</a>
+            <a href="fornecedores.html"><i class="fas fa-truck-field"></i> Fornecedores</a>
+            <a href="vendas.html" class="active"><i class="fas fa-cash-register"></i> Vendas</a>
+            <a href="relatorios.html"><i class="fas fa-file-alt"></i> Relatórios</a>
+            <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="logout-link">
+            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Vendas</h1>
+            <div class="header-actions">
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=agroadmin" alt="User">
+                    <span id="user-display"></span>
+                </div>
+            </div>
+        </header>
+
+        <section class="summary-cards">
+            <div class="card sales-today">
+                <div class="icon"><i class="fas fa-receipt"></i></div>
+                <div class="card-info">
+                    <h3>Vendas Hoje</h3>
+                    <div class="card-value" id="kpi-sales-today">0</div>
+                </div>
+            </div>
+            <div class="card revenue-today">
+                <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="card-info">
+                    <h3>Faturado Hoje</h3>
+                    <div class="card-value" id="kpi-revenue-today">R$ 0,00</div>
+                </div>
+            </div>
+            <div class="card revenue-month">
+                <div class="icon"><i class="fas fa-calendar-day"></i></div>
+                <div class="card-info">
+                    <h3>Faturado Mês</h3>
+                    <div class="card-value" id="kpi-revenue-month">R$ 0,00</div>
+                </div>
+            </div>
+            <div class="card avg-ticket">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <div class="card-info">
+                    <h3>Ticket Médio</h3>
+                    <div class="card-value" id="kpi-avg-ticket">R$ 0,00</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="sales-container">
+            <div class="sales-header">
+                <h2>Histórico de Vendas</h2>
+                <button id="new-sale-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Nova Venda</button>
+            </div>
+            <table class="sales-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Cliente</th>
+                        <th>Itens</th>
+                        <th>Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="sales-history-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal Nova Venda -->
+    <div id="sale-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Registrar Nova Venda</h2><span class="close-button">&times;</span>
+            </div>
+            <div class="sale-modal-body">
+                <!-- Seção de Cliente e Busca -->
+                <div class="customer-product-section">
+                    <div class="form-group">
+                        <label for="customer-name">Nome do Cliente</label>
+                        <input type="text" id="customer-name" placeholder="Consumidor Final">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Telefone</label>
+                        <input type="text" id="customer-phone" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-document">CPF/CNPJ</label>
+                        <input type="text" id="customer-document" placeholder="000.000.000-00">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-address">Endereço</label>
+                        <input type="text" id="customer-address" placeholder="Rua, Número, Bairro">
+                    </div>
+                    <hr style="margin: 20px 0;">
+                    <div class="form-group">
+                        <label for="product-search">Buscar Produto</label>
+                        <input type="text" id="product-search">
+                    </div>
+                    <div id="product-search-results" class="product-search-results"></div>
+                </div>
+                <!-- Seção do Carrinho -->
+                <div class="cart-section">
+                    <h3>Itens da Venda</h3>
+                    <ul id="cart-items" class="cart-items"></ul>
+                    <div id="cart-total" class="cart-total">Total: R$ 0,00</div>
+                </div>
+            </div>
+            <div class="sales-header"><button id="finalize-sale-btn" class="btn btn-primary"
+                    style="width:100%;">Finalizar Venda</button></div>
+        </div>
+    </div>
+
+    <!-- Modal Detalhes da Venda -->
+    <div id="sale-details-modal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2 id="details-modal-title">Detalhes da Venda</h2><span class="close-button">&times;</span>
+            </div>
+            <div id="sale-details-body" class="details-modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('user-display').textContent = session.user.email;
+
+            // --- LOGOUT ---
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signOut();
+                if (error) console.error('Erro ao sair:', error);
+                else window.location.href = 'index.html';
+            });
+
+            let products = [];
+            let sales = [];
+            let currentCart = [];
+
+            const formatCurrency = value => (value || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const formatDate = dateStr => new Date(dateStr).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+
+            const salesHistoryBody = document.getElementById('sales-history-body');
+            const newSaleBtn = document.getElementById('new-sale-btn');
+            const saleModal = document.getElementById('sale-modal');
+            const detailsModal = document.getElementById('sale-details-modal');
+            const productSearchInput = document.getElementById('product-search');
+            const searchResultsContainer = document.getElementById('product-search-results');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalEl = document.getElementById('cart-total');
+            const finalizeSaleBtn = document.getElementById('finalize-sale-btn');
+
+            const fetchAllData = async () => {
+                const { data: productsData, error: pError } = await supabase.from('products').select('*');
+                if (pError) console.error("Erro ao buscar produtos", pError);
+                else products = productsData;
+
+                const { data: salesData, error: sError } = await supabase.from('sales').select('*, sale_items(*)').order('created_at', { ascending: false });
+                if (sError) console.error("Erro ao buscar vendas", sError);
+                else sales = salesData;
+            };
+
+            const updateKPIs = () => {
+                const today = new Date().setHours(0, 0, 0, 0);
+                const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+
+                const salesToday = sales.filter(s => new Date(s.created_at) >= today);
+                const salesMonth = sales.filter(s => new Date(s.created_at) >= startOfMonth);
+
+                const revenueToday = salesToday.reduce((sum, s) => sum + s.total_amount, 0);
+                const revenueMonth = salesMonth.reduce((sum, s) => sum + s.total_amount, 0);
+                const avgTicket = sales.length > 0 ? (sales.reduce((sum, s) => sum + s.total_amount, 0) / sales.length) : 0;
+
+                document.getElementById('kpi-sales-today').textContent = salesToday.length;
+                document.getElementById('kpi-revenue-today').textContent = formatCurrency(revenueToday);
+                document.getElementById('kpi-revenue-month').textContent = formatCurrency(revenueMonth);
+                document.getElementById('kpi-avg-ticket').textContent = formatCurrency(avgTicket);
+            };
+
+            const renderSalesHistory = () => {
+                salesHistoryBody.innerHTML = sales.map(sale => `
+                    <tr>
+                        <td>#${sale.id}</td>
+                        <td>${formatDate(sale.created_at)}</td>
+                        <td>${sale.customer_name || 'Consumidor Final'}</td>
+                        <td>${sale.sale_items.length}</td>
+                        <td>${formatCurrency(sale.total_amount)}</td>
+                        <td><button class="btn btn-primary" data-sale-id="${sale.id}" style="padding: 5px 10px; font-size: 14px;">Ver</button></td>
+                    </tr>
+                `).join('');
+            };
+
+            const renderSearchResults = () => {
+                const term = productSearchInput.value.toLowerCase();
+                const results = products.filter(p => p.name.toLowerCase().includes(term) && p.quantity > 0);
+                searchResultsContainer.innerHTML = results.map(p => `
+                    <div class="product-search-item" data-product-id="${p.id}">
+                        <span>${p.name}</span>
+                        <small>${p.quantity} em estoque</small>
+                    </div>
+                `).join('');
+            };
+
+            const updateCartTotal = () => {
+                const total = currentCart.reduce((sum, item) => sum + (item.quantity * item.price), 0);
+                cartTotalEl.textContent = `Total: ${formatCurrency(total)}`;
+            };
+
+            const renderCart = () => {
+                cartItemsContainer.innerHTML = currentCart.map(item => `
+                    <li class="cart-item" data-product-id="${item.id}">
+                        <span>${item.name}</span>
+                        <input type="number" value="${item.quantity}" min="1" max="${item.stock_quantity}">
+                        <span>${formatCurrency(item.price)}</span>
+                        <span>${formatCurrency(item.quantity * item.price)}</span>
+                        <button class="btn btn-danger remove-item-btn">&times;</button>
+                    </li>
+                `).join('');
+                updateCartTotal();
+            };
+
+            const addToCart = (productId) => {
+                if (currentCart.find(item => item.id === productId)) return; // Já está no carrinho
+                const product = products.find(p => p.id === productId);
+                if (product && product.quantity > 0) {
+                    currentCart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, stock_quantity: product.quantity });
+                    renderCart();
+                }
+            };
+
+            const handleFinalizeSale = async () => {
+                if (currentCart.length === 0) return alert('Adicione produtos à venda.');
+                finalizeSaleBtn.disabled = true;
+                finalizeSaleBtn.textContent = 'Processando...';
+
+                const total_amount = currentCart.reduce((sum, item) => sum + (item.quantity * item.price), 0);
+                const customerData = {
+                    customer_name: document.getElementById('customer-name').value || 'Consumidor Final',
+                    customer_phone: document.getElementById('customer-phone').value,
+                    customer_document: document.getElementById('customer-document').value,
+                    customer_address: document.getElementById('customer-address').value,
+                    total_amount
+                };
+
+                const { data: saleData, error: saleError } = await supabase.from('sales').insert(customerData).select().single();
+                if (saleError) return alert('Erro ao registrar venda: ' + saleError.message);
+
+                const sale_id = saleData.id;
+                const itemsToInsert = currentCart.map(item => ({
+                    sale_id, product_id: item.id, quantity: item.quantity, unit_price: item.price, product_name: item.name
+                }));
+                const { error: itemsError } = await supabase.from('sale_items').insert(itemsToInsert);
+                if (itemsError) return alert('Erro ao registrar itens da venda: ' + itemsError.message);
+
+                for (const item of currentCart) {
+                    const newQuantity = item.stock_quantity - item.quantity;
+                    await supabase.from('products').update({ quantity: newQuantity }).eq('id', item.id);
+                }
+
+                alert('Venda registrada com sucesso!');
+                saleModal.style.display = 'none';
+                finalizeSaleBtn.disabled = false;
+                finalizeSaleBtn.textContent = 'Finalizar Venda';
+                await init();
+            };
+
+            const openDetailsModal = (saleId) => {
+                const sale = sales.find(s => s.id === saleId);
+                const body = document.getElementById('sale-details-body');
+                document.getElementById('details-modal-title').textContent = `Detalhes da Venda #${sale.id}`;
+                body.innerHTML = `
+                    <p><strong>Cliente:</strong> ${sale.customer_name || 'N/A'}</p>
+                    <p><strong>Telefone:</strong> ${sale.customer_phone || 'N/A'}</p>
+                    <p><strong>Documento:</strong> ${sale.customer_document || 'N/A'}</p>
+                    <p><strong>Endereço:</strong> ${sale.customer_address || 'N/A'}</p>
+                    <p><strong>Data:</strong> ${formatDate(sale.created_at)}</p>
+                    <p><strong>Total:</strong> ${formatCurrency(sale.total_amount)}</p>
+                    <hr style="margin: 15px 0;">
+                    <h4>Itens:</h4>
+                    <table class="sales-table">
+                        <thead><tr><th>Produto</th><th>Qtd.</th><th>Preço Unit.</th><th>Subtotal</th></tr></thead>
+                        <tbody>
+                            ${sale.sale_items.map(item => `
+                                <tr>
+                                    <td>${item.product_name}</td>
+                                    <td>${item.quantity}</td>
+                                    <td>${formatCurrency(item.unit_price)}</td>
+                                    <td>${formatCurrency(item.quantity * item.unit_price)}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `;
+                detailsModal.style.display = 'flex';
+            };
+
+            // Event Listeners
+            newSaleBtn.addEventListener('click', () => {
+                currentCart = [];
+                renderCart();
+                document.getElementById('customer-name').value = '';
+                document.getElementById('customer-phone').value = '';
+                document.getElementById('customer-document').value = '';
+                document.getElementById('customer-address').value = '';
+                productSearchInput.value = '';
+                renderSearchResults();
+                saleModal.style.display = 'flex';
+            });
+
+            [saleModal, detailsModal].forEach(modal => {
+                modal.querySelectorAll('.close-button').forEach(btn => btn.addEventListener('click', () => modal.style.display = 'none'));
+                modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+            });
+
+            productSearchInput.addEventListener('input', renderSearchResults);
+            searchResultsContainer.addEventListener('click', e => {
+                const item = e.target.closest('.product-search-item');
+                if (item) addToCart(Number(item.dataset.productId));
+            });
+
+            cartItemsContainer.addEventListener('change', e => {
+                if (e.target.type === 'number') {
+                    const productId = Number(e.target.closest('.cart-item').dataset.productId);
+                    const item = currentCart.find(i => i.id === productId);
+                    item.quantity = Number(e.target.value);
+                    renderCart();
+                }
+            });
+
+            cartItemsContainer.addEventListener('click', e => {
+                if (e.target.classList.contains('remove-item-btn')) {
+                    const productId = Number(e.target.closest('.cart-item').dataset.productId);
+                    currentCart = currentCart.filter(i => i.id !== productId);
+                    renderCart();
+                }
+            });
+
+            finalizeSaleBtn.addEventListener('click', handleFinalizeSale);
+
+            salesHistoryBody.addEventListener('click', e => {
+                if (e.target.dataset.saleId) openDetailsModal(Number(e.target.dataset.saleId));
+            });
+
+            const phoneInput = document.getElementById('customer-phone');
+            phoneInput.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, "");
+                value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+                value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+                e.target.value = value;
+            });
+
+            const init = async () => {
+                await fetchAllData();
+                updateKPIs();
+                renderSalesHistory();
+            };
+
+            init();
+        });
+    </script>
+</body>
+
+</html>

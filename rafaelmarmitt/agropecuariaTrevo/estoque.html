@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTrevo | Gestão de Estoque</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <!-- Google Fonts: Poppins para uma aparência moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        /* Paleta de Cores e Variáveis Globais */
+        :root {
+            --primary: #2e7d32;
+            /* Verde principal, remetendo ao agro */
+            --secondary: #689f38;
+            /* Verde secundário, mais claro */
+            --accent: #8d6e63;
+            /* Tom de terra/couro */
+            --success: #4caf50;
+            --warning: #ffb300;
+            --danger: #e53935;
+            --warning-dark: #f57c00;
+            /* Laranja para alertas */
+            --light: #f9fafc;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+        }
+
+        /* Estilo Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            color: var(--dark);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Sidebar (Menu Lateral) */
+        .sidebar {
+            width: 260px;
+            background-color: var(--light);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sidebar .logo i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+
+        .sidebar .menu a,
+        .sidebar .logout-link a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar .menu a.active,
+        .sidebar .menu a:hover,
+        .sidebar .logout-link a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .sidebar .menu a i,
+        .sidebar .logout-link a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        /* Ações do Cabeçalho (Botões e Usuário) */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        /* Contêiner da Página de Estoque */
+        .stock-page-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .stock-controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        /* Tabela de Produtos */
+        .table-wrapper {
+            max-height: 60vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .product-table th,
+        .product-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .product-table td small {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .product-table th {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--gray);
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            background-color: var(--light);
+            z-index: 10;
+        }
+
+        .product-table th:hover {
+            color: var(--dark);
+        }
+
+        .product-table th .sort-icon {
+            display: inline-block;
+            width: 1em;
+            text-align: center;
+            margin-left: 4px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .product-table th[data-sort].asc .sort-icon,
+        .product-table th[data-sort].desc .sort-icon {
+            opacity: 1;
+        }
+
+        .product-table th[data-sort].asc .sort-icon::after {
+            content: '▲';
+            font-size: 0.8em;
+            color: var(--primary);
+        }
+
+        .product-table th[data-sort].desc .sort-icon::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: var(--primary);
+        }
+
+        /* Estilo para linhas da tabela com base no status */
+        .product-table tr.low-stock:not(.near-expiry):not(.expired) {
+            background-color: rgba(255, 179, 0, 0.10);
+        }
+
+        .product-table tr.near-expiry {
+            background-color: rgba(255, 179, 0, 0.15);
+        }
+
+        .product-table tr.expired {
+            background-color: rgba(229, 57, 53, 0.15);
+        }
+
+        .product-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .product-table tr.selected {
+            background-color: #e3f2fd;
+        }
+
+        /* Estilos de cor para Lucro */
+        .profit-low {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .profit-medium {
+            color: var(--warning-dark);
+            font-weight: 500;
+        }
+
+        .profit-high {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* Estilos de cor para Estoque */
+        .stock-out {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .stock-low {
+            color: var(--warning-dark);
+            font-weight: 500;
+        }
+
+        .stock-in {
+            color: var(--success);
+        }
+
+        /* Estilos de cor para Data de Vencimento */
+        .expiry-expired {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .expiry-near {
+            color: var(--warning-dark);
+            font-weight: 500;
+        }
+
+        .expiry-ok {
+            color: var(--success);
+        }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .status-low {
+            background-color: var(--warning);
+        }
+
+        .status-expiry {
+            background-color: var(--warning-dark);
+        }
+
+        .status-expired {
+            background-color: var(--danger);
+        }
+
+        /* Botões de Ação na Tabela */
+        .action-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--gray);
+            font-size: 16px;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+
+        .action-buttons button.edit-btn:hover {
+            color: var(--primary);
+        }
+
+        .action-buttons button.delete-btn:hover {
+            color: var(--danger);
+        }
+
+        /* Paginação */
+        .pagination-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination-summary {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .pagination {
+            display: flex;
+            gap: 5px;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            background-color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .pagination button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .pagination button.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover {
+            color: var(--dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .form-group label .required {
+            color: var(--danger);
+            margin-left: 3px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .form-group.hidden {
+            display: none;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input[readonly] {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+            font-weight: bold;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        }
+
+        .modal-footer {
+            text-align: right;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Botões Genéricos */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1b5e20;
+        }
+
+        .btn-secondary {
+            background-color: var(--danger);
+            color: white;
+            margin-right: 20px;
+        }
+
+        .btn-secondary:hover {
+            color: white;
+            background-color: #690101;
+        }
+
+        .btn-delete-mass {
+            background-color: #ffebee;
+            border: 1px solid var(--danger);
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .btn-delete-mass:hover {
+            background-color: var(--danger);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(229, 57, 53, 0.2);
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+        <nav class="menu">
+            <a href="dashboard_agrovet.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="estoque.html" class="active"><i class="fas fa-boxes-stacked"></i> Estoque</a>
+            <a href="fornecedores.html"><i class="fas fa-truck-field"></i> Fornecedores</a>
+            <a href="vendas.html"><i class="fas fa-cash-register"></i> Vendas</a>
+            <a href="relatorios.html"><i class="fas fa-file-alt"></i> Relatórios</a>
+            <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="logout-link">
+            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </aside>
+
+    <!-- PÁGINA ESTOQUE -->
+    <main class="main-content" id="estoque-page">
+        <header>
+            <h1>Gestão de Estoque</h1>
+            <div class="header-actions">
+                <button id="add-product-btn-stock" class="btn btn-primary"><i class="fas fa-plus"></i> Novo
+                    Produto</button>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=agroadmin" alt="User">
+                    <span id="user-display"></span>
+                </div>
+            </div>
+        </header>
+        <div class="stock-page-container">
+            <div class="stock-controls">
+                <div class="filter-group">
+                    <div class="input-group">
+                        <label for="search-product">Buscar Produto</label>
+                        <input type="text" id="search-product" placeholder="Nome ou fornecedor...">
+                    </div>
+                    <div class="input-group">
+                        <label for="filter-category">Categoria</label>
+                        <select id="filter-category">
+                            <option value="all">Todas</option>
+                            <!-- Options preenchidas por JS -->
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="filter-stock-status">Status do Estoque</label>
+                        <select id="filter-stock-status">
+                            <option value="all">Todos</option>
+                            <option value="in-stock">Em Estoque</option>
+                            <option value="low-stock">Baixo Estoque</option>
+                            <option value="out-of-stock">Sem Estoque</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="filter-expiry-status">Vencimento</label>
+                        <select id="filter-expiry-status">
+                            <option value="all">Todos</option>
+                            <option value="ok">OK</option>
+                            <option value="near">Próximo</option>
+                            <option value="expired">Vencido</option>
+                        </select>
+                    </div>
+                    <button id="clear-filters-btn" class="btn btn-secondary"><i class="fas fa-times"></i>
+                        Limpar</button>
+                </div>
+                <div>
+                    <button id="delete-selected-btn" class="btn btn-delete-mass" style="display: none;"><i
+                            class="fas fa-trash"></i> Excluir Selecionados</button>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <div id="loading-indicator" class="loading-overlay" style="display: none;">
+                    <p>Carregando produtos...</p>
+                </div>
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="select-all-checkbox"></th>
+                            <th data-sort="name">Produto <span class="sort-icon"></span></th>
+                            <th>Status</th>
+                            <th data-sort="supplier">Fornecedor <span class="sort-icon"></span></th>
+                            <th>Categoria</th>
+                            <th data-sort="quantity">Estoque <span class="sort-icon"></span></th>
+                            <th data-sort="cost">Custo Unit. <span class="sort-icon"></span></th>
+                            <th data-sort="price">Venda Unit. <span class="sort-icon"></span></th>
+                            <th>Total (Custo)</th>
+                            <th data-sort="profitMargin">Lucro (%) <span class="sort-icon"></span></th>
+                            <th data-sort="expiryDate">Vencimento <span class="sort-icon"></span></th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body">
+                        <!-- Conteúdo da tabela de estoque gerado por JS -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination-container">
+                <span id="pagination-summary" class="pagination-summary"></span>
+                <div class="pagination" id="pagination-buttons">
+                    <!-- Controles de paginação gerados por JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para Adicionar/Editar Produto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Novo Produto</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <form id="product-form" novalidate>
+                <input type="hidden" id="product-id">
+
+                <div class="form-group">
+                    <label for="product-name">Nome do Produto <span class="required">*</span></label>
+                    <input type="text" id="product-name" placeholder="Ex: Ração Premium para Cães Adultos 15kg"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-supplier">Fornecedor</label>
+                    <select id="product-supplier" required>
+                        <option value="" disabled selected>Selecione um fornecedor</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product-category">Categoria <span class="required">*</span></label>
+                        <select id="product-category" required>
+                            <option value="" disabled selected>Selecione uma categoria</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-unit">Unidade de Medida <span class="required">*</span></label>
+                        <select id="product-unit" required>
+                            <option value="UN">Unidade (UN)</option>
+                            <option value="PC">Pacote (PC)</option>
+                            <option value="CX">Caixa (CX)</option>
+                            <option value="SC">Saco (SC)</option>
+                            <option value="KG">Quilograma (KG)</option>
+                            <option value="L">Litro (L)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product-quantity">Quantidade <span class="required">*</span></label>
+                        <input type="number" id="product-quantity" list="quantity-suggestions" min="0" placeholder="0"
+                            required>
+                        <datalist id="quantity-suggestions">
+                            <option value="1"></option>
+                            <option value="5"></option>
+                            <option value="10"></option>
+                            <option value="12"></option>
+                            <option value="24"></option>
+                            <option value="50"></option>
+                            <option value="100"></option>
+                        </datalist>
+                    </div>
+                    <div class="form-group hidden" id="package-quantity-group">
+                        <label for="product-package-quantity">Unidades/Pacote</label>
+                        <input type="number" id="product-package-quantity" min="1" placeholder="Ex: 12">
+                    </div>
+                    <div class="form-group hidden" id="weight-volume-group">
+                        <label for="product-weight-volume">Peso/Volume <span
+                                id="weight-volume-unit-label"></span></label>
+                        <input type="number" id="product-weight-volume" step="0.01" min="0" placeholder="Ex: 15">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-expiry">Vencimento</label>
+                        <input type="date" id="product-expiry">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product-cost">Preço de Custo (R$) <span class="required">*</span></label>
+                        <input type="number" id="product-cost" step="0.01" min="0" placeholder="0.00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Preço de Venda (R$) <span class="required">*</span></label>
+                        <input type="number" id="product-price" step="0.01" min="0" placeholder="0.00" required>
+                    </div>
+                    <div class="form-group hidden" id="unit-price-group">
+                        <label for="product-unit-price">Preço por Unidade (R$)</label>
+                        <input type="text" id="product-unit-price" readonly placeholder="Cálculo automático">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-button">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="save-product-btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // --- CONFIGURAÇÃO DO SUPABASE ---
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('user-display').textContent = session.user.email;
+
+            // --- LOGOUT ---
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signOut();
+                if (error) console.error('Erro ao sair:', error);
+                else window.location.href = 'index.html';
+            });
+
+            // --- VARIÁVEIS GLOBAIS ---
+            let products = [];
+            let currentPage = 1;
+            const ITEMS_PER_PAGE = 10;
+            let currentSort = { key: 'name', order: 'asc' };
+            const LOW_STOCK_THRESHOLD = 10;
+            const NEAR_EXPIRY_DAYS = 60;
+
+            // --- SELETORES DE ELEMENTOS DO DOM ---
+            const modal = document.getElementById('product-modal');
+            const productForm = document.getElementById('product-form');
+            const stockTableBody = document.getElementById('stock-table-body');
+            const paginationButtons = document.getElementById('pagination-buttons');
+            const paginationSummary = document.getElementById('pagination-summary');
+            const searchInput = document.getElementById('search-product');
+            const filterCategory = document.getElementById('filter-category');
+            const filterStockStatus = document.getElementById('filter-stock-status');
+            const filterExpiryStatus = document.getElementById('filter-expiry-status');
+            const tableHeaders = document.querySelectorAll('#estoque-page .product-table th[data-sort]');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const clearFiltersBtn = document.getElementById('clear-filters-btn');
+            const selectAllCheckbox = document.getElementById('select-all-checkbox');
+            const deleteSelectedBtn = document.getElementById('delete-selected-btn');
+
+
+            const formFields = {
+                id: document.getElementById('product-id'),
+                name: document.getElementById('product-name'),
+                supplier: document.getElementById('product-supplier'),
+                category: document.getElementById('product-category'),
+                unit: document.getElementById('product-unit'),
+                quantity: document.getElementById('product-quantity'),
+                packageQuantity: document.getElementById('product-package-quantity'),
+                weightVolume: document.getElementById('product-weight-volume'),
+                expiry: document.getElementById('product-expiry'),
+                cost: document.getElementById('product-cost'),
+                price: document.getElementById('product-price'),
+                unitPrice: document.getElementById('product-unit-price'),
+                packageQuantityGroup: document.getElementById('package-quantity-group'),
+                weightVolumeGroup: document.getElementById('weight-volume-group'),
+                unitPriceGroup: document.getElementById('unit-price-group'),
+                weightVolumeUnitLabel: document.getElementById('weight-volume-unit-label'),
+                modalTitle: document.getElementById('modal-title'),
+                saveBtn: document.getElementById('save-product-btn'),
+            };
+
+            // --- FUNÇÕES DE UTILIDADE ---
+            const formatCurrency = value => (value || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const formatDate = (dateString) => {
+                if (!dateString) return 'N/A';
+                const date = new Date(dateString);
+                const adjustedDate = new Date(date.valueOf() + date.getTimezoneOffset() * 60 * 1000);
+                return adjustedDate.toLocaleDateString('pt-BR');
+            };
+            const showLoading = () => loadingIndicator.style.display = 'flex';
+            const hideLoading = () => loadingIndicator.style.display = 'none';
+
+            // --- LÓGICA DO MODAL ---
+            const openModal = () => { modal.style.display = 'flex'; setTimeout(() => formFields.name.focus(), 50); };
+            const closeModal = () => modal.style.display = 'none';
+
+            const updateConditionalFields = () => {
+                const selectedUnit = formFields.unit.value;
+                const isPackageOrBox = ['PC', 'CX'].includes(selectedUnit);
+                const needsWeightVolume = ['KG', 'L', 'SC'].includes(selectedUnit);
+                formFields.packageQuantityGroup.classList.toggle('hidden', !isPackageOrBox);
+                formFields.unitPriceGroup.classList.toggle('hidden', !isPackageOrBox);
+                formFields.weightVolumeGroup.classList.toggle('hidden', !needsWeightVolume);
+                if (needsWeightVolume) {
+                    const label = formFields.weightVolumeGroup.querySelector('label');
+                    const unitSpan = document.getElementById('weight-volume-unit-label');
+                    if (selectedUnit === 'SC') {
+                        label.childNodes[0].nodeValue = 'Peso por Saco ';
+                        unitSpan.textContent = '(KG)';
+                    } else {
+                        label.childNodes[0].nodeValue = 'Peso/Volume ';
+                        unitSpan.textContent = `(${selectedUnit})`;
+                    }
+                }
+                if (!isPackageOrBox) { formFields.packageQuantity.value = ''; formFields.unitPrice.value = ''; }
+                if (!needsWeightVolume) { formFields.weightVolume.value = ''; }
+            };
+
+            const calculateUnitPrice = () => {
+                const price = parseFloat(formFields.price.value);
+                const packageQty = parseInt(formFields.packageQuantity.value);
+                formFields.unitPrice.value = (price > 0 && packageQty > 0) ? formatCurrency(price / packageQty) : '';
+            };
+
+            // --- CRUD COM SUPABASE ---
+            const fetchProducts = async () => {
+                showLoading();
+                const { data, error } = await supabase.from('products').select('*');
+                hideLoading();
+                if (error) {
+                    console.error('Erro ao buscar produtos:', error);
+                    return [];
+                }
+                return data;
+            };
+
+            const fetchAndPopulateDropdowns = async () => {
+                const { data: suppliers, error: sError } = await supabase.from('suppliers').select('name').order('name');
+                if (sError) console.error('Erro ao buscar fornecedores:', sError);
+                else {
+                    const dropdown = formFields.supplier;
+                    dropdown.innerHTML = '<option value="" disabled selected>Selecione um fornecedor</option>';
+                    suppliers.forEach(s => dropdown.appendChild(new Option(s.name, s.name)));
+                }
+
+                const { data: categories, error: cError } = await supabase.from('categories').select('name').order('name');
+                if (cError) console.error('Erro ao buscar categorias:', cError);
+                else {
+                    const dropdown = formFields.category;
+                    dropdown.innerHTML = '<option value="" disabled selected>Selecione uma categoria</option>';
+                    categories.forEach(c => dropdown.appendChild(new Option(c.name, c.name)));
+                }
+            };
+
+            const handleFormSubmit = async (e) => {
+                e.preventDefault();
+                formFields.saveBtn.disabled = true;
+                formFields.saveBtn.textContent = 'Salvando...';
+                const getNullOrNumber = (value) => value === '' || isNaN(parseFloat(value)) ? null : parseFloat(value);
+                const getNullOrInt = (value) => value === '' || isNaN(parseInt(value)) ? null : parseInt(value);
+                const getNullOrDate = (value) => value === '' ? null : value;
+                const getNullOrText = (value) => value.trim() === '' ? null : value.trim();
+
+                const productData = {
+                    name: formFields.name.value,
+                    supplier: getNullOrText(formFields.supplier.value),
+                    category: formFields.category.value,
+                    unit: formFields.unit.value,
+                    quantity: getNullOrInt(formFields.quantity.value) || 0,
+                    packageQuantity: getNullOrInt(formFields.packageQuantity.value),
+                    weightVolume: getNullOrNumber(formFields.weightVolume.value),
+                    cost: getNullOrNumber(formFields.cost.value) || 0,
+                    price: getNullOrNumber(formFields.price.value) || 0,
+                    expiryDate: getNullOrDate(formFields.expiry.value),
+                };
+
+                let response;
+                if (formFields.id.value) { // Update
+                    response = await supabase.from('products').update(productData).eq('id', formFields.id.value);
+                } else { // Insert
+                    response = await supabase.from('products').insert([productData]);
+                }
+
+                if (response.error) {
+                    console.error('Erro ao salvar produto:', response.error);
+                    alert(`Erro ao salvar: ${response.error.message}`);
+                } else {
+                    closeModal();
+                    await fetchAndRenderAll();
+                }
+                formFields.saveBtn.disabled = false;
+                formFields.saveBtn.textContent = 'Salvar';
+            };
+
+            const populateForm = (product) => {
+                formFields.id.value = product.id;
+                formFields.name.value = product.name;
+                formFields.supplier.value = product.supplier || '';
+                formFields.category.value = product.category;
+                formFields.unit.value = product.unit;
+                formFields.quantity.value = product.quantity;
+                formFields.packageQuantity.value = product.packageQuantity || '';
+                formFields.weightVolume.value = product.weightVolume || '';
+                formFields.cost.value = product.cost;
+                formFields.price.value = product.price;
+                formFields.expiry.value = product.expiryDate || '';
+                formFields.modalTitle.textContent = 'Editar Produto';
+                formFields.saveBtn.textContent = 'Atualizar';
+                updateConditionalFields();
+                calculateUnitPrice();
+                openModal();
+            };
+
+            const deleteProduct = async (id) => {
+                if (confirm('Tem certeza que deseja excluir este produto?')) {
+                    const { error } = await supabase.from('products').delete().eq('id', id);
+                    if (error) {
+                        console.error('Erro ao deletar produto:', error);
+                        alert(`Erro ao deletar: ${error.message}`);
+                    } else {
+                        await fetchAndRenderAll();
+                    }
+                }
+            };
+
+            const deleteSelectedProducts = async () => {
+                const selectedIds = Array.from(document.querySelectorAll('.product-checkbox:checked')).map(cb => cb.dataset.id);
+                if (selectedIds.length === 0) {
+                    alert('Nenhum produto selecionado.');
+                    return;
+                }
+                if (confirm(`Tem certeza que deseja excluir ${selectedIds.length} produto(s)?`)) {
+                    const { error } = await supabase.from('products').delete().in('id', selectedIds);
+                    if (error) {
+                        alert(`Erro ao excluir produtos: ${error.message}`);
+                    } else {
+                        await fetchAndRenderAll();
+                    }
+                }
+            };
+
+            // --- RENDERIZAÇÃO E LÓGICA DA PÁGINA DE ESTOQUE ---
+            const updateSortIcons = () => {
+                tableHeaders.forEach(th => {
+                    th.classList.remove('asc', 'desc');
+                    if (th.dataset.sort === currentSort.key) {
+                        th.classList.add(currentSort.order);
+                    }
+                });
+            };
+
+            const getFilteredAndSortedProducts = () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const category = filterCategory.value;
+                const stockStatus = filterStockStatus.value;
+                const expiryStatus = filterExpiryStatus.value;
+
+                let filtered = products.filter(p => {
+                    const nameMatch = p.name.toLowerCase().includes(searchTerm) || (p.supplier && p.supplier.toLowerCase().includes(searchTerm));
+                    const categoryMatch = category === 'all' || p.category === category;
+                    let stockMatch = true;
+                    if (stockStatus === 'in-stock') stockMatch = p.quantity > LOW_STOCK_THRESHOLD;
+                    else if (stockStatus === 'low-stock') stockMatch = p.quantity > 0 && p.quantity <= LOW_STOCK_THRESHOLD;
+                    else if (stockStatus === 'out-of-stock') stockMatch = p.quantity <= 0;
+
+                    let expiryMatch = true;
+                    if (expiryStatus !== 'all') {
+                        if (!p.expiryDate) {
+                            expiryMatch = expiryStatus === 'ok';
+                        } else {
+                            const today = new Date(); today.setHours(0, 0, 0, 0);
+                            const expiry = new Date(p.expiryDate);
+                            const diffDays = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+                            if (expiryStatus === 'expired') expiryMatch = diffDays < 0;
+                            else if (expiryStatus === 'near') expiryMatch = diffDays >= 0 && diffDays <= NEAR_EXPIRY_DAYS;
+                            else if (expiryStatus === 'ok') expiryMatch = diffDays > NEAR_EXPIRY_DAYS;
+                        }
+                    }
+                    return nameMatch && categoryMatch && stockMatch && expiryMatch;
+                });
+
+                return filtered.sort((a, b) => {
+                    const getProfitMargin = (p) => {
+                        if (p.price > 0 && p.cost > 0) {
+                            return ((p.price - p.cost) / p.price) * 100;
+                        }
+                        return -Infinity;
+                    };
+
+                    let valA = currentSort.key === 'profitMargin' ? getProfitMargin(a) : a[currentSort.key];
+                    let valB = currentSort.key === 'profitMargin' ? getProfitMargin(b) : b[currentSort.key];
+
+                    if (typeof valA === 'string') {
+                        valA = (valA || '').toLowerCase();
+                        valB = (valB || '').toLowerCase();
+                    } else {
+                        valA = valA === null ? -Infinity : valA;
+                        valB = valB === null ? -Infinity : valB;
+                    }
+
+                    if (valA < valB) return currentSort.order === 'asc' ? -1 : 1;
+                    if (valA > valB) return currentSort.order === 'asc' ? 1 : -1;
+                    return 0;
+                });
+            };
+
+            const renderStockPage = () => {
+                updateSortIcons();
+                const processedProducts = getFilteredAndSortedProducts();
+                stockTableBody.innerHTML = '';
+                const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+                const endIndex = startIndex + ITEMS_PER_PAGE;
+                const paginatedItems = processedProducts.slice(startIndex, endIndex);
+
+                if (paginatedItems.length === 0) {
+                    stockTableBody.innerHTML = `<tr><td colspan="12" style="text-align:center; padding: 20px;">Nenhum produto encontrado.</td></tr>`;
+                } else {
+                    paginatedItems.forEach(product => {
+                        const tr = document.createElement('tr');
+                        const today = new Date(); today.setHours(0, 0, 0, 0);
+                        const diffDays = product.expiryDate ? Math.ceil((new Date(product.expiryDate) - today) / (1000 * 60 * 60 * 24)) : null;
+
+                        const isExpired = diffDays !== null && diffDays < 0;
+                        const isNearExpiry = diffDays !== null && diffDays >= 0 && diffDays <= NEAR_EXPIRY_DAYS;
+                        const isLowStock = product.quantity > 0 && product.quantity <= LOW_STOCK_THRESHOLD;
+
+                        if (isExpired) tr.classList.add('expired');
+                        else if (isNearExpiry) tr.classList.add('near-expiry');
+                        else if (isLowStock) tr.classList.add('low-stock');
+
+                        let statusHtml = '';
+                        if (isExpired) {
+                            statusHtml += `<span class="status-badge status-expired">Vencido</span>`;
+                        } else if (isNearExpiry) {
+                            statusHtml += `<span class="status-badge status-expiry">Vence em ${diffDays} dias</span>`;
+                        }
+                        if (isLowStock) {
+                            statusHtml += `<span class="status-badge status-low">Baixo Estoque</span>`;
+                        }
+                        if (statusHtml.trim() === '') {
+                            statusHtml = `<span style="color: var(--gray); font-size: 14px;">OK</span>`;
+                        }
+
+                        let stockClass = '';
+                        if (product.quantity <= 0) {
+                            stockClass = 'stock-out';
+                        } else if (product.quantity <= LOW_STOCK_THRESHOLD) {
+                            stockClass = 'stock-low';
+                        } else {
+                            stockClass = 'stock-in';
+                        }
+
+                        let stockDisplay = `<span class="${stockClass}">${product.quantity} ${product.unit}</span>`;
+
+                        if ((product.unit === 'PC' || product.unit === 'CX') && product.packageQuantity) {
+                            stockDisplay += ` <br><small>(${product.quantity * product.packageQuantity} un.)</small>`;
+                        } else if ((product.unit === 'KG' || product.unit === 'L' || product.unit === 'SC') && product.weightVolume) {
+                            const unitLabel = product.unit === 'SC' ? 'KG' : product.unit;
+                            stockDisplay += `<br><small>(${(product.quantity * product.weightVolume).toLocaleString('pt-BR')} ${unitLabel} total)</small>`;
+                        }
+
+                        let profitMarginDisplay = '---';
+                        let profitClass = '';
+                        if (product.price > 0 && product.cost > 0) {
+                            const profitMargin = ((product.price - product.cost) / product.price) * 100;
+                            profitMarginDisplay = `${profitMargin.toFixed(2).replace('.', ',')}%`;
+                            if (profitMargin < 20) {
+                                profitClass = 'profit-low';
+                            } else if (profitMargin >= 20 && profitMargin < 50) {
+                                profitClass = 'profit-medium';
+                            } else {
+                                profitClass = 'profit-high';
+                            }
+                        }
+
+                        let expiryClass = '';
+                        if (product.expiryDate) {
+                            if (isExpired) expiryClass = 'expiry-expired';
+                            else if (isNearExpiry) expiryClass = 'expiry-near';
+                            else expiryClass = 'expiry-ok';
+                        }
+
+                        tr.innerHTML = `
+                            <td><input type="checkbox" class="product-checkbox" data-id="${product.id}"></td>
+                            <td>${product.name}</td>
+                            <td>${statusHtml}</td>
+                            <td>${product.supplier || '---'}</td>
+                            <td>${product.category}</td>
+                            <td>${stockDisplay}</td>
+                            <td>${formatCurrency(product.cost)}</td>
+                            <td>${formatCurrency(product.price)}</td>
+                            <td>${formatCurrency(product.cost * product.quantity)}</td>
+                            <td class="${profitClass}">${profitMarginDisplay}</td>
+                            <td class="${expiryClass}">${formatDate(product.expiryDate)}</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn" data-id="${product.id}"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="delete-btn" data-id="${product.id}"><i class="fas fa-trash-alt"></i></button>
+                            </td>`;
+                        stockTableBody.appendChild(tr);
+                    });
+                }
+                renderPagination(processedProducts.length);
+                hideLoading();
+            };
+
+            const renderPagination = (totalItems) => {
+                const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+                paginationButtons.innerHTML = '';
+
+                const startItem = Math.min((currentPage - 1) * ITEMS_PER_PAGE + 1, totalItems);
+                const endItem = Math.min(currentPage * ITEMS_PER_PAGE, totalItems);
+                paginationSummary.textContent = totalItems > 0 ? `Mostrando ${startItem}-${endItem} de ${totalItems} produtos` : 'Nenhum produto encontrado';
+
+                if (totalPages <= 1) return;
+
+                const prevButton = document.createElement('button');
+                prevButton.innerHTML = '&laquo;';
+                prevButton.disabled = currentPage === 1;
+                prevButton.addEventListener('click', () => { currentPage--; renderStockPage(); });
+                paginationButtons.appendChild(prevButton);
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('button');
+                    pageButton.textContent = i;
+                    if (i === currentPage) pageButton.classList.add('active');
+                    pageButton.addEventListener('click', () => { currentPage = i; renderStockPage(); });
+                    paginationButtons.appendChild(pageButton);
+                }
+                const nextButton = document.createElement('button');
+                nextButton.innerHTML = '&raquo;';
+                nextButton.disabled = currentPage === totalPages;
+                nextButton.addEventListener('click', () => { currentPage++; renderStockPage(); });
+                paginationButtons.appendChild(nextButton);
+            };
+
+            const populateCategoryFilter = () => {
+                const categories = [...new Set(products.map(p => p.category))].sort();
+                while (filterCategory.options.length > 1) {
+                    filterCategory.remove(1);
+                }
+                categories.forEach(cat => {
+                    if (cat) {
+                        const option = document.createElement('option');
+                        option.value = cat;
+                        option.textContent = cat;
+                        filterCategory.appendChild(option);
+                    }
+                });
+            };
+
+            const fetchAndRenderAll = async () => {
+                products = await fetchProducts();
+                populateCategoryFilter();
+                renderStockPage();
+            };
+
+            // --- INICIALIZAÇÃO E EVENT LISTENERS ---
+            const init = async () => {
+                await fetchAndPopulateDropdowns();
+
+                document.getElementById('add-product-btn-stock').addEventListener('click', () => {
+                    productForm.reset();
+                    formFields.id.value = '';
+                    formFields.modalTitle.textContent = 'Novo Produto';
+                    formFields.saveBtn.textContent = 'Salvar';
+                    updateConditionalFields();
+                    openModal();
+                });
+
+                document.querySelectorAll('.close-button').forEach(btn => btn.addEventListener('click', closeModal));
+                modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+                productForm.addEventListener('submit', handleFormSubmit);
+
+                stockTableBody.addEventListener('click', (e) => {
+                    const editBtn = e.target.closest('.edit-btn');
+                    const deleteBtn = e.target.closest('.delete-btn');
+                    if (editBtn) {
+                        const product = products.find(p => p.id == editBtn.dataset.id);
+                        if (product) populateForm(product);
+                    }
+                    if (deleteBtn) {
+                        deleteProduct(deleteBtn.dataset.id);
+                    }
+                });
+
+                [searchInput, filterCategory, filterStockStatus, filterExpiryStatus].forEach(el => {
+                    el.addEventListener('input', () => {
+                        currentPage = 1;
+                        renderStockPage();
+                    });
+                });
+
+                tableHeaders.forEach(th => {
+                    th.addEventListener('click', () => {
+                        const key = th.dataset.sort;
+                        if (currentSort.key === key) {
+                            currentSort.order = currentSort.order === 'asc' ? 'desc' : 'asc';
+                        } else {
+                            currentSort.key = key;
+                            currentSort.order = 'asc';
+                        }
+                        renderStockPage();
+                    });
+                });
+
+                formFields.unit.addEventListener('change', updateConditionalFields);
+                formFields.price.addEventListener('input', calculateUnitPrice);
+                formFields.packageQuantity.addEventListener('input', calculateUnitPrice);
+                formFields.category.addEventListener('change', () => {
+                    const text = formFields.category.options[formFields.category.selectedIndex].text;
+                    const categoryMap = {
+                        'Ração (Grande Porte)': 'SC',
+                        'Suplementos (Grande Porte)': 'SC',
+                        'Ração (Pet)': 'SC',
+                        'Medicamentos (Grande Porte)': 'UN',
+                        'Medicamentos (Pet)': 'UN',
+                        'Acessórios (Pet)': 'UN',
+                        'Higiene e Beleza': 'L'
+                    };
+                    formFields.unit.value = categoryMap[text] || 'UN';
+                    formFields.unit.dispatchEvent(new Event('change'));
+                });
+
+                clearFiltersBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    filterCategory.value = 'all';
+                    filterStockStatus.value = 'all';
+                    filterExpiryStatus.value = 'all';
+                    currentPage = 1;
+                    renderStockPage();
+                });
+
+                selectAllCheckbox.addEventListener('click', (e) => {
+                    document.querySelectorAll('.product-checkbox').forEach(cb => {
+                        cb.checked = e.target.checked;
+                        cb.closest('tr').classList.toggle('selected', e.target.checked);
+                    });
+                    deleteSelectedBtn.style.display = e.target.checked ? 'inline-flex' : 'none';
+                });
+
+                stockTableBody.addEventListener('change', (e) => {
+                    if (e.target.classList.contains('product-checkbox')) {
+                        e.target.closest('tr').classList.toggle('selected', e.target.checked);
+                        const anyChecked = !!document.querySelector('.product-checkbox:checked');
+                        deleteSelectedBtn.style.display = anyChecked ? 'inline-flex' : 'none';
+                    }
+                });
+                deleteSelectedBtn.addEventListener('click', deleteSelectedProducts);
+
+                fetchAndRenderAll();
+            };
+
+            init();
+        });
+    </script>
+</body>
+
+</html>

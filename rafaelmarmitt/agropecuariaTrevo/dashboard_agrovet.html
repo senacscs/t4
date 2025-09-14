@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>AgroTrevo | Dashboard</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <!-- Google Fonts: Poppins para uma aparência moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        /* Paleta de Cores e Variáveis Globais */
+        :root {
+            --primary: #2e7d32;
+            /* Verde principal, remetendo ao agro */
+            --secondary: #689f38;
+            /* Verde secundário, mais claro */
+            --accent: #8d6e63;
+            /* Tom de terra/couro */
+            --success: #43a047;
+            /* Verde para sucesso e lucro */
+            --warning: #ffb300;
+            /* Amarelo para atenção */
+            --danger: #e53935;
+            /* Vermelho para perigo */
+            --warning-dark: #f57c00;
+            /* Laranja para alertas mais fortes */
+            --info: #1e88e5;
+            /* Azul para informações */
+            --light: #ffffff;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+        }
+
+        /* Estilo Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            color: var(--dark);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Sidebar (Menu Lateral) */
+        .sidebar {
+            width: 260px;
+            background-color: var(--light);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sidebar .logo i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+
+        .sidebar .menu a,
+        .sidebar .logout-link a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar .menu a.active,
+        .sidebar .menu a:hover,
+        .sidebar .logout-link a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .sidebar .menu a i,
+        .sidebar .logout-link a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        /* Ações do Cabeçalho (Botões e Usuário) */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        /* Cards de Resumo */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card .icon {
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card.total-produtos .icon {
+            background-color: var(--primary);
+        }
+
+        .card.baixo-estoque .icon {
+            background-color: var(--warning);
+        }
+
+        .card.perto-vencimento .icon {
+            background-color: var(--warning-dark);
+        }
+
+        .card.lucro-potencial .icon {
+            background-color: var(--success);
+        }
+
+        .card .card-info h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .card .card-info .card-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .card .card-info .card-value.small {
+            font-size: 22px;
+        }
+
+        /* Seção de Atalhos e Alertas */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-container h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .quick-actions-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-button.sale {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .action-button.entry {
+            background-color: var(--info);
+            color: white;
+        }
+
+        .action-button.report {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .alerts-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .alerts-table th,
+        .alerts-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .alerts-table thead {
+            background-color: var(--bg-light);
+        }
+
+        .alerts-table tbody tr.tr-warning {
+            background-color: rgba(255, 179, 0, 0.15);
+        }
+
+        .alerts-table tbody tr.tr-danger {
+            background-color: rgba(229, 57, 53, 0.15);
+        }
+
+        .alerts-table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .status-low {
+            background-color: var(--warning);
+        }
+
+        .status-expiry {
+            background-color: var(--warning-dark);
+        }
+
+        .status-expired {
+            background-color: var(--danger);
+        }
+
+        .btn-adjust {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        /* Seção de Gráficos */
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .chart-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            min-height: 400px;
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover {
+            color: var(--dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .form-group label .required {
+            color: var(--danger);
+            margin-left: 3px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .form-group.hidden {
+            display: none;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input[readonly] {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+            font-weight: bold;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        }
+
+        .modal-footer {
+            text-align: right;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Modal de Venda */
+        .sale-modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            overflow-y: auto;
+        }
+
+        .product-search-results {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .product-search-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .product-search-item:hover {
+            background-color: var(--bg-light);
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr 1fr auto;
+            gap: 10px;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cart-item input[type="number"] {
+            width: 60px;
+            text-align: center;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn-danger {
+            background-color: var(--danger);
+            color: white;
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+
+        /* Botões Genéricos */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1b5e20;
+        }
+
+        .btn-secondary {
+            background-color: var(--danger);
+            color: white;
+            margin-right: 20px;
+        }
+
+        .btn-secondary:hover {
+            color: white;
+            background-color: #690101;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+        <nav class="menu">
+            <a href="dashboard_agrovet.html" class="active"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="estoque.html"><i class="fas fa-boxes-stacked"></i> Estoque</a>
+            <a href="fornecedores.html"><i class="fas fa-truck-field"></i> Fornecedores</a>
+            <a href="vendas.html"><i class="fas fa-cash-register"></i> Vendas</a>
+            <a href="relatorios.html"><i class="fas fa-file-alt"></i> Relatórios</a>
+            <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="logout-link">
+            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </aside>
+
+    <main class="main-content" id="dashboard-page">
+        <header>
+            <h1>Dashboard</h1>
+            <div class="header-actions">
+                <button id="add-product-btn-dash" class="btn btn-primary"><i class="fas fa-plus"></i> Novo
+                    Produto</button>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=agroadmin" alt="User">
+                    <span id="user-display"></span>
+                </div>
+            </div>
+        </header>
+
+        <section class="summary-cards">
+            <div class="card total-produtos">
+                <div class="icon"><i class="fas fa-box"></i></div>
+                <div class="card-info">
+                    <h3>Total de Produtos</h3>
+                    <div class="card-value" id="summary-total-produtos">0</div>
+                </div>
+            </div>
+            <div class="card baixo-estoque">
+                <div class="icon"><i class="fas fa-triangle-exclamation"></i></div>
+                <div class="card-info">
+                    <h3>Baixo Estoque</h3>
+                    <div class="card-value" id="summary-baixo-estoque">0</div>
+                </div>
+            </div>
+            <div class="card perto-vencimento">
+                <div class="icon"><i class="fas fa-calendar-times"></i></div>
+                <div class="card-info">
+                    <h3>Perto do Vencimento</h3>
+                    <div class="card-value" id="summary-perto-vencimento">0</div>
+                </div>
+            </div>
+            <div class="card lucro-potencial">
+                <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="card-info">
+                    <h3>Lucro Potencial</h3>
+                    <div class="card-value small" id="summary-lucro-potencial">R$ 0,00</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-grid">
+            <div class="section-container">
+                <h2>Atalhos Rápidos</h2>
+                <div class="quick-actions-container">
+                    <button class="action-button sale" id="register-sale-btn"><i class="fas fa-arrow-down"></i>
+                        Registrar Venda</button>
+                    <button class="action-button entry" id="register-entry-btn"><i class="fas fa-arrow-up"></i>
+                        Registrar Entrada</button>
+                    <button class="action-button report" id="generate-report-btn"><i class="fas fa-file-invoice"></i>
+                        Gerar Relatório</button>
+                </div>
+            </div>
+            <div class="section-container alerts-table">
+                <h2>Ações Rápidas & Alertas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Status</th>
+                            <th>Qtd.</th>
+                            <th>Vencimento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="critical-products-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="charts">
+            <div class="chart-container"><canvas id="categoryChart"></canvas></div>
+            <div class="chart-container"><canvas id="topProductsChart"></canvas></div>
+        </section>
+    </main>
+
+    <!-- Modal para Adicionar/Editar Produto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Novo Produto</h2><span class="close-button">&times;</span>
+            </div>
+            <form id="product-form" novalidate>
+                <input type="hidden" id="product-id">
+                <div class="form-group"><label for="product-name">Nome do Produto <span
+                            class="required">*</span></label><input type="text" id="product-name"
+                        placeholder="Ex: Ração Premium para Cães Adultos 15kg" required></div>
+                <div class="form-group"><label for="product-supplier">Fornecedor</label><select id="product-supplier"
+                        required>
+                        <option value="" disabled selected>Selecione um fornecedor</option>
+                    </select></div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product-category">Categoria <span class="required">*</span></label>
+                        <select id="product-category" required>
+                            <option value="" disabled selected>Selecione uma categoria</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="product-unit">Unidade de Medida <span
+                                class="required">*</span></label><select id="product-unit" required>
+                            <option value="UN">Unidade (UN)</option>
+                            <option value="PC">Pacote (PC)</option>
+                            <option value="CX">Caixa (CX)</option>
+                            <option value="SC">Saco (SC)</option>
+                            <option value="KG">Quilograma (KG)</option>
+                            <option value="L">Litro (L)</option>
+                        </select></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="product-quantity">Quantidade <span
+                                class="required">*</span></label><input type="number" id="product-quantity"
+                            list="quantity-suggestions" min="0" placeholder="0" required><datalist
+                            id="quantity-suggestions">
+                            <option value="1"></option>
+                            <option value="5"></option>
+                            <option value="10"></option>
+                            <option value="12"></option>
+                            <option value="24"></option>
+                            <option value="50"></option>
+                            <option value="100"></option>
+                        </datalist></div>
+                    <div class="form-group hidden" id="package-quantity-group"><label
+                            for="product-package-quantity">Unidades/Pacote</label><input type="number"
+                            id="product-package-quantity" min="1" placeholder="Ex: 12"></div>
+                    <div class="form-group hidden" id="weight-volume-group"><label
+                            for="product-weight-volume">Peso/Volume <span
+                                id="weight-volume-unit-label"></span></label><input type="number"
+                            id="product-weight-volume" step="0.01" min="0" placeholder="Ex: 15"></div>
+                    <div class="form-group"><label for="product-expiry">Vencimento</label><input type="date"
+                            id="product-expiry"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="product-cost">Preço de Custo (R$) <span
+                                class="required">*</span></label><input type="number" id="product-cost" step="0.01"
+                            min="0" placeholder="0.00" required></div>
+                    <div class="form-group"><label for="product-price">Preço de Venda (R$) <span
+                                class="required">*</span></label><input type="number" id="product-price" step="0.01"
+                            min="0" placeholder="0.00" required></div>
+                    <div class="form-group hidden" id="unit-price-group"><label for="product-unit-price">Preço por
+                            Unidade (R$)</label><input type="text" id="product-unit-price" readonly
+                            placeholder="Cálculo automático"></div>
+                </div>
+                <div class="modal-footer"><button type="button"
+                        class="btn btn-secondary close-button">Cancelar</button><button type="submit"
+                        class="btn btn-primary" id="save-product-btn">Salvar</button></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Ajuste Rápido de Estoque -->
+    <div id="stock-adjustment-modal" class="modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2 id="adjustment-modal-title">Ajustar Estoque</h2><span class="close-button">&times;</span>
+            </div>
+            <form id="stock-adjustment-form">
+                <input type="hidden" id="adjustment-product-id">
+                <div class="form-group"><label>Produto</label><input type="text" id="adjustment-product-name" readonly>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Estoque Atual</label><input type="text" id="adjustment-current-stock"
+                            readonly></div>
+                    <div class="form-group"><label for="adjustment-quantity">Quantidade a Ajustar <span
+                                class="required">*</span></label><input type="number" id="adjustment-quantity" min="1"
+                            required></div>
+                </div>
+                <div class="form-group"><label>Tipo de Ajuste <span class="required">*</span></label>
+                    <div style="display: flex; gap: 20px;"><label><input type="radio" name="adjustment-type"
+                                value="entry" checked> Entrada</label><label><input type="radio" name="adjustment-type"
+                                value="sale"> **NÃO USAR**</label></div>
+                </div>
+                <div class="modal-footer"><button type="button"
+                        class="btn btn-secondary close-button">Cancelar</button><button type="submit"
+                        class="btn btn-primary">Confirmar Ajuste</button></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Seleção de Produto (Para Ajustes) -->
+    <div id="product-selection-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Selecionar Produto</h2><span class="close-button">&times;</span>
+            </div>
+            <input type="text" id="select-product-search" placeholder="🔍 Buscar produto para ajustar...">
+            <div id="product-selection-list" class="product-search-results" style="max-height: 50vh;"></div>
+        </div>
+    </div>
+
+    <!-- Modal Nova Venda (PDV) -->
+    <div id="sale-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Registrar Nova Venda</h2><span class="close-button">&times;</span>
+            </div>
+            <div class="sale-modal-body">
+                <div class="product-selection-section">
+                    <div class="form-group"><label for="customer-name">Nome do Cliente</label><input type="text"
+                            id="customer-name" placeholder="Consumidor Final"></div>
+                    <div class="form-group"><label for="product-search-sale">Buscar Produto</label><input type="text"
+                            id="product-search-sale"></div>
+                    <div id="product-search-results-sale" class="product-search-results"></div>
+                </div>
+                <div class="cart-section">
+                    <h3>Itens da Venda</h3>
+                    <ul id="cart-items" class="cart-items"></ul>
+                    <div id="cart-total" class="cart-total">Total: R$ 0,00</div>
+                </div>
+            </div>
+            <div class="modal-footer"><button id="finalize-sale-btn" class="btn btn-primary"
+                    style="width:100%;">Finalizar Venda</button></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('user-display').textContent = session.user.email;
+
+            // --- LOGOUT ---
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signOut();
+                if (error) console.error('Erro ao sair:', error);
+                else window.location.href = 'index.html';
+            });
+
+            let products = [];
+            let currentCart = [];
+            let categoryChartInstance, topProductsChartInstance;
+            let settings = { low_stock_threshold: 10, near_expiry_days: 60 };
+
+            // --- SELETORES GERAIS ---
+            const mainModal = document.getElementById('product-modal');
+            const adjustmentModal = document.getElementById('stock-adjustment-modal');
+            const selectionModal = document.getElementById('product-selection-modal');
+            const saleModal = document.getElementById('sale-modal');
+
+            const formatCurrency = value => (value || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const formatDate = dateStr => dateStr ? new Date(dateStr + 'T00:00:00').toLocaleDateString('pt-BR') : 'N/A';
+
+            // --- LÓGICA MODAL PRODUTO ---
+            const productForm = document.getElementById('product-form');
+            const formFields = { id: document.getElementById('product-id'), name: document.getElementById('product-name'), supplier: document.getElementById('product-supplier'), category: document.getElementById('product-category'), unit: document.getElementById('product-unit'), quantity: document.getElementById('product-quantity'), packageQuantity: document.getElementById('product-package-quantity'), weightVolume: document.getElementById('product-weight-volume'), expiry: document.getElementById('product-expiry'), cost: document.getElementById('product-cost'), price: document.getElementById('product-price'), unitPrice: document.getElementById('product-unit-price'), packageQuantityGroup: document.getElementById('package-quantity-group'), weightVolumeGroup: document.getElementById('weight-volume-group'), unitPriceGroup: document.getElementById('unit-price-group'), weightVolumeUnitLabel: document.getElementById('weight-volume-unit-label'), modalTitle: document.getElementById('modal-title'), saveBtn: document.getElementById('save-product-btn'), };
+
+            // --- LÓGICA MODAL AJUSTE ---
+            const adjustmentForm = document.getElementById('stock-adjustment-form');
+            const selectionSearch = document.getElementById('select-product-search');
+            const selectionList = document.getElementById('product-selection-list');
+
+            // --- LÓGICA MODAL VENDA ---
+            const productSearchInputSale = document.getElementById('product-search-sale');
+            const searchResultsContainerSale = document.getElementById('product-search-results-sale');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalEl = document.getElementById('cart-total');
+            const finalizeSaleBtn = document.getElementById('finalize-sale-btn');
+
+            // --- FUNÇÕES DE DADOS ---
+            const fetchSystemSettings = async () => {
+                const { data, error } = await supabase.from('system_settings').select('*').eq('id', 1).single();
+                if (!error && data) settings = data;
+            };
+            const fetchProducts = async () => {
+                const { data, error } = await supabase.from('products').select('*');
+                if (error) console.error('Erro ao buscar produtos:', error);
+                else products = data;
+            };
+
+            // --- FUNÇÕES GERAIS DOS MODAIS ---
+            const openModal = (modalElement) => modalElement.style.display = 'flex';
+            const closeModal = (modalElement) => modalElement.style.display = 'none';
+
+            // --- LÓGICA MODAL DE PRODUTO ---
+            const updateConditionalFields = () => {
+                const selectedUnit = formFields.unit.value;
+                const isPackageOrBox = ['PC', 'CX'].includes(selectedUnit);
+                const needsWeightVolume = ['KG', 'L', 'SC'].includes(selectedUnit);
+                formFields.packageQuantityGroup.classList.toggle('hidden', !isPackageOrBox);
+                formFields.unitPriceGroup.classList.toggle('hidden', !isPackageOrBox);
+                formFields.weightVolumeGroup.classList.toggle('hidden', !needsWeightVolume);
+                if (needsWeightVolume) {
+                    const label = formFields.weightVolumeGroup.querySelector('label');
+                    const unitSpan = document.getElementById('weight-volume-unit-label');
+                    if (selectedUnit === 'SC') {
+                        label.childNodes[0].nodeValue = 'Peso por Saco ';
+                        unitSpan.textContent = '(KG)';
+                    } else {
+                        label.childNodes[0].nodeValue = 'Peso/Volume ';
+                        unitSpan.textContent = `(${selectedUnit})`;
+                    }
+                }
+                if (!isPackageOrBox) { formFields.packageQuantity.value = ''; formFields.unitPrice.value = ''; }
+                if (!needsWeightVolume) { formFields.weightVolume.value = ''; }
+            };
+
+            const calculateUnitPrice = () => {
+                const price = parseFloat(formFields.price.value);
+                const packageQty = parseInt(formFields.packageQuantity.value);
+                formFields.unitPrice.value = (price > 0 && packageQty > 0) ? formatCurrency(price / packageQty) : '';
+            };
+
+            const fetchAndPopulateDropdowns = async () => {
+                const { data: suppliers, error: sError } = await supabase.from('suppliers').select('name').order('name');
+                if (sError) console.error('Erro ao buscar fornecedores:', sError);
+                else {
+                    const dropdown = formFields.supplier;
+                    dropdown.innerHTML = '<option value="" disabled selected>Selecione um fornecedor</option>';
+                    suppliers.forEach(s => dropdown.appendChild(new Option(s.name, s.name)));
+                }
+
+                const { data: categories, error: cError } = await supabase.from('categories').select('name').order('name');
+                if (cError) console.error('Erro ao buscar categorias:', cError);
+                else {
+                    const dropdown = formFields.category;
+                    dropdown.innerHTML = '<option value="" disabled selected>Selecione uma categoria</option>';
+                    categories.forEach(c => dropdown.appendChild(new Option(c.name, c.name)));
+                }
+            };
+
+            const handleProductFormSubmit = async (e) => {
+                e.preventDefault();
+                formFields.saveBtn.disabled = true;
+                formFields.saveBtn.textContent = 'Salvando...';
+
+                const getNullOrNumber = (value) => value === '' || isNaN(parseFloat(value)) ? null : parseFloat(value);
+                const getNullOrInt = (value) => value === '' || isNaN(parseInt(value)) ? null : parseInt(value);
+                const getNullOrDate = (value) => value === '' ? null : value;
+                const getNullOrText = (value) => value.trim() === '' ? null : value.trim();
+
+                const productData = { name: formFields.name.value, supplier: getNullOrText(formFields.supplier.value), category: formFields.category.value, unit: formFields.unit.value, quantity: getNullOrInt(formFields.quantity.value) || 0, packageQuantity: getNullOrInt(formFields.packageQuantity.value), weightVolume: getNullOrNumber(formFields.weightVolume.value), cost: getNullOrNumber(formFields.cost.value) || 0, price: getNullOrNumber(formFields.price.value) || 0, expiryDate: getNullOrDate(formFields.expiry.value), };
+                const { error } = await supabase.from('products').insert([productData]);
+
+                if (error) alert(`Erro ao salvar: ${error.message}`);
+                else { closeModal(mainModal); await updateDashboard(); }
+
+                formFields.saveBtn.disabled = false;
+                formFields.saveBtn.textContent = 'Salvar';
+            };
+
+            // --- LÓGICA MODAL DE AJUSTE/SELEÇÃO ---
+            const handleAdjustmentFormSubmit = async (e) => {
+                e.preventDefault();
+                const productId = document.getElementById('adjustment-product-id').value;
+                const quantity = parseInt(document.getElementById('adjustment-quantity').value);
+                const product = products.find(p => p.id == productId);
+                if (product && quantity > 0) {
+                    const newQuantity = product.quantity + quantity;
+                    const { error } = await supabase.from('products').update({ quantity: newQuantity }).eq('id', product.id);
+                    if (error) alert(`Erro ao ajustar estoque: ${error.message}`);
+                    else { closeModal(adjustmentModal); await updateDashboard(); }
+                }
+            };
+
+            const openAdjustmentModal = (productId) => {
+                const product = products.find(p => p.id == productId);
+                if (!product) return;
+                document.getElementById('adjustment-product-id').value = product.id;
+                document.getElementById('adjustment-product-name').value = product.name;
+                document.getElementById('adjustment-current-stock').value = `${product.quantity} ${product.unit}`;
+                document.getElementById('adjustment-quantity').value = '';
+                openModal(adjustmentModal);
+            };
+
+            const renderProductSelectionList = (searchTerm = '') => {
+                const filtered = products.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()));
+                selectionList.innerHTML = filtered.length ? filtered.map(p => `<div class="product-search-item" data-id="${p.id}"><span class="item-info">${p.name}</span><span class="item-stock">${p.quantity} ${p.unit}</span></div>`).join('') : `<div class="product-search-item">Nenhum produto encontrado.</div>`;
+            };
+
+            // --- LÓGICA MODAL DE VENDA ---
+            const renderSaleSearchResults = (term = '') => {
+                const results = products.filter(p => p.name.toLowerCase().includes(term.toLowerCase()) && p.quantity > 0);
+                searchResultsContainerSale.innerHTML = results.map(p => `<div class="product-search-item" data-product-id="${p.id}"><span>${p.name}</span><small>${p.quantity} em estoque</small></div>`).join('');
+            };
+            const updateCartTotal = () => {
+                const total = currentCart.reduce((sum, item) => sum + (item.quantity * item.price), 0);
+                cartTotalEl.textContent = `Total: ${formatCurrency(total)}`;
+            };
+            const renderCart = () => {
+                cartItemsContainer.innerHTML = currentCart.map(item => `<li class="cart-item" data-product-id="${item.id}"><span>${item.name}</span><input type="number" value="${item.quantity}" min="1" max="${item.stock_quantity}"><span>${formatCurrency(item.price)}</span><span>${formatCurrency(item.quantity * item.price)}</span><button class="btn btn-danger remove-item-btn">&times;</button></li>`).join('');
+                updateCartTotal();
+            };
+            const addToCart = (productId) => {
+                if (currentCart.find(item => item.id === productId)) return;
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    currentCart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, stock_quantity: product.quantity });
+                    renderCart();
+                }
+            };
+            const handleFinalizeSale = async () => {
+                if (currentCart.length === 0) return alert('Adicione produtos à venda.');
+                finalizeSaleBtn.disabled = true;
+                finalizeSaleBtn.textContent = 'Processando...';
+                const total_amount = currentCart.reduce((sum, item) => sum + (item.quantity * item.price), 0);
+                const customer_name = document.getElementById('customer-name').value || 'Consumidor Final';
+
+                const { data: saleData, error: saleError } = await supabase.from('sales').insert({ customer_name, total_amount }).select().single();
+                if (saleError) return alert('Erro ao registrar venda: ' + saleError.message);
+
+                const itemsToInsert = currentCart.map(item => ({ sale_id: saleData.id, product_id: item.id, quantity: item.quantity, unit_price: item.price, product_name: item.name }));
+                const { error: itemsError } = await supabase.from('sale_items').insert(itemsToInsert);
+                if (itemsError) return alert('Erro ao registrar itens da venda: ' + itemsError.message);
+
+                for (const item of currentCart) {
+                    await supabase.from('products').update({ quantity: item.stock_quantity - item.quantity }).eq('id', item.id);
+                }
+                alert('Venda registrada com sucesso!');
+                closeModal(saleModal);
+                await updateDashboard();
+                finalizeSaleBtn.disabled = false;
+                finalizeSaleBtn.textContent = 'Finalizar Venda';
+            };
+
+            // --- LÓGICA DO DASHBOARD ---
+            const updateDashboard = async () => {
+                await fetchSystemSettings();
+                await fetchProducts();
+                updateSummaryCards();
+                updateCriticalProductsTable();
+                updateCharts();
+            };
+            const updateSummaryCards = () => {
+                const lowStockCount = products.filter(p => p.quantity > 0 && p.quantity <= settings.low_stock_threshold).length;
+                const today = new Date(); today.setHours(0, 0, 0, 0);
+                const nearExpiryCount = products.filter(p => {
+                    if (!p.expiryDate) return false;
+                    const diffDays = Math.ceil((new Date(p.expiryDate) - today) / (1000 * 60 * 60 * 24));
+                    return diffDays >= 0 && diffDays <= settings.near_expiry_days;
+                }).length;
+                const potentialProfit = products.reduce((acc, p) => acc + (p.price - p.cost) * p.quantity, 0);
+                document.getElementById('summary-total-produtos').textContent = products.length;
+                document.getElementById('summary-baixo-estoque').textContent = lowStockCount;
+                document.getElementById('summary-perto-vencimento').textContent = nearExpiryCount;
+                document.getElementById('summary-lucro-potencial').textContent = formatCurrency(potentialProfit);
+            };
+            const updateCriticalProductsTable = () => {
+                const tbody = document.getElementById('critical-products-tbody');
+                const today = new Date(); today.setHours(0, 0, 0, 0);
+                const criticalProducts = products.filter(p => {
+                    const isLowStock = p.quantity > 0 && p.quantity <= settings.low_stock_threshold;
+                    if (!p.expiryDate) return isLowStock;
+                    const diffDays = Math.ceil((new Date(p.expiryDate) - today) / (1000 * 60 * 60 * 24));
+                    return isLowStock || (diffDays >= 0 && diffDays <= settings.near_expiry_days) || diffDays < 0;
+                });
+                if (criticalProducts.length === 0) { tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding: 20px;">Nenhum alerta no momento.</td></tr>`; return; }
+                tbody.innerHTML = criticalProducts.map(p => {
+                    const diffDays = p.expiryDate ? Math.ceil((new Date(p.expiryDate) - today) / (1000 * 60 * 60 * 24)) : null;
+                    const isExpired = diffDays < 0;
+                    const isNearExpiry = diffDays >= 0 && diffDays <= settings.near_expiry_days;
+                    let statusHtml = ''; let rowClass = '';
+                    if (isExpired) {
+                        statusHtml += `<span class="status-badge status-expired">Vencido</span> `; rowClass = 'tr-danger';
+                    } else if (isNearExpiry) { statusHtml += `<span class="status-badge status-expiry">Vence em ${diffDays} dias</span> `; rowClass = 'tr-warning'; }
+                    if (p.quantity > 0 && p.quantity <= settings.low_stock_threshold) { statusHtml += `<span class="status-badge status-low">Estoque Baixo</span>`; }
+                    return `<tr class="${rowClass}"><td>${p.name}</td><td>${statusHtml.trim()}</td><td>${p.quantity} ${p.unit}</td><td>${formatDate(p.expiryDate)}</td><td><button class="btn btn-adjust" data-id="${p.id}">Ajustar</button></td></tr>`;
+                }).join('');
+            };
+            const updateCharts = () => {
+                const categoryData = products.reduce((acc, p) => ({ ...acc, [p.category]: (acc[p.category] || 0) + 1 }), {});
+                const topProductsData = products.map(p => ({ name: p.name, profit: (p.price - p.cost) * p.quantity })).sort((a, b) => b.profit - a.profit).slice(0, 5);
+                if (categoryChartInstance) categoryChartInstance.destroy();
+                categoryChartInstance = new Chart(document.getElementById('categoryChart').getContext('2d'), { type: 'doughnut', data: { labels: Object.keys(categoryData), datasets: [{ data: Object.values(categoryData), backgroundColor: ['#2e7d32', '#689f38', '#8d6e63', '#ffc107', '#f44336', '#607d8b', '#4caf50', '#cddc39'] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Distribuição de Produtos por Categoria' } } } });
+                if (topProductsChartInstance) topProductsChartInstance.destroy();
+                topProductsChartInstance = new Chart(document.getElementById('topProductsChart').getContext('2d'), { type: 'bar', data: { labels: topProductsData.map(p => p.name), datasets: [{ label: 'Lucro Potencial (R$)', data: topProductsData.map(p => p.profit), backgroundColor: '#2e7d32' }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, title: { display: true, text: 'Top 5 Produtos Mais Rentáveis no Estoque' } }, scales: { x: { beginAtZero: true, ticks: { callback: value => formatCurrency(value) } } } } });
+            };
+
+            // --- INICIALIZAÇÃO E EVENT LISTENERS ---
+            const init = async () => {
+                await fetchAndPopulateDropdowns();
+
+                document.getElementById('add-product-btn-dash').addEventListener('click', () => { productForm.reset(); formFields.id.value = ''; formFields.modalTitle.textContent = 'Novo Produto'; formFields.saveBtn.textContent = 'Salvar'; updateConditionalFields(); openModal(mainModal); });
+                document.getElementById('register-entry-btn').addEventListener('click', () => { renderProductSelectionList(); openModal(selectionModal); });
+                document.getElementById('register-sale-btn').addEventListener('click', () => {
+                    currentCart = []; renderCart(); document.getElementById('customer-name').value = ''; productSearchInputSale.value = ''; renderSaleSearchResults(); openModal(saleModal);
+                });
+
+                [mainModal, adjustmentModal, selectionModal, saleModal].forEach(modal => {
+                    modal.querySelectorAll('.close-button').forEach(btn => btn.addEventListener('click', () => closeModal(modal)));
+                    modal.addEventListener('click', e => { if (e.target === modal) closeModal(modal); });
+                });
+
+                productForm.addEventListener('submit', handleProductFormSubmit);
+                formFields.unit.addEventListener('change', updateConditionalFields);
+                formFields.price.addEventListener('input', calculateUnitPrice);
+                formFields.packageQuantity.addEventListener('input', calculateUnitPrice);
+                formFields.category.addEventListener('change', () => {
+                    const text = formFields.category.options[formFields.category.selectedIndex].text;
+                    if (text.includes('Ração (Grande Porte)') || text.includes('Suplementos')) {
+                        formFields.unit.value = 'SC';
+                    } else if (text.includes('Ração (Pet)')) {
+                        formFields.unit.value = 'SC';
+                    } else if (text.includes('Medicamentos') || text.includes('Acessórios')) {
+                        formFields.unit.value = 'UN';
+                    }
+                    formFields.unit.dispatchEvent(new Event('change'));
+                });
+
+                adjustmentForm.addEventListener('submit', handleAdjustmentFormSubmit);
+                selectionSearch.addEventListener('input', (e) => renderProductSelectionList(e.target.value));
+                selectionList.addEventListener('click', (e) => { const item = e.target.closest('.product-search-item'); if (item) { closeModal(selectionModal); openAdjustmentModal(item.dataset.id); } });
+                document.getElementById('critical-products-tbody').addEventListener('click', (e) => { if (e.target.classList.contains('btn-adjust')) openAdjustmentModal(e.target.dataset.id); });
+
+                // Eventos do Modal de Venda
+                productSearchInputSale.addEventListener('input', (e) => renderSaleSearchResults(e.target.value));
+                searchResultsContainerSale.addEventListener('click', e => { const item = e.target.closest('.product-search-item'); if (item) addToCart(Number(item.dataset.productId)); });
+                cartItemsContainer.addEventListener('change', e => { if (e.target.type === 'number') { const item = currentCart.find(i => i.id === Number(e.target.closest('.cart-item').dataset.productId)); item.quantity = Number(e.target.value); renderCart(); } });
+                cartItemsContainer.addEventListener('click', e => { if (e.target.classList.contains('remove-item-btn')) { currentCart = currentCart.filter(i => i.id !== Number(e.target.closest('.cart-item').dataset.productId)); renderCart(); } });
+                finalizeSaleBtn.addEventListener('click', handleFinalizeSale);
+
+                await updateDashboard();
+            };
+
+            init();
+        });
+    </script>
+</body>
+
+</html>

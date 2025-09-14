@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTrevo | Acesso</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #689f38;
+            --accent: #8d6e63;
+            --light: #ffffff;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+            --danger: #e53935;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .login-container {
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .document-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .doc-btn {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            background-color: #f0f0f0;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .doc-btn.active {
+            background-color: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: var(--primary);
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1b5e20;
+        }
+
+        .toggle-form {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .toggle-form a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: var(--danger);
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: none;
+        }
+
+        #register-form {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+
+        <!-- Formulário de Login -->
+        <div id="login-form" class="form-container">
+            <h2>Acessar o Sistema</h2>
+            <div id="login-error" class="error-message"></div>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <p class="toggle-form">Não tem uma conta? <a id="show-register">Cadastre-se</a></p>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <div id="register-form" class="form-container">
+            <h2>Criar Conta</h2>
+            <div id="register-error" class="error-message"></div>
+            <div id="register-success" class="error-message" style="color: var(--success);"></div>
+            <form>
+                <div class="form-group">
+                    <label for="register-name">Nome Completo</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-phone">Telefone</label>
+                    <input type="tel" id="register-phone" placeholder="(00) 00000-0000" required>
+                </div>
+                <div class="form-group">
+                    <div class="document-toggle">
+                        <button type="button" class="doc-btn active" data-doc="cpf">CPF</button>
+                        <button type="button" class="doc-btn" data-doc="cnpj">CNPJ</button>
+                    </div>
+                    <label for="register-document" id="document-label">CPF</label>
+                    <input type="text" id="register-document" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Senha (mínimo 6 caracteres)</label>
+                    <input type="password" id="register-password" required minlength="6">
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+            <p class="toggle-form">Já tem uma conta? <a id="show-login">Acesse aqui</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            const loginFormEl = document.getElementById('login-form');
+            const registerFormEl = document.getElementById('register-form');
+            const showRegisterLink = document.getElementById('show-register');
+            const showLoginLink = document.getElementById('show-login');
+
+            const loginError = document.getElementById('login-error');
+            const registerError = document.getElementById('register-error');
+            const registerSuccess = document.getElementById('register-success');
+
+            const docButtons = document.querySelectorAll('.doc-btn');
+            const docInput = document.getElementById('register-document');
+            const docLabel = document.getElementById('document-label');
+            let isCpf = true;
+
+            const applyMask = () => {
+                if (isCpf) {
+                    docInput.placeholder = '000.000.000-00';
+                    docInput.maxLength = 14;
+                } else {
+                    docInput.placeholder = '00.000.000/0000-00';
+                    docInput.maxLength = 18;
+                }
+            };
+            applyMask();
+
+            // Alternar entre formulários
+            showRegisterLink.addEventListener('click', () => {
+                loginFormEl.style.display = 'none';
+                registerFormEl.style.display = 'block';
+            });
+            showLoginLink.addEventListener('click', () => {
+                registerFormEl.style.display = 'none';
+                loginFormEl.style.display = 'block';
+            });
+
+            // Lógica de Login
+            loginFormEl.querySelector('form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                loginError.style.display = 'none';
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+
+                const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+                if (error) {
+                    loginError.textContent = 'Email ou senha inválidos.';
+                    loginError.style.display = 'block';
+                } else {
+                    window.location.href = 'dashboard_agrovet.html';
+                }
+            });
+
+            // Lógica de Cadastro
+            registerFormEl.querySelector('form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                registerError.style.display = 'none';
+                registerSuccess.style.display = 'none';
+                const name = document.getElementById('register-name').value;
+                const email = document.getElementById('register-email').value;
+                const phone = document.getElementById('register-phone').value;
+                const documentValue = document.getElementById('register-document').value;
+                const password = document.getElementById('register-password').value;
+
+                if (password.length < 6) {
+                    registerError.textContent = 'A senha deve ter no mínimo 6 caracteres.';
+                    registerError.style.display = 'block';
+                    return;
+                }
+
+                const { error } = await supabase.auth.signUp({
+                    email,
+                    password,
+                    options: {
+                        data: {
+                            full_name: name,
+                            phone: phone,
+                            document: documentValue
+                        }
+                    }
+                });
+
+                if (error) {
+                    registerError.textContent = 'Não foi possível criar a conta. O email pode já estar em uso.';
+                    registerError.style.display = 'block';
+                } else {
+                    registerSuccess.textContent = 'Conta criada! Você já pode fazer o login.';
+                    registerSuccess.style.display = 'block';
+                    setTimeout(() => {
+                        registerFormEl.style.display = 'none';
+                        loginFormEl.style.display = 'block';
+                    }, 3000);
+                }
+            });
+
+            // Lógica do toggle CPF/CNPJ
+            docButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    docButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    isCpf = btn.dataset.doc === 'cpf';
+                    docLabel.textContent = isCpf ? 'CPF' : 'CNPJ';
+                    docInput.value = '';
+                    applyMask();
+                });
+            });
+
+            // Lógica das Máscaras
+            docInput.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, "");
+                if (isCpf) {
+                    value = value.replace(/(\d{3})(\d)/, "$1.$2");
+                    value = value.replace(/(\d{3})(\d)/, "$1.$2");
+                    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+                } else {
+                    value = value.replace(/^(\d{2})(\d)/, "$1.$2");
+                    value = value.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+                    value = value.replace(/\.(\d{3})(\d)/, ".$1/$2");
+                    value = value.replace(/(\d{4})(\d)/, "$1-$2");
+                }
+                e.target.value = value;
+            });
+
+            document.getElementById('register-phone').addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, "");
+                value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+                value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+                e.target.value = value;
+            });
+
+        });
+    </script>
+</body>
+
+</html>

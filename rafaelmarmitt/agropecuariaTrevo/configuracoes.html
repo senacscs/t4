@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTrevo | Configurações</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <!-- Google Fonts: Poppins para uma aparência moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #689f38;
+            --accent: #8d6e63;
+            --success: #43a047;
+            --warning: #ffb300;
+            --danger: #e53935;
+            --info: #1e88e5;
+            --light: #ffffff;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            color: var(--dark);
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: var(--light);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sidebar .logo i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+
+        .sidebar .menu a,
+        .sidebar .logout-link a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar .menu a.active,
+        .sidebar .menu a:hover,
+        .sidebar .logout-link a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .sidebar .menu a i,
+        .sidebar .logout-link a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .categories-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .categories-table th,
+        .categories-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .categories-table th {
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .action-buttons {
+            text-align: right;
+        }
+
+        .action-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 15px;
+            color: var(--gray);
+            transition: color 0.2s;
+        }
+
+        .action-buttons .edit-btn:hover {
+            color: var(--info);
+        }
+
+        .action-buttons .delete-btn:hover {
+            color: var(--danger);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--light);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+        <nav class="menu">
+            <a href="dashboard_agrovet.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="estoque.html"><i class="fas fa-boxes-stacked"></i> Estoque</a>
+            <a href="fornecedores.html"><i class="fas fa-truck-field"></i> Fornecedores</a>
+            <a href="vendas.html"><i class="fas fa-cash-register"></i> Vendas</a>
+            <a href="relatorios.html"><i class="fas fa-file-alt"></i> Relatórios</a>
+            <a href="configuracoes.html" class="active"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="logout-link">
+            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Configurações</h1>
+            <div class="header-actions">
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=agroadmin" alt="User">
+                    <span id="user-display"></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="card">
+            <h2>Gerenciar Categorias de Produtos</h2>
+            <table class="categories-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th class="action-buttons">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="categories-tbody">
+                    <!-- Categorias carregadas aqui -->
+                </tbody>
+            </table>
+            <form id="add-category-form" style="margin-top: 20px; display: flex; gap: 15px;">
+                <input type="text" id="add-category-name" placeholder="Nome da Nova Categoria" required
+                    style="flex-grow: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                <button type="submit" class="btn btn-primary">Adicionar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal para Editar Categoria -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="category-modal-title">Editar Categoria</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <form id="edit-category-form">
+                <input type="hidden" id="category-id">
+                <div class="form-group">
+                    <label for="category-name">Nome da Categoria</label>
+                    <input type="text" id="category-name" required>
+                </div>
+                <div style="text-align: right;">
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('user-display').textContent = session.user.email;
+
+            // --- LOGOUT ---
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signOut();
+                if (error) console.error('Erro ao sair:', error);
+                else window.location.href = 'index.html';
+            });
+
+            const categoriesTbody = document.getElementById('categories-tbody');
+            const addCategoryForm = document.getElementById('add-category-form');
+            const addCategoryNameInput = document.getElementById('add-category-name');
+            const categoryModal = document.getElementById('category-modal');
+            const editCategoryForm = document.getElementById('edit-category-form');
+            const categoryIdInput = document.getElementById('category-id');
+            const categoryNameInput = document.getElementById('category-name');
+            const closeBtn = categoryModal.querySelector('.close-button');
+
+            const fetchAndRenderCategories = async () => {
+                const { data, error } = await supabase.from('categories').select('*').order('name');
+                if (error) {
+                    console.error("Erro ao buscar categorias:", error);
+                    categoriesTbody.innerHTML = `<tr><td colspan="2">Erro ao carregar categorias.</td></tr>`;
+                    return;
+                }
+
+                categoriesTbody.innerHTML = data.map(cat => `
+                    <tr class="category-item">
+                        <td>${cat.name}</td>
+                        <td class="action-buttons">
+                            <button class="edit-btn" data-id="${cat.id}" data-name="${cat.name}"><i class="fas fa-pencil-alt"></i></button>
+                            <button class="delete-btn" data-id="${cat.id}"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                `).join('');
+            };
+
+            const openModal = (id, name) => {
+                categoryIdInput.value = id;
+                categoryNameInput.value = name;
+                categoryModal.style.display = 'flex';
+                categoryNameInput.focus();
+            };
+
+            const closeModal = () => {
+                categoryModal.style.display = 'none';
+                editCategoryForm.reset();
+            };
+
+            const handleEditSubmit = async (e) => {
+                e.preventDefault();
+                const id = categoryIdInput.value;
+                const name = categoryNameInput.value.trim();
+                if (!name || !id) return;
+
+                const { error } = await supabase.from('categories').update({ name }).eq('id', id);
+                if (error) {
+                    alert('Erro ao salvar categoria: ' + error.message);
+                } else {
+                    closeModal();
+                    await fetchAndRenderCategories();
+                }
+            };
+
+            const handleAddSubmit = async (e) => {
+                e.preventDefault();
+                const name = addCategoryNameInput.value.trim();
+                if (!name) return;
+
+                const { error } = await supabase.from('categories').insert([{ name }]);
+                if (error) {
+                    alert('Erro ao adicionar categoria: ' + error.message);
+                } else {
+                    addCategoryForm.reset();
+                    await fetchAndRenderCategories();
+                }
+            };
+
+            const handleDelete = async (id) => {
+                if (!confirm('Tem certeza que deseja excluir esta categoria?')) return;
+                const { error } = await supabase.from('categories').delete().eq('id', id);
+                if (error) {
+                    alert('Erro ao excluir categoria: ' + error.message);
+                } else {
+                    await fetchAndRenderCategories();
+                }
+            };
+
+            // --- Event Listeners ---
+            addCategoryForm.addEventListener('submit', handleAddSubmit);
+            editCategoryForm.addEventListener('submit', handleEditSubmit);
+            closeBtn.addEventListener('click', closeModal);
+            categoryModal.addEventListener('click', (e) => { if (e.target === categoryModal) closeModal(); });
+
+            categoriesTbody.addEventListener('click', (e) => {
+                const editBtn = e.target.closest('.edit-btn');
+                const deleteBtn = e.target.closest('.delete-btn');
+                if (editBtn) {
+                    openModal(editBtn.dataset.id, editBtn.dataset.name);
+                }
+                if (deleteBtn) {
+                    handleDelete(deleteBtn.dataset.id);
+                }
+            });
+
+            // --- Inicialização ---
+            fetchAndRenderCategories();
+        });
+    </script>
+</body>
+
+</html>

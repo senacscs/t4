@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTrevo | Relatórios</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <!-- Google Fonts: Poppins para uma aparência moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Chart.js para o gráfico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- jsPDF para exportação de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #689f38;
+            --accent: #8d6e63;
+            --success: #43a047;
+            --warning: #ffb300;
+            --danger: #e53935;
+            --info: #1e88e5;
+            --light: #ffffff;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            color: var(--dark);
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: var(--light);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sidebar .logo i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+
+        .sidebar .menu a,
+        .sidebar .logout-link a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar .menu a.active,
+        .sidebar .menu a:hover,
+        .sidebar .logout-link a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .sidebar .menu a i,
+        .sidebar .logout-link a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        .filters-container {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .filter-group input {
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card .icon {
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card.total-revenue .icon {
+            background-color: var(--primary);
+        }
+
+        .card.total-profit .icon {
+            background-color: var(--success);
+        }
+
+        .card.products-sold .icon {
+            background-color: var(--accent);
+        }
+
+        .card .card-info h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .card .card-info .card-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .report-table-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .report-table th,
+        .report-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-csv {
+            background-color: #217346;
+            color: white;
+        }
+
+        .btn-pdf {
+            background-color: #B30B00;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+        <nav class="menu">
+            <a href="dashboard_agrovet.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="estoque.html"><i class="fas fa-boxes-stacked"></i> Estoque</a>
+            <a href="fornecedores.html"><i class="fas fa-truck-field"></i> Fornecedores</a>
+            <a href="vendas.html"><i class="fas fa-cash-register"></i> Vendas</a>
+            <a href="relatorios.html" class="active"><i class="fas fa-file-alt"></i> Relatórios</a>
+            <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="logout-link">
+            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Relatórios</h1>
+            <div class="header-actions">
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=agroadmin" alt="User">
+                    <span id="user-display"></span>
+                </div>
+            </div>
+        </header>
+
+        <section class="filters-container">
+            <div class="filter-group">
+                <label for="start-date">Data de Início</label>
+                <input type="date" id="start-date">
+            </div>
+            <div class="filter-group">
+                <label for="end-date">Data de Fim</label>
+                <input type="date" id="end-date">
+            </div>
+            <button id="generate-report-btn" class="btn btn-primary" style="align-self: flex-end;">Gerar
+                Relatório</button>
+            <div class="filter-group">
+                <label>Baixar Relatório</label>
+                <div style="display: flex; gap: 10px;">
+                    <button id="download-csv-btn" class="btn btn-csv"><i class="fas fa-file-csv"></i> CSV</button>
+                    <button id="download-pdf-btn" class="btn btn-pdf"><i class="fas fa-file-pdf"></i> PDF</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-cards">
+            <div class="card total-revenue">
+                <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="card-info">
+                    <h3>Faturamento Total</h3>
+                    <div class="card-value" id="kpi-total-revenue">R$ 0,00</div>
+                </div>
+            </div>
+            <div class="card total-profit">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <div class="card-info">
+                    <h3>Lucro Bruto</h3>
+                    <div class="card-value" id="kpi-total-profit">R$ 0,00</div>
+                </div>
+            </div>
+            <div class="card products-sold">
+                <div class="icon"><i class="fas fa-box"></i></div>
+                <div class="card-info">
+                    <h3>Produtos Vendidos</h3>
+                    <div class="card-value" id="kpi-products-sold">0</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="chart-container"><canvas id="salesOverTimeChart"></canvas></div>
+            <div class="chart-container"><canvas id="topProductsChart"></canvas></div>
+        </section>
+
+        <div class="report-table-container">
+            <h2>Vendas Detalhadas</h2>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>ID da Venda</th>
+                        <th>Data</th>
+                        <th>Cliente</th>
+                        <th>Itens</th>
+                        <th>Total</th>
+                        <th>Lucro</th>
+                    </tr>
+                </thead>
+                <tbody id="sales-details-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('user-display').textContent = session.user.email;
+
+            // --- LOGOUT ---
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signOut();
+                if (error) console.error('Erro ao sair:', error);
+                else window.location.href = 'index.html';
+            });
+
+            let products = [];
+            let lastFetchedSales = [];
+            let salesOverTimeChart, topProductsChart;
+
+            const formatCurrency = value => (value || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const formatDate = dateStr => {
+                if (!dateStr) return 'N/A';
+                const date = new Date(dateStr);
+                return date.toLocaleDateString('pt-BR', {
+                    day: '2-digit', month: '2-digit', year: 'numeric'
+                });
+            };
+
+            const startDateInput = document.getElementById('start-date');
+            const endDateInput = document.getElementById('end-date');
+            const generateReportBtn = document.getElementById('generate-report-btn');
+            const downloadCsvBtn = document.getElementById('download-csv-btn');
+            const downloadPdfBtn = document.getElementById('download-pdf-btn');
+
+            const setDefaultDates = () => {
+                const today = new Date();
+                const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1).toISOString().split('T')[0];
+                const todayStr = today.toISOString().split('T')[0];
+                startDateInput.value = firstDayOfMonth;
+                endDateInput.value = todayStr;
+            };
+
+            const fetchReportData = async () => {
+                const startDate = startDateInput.value;
+                const endDate = new Date(endDateInput.value);
+                endDate.setDate(endDate.getDate() + 1);
+                const nextDayIso = endDate.toISOString().split('T')[0];
+
+                const { data: salesData, error: salesError } = await supabase.from('sales')
+                    .select('*, sale_items(*)')
+                    .gte('created_at', startDate)
+                    .lt('created_at', nextDayIso);
+
+                if (salesError) { console.error("Error fetching sales:", salesError); return; }
+
+                const { data: productsData, error: productsError } = await supabase.from('products').select('id, cost');
+                if (productsError) { console.error("Error fetching products:", productsError); return; }
+                products = productsData;
+
+                processAndRenderReports(salesData);
+            };
+
+            const processAndRenderReports = (sales) => {
+                try {
+                    let totalRevenue = 0;
+                    let totalProfit = 0;
+                    let productsSoldCount = 0;
+                    const salesByDay = {};
+                    const productProfitMap = {};
+
+                    sales.forEach(sale => {
+                        let saleProfit = 0;
+                        totalRevenue += sale.total_amount;
+
+                        (sale.sale_items || []).forEach(item => {
+                            productsSoldCount += item.quantity;
+                            const product = products.find(p => p.id === item.product_id);
+                            const cost = product ? product.cost : 0;
+                            const itemProfit = (item.unit_price - cost) * item.quantity;
+                            saleProfit += itemProfit;
+
+                            if (!productProfitMap[item.product_name]) {
+                                productProfitMap[item.product_name] = 0;
+                            }
+                            productProfitMap[item.product_name] += itemProfit;
+                        });
+
+                        totalProfit += saleProfit;
+                        sale.profit = saleProfit;
+
+                        const localDate = new Date(sale.created_at);
+                        const saleDateKey = `${localDate.getFullYear()}-${String(localDate.getMonth() + 1).padStart(2, '0')}-${String(localDate.getDate()).padStart(2, '0')}`;
+
+                        if (!salesByDay[saleDateKey]) salesByDay[saleDateKey] = 0;
+                        salesByDay[saleDateKey] += sale.total_amount;
+                    });
+
+                    lastFetchedSales = sales;
+
+                    document.getElementById('kpi-total-revenue').textContent = formatCurrency(totalRevenue);
+                    document.getElementById('kpi-total-profit').textContent = formatCurrency(totalProfit);
+                    document.getElementById('kpi-products-sold').textContent = productsSoldCount;
+
+                    renderSalesOverTimeChart(salesByDay);
+                    renderTopProductsChart(productProfitMap);
+                    renderSalesDetailTable(sales);
+                } catch (error) {
+                    console.error("Erro ao processar os dados do relatório:", error);
+                    alert("Ocorreu um erro ao gerar os relatórios. Verifique o console para mais detalhes.");
+                }
+            };
+
+            const renderSalesOverTimeChart = (salesByDay) => {
+                const ctx = document.getElementById('salesOverTimeChart').getContext('2d');
+                const sortedDates = Object.keys(salesByDay).sort();
+
+                const formattedLabels = sortedDates.map(date => {
+                    const [year, month, day] = date.split('-');
+                    return `${day}/${month}/${year}`;
+                });
+
+                if (salesOverTimeChart) salesOverTimeChart.destroy();
+                salesOverTimeChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: formattedLabels,
+                        datasets: [{
+                            label: 'Faturamento por Dia',
+                            data: sortedDates.map(date => salesByDay[date]),
+                            borderColor: 'var(--primary)',
+                            backgroundColor: 'rgba(46, 125, 50, 0.1)',
+                            fill: true,
+                            tension: 0.1
+                        }]
+                    },
+                    options: { responsive: true, plugins: { title: { display: true, text: 'Vendas ao Longo do Tempo' } } }
+                });
+            };
+
+            const renderTopProductsChart = (productProfitMap) => {
+                const ctx = document.getElementById('topProductsChart').getContext('2d');
+                const sortedProducts = Object.entries(productProfitMap).sort(([, a], [, b]) => b - a).slice(0, 5);
+
+                if (topProductsChart) topProductsChart.destroy();
+                topProductsChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: sortedProducts.map(p => p[0]),
+                        datasets: [{
+                            label: 'Lucro por Produto (R$)',
+                            data: sortedProducts.map(p => p[1]),
+                            backgroundColor: 'var(--secondary)'
+                        }]
+                    },
+                    options: { responsive: true, indexAxis: 'y', plugins: { legend: { display: false }, title: { display: true, text: 'Top 5 Produtos Mais Rentáveis' } } }
+                });
+            };
+
+            const renderSalesDetailTable = (sales) => {
+                const tableBody = document.getElementById('sales-details-body');
+                tableBody.innerHTML = sales.map(sale => `
+                    <tr>
+                        <td>#${sale.id}</td>
+                        <td>${formatDate(sale.created_at)}</td>
+                        <td>${sale.customer_name || 'Consumidor Final'}</td>
+                        <td>${(sale.sale_items || []).reduce((acc, item) => acc + item.quantity, 0)}</td>
+                        <td>${formatCurrency(sale.total_amount)}</td>
+                        <td>${formatCurrency(sale.profit)}</td>
+                    </tr>
+                `).join('');
+                if (sales.length === 0) {
+                    tableBody.innerHTML = `<tr><td colspan="6" style="text-align: center;">Nenhuma venda encontrada para este período.</td></tr>`;
+                }
+            };
+
+            const downloadCSV = () => {
+                if (lastFetchedSales.length === 0) {
+                    alert("Por favor, gere um relatório primeiro clicando em 'Gerar Relatório'.");
+                    return;
+                }
+                const headers = ['ID da Venda', 'Data', 'Cliente', 'Itens', 'Total (R$)', 'Lucro (R$)'];
+                const rows = lastFetchedSales.map(sale => [
+                    sale.id,
+                    new Date(sale.created_at).toLocaleString('pt-BR'),
+                    `"${(sale.customer_name || 'Consumidor Final').replace(/"/g, '""')}"`,
+                    (sale.sale_items || []).reduce((acc, item) => acc + item.quantity, 0),
+                    sale.total_amount.toFixed(2).replace('.', ','),
+                    sale.profit.toFixed(2).replace('.', ',')
+                ]);
+                let csvContent = "data:text/csv;charset=utf-8," + headers.join(";") + "\n" + rows.map(e => e.join(";")).join("\n");
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", `relatorio_vendas_${new Date().toISOString().split('T')[0]}.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+
+            const downloadPDF = () => {
+                if (lastFetchedSales.length === 0) {
+                    alert("Por favor, gere um relatório primeiro clicando em 'Gerar Relatório'.");
+                    return;
+                }
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                doc.setFontSize(18);
+                doc.text("Relatório de Vendas", 14, 22);
+                doc.setFontSize(11);
+                doc.setTextColor(100);
+                const dateRange = `Período: ${formatDate(startDateInput.value)} a ${formatDate(endDateInput.value)}`;
+                doc.text(dateRange, 14, 30);
+                const head = [['ID', 'Data', 'Cliente', 'Itens', 'Total', 'Lucro']];
+                const body = lastFetchedSales.map(sale => [
+                    `#${sale.id}`,
+                    formatDate(sale.created_at),
+                    sale.customer_name || 'Consumidor Final',
+                    (sale.sale_items || []).reduce((acc, item) => acc + item.quantity, 0),
+                    formatCurrency(sale.total_amount),
+                    formatCurrency(sale.profit)
+                ]);
+                doc.autoTable({
+                    startY: 35,
+                    head: head,
+                    body: body,
+                    theme: 'striped',
+                    headStyles: { fillColor: [46, 125, 50] }
+                });
+                doc.save(`relatorio_vendas_${new Date().toISOString().split('T')[0]}.pdf`);
+            };
+
+            generateReportBtn.addEventListener('click', fetchReportData);
+            downloadCsvBtn.addEventListener('click', downloadCSV);
+            downloadPdfBtn.addEventListener('click', downloadPDF);
+
+            // Initial Load
+            setDefaultDates();
+            fetchReportData();
+        });
+    </script>
+</body>
+
+</html>

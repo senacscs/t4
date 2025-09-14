@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTrevo | Fornecedores</title>
+    <link rel="shortcut icon" href="img/trevo.png" type="image/x-icon">
+    <!-- Google Fonts: Poppins para uma aparência moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Chart.js para o gráfico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Paleta de Cores e Variáveis Globais */
+        :root {
+            --primary: #2e7d32;
+            /* Verde principal, remetendo ao agro */
+            --secondary: #689f38;
+            /* Verde secundário, mais claro */
+            --accent: #8d6e63;
+            /* Tom de terra/couro */
+            --success: #43a047;
+            --warning: #ffb300;
+            --danger: #e53935;
+            --info: #1e88e5;
+            --light: #ffffff;
+            --dark: #212b36;
+            --gray: #637381;
+            --bg-light: #f4f6f8;
+            --border-color: #e0e0e0;
+        }
+
+        /* Estilo Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            display: flex;
+            color: var(--dark);
+        }
+
+        /* Sidebar (Menu Lateral) */
+        .sidebar {
+            width: 260px;
+            background-color: var(--light);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sidebar .logo i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+
+        .sidebar .menu a,
+        .sidebar .logout-link a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar .menu a.active,
+        .sidebar .menu a:hover,
+        .sidebar .logout-link a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .sidebar .menu a i,
+        .sidebar .logout-link a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        /* Controles da Página */
+        .page-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        #search-supplier {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 14px;
+            min-width: 300px;
+        }
+
+        /* Grid de Fornecedores */
+        .suppliers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .supplier-card {
+            background-color: var(--light);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .supplier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .supplier-card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .supplier-card-header .icon {
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .supplier-card-header h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .supplier-products-summary {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 15px;
+            padding-left: 50px;
+            min-height: 30px;
+        }
+
+        .supplier-contact-info {
+            list-style: none;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .supplier-contact-info li {
+            margin-bottom: 5px;
+        }
+
+        .supplier-contact-info i {
+            margin-right: 8px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .supplier-card-kpis {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        .kpi {
+            text-align: center;
+        }
+
+        .kpi .value {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .kpi .label {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .supplier-card-footer {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .chart-section {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+            display: flex;
+            flex-direction: column;
+            max-height: 80vh;
+        }
+
+        .modal-body {
+            overflow-y: auto;
+        }
+
+        #supplier-modal .modal-content {
+            max-width: 500px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover {
+            color: var(--dark);
+        }
+
+        /* Tabela de Produtos no Modal */
+        .modal-product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .modal-product-table th,
+        .modal-product-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .form-group label .required {
+            color: var(--danger);
+            margin-left: 3px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* Botões */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1b5e20;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-secondary:hover {
+            background-color: #558b2f;
+        }
+
+        .btn-info {
+            background-color: var(--info);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-info:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo"><i class="fas fa-clover"></i> AgroTrevo</div>
+        <nav class="menu">
+            <a href="dashboard_agrovet.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="estoque.html"><i class="fas fa-boxes-stacked"></i> Estoque</a>
+            <a href="fornecedores.html" class="active"><i class="fas fa-truck-field"></i> Fornecedores</a>
+            <a href="vendas.html"><i class="fas fa-cash-register"></i> Vendas</a>
+            <a href="relatorios.html"><i class="fas fa-file-alt"></i> Relatórios</a>
+            <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="logout-link">
+            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Fornecedores</h1>
+            <div class="header-actions">
+                <button id="add-supplier-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Novo
+                    Fornecedor</button>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?u=agroadmin" alt="User">
+                    <span id="user-display"></span>
+                </div>
+            </div>
+        </header>
+
+        <section class="chart-section">
+            <canvas id="supplierValueChart"></canvas>
+        </section>
+
+        <div class="page-controls">
+            <input type="text" id="search-supplier" placeholder="🔍 Buscar fornecedor...">
+        </div>
+
+        <div class="suppliers-grid" id="suppliers-grid-container">
+            <!-- Cards dos fornecedores serão inseridos aqui -->
+        </div>
+    </main>
+
+    <!-- Modal para Produtos do Fornecedor -->
+    <div id="supplier-products-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="supplier-modal-title">Produtos Fornecidos</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <div class="modal-body">
+                <table class="modal-product-table">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Estoque</th>
+                            <th>Custo</th>
+                            <th>Vencimento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="supplier-products-tbody">
+                        <!-- Produtos do fornecedor aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Fornecedor -->
+    <div id="supplier-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="form-supplier-modal-title">Novo Fornecedor</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <form id="supplier-form">
+                <input type="hidden" id="supplier-id">
+                <div class="form-group">
+                    <label for="supplier-name">Nome do Fornecedor <span class="required">*</span></label>
+                    <input type="text" id="supplier-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="supplier-contact">Pessoa de Contato</label>
+                    <input type="text" id="supplier-contact">
+                </div>
+                <div class="form-group">
+                    <label for="supplier-email">E-mail</label>
+                    <input type="email" id="supplier-email">
+                </div>
+                <div class="form-group">
+                    <label for="supplier-phone">Telefone</label>
+                    <input type="tel" id="supplier-phone">
+                </div>
+                <div class="supplier-card-footer">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // --- CONFIGURAÇÃO DO SUPABASE ---
+            const SUPABASE_URL = 'https://jsnrvkmdogvbqjxwjyzc.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzbnJ2a21kb2d2YnFqeHdqeXpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTcxNTksImV4cCI6MjA3MzI3MzE1OX0.cMEwu00R5bJwWOlY-CKts05gk_1dRQ-NSOTUdnKTWgQ';
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- VERIFICAÇÃO DE AUTENTICAÇÃO ---
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('user-display').textContent = session.user.email;
+
+            // --- LOGOUT ---
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signOut();
+                if (error) console.error('Erro ao sair:', error);
+                else window.location.href = 'index.html';
+            });
+
+            // --- VARIÁVEIS GLOBAIS ---
+            let suppliersData = {};
+            let supplierValueChart;
+
+            // --- SELETORES DO DOM ---
+            const suppliersGrid = document.getElementById('suppliers-grid-container');
+            const searchInput = document.getElementById('search-supplier');
+
+            const productsModal = document.getElementById('supplier-products-modal');
+            const productsModalTitle = document.getElementById('supplier-modal-title');
+            const productsTbody = document.getElementById('supplier-products-tbody');
+
+            const supplierModal = document.getElementById('supplier-modal');
+            const supplierForm = document.getElementById('supplier-form');
+            const supplierModalTitle = document.getElementById('form-supplier-modal-title');
+            const addSupplierBtn = document.getElementById('add-supplier-btn');
+
+            // --- FUNÇÕES DE UTILIDADE ---
+            const formatCurrency = value => (value || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const formatDate = dateStr => dateStr ? new Date(dateStr + 'T00:00:00').toLocaleDateString('pt-BR') : 'N/A';
+
+            // --- LÓGICA DE DADOS ---
+            const fetchAndProcessData = async () => {
+                const { data: products, error: pError } = await supabase.from('products').select('*');
+                const { data: suppliers, error: sError } = await supabase.from('suppliers').select('*');
+
+                if (pError || sError) {
+                    console.error("Erro ao buscar dados:", pError || sError);
+                    return {};
+                }
+
+                const suppliersMap = suppliers.reduce((acc, s) => {
+                    acc[s.name] = s;
+                    return acc;
+                }, {});
+
+                const processedData = products.reduce((acc, product) => {
+                    const supplierName = product.supplier || 'Não especificado';
+
+                    if (!acc[supplierName]) {
+                        acc[supplierName] = {
+                            name: supplierName,
+                            details: suppliersMap[supplierName] || { name: supplierName },
+                            productCount: 0,
+                            stockValue: 0,
+                            products: []
+                        };
+                    }
+
+                    const supplierGroup = acc[supplierName];
+                    supplierGroup.productCount++;
+                    supplierGroup.stockValue += (product.cost || 0) * (product.quantity || 0);
+                    supplierGroup.products.push(product);
+
+                    return acc;
+                }, {});
+
+                // Adiciona a descrição dos principais produtos
+                for (const supplierName in processedData) {
+                    const supplier = processedData[supplierName];
+                    const topProducts = supplier.products.map(p => p.name).slice(0, 2);
+                    if (supplier.products.length > 2) {
+                        supplier.topProductsDescription = `Fornece: ${topProducts.join(', ')} e mais...`;
+                    } else if (supplier.products.length > 0) {
+                        supplier.topProductsDescription = `Fornece: ${topProducts.join(', ')}`;
+                    } else {
+                        supplier.topProductsDescription = 'Nenhum produto associado.';
+                    }
+                }
+
+                suppliersData = processedData;
+                return suppliersData;
+            };
+
+            // --- FUNÇÕES DE RENDERIZAÇÃO ---
+            const renderSupplierCards = (filteredSuppliers) => {
+                suppliersGrid.innerHTML = '';
+                if (Object.keys(filteredSuppliers).length === 0) {
+                    suppliersGrid.innerHTML = `<p>Nenhum fornecedor encontrado.</p>`;
+                    return;
+                }
+
+                for (const supplierName in filteredSuppliers) {
+                    const supplier = filteredSuppliers[supplierName];
+                    const card = document.createElement('div');
+                    card.className = 'supplier-card';
+                    card.innerHTML = `
+                        <div class="supplier-card-header">
+                            <div class="icon"><i class="fas fa-truck-field"></i></div>
+                            <h3>${supplier.name}</h3>
+                        </div>
+                        <p class="supplier-products-summary">${supplier.topProductsDescription || ''}</p>
+                        <ul class="supplier-contact-info">
+                            <li><i class="fas fa-user"></i> ${supplier.details.contact_person || 'Não informado'}</li>
+                            <li><i class="fas fa-envelope"></i> ${supplier.details.email || 'Não informado'}</li>
+                        </ul>
+                        <div class="supplier-card-kpis">
+                            <div class="kpi">
+                                <div class="value">${supplier.productCount}</div>
+                                <div class="label">Produtos</div>
+                            </div>
+                            <div class="kpi">
+                                <div class="value">${formatCurrency(supplier.stockValue)}</div>
+                                <div class="label">Valor em Estoque</div>
+                            </div>
+                        </div>
+                        <div class="supplier-card-footer">
+                            <button class="btn btn-info edit-supplier-btn" data-supplier-name="${supplier.name}"><i class="fas fa-edit"></i> Info</button>
+                            <button class="btn btn-secondary view-products-btn" data-supplier-name="${supplier.name}">Ver Produtos</button>
+                        </div>
+                    `;
+                    suppliersGrid.appendChild(card);
+                }
+            };
+
+            const renderChart = (data) => {
+                const ctx = document.getElementById('supplierValueChart').getContext('2d');
+                const sortedSuppliers = Object.values(data).sort((a, b) => b.stockValue - a.stockValue).slice(0, 7);
+
+                if (supplierValueChart) {
+                    supplierValueChart.destroy();
+                }
+
+                supplierValueChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: sortedSuppliers.map(s => s.name),
+                        datasets: [{
+                            label: 'Valor do Estoque por Fornecedor (R$)',
+                            data: sortedSuppliers.map(s => s.stockValue),
+                            backgroundColor: '#689f38',
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: { display: false },
+                            title: { display: true, text: 'Top Fornecedores por Valor em Estoque' }
+                        },
+                        scales: {
+                            y: { beginAtZero: true, ticks: { callback: value => formatCurrency(value) } }
+                        }
+                    }
+                });
+            };
+
+            // --- LÓGICA DOS MODAIS ---
+            const openProductsModal = (supplierName) => {
+                const supplier = suppliersData[supplierName];
+                if (!supplier) return;
+                productsModalTitle.textContent = `Produtos de ${supplier.name}`;
+                productsTbody.innerHTML = supplier.products.map(p => `
+                    <tr>
+                        <td>${p.name}</td>
+                        <td>${p.quantity} ${p.unit}</td>
+                        <td>${formatCurrency(p.cost)}</td>
+                        <td>${formatDate(p.expiryDate)}</td>
+                    </tr>
+                `).join('');
+                productsModal.style.display = 'flex';
+            };
+
+            const openSupplierModal = (supplierData = {}) => {
+                supplierForm.reset();
+                supplierModalTitle.textContent = supplierData.id ? 'Editar Fornecedor' : 'Novo Fornecedor';
+                document.getElementById('supplier-id').value = supplierData.id || '';
+                document.getElementById('supplier-name').value = supplierData.name || '';
+                document.getElementById('supplier-contact').value = supplierData.contact_person || '';
+                document.getElementById('supplier-email').value = supplierData.email || '';
+                document.getElementById('supplier-phone').value = supplierData.phone || '';
+                supplierModal.style.display = 'flex';
+            };
+
+            const handleSupplierFormSubmit = async (e) => {
+                e.preventDefault();
+                const id = document.getElementById('supplier-id').value;
+                const supplierData = {
+                    name: document.getElementById('supplier-name').value,
+                    contact_person: document.getElementById('supplier-contact').value,
+                    email: document.getElementById('supplier-email').value,
+                    phone: document.getElementById('supplier-phone').value,
+                };
+
+                let response;
+                if (id) {
+                    response = await supabase.from('suppliers').update(supplierData).eq('id', id);
+                } else {
+                    response = await supabase.from('suppliers').insert([supplierData]);
+                }
+
+                if (response.error) {
+                    alert('Erro ao salvar fornecedor: ' + response.error.message);
+                } else {
+                    supplierModal.style.display = 'none';
+                    await init();
+                }
+            };
+
+
+            // --- EVENT LISTENERS ---
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filtered = Object.keys(suppliersData)
+                    .filter(key => key.toLowerCase().includes(searchTerm))
+                    .reduce((obj, key) => {
+                        obj[key] = suppliersData[key];
+                        return obj;
+                    }, {});
+                renderSupplierCards(filtered);
+            });
+
+            suppliersGrid.addEventListener('click', (e) => {
+                const viewBtn = e.target.closest('.view-products-btn');
+                const editBtn = e.target.closest('.edit-supplier-btn');
+
+                if (viewBtn) {
+                    const supplierName = viewBtn.dataset.supplierName;
+                    openProductsModal(supplierName);
+                }
+
+                if (editBtn) {
+                    const supplierName = editBtn.dataset.supplierName;
+                    const supplier = suppliersData[supplierName];
+                    if (supplier && supplier.details.id) {
+                        openSupplierModal(supplier.details);
+                    } else {
+                        alert('Detalhes deste fornecedor não encontrados. Cadastre-o primeiro.');
+                    }
+                }
+            });
+
+            addSupplierBtn.addEventListener('click', () => openSupplierModal());
+
+            productsModal.querySelectorAll('.close-button').forEach(btn => btn.addEventListener('click', () => productsModal.style.display = 'none'));
+            productsModal.addEventListener('click', e => { if (e.target === productsModal) productsModal.style.display = 'none'; });
+
+            supplierModal.querySelectorAll('.close-button').forEach(btn => btn.addEventListener('click', () => supplierModal.style.display = 'none'));
+            supplierModal.addEventListener('click', e => { if (e.target === supplierModal) supplierModal.style.display = 'none'; });
+            supplierForm.addEventListener('submit', handleSupplierFormSubmit);
+
+            // --- INICIALIZAÇÃO ---
+            const init = async () => {
+                const data = await fetchAndProcessData();
+                renderSupplierCards(data);
+                renderChart(data);
+            };
+
+            init();
+        });
+    </script>
+</body>
+
+</html>
