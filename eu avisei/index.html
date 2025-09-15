@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recrutamento PCBA - Agente 3ª Classe</title>
+<style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #1c1c1c; color: #f0f0f0; margin: 0; padding: 0; }
+    header { background-color: #0a74da; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 1.8em; }
+    .vagas { margin-top: 5px; font-weight: bold; }
+    .full { color: #ff4c4c; }
+    .container { max-width: 800px; margin: 20px auto; padding: 20px; background-color: #2c2c2c; border-radius: 10px; }
+    label { display: block; margin-top: 15px; }
+    input, textarea, button, select { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: none; }
+    textarea { resize: vertical; }
+    button { background-color: #0a74da; color: #fff; font-size: 16px; cursor: pointer; margin-top: 20px; }
+    button:hover { background-color: #065bb5; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; color: #fff; }
+    th, td { border: 1px solid #444; padding: 8px; text-align: left; }
+    th { background-color: #065bb5; }
+    @media (max-width: 600px) { header h1 { font-size: 1.4em; } table, th, td { font-size: 12px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Recrutamento PCBA - Agente 3ª Classe</h1>
+    <p class="vagas">Vagas disponíveis: <span id="vagasCount">10</span></p>
+</header>
+
+<div class="container">
+    <form id="recrutamentoForm">
+        <label>1. Nome completo:</label>
+        <input type="text" id="nome" required>
+        <label>2. Idade:</label>
+        <input type="number" id="idade" required>
+        <label>3. RG/ID do jogo:</label>
+        <input type="text" id="rg" required>
+        <label>4. Discord (opcional):</label>
+        <input type="text" id="discord">
+        <label>5. Tempo no servidor:</label>
+        <input type="text" id="tempo" required>
+        <label>6. Experiência prévia em roleplay policial:</label>
+        <textarea id="exp" rows="3" required></textarea>
+        <label>7. Por que deseja entrar na PCBA?</label>
+        <textarea id="motivo" rows="3" required></textarea>
+        <label>8. Disponibilidade de horário:</label>
+        <input type="text" id="horario" required>
+        <label>9. Qualidade que mais se destaca:</label>
+        <input type="text" id="qualidade" required>
+        <label>10. Defeito que pretende melhorar:</label>
+        <input type="text" id="defeito" required>
+        <label>11. Conhecimentos em procedimentos policiais:</label>
+        <textarea id="conhecimentos" rows="3" required></textarea>
+        <label>12. Como se comporta em trabalho em equipe?</label>
+        <textarea id="trabalhoEquipe" rows="3" required></textarea>
+        <label>13. Situação de emergência: como reage?</label>
+        <textarea id="reatividade" rows="3" required></textarea>
+        <label>14. Objetivo ao entrar na PCBA:</label>
+        <textarea id="objetivo" rows="2" required></textarea>
+        <label>15. Assinatura (nome completo para confirmar):</label>
+        <input type="text" id="assinatura" required>
+        <button type="submit">Enviar Inscrição</button>
+    </form>
+
+    <h2>Inscrições Recebidas</h2>
+    <table id="inscricoesTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>RG/ID</th>
+                <th>Discord</th>
+                <th>Tempo</th>
+                <th>Motivo</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+let vagas = localStorage.getItem('vagasPCBA');
+vagas = vagas ? parseInt(vagas) : 10;
+document.getElementById('vagasCount').textContent = vagas;
+
+function atualizarTabela() {
+    let inscricoes = localStorage.getItem('inscricoesPCBA');
+    inscricoes = inscricoes ? JSON.parse(inscricoes) : [];
+    const tbody = document.querySelector("#inscricoesTable tbody");
+    tbody.innerHTML = "";
+    inscricoes.forEach((i, index) => {
+        const row = `<tr>
+            <td>${index + 1}</td>
+            <td>${i.nome}</td>
+            <td>${i.idade}</td>
+            <td>${i.rg}</td>
+            <td>${i.discord || '-'}</td>
+            <td>${i.tempo}</td>
+            <td>${i.motivo}</td>
+            <td>${i.data}</td>
+        </tr>`;
+        tbody.innerHTML += row;
+    });
+}
+
+atualizarTabela();
+
+const form = document.getElementById('recrutamentoForm');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(vagas <= 0){
+        alert("Desculpe, todas as vagas já foram preenchidas!");
+        return;
+    }
+
+    const resposta = {
+        nome: document.getElementById('nome').value,
+        idade: document.getElementById('idade').value,
+        rg: document.getElementById('rg').value,
+        discord: document.getElementById('discord').value,
+        tempo: document.getElementById('tempo').value,
+        exp: document.getElementById('exp').value,
+        motivo: document.getElementById('motivo').value,
+        horario: document.getElementById('horario').value,
+        qualidade: document.getElementById('qualidade').value,
+        defeito: document.getElementById('defeito').value,
+        conhecimentos: document.getElementById('conhecimentos').value,
+        trabalhoEquipe: document.getElementById('trabalhoEquipe').value,
+        reatividade: document.getElementById('reatividade').value,
+        objetivo: document.getElementById('objetivo').value,
+        assinatura: document.getElementById('assinatura').value,
+        data: new Date().toLocaleString()
+    };
+
+    let inscricoes = localStorage.getItem('inscricoesPCBA');
+    inscricoes = inscricoes ? JSON.parse(inscricoes) : [];
+    inscricoes.push(resposta);
+    localStorage.setItem('inscricoesPCBA', JSON.stringify(inscricoes));
+
+    vagas--;
+    localStorage.setItem('vagasPCBA', vagas);
+    document.getElementById('vagasCount').textContent = vagas;
+
+    alert("Inscrição enviada com sucesso! Boa sorte!");
+    form.reset();
+    atualizarTabela();
+
+    if(vagas <= 0){
+        document.querySelector('.vagas').classList.add('full');
+        document.querySelector('.vagas').textContent = "Todas as vagas foram preenchidas!";
+    }
+});
+</script>
+
+</body>
+</html>
