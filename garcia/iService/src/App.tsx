@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AppProvider, useApp } from "@/contexts/AppContext";
 import { Header } from "@/components/Header";
@@ -65,10 +65,10 @@ const App = () => (
         <AppProvider>
           <Toaster />
           <Sonner />
-          {/* Use Vite's base URL so the router works when the app is served from a subpath */}
-          <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>
+          {/* HashRouter works without server configuration - URLs will be /#/market, /#/profile etc */}
+          <HashRouter>
             <AppRoutes />
-          </BrowserRouter>
+          </HashRouter>
         </AppProvider>
       </TooltipProvider>
     </ThemeProvider>
