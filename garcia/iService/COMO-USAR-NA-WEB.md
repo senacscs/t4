@@ -25,11 +25,16 @@ Abra http://localhost:8080
 ```bash
 # Instalar dependências  
 npm install
-
+          
 # Fazer build para produção
 npm run build
 ```
 Isso cria uma pasta `dist/` com arquivos prontos para web.
+
+> Importante:
+- Foi adicionado `base: './'` em `vite.config.ts` para gerar caminhos relativos no build.
+- Removemos `<base href="/">` do `index.html` para não forçar caminhos absolutos.
+- Assim, o site funciona mesmo quando hospedado em subpastas (ex.: GitHub Pages).
 
 ## 🌐 Como hospedar na web
 
@@ -47,7 +52,8 @@ Isso cria uma pasta `dist/` com arquivos prontos para web.
 
 ### GitHub Pages
 1. Faça `npm run build` localmente
-2. Suba o conteúdo da pasta `dist/` para branch gh-pages
+2. Suba o conteúdo da pasta `dist/` para a branch `gh-pages`
+3. Ative o GitHub Pages apontando para a branch `gh-pages` (pasta root)
 
 ### Outros hosts (Surge, etc.)
 1. Faça `npm run build` localmente
