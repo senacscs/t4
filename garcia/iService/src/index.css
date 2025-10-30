@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 219 14% 97%;
+    --panel: 0 0% 100%;
+    --panel-alt: 200 30% 96%;
+    --ink: 230 15% 5%;
+    --ink-light: 0 0% 27%;
+    --brand: 245 100% 15%;
+    --brand-hover: 245 100% 20%;
+    --accent: 217 91% 60%;
+    --accent-soft: 217 100% 94%;
+    --accent-hover: 217 91% 50%;
+    --highlight: 22 100% 54%;
+    --highlight-soft: 22 100% 92%;
+    --danger: 0 100% 50%;
+    --radius: 1.125rem;
+    --radius-sm: 0.625rem;
+    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Tailwind compatibility */
+    --background: var(--bg);
+    --foreground: var(--ink);
+    --card: var(--panel);
+    --card-foreground: var(--ink);
+    --popover: var(--panel);
+    --popover-foreground: var(--ink);
+    --primary: var(--brand);
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: var(--ink);
+    --muted: 210 40% 96.1%;
+    --muted-foreground: var(--ink-light);
+    --destructive: var(--danger);
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: var(--accent);
+  }
+
+  .dark {
+    --bg: 222 40% 5%;
+    --panel: 222 35% 8%;
+    --panel-alt: 222 30% 11%;
+    --ink: 210 40% 98%;
+    --ink-light: 215 15% 70%;
+    --brand: 222 45% 17%;
+    --brand-hover: 222 45% 23%;
+    --accent: 217 91% 65%;
+    --accent-soft: 217 40% 18%;
+    --accent-hover: 217 91% 75%;
+    --highlight: 22 90% 58%;
+    --highlight-soft: 22 40% 15%;
+    
+    /* Tailwind compatibility */
+    --background: var(--bg);
+    --foreground: var(--ink);
+    --card: var(--panel);
+    --card-foreground: var(--ink);
+    --popover: var(--panel);
+    --popover-foreground: var(--ink);
+    --primary: 210 40% 98%;
+    --primary-foreground: var(--brand);
+    --secondary: var(--panel-alt);
+    --secondary-foreground: var(--ink);
+    --muted: var(--panel-alt);
+    --muted-foreground: var(--ink-light);
+    --destructive: var(--danger);
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: var(--accent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html, body, #root {
+    @apply h-full;
+  }
+}
