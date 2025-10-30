@@ -65,7 +65,8 @@ const App = () => (
         <AppProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          {/* Use Vite's base URL so the router works when the app is served from a subpath */}
+          <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>
             <AppRoutes />
           </BrowserRouter>
         </AppProvider>

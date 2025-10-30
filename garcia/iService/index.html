@@ -11,6 +11,9 @@
     <meta property="og:description" content="Plataforma de serviços rápidos - Encontre e ofereça serviços na sua região" />
     <meta property="og:type" content="website" />
 
+  <!-- Ensure relative URLs resolve correctly when deployed to a subpath -->
+  <base href="/">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +26,7 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <!-- Use absolute-rooted path so Vite and static hosts resolve correctly -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
