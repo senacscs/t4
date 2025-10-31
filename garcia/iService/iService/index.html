@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>iService • Serviços Rápidos</title>
+	<link rel="stylesheet" href="style.css" />
+		<!-- Ionicons -->
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+	<div id="app" class="app">
+		<!-- Header / Nav -->
+		<header class="site-top" role="banner">
+			<div class="top-inner">
+					<div class="brand" data-route="home" tabindex="0" role="link" aria-label="Ir para início">
+							<span class="logo-mark" aria-hidden="true"><ion-icon name="construct-outline"></ion-icon></span>
+							<span class="logo-text">iService</span>
+				</div>
+				<nav class="main-nav" aria-label="Navegação principal">
+					<ul class="nav-list" id="navList">
+						<li><button class="nav-btn" data-route="market">Serviços</button></li>
+						<li><button class="nav-btn" data-route="post">Oferecer</button></li>
+						<li><button class="nav-btn" data-route="profile">Perfil</button></li>
+					</ul>
+				</nav>
+						<div class="user-area" id="userArea">
+							<button id="themeToggle" class="nav-btn" aria-pressed="false" type="button" title="Alternar tema">
+								<ion-icon name="moon"></ion-icon>
+							</button>
+						</div>
+			</div>
+		</header>
+
+		<!-- Auth Screen -->
+		<main id="view-auth" class="view active" data-view="auth" aria-labelledby="authTitle">
+					<section class="auth-card" role="form">
+						<h1 id="authTitle">Entrar no iService</h1>
+						<p class="muted" id="authSubtitle">Escolha como deseja usar a plataforma.</p>
+						<form id="loginForm" class="form" novalidate>
+							<label class="field hidden" id="wrapName">Nome
+								<input id="fullName" maxlength="40" autocomplete="name" />
+							</label>
+										<label class="field">Email
+								<input id="email" type="email" required autocomplete="email" />
+							</label>
+							<label class="field">Senha
+								<input id="password" type="password" required autocomplete="current-password" />
+							</label>
+										<label class="field hidden" id="wrapPhone">Contato (WhatsApp / Telefone)
+											<input id="phone" type="tel" inputmode="tel" maxlength="16" placeholder="(DDD) 90000-0000" autocomplete="tel" />
+										</label>
+							<fieldset class="role-field">
+								<legend>Tipo de acesso</legend>
+								<label><input type="radio" name="role" value="cliente" checked /> Cidadão</label>
+								<label><input type="radio" name="role" value="pro" /> Profissional</label>
+								<label><input type="radio" name="role" value="ambos" /> Ambos</label>
+							</fieldset>
+							<div id="authStatus" class="form-status" role="status" aria-live="polite"></div>
+							<button class="btn primary full" type="submit" id="authSubmit">Entrar</button>
+							<p class="aux" id="modeLine">Primeira vez? <button type="button" class="link-btn" id="toggleAuthMode">Criar conta</button></p>
+						</form>
+					</section>
+		</main>
+
+		<!-- Marketplace -->
+		<main id="view-market" class="view" data-view="market" aria-labelledby="marketTitle" hidden>
+			<div class="page-head">
+				<h2 id="marketTitle">Encontrar serviço</h2>
+				<div class="search-bar" role="search">
+					<input id="searchInput" type="search" placeholder="Qual serviço você precisa?" aria-label="Pesquisar serviços" />
+					<button id="searchBtn" class="icon-btn" aria-label="Pesquisar">🔍</button>
+				</div>
+			</div>
+			<div id="filters" class="filters">
+				<button class="pill active" data-filter="all">Todos</button>
+				<button class="pill" data-filter="jardinagem">Jardinagem</button>
+				<button class="pill" data-filter="limpeza">Limpeza</button>
+				<button class="pill" data-filter="manutencao">Manutenção</button>
+				<button class="pill" data-filter="outros">Outros</button>
+			</div>
+			<section id="serviceResults" class="cards-grid" aria-live="polite"></section>
+			<template id="tplServiceCard">
+						<article class="card service-card" tabindex="0">
+					<header class="card-head">
+								<h3 class="svc-title"></h3>
+						<span class="badge cat"></span>
+					</header>
+							<div class="svc-icon-row"><ion-icon class="svc-ico" name="construct-outline"></ion-icon></div>
+					<p class="svc-desc"></p>
+					<div class="svc-meta">
+						<span class="rating" aria-label="Avaliação">★ <span class="rating-val"></span></span>
+						<span class="count" aria-label="Nº de serviços"></span>
+					</div>
+					<div class="svc-actions">
+						<button class="btn tiny outline ask-btn">Solicitar</button>
+						<button class="btn tiny ghost profile-btn">Ver Pro</button>
+					</div>
+				</article>
+			</template>
+		</main>
+
+		<!-- Post Service -->
+		<main id="view-post" class="view" data-view="post" aria-labelledby="postTitle" hidden>
+			<div class="page-head">
+				<h2 id="postTitle">Oferecer um serviço</h2>
+				<p class="muted">Cadastre um novo serviço rápido para ser encontrado.</p>
+			</div>
+			<form id="postForm" class="form wide" novalidate>
+				<label class="field">Título
+					<input id="svcTitle" maxlength="60" required />
+				</label>
+				<label class="field">Categoria
+					<select id="svcCat" required>
+						<option value="">Selecione…</option>
+						<option value="jardinagem">Jardinagem</option>
+						<option value="limpeza">Limpeza</option>
+						<option value="manutencao">Manutenção</option>
+						<option value="outros">Outros</option>
+					</select>
+				</label>
+				<label class="field">Descrição
+					<textarea id="svcDesc" rows="4" maxlength="400" required placeholder="Explique rapidamente o que inclui"></textarea>
+				</label>
+				<div class="grid-3">
+					<label class="field">Preço base (R$)
+						<input id="svcPrice" type="number" min="0" step="1" required />
+					</label>
+					<label class="field">Tempo médio (h)
+						<input id="svcEta" type="number" min="0.5" step="0.5" required />
+					</label>
+					<label class="field">Disponibilidade
+						<select id="svcAvail" required>
+							<option value="manha">Manhã</option>
+							<option value="tarde">Tarde</option>
+							<option value="noite">Noite</option>
+							<option value="integral">Integral</option>
+						</select>
+					</label>
+				</div>
+				<button class="btn primary" type="submit">Publicar serviço</button>
+				<div id="postStatus" class="form-status" role="status" aria-live="polite"></div>
+			</form>
+			<section class="my-services" aria-labelledby="myServicesTitle">
+				<h3 id="myServicesTitle">Meus serviços publicados</h3>
+				<div id="myServices" class="mini-cards"></div>
+			</section>
+		</main>
+
+		<!-- Profile -->
+		<main id="view-profile" class="view" data-view="profile" aria-labelledby="profileTitle" hidden>
+			<div class="page-head">
+				<h2 id="profileTitle">Meu Perfil</h2>
+			</div>
+			<section class="profile-summary">
+			<div class="avatar" aria-hidden="true"><ion-icon name="person-circle-outline"></ion-icon></div>
+				<div class="info">
+					<h3 id="profName">Usuário</h3>
+					<p class="role-line"><span id="profRole"></span></p>
+					<div class="stats" aria-label="Resumo de desempenho">
+						<div class="stat"><span id="statServices" class="val">0</span><span class="lbl">Serviços feitos</span></div>
+						<div class="stat"><span id="statHired" class="val">0</span><span class="lbl">Solicitações</span></div>
+						<div class="stat"><span id="statRating" class="val">0.0</span><span class="lbl">Avaliação</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="timeline" aria-labelledby="timelineTitle">
+				<h3 id="timelineTitle">Histórico recente</h3>
+				<ul id="historyList" class="history" aria-live="polite"></ul>
+			</section>
+			<section class="feedback" aria-labelledby="feedbackTitle">
+				<h3 id="feedbackTitle">Avaliações recebidas</h3>
+				<ul id="feedbackList" class="feedback-list"></ul>
+			</section>
+			<section class="jobs" aria-labelledby="jobsTitle">
+				<h3 id="jobsTitle">Meus Trabalhos / Solicitações</h3>
+				<p class="muted tiny">Fluxo: Solicitado → Aceito → Concluído. (Simulação local)</p>
+				<ul id="jobsList" class="jobs-list" aria-live="polite"></ul>
+			</section>
+					<button id="logoutBtn" class="btn danger outline">Sair</button>
+		</main>
+				<!-- Modal Solicitação -->
+				<div id="requestModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="reqTitle">
+					<div class="modal-box">
+						<button class="close-modal" id="closeReq" aria-label="Fechar"><ion-icon name="close"></ion-icon></button>
+						<header class="modal-head">
+							<h3 id="reqTitle">Confirmar Solicitação</h3>
+						</header>
+						<div class="modal-body" id="reqBody">
+							<!-- filled by JS -->
+						</div>
+						<footer class="modal-foot">
+							<button class="btn outline" id="cancelReq" type="button">Cancelar</button>
+							<button class="btn primary" id="confirmReq" type="button">Confirmar</button>
+						</footer>
+					</div>
+				</div>
+				<!-- Chat Panel -->
+				<aside id="chatPanel" class="chat hidden" aria-labelledby="chatTitle" role="dialog" aria-modal="false">
+					<header class="chat-head">
+						<h3 id="chatTitle">Chat</h3>
+						<button id="closeChat" class="icon-btn small" aria-label="Fechar chat"><ion-icon name="close"></ion-icon></button>
+					</header>
+					<div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+					<div class="chat-quick" role="group" aria-label="Respostas rápidas">
+						<button class="qreply" data-msg="Chego em 30 min">30 min</button>
+						<button class="qreply" data-msg="Envie foto do problema">Foto?</button>
+						<button class="qreply" data-msg="Podemos reagendar para amanhã?">Reagendar</button>
+					</div>
+					<form id="chatForm" class="chat-form" autocomplete="off">
+						<input id="chatInput" placeholder="Mensagem" aria-label="Mensagem" />
+						<button class="btn primary" type="submit">Enviar</button>
+					</form>
+				</aside>
+	</div>
+	<script src="app.js" defer></script>
+</body>
+</html>
