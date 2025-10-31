@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOGIN</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+body{background:#f4f7fb;display:flex;align-items:center;justify-content:center;min-height:100vh;color:#111}
+.card{background:#fff;padding:32px 28px;border-radius:12px;box-shadow:0 6px 24px rgba(36,59,85,0.08);width:100%;max-width:400px;text-align:center}
+h2{margin-bottom:20px;font-weight:700;font-size:20px}
+input{width:100%;padding:10px;border:1px solid #e4e8ee;border-radius:8px;margin-bottom:12px;font-size:14px}
+button{width:100%;padding:10px 0;border-radius:8px;font-size:14px;cursor:pointer}
+.primary{background:#0b63d9;color:#fff;border:0}
+.primary[disabled]{opacity:.6;cursor:not-allowed}
+.links{margin-top:14px;font-size:14px}
+a{color:#0b63d9;text-decoration:none}
+a:hover{text-decoration:underline}
+.toast{position:fixed;top:20px;right:20px;padding:12px 18px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:space-between;min-width:220px;z-index:9999;opacity:0;transition:opacity .3s,transform .2s;transform:translateY(-6px)}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast button{background:transparent;border:0;color:#fff;font-size:18px;cursor:pointer;margin-left:10px}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>ENTRAR</h2>
+<input id="login-email" type="email" placeholder="E-mail" required>
+<input id="login-password" type="password" placeholder="Senha" required>
+<button class="primary" id="login-btn">Entrar</button>
+<div class="links"><a href="signup.html">Criar conta</a></div>
+</div>
+<div class="toast" id="toast"><span id="toast-msg"></span><button id="toast-close">&times;</button></div>
+<script>
+const loginBtn=document.getElementById('login-btn');
+let users=JSON.parse(localStorage.getItem('users'))||[];
+
+function showToast(msg,type='success'){
+  const t=document.getElementById('toast');
+  t.className='toast show';
+  t.style.background=type==='success'?'#cce5ff':'#f8d7da';
+  document.getElementById('toast-msg').textContent=msg;
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+document.getElementById('toast-close').addEventListener('click',()=>document.getElementById('toast').classList.remove('show'));
+
+loginBtn.addEventListener('click',()=>{
+  const email=document.getElementById('login-email').value.trim();
+  const password=document.getElementById('login-password').value.trim();
+  
+  if(!email||!password){
+    showToast('Preencha todos os campos','error');
+    return;
+  }
+  
+  const user=users.find(u=>u.email===email && u.password===password);
+  
+  if(user){
+    sessionStorage.setItem('loggedUser',JSON.stringify(user));
+    showToast('Login realizado com sucesso!','success');
+    setTimeout(()=>{
+      switch(user.role){
+        case 'admin': window.location.href='admin.html'; break;
+        case 'manager': window.location.href='gerente.html'; break;
+        case 'user': window.location.href='user.html'; break;
+      }
+    },1000);
+  } else {
+    showToast('Email ou senha incorretos','error');
+  }
+});
+</script>
+</body>
+</html>

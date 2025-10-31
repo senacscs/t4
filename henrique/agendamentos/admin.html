@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Senac • Agendamentos</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+body{background:#f4f7fb;color:#111;min-height:100vh;position:relative}
+.app{display:grid;grid-template-columns:260px 1fr;gap:20px;max-width:1200px;margin:28px auto;padding:20px}
+.sidebar{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(36,59,85,0.06)}
+.brand{font-weight:700;font-size:18px;margin-bottom:12px}
+.cargo{color:#666;font-size:14px;margin-bottom:8px}
+.menu{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.menu button{background:transparent;border:0;padding:10px;text-align:left;border-radius:8px;cursor:pointer;font-size:14px;transition:.2s}
+.menu button:hover{background:#eef6ff}
+.menu button.active{background:#eef6ff;font-weight:600;color:#0b63d9}
+header.topbar{display:flex;justify-content:space-between;align-items:center}
+.muted{color:#556;font-size:14px}
+.panel{background:#fff;padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(33,50,80,.05)}
+.grid-salas{display:grid;grid-template-columns:repeat(3,220px);gap:16px;margin-top:12px;justify-content:flex-start}
+.sala-card{background:#fff;border:1px solid #e4e8ee;border-radius:10px;padding:16px;text-align:center;cursor:pointer;transition:.2s;position:relative}
+.sala-card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.sala-card h3{font-size:16px;margin-bottom:6px;color:#0b63d9}
+.sala-card p{font-size:13px;color:#444;margin-bottom:4px}
+.btn-excluir-sala{background:#f03e3e;color:#fff;border:none;padding:6px 10px;border-radius:6px;font-size:12px;cursor:pointer;transition:.2s;position:absolute;top:8px;right:8px}
+.btn-excluir-sala:hover{background:#c92a2a}
+.painel-agendamento{display:flex;justify-content:space-between;align-items:center;border:1px solid #e4e8ee;border-radius:10px;padding:12px;margin:8px 0}
+input{padding:8px;border:1px solid #ccc;border-radius:6px;font-size:14px;width:100%}
+button{cursor:pointer;font-size:14px;border-radius:8px;transition:.2s}
+.btn-primary{background:#0b63d9;color:#fff;border:none;padding:8px 12px}
+.btn-primary:hover{background:#084fab}
+.btn-danger{background:#f03e3e;color:#fff;border:none;padding:8px 12px}
+.btn-danger:hover{background:#c92a2a}
+.btn-group{display:flex;gap:8px}
+.toast{position:fixed;top:20px;right:20px;padding:12px 18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15);z-index:9999;color:#111;opacity:0;transition:opacity .3s}
+.toast.show{opacity:1}
+.toast.success{background:#cce5ff}
+.toast.error{background:#f8d7da}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">Senac • Agendamentos</div>
+    <div class="cargo">Administrador</div>
+    <div class="menu">
+      <button id="btn-salas" class="active">Salas</button>
+      <button id="btn-agendamentos">Agendamentos</button>
+      <button id="btn-conta">Minha conta</button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2 id="titulo-pagina">Salas</h2>
+        <div class="muted" id="descricao-pagina">Gerencie as salas disponíveis para agendamento.</div>
+      </div>
+      <button class="btn-primary" id="logout-btn">Sair</button>
+    </header>
+    <section id="content"></section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const content=document.getElementById('content'),
+      toast=document.getElementById('toast'),
+      titulo=document.getElementById('titulo-pagina'),
+      descricao=document.getElementById('descricao-pagina'),
+      btnSalas=document.getElementById('btn-salas'),
+      btnAgend=document.getElementById('btn-agendamentos'),
+      btnConta=document.getElementById('btn-conta'),
+      logoutBtn=document.getElementById('logout-btn');
+
+const loggedUser=JSON.parse(sessionStorage.getItem('loggedUser'));
+if(!loggedUser){setTimeout(()=>window.location.href='index.html',1000);}
+
+function showToast(msg,type='success'){
+  toast.textContent=msg;
+  toast.className='toast show '+type;
+  setTimeout(()=>toast.classList.remove('show'),2500);
+}
+
+let salas = JSON.parse(localStorage.getItem('salas')) || [];
+let agendamentos = JSON.parse(localStorage.getItem('agendamentos')) || [];
+
+function atualizarMenu(ativo){
+  document.querySelectorAll('.menu button').forEach(btn=>btn.classList.remove('active'));
+  ativo.classList.add('active');
+}
+
+function atualizarListaSalas(){
+  const lista=document.getElementById('lista-salas');
+  if(!lista) return;
+  if(salas.length===0){
+    lista.innerHTML='<p class="muted">Nenhuma sala cadastrada.</p>';
+    return;
+  }
+  lista.innerHTML = salas.map((s,i)=>`
+    <div class="sala-card">
+      <h3>Sala ${s.numero}</h3>
+      <p>Função: ${s.funcao}</p>
+      <p>Piso: ${s.piso}</p>
+      <button class="btn-excluir-sala" data-index="${i}">Excluir</button>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.btn-excluir-sala').forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      const idx=btn.dataset.index;
+      salas.splice(idx,1);
+      localStorage.setItem('salas',JSON.stringify(salas));
+      showToast('Sala excluída com sucesso!');
+      atualizarListaSalas();
+    });
+  });
+}
+
+function mostrarSalas(){
+  titulo.textContent='Salas';
+  descricao.textContent='Gerencie as salas disponíveis para agendamento.';
+  content.innerHTML=`
+    <div class="panel">
+      <h3>Adicionar nova sala</h3>
+      <div class="formulario-sala" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+        <input type="text" id="numero" placeholder="Número da sala">
+        <input type="text" id="funcao" placeholder="Função da sala">
+        <input type="text" id="piso" placeholder="Piso da sala">
+        <button class="btn-primary" id="btn-add">Adicionar sala</button>
+      </div>
+      <h3 style="margin-top:18px;">Salas cadastradas</h3>
+      <div class="grid-salas" id="lista-salas"></div>
+    </div>
+  `;
+  atualizarListaSalas();
+
+  document.getElementById('btn-add').addEventListener('click',()=>{
+    const numero=document.getElementById('numero').value.trim(),
+          funcao=document.getElementById('funcao').value.trim(),
+          piso=document.getElementById('piso').value.trim();
+    if(!numero||!funcao||!piso){showToast('Preencha todos os campos.','error');return;}
+    if(salas.some(s=>s.numero===numero)){showToast('Já existe uma sala com esse número.','error');return;}
+    salas.push({numero,funcao,piso});
+    localStorage.setItem('salas',JSON.stringify(salas));
+    showToast('Sala adicionada com sucesso!');
+    atualizarListaSalas();
+    document.getElementById('numero').value='';
+    document.getElementById('funcao').value='';
+    document.getElementById('piso').value='';
+  });
+}
+
+function mostrarAgendamentos(){
+  titulo.textContent='Agendamentos';
+  descricao.textContent='Visualize e gerencie todos os agendamentos confirmados.';
+  
+  const confirmados = agendamentos.filter(a => a.status === 'confirmado');
+
+  if(confirmados.length === 0){
+    content.innerHTML=`<div class="panel"><p class="muted">Nenhum agendamento confirmado.</p></div>`;
+    return;
+  }
+
+  content.innerHTML=`<div class="panel"></div>`;
+  const panel = content.querySelector('.panel');
+
+  confirmados.forEach((a,i)=>{
+    const div = document.createElement('div');
+    div.className = 'painel-agendamento';
+    div.innerHTML = `
+      <div>
+        <p><strong>Usuário:</strong> ${a.usuario}</p>
+        <p><strong>Sala:</strong> ${a.numero}</p>
+        <p><strong>Data:</strong> ${a.data}</p>
+        <p><strong>Horário:</strong> ${a.inicio} - ${a.fim}</p>
+        <p><strong>Status:</strong> ${a.status}</p>
+      </div>
+      <div class="btn-group">
+        <button class="btn-danger" data-index="${i}">Excluir</button>
+      </div>
+    `;
+    panel.appendChild(div);
+  });
+
+  panel.querySelectorAll('.btn-danger').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const idx = btn.dataset.index;
+      const confirmedIndex = agendamentos.findIndex(a=>a.status==='confirmado' && a.usuario===confirmados[idx].usuario && a.numero===confirmados[idx].numero && a.data===confirmados[idx].data && a.inicio===confirmados[idx].inicio);
+      if(confirmedIndex > -1){
+        agendamentos.splice(confirmedIndex,1);
+        localStorage.setItem('agendamentos', JSON.stringify(agendamentos));
+        showToast('Agendamento excluído!');
+        mostrarAgendamentos();
+      }
+    });
+  });
+}
+
+function mostrarConta(){
+  titulo.textContent='Minha conta';
+  descricao.textContent='Seus dados de administrador.';
+  content.innerHTML=`
+    <div class="panel">
+      <p><strong>Nome:</strong> ${loggedUser.name}</p>
+      <p><strong>Email:</strong> ${loggedUser.email}</p>
+      <p><strong>Cargo:</strong> Administrador</p>
+    </div>
+  `;
+}
+
+btnSalas.addEventListener('click',()=>{atualizarMenu(btnSalas); mostrarSalas();});
+btnAgend.addEventListener('click',()=>{atualizarMenu(btnAgend); mostrarAgendamentos();});
+btnConta.addEventListener('click',()=>{atualizarMenu(btnConta); mostrarConta();});
+logoutBtn.addEventListener('click',()=>{sessionStorage.removeItem('loggedUser'); window.location.href='index.html';});
+
+mostrarSalas();
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Senac • Agendamentos</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+body{background:#f4f7fb;color:#111;min-height:100vh;position:relative}
+.app{display:grid;grid-template-columns:260px 1fr;gap:20px;max-width:1200px;margin:28px auto;padding:20px}
+.sidebar{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(36,59,85,0.06)}
+.brand{font-weight:700;font-size:18px;margin-bottom:12px}
+.cargo{color:#666;font-size:14px;margin-bottom:8px}
+.menu{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.menu button{background:transparent;border:0;padding:10px;text-align:left;border-radius:8px;cursor:pointer;font-size:14px;transition:.2s}
+.menu button:hover{background:#eef6ff}
+.menu button.active{background:#eef6ff;font-weight:600;color:#0b63d9}
+header.topbar{display:flex;justify-content:space-between;align-items:center}
+.muted{color:#556;font-size:14px}
+.panel{background:#fff;padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(33,50,80,.05)}
+.painel-agendamento{display:flex;justify-content:space-between;align-items:center;border:1px solid #e4e8ee;border-radius:10px;padding:12px;margin:8px 0}
+button{cursor:pointer;font-size:14px;border-radius:8px;transition:.2s}
+.btn-primary{background:#0b63d9;color:#fff;border:none;padding:8px 12px}
+.btn-primary:hover{background:#084fab}
+.btn-danger{background:#f03e3e;color:#fff;border:none;padding:8px 12px}
+.btn-danger:hover{background:#c92a2a}
+.btn-group{display:flex;gap:8px}
+.btn-sair{background:#0b63d9;color:#fff;border:none;padding:8px 12px}
+.btn-sair:hover{background:#084fab}
+.toast{position:fixed;top:20px;right:20px;padding:12px 18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:9999;color:#111;opacity:0;transition:opacity .3s}
+.toast.show{opacity:1}
+.toast.success{background:#cce5ff}
+.toast.error{background:#f8d7da}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">Senac • Agendamentos</div>
+<div class="cargo">Gerente</div>
+<div class="menu">
+<button id="btn-agendamentos" class="active">Agendamentos</button>
+<button id="btn-conta">Minha conta</button>
+</div>
+</aside>
+<main class="main">
+<header class="topbar">
+<div>
+<h2 id="titulo-pagina">Agendamentos</h2>
+<div class="muted" id="descricao-pagina">Gerencie e confirme os agendamentos realizados pelos usuários.</div>
+</div>
+<button class="btn-sair" id="logout-btn">Sair</button>
+</header>
+<section id="content"></section>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const content=document.getElementById('content'),
+      toast=document.getElementById('toast'),
+      titulo=document.getElementById('titulo-pagina'),
+      descricao=document.getElementById('descricao-pagina'),
+      btnAgend=document.getElementById('btn-agendamentos'),
+      btnConta=document.getElementById('btn-conta'),
+      logoutBtn=document.getElementById('logout-btn');
+
+const loggedUser=JSON.parse(sessionStorage.getItem('loggedUser'));
+if(!loggedUser){setTimeout(()=>window.location.href='index.html',1000);}
+
+function showToast(msg,type='success'){
+    toast.textContent=msg;
+    toast.className='toast show '+type;
+    setTimeout(()=>toast.classList.remove('show'),2500);
+}
+
+let agendamentos = JSON.parse(localStorage.getItem('agendamentos')) || [];
+
+function atualizarMenu(ativo){
+    document.querySelectorAll('.menu button').forEach(btn=>btn.classList.remove('active'));
+    ativo.classList.add('active');
+}
+
+function salvarAgendamentos(){
+    localStorage.setItem('agendamentos', JSON.stringify(agendamentos));
+}
+
+function mostrarAgendamentos(){
+    titulo.textContent='Agendamentos';
+    descricao.textContent='Gerencie os agendamentos pendentes e confirmados.';
+    if(agendamentos.length===0){
+        content.innerHTML=`<div class="panel"><p class="muted">Nenhum agendamento pendente ou confirmado.</p></div>`;
+        return;
+    }
+
+    content.innerHTML = '<div class="panel"></div>';
+    const panel = content.querySelector('.panel');
+
+    agendamentos.forEach((a,i)=>{
+        const div = document.createElement('div');
+        div.className='painel-agendamento';
+        div.innerHTML=`
+            <div>
+                <p><strong>Usuário:</strong> ${a.usuario}</p>
+                <p><strong>Sala:</strong> ${a.numero}</p>
+                <p><strong>Data:</strong> ${a.data}</p>
+                <p><strong>Horário:</strong> ${a.inicio} - ${a.fim}</p>
+                <p><strong>Status:</strong> ${a.status}</p>
+            </div>
+            <div class="btn-group">
+                ${a.status==='pendente'?`<button class="btn-primary" data-index="${i}">Confirmar</button>
+                <button class="btn-danger" data-index="${i}">Excluir</button>`:''}
+            </div>
+        `;
+        panel.appendChild(div);
+    });
+
+    panel.querySelectorAll('.btn-primary').forEach(btn=>{
+        btn.addEventListener('click', e=>{
+            const idx=btn.dataset.index;
+            agendamentos[idx].status='confirmado';
+            salvarAgendamentos();
+            showToast('Agendamento confirmado!');
+            mostrarAgendamentos();
+        });
+    });
+
+    panel.querySelectorAll('.btn-danger').forEach(btn=>{
+        btn.addEventListener('click', e=>{
+            const idx=btn.dataset.index;
+            agendamentos.splice(idx,1);
+            salvarAgendamentos();
+            showToast('Agendamento excluído!');
+            mostrarAgendamentos();
+        });
+    });
+}
+
+function mostrarConta(){
+    titulo.textContent='Minha conta';
+    descricao.textContent='Seus dados de gerente.';
+    content.innerHTML=`
+    <div class="panel">
+      <p><strong>Nome:</strong> ${loggedUser.name}</p>
+      <p><strong>Email:</strong> ${loggedUser.email}</p>
+      <p><strong>Cargo:</strong> Gerente</p>
+    </div>
+    `;
+}
+
+btnAgend.addEventListener('click',()=>{atualizarMenu(btnAgend); mostrarAgendamentos();});
+btnConta.addEventListener('click',()=>{atualizarMenu(btnConta); mostrarConta();});
+logoutBtn.addEventListener('click',()=>{sessionStorage.removeItem('loggedUser'); window.location.href='index.html';});
+
+mostrarAgendamentos();
+</script>
+</body>
+</html>
