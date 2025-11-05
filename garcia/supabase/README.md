@@ -2,9 +2,9 @@
 
 Este projeto inclui uma página de votação simples (1 vs 2) que usa Supabase como banco de dados e atualiza o placar em tempo real.
 
-- Página da votação: `css/supabase/index.html`
-- Lógica do app: `js/vote.js` (ESM, carrega o SDK do Supabase via CDN)
-- Configuração de chaves: `js/config.js` (crie a partir de `js/config.example.js`)
+- Página da votação: `garcia/supabase/index.html` (ou abra a pasta `garcia/supabase`)
+- Lógica do app: `garcia/supabase/vote.js` (ESM, carrega o SDK do Supabase via CDN)
+- Configuração de chaves: `garcia/supabase/config.js` (edite este arquivo e preencha suas credenciais)
 
 ## 1) Configurar banco no Supabase
 
@@ -36,12 +36,12 @@ Atenção: As políticas acima permitem que qualquer usuário (chave anônima) f
 
 ## 2) Configurar o front-end
 
-1. Copie `js/config.example.js` para `js/config.js` e edite:
-   ```js
-   export const SUPABASE_URL = "https://SEU-PROJETO.supabase.co";
-   export const SUPABASE_ANON_KEY = "SUA-ANON-KEY";
-   ```
-2. Abra a página `css/supabase/index.html` em um servidor HTTP local (necessário porque usamos módulos ES).
+1. Edite `garcia/supabase/config.js` e preencha as variáveis `SUPABASE_URL` e `SUPABASE_ANON_KEY` com os valores do seu projeto Supabase.
+  ```js
+  export const SUPABASE_URL = "https://SEU-PROJETO.supabase.co";
+  export const SUPABASE_ANON_KEY = "SUA-ANON-KEY";
+  ```
+2. Abra a página `garcia/supabase/index.html` em um servidor HTTP local (necessário porque usamos módulos ES).
 
 ### Servindo localmente
 
