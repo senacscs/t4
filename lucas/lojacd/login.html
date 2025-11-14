@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — TechnoZone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #290030, #6b004c);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: rgba(25, 0, 35, 0.9);
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      color: #f1e5f5;
+      border: 1px solid #b4dd1e;
+    }
+
+    .login-box h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #b4dd1e;
+    }
+
+    .login-box h1 span {
+      color: rgba(255,20,147,0.6);
+    }
+
+    .login-box h2 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #e0cfe6;
+      margin-bottom: 25px;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 6px;
+      background-color: rgba(255,20,147,0.6);
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: #d1b7d9;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #b4dd1e;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #b4dd1e;
+    }
+
+    .links {
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+
+    .links a {
+      color: #e0cfe6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Techno<span>Zone</span></h1>
+    <h2>Acesso à conta</h2>
+
+    <form action="index.html" method="get">
+      <input type="email" placeholder="E-mail" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <div class="links">
+      <p>Não tem uma conta? <a href="cadastro.html">Crie agora</a></p>
+      <p><a href="index.html">Voltar à página inicial</a></p>
+    </div>
+  </div>
+</body>
+</html>
+ 

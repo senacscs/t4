@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TechnoZone</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="none" fill="none"></circle>
+          <path d="M7 12a5 5 0 1 1 10 0 5 5 0 0 1-10 0z" fill="none"></path>
+        </svg>
+        <span class="brand">Techno<span>Zone</span></span>
+      </div>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-container">
+          <button class="icon-btn" id="searchToggle" title="Pesquisar" aria-label="Pesquisar">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </button>
+          <input type="text" id="searchInput" placeholder="Buscar álbum..." />
+        </div>
+
+        <a href="login.html" class="icon-btn" title="Login" aria-label="Login">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </a>
+
+        <button class="cart-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-11z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="10" cy="20" r="1" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1" fill="currentColor"/>
+          </svg>
+          <span>Carrinho</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="destaques">
+    <div class="container hero-inner">
+      <h1><span class="neon-1">Sinta a batida,</span><br><span class="neon-2">reviva a era</span></h1>
+      <p class="hero-sub">CDs físicos originais das maiores divas pop — edições limitadas e cheias de nostalgia.</p>
+      <div class="hero-cta">
+        <a href="#colecao" class="btn-cta">Ver todos os produtos</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-content" id="colecao">
+    <h2 class="section-title">Coleção Pop — Edições em destaque</h2>
+
+<div class="grid-cards">
+  <article class="card album" data-title="BRAT — Charli XCX">
+    <figure class="card-media">
+      <img src="cd/brat.png">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">BRAT — Charli XCX</h3>
+      <p class="card-meta">2024</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="BRAT — Charli XCX">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Ultraviolence - Lana Del Rey">
+    <figure class="card-media">
+      <img src="cd/ultraviolence.jpg">
+    </figure>
+    <div class="card-body">
+      <span class="tag">Indie</span>
+      <h3 class="card-title">Ultraviolence - Lana Del Rey</h3>
+      <p class="card-meta">2014</p>
+      <div class="card-footer">
+        <div class="price">R$ 64,90</div>
+        <button class="btn-add" data-title="Ultraviolence - Lana Del Rey">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Born This Way — Lady Gaga">
+    <figure class="card-media">
+      <img src="cd/bornthisway.webp">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">Born This Way — Lady Gaga</h3>
+      <p class="card-meta">2011</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="Born This Way — Lady Gaga">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Fancy That — PinkPatheress">
+    <figure class="card-media">
+      <img src="cd/fancythat.jpg">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">Fancy That — PinkPatheress</h3>
+      <p class="card-meta">2025</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="Fancy That — PinkPatheress">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Planet Her — Doja Cat">
+    <figure class="card-media">
+      <img src="cd/planether.png">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">Planet Her — Doja Cat</h3>
+      <p class="card-meta">2021</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="Planet Her — Doja Cat">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Short n' Sweet — Sabrina Carpenter">
+    <figure class="card-media">
+      <img src="cd/shortnsweet.png">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">Short n' Sweet — Sabrina Carpenter</h3>
+      <p class="card-meta">2024</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="Short n' Sweet — Sabrina Carpenter">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Addison — Addison Rae">
+    <figure class="card-media">
+      <img src="cd/addison.jpg">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">Addison — Addison Rae</h3>
+      <p class="card-meta">2025</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="Addison — Addison Rae">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="K12 — Melanie Martinez">
+    <figure class="card-media">
+      <img src="cd/k12.avif">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">K12 — Melanie Martinez</h3>
+      <p class="card-meta">2019</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="K12 — Melanie Martinez">Adicionar</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="card album" data-title="Renaissance — Beyonce">
+    <figure class="card-media">
+      <img src="cd/renaissance.png">
+    </figure>
+    <div class="card-body">
+      <span class="tag">POP</span>
+      <h3 class="card-title">Renaissance — Beyonce</h3>
+      <p class="card-meta">2022</p>
+      <div class="card-footer">
+        <div class="price">R$ 59,90</div>
+        <button class="btn-add" data-title="Renaissance — Beyonce">Adicionar</button>
+      </div>
+    </div>
+  </article>
+</div>
+
+    </div>
+  </main>
+
+  <section class="about" id="sobre">
+    <div class="container about-inner">
+      <h2>Sobre a TechnoZone</h2>
+      <p>Na TechnoZone reunimos edições físicas que marcaram o pop. Nossa curadoria busca capas icônicas, edições limitadas e a sensação única do vinil/CD na prateleira — nostalgia com qualidade.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="brand small">Techno<span>Zone</span></span>
+        <p>© 2025 TechnoZone — Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="https://www.instagram.com/lucasazzze/">Instagram</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+  const searchBtn = document.getElementById('searchBtn');
+  const searchInput = document.getElementById('searchInput');
+  const albums = document.querySelectorAll('.album');
+
+  // Mostrar/ocultar o campo de busca
+  searchBtn.addEventListener('click', () => {
+    searchInput.classList.toggle('active');
+    searchInput.focus();
+  });
+
+  // Filtrar produtos conforme o texto digitado
+  searchInput.addEventListener('input', () => {
+    const term = searchInput.value.toLowerCase();
+
+    albums.forEach(album => {
+      const title = album.getAttribute('data-title').toLowerCase();
+      if (title.includes(term)) {
+        album.classList.remove('hidden');
+      } else {
+        album.classList.add('hidden');
+      }
+    });
+  });
+</script>
+</body>
+</html>
