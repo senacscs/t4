@@ -31,6 +31,7 @@
       </nav>
 
       <div class="header-actions">
+        <!-- searchToggle ID abaixo corresponde ao script -->
         <div class="search-container">
           <button class="icon-btn" id="searchToggle" title="Pesquisar" aria-label="Pesquisar">
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
@@ -38,6 +39,7 @@
               <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
             </svg>
           </button>
+          <!-- input com id searchInput -->
           <input type="text" id="searchInput" placeholder="Buscar álbum..." />
         </div>
 
@@ -54,7 +56,7 @@
             <circle cx="10" cy="20" r="1" fill="currentColor"/>
             <circle cx="18" cy="20" r="1" fill="currentColor"/>
           </svg>
-          <span>Carrinho</span>
+          <a href="carrinho.html">Carrinho</a>
         </button>
       </div>
     </div>
@@ -73,144 +75,124 @@
   <main class="container main-content" id="colecao">
     <h2 class="section-title">Coleção Pop — Edições em destaque</h2>
 
-<div class="grid-cards">
-  <article class="card album" data-title="BRAT — Charli XCX">
-    <figure class="card-media">
-      <img src="cd/brat.png">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">BRAT — Charli XCX</h3>
-      <p class="card-meta">2024</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="BRAT — Charli XCX">Adicionar</button>
-      </div>
-    </div>
-  </article>
+    <div class="grid-cards">
+      <article class="card album" data-title="BRAT — Charli XCX">
+        <figure class="card-media"><img src="cd/brat.png" alt="BRAT — Charli XCX"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">BRAT — Charli XCX</h3>
+          <p class="card-meta">2024</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="BRAT — Charli XCX">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Ultraviolence - Lana Del Rey">
-    <figure class="card-media">
-      <img src="cd/ultraviolence.jpg">
-    </figure>
-    <div class="card-body">
-      <span class="tag">Indie</span>
-      <h3 class="card-title">Ultraviolence - Lana Del Rey</h3>
-      <p class="card-meta">2014</p>
-      <div class="card-footer">
-        <div class="price">R$ 64,90</div>
-        <button class="btn-add" data-title="Ultraviolence - Lana Del Rey">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="Ultraviolence - Lana Del Rey">
+        <figure class="card-media"><img src="cd/ultraviolence.jpg" alt="Ultraviolence"></figure>
+        <div class="card-body">
+          <span class="tag">Indie</span>
+          <h3 class="card-title">Ultraviolence - Lana Del Rey</h3>
+          <p class="card-meta">2014</p>
+          <div class="card-footer">
+            <div class="price">R$ 64,90</div>
+            <button class="btn-add" data-title="Ultraviolence - Lana Del Rey">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Born This Way — Lady Gaga">
-    <figure class="card-media">
-      <img src="cd/bornthisway.webp">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">Born This Way — Lady Gaga</h3>
-      <p class="card-meta">2011</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="Born This Way — Lady Gaga">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="Born This Way — Lady Gaga">
+        <figure class="card-media"><img src="cd/bornthisway.webp" alt="Born This Way"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">Born This Way — Lady Gaga</h3>
+          <p class="card-meta">2011</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="Born This Way — Lady Gaga">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Fancy That — PinkPatheress">
-    <figure class="card-media">
-      <img src="cd/fancythat.jpg">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">Fancy That — PinkPatheress</h3>
-      <p class="card-meta">2025</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="Fancy That — PinkPatheress">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="Fancy That — PinkPatheress">
+        <figure class="card-media"><img src="cd/fancythat.jpg" alt="Fancy That"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">Fancy That — PinkPatheress</h3>
+          <p class="card-meta">2025</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="Fancy That — PinkPatheress">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Planet Her — Doja Cat">
-    <figure class="card-media">
-      <img src="cd/planether.png">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">Planet Her — Doja Cat</h3>
-      <p class="card-meta">2021</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="Planet Her — Doja Cat">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="Planet Her — Doja Cat">
+        <figure class="card-media"><img src="cd/planether.png" alt="Planet Her"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">Planet Her — Doja Cat</h3>
+          <p class="card-meta">2021</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="Planet Her — Doja Cat">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Short n' Sweet — Sabrina Carpenter">
-    <figure class="card-media">
-      <img src="cd/shortnsweet.png">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">Short n' Sweet — Sabrina Carpenter</h3>
-      <p class="card-meta">2024</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="Short n' Sweet — Sabrina Carpenter">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="Short n' Sweet — Sabrina Carpenter">
+        <figure class="card-media"><img src="cd/shortnsweet.png" alt="Short n' Sweet"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">Short n' Sweet — Sabrina Carpenter</h3>
+          <p class="card-meta">2024</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="Short n' Sweet — Sabrina Carpenter">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Addison — Addison Rae">
-    <figure class="card-media">
-      <img src="cd/addison.jpg">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">Addison — Addison Rae</h3>
-      <p class="card-meta">2025</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="Addison — Addison Rae">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="Addison — Addison Rae">
+        <figure class="card-media"><img src="cd/addison.jpg" alt="Addison"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">Addison — Addison Rae</h3>
+          <p class="card-meta">2025</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="Addison — Addison Rae">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="K12 — Melanie Martinez">
-    <figure class="card-media">
-      <img src="cd/k12.avif">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">K12 — Melanie Martinez</h3>
-      <p class="card-meta">2019</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="K12 — Melanie Martinez">Adicionar</button>
-      </div>
-    </div>
-  </article>
+      <article class="card album" data-title="K12 — Melanie Martinez">
+        <figure class="card-media"><img src="cd/k12.avif" alt="K12"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">K12 — Melanie Martinez</h3>
+          <p class="card-meta">2019</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="K12 — Melanie Martinez">Adicionar</button>
+          </div>
+        </div>
+      </article>
 
-  <article class="card album" data-title="Renaissance — Beyonce">
-    <figure class="card-media">
-      <img src="cd/renaissance.png">
-    </figure>
-    <div class="card-body">
-      <span class="tag">POP</span>
-      <h3 class="card-title">Renaissance — Beyonce</h3>
-      <p class="card-meta">2022</p>
-      <div class="card-footer">
-        <div class="price">R$ 59,90</div>
-        <button class="btn-add" data-title="Renaissance — Beyonce">Adicionar</button>
-      </div>
-    </div>
-  </article>
-</div>
-
-    </div>
+      <article class="card album" data-title="Renaissance — Beyonce">
+        <figure class="card-media"><img src="cd/renaissance.png" alt="Renaissance"></figure>
+        <div class="card-body">
+          <span class="tag">POP</span>
+          <h3 class="card-title">Renaissance — Beyonce</h3>
+          <p class="card-meta">2022</p>
+          <div class="card-footer">
+            <div class="price">R$ 59,90</div>
+            <button class="btn-add" data-title="Renaissance — Beyonce">Adicionar</button>
+          </div>
+        </div>
+      </article>
+    </div> <!-- .grid-cards -->
   </main>
 
   <section class="about" id="sobre">
@@ -234,30 +216,45 @@
     </div>
   </footer>
 
-    <script>
-  const searchBtn = document.getElementById('searchBtn');
-  const searchInput = document.getElementById('searchInput');
-  const albums = document.querySelectorAll('.album');
+  <!-- ===== Busca funcional: usa o mesmo IDs do header acima ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchToggle = document.getElementById('searchToggle'); // botão da lupa
+      const searchInput = document.getElementById('searchInput');   // campo de texto
+      const albums = Array.from(document.querySelectorAll('.album')); // cards a filtrar
 
-  // Mostrar/ocultar o campo de busca
-  searchBtn.addEventListener('click', () => {
-    searchInput.classList.toggle('active');
-    searchInput.focus();
-  });
+      if (!searchToggle || !searchInput) return;
 
-  // Filtrar produtos conforme o texto digitado
-  searchInput.addEventListener('input', () => {
-    const term = searchInput.value.toLowerCase();
+      // abrir/fechar campo de busca
+      searchToggle.addEventListener('click', () => {
+        searchInput.classList.toggle('active');
+        if (searchInput.classList.contains('active')) {
+          searchInput.focus();
+        } else {
+          searchInput.value = '';
+          // mostra todos ao fechar
+          albums.forEach(a => a.classList.remove('hidden'));
+        }
+      });
 
-    albums.forEach(album => {
-      const title = album.getAttribute('data-title').toLowerCase();
-      if (title.includes(term)) {
-        album.classList.remove('hidden');
-      } else {
-        album.classList.add('hidden');
-      }
+      // filtrar enquanto digita
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.trim().toLowerCase();
+        if (!term) {
+          albums.forEach(a => a.classList.remove('hidden'));
+          return;
+        }
+
+        albums.forEach(a => {
+          const title = (a.getAttribute('data-title') || '').toLowerCase();
+          if (title.includes(term)) {
+            a.classList.remove('hidden');
+          } else {
+            a.classList.add('hidden');
+          }
+        });
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>

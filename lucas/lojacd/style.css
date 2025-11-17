@@ -432,3 +432,31 @@ body {
 .album.hidden {
   display: none !important;
 }
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  width: 0;
+  opacity: 0;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255,20,147,0.7);
+  color: #fff;
+  transition: 0.3s ease;
+  margin-left: 8px;
+}
+
+#searchInput.active {
+  width: 170px;
+  opacity: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
