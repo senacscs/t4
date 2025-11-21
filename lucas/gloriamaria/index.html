@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glória Maria — Jornalismo e Representatividade</title>
+    <link rel="shortcut icon" href="microfone.png">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="header-text">
+            <h1>Glória Maria</h1>
+            <p>Jornalismo e Representatividade</p>
+            <button id="read-more-btn" class="read-more-btn">Ler mais</button>
+        </div>
+    </header>
+
+    <div class="container" id="historico">
+
+        <h2 class="section-title">Breve Histórico</h2>
+
+        <p class="section-text">
+            Glória Maria (1949–2023) foi uma das jornalistas mais importantes e influentes da televisão brasileira.
+            Carioca, formou-se em Jornalismo pela Faculdade Hélio Alonso e iniciou sua carreira em meios impressos 
+            antes de ingressar na TV Globo em 1971. Como uma das primeiras repórteres negras em posição de destaque, 
+            enfrentou barreiras raciais e de gênero em um período marcado pela ditadura militar.
+        </p>
+
+        <p class="section-text">
+            Sua trajetória profissional, que ultrapassou cinco décadas, foi marcada pelo pioneirismo, pela excelência 
+            jornalística e pela cobertura de eventos nacionais e internacionais que fizeram história.
+        </p>
+
+        <h2 class="section-title">Principal Contribuição para a Cultura Brasileira</h2>
+
+        <p class="section-text">
+            A importância de Glória Maria vai muito além de sua competência jornalística. Ela foi pioneira na 
+            representatividade negra na televisão brasileira, abrindo portas para futuras gerações. Sua presença 
+            em horário nobre e suas reportagens de impacto desafiaram estereótipos e ampliaram possibilidades para 
+            pessoas negras na mídia.
+        </p>
+
+        <p class="section-text">
+            No Globo Repórter, viajou por diversos países, trazendo histórias ricas e profundas sobre cultura, 
+            sociedade e comportamento. Para a população negra, sua carreira foi um símbolo de conquista e inspiração, 
+            reafirmando que talento e excelência não têm cor.
+        </p>
+
+          <h2 class="section-title">Final da carreira</h2>
+
+                  <p class="section-text">
+            Glória Maria manteve-se como principal estrela do Globo Repórter até o fim, realizando reportagens de grande impacto, como na Islândia (2020). Consolidou seu legado não só como jornalista pioneira, mas como ícone pop e símbolo de representatividade negra na mídia brasileira, inspirando gerações pela sua ousadia e longevidade profissional.
+        </p>
+
+        <p class="section-text">
+            Glória Maria faleceu em 2 de fevereiro de 2023, no Rio de Janeiro, aos 73 anos. A causa foi por complicações de um câncer de pulmão com metástases cerebrais. Sua morte gerou comoção nacional e consolidou seu legado inestimável de pioneirismo, coragem e paixão pela vida e pela reportagem.
+            </p>
+
+        <h2 class="section-title">Galeria de Contribuições</h2>
+
+        <div class="gallery">
+            
+            <div class="card">
+                <img src="primeira.jpg">
+                <p>Pioneirismo no telejornalismo: uma das primeiras repórteres negras com destaque na TV.</p>
+            </div>
+
+            <div class="card">
+                <img src="globo.webp">
+                <p>Destaque no Globo Repórter e em coberturas internacionais de grande impacto.</p>
+            </div>
+
+            <div class="card">
+                <img src="michael.jpg">
+                <p>Reportagens culturais que aproximaram o Brasil de histórias ao redor do mundo.</p>
+            </div>
+
+            <div class="card">
+                <img src="filhas.jpg">
+                <p>Legado de representatividade: inspiração para gerações de jornalistas negros e negras.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Fontes consultadas:</strong></p>
+            <p>
+                • UOL — <a href="#">https://natelinha.uol.com.br/famosos/tudo-sobre/gloria-maria</a><br>
+                • Familíares<br>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('read-more-btn').addEventListener('click', function() {
+            // Pega o elemento container (primeira seção após o header)
+            const targetElement = document.getElementById('historico');
+
+            if (targetElement) {
+                // Rola suavemente até o elemento
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

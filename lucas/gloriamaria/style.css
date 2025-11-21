@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.7;
+}
+
+h1, h2 {
+    font-weight: 800;
+    color: black;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    max-width: 1100px;
+}
+
+/* MODIFICAÇÃO PRINCIPAL AQUI: 100vh para tela inteira */
+header {
+    height: 100vh;
+    background: url('gloria.jpg') no-repeat center center/cover; 
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) , rgba(255,255,255,0.2));
+}
+
+.header-text {
+    position: relative;
+    padding-left: 50px;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 30px; /* Espaço para o botão */
+}
+
+/* Estilos do Botão "Ler mais" */
+.read-more-btn {
+    background: #c46b28;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: #a55a22; 
+}
+
+.section-title {
+    font-size: 2.6rem;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+
+.section-title::before {
+    content: "";
+    width: 6px;
+    height: 40px;
+    background: #c46b28;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.section-text {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer {
+    background: #222;
+    color: #eee;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffb86c;
+    text-decoration: none;
+}
