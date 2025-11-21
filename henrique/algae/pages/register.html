@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+        opacity: 0;
+      }
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .animate-delay-200 {
+        animation-delay: 0.2s;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
+    <div
+      class="fixed top-0 w-full h-screen bg-cover bg-center -z-10"
+      style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"
+    ></div>
+
+    <main class="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+      <header class="w-full max-w-md mb-4 animate-fade-in">
+        <div class="flex items-center gap-2"> <button id="btn-voltar" class="w-8 h-8 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+
+          <div class="flex items-center gap-3">
+    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+            <path d="M18 12v.5"></path>
+            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+        </svg>
+    </div>
+    <span class="font-semibold text-lg tracking-tight">Algae</span>
+</div>
+        </div>
+      </header>
+      
+      <div class="w-full max-w-md animate-slide-up animate-delay-200">
+        <div
+          class="bg-white/50 backdrop-blur-md rounded-3xl shadow-[rgba(255,_255,_255,_0.1)_0px_1px_1px_0px_inset,_rgba(50,_50,_93,_0.25)_0px_50px_100px_-20px,_rgba(0,_0,_0,_0.3)_0px_30px_60px_-30px] p-8"
+        >
+          <h1 class="text-3xl font-bold text-center mb-8">Criar Conta</h1>
+
+          <form class="space-y-6">
+            <div>
+              <label for="nome-completo" class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+              <input
+                id="nome-completo"
+                type="text"
+                placeholder="Seu nome completo"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all"
+              />
+            </div>
+
+            <div>
+              <label for="senha" class="block text-sm font-medium text-gray-700 mb-2">Senha</label>
+              <input
+                id="senha"
+                type="password"
+                placeholder="Sua senha"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-black text-white rounded-xl py-3 font-semibold text-lg hover:bg-gray-800 transition-colors"
+            >
+              Concluir Cadastro
+            </button>
+          </form>
+
+          <p class="text-center mt-6 text-gray-600">
+            Já possui uma conta? <a href="#" class="text-black font-semibold hover:underline">Entrar</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cadastro simulado concluído! (Isso seria uma chamada de API em um ambiente real)');
+        });
+
+        document.querySelector('header button').addEventListener('click', function() {
+            alert('Ação de "Voltar" simulada.');
+        });
+    </script>
+  </body>
+</html>

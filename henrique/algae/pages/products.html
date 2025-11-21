@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+        .animate-delay-800 { animation-delay: 0.8s; }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .font-geist { font-family: 'Geist', sans-serif !important; }
+        .font-roboto { font-family: 'Roboto', sans-serif !important; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif !important; }
+        .font-poppins { font-family: 'Poppins', sans-serif !important; }
+        .font-playfair { font-family: 'Playfair Display', serif !important; }
+        .font-instrument-serif { font-family: 'Instrument Serif', serif !important; }
+        .font-merriweather { font-family: 'Merriweather', serif !important; }
+        .font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }
+        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+        .font-manrope { font-family: 'Manrope', sans-serif !important; }
+        .font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }
+        .font-work-sans { font-family: 'Work Sans', sans-serif !important; }
+        .font-pt-serif { font-family: 'PT Serif', serif !important; }
+        .font-geist-mono { font-family: 'Geist Mono', monospace !important; }
+        .font-space-mono { font-family: 'Space Mono', monospace !important; }
+        .font-quicksand { font-family: 'Quicksand', sans-serif !important; }
+        .font-nunito { font-family: 'Nunito', sans-serif !important; }
+    </style>
+    
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" />
+    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" />
+    <link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" />
+    <link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" />
+    <link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" />
+    <link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" />
+    <link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" />
+    <link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" />
+    <link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" />
+</head>
+<body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
+    <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
+    
+    <header class="py-6 animate-fade-in">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="flex items-center gap-6">
+                <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
+                    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="fish" class="lucide lucide-fish w-4 h-4 text-white">
+                            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+                            <path d="M18 12v.5"></path>
+                            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+                            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+                            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+                            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+                        </svg>
+                    </div>
+                    <span class="font-semibold text-lg tracking-tight font-sans">Algae</span>
+                </a>
+                
+                <div class="relative flex-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar produtos..." 
+                        class="w-full pl-12 pr-4 py-3 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all shadow-lg"
+                    />
+                </div>
+
+                <div class="flex items-center gap-4 flex-shrink-0">
+                    <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <circle cx="8" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                        </svg>
+                    </button>
+                    <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto max-w-7xl px-6 **pt-8 pb-12**">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <div class="rounded-2xl p-6 transition-all animate-slide-up animate-delay-200 bg-white hover:shadow-xl border-2 border-gray-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-lg font-sans">Betta Splendens</h3>
+                        <span class="text-2xl font-bold text-blue-600">R$ 45</span>
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-blue-100 to-blue-50">
+                        <img src="https://images.unsplash.com/photo-1520990596331-72180de327c1?w=400&q=80" alt="Betta" class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text-sm font-sans text-gray-600 mb-4">Peixe ornamental de cores vibrantes, ideal para aquários pequenos. Fácil manutenção.</p>
+                    <div class="flex gap-3">
+                        <button class="flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>
+                        </button>
+                        <button class="bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl p-6 transition-all animate-slide-up animate-delay-400 bg-white hover:shadow-xl border-2 border-gray-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-lg font-sans">Aquário Panorâmico</h3>
+                        <span class="text-2xl font-bold text-purple-600">R$ 280</span>
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-purple-100 to-purple-50">
+                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=400&q=80" alt="Aquário" class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text-sm font-sans text-gray-600 mb-4">Aquário 50L com vidro curvo, iluminação LED e sistema de filtragem completo.</p>
+                    <div class="flex gap-3">
+                        <button class="flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>
+                        </button>
+                        <button class="bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl p-6 transition-all animate-slide-up animate-delay-600 bg-white hover:shadow-xl border-2 border-gray-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-lg font-sans">Kit Decoração</h3>
+                        <span class="text-2xl font-bold text-green-600">R$ 85</span>
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-green-100 to-green-50">
+                        <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80" alt="Decoração" class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text-sm font-sans text-gray-600 mb-4">Kit completo com plantas naturais, conchas, cascalho colorido e rochas decorativas.</p>
+                    <div class="flex gap-3">
+                        <button class="flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>
+                        </button>
+                        <button class="bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

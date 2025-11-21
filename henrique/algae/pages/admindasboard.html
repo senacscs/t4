@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel(Admin)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+        }
+        .animate-fade-in { 
+            animation: fadeIn 0.8s ease-out forwards; 
+            opacity: 0; 
+        }
+        .animate-slide-up { 
+            animation: slideUp 0.8s ease-out forwards; 
+            opacity: 0; 
+            transform: translateY(20px); 
+        }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+        .animate-delay-800 { animation-delay: 0.8s; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+        
+        .hidden-section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
+    <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
+    
+    <header class="py-6 animate-fade-in">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="flex items-center gap-6">
+                
+                <button id="btn-voltar" class="w-8 h-8 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                </button>
+
+                <div class="flex items-center gap-3">
+    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+            <path d="M18 12v.5"></path>
+            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+        </svg>
+    </div>
+    <span class="font-semibold text-lg tracking-tight">Algae</span>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto max-w-7xl px-6 pt-2">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl shadow-[rgba(255,_255,_255,_0.1)_0px_1px_1px_0px_inset,_rgba(50,_50,_93,_0.25)_0px_50px_100px_-20px,_rgba(0,_0,_0,_0.3)_0px_30px_60px_-30px] overflow-hidden">
+                <div class="grid lg:grid-cols-[280px_1fr] min-h-[600px]">
+                    
+                    <div class="bg-white/30 backdrop-blur-sm p-6 border-r border-gray-200">
+                        <h2 class="text-xl font-bold mb-6">Minha Conta</h2>
+                        <nav class="space-y-2">
+                            <button id="btn-informacoes" class="menu-btn w-full text-left px-4 py-3 rounded-lg transition-all bg-black text-white">
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <span class="font-medium">Informações</span>
+                                </div>
+                            </button>
+                            
+                            <button id="btn-produtos" class="menu-btn w-full text-left px-4 py-3 rounded-lg transition-all bg-white/50 hover:bg-white/80">
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                                        <path d="m3.3 7 8.7 5 8.7-5"></path>
+                                        <path d="M12 22V12"></path>
+                                    </svg>
+                                    <span class="font-medium">Produtos</span>
+                                </div>
+                            </button>
+                            
+                            <button id="btn-usuarios" class="menu-btn w-full text-left px-4 py-3 rounded-lg transition-all bg-white/50 hover:bg-white/80">
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span class="font-medium">Usuários</span>
+                                </div>
+                            </button>
+                        </nav>
+                    </div>
+
+                    <div class="p-8">
+                        
+                        <div id="section-informacoes" class="section-content">
+                            <h1 class="text-3xl font-bold mb-8">Informações da Conta</h1>
+                            <div class="space-y-6 max-w-2xl">
+                                <div class="bg-white/50 rounded-xl p-6 space-y-4">
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 mb-2" for="nome-completo">Nome Completo</label>
+                                        <input type="text" id="nome-completo" placeholder="Seu nome" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 mb-2" for="email">Email</label>
+                                        <input type="email" id="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 mb-2" for="cargo">Cargo</label>
+                                        <input type="text" id="cargo" placeholder="Seu cargo/função" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                    </div>
+                                    
+                                   
+                                    
+                                    </div>
+                                
+                                <button class="w-full max-w-xs bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors">
+                                    Salvar Alterações
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="section-produtos" class="section-content hidden-section">
+                            
+                            <div id="product-list-view">
+                                <div class="flex justify-between items-center mb-8">
+                                    <h1 class="text-3xl font-bold">Produtos</h1>
+                                    <button id="btn-add-product" class="bg-black text-white rounded-lg px-6 py-3 font-medium hover:bg-gray-800 transition-colors flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg>
+                                        Adicionar Produto
+                                    </button>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
+                                        <img src="https://images.unsplash.com/photo-1520990596331-72180de327c1?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-lg">Betta Splendens</h3>
+                                            <p class="text-sm text-gray-600">Quantidade: 15 unidades</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-xl text-blue-600">R$ 45</p>
+                                            <button class="edit-product-btn mt-2 px-4 py-2 bg-gray-100 text-gray-800 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors" data-product-name="Betta Splendens" data-product-price="45">
+                                                Editar
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
+                                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-lg">Aquário Panorâmico 50L</h3>
+                                            <p class="text-sm text-gray-600">Quantidade: 8 unidades</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-xl text-purple-600">R$ 280</p>
+                                            <button class="edit-product-btn mt-2 px-4 py-2 bg-gray-100 text-gray-800 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors" data-product-name="Aquário Panorâmico 50L" data-product-price="280">
+                                                Editar
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
+                                        <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-lg">Kit Decoração Completo</h3>
+                                            <p class="text-sm text-gray-600">Quantidade: 22 unidades</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-xl text-green-600">R$ 85</p>
+                                            <button class="edit-product-btn mt-2 px-4 py-2 bg-gray-100 text-gray-800 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors" data-product-name="Kit Decoração Completo" data-product-price="85">
+                                                Editar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="product-form-view" class="hidden-section">
+                                <div class="flex items-center gap-4 mb-8">
+                                    <button id="btn-back-to-list" class="text-gray-600 hover:text-black">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="m15 18-6-6 6-6"></path>
+                                        </svg>
+                                    </button>
+                                    <h1 id="product-form-title" class="text-3xl font-bold">Adicionar Produto</h1>
+                                </div>
+                                
+                                <div class="max-w-2xl space-y-6">
+                                    <div class="bg-white/50 rounded-xl p-6 space-y-4">
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2" for="produto-nome">Nome do Produto</label>
+                                            <input type="text" id="produto-nome" placeholder="Ex: Betta Splendens" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2">Imagem do Produto</label>
+                                            <div class="space-y-3">
+                                                <input type="file" accept="image/*" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                                <div class="flex items-center gap-2">
+                                                    <div class="flex-1 h-px bg-gray-300"></div>
+                                                    <span class="text-sm text-gray-500">ou</span>
+                                                    <div class="flex-1 h-px bg-gray-300"></div>
+                                                </div>
+                                                <input type="url" placeholder="URL da imagem" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2" for="produto-preco">Preço (R$)</label>
+                                            <input type="number" id="produto-preco" placeholder="0.00" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2" for="produto-quantidade">Quantidade em Estoque</label>
+                                            <input type="number" id="produto-quantidade" placeholder="0" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2" for="produto-descricao">Descrição</label>
+                                            <textarea id="produto-descricao" placeholder="Descrição do produto..." rows="3" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20"></textarea>
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2" for="produto-destaques">Destaques (Informações que aparecem na caixa branca)</label>
+                                            <textarea id="produto-destaques" placeholder="Ex: Tamanho: 6-8 cm&#10;Temperatura: 24-28°C&#10;pH: 6.5-7.5" rows="4" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20"></textarea>
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2" for="produto-adicionais">Informações Adicionais</label>
+                                            <textarea id="produto-adicionais" placeholder="Cuidados, instruções de uso, etc..." rows="3" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex gap-4">
+                                        <button id="btn-cancel-product" class="flex-1 bg-gray-100 text-gray-800 rounded-lg px-8 py-4 font-medium hover:bg-gray-200 transition-colors">
+                                            Cancelar
+                                        </button>
+                                        <button id="btn-save-product" class="flex-1 bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors">
+                                            Adicionar Produto
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div id="section-usuarios" class="section-content hidden-section">
+                            <h1 class="text-3xl font-bold mb-8">Usuários</h1>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-white/50 rounded-xl p-6 hover:shadow-lg transition-all">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div>
+                                            <h3 class="font-semibold text-xl mb-1">João Silva</h3>
+                                            <p class="text-gray-600">joao.silva@email.com</p>
+                                            <p class="text-sm text-gray-500 mt-1">**Cargo:** Desenvolvedor</p> </div>
+                                        <button class="px-4 py-2 bg-red-100 text-red-600 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M3 6h18"></path>
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            </svg>
+                                            Excluir
+                                        </button>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Total de Pedidos</p>
+                                            <p class="text-2xl font-bold">12</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Em Andamento</p>
+                                            <p class="text-2xl font-bold text-blue-600">3</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Concluídos</p>
+                                            <p class="text-2xl font-bold text-green-600">9</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white/50 rounded-xl p-6 hover:shadow-lg transition-all">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div>
+                                            <h3 class="font-semibold text-xl mb-1">Maria Santos</h3>
+                                            <p class="text-gray-600">maria.santos@email.com</p>
+                                            <p class="text-sm text-gray-500 mt-1">**Cargo:** Designer</p> </div>
+                                        <button class="px-4 py-2 bg-red-100 text-red-600 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M3 6h18"></path>
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            </svg>
+                                            Excluir
+                                        </button>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Total de Pedidos</p>
+                                            <p class="text-2xl font-bold">8</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Em Andamento</p>
+                                            <p class="text-2xl font-bold text-blue-600">2</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Concluídos</p>
+                                            <p class="text-2xl font-bold text-green-600">6</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white/50 rounded-xl p-6 hover:shadow-lg transition-all">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div>
+                                            <h3 class="font-semibold text-xl mb-1">Pedro Oliveira</h3>
+                                            <p class="text-gray-600">pedro.oliveira@email.com</p>
+                                            <p class="text-sm text-gray-500 mt-1">**Cargo:** Gerente de Vendas</p> </div>
+                                        <button class="px-4 py-2 bg-red-100 text-red-600 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M3 6h18"></path>
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            </svg>
+                                            Excluir
+                                        </button>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Total de Pedidos</p>
+                                            <p class="text-2xl font-bold">5</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Em Andamento</p>
+                                            <p class="text-2xl font-bold text-blue-600">1</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600 mb-1">Concluídos</p>
+                                            <p class="text-2xl font-bold text-green-600">4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let activeSection = 'informacoes';
+            let showProductForm = false;
+            let editingProduct = null;
+
+            const menuButtons = document.querySelectorAll('.menu-btn');
+            const sectionContents = document.querySelectorAll('.section-content');
+            const productListView = document.getElementById('product-list-view');
+            const productFormView = document.getElementById('product-form-view');
+            const btnAddProduct = document.getElementById('btn-add-product');
+            const btnBackToList = document.getElementById('btn-back-to-list');
+            const btnCancelProduct = document.getElementById('btn-cancel-product');
+            const productEditButtons = document.querySelectorAll('.edit-product-btn');
+            const productFormTitle = document.getElementById('product-form-title');
+            const btnSaveProduct = document.getElementById('btn-save-product');
+            const inputProdutoNome = document.getElementById('produto-nome');
+            const inputProdutoPreco = document.getElementById('produto-preco');
+
+
+            function render() {
+                menuButtons.forEach(btn => {
+                    const sectionId = btn.id.replace('btn-', '');
+                    if (sectionId === activeSection) {
+                        btn.classList.add('bg-black', 'text-white');
+                        btn.classList.remove('bg-white/50', 'hover:bg-white/80');
+                    } else {
+                        btn.classList.remove('bg-black', 'text-white');
+                        btn.classList.add('bg-white/50', 'hover:bg-white/80');
+                    }
+                });
+
+                sectionContents.forEach(section => {
+                    if (section.id.replace('section-', '') === activeSection) {
+                        section.classList.remove('hidden-section');
+                    } else {
+                        section.classList.add('hidden-section');
+                    }
+                });
+
+                if (activeSection === 'produtos') {
+                    if (showProductForm) {
+                        productListView.classList.add('hidden-section');
+                        productFormView.classList.remove('hidden-section');
+                        
+                        productFormTitle.textContent = editingProduct ? 'Editar Produto' : 'Adicionar Produto';
+                        btnSaveProduct.textContent = editingProduct ? 'Salvar Alterações' : 'Adicionar Produto';
+
+                        if (editingProduct) {
+                            inputProdutoNome.value = editingProduct.name || '';
+                            inputProdutoPreco.value = editingProduct.price || '';
+                        } else {
+                            inputProdutoNome.value = '';
+                            inputProdutoPreco.value = '';
+                        }
+
+                    } else {
+                        productListView.classList.remove('hidden-section');
+                        productFormView.classList.add('hidden-section');
+                    }
+                }
+            }
+
+            menuButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const sectionId = btn.id.replace('btn-', '');
+                    activeSection = sectionId;
+                    if (sectionId !== 'produtos') {
+                        showProductForm = false;
+                        editingProduct = null;
+                    }
+                    render();
+                });
+            });
+
+            btnAddProduct.addEventListener('click', () => {
+                showProductForm = true;
+                editingProduct = null;
+                render();
+            });
+
+            btnBackToList.addEventListener('click', () => {
+                showProductForm = false;
+                editingProduct = null;
+                render();
+            });
+
+            btnCancelProduct.addEventListener('click', () => {
+                showProductForm = false;
+                editingProduct = null;
+                render();
+            });
+
+            document.getElementById('product-list-view').addEventListener('click', (e) => {
+                if (e.target.classList.contains('edit-product-btn')) {
+                    editingProduct = {
+                        name: e.target.getAttribute('data-product-name'),
+                        price: e.target.getAttribute('data-product-price')
+                    };
+                    showProductForm = true;
+                    render();
+                }
+            });
+
+            render();
+        });
+    </script>
+</body>
+</html>

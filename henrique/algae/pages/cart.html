@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; 
+        }
+        .animate-fade-in { 
+            animation: fadeIn 0.8s ease-out forwards; 
+            opacity: 0; 
+        }
+        @keyframes fadeIn { 
+            to { opacity: 1; } 
+        }
+    </style>
+</head>
+
+<body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
+    <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
+    
+   <header class="py-6 animate-fade-in">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="flex items-center gap-6">
+                
+                <button id="btn-voltar" class="w-8 h-8 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                </button>
+
+                <div class="flex items-center gap-3">
+    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+            <path d="M18 12v.5"></path>
+            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+        </svg>
+    </div>
+    <span class="font-semibold text-lg tracking-tight">Algae</span>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto max-w-7xl px-6 pt-2">
+            
+            <h1 class="text-3xl font-bold mb-8">Carrinho de Compras</h1>
+
+            <div class="grid lg:grid-cols-[1fr_400px] gap-8">
+                <div id="cart-items-list" class="space-y-4">
+                    </div>
+
+                <div id="order-summary" class="bg-white/50 backdrop-blur-md rounded-2xl p-6 shadow-lg h-fit sticky top-8">
+                    <h2 class="text-2xl font-bold mb-6">Resumo do Pedido</h2>
+
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-lg">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span id="subtotal" class="font-semibold">R$ 0.00</span>
+                        </div>
+
+                        <div class="flex justify-between text-lg">
+                            <span class="text-gray-600">Frete (3%)</span>
+                            <span id="frete" class="font-semibold">R$ 0.00</span>
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-4 mt-4">
+                            <div class="flex justify-between text-2xl">
+                                <span class="font-bold">Total</span>
+                                <span id="total" class="font-bold text-green-600">R$ 0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button 
+                        id="checkout-button"
+                        class="w-full bg-black text-white rounded-xl py-4 font-semibold text-lg hover:bg-gray-800 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                        disabled
+                    >
+                        Finalizar Compra
+                    </button>
+
+                    <p class="text-center text-sm text-gray-600 mt-4">
+                        Pagamento seguro e criptografado
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let cartItems = [
+            { id: 1, name: 'Betta Splendens', price: 45, image: 'https://images.unsplash.com/photo-1520990596331-72180de327c1?w=200&q=80', quantity: 1 },
+            { id: 2, name: 'Aquário Panorâmico 50L', price: 280, image: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=200&q=80', quantity: 1 },
+            { id: 3, name: 'Kit Decoração Completo', price: 85, image: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=200&q=80', quantity: 1 }
+        ];
+
+        const cartListElement = document.getElementById('cart-items-list');
+        const subtotalElement = document.getElementById('subtotal');
+        const freteElement = document.getElementById('frete');
+        const totalElement = document.getElementById('total');
+        const checkoutButton = document.getElementById('checkout-button');
+
+        const formatCurrency = (value) => {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        };
+
+        const renderCartItem = (item) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'bg-white/50 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all';
+            itemDiv.setAttribute('data-id', item.id);
+
+            itemDiv.innerHTML = `
+                <div class="flex items-center gap-6">
+                    <img src="${item.image}" alt="${item.name}" class="w-24 h-24 rounded-lg object-cover" />
+
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-xl mb-1">${item.name}</h3>
+                        <p class="text-gray-600 text-lg">${formatCurrency(item.price)}</p>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button class="decrease-quantity w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors" data-id="${item.id}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                            </svg>
+                        </button>
+
+                        <span class="quantity-display w-12 text-center font-semibold text-lg">${item.quantity}</span>
+
+                        <button class="increase-quantity w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors" data-id="${item.id}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5v14"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button class="remove-item ml-4 text-red-500 hover:text-red-700 transition-colors" data-id="${item.id}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 6h18"></path>
+                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+            `;
+
+            return itemDiv;
+        };
+
+        const renderCart = () => {
+            cartListElement.innerHTML = '';
+            if (cartItems.length === 0) {
+                cartListElement.innerHTML = `
+                    <div class="bg-white/50 backdrop-blur-md rounded-2xl p-12 text-center">
+                        <p class="text-gray-600 text-lg">Seu carrinho está vazio</p>
+                    </div>
+                `;
+                checkoutButton.disabled = true;
+            } else {
+                cartItems.forEach(item => {
+                    cartListElement.appendChild(renderCartItem(item));
+                });
+                checkoutButton.disabled = false;
+            }
+
+            const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const frete = subtotal * 0.03;
+            const total = subtotal + frete;
+
+            subtotalElement.textContent = formatCurrency(subtotal);
+            freteElement.textContent = formatCurrency(frete);
+            totalElement.textContent = formatCurrency(total);
+        };
+
+        const updateQuantity = (id, newQuantity) => {
+            if (newQuantity < 1) return;
+            cartItems = cartItems.map(item =>
+                item.id === id ? { ...item, quantity: newQuantity } : item
+            );
+            renderCart();
+        };
+
+        const removeItem = (id) => {
+            cartItems = cartItems.filter(item => item.id !== id);
+            renderCart();
+        };
+
+        document.addEventListener('click', (event) => {
+            const target = event.target.closest('button');
+            if (!target) return;
+
+            const id = parseInt(target.getAttribute('data-id'));
+            
+            if (target.classList.contains('increase-quantity')) {
+                const item = cartItems.find(i => i.id === id);
+                if (item) {
+                    updateQuantity(id, item.quantity + 1);
+                }
+            } else if (target.classList.contains('decrease-quantity')) {
+                const item = cartItems.find(i => i.id === id);
+                if (item) {
+                    updateQuantity(id, item.quantity - 1);
+                }
+            } else if (target.classList.contains('remove-item')) {
+                removeItem(id);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html>

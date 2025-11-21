@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+        }
+
+        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+        .animate-slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+        .animate-delay-800 { animation-delay: 0.8s; }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+
+<body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
+    <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
+    
+    <header class="py-6 animate-fade-in">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="flex items-center gap-6">
+                
+                <button id="btn-voltar" class="w-8 h-8 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                </button>
+
+                <div class="flex items-center gap-3">
+    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+            <path d="M18 12v.5"></path>
+            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+        </svg>
+    </div>
+    <span class="font-semibold text-lg tracking-tight">Algae</span>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto max-w-7xl px-6 pt-2">
+            <div class="bg-white/50 backdrop-blur-md rounded-3xl shadow-[rgba(255,_255,_255,_0.1)_0px_1px_1px_0px_inset,_rgba(50,_50,_93,_0.25)_0px_50px_100px_-20px,_rgba(0,_0,_0,_0.3)_0px_30px_60px_-30px] overflow-hidden">
+                <div class="grid lg:grid-cols-[280px_1fr] min-h-[600px]">
+                    
+                    <div class="bg-white/30 backdrop-blur-sm p-6 border-r border-gray-200">
+                        <h2 class="text-xl font-bold mb-6">Minha Conta</h2>
+                        <nav id="menu-lateral" class="space-y-2">
+                            <button 
+                                data-section="informacoes" 
+                                class="menu-btn w-full text-left px-4 py-3 rounded-lg transition-all bg-black text-white"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <span class="font-medium">Informações</span>
+                                </div>
+                            </button>
+                            
+                            <button 
+                                data-section="pedidos" 
+                                class="menu-btn w-full text-left px-4 py-3 rounded-lg transition-all bg-white/50 hover:bg-white/80"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                                        <path d="m3.3 7 8.7 5 8.7-5"></path>
+                                        <path d="M12 22V12"></path>
+                                    </svg>
+                                    <span class="font-medium">Pedidos</span>
+                                </div>
+                            </button>
+                            
+                            <button 
+                                data-section="pagamentos" 
+                                class="menu-btn w-full text-left px-4 py-3 rounded-lg transition-all bg-white/50 hover:bg-white/80"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                        <line x1="2" x2="22" y1="10" y2="10"></line>
+                                    </svg>
+                                    <span class="font-medium">Pagamentos</span>
+                                </div>
+                            </button>
+                        </nav>
+                    </div>
+
+                    <div id="content-container" class="p-8">
+                        
+                        <div id="section-informacoes" class="section-content">
+                            <h1 class="text-3xl font-bold mb-8">Informações da Conta</h1>
+                            
+                            <div class="space-y-6 max-w-2xl">
+                                <div class="bg-white/50 rounded-xl p-6 space-y-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 mb-2">Nome Completo</label>
+                                        <input type="text" placeholder="Seu nome" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 mb-2">Email</label>
+                                        <input type="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-600 mb-2">Cargo/Função</label>
+                                        <input type="text" placeholder="Ex: Administrador, Usuário Padrão" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                    </div>
+                                    </div>
+                                
+                                <button class="w-full max-w-xs bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors">
+                                    Salvar Alterações
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="section-pedidos" class="section-content hidden">
+                            <h1 class="text-3xl font-bold mb-8">Meus Pedidos</h1>
+                            
+                            <div class="mb-8">
+                                <h2 class="text-xl font-semibold mb-4">Em Andamento</h2>
+                                <div class="space-y-4">
+                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
+                                        <img src="https://images.unsplash.com/photo-1520990596331-72180de327c1?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-lg">Betta Splendens</h3>
+                                            <p class="text-sm text-gray-600">Pedido #12345</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-xl text-blue-600">R$ 45</p>
+                                            <span class="inline-block mt-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">Em trânsito</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
+                                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-lg">Aquário Panorâmico 50L</h3>
+                                            <p class="text-sm text-gray-600">Pedido #12344</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-xl text-purple-600">R$ 280</p>
+                                            <span class="inline-block mt-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Processando</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h2 class="text-xl font-semibold mb-4">Pedidos Recebidos</h2>
+                                <div class="space-y-4">
+                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
+                                        <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-lg">Kit Decoração Completo</h3>
+                                            <p class="text-sm text-gray-600">Pedido #12340</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="font-bold text-xl text-green-600">R$ 85</p>
+                                            <span class="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Entregue</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="section-pagamentos" class="section-content hidden">
+                            <h1 class="text-3xl font-bold mb-8">Métodos de Pagamento</h1>
+                            
+                            <div class="max-w-2xl space-y-8">
+                                <div>
+                                    <h2 class="text-xl font-semibold mb-4">Cartões Cadastrados</h2>
+                                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 text-white mb-4">
+                                        <div class="flex justify-between items-start mb-8">
+                                            <div class="w-12 h-8 bg-yellow-400 rounded"></div>
+                                            <span class="text-sm opacity-80">VISA</span>
+                                        </div>
+                                        <div class="mb-6">
+                                            <p class="text-xl tracking-wider mb-2">**** **** **** 1234</p>
+                                        </div>
+                                        <div class="flex justify-between items-end">
+                                            <div>
+                                                <p class="text-xs opacity-60 mb-1">Titular</p>
+                                                <p class="text-sm font-medium">NOME DO TITULAR</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-xs opacity-60 mb-1">Validade</p>
+                                                <p class="text-sm font-medium">12/25</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button id="toggle-add-card" class="w-full max-w-xs bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors mb-8">
+                                        Adicionar Novo Cartão
+                                    </button>
+                                </div>
+                                
+                                <div id="add-card-form" class="bg-white/50 rounded-xl p-6 hidden">
+                                    <h3 class="text-lg font-semibold mb-4">Preencha os dados do cartão</h3>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2">Número do Cartão</label>
+                                            <input type="text" placeholder="0000 0000 0000 0000" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-600 mb-2">Nome no Cartão</label>
+                                            <input type="text" placeholder="Nome como está no cartão" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-ring-black/20" />
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-600 mb-2">Validade</label>
+                                                <input type="text" placeholder="MM/AA" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-600 mb-2">CVV</label>
+                                                <input type="text" placeholder="123" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="w-full bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors">
+                                            Adicionar Cartão
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let activeSection = 'informacoes';
+        const menuButtons = document.querySelectorAll('.menu-btn');
+        const sections = document.querySelectorAll('.section-content');
+
+        function setActiveSection(sectionId) {
+            activeSection = sectionId;
+
+            menuButtons.forEach(button => {
+                const dataSection = button.getAttribute('data-section');
+                if (dataSection === activeSection) {
+                    button.classList.remove('bg-white/50', 'hover:bg-white/80');
+                    button.classList.add('bg-black', 'text-white');
+                } else {
+                    button.classList.remove('bg-black', 'text-white');
+                    button.classList.add('bg-white/50', 'hover:bg-white/80');
+                }
+            });
+
+            sections.forEach(section => {
+                const sectionIdAttr = section.id.replace('section-', '');
+                if (sectionIdAttr === activeSection) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+
+        menuButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const sectionToActivate = button.getAttribute('data-section');
+                setActiveSection(sectionToActivate);
+            });
+        });
+
+        setActiveSection(activeSection);
+
+        const toggleButton = document.getElementById('toggle-add-card');
+        const addCardForm = document.getElementById('add-card-form');
+
+        if (toggleButton && addCardForm) {
+            toggleButton.addEventListener('click', () => {
+                addCardForm.classList.toggle('hidden');
+                
+                if (addCardForm.classList.contains('hidden')) {
+                    toggleButton.textContent = 'Adicionar Novo Cartão';
+                } else {
+                    toggleButton.textContent = 'Ocultar Formulário';
+                }
+            });
+        }
+        
+        const backButton = document.getElementById('btn-voltar');
+        if (backButton) {
+            backButton.addEventListener('click', () => {
+            });
+        }
+    </script>
+</body>
+</html>

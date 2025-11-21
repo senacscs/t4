@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algae</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .animate-slide-up {
+      animation: slideUp 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    .animate-delay-200 {
+      animation-delay: 0.2s;
+    }
+    
+    .animate-delay-400 {
+      animation-delay: 0.4s;
+    }
+    
+    .animate-delay-600 {
+      animation-delay: 0.6s;
+    }
+    
+    .animate-delay-800 {
+      animation-delay: 0.8s;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .font-geist {
+      font-family: 'Geist', sans-serif !important;
+    }
+    
+    .font-roboto {
+      font-family: 'Roboto', sans-serif !important;
+    }
+    
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif !important;
+    }
+    
+    .font-poppins {
+      font-family: 'Poppins', sans-serif !important;
+    }
+    
+    .font-playfair {
+      font-family: 'Playfair Display', serif !important;
+    }
+    
+    .font-instrument-serif {
+      font-family: 'Instrument Serif', serif !important;
+    }
+    
+    .font-merriweather {
+      font-family: 'Merriweather', serif !important;
+    }
+    
+    .font-bricolage {
+      font-family: 'Bricolage Grotesque', sans-serif !important;
+    }
+    
+    .font-jakarta {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+    
+    .font-manrope {
+      font-family: 'Manrope', sans-serif !important;
+    }
+    
+    .font-space-grotesk {
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+    
+    .font-work-sans {
+      font-family: 'Work Sans', sans-serif !important;
+    }
+    
+    .font-pt-serif {
+      font-family: 'PT Serif', serif !important;
+    }
+    
+    .font-geist-mono {
+      font-family: 'Geist Mono', monospace !important;
+    }
+    
+    .font-space-mono {
+      font-family: 'Space Mono', monospace !important;
+    }
+    
+    .font-quicksand {
+      font-family: 'Quicksand', sans-serif !important;
+    }
+    
+    .font-nunito {
+      font-family: 'Nunito', sans-serif !important;
+    }
+  </style>
+  
+  <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" />
+  <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" />
+  <link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" />
+  <link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" />
+  <link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" />
+  <link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" />
+  <link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" />
+  <link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" />
+  <link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" />
+</head>
+
+<body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
+  <script>
+  </script>
+
+  <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url(&quot;https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&amp;q=80&quot;)"></div>
+
+  <header class="py-6 animate-fade-in">
+    <div class="mx-auto max-w-7xl px-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+            <path d="M18 12v.5"></path>
+            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+        </svg>
+    </div>
+    <span class="font-semibold text-lg tracking-tight">Algae</span>
+</div>
+      <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#" class="transition-colors flex items-center gap-2 font-sans hover:text-black text-gray-700">
+          Peixes
+        </a>
+        <a href="#" class="transition-colors flex items-center gap-2 hover:text-black text-gray-700" id="aura-emczd1r5y">
+          Equipamentos
+        </a>
+        <a href="#" class="transition-colors flex items-center gap-2 font-sans hover:text-black text-gray-700">
+          Plantas
+        </a>
+        <a href="#" class="transition-colors flex items-center gap-2 font-sans hover:text-black text-gray-700">
+          Decoração
+        </a>
+      </nav>
+      <div class="hidden sm:flex gap-3">
+        <button class="transition-all hover:shadow-md hover:bg-gray-100 text-sm font-medium text-black bg-white rounded-full pt-2 pr-6 pb-2 pl-6 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]">
+          Entrar
+        </button>
+        <button class="transition-all hover:shadow-md hover:bg-black text-sm font-medium text-white bg-gray-800 rounded-full pt-2 pr-6 pb-2 pl-6 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]">
+          Cadastrar
+        </button>
+      </div>
+      <button class="md:hidden p-2 rounded-lg transition-colors hover:bg-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" class="lucide lucide-menu w-6 h-6">
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+          <path d="M4 6h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <div class="md:rounded-3xl md:p-16 lg:p-24 overflow-hidden bg-white/50 rounded-b-3xl pt-8 pr-8 pb-8 pl-8 shadow-[rgba(255,_255,_255,_0.1)_0px_1px_1px_0px_inset,_rgba(50,_50,_93,_0.25)_0px_50px_100px_-20px,_rgba(0,_0,_0,_0.3)_0px_30px_60px_-30px] backdrop-blur-md">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            
+
+            <h1 class="sm:text-5xl lg:text-7xl leading-tight animate-slide-up animate-delay-200 text-4xl font-medium tracking-tight font-manrope mt-2 mr-2 mb-2 ml-2">
+              Peixes Tropicais e Ornamentais<br class="hidden sm:block" />
+            </h1>
+
+            <p class="sm:text-lg max-w-xl animate-slide-up animate-delay-400 text-base mt-6 font-sans text-gray-600">
+              Bem-vindo à Algae, sua loja especializada em aquarismo. Oferecemos uma seleção completa de peixes tropicais e ornamentais, aquários de alta qualidade, corais, plantas aquáticas, conchas, estrelas-do-mar e algas para transformar seu aquário em um verdadeiro ecossistema.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 animate-slide-up animate-delay-600">
+              <a href="#" class="inline-flex items-center justify-center gap-2 transition-all hover:scale-105 hover:shadow-lg hover:bg-gray-900 font-medium text-white bg-black rounded-full pt-4 pr-8 pb-4 pl-8 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-cart" class="lucide lucide-shopping-cart w-5 h-5">
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                </svg>
+                Ver Produtos
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+
+            <div class="mt-12 flex items-center gap-8 animate-slide-up animate-delay-800">
+              
+              
+            </div>
+          </div>
+
+          <div class="relative animate-slide-up animate-delay-400">
+            <div class="relative rounded-3xl overflow-hidden h-80 sm:h-[28rem] shadow-2xl">
+              <img src="https://cdn.midjourney.com/bb972d04-5615-480a-bdd9-75cf76f6bec5/0_0.png?w=800&amp;q=80" alt="Crypto trading dashboard" class="absolute inset-0 w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t via-transparent to-transparent from-black/60"></div>
+
+              <div class="absolute top-4 left-4 text-white">
+                
+                <p class="text-xs leading-4 max-w-[200px] backdrop-blur-sm rounded-lg p-2 font-sans bg-black/20">
+                  "Kit completo com peixe destaque Betta, aquário 50L panorâmico, e decorações incluindo plantas naturais, conchas e cascalho colorido!"
+                </p>
+              </div>
+
+             
+
+              <div class="absolute bottom-4 left-4 right-4">
+                <div class="backdrop-blur-sm rounded-lg p-3 bg-white/10">
+                  <div class="flex items-center justify-between text-sm text-white">
+                    <span class="font-sans">Produto em Destaque</span>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-4 -right-4 bg-white border-gray-100 border rounded-2xl pt-4 pr-4 pb-4 pl-4 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]">
+              <div class="flex items-center gap-3">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="flex flex-col items-center bg-gradient-to-br border rounded-2xl px-6 py-8 hover:shadow-lg transition-all animate-slide-up animate-delay-200 from-blue-50 to-white border-blue-100">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-blue-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="fish" class="lucide lucide-fish w-6 h-6 text-blue-600">
+                <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+                <path d="M18 12v.5"></path>
+                <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+                <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+                <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+                <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-lg font-sans">Peixes</span>
+            <span class="text-xs text-gray-500 mt-1 font-sans">Tropicais e ornamentais</span>
+          </div>
+
+          <div class="flex flex-col items-center bg-gradient-to-br border rounded-2xl px-6 py-8 hover:shadow-lg transition-all animate-slide-up animate-delay-400 from-purple-50 to-white border-purple-100">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-purple-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="box" class="lucide lucide-box w-6 h-6 text-purple-600">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                <path d="M12 22V12"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-lg font-sans">Aquários</span>
+            <span class="text-xs text-gray-500 mt-1 font-sans">E equipamentos</span>
+          </div>
+
+          <div class="flex flex-col hover:shadow-lg transition-all animate-slide-up animate-delay-600 bg-gradient-to-br from-orange-50 to-white border-orange-100 border rounded-2xl pt-8 pr-6 pb-8 pl-6 items-center">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-orange-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="leaf" class="lucide lucide-leaf w-6 h-6 text-orange-600">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-lg font-sans">Plantas</span>
+            <span class="text-xs text-gray-500 mt-1 font-sans">Corais e algas</span>
+          </div>
+
+          <div class="flex flex-col items-center bg-gradient-to-br border rounded-2xl px-6 py-8 hover:shadow-lg transition-all animate-slide-up animate-delay-800 from-green-50 to-white border-green-100">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-green-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" class="lucide lucide-sparkles w-6 h-6 text-green-600">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                <path d="M20 3v4"></path>
+                <path d="M22 5h-4"></path>
+                <path d="M4 17v2"></path>
+                <path d="M5 18H3"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-lg font-sans">Decoração</span>
+            <span class="text-xs text-gray-500 mt-1 font-sans">Conchas e estrelas do mar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
