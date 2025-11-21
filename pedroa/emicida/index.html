@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emicida - Rapper e Ativista Cultural</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ffcc00;
+            --secondary: #1a1a1a;
+            --accent: #e60000;
+            --light: #f5f5f5;
+            --dark: #333;
+            --gray: #777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        header .subtitle {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* História */
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .history-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .history-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .history-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .history-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Contribuição */
+        .contribution-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .contribution-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background-color: var(--primary);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .highlight-box p {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+        
+        /* Notícias Recentes */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .news-content {
+            padding: 1.5rem;
+        }
+        
+        .news-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .news-card p {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .news-tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        /* Projetos Recentes */
+        .projects-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .project-info p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        /* Galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: white;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-item figcaption {
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* Links externos */
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .links a {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            color: var(--secondary);
+            text-decoration: none;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background-color: var(--primary);
+            color: var(--secondary);
+        }
+        
+        .links i {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Créditos */
+        .credits-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .credits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .credit-category {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .credit-category h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .credit-category ul {
+            list-style-type: none;
+        }
+        
+        .credit-category li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .credit-category li:before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .history-content {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header-content .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+            }
+            
+            .nav-links li {
+                margin: 0 0.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            header {
+                min-height: 70vh;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Emicida</h1>
+                <p class="subtitle">Rapper, Compositor e Ativista Cultural</p>
+                <p>Voz da periferia e renovador do rap brasileiro</p>
+            </div>
+        </div>
+        <a href="#historia" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+    
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">EMICIDA</div>
+            <ul class="nav-links">
+                <li><a href="#historia">História</a></li>
+                <li><a href="#contribuicao">Contribuição</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#links">Referências</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="historia">
+        <div class="container">
+            <div class="section-title">
+                <h2>Breve Histórico</h2>
+                <p>A trajetória de Leandro Roque de Oliveira, o Emicida, da periferia de São Paulo ao reconhecimento nacional</p>
+            </div>
+            
+            <div class="history-content">
+                <div class="history-text">
+                    <p>Leandro Roque de Oliveira, conhecido como Emicida, é um rapper, cantor, compositor e ativista cultural brasileiro nascido em 17 de agosto de 1985 na cidade de São Paulo. Criado no bairro da Vila Medeiros, na Zona Norte paulistana, Emicida emergiu como uma das vozes mais importantes da música brasileira contemporânea.</p>
+                    
+                    <p>Sua trajetória artística começou nas batalhas de MCs, onde se destacou pela agilidade mental e letras afiadas, conquistando diversos títulos. O nome "Emicida" surgiu da combinação de "MC" com "homicida", referindo-se à sua habilidade em "assassinar" os adversários nas batalhas de rimas.</p>
+                    
+                    <p>Formado em Comunicação Social, Emicida sempre utilizou sua formação para amplificar sua mensagem. Em um contexto de desigualdade social e racial no Brasil, sua obra reflete as vivências da periferia, abordando temas como racismo, resistência cultural e empoderamento negro.</p>
+                    
+                    <p>Sua carreira profissional decolou com o lançamento de mixtapes que se tornaram virais na internet, culminando no álbum de estreia "O Glorioso Retorno de Quem Nunca Esteve Aqui" (2013), que consolidou sua posição como um dos principais nomes do rap nacional.</p>
+                </div>
+                
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emicida em performance">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contribuicao">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contribuição Cultural</h2>
+                <p>O impacto de Emicida na música brasileira e na valorização da cultura negra</p>
+            </div>
+            
+            <div class="contribution-content">
+                <div class="contribution-text">
+                    <p>Emicida é importante para a cultura brasileira por ter renovado o rap nacional, tornando-o mais acessível sem abrir mão da profundidade crítica. Sua obra conecta tradições africanas e brasileiras, criando uma ponte entre a cultura popular e a erudita, entre a periferia e os centros urbanos.</p>
+                    
+                    <p>O impacto de sua atuação vai além da música. Através de seu selo independente, Laboratório Fantasma, Emicida criou espaço para novos talentos e produziu conteúdo que valoriza a cultura negra brasileira. Seus álbuns, especialmente "AmarElo" (2019), funcionam como verdadeiros manifestos culturais que resgatam figuras importantes da história negra brasileira.</p>
+                    
+                    <div class="highlight-box">
+                        <p>"AmarElo" não é apenas um álbum, é um projeto que resgata a memória e celebra a resistência negra no Brasil.</p>
+                    </div>
+                    
+                    <p>Emicida influenciou sua área ao demonstrar que é possível fazer rap comercialmente bem-sucedido sem perder a autenticidade e o conteúdo político. Suas colaborações com artistas de diversos gêneros expandiram os horizontes do hip hop nacional.</p>
+                    
+                    <p>Para a população negra brasileira, Emicida representa a possibilidade de ver suas histórias, lutas e alegrias representadas na cultura mainstream. Sua obra funciona como espelho e janela: espelho para jovens negros se verem representados, e janela para outros setores da sociedade compreenderem as complexidades da experiência negra no Brasil.</p>
+                    
+                    <p>Para o Brasil como um todo, Emicida contribui para um entendimento mais profundo da formação cultural do país, destacando as influências africanas que foram historicamente apagadas ou marginalizadas. Sua atuação promove um diálogo necessário sobre desigualdade racial e justiça social.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="noticias">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notícias Recentes</h2>
+                <p>Fique por dentro das últimas novidades sobre Emicida</p>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-date">Novembro 2025</div>
+                        <h3>Emicida lança mixtape "Racional VL3"</h3>
+                        <p>O rapper lançou "Emicida Racional VL3 – As Aventuras de DJ Relíquia e LRX", uma mixtape que homenageia os Racionais MC's e marca seu reencontro com o DJ Nyack após 18 anos de parceria.</p>
+                        <span class="news-tag">Lançamento</span>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-date">Novembro 2025</div>
+                        <h3>Desentendimento com o irmão, Fióti</h3>
+                        <p>Em entrevista ao Conversa com Bial, Emicida falou sobre o distanciamento do irmão e a briga judicial pela Laboratório Fantasma, empresa fundada por ambos em 2009.</p>
+                        <span class="news-tag">Pessoal</span>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-date">Novembro 2025</div>
+                        <h3>Próximo álbum "Mesmas Cores & Mesmos Valores"</h3>
+                        <p>Emicida anunciou o álbum "Emicida Racional VL2 – Mesmas Cores & Mesmos Valores", uma releitura do clássico "Cores & Valores" dos Racionais MC's, com previsão de lançamento para 28 de novembro.</p>
+                        <span class="news-tag">Próximo Lançamento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projetos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projetos Recentes</h2>
+                <p>Conheça os trabalhos mais recentes de Emicida</p>
+            </div>
+            
+            <div class="projects-showcase">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mixtape Racional VL3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Emicida Racional VL3</h3>
+                        <p>Mixtape em homenagem aos Racionais MC's, com mashups entre faixas de Emicida e do grupo, marcando o reencontro com DJ Nyack [citation:4][citation:8].</p>
+                        <a href="https://linktr.ee/emicida" class="project-link" target="_blank">Ouvir Agora →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Álbum AmarElo">
+                    </div>
+                    <div class="project-info">
+                        <h3>AmarElo (2019)</h3>
+                        <p>Álbum aclamado que celebra a cultura negra brasileira, acompanhado de documentário na Netflix.</p>
+                        <a href="https://open.spotify.com/album/2ZR8s6MYCQk4k0q7Ee1kqU" class="project-link" target="_blank">Ouvir Agora →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Documentário AmarElo">
+                    </div>
+                    <div class="project-info">
+                        <h3>AmarElo - É Tudo Para Ontem</h3>
+                        <p>Documentário que registra o show histórico no Theatro Municipal de São Paulo e reflete sobre a cultura negra no Brasil.</p>
+                        <a href="https://www.netflix.com/br/title/81203545" class="project-link" target="_blank">Assistir →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laboratório Fantasma">
+                    </div>
+                    <div class="project-info">
+                        <h3>Laboratório Fantasma</h3>
+                        <p>Selo independente fundado por Emicida e seu irmão Fióti em 2009, responsável por lançar diversos talentos da música brasileira [citation:1].</p>
+                        <a href="https://laboratoriofantasma.com.br/" class="project-link" target="_blank">Conhecer →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="galeria">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria</h2>
+                <p>Principais trabalhos e momentos da carreira de Emicida</p>
+            </div>
+            
+            <div class="gallery">
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Show do Emicida">
+                    <figcaption>Emicida em performance ao vivo - Sua energia no palco cativa plateias de todas as idades</figcaption>
+                </figure>
+                
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Álbum AmarElo">
+                    <figcaption>Álbum "AmarElo" (2019) - Projeto que celebra a cultura negra brasileira e suas influências</figcaption>
+                </figure>
+                
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Documentário AmarElo">
+                    <figcaption>Documentário "AmarElo - É Tudo Para Ontem" - Uma reflexão sobre memória e resistência</figcaption>
+                </figure>
+                
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laboratório Fantasma">
+                    <figcaption>Laboratório Fantasma - Selo independente fundado por Emicida para fomentar novos talentos</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    
+    <section id="links">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fontes e Referências</h2>
+                <p>Conteúdo confiável para saber mais sobre Emicida e sua obra</p>
+            </div>
+            
+            <div class="links">
+                <a href="https://laboratoriofantasma.com.br/" target="_blank">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Laboratório Fantasma - Selo do Emicida</span>
+                </a>
+                
+                <a href="https://www.bbc.com/portuguese/geral-50628025" target="_blank">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Matéria da BBC sobre o álbum AmarElo</span>
+                </a>
+                
+                <a href="https://www.nexojornal.com.br/expresso/2019/11/21/O-que-o-%C3%A1lbum-%E2%80%98AmarElo%E2%80%99-de-Emicida-diz-sobre-o-Brasil" target="_blank">
+                    <i class="fas fa-book-open"></i>
+                    <span>Análise do álbum AmarElo no Nexo Jornal</span>
+                </a>
+                
+                <a href="https://g1.globo.com/pop-arte/musica/blog/mauricio-style/post/2020/07/13/emicida-lanca-documentario-amarelo-e-tudo-pra-ontem-na-netflix.ghtml" target="_blank">
+                    <i class="fas fa-film"></i>
+                    <span>Notícia sobre o documentário no G1</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="creditos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Créditos</h2>
+                <p>Fontes de pesquisa e referências utilizadas neste site</p>
+            </div>
+            
+            <div class="credits-content">
+                <div class="credits-list">
+                    <div class="credit-category">
+                        <h3>Fontes de Pesquisa</h3>
+                        <ul>
+                            <li>GShow - Entrevista com Emicida sobre desentendimento com o irmão [citation:1]</li>
+                            <li>Terra - Notícia sobre a briga judicial com Fióti [citation:2]</li>
+                            <li>Tenho Mais Discos Que Amigos - Anúncio da mixtape Racional VL3 [citation:4]</li>
+                            <li>Pretessências - Anúncio do álbum Racional VL2 [citation:6]</li>
+                            <li>Radio Westside - Notícia sobre o reencontro com DJ Nyack [citation:8]</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="credit-category">
+                        <h3>Recursos Visuais</h3>
+                        <ul>
+                            <li>Unsplash - Imagens de uso livre</li>
+                            <li>Font Awesome - Ícones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">EMICIDA</div>
+                <p>Site educativo sobre a trajetória e contribuição cultural do artista</p>
+                
+                <div class="footer-links">
+                    <a href="#historia">História</a>
+                    <a href="#contribuicao">Contribuição</a>
+                    <a href="#noticias">Notícias</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#galeria">Galeria</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
