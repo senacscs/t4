@@ -1,0 +1,1 @@
+// Galeria removida. Script vazio.
