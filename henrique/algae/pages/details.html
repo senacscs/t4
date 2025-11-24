@@ -3,58 +3,46 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalhes</title>
-    
+    <title>Detalhes | Algae Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
         body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-        }
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;}
         .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
         .animate-slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        .animate-delay-200 { animation-delay: 0.2s; }
-        .animate-delay-400 { animation-delay: 0.4s; }
-        .animate-delay-600 { animation-delay: 0.6s; }
-        .animate-delay-800 { animation-delay: 0.8s; }
         @keyframes fadeIn { to { opacity: 1; } }
         @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-
 <body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
     <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
     
     <header class="py-6 animate-fade-in">
         <div class="mx-auto max-w-7xl px-6">
             <div class="flex items-center justify-between gap-6">
-                
                 <div class="flex items-center gap-4">
-                    <button class="w-8 h-8 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg flex-shrink-0">
+                    <button class="w-8 h-8 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg flex-shrink-0 btn-voltar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                             <path d="m15 18-6-6 6-6"></path>
                         </svg>
                     </button>
-
                     <div class="flex items-center gap-3">
-    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
-            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
-            <path d="M18 12v.5"></path>
-            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
-            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
-            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
-            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
-        </svg>
-    </div>
-    <span class="font-semibold text-lg tracking-tight">Algae</span>
-</div>
+                        <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+                                <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+                                <path d="M18 12v.5"></path>
+                                <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+                                <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+                                <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+                                <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-lg tracking-tight">Algae</span>
+                    </div>
                 </div>
-                
                 <div class="flex items-center gap-4 flex-shrink-0">
                     <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
@@ -73,64 +61,57 @@
             </div>
         </div>
     </header>
-
+    
     <main>
         <section class="mx-auto max-w-7xl px-6 pt-2">
-            
             <div class="bg-white/50 backdrop-blur-md rounded-3xl p-8 shadow-[rgba(255,_255,_255,_0.1)_0px_1px_1px_0px_inset,_rgba(50,_50,_93,_0.25)_0px_50px_100px_-20px,_rgba(0,_0,_0,_0.3)_0px_30px_60px_-30px]">
                 <div class="grid lg:grid-cols-2 gap-12">
-
                     <div class="flex h-full">
-                        <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50 shadow-xl w-full h-full">
+                        <div id="imagem-container" class="rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50 shadow-xl w-full h-full">
                             <img 
-                                src="https://images.unsplash.com/photo-1520990596331-72180de327c1?w=800&q=80" 
-                                alt="Betta Splendens" 
+                                id="imagem-produto" 
+                                src="placeholder.png" 
+                                alt="Imagem do Produto" 
                                 class="w-full h-full object-cover"
                             />
                         </div>
                     </div>
-
+                    
                     <div class="flex flex-col">
-
-                        <div class="flex items-center gap-3 mb-4">
-                            <h1 class="text-2xl font-bold font-manrope text-left">Betta Splendens</h1>
-                            <span class="text-xl font-semibold text-blue-600">R$ 45</span>
-                        </div>
-
-
-                        <div class="flex-1">
-                            <div class="space-y-4 text-gray-700">
-                                <p>
-                                    O Betta Splendens, também conhecido como peixe-de-briga, é uma das espécies mais populares no aquarismo ornamental. 
-                                    Suas cores vibrantes e nadadeiras exuberantes o tornam uma verdadeira obra de arte aquática.
-                                </p>
-
-                                <div class="bg-gray-50 rounded-xl p-4 space-y-2">
-                                    <div class="flex justify-between">
-                                        <span class="font-medium">Tamanho:</span>
-                                        <span>6-8 cm</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span class="font-medium">Temperatura:</span>
-                                        <span>24-28°C</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span class="font-medium">pH:</span>
-                                        <span>6.5-7.5</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span class="font-medium">Comportamento:</span>
-                                        <span>Territorial</span>
-                                    </div>
-                                </div>
-
-                                <p class="text-sm text-gray-600">
-                                    <strong>Cuidados:</strong> Requer aquário de no mínimo 10L, alimentação balanceada com ração específica, 
-                                    e trocas parciais de água semanalmente. Evite colocar junto com outros bettas machos.
-                                </p>
+                        <div class="flex items-center gap-3 mb-4 flex-wrap">
+                            <h1 id="nome-produto" class="text-2xl font-bold font-manrope text-left">Nome do Produto</h1>
+                            <div id="preco-container">
+                                <span id="preco-produto" class="text-xl font-semibold">R$ 0,00</span>
                             </div>
                         </div>
-
+                        
+                        <div class="flex-1">
+                            <div class="space-y-4 text-gray-700">
+                                <p id="descricao-longa">
+                                    Descrição detalhada será carregada aqui.
+                                </p>
+                                
+                                <div class="bg-gray-50 rounded-xl p-4 space-y-2">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Tamanho/Dimensões:</span>
+                                        <span id="spec-tamanho" class="text-right">N/A</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Temperatura Ideal:</span>
+                                        <span id="spec-temperatura" class="text-right">N/A</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">pH/Água:</span>
+                                        <span id="spec-ph" class="text-right">N/A</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Comportamento/Categoria:</span>
+                                        <span id="spec-comportamento" class="text-right">N/A</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="mt-8 flex gap-4">
                             <button class="flex items-center justify-center gap-2 bg-gray-100 text-gray-800 rounded-xl px-6 py-4 font-medium hover:bg-gray-200 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
@@ -140,21 +121,204 @@
                                 </svg>
                                 Adicionar ao Carrinho
                             </button>
-
                             <button class="flex-1 bg-black text-white rounded-xl px-8 py-4 font-medium hover:bg-gray-800 transition-colors shadow-lg">
                                 Comprar Agora
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
-
+    
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        lucide.createIcons();
+        // === FUNÇÃO DE FORMATAÇÃO DE PREÇO ATUALIZADA (PT-BR) ===
+        function formatarPreco(valor) {
+            return valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+        }
+        
+        // === ARRAY DE PRODUTOS RESTAURADO ===
+        const PRODUTOS = [
+            {
+                id: 0,
+                nome: "Kit Completo Água Doce",
+                preco: 27645.40, 
+                cor_destaque: "emerald",
+                imagem_url: "https://images.unsplash.com/photo-1549646407-775e54d68846?w=400&q=80", 
+                descricao_longa: "O **Kit Completo de Água Doce** oferece um aquário premium de grande porte (600L) com espécies ornamentais cuidadosamente selecionadas (**Arowana Asiática, Disco**), plantas (**Anubias Nana, Rotala Rotundifolia**) e elementos decorativos (**Seixos pretos polidos, Tronco Mopani**), criando um ambiente elegante e estável para peixes de destaque e invertebrados (**Red Cherry Shrimp, Neritina Tiger**).",
+                tamanho: "160x70x55 cm (Aquário)",
+                temperatura: "24-30°C",
+                ph: "6.0-7.5 (Doce)",
+                comportamento: "Vários",
+                tags: ["Kit", "Conjunto", "Aquário", "Arowana", "Disco", "Peixe", "Peixes", "Planta", "Doce", "Ornamental", "Verde", "Vermelho", "Dourado", "Grande"]
+            },
+            {
+                id: 1,
+                nome: "Alga Marinha Vermelha (Red Algae)",
+                preco: 45.90,
+                cor_destaque: "red",
+                imagem_url: "https://images.unsplash.com/photo-1588665796263-5e9271630b91?w=400&q=80",
+                descricao_longa: "A **Red Algae** é uma adição vibrante e rica em nutrientes para aquários marinhos, conhecida por sua cor intensa. Ajuda a consumir excesso de nitratos e fosfatos, melhorando a qualidade da água. Crescimento moderado e fácil manutenção.",
+                tamanho: "10-20 cm",
+                temperatura: "22-26°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Estacionário",
+                tags: ["Alga", "Vermelha", "Marinha", "Salgada", "Filtro", "Nutriente"]
+            },
+            {
+                id: 2,
+                nome: "Cianobactéria (Blue-Green Algae)",
+                preco: 12.50,
+                cor_destaque: "cyan",
+                imagem_url: "https://images.unsplash.com/photo-1594917411603-9e4a30e70a44?w=400&q=80",
+                descricao_longa: "Embora tecnicamente uma bactéria, esta **Cianobactéria** é essencial para certos ecossistemas. Vendida em pequenas quantidades para inoculação em substratos biológicos avançados. Requer controle estrito para evitar supercrescimento. **ATENÇÃO: Produto para uso especializado.**",
+                tamanho: "Microscópico",
+                temperatura: "25-28°C",
+                ph: "7.0-8.0 (Doce/Salgada)",
+                comportamento: "Colonial",
+                tags: ["Bactéria", "Ciano", "Azul", "Verde", "Micro", "Inoculação", "Especializado"]
+            },
+            {
+                id: 3,
+                nome: "Musgo de Java (Taxiphyllum barbieri)",
+                preco: 25.00,
+                cor_destaque: "lime",
+                imagem_url: "https://images.unsplash.com/photo-1543781216-95e28a5d3f2b?w=400&q=80",
+                descricao_longa: "O **Musgo de Java** é uma planta de aquário extremamente popular e resistente. Perfeito para cobrir troncos, pedras e esconderijo para alevinos e camarões. Suporta baixas condições de luz e não exige CO2.",
+                tamanho: "Variável",
+                temperatura: "18-30°C",
+                ph: "6.0-7.5 (Doce)",
+                comportamento: "Rasteiro",
+                tags: ["Planta", "Musgo", "Java", "Doce", "Baixa Luz", "Camarão", "Fácil"]
+            },
+            {
+                id: 4,
+                nome: "Coral Sólido Sunburst (Euphyllia)",
+                preco: 899.99,
+                cor_destaque: "orange",
+                imagem_url: "https://images.unsplash.com/photo-1621571217088-2c2621f37e5e?w=400&q=80",
+                descricao_longa: "O **Coral Sunburst Euphyllia** é uma peça central deslumbrante para qualquer aquário de recife. Conhecido por suas pontas que brilham em tons de laranja e amarelo sob iluminação LED. Requer parâmetros de água estáveis e iluminação de média a alta.",
+                tamanho: "5-15 cm",
+                temperatura: "24-26°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Agressivo (Toca)",
+                tags: ["Coral", "Sólido", "Reef", "Salgada", "LPS", "Euphyllia", "Raro", "Premium"]
+            }
+        ];
+        
+        // Obtém o ID do produto salvo ao clicar em Detalhes.
+        const urlParams = new URLSearchParams(window.location.search);
+        // Tenta obter o ID da URL, se não, tenta do localStorage, se não, usa 0 (o primeiro produto)
+        const productId = urlParams.get('id') || localStorage.getItem('selectedProductId') || '0';
+        
+        // Encontra o produto no array.
+        const produto = PRODUTOS.find(p => p.id == productId);
+
+        // Mapeamento de cores para classes Tailwind (precisa ser repetido aqui)
+        function getColorClasses(cor) {
+            const bgClasses = {
+                'blue': 'from-blue-100 to-blue-50',
+                'purple': 'from-purple-100 to-purple-50',
+                'green': 'from-green-100 to-green-50',
+                'orange': 'from-orange-100 to-orange-50',
+                'red': 'from-red-100 to-red-50',
+                'indigo': 'from-indigo-100 to-indigo-50',
+                'gray': 'from-gray-100 to-gray-50',
+                'stone': 'from-stone-100 to-stone-50', 
+                'black': 'from-gray-700 to-gray-600',
+                'cyan': 'from-cyan-100 to-cyan-50',
+                'yellow': 'from-yellow-100 to-yellow-50', 
+                'pink': 'from-pink-100 to-pink-50',
+                'lime': 'from-lime-100 to-lime-50',
+                'fuchsia': 'from-fuchsia-100 to-fuchsia-50',
+                'emerald': 'from-emerald-100 to-emerald-50',
+            }[cor] || 'from-gray-100 to-gray-50';
+
+            const textClasses = {
+                'blue': 'text-blue-600',
+                'purple': 'text-purple-600',
+                'green': 'text-green-600',
+                'orange': 'text-orange-600',
+                'red': 'text-red-600',
+                'indigo': 'text-indigo-600',
+                'gray': 'text-gray-600',
+                'stone': 'text-stone-600',
+                'black': 'text-gray-800',
+                'cyan': 'text-cyan-600',
+                'yellow': 'text-yellow-800',
+                'pink': 'text-pink-600',
+                'lime': 'text-lime-600',
+                'fuchsia': 'text-fuchsia-600',
+                'emerald': 'text-emerald-600',
+            }[cor] || 'text-gray-600';
+            
+            return { bg: bgClasses, text: textClasses };
+        }
+
+        // Se o produto não for encontrado (ex: ID inválido)
+        if (!produto) {
+            document.querySelector('main').innerHTML = '<section class="mx-auto max-w-7xl px-6 pt-2"><div class="bg-white/90 backdrop-blur-md rounded-3xl p-12 shadow-xl text-center"><h1 class="text-3xl font-bold text-red-600">Erro: Produto não encontrado!</h1><p class="mt-4 text-gray-700">O produto com ID ' + productId + ' não existe. Por favor, retorne à <a href="products.html" class="text-blue-600 hover:underline">página de produtos</a>.</p></div></section>';
+            lucide.createIcons();
+        } else {
+            const corClasses = getColorClasses(produto.cor_destaque);
+
+            const fill = (selector, content) => {
+                const element = document.querySelector(selector);
+                if (element) {
+                    element.innerHTML = content;
+                }
+            };
+            
+            // --- FUNÇÕES DE RENDERIZAÇÃO ---
+            
+            function renderizarPreco(produto, corClasses) {
+                const precoContainer = document.querySelector('#preco-container');
+                if (!precoContainer) return;
+
+                const precoFormatado = formatarPreco(produto.preco);
+                // Preço com destaque da cor do produto
+                precoContainer.innerHTML = `<span class="text-2xl font-bold ${corClasses.text}">R$ ${precoFormatado}</span>`;
+            }
+            
+            // 1. Preenche Título
+            fill('#nome-produto', produto.nome);
+
+            // 2. Preenche Preço 
+            renderizarPreco(produto, corClasses);
+
+            // 3. Preenche Imagem
+            const imgContainer = document.querySelector('#imagem-container');
+            if(imgContainer) {
+                // Remove as classes de gradiente antigas antes de aplicar a nova
+                imgContainer.className = imgContainer.className.replace(/from-.*? to-.*?/g, '');
+                imgContainer.className += ' ' + corClasses.bg;
+            }
+            document.querySelector('#imagem-produto').src = produto.imagem_url.replace('w=400', 'w=800');
+            document.querySelector('#imagem-produto').alt = produto.nome;
+
+            // 4. Preenche Descrição Longa (Suporta **negrito**)
+            // O regex substitui **texto** por <strong>texto</strong>
+            fill('#descricao-longa', `<p>${produto.descricao_longa.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`); 
+
+            // 5. Preenche Especificações (Corrigido: sem tags <span> internas, apenas o valor)
+            fill('#spec-tamanho', produto.tamanho);
+            fill('#spec-temperatura', produto.temperatura);
+            fill('#spec-ph', produto.ph);
+            fill('#spec-comportamento', produto.comportamento);
+            
+            // 6. Adiciona função ao botão Voltar (seta) - Navega para o caminho correto
+            const btnVoltar = document.querySelector('.btn-voltar');
+            if (btnVoltar) {
+                btnVoltar.addEventListener('click', () => {
+                    // Retorna para a página de produtos
+                    // Assumindo que a página de listagem é 'products.html'
+                    window.location.href = 'products.html';
+                });
+            }
+            
+            lucide.createIcons();
+        }
     </script>
 </body>
 </html>

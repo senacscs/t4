@@ -17,14 +17,7 @@
         }
 
         .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
-        .animate-slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        .animate-delay-200 { animation-delay: 0.2s; }
-        .animate-delay-400 { animation-delay: 0.4s; }
-        .animate-delay-600 { animation-delay: 0.6s; }
-        .animate-delay-800 { animation-delay: 0.8s; }
-
         @keyframes fadeIn { to { opacity: 1; } }
-        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 
@@ -42,18 +35,18 @@
                 </button>
 
                 <div class="flex items-center gap-3">
-    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
-            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
-            <path d="M18 12v.5"></path>
-            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
-            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
-            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
-            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
-        </svg>
-    </div>
-    <span class="font-semibold text-lg tracking-tight">Algae</span>
-</div>
+                    <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-white">
+                            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
+                            <path d="M18 12v.5"></path>
+                            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+                            <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"></path>
+                            <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"></path>
+                            <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"></path>
+                        </svg>
+                    </div>
+                    <span class="font-semibold text-lg tracking-tight">Algae</span>
+                </div>
             </div>
         </div>
     </header>
@@ -117,19 +110,19 @@
                                 <div class="bg-white/50 rounded-xl p-6 space-y-4">
                                     <div>
                                         <label class="block text-sm font-medium text-gray-600 mb-2">Nome Completo</label>
-                                        <input type="text" placeholder="Seu nome" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        <input type="text" **id="input-nome"** placeholder="Carregando..." class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
                                     </div>
                                     
                                     <div>
                                         <label class="block text-sm font-medium text-gray-600 mb-2">Email</label>
-                                        <input type="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        <input type="email" **id="input-email"** placeholder="Carregando..." class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
                                     </div>
                                     
                                     <div>
                                         <label class="block text-sm font-medium text-gray-600 mb-2">Cargo/Função</label>
-                                        <input type="text" placeholder="Ex: Administrador, Usuário Padrão" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
+                                        <input type="text" **id="input-cargo"** placeholder="Carregando..." class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20" />
                                     </div>
-                                    </div>
+                                </div>
                                 
                                 <button class="w-full max-w-xs bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors">
                                     Salvar Alterações
@@ -142,47 +135,15 @@
                             
                             <div class="mb-8">
                                 <h2 class="text-xl font-semibold mb-4">Em Andamento</h2>
-                                <div class="space-y-4">
-                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
-                                        <img src="https://images.unsplash.com/photo-1520990596331-72180de327c1?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
-                                        <div class="flex-1">
-                                            <h3 class="font-semibold text-lg">Betta Splendens</h3>
-                                            <p class="text-sm text-gray-600">Pedido #12345</p>
-                                        </div>
-                                        <div class="text-right">
-                                            <p class="font-bold text-xl text-blue-600">R$ 45</p>
-                                            <span class="inline-block mt-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">Em trânsito</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
-                                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
-                                        <div class="flex-1">
-                                            <h3 class="font-semibold text-lg">Aquário Panorâmico 50L</h3>
-                                            <p class="text-sm text-gray-600">Pedido #12344</p>
-                                        </div>
-                                        <div class="text-right">
-                                            <p class="font-bold text-xl text-purple-600">R$ 280</p>
-                                            <span class="inline-block mt-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Processando</span>
-                                        </div>
-                                    </div>
+                                <div **id="lista-pedidos-andamento"** class="space-y-4">
+                                    <p class="text-gray-500">Carregando pedidos...</p>
                                 </div>
                             </div>
                             
                             <div>
                                 <h2 class="text-xl font-semibold mb-4">Pedidos Recebidos</h2>
-                                <div class="space-y-4">
-                                    <div class="bg-white/50 rounded-xl p-4 flex items-center gap-4 hover:shadow-lg transition-all">
-                                        <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=100&q=80" alt="Produto" class="w-20 h-20 rounded-lg object-cover" />
-                                        <div class="flex-1">
-                                            <h3 class="font-semibold text-lg">Kit Decoração Completo</h3>
-                                            <p class="text-sm text-gray-600">Pedido #12340</p>
-                                        </div>
-                                        <div class="text-right">
-                                            <p class="font-bold text-xl text-green-600">R$ 85</p>
-                                            <span class="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Entregue</span>
-                                        </div>
-                                    </div>
+                                <div **id="lista-pedidos-recebidos"** class="space-y-4">
+                                    <p class="text-gray-500">Carregando histórico...</p>
                                 </div>
                             </div>
                         </div>
@@ -193,24 +154,8 @@
                             <div class="max-w-2xl space-y-8">
                                 <div>
                                     <h2 class="text-xl font-semibold mb-4">Cartões Cadastrados</h2>
-                                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 text-white mb-4">
-                                        <div class="flex justify-between items-start mb-8">
-                                            <div class="w-12 h-8 bg-yellow-400 rounded"></div>
-                                            <span class="text-sm opacity-80">VISA</span>
-                                        </div>
-                                        <div class="mb-6">
-                                            <p class="text-xl tracking-wider mb-2">**** **** **** 1234</p>
-                                        </div>
-                                        <div class="flex justify-between items-end">
-                                            <div>
-                                                <p class="text-xs opacity-60 mb-1">Titular</p>
-                                                <p class="text-sm font-medium">NOME DO TITULAR</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-xs opacity-60 mb-1">Validade</p>
-                                                <p class="text-sm font-medium">12/25</p>
-                                            </div>
-                                        </div>
+                                    <div **id="lista-cartoes"** class="space-y-4 mb-4">
+                                        <p class="text-gray-500">Carregando cartões...</p>
                                     </div>
 
                                     <button id="toggle-add-card" class="w-full max-w-xs bg-black text-white rounded-lg px-8 py-4 font-medium hover:bg-gray-800 transition-colors mb-8">
@@ -256,11 +201,13 @@
         </section>
     </main>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         let activeSection = 'informacoes';
         const menuButtons = document.querySelectorAll('.menu-btn');
         const sections = document.querySelectorAll('.section-content');
 
+        // FUNÇÃO PRINCIPAL PARA TROCAR SEÇÃO
         function setActiveSection(sectionId) {
             activeSection = sectionId;
 
@@ -279,6 +226,14 @@
                 const sectionIdAttr = section.id.replace('section-', '');
                 if (sectionIdAttr === activeSection) {
                     section.classList.remove('hidden');
+                    // Chama a função de carregamento correspondente
+                    if (sectionIdAttr === 'informacoes') {
+                        carregarInformacoesConta();
+                    } else if (sectionIdAttr === 'pedidos') {
+                        carregarPedidos();
+                    } else if (sectionIdAttr === 'pagamentos') {
+                        carregarCartoes();
+                    }
                 } else {
                     section.classList.add('hidden');
                 }
@@ -292,8 +247,10 @@
             });
         });
 
+        // Define a seção inicial (Informações)
         setActiveSection(activeSection);
-
+        
+        // EVENT LISTENERS DO FORMULÁRIO DE CARTÃO
         const toggleButton = document.getElementById('toggle-add-card');
         const addCardForm = document.getElementById('add-card-form');
 
@@ -309,11 +266,115 @@
             });
         }
         
+        // AÇÃO DO BOTÃO VOLTAR
         const backButton = document.getElementById('btn-voltar');
         if (backButton) {
             backButton.addEventListener('click', () => {
+                // Adicione a lógica de redirecionamento para a página principal ou de produtos aqui
+                // Exemplo: window.location.href = 'index.html'; 
             });
         }
+        
+        // --- FUNÇÕES DE CARREGAMENTO DE DADOS (PRONTAS PARA O BACKEND) ---
+        
+        /**
+         * Carrega e preenche os campos de informação do usuário.
+         * Você implementará o fetch aqui.
+         */
+        async function carregarInformacoesConta() {
+            console.log("-> Iniciando carregamento de Informações da Conta via API...");
+            // Exemplo de como você faria o fetch:
+            /*
+            try {
+                const response = await fetch('/api/usuario/perfil');
+                const usuario = await response.json();
+                
+                document.getElementById('input-nome').value = usuario.nome || '';
+                document.getElementById('input-email').value = usuario.email || '';
+                document.getElementById('input-cargo').value = usuario.cargo || '';
+
+                // Opcional: remover placeholders 'Carregando...' após preenchimento
+                document.getElementById('input-nome').placeholder = "Seu nome"; 
+            } catch (error) {
+                console.error("Falha ao carregar informações do usuário:", error);
+                document.getElementById('input-nome').placeholder = "Erro ao carregar";
+            }
+            */
+        }
+        
+        /**
+         * Carrega os pedidos em andamento e recebidos.
+         * Você implementará o fetch e a renderização do HTML dos pedidos aqui.
+         */
+        async function carregarPedidos() {
+            const listaAndamento = document.getElementById('lista-pedidos-andamento');
+            const listaRecebidos = document.getElementById('lista-pedidos-recebidos');
+            
+            // Define o estado de carregamento inicial
+            listaAndamento.innerHTML = '<p class="text-gray-500">Carregando pedidos...</p>';
+            listaRecebidos.innerHTML = '<p class="text-gray-500">Carregando histórico...</p>';
+            
+            console.log("-> Iniciando carregamento de Pedidos via API...");
+
+            // Exemplo de como você faria o fetch:
+            /*
+            try {
+                const response = await fetch('/api/pedidos');
+                const pedidos = await response.json();
+                
+                // Limpar antes de renderizar
+                listaAndamento.innerHTML = ''; 
+                listaRecebidos.innerHTML = '';
+                
+                // Exemplo de renderização (Lógica a ser implementada por você)
+                // pedidos.andamento.forEach(pedido => listaAndamento.innerHTML += renderizarPedido(pedido));
+                // pedidos.recebidos.forEach(pedido => listaRecebidos.innerHTML += renderizarPedido(pedido));
+                
+                if (pedidos.andamento.length === 0) listaAndamento.innerHTML = '<p class="text-gray-500">Nenhum pedido em andamento.</p>';
+                if (pedidos.recebidos.length === 0) listaRecebidos.innerHTML = '<p class="text-gray-500">Nenhum pedido recebido.</p>';
+
+            } catch (error) {
+                console.error("Falha ao carregar pedidos:", error);
+                listaAndamento.innerHTML = '<p class="text-red-500">Erro ao carregar pedidos.</p>';
+                listaRecebidos.innerHTML = '<p class="text-red-500">Erro ao carregar histórico.</p>';
+            }
+            */
+        }
+        
+        /**
+         * Carrega os cartões cadastrados.
+         * Você implementará o fetch e a renderização do HTML dos cartões aqui.
+         */
+        async function carregarCartoes() {
+            const listaCartoes = document.getElementById('lista-cartoes');
+            
+            // Define o estado de carregamento inicial
+            listaCartoes.innerHTML = '<p class="text-gray-500">Carregando cartões cadastrados...</p>';
+            
+            console.log("-> Iniciando carregamento de Cartões via API...");
+
+            // Exemplo de como você faria o fetch:
+            /*
+            try {
+                const response = await fetch('/api/pagamentos/cartoes');
+                const cartoes = await response.json();
+                
+                // Limpar antes de renderizar
+                listaCartoes.innerHTML = ''; 
+                
+                // Exemplo de renderização (Lógica a ser implementada por você)
+                // cartoes.forEach(cartao => listaCartoes.innerHTML += renderizarCartao(cartao));
+                
+                if (cartoes.length === 0) listaCartoes.innerHTML = '<p class="text-gray-500">Nenhum cartão cadastrado.</p>';
+
+            } catch (error) {
+                console.error("Falha ao carregar cartões:", error);
+                listaCartoes.innerHTML = '<p class="text-red-500">Erro ao carregar cartões.</p>';
+            }
+            */
+        }
+
+        lucide.createIcons();
     </script>
 </body>
 </html>

@@ -3,73 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos</title>
-    
+    <title>Produtos | Algae Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
         body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-        }
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;}
         .animate-fade-in {
             animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-        }
+            opacity: 0;}
         .animate-slide-up {
             animation: slideUp 0.8s ease-out forwards;
             opacity: 0;
-            transform: translateY(20px);
-        }
-        .animate-delay-200 { animation-delay: 0.2s; }
-        .animate-delay-400 { animation-delay: 0.4s; }
-        .animate-delay-600 { animation-delay: 0.6s; }
-        .animate-delay-800 { animation-delay: 0.8s; }
+            transform: translateY(20px);}
         @keyframes fadeIn {
-            to { opacity: 1; }
-        }
+            to { opacity: 1; }}
         @keyframes slideUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .font-geist { font-family: 'Geist', sans-serif !important; }
-        .font-roboto { font-family: 'Roboto', sans-serif !important; }
-        .font-montserrat { font-family: 'Montserrat', sans-serif !important; }
-        .font-poppins { font-family: 'Poppins', sans-serif !important; }
-        .font-playfair { font-family: 'Playfair Display', serif !important; }
-        .font-instrument-serif { font-family: 'Instrument Serif', serif !important; }
-        .font-merriweather { font-family: 'Merriweather', serif !important; }
-        .font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }
-        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }
-        .font-manrope { font-family: 'Manrope', sans-serif !important; }
-        .font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }
-        .font-work-sans { font-family: 'Work Sans', sans-serif !important; }
-        .font-pt-serif { font-family: 'PT Serif', serif !important; }
-        .font-geist-mono { font-family: 'Geist Mono', monospace !important; }
-        .font-space-mono { font-family: 'Space Mono', monospace !important; }
-        .font-quicksand { font-family: 'Quicksand', sans-serif !important; }
-        .font-nunito { font-family: 'Nunito', sans-serif !important; }
+            to { opacity: 1; transform: translateY(0); }}
     </style>
-    
-    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" />
-    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" />
-    <link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" />
-    <link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" />
-    <link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" />
-    <link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" />
-    <link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" />
-    <link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" />
-    <link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" />
 </head>
 <body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
     <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
@@ -89,7 +42,7 @@
                         </svg>
                     </div>
                     <span class="font-semibold text-lg tracking-tight font-sans">Algae</span>
-                </a>
+                </a>               
                 
                 <div class="relative flex-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">
@@ -97,12 +50,13 @@
                         <path d="m21 21-4.3-4.3"></path>
                     </svg>
                     <input 
+                        id="input-busca"
                         type="text" 
-                        placeholder="Buscar produtos..." 
+                        placeholder="Buscar Peixes, Coral, Kit, Azul, Doce..." 
                         class="w-full pl-12 pr-4 py-3 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all shadow-lg"
                     />
                 </div>
-
+                
                 <div class="flex items-center gap-4 flex-shrink-0">
                     <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
@@ -121,99 +75,383 @@
             </div>
         </div>
     </header>
-
+    
     <main>
-        <section class="mx-auto max-w-7xl px-6 **pt-8 pb-12**">
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                
-                <div class="rounded-2xl p-6 transition-all animate-slide-up animate-delay-200 bg-white hover:shadow-xl border-2 border-gray-100">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-semibold text-lg font-sans">Betta Splendens</h3>
-                        <span class="text-2xl font-bold text-blue-600">R$ 45</span>
-                    </div>
-                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-blue-100 to-blue-50">
-                        <img src="https://images.unsplash.com/photo-1520990596331-72180de327c1?w=400&q=80" alt="Betta" class="w-full h-full object-cover" />
-                    </div>
-                    <p class="text-sm font-sans text-gray-600 mb-4">Peixe ornamental de cores vibrantes, ideal para aquários pequenos. Fácil manutenção.</p>
-                    <div class="flex gap-3">
-                        <button class="flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                <circle cx="8" cy="21" r="1"></circle>
-                                <circle cx="19" cy="21" r="1"></circle>
-                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-                            </svg>
-                        </button>
-                        <button class="bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                <circle cx="12" cy="12" r="1"></circle>
-                                <circle cx="12" cy="5" r="1"></circle>
-                                <circle cx="12" cy="19" r="1"></circle>
-                            </svg>
-                        </button>
-                    </div>
+        <section class="mx-auto max-w-7xl px-6 pt-8 pb-12">
+            <div id="grid-produtos" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 </div>
-                
-                <div class="rounded-2xl p-6 transition-all animate-slide-up animate-delay-400 bg-white hover:shadow-xl border-2 border-gray-100">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-semibold text-lg font-sans">Aquário Panorâmico</h3>
-                        <span class="text-2xl font-bold text-purple-600">R$ 280</span>
-                    </div>
-                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-purple-100 to-purple-50">
-                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=400&q=80" alt="Aquário" class="w-full h-full object-cover" />
-                    </div>
-                    <p class="text-sm font-sans text-gray-600 mb-4">Aquário 50L com vidro curvo, iluminação LED e sistema de filtragem completo.</p>
-                    <div class="flex gap-3">
-                        <button class="flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                <circle cx="8" cy="21" r="1"></circle>
-                                <circle cx="19" cy="21" r="1"></circle>
-                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-                            </svg>
-                        </button>
-                        <button class="bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                <circle cx="12" cy="12" r="1"></circle>
-                                <circle cx="12" cy="5" r="1"></circle>
-                                <circle cx="12" cy="19" r="1"></circle>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="rounded-2xl p-6 transition-all animate-slide-up animate-delay-600 bg-white hover:shadow-xl border-2 border-gray-100">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-semibold text-lg font-sans">Kit Decoração</h3>
-                        <span class="text-2xl font-bold text-green-600">R$ 85</span>
-                    </div>
-                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-green-100 to-green-50">
-                        <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80" alt="Decoração" class="w-full h-full object-cover" />
-                    </div>
-                    <p class="text-sm font-sans text-gray-600 mb-4">Kit completo com plantas naturais, conchas, cascalho colorido e rochas decorativas.</p>
-                    <div class="flex gap-3">
-                        <button class="flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                <circle cx="8" cy="21" r="1"></circle>
-                                <circle cx="19" cy="21" r="1"></circle>
-                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-                            </svg>
-                        </button>
-                        <button class="bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                <circle cx="12" cy="12" r="1"></circle>
-                                <circle cx="12" cy="5" r="1"></circle>
-                                <circle cx="12" cy="19" r="1"></circle>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                
-            </div>
         </section>
     </main>
-
+    
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        lucide.createIcons();
+        // === FUNÇÃO DE FORMATAÇÃO DE PREÇO (PT-BR) ===
+        function formatarPreco(valor) {
+            return valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+        }
+        
+        // === ARRAY DE PRODUTOS ===
+        const PRODUTOS = [
+            {
+                id: 0,
+                nome: "Kit Completo Água Doce",
+                preco: 27645.40, 
+                cor_destaque: "emerald",
+                // CORREÇÃO DE CAMINHO: Sair da pasta 'pages' para acessar 'assets'
+                imagem_url: "../assets/conjunto.png", 
+                descricao_curta: "Conjunto premium de aquário de 600L com Arowana, Disco, plantas e decoração.",
+                descricao_longa: "O Kit Completo de Água Doce oferece um aquário premium de grande porte (600L) com espécies ornamentais cuidadosamente selecionadas (Arowana Asiática, Disco), plantas (Anubias Nana, Rotala Rotundifolia) e elementos decorativos (Seixos pretos polidos, Tronco Mopani), criando um ambiente elegante e estável para peixes de destaque e invertebrados (Red Cherry Shrimp, Neritina Tiger).",
+                tamanho: "160x70x55 cm (Aquário)",
+                temperatura: "24-30°C",
+                ph: "6.0-7.5 (Doce)",
+                comportamento: "Vários",
+                tags: ["Kit", "Conjunto", "Aquário", "Arowana", "Disco", "Peixe", "Peixes", "Planta", "Doce", "Ornamental", "Verde", "Vermelho", "Dourado", "Grande"]
+            },
+            {
+                id: 1,
+                nome: "Mandarim Psicodélico",
+                preco: 250.00,
+                cor_destaque: "cyan", 
+                imagem_url: "https://images.unsplash.com/photo-1579294576882-9659b854359d?w=400&q=80",
+                descricao_curta: "Peixe pequeno e muito colorido, famoso por padrões psicodélicos. Pacífico e lento.",
+                descricao_longa: "O Mandarim Psicodélico (Synchiropus splendidus) é famoso por padrões psicodélicos. **Comportamento tranquilo.** Cuidados: Exige aquário maduro com muitos copépodes. Muitos não aceitam ração seca. Sensível a parâmetros instáveis.",
+                tamanho: "6–8 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Pacífico e Lento",
+                tags: ["Peixe", "Peixes", "Animal", "Vida Marinha", "Salgada", "Marinho", "Tropical", "Pequeno", "Colorido", "Ciano", "Verde", "Azul", "Laranja"]
+            },
+            {
+                id: 2,
+                nome: "Powder Blue Tang",
+                preco: 1100.00,
+                cor_destaque: "blue",
+                imagem_url: "https://images.unsplash.com/photo-1563214953-6a9780077c5e?w=400&q=80",
+                descricao_curta: "Cirurgião premium muito procurado pela coloração azul vibrante e contraste forte.",
+                descricao_longa: "O Powder Blue Tang (Acanthurus leucosternon) é um cirurgião premium. **Comportamento:** Territorial com outros cirurgiões. Cuidados: Tanque grande (400 L+). Alimentação rica em algas. Muito sensível a íctio — requer quarentena e água impecável.",
+                tamanho: "até 23 cm",
+                temperatura: "24-28°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Ativo e Territorial",
+                tags: ["Peixe", "Peixes", "Animal", "Vida Marinha", "Salgada", "Marinho", "Tropical", "Azul", "Amarelo", "Preto", "Cirurgião"]
+            },
+            {
+                id: 3,
+                nome: "Arowana Asiática",
+                preco: 10000.00,
+                cor_destaque: "yellow", 
+                imagem_url: "https://images.unsplash.com/photo-1616421062086-4191d9d592f6?w=400&q=80",
+                descricao_curta: "Peixe premium com grandes escamas metálicas, considerado símbolo de status.",
+                descricao_longa: "A Arowana Asiática (Scleropages formosus) é um peixe premium. **Comportamento:** Predador e saltador. Cuidados: Tanque enorme (600–800 L). Tampa reforçada. Licenciamento obrigatório. Alimentação carnívora variada.",
+                tamanho: "60–90 cm",
+                temperatura: "24-30°C",
+                ph: "6.0-7.5 (Doce)",
+                comportamento: "Predador e Saltador",
+                tags: ["Peixe", "Peixes", "Animal", "Doce", "Ornamental", "Predador", "Saltador", "Dourado", "Vermelho", "Verde", "Grande"]
+            },
+            {
+                id: 4,
+                nome: "Disco",
+                preco: 200.00,
+                cor_destaque: "red",
+                imagem_url: "https://images.unsplash.com/photo-1549646407-775e54d68846?w=400&q=80",
+                descricao_curta: "Peixe elegante e redondo, extremamente popular pela variedade de cores.",
+                descricao_longa: "O Peixe Disco (Symphysodon spp.) é popular pela variedade de cores. **Comportamento:** Pacífico e gregário (manter em grupos min. 5). Cuidados: Temperatura 28–30°C. Água limpa, ácida e estável. Muito sensível a amônia/nitrito.",
+                tamanho: "12–16 cm",
+                temperatura: "28-30°C",
+                ph: "6.0-7.0 (Doce)",
+                comportamento: "Pacífico e Gregário",
+                tags: ["Peixe", "Peixes", "Animal", "Doce", "Ornamental", "Pacífico", "Gregário", "Redondo", "Vermelho", "Azul", "Verde"]
+            },
+            {
+                id: 5,
+                nome: "Acropora Premium",
+                preco: 200.00,
+                cor_destaque: "pink",
+                imagem_url: "https://images.unsplash.com/photo-1542475459-ec757d598b9f?w=400&q=80",
+                descricao_curta: "Coral SPS de ramos rígidos e cores intensas, muito valorizado.",
+                descricao_longa: "A Acropora Millepora é um coral SPS de ramos rígidos. **Alta Exigência.** Cuidados: Luz forte. Fluxo intenso. Controle rigoroso de Ca, KH, Mg. Sensível a pragas específicas.",
+                tamanho: "Colônias ramificadas",
+                temperatura: "25-26°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "SPS - Alta Exigência",
+                tags: ["Coral", "Corais", "Invertebrado", "Salgada", "Marinho", "Reef", "SPS", "Rosa", "Azul", "Verde", "Exigente"]
+            },
+            {
+                id: 6,
+                nome: "Torch Coral",
+                preco: 250.00,
+                cor_destaque: "green",
+                imagem_url: "https://images.unsplash.com/photo-1581404098939-58b29f0c239d?w=400&q=80",
+                descricao_curta: "Coral de tentáculos longos com movimento marcado, muito requisitado.",
+                descricao_longa: "O Torch Coral (Euphyllia glabrescens) é um coral de tentáculos longos. **Semi-Agressivo.** Cuidados: Fluxo moderado e constante. Luz média a forte. Tentáculos queimam corais vizinhos (manter distância).",
+                tamanho: "2–5 cm por cabeça",
+                temperatura: "25-26°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "LPS Semi-Agressivo",
+                tags: ["Coral", "Corais", "Invertebrado", "Salgada", "Marinho", "Reef", "LPS", "Verde", "Dourado", "Neon"]
+            },
+            {
+                id: 7,
+                nome: "Halimeda Opuntia",
+                preco: 40.00,
+                cor_destaque: "lime", 
+                imagem_url: "https://images.unsplash.com/photo-1582265077271-98711e582d93?w=400&q=80",
+                descricao_curta: "Alga calcária verde, usada como decoração natural.",
+                descricao_longa: "A Halimeda Opuntia é uma alga calcária. **Calcificação alta.** Cuidados: Consome cálcio e KH. Crescimento moderado. Não é invasiva.",
+                tamanho: "10–20 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Alga Calcária",
+                tags: ["Alga", "Algas", "Planta", "Salgada", "Marinho", "Reef", "Verde", "Calcária", "Decoração"]
+            },
+            {
+                id: 8,
+                nome: "Gracilaria Vermelha",
+                preco: 20.00,
+                cor_destaque: "red",
+                imagem_url: "https://images.unsplash.com/photo-1563200782-353d2d113c07?w=400&q=80",
+                descricao_curta: "Alga ornamental vermelha muito usada em refúgios e aquários.",
+                descricao_longa: "A Gracilaria Gracilis é uma alga ornamental. **Flexível e resistente.** Cuidados: Fluxo moderado. Crescimento rápido. Boa suplementação de nutrientes leves (exportadora de nutrientes).",
+                tamanho: "15–30 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Macroalga",
+                tags: ["Alga", "Algas", "Planta", "Salgada", "Marinho", "Refúgio", "Vermelha", "Intensa", "Rápida"]
+            },
+            {
+                id: 9,
+                nome: "Tiger Cowrie",
+                preco: 40.00,
+                cor_destaque: "orange",
+                imagem_url: "https://images.unsplash.com/photo-1565406734138-b789725f7783?w=400&q=80",
+                descricao_curta: "Concha arredondada brilhante com manchas marcantes. Item decorativo.",
+                descricao_longa: "A Concha Tiger Cowrie (Cypraea tigris) é arredondada e brilhante. Cuidados: Certificar procedência legal. Manter limpa e seca.",
+                tamanho: "6–10 cm",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Decoração/Coleção",
+                tags: ["Concha", "Conchas", "Decoração", "Inerte", "Laranja", "Marrom", "Coleção"]
+            },
+            {
+                id: 10,
+                nome: "Náutilo",
+                preco: 300.00,
+                cor_destaque: "gray",
+                imagem_url: "https://images.unsplash.com/photo-1616407001429-1a0e10b284e1?w=400&q=80",
+                descricao_curta: "Concha em espiral perfeita com listras marrons, item premium decorativo.",
+                descricao_longa: "A Concha Náutilo (Nautilus pompilius) é uma peça premium. Cuidados: Apenas peças legalizadas. Não expor ao sol para evitar amarelamento.",
+                tamanho: "15–20 cm",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Decoração Premium",
+                tags: ["Concha", "Conchas", "Decoração", "Inerte", "Branco", "Marrom", "Espiral", "Premium"]
+            },
+            {
+                id: 11,
+                nome: "Linckia Azul",
+                preco: 120.00,
+                cor_destaque: "indigo",
+                imagem_url: "https://images.unsplash.com/photo-1626218721115-467f56b5f484?w=400&q=80",
+                descricao_curta: "Estrela azul brilhante muito procurada por sua cor rara. Muito sensível.",
+                descricao_longa: "A Estrela Linckia Azul (Linckia laevigata) é valorizada por sua cor intensa. **Muito sensível.** Cuidados: Não tolera mudanças de salinidade. Precisa de aquário bem maturado. Alimenta-se de biofilme — difícil suplementar.",
+                tamanho: "10–15 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Pacífica",
+                tags: ["Estrela-do-mar", "Estrelas-do-mar", "Invertebrado", "Salgada", "Marinho", "Reef", "Azul", "Sensível", "Pacífica"]
+            },
+            {
+                id: 12,
+                nome: "Fromia",
+                preco: 80.00,
+                cor_destaque: "fuchsia",
+                imagem_url: "https://images.unsplash.com/photo-1626218721115-467f56b5f484?w=400&q=80", 
+                descricao_curta: "Estrela vermelha/laranja bastante comum em reefs.",
+                descricao_longa: "A Estrela Fromia Monilis é comum em reefs. Cuidados: Requer estabilidade total. Sensível a variações bruscas. Alimentação principalmente de biofilme natural.",
+                tamanho: "10–12 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Pacífica",
+                tags: ["Estrela-do-mar", "Estrelas-do-mar", "Invertebrado", "Salgada", "Marinho", "Reef", "Vermelha", "Laranja", "Comum"]
+            },
+            {
+                id: 13,
+                nome: "Aquário Retangular 600L",
+                preco: 18900.00,
+                cor_destaque: "stone",
+                imagem_url: "https://images.unsplash.com/photo-1541315609425-46c593259b35?w=400&q=80", 
+                descricao_curta: "Aquário premium retangular de 600 litros. Vidro de 15 mm, alta estabilidade.",
+                descricao_longa: "Aquário retangular grande, premium e estável, adequado para peixes marinhos de porte médio e corais exigentes. **Destaque:** Espaço amplo para nadadores grandes como Powder Blue Tang e Moorish Idol; volume ideal para corais SPS, estrelas-do-mar e algas ornamentais.",
+                tamanho: "160 cm (C) x 70 cm (P) x 55 cm (A)",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Estrutura",
+                tags: ["Aquário", "Tanque", "Equipamento", "Grande", "Retangular", "Vidro", "600L", "Salgada", "Doce", "Transparente"]
+            },
+            {
+                id: 14,
+                nome: "Aquário Redondo 350L",
+                preco: 12500.00,
+                cor_destaque: "purple",
+                imagem_url: "https://images.unsplash.com/photo-1536544026367-e9a93077e682?w=400&q=80", 
+                descricao_curta: "Aquário redondo premium de 350 litros. Visão 360° com vidro curvo.",
+                descricao_longa: "Aquário redondo premium de grande porte, feito com vidro curvo cristal 12 mm, oferecendo visão 360° ampla. **Destaque:** Formato esférico espaçoso, adequado para peixes médios como discos e mandarins, além de invertebrados e algas; volume suficiente para manter estabilidade.",
+                tamanho: "100 cm de diâmetro x 70 cm de altura",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Estrutura",
+                tags: ["Aquário", "Tanque", "Equipamento", "Médio", "Redondo", "Curvo", "350L", "Salgada", "Doce", "Roxo"]
+            }
+        ];
+        // === FIM DO ARRAY DE PRODUTOS ===
+
+
+        const gridProdutos = document.querySelector('#grid-produtos');
+        const inputBusca = document.querySelector('#input-busca');
+
+        // Mapeamento de cores para classes Tailwind (mantido)
+        function getColorClasses(cor) {
+            const bgClasses = {
+                'blue': 'from-blue-100 to-blue-50',
+                'purple': 'from-purple-100 to-purple-50',
+                'green': 'from-green-100 to-green-50',
+                'orange': 'from-orange-100 to-orange-50',
+                'red': 'from-red-100 to-red-50',
+                'indigo': 'from-indigo-100 to-indigo-50',
+                'gray': 'from-gray-100 to-gray-50',
+                'stone': 'from-stone-100 to-stone-50', 
+                'black': 'from-gray-700 to-gray-600',
+                'cyan': 'from-cyan-100 to-cyan-50',
+                'yellow': 'from-yellow-100 to-yellow-50', 
+                'pink': 'from-pink-100 to-pink-50',       
+                'lime': 'from-lime-100 to-lime-50',       
+                'fuchsia': 'from-fuchsia-100 to-fuchsia-50',
+                'emerald': 'from-emerald-100 to-emerald-50', 
+            }[cor] || 'from-gray-100 to-gray-50';
+
+            const textClasses = {
+                'blue': 'blue-600',
+                'purple': 'purple-600',
+                'green': 'green-600',
+                'orange': 'orange-600',
+                'red': 'red-600',
+                'indigo': 'indigo-600',
+                'gray': 'gray-600',
+                'stone': 'stone-600',
+                'black': 'gray-800',
+                'cyan': 'cyan-600',
+                'yellow': 'yellow-800', 
+                'pink': 'pink-600',
+                'lime': 'lime-600',
+                'fuchsia': 'fuchsia-600',
+                'emerald': 'emerald-600',
+            }[cor] || 'gray-600';
+
+            return { bg: bgClasses, text: `text-${textClasses}` };
+        }
+
+        // Função para criar o HTML de um único produto
+        function createProductCard(produto, index) {
+            const delay = (index % 3) * 0.2; 
+            const colors = getColorClasses(produto.cor_destaque);
+            const precoFormatado = formatarPreco(produto.preco);
+            const precoHtml = `<span class="text-xl font-bold ${colors.text}">R$ ${precoFormatado}</span>`;
+            
+            return `
+                <div class="rounded-2xl p-6 transition-all animate-slide-up" style="animation-delay: ${delay}s; opacity: 0; transform: translateY(20px); background-color: #ffffff; hover:shadow-xl border-2 border-gray-100">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-semibold text-lg font-sans">${produto.nome}</h3>
+                        ${precoHtml}
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-gradient-to-br ${colors.bg}">
+                        <img src="${produto.imagem_url}" alt="${produto.nome}" class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text-sm font-sans text-gray-600 mb-4">${produto.descricao_curta}</p>
+                    <div class="flex gap-3">
+                        <button data-product-id="${produto.id}" class="btn-add-carrinho flex-1 bg-black text-white rounded-lg py-3 font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>
+                        </button>
+                        <button data-product-id="${produto.id}" class="btn-detalhes bg-gray-100 text-gray-800 rounded-lg px-4 py-3 font-medium hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Função para renderizar a lista de produtos
+        function renderizarProdutos(lista) {
+            if (gridProdutos) {
+                gridProdutos.innerHTML = lista.map(createProductCard).join('');
+            }
+            
+            // Adiciona o event listener aos botões de Detalhes
+            document.querySelectorAll('.btn-detalhes').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = event.currentTarget.dataset.productId;
+                    // Armazena o ID do produto no LocalStorage para a próxima página
+                    localStorage.setItem('selectedProductId', productId);
+                    
+                    // NAVEGAÇÃO CORRIGIDA: Aponta para 'details.html' (dentro da mesma pasta pages/)
+                    window.location.href = 'details.html'; 
+                });
+            });
+
+            // Adiciona o event listener aos botões de Adicionar ao Carrinho (Mockup)
+            document.querySelectorAll('.btn-add-carrinho').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const produtoId = event.currentTarget.dataset.productId;
+                    const produto = PRODUTOS.find(p => p.id == produtoId);
+                    alert(`[MOCKUP] Produto "${produto.nome}" (ID: ${produtoId}) adicionado ao carrinho!`);
+                });
+            });
+            
+            // Ativa a animação após a renderização
+            document.querySelectorAll('.animate-slide-up').forEach(element => {
+                void element.offsetWidth; 
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            });
+            
+            lucide.createIcons(); 
+        }
+
+        // Lógica de Busca
+        if (inputBusca) {
+            inputBusca.addEventListener('input', (event) => {
+                const termo = event.target.value.toLowerCase().trim();
+                
+                if (termo === "") {
+                    renderizarProdutos(PRODUTOS);
+                    return;
+                }
+
+                const produtosFiltrados = PRODUTOS.filter(produto => {
+                    const nomeMatch = produto.nome.toLowerCase().includes(termo);
+                    const descricaoMatch = produto.descricao_curta.toLowerCase().includes(termo);
+                    const comportamentoMatch = produto.comportamento.toLowerCase().includes(termo);
+                    const tagsMatch = produto.tags && produto.tags.some(tag => tag.toLowerCase().includes(termo));
+                    
+                    return nomeMatch || descricaoMatch || comportamentoMatch || tagsMatch;
+                });
+                renderizarProdutos(produtosFiltrados);
+            });
+        }
+
+        // Inicia a renderização quando o DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', () => {
+            renderizarProdutos(PRODUTOS);
+        });
+
     </script>
 </body>
 </html>
