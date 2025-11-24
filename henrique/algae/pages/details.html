@@ -18,7 +18,7 @@
     </style>
 </head>
 <body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
-    <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
+     <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10"></div>
     
     <header class="py-6 animate-fade-in">
         <div class="mx-auto max-w-7xl px-6">
@@ -44,19 +44,20 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 flex-shrink-0">
-                    <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
+                    <a href="cart.html"><button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                             <circle cx="8" cy="21" r="1"></circle>
                             <circle cx="19" cy="21" r="1"></circle>
                             <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
                         </svg>
-                    </button>
+                    </button></a>
+                    <a href="userdashboard.html">
                     <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>
@@ -133,20 +134,22 @@
     
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        // === FUNÇÃO DE FORMATAÇÃO DE PREÇO ATUALIZADA (PT-BR) ===
+                // === FUNÇÃO DE FORMATAÇÃO DE PREÇO (PT-BR) ===
         function formatarPreco(valor) {
             return valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
         }
         
-        // === ARRAY DE PRODUTOS RESTAURADO ===
+        // === ARRAY DE PRODUTOS ===
         const PRODUTOS = [
             {
                 id: 0,
                 nome: "Kit Completo Água Doce",
                 preco: 27645.40, 
                 cor_destaque: "emerald",
-                imagem_url: "https://images.unsplash.com/photo-1549646407-775e54d68846?w=400&q=80", 
-                descricao_longa: "O **Kit Completo de Água Doce** oferece um aquário premium de grande porte (600L) com espécies ornamentais cuidadosamente selecionadas (**Arowana Asiática, Disco**), plantas (**Anubias Nana, Rotala Rotundifolia**) e elementos decorativos (**Seixos pretos polidos, Tronco Mopani**), criando um ambiente elegante e estável para peixes de destaque e invertebrados (**Red Cherry Shrimp, Neritina Tiger**).",
+                // CORREÇÃO DE CAMINHO: Sair da pasta 'pages' para acessar 'assets'
+                imagem_url: "../assets/conjunto.png", 
+                descricao_curta: "Conjunto premium de aquário de 600L com Arowana, Disco, plantas e decoração.",
+                descricao_longa: "O Kit Completo de Água Doce oferece um aquário premium de grande porte (600L) com espécies ornamentais cuidadosamente selecionadas (Arowana Asiática, Disco), plantas (Anubias Nana, Rotala Rotundifolia) e elementos decorativos (Seixos pretos polidos, Tronco Mopani), criando um ambiente elegante e estável para peixes de destaque e invertebrados (Red Cherry Shrimp, Neritina Tiger).",
                 tamanho: "160x70x55 cm (Aquário)",
                 temperatura: "24-30°C",
                 ph: "6.0-7.5 (Doce)",
@@ -155,58 +158,201 @@
             },
             {
                 id: 1,
-                nome: "Alga Marinha Vermelha (Red Algae)",
-                preco: 45.90,
-                cor_destaque: "red",
-                imagem_url: "https://images.unsplash.com/photo-1588665796263-5e9271630b91?w=400&q=80",
-                descricao_longa: "A **Red Algae** é uma adição vibrante e rica em nutrientes para aquários marinhos, conhecida por sua cor intensa. Ajuda a consumir excesso de nitratos e fosfatos, melhorando a qualidade da água. Crescimento moderado e fácil manutenção.",
-                tamanho: "10-20 cm",
-                temperatura: "22-26°C",
+                nome: "Mandarim Psicodélico",
+                preco: 250.00,
+                cor_destaque: "cyan", 
+                imagem_url: "../assets/mandarim.png",
+                descricao_curta: "Peixe pequeno e muito colorido, famoso por padrões psicodélicos. Pacífico e lento.",
+                descricao_longa: "O Mandarim Psicodélico (Synchiropus splendidus) é famoso por padrões psicodélicos. **Comportamento tranquilo.** Cuidados: Exige aquário maduro com muitos copépodes. Muitos não aceitam ração seca. Sensível a parâmetros instáveis.",
+                tamanho: "6–8 cm",
+                temperatura: "24-27°C",
                 ph: "8.1-8.4 (Salgada)",
-                comportamento: "Estacionário",
-                tags: ["Alga", "Vermelha", "Marinha", "Salgada", "Filtro", "Nutriente"]
+                comportamento: "Pacífico e Lento",
+                tags: ["Peixe", "Peixes", "Animal", "Vida Marinha", "Salgada", "Marinho", "Tropical", "Pequeno", "Colorido", "Ciano", "Verde", "Azul", "Laranja"]
             },
             {
                 id: 2,
-                nome: "Cianobactéria (Blue-Green Algae)",
-                preco: 12.50,
-                cor_destaque: "cyan",
-                imagem_url: "https://images.unsplash.com/photo-1594917411603-9e4a30e70a44?w=400&q=80",
-                descricao_longa: "Embora tecnicamente uma bactéria, esta **Cianobactéria** é essencial para certos ecossistemas. Vendida em pequenas quantidades para inoculação em substratos biológicos avançados. Requer controle estrito para evitar supercrescimento. **ATENÇÃO: Produto para uso especializado.**",
-                tamanho: "Microscópico",
-                temperatura: "25-28°C",
-                ph: "7.0-8.0 (Doce/Salgada)",
-                comportamento: "Colonial",
-                tags: ["Bactéria", "Ciano", "Azul", "Verde", "Micro", "Inoculação", "Especializado"]
+                nome: "Powder Blue Tang",
+                preco: 1100.00,
+                cor_destaque: "blue",
+                imagem_url: "../assets/powder.png",
+                descricao_curta: "Cirurgião premium muito procurado pela coloração azul vibrante e contraste forte.",
+                descricao_longa: "O Powder Blue Tang (Acanthurus leucosternon) é um cirurgião premium. **Comportamento:** Territorial com outros cirurgiões. Cuidados: Tanque grande (400 L+). Alimentação rica em algas. Muito sensível a íctio — requer quarentena e água impecável.",
+                tamanho: "até 23 cm",
+                temperatura: "24-28°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Ativo e Territorial",
+                tags: ["Peixe", "Peixes", "Animal", "Vida Marinha", "Salgada", "Marinho", "Tropical", "Azul", "Amarelo", "Preto", "Cirurgião"]
             },
             {
                 id: 3,
-                nome: "Musgo de Java (Taxiphyllum barbieri)",
-                preco: 25.00,
-                cor_destaque: "lime",
-                imagem_url: "https://images.unsplash.com/photo-1543781216-95e28a5d3f2b?w=400&q=80",
-                descricao_longa: "O **Musgo de Java** é uma planta de aquário extremamente popular e resistente. Perfeito para cobrir troncos, pedras e esconderijo para alevinos e camarões. Suporta baixas condições de luz e não exige CO2.",
-                tamanho: "Variável",
-                temperatura: "18-30°C",
+                nome: "Arowana Asiática",
+                preco: 10000.00,
+                cor_destaque: "yellow", 
+                imagem_url: "../assets/arowana.png",
+                descricao_curta: "Peixe premium com grandes escamas metálicas, considerado símbolo de status.",
+                descricao_longa: "A Arowana Asiática (Scleropages formosus) é um peixe premium. **Comportamento:** Predador e saltador. Cuidados: Tanque enorme (600–800 L). Tampa reforçada. Licenciamento obrigatório. Alimentação carnívora variada.",
+                tamanho: "60–90 cm",
+                temperatura: "24-30°C",
                 ph: "6.0-7.5 (Doce)",
-                comportamento: "Rasteiro",
-                tags: ["Planta", "Musgo", "Java", "Doce", "Baixa Luz", "Camarão", "Fácil"]
+                comportamento: "Predador e Saltador",
+                tags: ["Peixe", "Peixes", "Animal", "Doce", "Ornamental", "Predador", "Saltador", "Dourado", "Vermelho", "Verde", "Grande"]
             },
             {
                 id: 4,
-                nome: "Coral Sólido Sunburst (Euphyllia)",
-                preco: 899.99,
-                cor_destaque: "orange",
-                imagem_url: "https://images.unsplash.com/photo-1621571217088-2c2621f37e5e?w=400&q=80",
-                descricao_longa: "O **Coral Sunburst Euphyllia** é uma peça central deslumbrante para qualquer aquário de recife. Conhecido por suas pontas que brilham em tons de laranja e amarelo sob iluminação LED. Requer parâmetros de água estáveis e iluminação de média a alta.",
-                tamanho: "5-15 cm",
-                temperatura: "24-26°C",
+                nome: "Disco",
+                preco: 200.00,
+                cor_destaque: "red",
+                imagem_url: "../assets/disco.png",
+                descricao_curta: "Peixe elegante e redondo, extremamente popular pela variedade de cores.",
+                descricao_longa: "O Peixe Disco (Symphysodon spp.) é popular pela variedade de cores. **Comportamento:** Pacífico e gregário (manter em grupos min. 5). Cuidados: Temperatura 28–30°C. Água limpa, ácida e estável. Muito sensível a amônia/nitrito.",
+                tamanho: "12–16 cm",
+                temperatura: "28-30°C",
+                ph: "6.0-7.0 (Doce)",
+                comportamento: "Pacífico e Gregário",
+                tags: ["Peixe", "Peixes", "Animal", "Doce", "Ornamental", "Pacífico", "Gregário", "Redondo", "Vermelho", "Azul", "Verde"]
+            },
+            {
+                id: 5,
+                nome: "Acropora Premium",
+                preco: 200.00,
+                cor_destaque: "pink",
+                imagem_url: "../assets/acropora.png",
+                descricao_curta: "Coral SPS de ramos rígidos e cores intensas, muito valorizado.",
+                descricao_longa: "A Acropora Millepora é um coral SPS de ramos rígidos. **Alta Exigência.** Cuidados: Luz forte. Fluxo intenso. Controle rigoroso de Ca, KH, Mg. Sensível a pragas específicas.",
+                tamanho: "Colônias ramificadas",
+                temperatura: "25-26°C",
                 ph: "8.1-8.4 (Salgada)",
-                comportamento: "Agressivo (Toca)",
-                tags: ["Coral", "Sólido", "Reef", "Salgada", "LPS", "Euphyllia", "Raro", "Premium"]
+                comportamento: "SPS - Alta Exigência",
+                tags: ["Coral", "Corais", "Invertebrado", "Salgada", "Marinho", "Reef", "SPS", "Rosa", "Azul", "Verde", "Exigente"]
+            },
+            {
+                id: 6,
+                nome: "Torch Coral",
+                preco: 250.00,
+                cor_destaque: "green",
+                imagem_url: "../assets/torch.png",
+                descricao_curta: "Coral de tentáculos longos com movimento marcado, muito requisitado.",
+                descricao_longa: "O Torch Coral (Euphyllia glabrescens) é um coral de tentáculos longos. **Semi-Agressivo.** Cuidados: Fluxo moderado e constante. Luz média a forte. Tentáculos queimam corais vizinhos (manter distância).",
+                tamanho: "2–5 cm por cabeça",
+                temperatura: "25-26°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "LPS Semi-Agressivo",
+                tags: ["Coral", "Corais", "Invertebrado", "Salgada", "Marinho", "Reef", "LPS", "Verde", "Dourado", "Neon"]
+            },
+            {
+                id: 7,
+                nome: "Halimeda Opuntia",
+                preco: 40.00,
+                cor_destaque: "lime", 
+                imagem_url: "../assets/halimeda.png",
+                descricao_curta: "Alga calcária verde, usada como decoração natural.",
+                descricao_longa: "A Halimeda Opuntia é uma alga calcária. **Calcificação alta.** Cuidados: Consome cálcio e KH. Crescimento moderado. Não é invasiva.",
+                tamanho: "10–20 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Alga Calcária",
+                tags: ["Alga", "Algas", "Planta", "Salgada", "Marinho", "Reef", "Verde", "Calcária", "Decoração"]
+            },
+            {
+                id: 8,
+                nome: "Gracilaria Vermelha",
+                preco: 20.00,
+                cor_destaque: "red",
+                imagem_url: "../assets/gracilaria.png",
+                descricao_curta: "Alga ornamental vermelha muito usada em refúgios e aquários.",
+                descricao_longa: "A Gracilaria Gracilis é uma alga ornamental. **Flexível e resistente.** Cuidados: Fluxo moderado. Crescimento rápido. Boa suplementação de nutrientes leves (exportadora de nutrientes).",
+                tamanho: "15–30 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Macroalga",
+                tags: ["Alga", "Algas", "Planta", "Salgada", "Marinho", "Refúgio", "Vermelha", "Intensa", "Rápida"]
+            },
+            {
+                id: 9,
+                nome: "Tiger Cowrie",
+                preco: 40.00,
+                cor_destaque: "orange",
+                imagem_url: "../assets/tiger.png",
+                descricao_curta: "Concha arredondada brilhante com manchas marcantes. Item decorativo.",
+                descricao_longa: "A Concha Tiger Cowrie (Cypraea tigris) é arredondada e brilhante. Cuidados: Certificar procedência legal. Manter limpa e seca.",
+                tamanho: "6–10 cm",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Decoração/Coleção",
+                tags: ["Concha", "Conchas", "Decoração", "Inerte", "Laranja", "Marrom", "Coleção"]
+            },
+            {
+                id: 10,
+                nome: "Náutilo",
+                preco: 300.00,
+                cor_destaque: "gray",
+                imagem_url: "../assets/nautilo.png",
+                descricao_curta: "Concha em espiral perfeita com listras marrons, item premium decorativo.",
+                descricao_longa: "A Concha Náutilo (Nautilus pompilius) é uma peça premium. Cuidados: Apenas peças legalizadas. Não expor ao sol para evitar amarelamento.",
+                tamanho: "15–20 cm",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Decoração Premium",
+                tags: ["Concha", "Conchas", "Decoração", "Inerte", "Branco", "Marrom", "Espiral", "Premium"]
+            },
+            {
+                id: 11,
+                nome: "Linckia Azul",
+                preco: 120.00,
+                cor_destaque: "indigo",
+                imagem_url: "../assets/linckia.png",
+                descricao_curta: "Estrela azul brilhante muito procurada por sua cor rara. Muito sensível.",
+                descricao_longa: "A Estrela Linckia Azul (Linckia laevigata) é valorizada por sua cor intensa. **Muito sensível.** Cuidados: Não tolera mudanças de salinidade. Precisa de aquário bem maturado. Alimenta-se de biofilme — difícil suplementar.",
+                tamanho: "10–15 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Pacífica",
+                tags: ["Estrela-do-mar", "Estrelas-do-mar", "Invertebrado", "Salgada", "Marinho", "Reef", "Azul", "Sensível", "Pacífica"]
+            },
+            {
+                id: 12,
+                nome: "Fromia",
+                preco: 80.00,
+                cor_destaque: "fuchsia",
+                imagem_url: "../assets/fromia.png", 
+                descricao_curta: "Estrela vermelha/laranja bastante comum em reefs.",
+                descricao_longa: "A Estrela Fromia Monilis é comum em reefs. Cuidados: Requer estabilidade total. Sensível a variações bruscas. Alimentação principalmente de biofilme natural.",
+                tamanho: "10–12 cm",
+                temperatura: "24-27°C",
+                ph: "8.1-8.4 (Salgada)",
+                comportamento: "Pacífica",
+                tags: ["Estrela-do-mar", "Estrelas-do-mar", "Invertebrado", "Salgada", "Marinho", "Reef", "Vermelha", "Laranja", "Comum"]
+            },
+            {
+                id: 13,
+                nome: "Aquário Retangular 600L",
+                preco: 18900.00,
+                cor_destaque: "stone",
+                imagem_url: "../assets/retangular.png", 
+                descricao_curta: "Aquário premium retangular de 600 litros. Vidro de 15 mm, alta estabilidade.",
+                descricao_longa: "Aquário retangular grande, premium e estável, adequado para peixes marinhos de porte médio e corais exigentes. **Destaque:** Espaço amplo para nadadores grandes como Powder Blue Tang e Moorish Idol; volume ideal para corais SPS, estrelas-do-mar e algas ornamentais.",
+                tamanho: "160 cm (C) x 70 cm (P) x 55 cm (A)",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Estrutura",
+                tags: ["Aquário", "Tanque", "Equipamento", "Grande", "Retangular", "Vidro", "600L", "Salgada", "Doce", "Transparente"]
+            },
+            {
+                id: 14,
+                nome: "Aquário Redondo 350L",
+                preco: 12500.00,
+                cor_destaque: "purple",
+                imagem_url: "../assets/redondo.png", 
+                descricao_curta: "Aquário redondo premium de 350 litros. Visão 360° com vidro curvo.",
+                descricao_longa: "Aquário redondo premium de grande porte, feito com vidro curvo cristal 12 mm, oferecendo visão 360° ampla. **Destaque:** Formato esférico espaçoso, adequado para peixes médios como discos e mandarins, além de invertebrados e algas; volume suficiente para manter estabilidade.",
+                tamanho: "100 cm de diâmetro x 70 cm de altura",
+                temperatura: "N/A",
+                ph: "N/A",
+                comportamento: "Estrutura",
+                tags: ["Aquário", "Tanque", "Equipamento", "Médio", "Redondo", "Curvo", "350L", "Salgada", "Doce", "Roxo"]
             }
-        ];
-        
+        ];        
         // Obtém o ID do produto salvo ao clicar em Detalhes.
         const urlParams = new URLSearchParams(window.location.search);
         // Tenta obter o ID da URL, se não, tenta do localStorage, se não, usa 0 (o primeiro produto)

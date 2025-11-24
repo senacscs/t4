@@ -25,12 +25,12 @@
     </style>
 </head>
 <body class="bg-[#cfddea] text-[#0f0f0f] antialiased">
-    <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10" style="background-image: url('https://cdn.midjourney.com/a55c302e-35a2-40d2-8ae8-1f2bc7f74192/0_0.png?w=800&q=80')"></div>
+     <div class="fixed top-0 w-full h-screen bg-cover bg-center -z-10"></div>
     
     <header class="py-6 animate-fade-in">
         <div class="mx-auto max-w-7xl px-6">
             <div class="flex items-center gap-6">
-                <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
+                <a class="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
                     <div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center from-black to-gray-700">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="fish" class="lucide lucide-fish w-4 h-4 text-white">
                             <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"></path>
@@ -52,25 +52,26 @@
                     <input 
                         id="input-busca"
                         type="text" 
-                        placeholder="Buscar Peixes, Coral, Kit, Azul, Doce..." 
+                        placeholder="Buscar por Nome ou Detalhes..." 
                         class="w-full pl-12 pr-4 py-3 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all shadow-lg"
                     />
                 </div>
                 
                 <div class="flex items-center gap-4 flex-shrink-0">
-                    <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
+                    <a href="cart.html"><button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                             <circle cx="8" cy="21" r="1"></circle>
                             <circle cx="19" cy="21" r="1"></circle>
                             <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
                         </svg>
-                    </button>
+                    </button></a>
+                    <a href="userdashboard.html">
                     <button class="w-10 h-10 rounded-full bg-white/50 backdrop-blur-md border border-gray-200 flex items-center justify-center hover:bg-white transition-all shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>
@@ -112,7 +113,7 @@
                 nome: "Mandarim Psicodélico",
                 preco: 250.00,
                 cor_destaque: "cyan", 
-                imagem_url: "https://images.unsplash.com/photo-1579294576882-9659b854359d?w=400&q=80",
+                imagem_url: "../assets/mandarim.png",
                 descricao_curta: "Peixe pequeno e muito colorido, famoso por padrões psicodélicos. Pacífico e lento.",
                 descricao_longa: "O Mandarim Psicodélico (Synchiropus splendidus) é famoso por padrões psicodélicos. **Comportamento tranquilo.** Cuidados: Exige aquário maduro com muitos copépodes. Muitos não aceitam ração seca. Sensível a parâmetros instáveis.",
                 tamanho: "6–8 cm",
@@ -126,7 +127,7 @@
                 nome: "Powder Blue Tang",
                 preco: 1100.00,
                 cor_destaque: "blue",
-                imagem_url: "https://images.unsplash.com/photo-1563214953-6a9780077c5e?w=400&q=80",
+                imagem_url: "../assets/powder.png",
                 descricao_curta: "Cirurgião premium muito procurado pela coloração azul vibrante e contraste forte.",
                 descricao_longa: "O Powder Blue Tang (Acanthurus leucosternon) é um cirurgião premium. **Comportamento:** Territorial com outros cirurgiões. Cuidados: Tanque grande (400 L+). Alimentação rica em algas. Muito sensível a íctio — requer quarentena e água impecável.",
                 tamanho: "até 23 cm",
@@ -140,7 +141,7 @@
                 nome: "Arowana Asiática",
                 preco: 10000.00,
                 cor_destaque: "yellow", 
-                imagem_url: "https://images.unsplash.com/photo-1616421062086-4191d9d592f6?w=400&q=80",
+                imagem_url: "../assets/arowana.png",
                 descricao_curta: "Peixe premium com grandes escamas metálicas, considerado símbolo de status.",
                 descricao_longa: "A Arowana Asiática (Scleropages formosus) é um peixe premium. **Comportamento:** Predador e saltador. Cuidados: Tanque enorme (600–800 L). Tampa reforçada. Licenciamento obrigatório. Alimentação carnívora variada.",
                 tamanho: "60–90 cm",
@@ -154,7 +155,7 @@
                 nome: "Disco",
                 preco: 200.00,
                 cor_destaque: "red",
-                imagem_url: "https://images.unsplash.com/photo-1549646407-775e54d68846?w=400&q=80",
+                imagem_url: "../assets/disco.png",
                 descricao_curta: "Peixe elegante e redondo, extremamente popular pela variedade de cores.",
                 descricao_longa: "O Peixe Disco (Symphysodon spp.) é popular pela variedade de cores. **Comportamento:** Pacífico e gregário (manter em grupos min. 5). Cuidados: Temperatura 28–30°C. Água limpa, ácida e estável. Muito sensível a amônia/nitrito.",
                 tamanho: "12–16 cm",
@@ -168,7 +169,7 @@
                 nome: "Acropora Premium",
                 preco: 200.00,
                 cor_destaque: "pink",
-                imagem_url: "https://images.unsplash.com/photo-1542475459-ec757d598b9f?w=400&q=80",
+                imagem_url: "../assets/acropora.png",
                 descricao_curta: "Coral SPS de ramos rígidos e cores intensas, muito valorizado.",
                 descricao_longa: "A Acropora Millepora é um coral SPS de ramos rígidos. **Alta Exigência.** Cuidados: Luz forte. Fluxo intenso. Controle rigoroso de Ca, KH, Mg. Sensível a pragas específicas.",
                 tamanho: "Colônias ramificadas",
@@ -182,7 +183,7 @@
                 nome: "Torch Coral",
                 preco: 250.00,
                 cor_destaque: "green",
-                imagem_url: "https://images.unsplash.com/photo-1581404098939-58b29f0c239d?w=400&q=80",
+                imagem_url: "../assets/torch.png",
                 descricao_curta: "Coral de tentáculos longos com movimento marcado, muito requisitado.",
                 descricao_longa: "O Torch Coral (Euphyllia glabrescens) é um coral de tentáculos longos. **Semi-Agressivo.** Cuidados: Fluxo moderado e constante. Luz média a forte. Tentáculos queimam corais vizinhos (manter distância).",
                 tamanho: "2–5 cm por cabeça",
@@ -196,7 +197,7 @@
                 nome: "Halimeda Opuntia",
                 preco: 40.00,
                 cor_destaque: "lime", 
-                imagem_url: "https://images.unsplash.com/photo-1582265077271-98711e582d93?w=400&q=80",
+                imagem_url: "../assets/halimeda.png",
                 descricao_curta: "Alga calcária verde, usada como decoração natural.",
                 descricao_longa: "A Halimeda Opuntia é uma alga calcária. **Calcificação alta.** Cuidados: Consome cálcio e KH. Crescimento moderado. Não é invasiva.",
                 tamanho: "10–20 cm",
@@ -210,7 +211,7 @@
                 nome: "Gracilaria Vermelha",
                 preco: 20.00,
                 cor_destaque: "red",
-                imagem_url: "https://images.unsplash.com/photo-1563200782-353d2d113c07?w=400&q=80",
+                imagem_url: "../assets/gracilaria.png",
                 descricao_curta: "Alga ornamental vermelha muito usada em refúgios e aquários.",
                 descricao_longa: "A Gracilaria Gracilis é uma alga ornamental. **Flexível e resistente.** Cuidados: Fluxo moderado. Crescimento rápido. Boa suplementação de nutrientes leves (exportadora de nutrientes).",
                 tamanho: "15–30 cm",
@@ -224,7 +225,7 @@
                 nome: "Tiger Cowrie",
                 preco: 40.00,
                 cor_destaque: "orange",
-                imagem_url: "https://images.unsplash.com/photo-1565406734138-b789725f7783?w=400&q=80",
+                imagem_url: "../assets/tiger.png",
                 descricao_curta: "Concha arredondada brilhante com manchas marcantes. Item decorativo.",
                 descricao_longa: "A Concha Tiger Cowrie (Cypraea tigris) é arredondada e brilhante. Cuidados: Certificar procedência legal. Manter limpa e seca.",
                 tamanho: "6–10 cm",
@@ -238,7 +239,7 @@
                 nome: "Náutilo",
                 preco: 300.00,
                 cor_destaque: "gray",
-                imagem_url: "https://images.unsplash.com/photo-1616407001429-1a0e10b284e1?w=400&q=80",
+                imagem_url: "../assets/nautilo.png",
                 descricao_curta: "Concha em espiral perfeita com listras marrons, item premium decorativo.",
                 descricao_longa: "A Concha Náutilo (Nautilus pompilius) é uma peça premium. Cuidados: Apenas peças legalizadas. Não expor ao sol para evitar amarelamento.",
                 tamanho: "15–20 cm",
@@ -252,7 +253,7 @@
                 nome: "Linckia Azul",
                 preco: 120.00,
                 cor_destaque: "indigo",
-                imagem_url: "https://images.unsplash.com/photo-1626218721115-467f56b5f484?w=400&q=80",
+                imagem_url: "../assets/linckia.png",
                 descricao_curta: "Estrela azul brilhante muito procurada por sua cor rara. Muito sensível.",
                 descricao_longa: "A Estrela Linckia Azul (Linckia laevigata) é valorizada por sua cor intensa. **Muito sensível.** Cuidados: Não tolera mudanças de salinidade. Precisa de aquário bem maturado. Alimenta-se de biofilme — difícil suplementar.",
                 tamanho: "10–15 cm",
@@ -266,7 +267,7 @@
                 nome: "Fromia",
                 preco: 80.00,
                 cor_destaque: "fuchsia",
-                imagem_url: "https://images.unsplash.com/photo-1626218721115-467f56b5f484?w=400&q=80", 
+                imagem_url: "../assets/fromia.png", 
                 descricao_curta: "Estrela vermelha/laranja bastante comum em reefs.",
                 descricao_longa: "A Estrela Fromia Monilis é comum em reefs. Cuidados: Requer estabilidade total. Sensível a variações bruscas. Alimentação principalmente de biofilme natural.",
                 tamanho: "10–12 cm",
@@ -280,7 +281,7 @@
                 nome: "Aquário Retangular 600L",
                 preco: 18900.00,
                 cor_destaque: "stone",
-                imagem_url: "https://images.unsplash.com/photo-1541315609425-46c593259b35?w=400&q=80", 
+                imagem_url: "../assets/retangular.png", 
                 descricao_curta: "Aquário premium retangular de 600 litros. Vidro de 15 mm, alta estabilidade.",
                 descricao_longa: "Aquário retangular grande, premium e estável, adequado para peixes marinhos de porte médio e corais exigentes. **Destaque:** Espaço amplo para nadadores grandes como Powder Blue Tang e Moorish Idol; volume ideal para corais SPS, estrelas-do-mar e algas ornamentais.",
                 tamanho: "160 cm (C) x 70 cm (P) x 55 cm (A)",
@@ -294,7 +295,7 @@
                 nome: "Aquário Redondo 350L",
                 preco: 12500.00,
                 cor_destaque: "purple",
-                imagem_url: "https://images.unsplash.com/photo-1536544026367-e9a93077e682?w=400&q=80", 
+                imagem_url: "../assets/redondo.png", 
                 descricao_curta: "Aquário redondo premium de 350 litros. Visão 360° com vidro curvo.",
                 descricao_longa: "Aquário redondo premium de grande porte, feito com vidro curvo cristal 12 mm, oferecendo visão 360° ampla. **Destaque:** Formato esférico espaçoso, adequado para peixes médios como discos e mandarins, além de invertebrados e algas; volume suficiente para manter estabilidade.",
                 tamanho: "100 cm de diâmetro x 70 cm de altura",
@@ -425,28 +426,44 @@
             lucide.createIcons(); 
         }
 
-        // Lógica de Busca
-        if (inputBusca) {
-            inputBusca.addEventListener('input', (event) => {
-                const termo = event.target.value.toLowerCase().trim();
-                
-                if (termo === "") {
-                    renderizarProdutos(PRODUTOS);
-                    return;
-                }
-
-                const produtosFiltrados = PRODUTOS.filter(produto => {
-                    const nomeMatch = produto.nome.toLowerCase().includes(termo);
-                    const descricaoMatch = produto.descricao_curta.toLowerCase().includes(termo);
-                    const comportamentoMatch = produto.comportamento.toLowerCase().includes(termo);
-                    const tagsMatch = produto.tags && produto.tags.some(tag => tag.toLowerCase().includes(termo));
-                    
-                    return nomeMatch || descricaoMatch || comportamentoMatch || tagsMatch;
-                });
-                renderizarProdutos(produtosFiltrados);
-            });
+        // Lógica de Busca CORRIGIDA
+if (inputBusca) {
+    inputBusca.addEventListener('input', (event) => {
+        const termo = event.target.value.toLowerCase().trim();
+        
+        if (termo === "") {
+            renderizarProdutos(PRODUTOS);
+            return;
         }
 
+        const produtosFiltrados = PRODUTOS.filter(produto => {
+            // Verifica o NOME do produto
+            const nomeMatch = produto.nome.toLowerCase().includes(termo);
+            
+            // Verifica as TAGS (Peixe, Coral, Kit, Azul, Doce, etc.)
+            const tagsMatch = produto.tags && produto.tags.some(tag => tag.toLowerCase().includes(termo));
+            
+            // Comentado: Removido para evitar que a descrição curta influencie a busca principal.
+            // const descricaoMatch = produto.descricao_curta.toLowerCase().includes(termo);
+            // const comportamentoMatch = produto.comportamento.toLowerCase().includes(termo);
+            
+            // A busca só retorna TRUE se o termo estiver no nome OU nas tags.
+            return nomeMatch || tagsMatch;
+        });
+        
+        // Se a busca não encontrar nada, tenta uma busca mais ampla (opcional)
+        // Isso pode ser útil para não mostrar 'nenhum resultado' imediatamente
+        // if (produtosFiltrados.length === 0) {
+        //     const produtosFiltradosAmpliado = PRODUTOS.filter(produto => {
+        //         const descricaoMatch = produto.descricao_curta.toLowerCase().includes(termo);
+        //         return descricaoMatch;
+        //     });
+        //     renderizarProdutos(produtosFiltradosAmpliado);
+        // } else {
+            renderizarProdutos(produtosFiltrados);
+        // }
+    });
+}
         // Inicia a renderização quando o DOM estiver pronto
         document.addEventListener('DOMContentLoaded', () => {
             renderizarProdutos(PRODUTOS);
