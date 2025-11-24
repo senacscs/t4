@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milton Santos - Geografia e Pensamento Social</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Header - Apresentação */
+        header {
+            background: #000000;
+            padding: 100px 40px 80px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid #4a9eff;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 158, 255, 0.1) 0%, transparent 50%, rgba(74, 158, 255, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        header .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        header .subtitle {
+            display: inline-block;
+            background: rgba(74, 158, 255, 0.2);
+            color: #4a9eff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            border: 1px solid #4a9eff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            color: #ffffff;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header .title-highlight {
+            color: #4a9eff;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #b0b0b0;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.9;
+        }
+
+        header .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        header .stat-item {
+            text-align: center;
+        }
+
+        header .stat-number {
+            font-size: 2em;
+            color: #4a9eff;
+            font-weight: 600;
+            display: block;
+        }
+
+        header .stat-label {
+            color: #888;
+            font-size: 0.85em;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Container Principal - Split Layout */
+        .main-container {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Coluna Esquerda - Timeline */
+        .timeline-column {
+            width: 60%;
+            background: #000000;
+            padding: 60px 40px;
+            position: relative;
+            border-right: 4px solid #222;
+        }
+
+        /* Linha vertical central */
+        .timeline-column::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #4a9eff 0%, #222 50%, #4a9eff 100%);
+        }
+
+        .timeline-item {
+            margin-bottom: 80px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 45%;
+            clear: both;
+        }
+
+        /* Alternar lados */
+        .timeline-item:nth-child(odd) {
+            float: left;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            float: right;
+            text-align: left;
+            padding-left: 40px;
+        }
+
+        /* Marcador circular */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: #555;
+            border-radius: 50%;
+            border: 4px solid #000000;
+            box-shadow: 0 0 0 3px #222;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -50px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -50px;
+        }
+
+        .timeline-item.active::before {
+            background: #4a9eff;
+            transform: scale(1.4);
+            box-shadow: 0 0 0 3px #4a9eff, 0 0 20px rgba(74, 158, 255, 0.5);
+        }
+
+        .timeline-item.active {
+            opacity: 1;
+        }
+
+        .timeline-item {
+            opacity: 0.7;
+        }
+
+        .timeline-item:hover {
+            opacity: 1;
+        }
+
+        /* Clearfix para os floats */
+        .timeline-column::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .timeline-item .summary {
+            font-size: 0.85em;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* Coluna Direita - Conteúdo Detalhado */
+        .content-column {
+            width: 40%;
+            background: #000000;
+            padding: 40px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            color: white;
+        }
+
+        .content-detail {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-detail.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content-detail h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 400;
+        }
+
+        .content-detail .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #111111;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            color: #555;
+            border-radius: 8px;
+            border: 2px solid #222;
+        }
+
+        .content-detail p {
+            font-size: 0.95em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            text-align: justify;
+        }
+
+        .content-detail ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .content-detail li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        /* Seções adicionais no final */
+        .bottom-sections {
+            background: #000000;
+            width: 100%;
+        }
+
+        .section-box {
+            padding: 50px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #ffffff;
+            border-bottom: 3px solid #4a9eff;
+            padding-bottom: 15px;
+        }
+
+        .section-box h3 {
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .section-box p {
+            font-size: 0.95em;
+            color: #999;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .section-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #999;
+        }
+
+        .section-box li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #4a9eff;
+            font-weight: bold;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background: #000000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+            transition: transform 0.3s ease;
+            border: 1px solid #222;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: #4a9eff;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .gallery-item-caption {
+            padding: 20px;
+            font-size: 0.85em;
+            color: #999;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .link-card {
+            background: #000000;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            border: 1px solid #222;
+        }
+
+        .link-card:hover {
+            background: #111111;
+            transform: translateY(-5px);
+            border-color: #4a9eff;
+        }
+
+        .link-card h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #4a9eff;
+        }
+
+        .link-card p {
+            font-size: 0.85em;
+            color: #999;
+        }
+
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid #222;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        /* Responsividade */
+        @media (max-width: 968px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .timeline-column,
+            .content-column {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .timeline-column::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 80px);
+                float: none;
+                text-align: left;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                float: none;
+                text-align: left;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+
+            .timeline-item::before {
+                left: 20px !important;
+                right: auto !important;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header de Apresentação -->
+    <header>
+        <div class="header-content">
+            <span class="subtitle">Dia da Consciência Negra</span>
+            <h1><span class="title-highlight">Milton</span> Santos</h1>
+            <p>
+                Milton Almeida dos Santos (1926-2001) foi um geógrafo, professor e intelectual baiano, considerado um dos maiores pensadores brasileiros do século XX. Revolucionou a geografia ao incluir questões sociais, políticas e humanas no centro da análise geográfica, tornando-se referência mundial em geografia crítica.
+            </p>
+            <p>
+                Foi o primeiro brasileiro e único geógrafo do hemisfério sul a receber o Prêmio Vautrin Lud (1994), considerado o Nobel da Geografia. Sua obra permanece fundamental para compreender as contradições do Brasil contemporâneo.
+            </p>
+        </div>
+    </header>
+
+    <!-- Container com Layout Split -->
+    <div class="main-container">
+        <!-- Coluna Esquerda: Timeline -->
+        <div class="timeline-column">
+            <div class="timeline-item active" data-target="topico1">
+                <h3>Nascimento (1926)</h3>
+                <p class="summary">Nasce em Brotas de Macaúbas, Bahia, filho de professores primários.</p>
+            </div>
+
+            <div class="timeline-item" data-target="topico2">
+                <h3>Formação (1948)</h3>
+                <p class="summary">Forma-se em Direito pela UFBA, inicia estudos em geografia.</p>
+            </div>
+
+            <div class="timeline-item" data-target="topico3">
+                <h3>Doutorado (1958)</h3>
+                <p class="summary">Defende tese na França sobre organização do espaço na Bahia.</p>
+            </div>
+
+            <div class="timeline-item" data-target="topico4">
+                <h3>Exílio (1964)</h3>
+                <p class="summary">Exilado pela ditadura militar, leciona em diversos países.</p>
+            </div>
+
+            <div class="timeline-item" data-target="topico5">
+                <h3>Retorno ao Brasil (1977)</h3>
+                <p class="summary">Inicia trajetória na USP, desenvolve conceito de espaço geográfico.</p>
+            </div>
+
+            <div class="timeline-item" data-target="topico6">
+                <h3>Prêmio Vautrin Lud (1994)</h3>
+                <p class="summary">Recebe o mais importante reconhecimento mundial em geografia.</p>
+            </div>
+
+            <div class="timeline-item" data-target="topico7">
+                <h3>Legado (2001)</h3>
+                <p class="summary">Falece deixando mais de 40 livros que transformaram a geografia.</p>
+            </div>
+        </div>
+
+        <!-- Coluna Direita: Conteúdo Detalhado -->
+        <div class="content-column">
+            <div class="content-detail active" id="topico1">
+                <h2>Nascimento — 1926</h2>
+                <img src="https://3.bp.blogspot.com/-lGDl6-BPWf4/WUVFthVQV-I/AAAAAAAAfWg/-sjQY4qTngkaDV9jvkS97U8fs4a4y3U9gCEwYBhgL/s1600/MATA%2B1%2B%252810%2529.jpg" alt="Interior da Bahia" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Milton Almeida dos Santos nasce em 3 de maio de 1926 em Brotas de Macaúbas, pequena cidade do interior da Bahia. Filho de professores primários, cresce em um ambiente familiar que valoriza profundamente a educação, mesmo diante das adversidades do racismo estrutural brasileiro.</p>
+                <p>Desde cedo, demonstra interesse pelos estudos e é incentivado por seus pais a buscar conhecimento. A origem humilde e a condição de homem negro no Brasil da primeira metade do século XX moldaram sua consciência crítica sobre as desigualdades sociais e raciais que marcam o país.</p>
+            </div>
+
+            <div class="content-detail" id="topico2">
+                <h2>Formação em Direito — 1948</h2>
+                <img src="https://www.educabras.com/media/faculdades/image/ufba.jpg" alt="Estudante universitário" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Forma-se em Direito pela Universidade Federal da Bahia (UFBA) em 1948. Porém, paralelamente à formação jurídica, desenvolve profundo interesse pela geografia, iniciando estudos de forma autodidata.</p>
+                <p>Durante este período, já demonstra sua capacidade intelectual excepcional, publicando artigos em jornais sobre questões geográficas e territoriais. Esta formação multidisciplinar — entre direito e geografia — será fundamental para o desenvolvimento de seu pensamento crítico sobre espaço e sociedade.</p>
+            </div>
+
+            <div class="content-detail" id="topico3">
+                <h2>Doutorado na França — 1958</h2>
+                <img src="https://media.istockphoto.com/id/1192306837/pt/foto/the-palais-universitaire-houses-the-university-of-strasbourg-france.jpg?s=612x612&w=0&k=20&c=kBlquvm5hhYKgc3zXamkHr6sGSrJFkYT0Ei2k2ECGyU=" alt="Universidade na França" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Defende sua tese de doutorado na prestigiada Universidade de Strasbourg, França, com o tema "Centro da cidade de Salvador: estudo de geografia urbana". Este trabalho marca o início de sua carreira internacional e reconhecimento acadêmico.</p>
+                <p>A experiência europeia amplia sua visão sobre urbanização, território e as dinâmicas espaciais. Passa a compreender a geografia não apenas como descrição de paisagens, mas como ciência social crítica capaz de revelar as contradições da sociedade.</p>
+            </div>
+
+            <div class="content-detail" id="topico4">
+                <h2>Exílio Forçado — 1964</h2>
+                <img src="https://conhecimentocientifico.r7.com/wp-content/uploads/2019/03/entenda-o-que-foi-o-golpe-militar-ocorrido-no-brasil-em-31-de-marco-de-64-3.jpg" alt="Avião - símbolo do exílio" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Com o golpe militar de 1964 no Brasil, Milton Santos é forçado ao exílio devido às suas posições políticas progressistas e críticas ao autoritarismo. Vive em diversos países da África, Europa e América Latina durante mais de uma década.</p>
+                <p>Este período, embora doloroso, foi extremamente produtivo intelectualmente. Lecionou em universidades da França, Estados Unidos, Canadá, Peru, Venezuela e diversos países africanos. O exílio ampliou sua perspectiva sobre o mundo e fortaleceu seu compromisso com uma geografia crítica e engajada.</p>
+                <p>Durante este tempo, publicou obras fundamentais que influenciariam gerações de geógrafos, como "O Trabalho do Geógrafo no Terceiro Mundo" (1971).</p>
+            </div>
+
+            <div class="content-detail" id="topico5">
+                <h2>Retorno ao Brasil — 1977</h2>
+                <img src="https://arquivos.tribunadepetropolis.com.br/media/2025/11/18145817/usp-foto-reproducao-900x600.jpg" alt="Universidade de São Paulo" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Retorna ao Brasil em 1977 e inicia sua trajetória na Universidade de São Paulo (USP), onde se tornaria professor titular. Na USP, desenvolve suas teorias mais importantes sobre o conceito de "espaço geográfico" como construção social e histórica.</p>
+                <p>Milton Santos revoluciona a forma de pensar a geografia ao demonstrar que o espaço não é apenas um palco neutro onde as ações acontecem, mas sim um produto das relações sociais, moldado por conflitos, desigualdades, tecnologia e poder.</p>
+                <p>Suas aulas e orientações formaram gerações de geógrafos críticos que hoje atuam em universidades e instituições de pesquisa em todo o Brasil e no mundo.</p>
+            </div>
+
+            <div class="content-detail" id="topico6">
+                <h2>Prêmio Vautrin Lud — 1994</h2>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAtjuUd-zdx1Q21Ci67JSBva_zKDOZCuHM-dim2INB-FnNB1VootHjdhoEC5L5c7t3nziavBIl79Je4tnniVDKEohm9oUnkgnLgu2gmFaLeh9JhjKgxxmgs3Bq_0a5GilgZIUlETSK4Km0zkqeWM1on1rdGgijbt8EbspysI1OiQl4XXPYTUJ9WSq38g/w1200-h630-p-k-no-nu/Milton_Santos-FIG_1994.jpg" alt="Reconhecimento e prêmio" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Em 1994, recebe o Prêmio Vautrin Lud, considerado o "Nobel da Geografia", tornando-se o primeiro brasileiro e o único geógrafo do hemisfério sul a conquistar esta honraria até hoje.</p>
+                <p>Este reconhecimento consolida Milton Santos como uma das maiores referências mundiais em geografia crítica. Suas teorias sobre globalização, urbanização, território e cidadania são estudadas em universidades de todos os continentes.</p>
+                <p>Para a população negra brasileira, este prêmio representa um marco histórico: a demonstração de que a excelência intelectual negra pode romper todas as barreiras do racismo e conquistar o mais alto reconhecimento internacional.</p>
+            </div>
+
+            <div class="content-detail" id="topico7">
+                <h2>Legado Imortal — 2001</h2>
+                <img src="https://vejasp.abril.com.br/wp-content/uploads/2021/06/Milton-Santos-geografo-e-professor-da-USP._1.jpg.jpg?quality=70&strip=info" alt="Livros e conhecimento" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 30px 0;">
+                <p>Milton Santos falece em 24 de junho de 2001, em São Paulo, aos 75 anos. Deixa um legado intelectual gigantesco: mais de 40 livros, centenas de artigos científicos e milhares de estudantes formados por seu pensamento.</p>
+                <p>Suas principais obras — "A Natureza do Espaço" (1996), "Por uma outra globalização" (2000), "O Espaço do Cidadão" (1987) — continuam fundamentais para compreender as contradições do capitalismo contemporâneo, as desigualdades urbanas e os caminhos para uma sociedade mais justa.</p>
+                <p>Milton Santos ensinou que compreender o espaço é compreender a sociedade. E que transformar o espaço é transformar a vida das pessoas. Seu pensamento permanece vivo, inspirando novas gerações a lutar por justiça social, igualdade racial e direito à cidade.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seções Finais -->
+    <div class="bottom-sections">
+        <section class="section-box">
+            <h2>Galeria — Principais Contribuições</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.4s18TxB3rozxFk2PRqWsKQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Livros de Milton Santos">
+                    <div class="gallery-item-caption">
+                        <strong>Obras Fundamentais:</strong> Milton Santos escreveu mais de 40 livros traduzidos em diversos idiomas, sendo referência obrigatória em geografia crítica.
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.V38ff8h-pd0tH142o0SR3gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Professor">
+                    <div class="gallery-item-caption">
+                        <strong>Professor e Intelectual:</strong> Lecionou em universidades de vários países, formando gerações de pensadores críticos.
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://files.passeidireto.com/6869fd32-5d2e-4cd8-b746-0f018408ec86/bg1.png" alt="Cidade">
+                    <div class="gallery-item-caption">
+                        <strong>Geografia Urbana:</strong> Analisou as cidades brasileiras revelando desigualdades espaciais.
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAtjuUd-zdx1Q21Ci67JSBva_zKDOZCuHM-dim2INB-FnNB1VootHjdhoEC5L5c7t3nziavBIl79Je4tnniVDKEohm9oUnkgnLgu2gmFaLeh9JhjKgxxmgs3Bq_0a5GilgZIUlETSK4Km0zkqeWM1on1rdGgijbt8EbspysI1OiQl4XXPYTUJ9WSq38g/w1200-h630-p-k-no-nu/Milton_Santos-FIG_1994.jpg" alt="Prêmio">
+                    <div class="gallery-item-caption">
+                        <strong>Reconhecimento Mundial:</strong> Primeiro brasileiro a receber o Prêmio Vautrin Lud (1994).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-box">
+    <footer>
+    </footer>
+
+    <script>
+        // Sistema de navegação interativa
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const contentDetails = document.querySelectorAll('.content-detail');
+
+        timelineItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                
+                // Remove active de todos
+                timelineItems.forEach(t => t.classList.remove('active'));
+                contentDetails.forEach(c => c.classList.remove('active'));
+                
+                // Adiciona active no clicado
+                this.classList.add('active');
+                document.getElementById(target).classList.add('active');
+                
+                // Scroll suave para o topo do conteúdo
+                document.querySelector('.content-column').scrollTop = 0;
+            });
+        });
+
+        // Scroll spy - detecta rolagem e ativa item correspondente
+        const timelineColumn = document.querySelector('.timeline-column');
+        const mainContainer = document.querySelector('.main-container');
+        
+        window.addEventListener('scroll', function() {
+            // Ajustado para ativar quando o item está 60% da tela do topo
+            const scrollPosition = window.scrollY + (window.innerHeight * 0.6);
+            
+            timelineItems.forEach((item, index) => {
+                const itemTop = item.offsetTop + mainContainer.offsetTop;
+                const itemBottom = itemTop + item.offsetHeight;
+                
+                if (scrollPosition >= itemTop && scrollPosition < itemBottom) {
+                    const target = item.getAttribute('data-target');
+                    
+                    timelineItems.forEach(t => t.classList.remove('active'));
+                    contentDetails.forEach(c => c.classList.remove('active'));
+                    
+                    item.classList.add('active');
+                    const targetElement = document.getElementById(target);
+                    if (targetElement) {
+                        targetElement.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
