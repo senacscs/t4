@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>EnergyInfo</title>
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="#" class="header-logo">EnergyInfo</a>
+
+        <nav class="header-nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#calcular">Calculadora</a>
+            <a href="#sustentavel">Sustentável</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#sobre">Sobre</a>
+        <a href="#calcular">Calculadora</a>
+        <a href="#sustentavel">Sustentável</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <div class="bkg"></div>
+        <div class="info">
+            <h1>EnergyInfo</h1>
+            <p>Plataforma desenvolvida para agilizar, facilitar o acesso a informação, a criação de orçamentos e muito
+                mais.</p>
+            <p><a href="#calcular" class="cta-btn">Comece Agora</a></p>
+        </div>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-inner">
+                <div class="sobre-text">
+                    <h2>Sobre a EnergyInfo</h2>
+                    <p>EnergyInfo tem o intuito de facilitar o acesso a informações energéticas e mostrar soluções mais
+                        eficientes e sustentáveis. A plataforma visa contribuir com o Objetivo de Desenvolvimento
+                        Sustentável da ONU 7 (ODS 7), em especial a meta 7.2.</p>
+
+                    <ul class="features">
+                        <li>Visualização clara de dados de consumo e geração.</li>
+                        <li>Cálculo de custos e retorno para projetos solares.</li>
+                        <li>Ferramentas que ajudam na escolha de soluções energéticas.</li>
+                    </ul>
+
+                    <p class="note">Foco em transformar dados em decisões práticas e acessíveis.</p>
+                </div>
+                <div class="sobre-media" aria-hidden="false">
+                    <img src="img/bkg.svg" alt="Ilustração EnergyInfo" class="sobre-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="calc-section" id="calcular">
+        <div class="container">
+            <div class="calc-card">
+                <header class="calc-header">
+                    <h2>Calculadora de ROI — Solar / Eólico</h2>
+                    <button id="toggle-advanced" class="btn-link">Mostrar avançado</button>
+                </header>
+
+                <form id="calc-form" class="calc-form">
+                    <!-- Row 1 (inputs 1-3) and charts at columns 4-5 spanning two rows -->
+                    <label class="field">Tipo de sistema
+                        <select id="type">
+                            <option value="solar">Solar</option>
+                            <option value="eolico">Eólico</option>
+                        </select>
+                    </label>
+
+                    <label class="field">Capacidade (kW)
+                        <input id="capacity" type="number" step="0.01" value="5">
+                    </label>
+
+                    <label class="field">CAPEX (R$)
+                        <input id="capex" type="number" step="0.01" value="25000">
+                    </label>
+
+                    <label id="label-hours" class="field">Produção anual estimada por kWp (kWh/kWp/ano)
+                        <input id="productionPerKwp" type="number" step="0.1" value="1642.5">
+                    </label>
+
+                    <label id="label-cf" class="field" style="display:none">Fator de capacidade (%)
+                        <input id="capacityFactor" type="number" step="0.01" value="25">
+                    </label>
+
+                    <label class="field">Preço da energia (R$/kWh)
+                        <input id="pricePerKwh" type="number" step="0.01" value="0.7">
+                    </label>
+
+                    <label class="field">Manutenção anual (R$)
+                        <input id="omAnnual" type="number" step="0.01" value="250">
+                    </label>
+
+                    <!-- advanced fields are placed in the main grid but hidden until toggled -->
+                    <label id="adv-deg" class="field advanced" style="display:none">Degradação anual (%)
+                        <input id="degradation" type="number" step="0.01" value="1">
+                    </label>
+
+                    <label id="adv-life" class="field advanced" style="display:none">Vida útil (anos)
+                        <input id="lifeYears" type="number" value="25">
+                    </label>
+
+                    <label id="adv-excess" class="field advanced" style="display:none">Valor do excedente (R$/kWh)
+                        <input id="valueExcess" type="number" step="0.01" value="0.7">
+                    </label>
+
+                    <label id="adv-discount" class="field advanced" style="display:none">Taxa de desconto p/ NPV (%)
+                        <input id="discountRate" type="number" step="0.01" value="6">
+                    </label>
+
+                    <!-- Charts occupying columns 4-5 and spanning two rows -->
+                    <div class="charts" id="charts">
+                        <div class="chart">
+                            <div class="muted">Fluxo de caixa acumulado (anos)</div>
+                            <svg id="cashflowChart" viewBox="0 0 600 120" class="chart-svg" preserveAspectRatio="none">
+                                <rect width="100%" height="100%" fill="transparent"></rect>
+                                <line x1="40" y1="100" x2="580" y2="100" stroke="#e6e7eb" />
+                                <line x1="40" y1="10" x2="40" y2="100" stroke="#e6e7eb" />
+                                <polyline id="cashflowLine" fill="none" stroke="#16a34a" stroke-width="2" points="" />
+                                <line id="paybackLine" x1="0" y1="0" x2="0" y2="0" stroke="#f97316"
+                                    stroke-dasharray="4 4" style="display:none" />
+                            </svg>
+                            <div class="muted small">Linha laranja: ponto estimado de payback.</div>
+                        </div>
+                    </div>
+
+                    <!-- Info cards occupy row 3 columns 1-3 -->
+                    <div class="info-cards">
+                        <div class="card">
+                            <div class="muted">Produção anual (kWh)</div>
+                            <div id="productionAnnual" class="strong">—</div>
+                        </div>
+                        <div class="card">
+                            <div class="muted">Economia anual (ano 1)</div>
+                            <div id="economyYear1" class="strong">—</div>
+                        </div>
+                        <div class="card">
+                            <div class="muted">Payback simples (anos)</div>
+                            <div id="payback" class="strong">—</div>
+                        </div>
+                    </div>
+
+                    <!-- Actions in columns 4-5 row 3 -->
+                    <div class="actions" style="grid-column: 4 / 6;">
+                        <button id="copySummary" type="button" class="btn primary">Copiar resumo</button>
+                        <button id="printBtn" type="button" class="btn">Imprimir / Gerar PDF</button>
+                    </div>
+                </form>
+
+                <footer class="muted small">Observação: cálculo simplificado. Para decisão final, considere NPV
+                    completo, custos financeiros e regras locais.</footer>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Energias Sustentáveis (inserida abaixo da calculadora) -->
+    <section class="sustentavel" id="sustentavel">
+        <div class="container">
+            <h2>Energia Sustentável — benefícios e aplicações</h2>
+            <p class="lead">As energias renováveis ajudam a reduzir emissões, diversificar a matriz energética e gerar
+                economia de longo prazo. Abaixo um resumo das principais tecnologias e suas vantagens.</p>
+
+            <div class="sust-cards">
+                <article class="sust-card">
+                    <div class="sust-icon"><img src="img/solar.png" alt="Solar fotovoltaica" class="sust-icon-img">
+                    </div>
+                    <h3>Solar fotovoltaica</h3>
+                    <p>Converte radiação solar em eletricidade com instalação modular — ideal para telhados e usinas em
+                        larga escala.</p>
+                    <ul>
+                        <li>Redução da conta de energia</li>
+                        <li>Baixa manutenção e vida útil longa</li>
+                        <li>Escalável — residencial a utilitário</li>
+                    </ul>
+                </article>
+
+                <article class="sust-card">
+                    <div class="sust-icon"><img src="img/eolica.png" alt="Eólica" class="sust-icon-img"></div>
+                    <h3>Eólica</h3>
+                    <p>Gera energia a partir do vento em torres; eficiente em parques eólicos onshore/offshore.</p>
+                    <ul>
+                        <li>Alta produção por MW instalado</li>
+                        <li>Boa relação custo-benefício em locais favoráveis</li>
+                        <li>Integração com armazenamento</li>
+                    </ul>
+                </article>
+
+                <article class="sust-card">
+                    <div class="sust-icon"><img src="img/hidrelétrica.png" alt="Hídrica e outras" class="sust-icon-img">
+                    </div>
+                    <h3>Hídrica e outras</h3>
+                    <p>Hidrelétricas, PCHs e fontes como biomassa e geotermia trazem estabilidade e despacho contínuo.
+                    </p>
+                    <ul>
+                        <li>Estabilidade e capacidade de despacho</li>
+                        <li>Complementam solar e eólico</li>
+                        <li>Potencial local para geração distribuída</li>
+                    </ul>
+                </article>
+            </div>
+
+            <p class="sust-note">Combinar tecnologias renováveis, eficiência energética e armazenamento aumenta
+                resiliência e reduz custos e emissões.</p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="#" class="logo">EnergyInfo</a>
+                <p class="muted">Plataforma para cálculos e informações sobre energia renovável.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#calcular">Calculadora</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#sustentavel">Sustentável</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p class="muted">iurimachadowickert@gmail.com</p>
+                <p class="muted small">© 2025 EnergyInfo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
