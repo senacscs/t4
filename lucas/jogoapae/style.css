@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+body{
+    min-height:100vh;
+    background:#070b14;
+    color:white;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%, #00ffff22, transparent 30%),
+    radial-gradient(circle at 80% 30%, #7b2cff33, transparent 30%),
+    radial-gradient(circle at 50% 80%, #00ffae22, transparent 30%);
+    z-index:-1;
+}
+
+header{
+    text-align:center;
+    padding:20px 20px 10px;
+}
+
+header h1{
+    font-size:3rem;
+    font-weight:700;
+    letter-spacing:8px;
+    background:linear-gradient(90deg,#00ffff,#00ffae,#7b2cff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+    color:#c9d4e2;
+}
+
+.games-container{
+    width:min(1000px,90%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:15px;
+    padding-bottom:50px;
+}
+
+.game-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:10px;
+    transition:.3s;
+    min-height:220px;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+    border-color:#00ffff;
+    box-shadow:0 0 25px rgba(0,255,255,.3);
+}
+
+.game-card h2{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.game-card p{
+    color:#c9d4e2;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.play-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    padding:12px 24px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#00ffff,#7b2cff);
+    transition:.3s;
+}
+
+.play-btn:hover{
+    transform:scale(1.05);
+}
+
+.play-btn:focus{
+    outline:3px solid #fff;
+    outline-offset:4px;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:3rem;
+    }
+
+    .games-container{
+        width:95%;
+    }
+
+}
