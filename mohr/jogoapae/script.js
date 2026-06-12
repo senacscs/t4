@@ -17,7 +17,7 @@ function audioDescricaoInicial() {
 
   if (audioAtivo) {
     falar(
-      "Bem-vindo ao Jardim dos Guardiões. Primeiro, escolha um avatar entre capivara, tigre, urso, dragão, gato ou cachorro para iniciar o jogo."
+      "Bem-vindo ao Jardim dos Guardiões. Primeiro, escolha um avatar entre capivara, tigre, macaco, dragão, gato ou cachorro para iniciar o jogo."
     );
 
     audioAtivo = false;
@@ -31,7 +31,7 @@ function audioDescricaoInicial() {
     botao.innerHTML = "🔊 Áudio ligado";
 
     falar(
-      "Bem-vindo ao Jardim dos Guardiões. Primeiro, escolha um avatar entre capivara, tigre, urso, dragão, gato ou cachorro para iniciar o jogo."
+      "Bem-vindo ao Jardim dos Guardiões. Primeiro, escolha um avatar entre capivara, tigre, macaco, dragão, gato ou cachorro para iniciar o jogo."
     );
   }
 }
