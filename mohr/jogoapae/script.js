@@ -1,5 +1,165 @@
 let audioAtivo = false;
 
+let regandoMiniGame = false;
+let animacaoRega = null;
+
+let cursorY = 130;
+let velocidadeCursor = 0;
+
+let zonaY = 60;
+let velocidadeZona = 0.35;
+
+let progressoRega = 35;
+let segurando = false;
+
+document.addEventListener("keydown", function(e) {
+  if (e.code === "Space" && regandoMiniGame) {
+    e.preventDefault();
+    segurando = true;
+  }
+});
+
+document.addEventListener("keyup", function(e) {
+  if (e.code === "Space") {
+    segurando = false;
+  }
+});
+
+document.addEventListener("mousedown", function() {
+  if (regandoMiniGame) segurando = true;
+});
+
+document.addEventListener("mouseup", function() {
+  segurando = false;
+});
+
+function regar() {
+  if (acaoAtual !== "regar") return;
+
+  if (energia < 8) {
+    document.getElementById("mensagem").innerText =
+      "Seu animal está sem energia! Clique em descansar.";
+    atualizarObjetivo("descansar", "Seu animal está cansado. Clique em descansar.");
+    return;
+  }
+
+  iniciarMiniGameRega();
+}
+
+function iniciarMiniGameRega() {
+  if (regandoMiniGame) return;
+
+  if (animacaoRega !== null) {
+    cancelAnimationFrame(animacaoRega);
+    animacaoRega = null;
+  }
+
+  regandoMiniGame = true;
+
+  cursorY = 130;
+  velocidadeCursor = 0;
+  zonaY = 60;
+  velocidadeZona = 0.35;
+  progressoRega = 35;
+  segurando = false;
+
+  document.getElementById("miniJogoRega").classList.remove("hidden");
+  document.getElementById("cursor").style.top = cursorY + "px";
+  document.getElementById("zonaVerde").style.top = zonaY + "px";
+  document.getElementById("progressoRega").style.width = progressoRega + "%";
+
+  animacaoRega = requestAnimationFrame(loopRega);
+}
+
+function loopRega() {
+  if (!regandoMiniGame) return;
+
+  const cursor = document.getElementById("cursor");
+  const zona = document.getElementById("zonaVerde");
+
+  if (segurando) {
+    velocidadeCursor -= 0.08;
+  } else {
+    velocidadeCursor += 0.07;
+  }
+
+  velocidadeCursor *= 0.88;
+  cursorY += velocidadeCursor;
+
+  if (cursorY < 0) {
+    cursorY = 0;
+    velocidadeCursor = 0;
+  }
+
+  if (cursorY > 148) {
+    cursorY = 148;
+    velocidadeCursor = 0;
+  }
+
+  zonaY += velocidadeZona;
+
+  if (zonaY <= 0) {
+    zonaY = 0;
+    velocidadeZona = 0.35;
+  }
+
+  if (zonaY >= 125) {
+    zonaY = 125;
+    velocidadeZona = -0.35;
+  }
+
+  cursor.style.top = cursorY + "px";
+  zona.style.top = zonaY + "px";
+
+  const cursorMeio = cursorY + 11;
+  const zonaTop = zonaY;
+  const zonaBottom = zonaY + 45;
+
+  if (cursorMeio >= zonaTop && cursorMeio <= zonaBottom) {
+    progressoRega += 0.25;
+  } else {
+    progressoRega -= 0.12;
+  }
+
+  if (progressoRega < 0) progressoRega = 0;
+  if (progressoRega > 100) progressoRega = 100;
+
+  document.getElementById("progressoRega").style.width = progressoRega + "%";
+
+  if (progressoRega >= 100) {
+    finalizarMiniGameRega();
+    return;
+  }
+
+  animacaoRega = requestAnimationFrame(loopRega);
+}
+
+function finalizarMiniGameRega() {
+  regandoMiniGame = false;
+
+  if (animacaoRega !== null) {
+    cancelAnimationFrame(animacaoRega);
+    animacaoRega = null;
+  }
+
+  document.getElementById("miniJogoRega").classList.add("hidden");
+
+  gastarEnergia(8);
+
+  agua++;
+  regado = true;
+  segurando = false;
+
+  animarAnimal("regando");
+  mostrarItem("imagens/regador-agua.png");
+
+  document.getElementById("mensagem").innerText =
+    "Boa irrigação! Agora passe o dia.";
+
+  atualizarStatus();
+  atualizarObjetivo("dia", "Agora passe o dia.");
+}
+
 function falar(texto) {
   if (!audioAtivo) return;
 
@@ -60,7 +220,7 @@ const arvores = [
     preco: 0,
     comprada: true,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌿", "🌴", "🌴", "🌴"]
+    plantas: ["🌱", "🌿", "🌴", "🌴"]
   },
   {
     nome: "Macieira",
@@ -68,7 +228,7 @@ const arvores = [
     preco: 10,
     comprada: false,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌳", "🌳", "🍎", "🍎"]
+    plantas: ["🌱", "🌿", "🌳", "🍎"]
   },
   {
     nome: "Árvore Florida",
@@ -76,7 +236,7 @@ const arvores = [
     preco: 15,
     comprada: false,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌳", "🌸", "🌸", "🌸"]
+    plantas: ["🌱", "🌿", "🌳", "🌸"]
   },
   {
     nome: "Planta Misteriosa",
@@ -84,7 +244,7 @@ const arvores = [
     preco: 20,
     comprada: false,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌿", "🌳", "🌳", "imagens/planta-boneco.png"]
+    plantas: ["🌱", "🌿", "🌳", "imagens/planta-boneco.png"]
   },
   {
     nome: "Bananeira",
@@ -92,7 +252,7 @@ const arvores = [
     preco: 25,
     comprada: false,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌴", "🌴", "🍌", "🍌"]
+    plantas: ["🌱", "🌿", "🌴", "🍌"]
   },
   {
     nome: "Pinheiro",
@@ -100,7 +260,7 @@ const arvores = [
     preco: 30,
     comprada: false,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌿", "🌲", "🌲", "🌲"]
+    plantas: ["🌱", "🌿", "🌲", "🌲"]
   },
   {
     nome: "Cacto",
@@ -108,7 +268,7 @@ const arvores = [
     preco: 35,
     comprada: false,
     completas: 0,
-    plantas: ["🌱", "🌿", "🌵", "🌵", "🌵", "🌵"]
+    plantas: ["🌱", "🌿", "🌵", "🌵"]
   }
 ];
 
@@ -158,7 +318,21 @@ const missoes = [
 ];
 
 let missaoAtual = 0;
+document.addEventListener("keydown", (e)=>{
 
+    if(e.code === "Space"){
+        segurando = true;
+    }
+
+});
+
+document.addEventListener("keyup", (e)=>{
+
+    if(e.code === "Space"){
+        segurando = false;
+    }
+
+});
 function escolherPersonagem(imagem) {
 
 falar(
@@ -240,7 +414,116 @@ function atualizarMissao() {
   document.getElementById("missao-progresso").innerText =
     `Progresso: ${arvore.completas}/${missao.quantidade} | Recompensa: ${missao.recompensaMoedas} moedas`;
 }
+function iniciarMiniGameRega() {
+  if (regandoMiniGame) return;
 
+  if (animacaoRega !== null) {
+    cancelAnimationFrame(animacaoRega);
+    animacaoRega = null;
+  }
+
+  regandoMiniGame = true;
+
+  cursorY = 130;
+  velocidadeCursor = 0;
+  zonaY = 60;
+  velocidadeZona = 0.5;
+  progressoRega = 35;
+  segurando = false;
+
+  document.getElementById("miniJogoRega").classList.remove("hidden");
+  document.getElementById("cursor").style.top = cursorY + "px";
+  document.getElementById("zonaVerde").style.top = zonaY + "px";
+  document.getElementById("progressoRega").style.width = progressoRega + "%";
+
+  animacaoRega = requestAnimationFrame(loopRega);
+}
+function loopRega(){
+
+    if(!regandoMiniGame) return;
+
+    const cursor =
+      document.getElementById("cursor");
+
+    const zona =
+      document.getElementById("zonaVerde");
+
+    if(segurando){
+        velocidade -= 0.7;
+    }else{
+        velocidade += 0.5;
+    }
+
+    cursorY += velocidade;
+
+    if(cursorY < 0){
+        cursorY = 0;
+        velocidade = 0;
+    }
+
+    if(cursorY > 225){
+        cursorY = 225;
+        velocidade = 0;
+    }
+
+    cursor.style.top = cursorY + "px";
+
+    const zonaTop =
+      parseInt(zona.style.top || 50);
+
+    const zonaBottom =
+      zonaTop + 70;
+
+    if(
+        cursorY > zonaTop &&
+        cursorY < zonaBottom
+    ){
+        progressoRega += 1;
+    }else{
+        progressoRega -= 0.5;
+    }
+
+    progressoRega =
+      Math.max(0,
+      Math.min(100, progressoRega));
+
+    document
+      .getElementById("progressoRega")
+      .style.width =
+      progressoRega + "%";
+
+    if(progressoRega >= 100){
+
+        finalizarMiniGameRega();
+
+        return;
+    }
+    animacaoRega = requestAnimationFrame(loopRega);
+
+}
+
+function finalizarMiniGameRega(){
+
+    regandoMiniGame = false;
+
+    document
+      .getElementById("miniJogoRega")
+      .classList.add("hidden");
+
+    agua++;
+    regado = true;
+
+    document
+      .getElementById("mensagem")
+      .innerText =
+      "Excelente irrigação!";
+
+    atualizarObjetivo(
+      "dia",
+      "Agora passe o dia."
+    );
+
+}
 function verificarMissao() {
   if (missaoAtual >= missoes.length) return;
 
@@ -459,19 +742,125 @@ function plantar() {
     "Semente plantada! Agora regue.";
   atualizarObjetivo("regar", "Regue a planta.");
 }
-
 function regar() {
   if (acaoAtual !== "regar") return;
+
   if (!gastarEnergia(8)) return;
+
+  iniciarMiniGameRega();
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.code === "Space") {
+    segurando = true;
+  }
+});
+
+document.addEventListener("keyup", function(e) {
+  if (e.code === "Space") {
+    segurando = false;
+  }
+});
+
+document.addEventListener("mousedown", function() {
+  segurando = true;
+});
+
+document.addEventListener("mouseup", function() {
+  segurando = false;
+});
+
+function iniciarMiniGameRega() {
+  regandoMiniGame = true;
+  cursorY = 130;
+  velocidadeCursor = 0;
+  zonaY = 60;
+  velocidadeZona = 0.7;
+  progressoRega = 35;
+
+  document.getElementById("miniJogoRega").classList.remove("hidden");
+  document.getElementById("progressoRega").style.width = progressoRega + "%";
+
+  loopRega();
+}
+
+function loopRega() {
+  if (!regandoMiniGame) return;
+
+  const cursor = document.getElementById("cursor");
+  const zona = document.getElementById("zonaVerde");
+
+  if (segurando) {
+    velocidadeCursor -= 0.18;
+  } else {
+    velocidadeCursor += 0.14;
+  }
+
+  velocidadeCursor *= 0.92;
+  cursorY += velocidadeCursor;
+
+  if (cursorY < 0) {
+    cursorY = 0;
+    velocidadeCursor = 0;
+  }
+
+  if (cursorY > 148) {
+    cursorY = 148;
+    velocidadeCursor = 0;
+  }
+
+  zonaY += velocidadeZona;
+
+  if (zonaY <= 0 || zonaY >= 125) {
+    velocidadeZona *= -1;
+  }
+
+  cursor.style.top = cursorY + "px";
+  zona.style.top = zonaY + "px";
+
+  const cursorMeio = cursorY + 11;
+  const zonaTop = zonaY;
+  const zonaBottom = zonaY + 45;
+
+  if (cursorMeio >= zonaTop && cursorMeio <= zonaBottom) {
+    progressoRega += 0.45;
+  } else {
+    progressoRega -= 0.25;
+  }
+
+  if (progressoRega < 0) progressoRega = 0;
+  if (progressoRega > 100) progressoRega = 100;
+
+  document.getElementById("progressoRega").style.width = progressoRega + "%";
+
+  if (progressoRega >= 100) {
+    finalizarMiniGameRega();
+    return;
+  }
+
+  requestAnimationFrame(loopRega);
+}
+
+function finalizarMiniGameRega() {
+  regandoMiniGame = false;
+
+  if (animacaoRega !== null) {
+    cancelAnimationFrame(animacaoRega);
+    animacaoRega = null;
+  }
+
+  document.getElementById("miniJogoRega").classList.add("hidden");
 
   agua++;
   regado = true;
+  segurando = false;
 
   animarAnimal("regando");
   mostrarItem("imagens/regador-agua.png");
 
   document.getElementById("mensagem").innerText =
-    "Você regou! Agora passe o dia.";
+    "Boa irrigação! Agora passe o dia.";
+
   atualizarStatus();
   atualizarObjetivo("dia", "Agora passe o dia.");
 }

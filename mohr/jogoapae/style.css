@@ -442,3 +442,75 @@ button {
 .btn-audio:hover {
   background: #0d47a1;
 }
+
+#miniJogoRega {
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  width: 130px;
+  background: #eef9ff;
+  border: 2px solid #81d4fa;
+  border-radius: 15px;
+  padding: 8px;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+#miniJogoRega p {
+  margin: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #01579b;
+}
+
+#miniJogoRega small {
+  font-size: 10px;
+  color: #01579b;
+}
+
+#barraPesca {
+  width: 35px;
+  height: 170px;
+  background: #d7ecf5;
+  margin: 5px auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #4fc3f7;
+}
+
+#zonaVerde {
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  background: #4caf50;
+  top: 60px;
+  border-radius: 8px;
+}
+
+#cursor {
+  position: absolute;
+  width: 100%;
+  height: 22px;
+  color: #ff9800;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  top: 130px;
+  line-height: 22px;
+}
+
+#barraProgressoRega {
+  width: 95px;
+  height: 12px;
+  background: #d0d0d0;
+  margin: 6px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progressoRega {
+  width: 0%;
+  height: 100%;
+  background: #2196f3;
+}
