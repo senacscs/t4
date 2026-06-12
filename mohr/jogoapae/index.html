@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardim dos Guardiões</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+  <h1>🌱 Jardim dos Guardiões</h1>
+
+  <button class="btn-audio" onclick="audioDescricaoInicial()" id="gambiarra">
+    🔊 Ouvir descrição do jogo
+  </button>
+
+  <div id="tela-personagens">
+    <h2>Escolha seu personagem</h2>
+
+    <div class="personagens">
+      <img src="imagens/capivara.png" alt="Avatar capivara" aria-label="Escolher avatar capivara" onclick="escolherPersonagem('imagens/capivara.png')">
+      <img src="imagens/tigre.png" alt="Avatar tigre" aria-label="Escolher avatar tigre" onclick="escolherPersonagem('imagens/tigre.png')">
+      <img src="imagens/urso.png" alt="Avatar urso" aria-label="Escolher avatar urso" onclick="escolherPersonagem('imagens/urso.png')">
+      <img src="imagens/dragao.png" alt="Avatar dragão" aria-label="Escolher avatar dragão" onclick="escolherPersonagem('imagens/dragao.png')">
+      <img src="imagens/gato.png" alt="Avatar gato" aria-label="Escolher avatar gato" onclick="escolherPersonagem('imagens/gato.png')">
+      <img src="imagens/cachorro.png" alt="Avatar cachorro" aria-label="Escolher avatar cachorro" onclick="escolherPersonagem('imagens/cachorro.png')">
+    </div>
+  </div>
+
+  <div id="tela-jogo" class="hidden">
+    <p class="fase">Árvore atual: <span id="nome-arvore">Nenhuma</span></p>
+
+    <div class="area-esquerda">
+      <div class="status">
+        <p>📅 Dia: <span id="dia">1</span></p>
+        <p>❤️ Vida: <span id="vida">100</span></p>
+        <p>⚡ Energia: <span id="energia">100</span></p>
+        <p>💧 Água: <span id="agua">0</span></p>
+        <p>🪙 Moedas: <span id="moedas">20</span></p>
+      </div>
+
+      <div class="missao">
+        <h3>📜 Missão atual</h3>
+        <p id="missao-texto">Complete missões para ganhar recompensas.</p>
+        <p id="missao-progresso"></p>
+      </div>
+
+      <div class="cenario" aria-label="Cenário do jogo com céu azul, grama verde, terra no centro e espaço para a planta crescer.">
+        <div id="clima">☀️</div>
+        <div id="praga" class="hidden" onclick="espantarPraga()">🐛</div>
+
+        <img id="animal" src="" alt="Personagem escolhido">
+        <div id="terra" aria-label="Terra para plantar a semente"></div>
+
+        <div id="planta" class="hidden"></div>
+        <img id="item-acao" src="" class="hidden" alt="Item usado na ação">
+      </div>
+
+      <div class="barra">
+        <div id="progresso"></div>
+      </div>
+
+      <p id="mensagem">Compre ou escolha uma semente para começar.</p>
+    </div>
+
+    <div class="area-direita">
+      <div class="objetivo">
+        <h3>Próxima ação:</h3>
+        <p id="objetivo-texto">Escolha uma semente na loja.</p>
+      </div>
+
+      <div class="botoes">
+        <button id="btn-sementes" class="acao" aria-label="Abra o saco de sementes" onclick="abrirSaco()">
+          <span>🎒</span>
+          <p>Sementes</p>
+        </button>
+
+        <button id="btn-plantar" class="acao" aria-label="Plante a semente" onclick="plantar()">
+          <span>🌱</span>
+          <p>Plantar</p>
+        </button>
+
+        <button id="btn-regar" class="acao" aria-label="Regue a planta" onclick="regar()">
+          <span>💧</span>
+          <p>Regar</p>
+        </button>
+
+        <button id="btn-dia" class="acao" aria-label="Passe para o proximo dia" onclick="passarDia()">
+          <span>☀️</span>
+          <p>Próximo Dia</p>
+        </button>
+
+        <button id="btn-praga" class="acao" aria-label="Espante a praga" onclick="espantarPraga()">
+          <span>🐛</span>
+          <p>Pragas</p>
+        </button>
+
+        <button id="btn-descansar" class="acao" aria-label="Descanse" onclick="descansar()">
+          <span>😴</span>
+          <p>Descansar</p>
+        </button>
+      </div>
+
+      <div class="loja" aria-label="Loja de sementes">
+        <h3>🛒 Loja de sementes</h3>
+        <div id="loja-sementes"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
