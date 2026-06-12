@@ -19,12 +19,17 @@
     <h2>Escolha seu personagem</h2>
 
     <div class="personagens">
-      <img src="imagens/capivara.png" alt="Avatar capivara" aria-label="Escolher avatar capivara" onclick="escolherPersonagem('imagens/capivara.png')">
-      <img src="imagens/tigre.png" alt="Avatar tigre" aria-label="Escolher avatar tigre" onclick="escolherPersonagem('imagens/tigre.png')">
-      <img src="imagens/macaco.png" alt="Avatar macaco" aria-label="Escolher avatar macaco" onclick="escolherPersonagem('imagens/macaco.png')">
-      <img src="imagens/dragao.png" alt="Avatar dragão" aria-label="Escolher avatar dragão" onclick="escolherPersonagem('imagens/dragao.png')">
-      <img src="imagens/gato.png" alt="Avatar gato" aria-label="Escolher avatar gato" onclick="escolherPersonagem('imagens/gato.png')">
-      <img src="imagens/cachorro.png" alt="Avatar cachorro" aria-label="Escolher avatar cachorro" onclick="escolherPersonagem('imagens/cachorro.png')">
+      <img src="imagens/capivara.png" alt="Avatar capivara" aria-label="Escolher avatar capivara" onmouseenter="falarNome('Capivara')" onmouseleave="pararAudio()" onclick="escolherPersonagem('imagens/capivara.png')">
+
+      <img src="imagens/tigre.png" alt="Avatar tigre" aria-label="Escolher avatar tigre" onmouseenter="falarNome('Tigre')" onmouseleave="pararAudio()" onclick="escolherPersonagem('imagens/tigre.png')">
+
+      <img src="imagens/macaco.png" alt="Avatar macaco" aria-label="Escolher avatar macaco" onmouseenter="falarNome('Macaco')" onmouseleave="pararAudio()" onclick="escolherPersonagem('imagens/macaco.png')">
+
+      <img src="imagens/dragao.png" alt="Avatar dragão" aria-label="Escolher avatar dragão" onmouseenter="falarNome('Dragão')" onmouseleave="pararAudio()" onclick="escolherPersonagem('imagens/dragao.png')">
+
+      <img src="imagens/gato.png" alt="Avatar gato" aria-label="Escolher avatar gato" onmouseenter="falarNome('Gato')" onmouseleave="pararAudio()" onclick="escolherPersonagem('imagens/gato.png')">
+
+      <img src="imagens/cachorro.png" alt="Avatar cachorro" aria-label="Escolher avatar cachorro" onmouseenter="falarNome('Cachorro')" onmouseleave="pararAudio()" onclick="escolherPersonagem('imagens/cachorro.png')">
     </div>
   </div>
 
@@ -49,51 +54,42 @@
       <div class="cenario" aria-label="Cenário do jogo com céu azul, grama verde, terra no centro e espaço para a planta crescer.">
         <div id="clima">☀️</div>
 
-<div id="miniJogoRega" class="hidden">
-  <p>💧 Regar</p>
+        <div id="miniJogoRega" class="hidden">
+          <p>💧 Regar</p>
 
-  <div id="barraPesca">
-    <div id="zonaVerde"></div>
-    <div id="cursor">▲</div>
-  </div>
+          <div id="barraPesca">
+            <div id="zonaVerde"></div>
+            <div id="cursor">▲</div>
+          </div>
 
-  <div id="barraProgressoRega">
-    <div id="progressoRega"></div>
-  </div>
+          <div id="barraProgressoRega">
+            <div id="progressoRega"></div>
+          </div>
 
-  <small>Segure ESPAÇO ou clique para subir</small>
-</div>
+          <small>Segure ESPAÇO ou clique para subir</small>
+        </div>
+
+        <div id="miniJogoPraga" class="hidden">
+          <h3>🐛 Ataque de pragas!</h3>
+          <p>Clique em todas as pragas para salvar a planta.</p>
+          <p>Tempo: <span id="tempoPraga">10</span>s</p>
+          <div id="areaPragas"></div>
+        </div>
+
         <div id="praga" class="hidden" onclick="espantarPraga()">🐛</div>
 
         <img id="animal" src="" alt="Personagem escolhido">
+
         <div id="terra" aria-label="Terra para plantar a semente"></div>
 
         <div id="planta" class="hidden"></div>
+
         <img id="item-acao" src="" class="hidden" alt="Item usado na ação">
       </div>
 
       <div class="barra">
         <div id="progresso"></div>
       </div>
-      <div id="miniJogoRega" class="hidden">
-
-    <h3>💧 Regando a planta</h3>
-
-    <p>Mantenha a seta dentro da área verde!</p>
-
-    <div id="barraPesca">
-
-        <div id="zonaVerde"></div>
-
-        <div id="cursor"></div>
-
-    </div>
-
-    <div id="barraProgressoRega">
-        <div id="progressoRega"></div>
-    </div>
-
-</div>
 
       <p id="mensagem">Compre ou escolha uma semente para começar.</p>
     </div>
@@ -105,32 +101,32 @@
       </div>
 
       <div class="botoes">
-        <button id="btn-sementes" class="acao" aria-label="Abra o saco de sementes" onclick="abrirSaco()">
+        <button id="btn-sementes" class="acao" aria-label="Abra o saco de sementes" onmouseenter="falarNome('Abrir saco de sementes')" onmouseleave="pararAudio()" onclick="abrirSaco()">
           <span>🎒</span>
           <p>Sementes</p>
         </button>
 
-        <button id="btn-plantar" class="acao" aria-label="Plante a semente" onclick="plantar()">
+        <button id="btn-plantar" class="acao" aria-label="Plante a semente" onmouseenter="falarNome('Plantar semente')" onmouseleave="pararAudio()" onclick="plantar()">
           <span>🌱</span>
           <p>Plantar</p>
         </button>
 
-        <button id="btn-regar" class="acao" aria-label="Regue a planta" onclick="regar()">
+        <button id="btn-regar" class="acao" aria-label="Regue a planta" onmouseenter="falarNome('Regar planta')" onmouseleave="pararAudio()" onclick="regar()">
           <span>💧</span>
           <p>Regar</p>
         </button>
 
-        <button id="btn-dia" class="acao" aria-label="Passe para o proximo dia" onclick="passarDia()">
+        <button id="btn-dia" class="acao" aria-label="Passe para o próximo dia" onmouseenter="falarNome('Passar para o próximo dia')" onmouseleave="pararAudio()" onclick="passarDia()">
           <span>☀️</span>
           <p>Próximo Dia</p>
         </button>
 
-        <button id="btn-praga" class="acao" aria-label="Espante a praga" onclick="espantarPraga()">
+        <button id="btn-praga" class="acao" aria-label="Espante a praga" onmouseenter="falarNome('Eliminar pragas')" onmouseleave="pararAudio()" onclick="espantarPraga()">
           <span>🐛</span>
           <p>Pragas</p>
         </button>
 
-        <button id="btn-descansar" class="acao" aria-label="Descanse" onclick="descansar()">
+        <button id="btn-descansar" class="acao" aria-label="Descanse" onmouseenter="falarNome('Descansar personagem')" onmouseleave="pararAudio()" onclick="descansar()">
           <span>😴</span>
           <p>Descansar</p>
         </button>

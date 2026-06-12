@@ -514,3 +514,51 @@ button {
   height: 100%;
   background: #2196f3;
 }
+
+#miniJogoPraga {
+  position: absolute;
+  inset: 15px;
+  background: rgba(255, 248, 225, 0.95);
+  border: 3px solid #ef6c00;
+  border-radius: 20px;
+  z-index: 30;
+  padding: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.25);
+}
+
+#miniJogoPraga h3 {
+  margin: 4px;
+  color: #bf360c;
+}
+
+#miniJogoPraga p {
+  margin: 4px;
+  color: #bf360c;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#areaPragas {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 75px);
+  overflow: hidden;
+}
+
+.praga-mini {
+  position: absolute;
+  font-size: 34px;
+  cursor: pointer;
+  user-select: none;
+  animation: pragaPulando 0.5s infinite;
+}
+
+.praga-mini:hover {
+  transform: scale(1.2);
+}
+
+@keyframes pragaPulando {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
