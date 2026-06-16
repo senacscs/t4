@@ -547,7 +547,12 @@ button {
 
 .praga-mini {
   position: absolute;
-  font-size: 34px;
+  font-size: 60px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   user-select: none;
   animation: pragaPulando 0.5s infinite;

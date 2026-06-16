@@ -64,7 +64,7 @@ let segurando = false;
 
 let miniPragaAtivo = false;
 let pragasRestantes = 0;
-let tempoPraga = 10;
+let tempoPraga = 30;
 let intervaloPraga = null;
 
 const arvores = [
@@ -772,8 +772,8 @@ function iniciarMiniGamePraga() {
   }
 
   miniPragaAtivo = true;
-  pragasRestantes = 6;
-  tempoPraga = 10;
+  pragasRestantes = 7;
+  tempoPraga = 30;
 
   miniGame.classList.remove("hidden");
   area.innerHTML = "";
