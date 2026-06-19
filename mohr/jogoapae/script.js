@@ -67,6 +67,15 @@ let pragasRestantes = 0;
 let tempoPraga = 30;
 let intervaloPraga = null;
 
+let miniPlantioAtivo = false;
+let sementesPegas = 0;
+let cestoX = 45;
+let sementesCaindo = [];
+let intervaloSementes = null;
+let animacaoPlantio = null;
+let teclaEsquerda = false;
+let teclaDireita = false;
+
 const arvores = [
   {
     nome: "Palmeira",
@@ -178,11 +187,27 @@ document.addEventListener("keydown", function(e) {
     e.preventDefault();
     segurando = true;
   }
+
+  if (miniPlantioAtivo && e.code === "ArrowLeft") {
+    teclaEsquerda = true;
+  }
+
+  if (miniPlantioAtivo && e.code === "ArrowRight") {
+    teclaDireita = true;
+  }
 });
 
 document.addEventListener("keyup", function(e) {
   if (e.code === "Space") {
     segurando = false;
+  }
+
+  if (e.code === "ArrowLeft") {
+    teclaEsquerda = false;
+  }
+
+  if (e.code === "ArrowRight") {
+    teclaDireita = false;
   }
 });
 
@@ -342,6 +367,12 @@ function escolherArvore(index) {
   planta.classList.add("hidden");
   planta.classList.remove("crescer", "balancar");
 
+  const terra = document.getElementById("terra");
+  terra.classList.remove("terra-molhada");
+  terra.classList.add("terra-seca");
+
+  
+
   atualizarStatus();
   atualizarObjetivo("sementes", "Abra o saco de sementes.");
 
@@ -486,18 +517,177 @@ function abrirSaco() {
 
 function plantar() {
   if (acaoAtual !== "plantar") return;
-  if (!gastarEnergia(10)) return;
+
+  if (energia < 10) {
+    document.getElementById("mensagem").innerText =
+      "Seu animal está sem energia! Clique em descansar.";
+    atualizarObjetivo("descansar", "Seu animal está cansado. Clique em descansar.");
+    return;
+  }
+
+  iniciarMiniGamePlantio();
+}
+
+function iniciarMiniGamePlantio() {
+  if (miniPlantioAtivo) return;
+
+  const miniGame = document.getElementById("miniJogoPlantio");
+  const area = document.getElementById("areaPlantio");
+  const cesto = document.getElementById("cesto");
+  const contador = document.getElementById("sementesPegas");
+
+  if (!miniGame || !area || !cesto || !contador) {
+    document.getElementById("mensagem").innerText =
+      "Erro: o mini game de plantio não está no HTML.";
+    return;
+  }
+
+  miniPlantioAtivo = true;
+  sementesPegas = 0;
+  cestoX = 45;
+  sementesCaindo = [];
+  teclaEsquerda = false;
+  teclaDireita = false;
+
+  contador.innerText = sementesPegas;
+  area.querySelectorAll(".semente-caindo").forEach(semente => semente.remove());
+
+  cesto.style.left = cestoX + "%";
+  miniGame.classList.remove("hidden");
+
+  if (intervaloSementes) {
+    clearInterval(intervaloSementes);
+    intervaloSementes = null;
+  }
+
+  if (animacaoPlantio) {
+    cancelAnimationFrame(animacaoPlantio);
+    animacaoPlantio = null;
+  }
+
+  intervaloSementes = setInterval(criarSementeCaindo, 650);
+  animacaoPlantio = requestAnimationFrame(loopPlantio);
+}
+
+function criarSementeCaindo() {
+  if (!miniPlantioAtivo) return;
+
+  const area = document.getElementById("areaPlantio");
+  if (!area) return;
+
+  const semente = document.createElement("div");
+  semente.classList.add("semente-caindo");
+  semente.innerText = "🌰";
+
+  const x = Math.random() * 90;
+
+  semente.style.left = x + "%";
+  semente.style.top = "0px";
+
+  area.appendChild(semente);
+
+  sementesCaindo.push({
+    elemento: semente,
+    y: 0,
+    velocidade: 2.5 + Math.random() * 1.5
+  });
+}
+
+function loopPlantio() {
+  if (!miniPlantioAtivo) return;
+
+  const area = document.getElementById("areaPlantio");
+  const cesto = document.getElementById("cesto");
+
+  if (!area || !cesto) return;
+
+  if (teclaEsquerda) cestoX -= 1.6;
+  if (teclaDireita) cestoX += 1.6;
+
+  if (cestoX < 0) cestoX = 0;
+  if (cestoX > 88) cestoX = 88;
+
+  cesto.style.left = cestoX + "%";
+
+  const areaAltura = area.offsetHeight;
+  const cestoRect = cesto.getBoundingClientRect();
+
+  for (let i = sementesCaindo.length - 1; i >= 0; i--) {
+    const obj = sementesCaindo[i];
+
+    obj.y += obj.velocidade;
+    obj.elemento.style.top = obj.y + "px";
+
+    const sementeRect = obj.elemento.getBoundingClientRect();
+
+    const pegou =
+      sementeRect.bottom >= cestoRect.top &&
+      sementeRect.top <= cestoRect.bottom &&
+      sementeRect.right >= cestoRect.left &&
+      sementeRect.left <= cestoRect.right;
+
+    if (pegou) {
+      obj.elemento.remove();
+      sementesCaindo.splice(i, 1);
+
+      sementesPegas++;
+      document.getElementById("sementesPegas").innerText = sementesPegas;
+
+      if (sementesPegas >= 5) {
+        finalizarMiniGamePlantio();
+        return;
+      }
+
+      continue;
+    }
+
+    if (obj.y > areaAltura) {
+      obj.elemento.remove();
+      sementesCaindo.splice(i, 1);
+    }
+  }
+
+  animacaoPlantio = requestAnimationFrame(loopPlantio);
+}
+
+function finalizarMiniGamePlantio() {
+  miniPlantioAtivo = false;
+
+  if (intervaloSementes) {
+    clearInterval(intervaloSementes);
+    intervaloSementes = null;
+  }
+
+  if (animacaoPlantio) {
+    cancelAnimationFrame(animacaoPlantio);
+    animacaoPlantio = null;
+  }
+
+  const miniGame = document.getElementById("miniJogoPlantio");
+  const area = document.getElementById("areaPlantio");
+
+  if (miniGame) miniGame.classList.add("hidden");
+  if (area) area.querySelectorAll(".semente-caindo").forEach(semente => semente.remove());
+
+  gastarEnergia(10);
 
   plantado = true;
-  etapa = 1;
+  etapa = 0;
+
+  const terra = document.getElementById("terra");
+  terra.classList.remove("terra-molhada");
+  terra.classList.add("terra-seca");
+
+  document.getElementById("sementesNaTerra").classList.remove("hidden");
+
 
   animarAnimal("andar");
-  mostrarPlanta();
   atualizarBarra();
 
   document.getElementById("mensagem").innerText =
-    "Semente plantada! Agora regue.";
+    "Você coletou 5 sementes e realizou o plantio! Agora regue.";
 
+  atualizarStatus();
   atualizarObjetivo("regar", "Regue a planta.");
 }
 
@@ -537,7 +727,7 @@ function iniciarMiniGameRega() {
   cursorY = 130;
   velocidadeCursor = 0;
   zonaY = 60;
-  velocidadeZona = 0.35;
+  velocidadeZona = 0.9;
   progressoRega = 35;
   segurando = false;
 
@@ -579,14 +769,14 @@ function loopRega() {
   zonaY += velocidadeZona;
 
   if (zonaY <= 0) {
-  zonaY = 0;
-  velocidadeZona = 0.9;
-}
+    zonaY = 0;
+    velocidadeZona = 0.9;
+  }
 
   if (zonaY >= 125) {
-  zonaY = 125;
-  velocidadeZona = -0.9;
-}
+    zonaY = 125;
+    velocidadeZona = -0.9;
+  }
 
   cursor.style.top = cursorY + "px";
   zona.style.top = zonaY + "px";
@@ -630,6 +820,18 @@ function finalizarMiniGameRega() {
   agua++;
   regado = true;
   segurando = false;
+  
+  if (etapa === 0) {
+  etapa = 1;
+  mostrarPlanta();
+  atualizarBarra();
+}
+
+  const terra = document.getElementById("terra");
+  terra.classList.remove("terra-seca");
+  terra.classList.add("terra-molhada");
+
+  document.getElementById("sementesNaTerra").classList.add("hidden");
 
   animarAnimal("regando");
   mostrarItem("imagens/regador-agua.png");
@@ -643,6 +845,10 @@ function finalizarMiniGameRega() {
 
 function passarDia() {
   if (acaoAtual !== "dia") return;
+
+  const terra = document.getElementById("terra");
+  terra.classList.remove("terra-molhada");
+  terra.classList.add("terra-seca");
 
   const cenario = document.querySelector(".cenario");
   const clima = document.getElementById("clima");
@@ -928,6 +1134,10 @@ function reiniciarArvore() {
   const planta = document.getElementById("planta");
   planta.innerHTML = "";
   planta.classList.add("hidden");
+
+  const terra = document.getElementById("terra");
+  terra.classList.remove("terra-molhada");
+  terra.classList.add("terra-seca");
 
   document.getElementById("progresso").style.width = "0%";
   document.getElementById("praga").classList.add("hidden");

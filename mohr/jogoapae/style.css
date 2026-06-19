@@ -567,3 +567,100 @@ button {
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0); }
 }
+
+
+
+/* TERRA SECA E MOLHADA */
+
+#terra {
+  width: 120px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: background-color 0.4s;
+}
+
+.terra-seca {
+  background-color: #9b7653 !important;
+}
+
+.terra-molhada {
+  background-color: #654321 !important;
+}
+
+/* MINI GAME DE PLANTIO */
+
+#miniJogoPlantio {
+  position: absolute;
+  inset: 15px;
+  background: rgba(232, 245, 233, 0.96);
+  border: 3px solid #43a047;
+  border-radius: 20px;
+  z-index: 35;
+  padding: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.25);
+}
+
+#miniJogoPlantio h3 {
+  margin: 4px;
+  color: #1b5e20;
+}
+
+#miniJogoPlantio p {
+  margin: 4px;
+  color: #1b5e20;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#areaPlantio {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 75px);
+  overflow: hidden;
+}
+
+#contadorSementes {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background: white;
+  color: #1b5e20;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  z-index: 3;
+}
+
+#cesto {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  font-size: 48px;
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  z-index: 3;
+}
+
+.semente-caindo {
+  position: absolute;
+  top: 0;
+  font-size: 28px;
+  user-select: none;
+  z-index: 2;
+}
+
+#sementesNaTerra {
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  transform: translateX(-50%);
+  font-size: 22px;
+  z-index: 4;
+  white-space: nowrap;
+}
