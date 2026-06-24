@@ -1,25 +1,20 @@
-// Configuração centralizada do Firebase
-const firebaseConfig = {
-    apiKey: "",
-    authDomain: "moodalert-2973b.firebaseapp.com",
-    databaseURL: "https://moodalert-2973b-default-rtdb.firebaseio.com/",
-    projectId: "moodalert-2973b",
-    storageBucket: "moodalert-2973b.appspot.com",
-    messagingSenderId: "",
-    appId: ""
+// Firebase configuration template
+// Substitua os valores abaixo pelos do seu projeto (Project Settings → Your apps)
+var firebaseConfig = {
+    apiKey: "AIzaSyCxVt-EtNjm_UwAFTqma32h8ZcnkEBC7V4",
+    authDomain: "moodalerta.firebaseapp.com",
+    databaseURL: "https://moodalerta-default-rtdb.firebaseio.com",
+    projectId: "moodalerta",
+    storageBucket: "moodalerta.firebasestorage.app",
+    messagingSenderId: "49096713365",
+    appId: "1:49096713365:web:2f7f0a5bc468170563279c",
+    measurementId: "G-L6R9G7TZFT"
 };
 
-// Inicializar Firebase (apenas uma vez)
-if (typeof firebase !== 'undefined') {
-    if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-        console.log('✅ Firebase inicializado com sucesso!');
-    } else {
-        console.log('Firebase já estava inicializado');
-    }
-} else {
-    console.error('❌ Firebase SDK não carregado!');
-}
+// Inicializa o Firebase
+firebase.initializeApp(firebaseConfig);
+// Observação: suas regras atuais deixam o DB público.
+// Se quiser que eu cole os valores reais do SDK aqui, cole-os e eu atualizo o arquivo.
 
 // Aguardar Firebase estar pronto
 function whenFirebaseReady(callback) {
