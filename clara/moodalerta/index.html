@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MoodAlerta · Login</title>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <!-- Firebase Config -->
+    <script src="js/firebase-config.js"></script>
+    <!-- Auth System -->
+    <script src="js/auth.js"></script>
+    <!-- Database Operations -->
+    <script src="js/database.js"></script>
+</head>
+<body>
+        <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <main class="shell">
+        <section class="brand-panel">
+            <p class="eyebrow">Monitoramento de bipolaridade</p>
+            <h1>MoodAlert</h1>
+            <p class="lead">Uma plataforma focada em monitoramento de transtornos bipolares com Afetivogramas, Diarios Online, Acompanhamento médico e muito mais!</p>
+            <ul class="benefits">
+                <li>
+                    <strong>Afetivograma</strong>
+                    <span>Um afetivograma feito para você monitorar seu progresso</span>
+                </li>
+                <li>
+                    <strong>Alertas configuráveis</strong>
+                    <span>Programe Alartas distintos para suas medicações</span>
+                </li>
+                <li>
+                    <strong>Acompanhamento médico</strong>
+                    <span>Acompanhamennto médico em tempo real</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="auth-panel">
+            <div class="glass-card">
+                <header class="card-head">
+                    <div>
+                        <h2>Entre na plataforma</h2>
+                    </div>
+                    <span class="badge">MoodAlerta</span>
+                </header>
+
+                <div class="tab-switch" role="tablist">
+                    <button type="button" id="btnEntrar" class="active" aria-selected="true">Entrar</button>
+                    <button type="button" id="btnCadastrar" aria-selected="false">Cadastrar</button>
+                </div>
+
+                <div class="form-area">
+                    <div class="Entrar" id="formEntrar">
+                        <form>
+                            <label>
+                                <span>E-mail profissional</span>
+                                <input type="email" placeholder="nome@instituicao.org" required>
+                            </label>
+                            <label>
+                                <span>Senha</span>
+                                <input type="password" placeholder="••••••••" required>
+                            </label>
+                            <div class="form-extra">
+                                <a href="#">Esqueci a senha</a>
+                            </div>
+                            <button type="submit" class="primary">Acessar</button>
+                        </form>
+                    </div>
+
+                    <div class="Cadastrar hidden" id="formCadastrar">
+                        <form>
+                            <div class="grid">
+                                <label>
+                                    <span>Nome completo</span>
+                                    <input type="text" name="nome" placeholder="Clara Dick" required>
+                                </label>
+                                <label>
+                                    <span>E-mail</span>
+                                    <input type="email" name="email" placeholder="contato@clínica.com" required>
+                                </label>
+                            </div>
+                            <div class="grid">
+                                <label>
+                                    <span>Senha</span>
+                                    <input type="password" name="senha" placeholder="Crie uma senha" required>
+                                </label>
+                                <label>
+                                    <span>Confirmar senha</span>
+                                    <input type="password" name="confirmarSenha" placeholder="Repita a senha" required>
+                                </label>
+                            </div>
+                            <div class="tipo-usuario compact">
+                                <label class="radio-option">
+                                    <input type="radio" name="tipoCadastro" value="paciente" checked>
+                                    <span>Paciente</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="tipoCadastro" value="medico">
+                                    <span>Médico</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="primary ghost">Criar conta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

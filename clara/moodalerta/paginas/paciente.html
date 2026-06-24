@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/paciente.css">
+	<title>MoodAlert · Paciente</title>
+	<!-- Firebase App (the core Firebase SDK) -->
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+	<!-- Firebase Realtime Database -->
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+	<!-- Firebase Config -->
+	<script src="../js/firebase-config.js"></script>
+	<!-- Auth System -->
+	<script src="../js/auth.js"></script>
+	<!-- Database Operations -->
+	<script src="../js/database.js"></script>
+</head>
+<body>
+	<div class="orb orb-one"></div>
+	<div class="orb orb-two"></div>
+
+	<div class="paciente-shell" data-user="clara">
+		<header class="topbar">
+			<div class="user-chip" id="userChip" role="button" tabindex="0" aria-label="Abrir perfil do usuário">
+				<div class="avatar" aria-hidden="true"></div>
+				<div>
+					<strong>Clara Dick</strong>
+				</div>
+			</div>
+			<button type="button" class="primary ghost">Sair</button>
+		</header>
+
+		<div class="layout">
+			<nav class="sidebar" aria-label="Menu do paciente">
+				<button class="nav-btn active" type="button" data-target="afetivograma" aria-pressed="true"><ion-icon name="stats-chart-outline"></ion-icon> Afetivograma</button>
+				<button class="nav-btn" type="button" data-target="diario" aria-pressed="false"><ion-icon name="book-outline"></ion-icon> Diário</button>
+				<button class="nav-btn" type="button" data-target="alarmes" aria-pressed="false"><ion-icon name="alarm-outline"></ion-icon> Alarmes</button>
+				<button class="nav-btn" type="button" data-target="anotacoes" aria-pressed="false"><ion-icon name="create-outline"></ion-icon> Anotações</button>
+			</nav>
+
+			<main class="content" aria-live="polite">
+				<section class="panel afetivograma" data-month="2025-11" data-section="afetivograma">
+					<header>
+						<div>
+							<p class="eyebrow">Afetivograma</p>
+							<h1>Novembro · 2025</h1>
+						</div>
+
+					</header>
+					<div class="afetivo-legend" aria-label="Intensidades disponíveis">
+						<span class="legend-item leve">Leve</span>
+						<span class="legend-item neutro">Neutro</span>
+						<span class="legend-item elevada">Elevada</span>
+						<span class="legend-item critica">Crítica</span>
+					</div>
+					<div class="afetivo-grid" role="grid" aria-label="Calendário de emoções do mês">
+						<span class="weekday">Dom</span>
+						<span class="weekday">Seg</span>
+						<span class="weekday">Ter</span>
+						<span class="weekday">Qua</span>
+						<span class="weekday">Qui</span>
+						<span class="weekday">Sex</span>
+						<span class="weekday">Sáb</span>
+						<span class="day empty"></span>
+						<span class="day empty"></span>
+						<span class="day empty"></span>
+						<span class="day empty"></span>
+						<span class="day empty"></span>
+						<button class="day neutro" type="button" data-day="1">1</button>
+						<button class="day neutro" type="button" data-day="2">2</button>
+						<button class="day neutro" type="button" data-day="3">3</button>
+						<button class="day neutro" type="button" data-day="4">4</button>
+						<button class="day neutro" type="button" data-day="5">5</button>
+						<button class="day neutro" type="button" data-day="6">6</button>
+						<button class="day neutro" type="button" data-day="7">7</button>
+						<button class="day neutro" type="button" data-day="8">8</button>
+						<button class="day neutro" type="button" data-day="9">9</button>
+						<button class="day neutro" type="button" data-day="10">10</button>
+						<button class="day neutro" type="button" data-day="11">11</button>
+						<button class="day neutro" type="button" data-day="12">12</button>
+						<button class="day neutro" type="button" data-day="13">13</button>
+						<button class="day neutro" type="button" data-day="14">14</button>
+						<button class="day neutro" type="button" data-day="15">15</button>
+						<button class="day neutro" type="button" data-day="16">16</button>
+						<button class="day neutro" type="button" data-day="17">17</button>
+						<button class="day neutro" type="button" data-day="18">18</button>
+						<button class="day neutro" type="button" data-day="19">19</button>
+						<button class="day neutro" type="button" data-day="20">20</button>
+						<button class="day neutro" type="button" data-day="21">21</button>
+						<button class="day neutro" type="button" data-day="22">22</button>
+						<button class="day neutro" type="button" data-day="23">23</button>
+						<button class="day neutro" type="button" data-day="24">24</button>
+						<button class="day neutro" type="button" data-day="25">25</button>
+						<button class="day neutro" type="button" data-day="26">26</button>
+						<button class="day neutro" type="button" data-day="27">27</button>
+						<button class="day neutro" type="button" data-day="28">28</button>
+						<button class="day neutro" type="button" data-day="29">29</button>
+						<button class="day neutro" type="button" data-day="30">30</button>
+						<button class="day neutro" type="button" data-day="31">31</button>
+					</div>
+				</section>
+
+				<section class="panel diario" data-section="diario" hidden>
+					<header>
+						<div>
+							<p class="eyebrow">Diário</p>
+							<h2>Registros emocionais</h2>
+						</div>
+					</header>
+					<form class="diario-form" id="diarioForm">
+						<label>
+							<span>Escreva seu dia</span>
+							<textarea id="diarioTexto" rows="8" maxlength="1200" placeholder="Use este espaço como um diário pessoal. Registre pensamentos, emoções, acontecimentos..." required></textarea>
+						</label>
+						<div class="form-actions">
+							<div class="form-meta">
+								<span id="diarioStatus" class="muted-text" aria-live="polite"></span>
+								<span id="diarioCount" class="char-count">0/1200</span>
+							</div>
+							<button class="primary" type="submit">Salvar registro</button>
+						</div>
+					</form>
+					<div class="diario-entries" id="diarioLista" aria-live="polite">
+						<p class="muted-text" id="diarioVazio">Nenhum registro ainda. Comece descrendo seu dia acima.</p>
+					</div>
+				</section>
+
+				<section class="panel alarmes" data-section="alarmes" hidden>
+					<header>
+						<div>
+							<p class="eyebrow">Alarmes</p>
+							<h2>Rotinas e lembretes</h2>
+						</div>
+						<button class="primary ghost" type="button" id="criarAlarmeBtn">Criar alarme</button>
+					</header>
+					
+					<div class="alarmes-container">
+						<div class="alarmes-lista" id="alarmesLista">
+							<p class="muted-text" id="alarmesVazio">Nenhum alarme configurado. Crie lembretes para medicações e hábitos importantes.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="panel anotacoes-medicas" data-section="anotacoes" hidden>
+					<header>
+						<div>
+							<p class="eyebrow">Anotações Médicas</p>
+							<h2>Orientações do médico</h2>
+						</div>
+						<div class="header-info">
+							<span class="info-badge">
+								<span class="badge-icon"><ion-icon name="medkit-outline"></ion-icon></span>
+								Comunicação direta do seu médico
+							</span>
+						</div>
+					</header>
+					
+					<div class="anotacoes-container">
+						<div class="anotacoes-lista" id="anotacoesList">
+							<div class="empty-state">
+								<div class="empty-icon"><ion-icon name="clipboard-outline"></ion-icon></div>
+								<h3>Nenhuma anotação médica ainda</h3>
+								<p class="muted-text">Quando seu médico enviar orientações ou observações importantes, elas aparecerão aqui.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<div class="modal" id="emocaoModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<form id="emocaoForm">
+				<input type="hidden" id="diaSelecionado" name="dia">
+				<header>
+					<h3 id="tituloDia">Dia 00</h3>
+				</header>
+				<label>
+					<span>Emoção principal</span>
+					<select id="emocao" required>
+						<option value="">Selecione</option>
+						<option value="Tranquila">Tranquila</option>
+						<option value="Neutra">Neutra</option>
+						<option value="Animada">Animada</option>
+						<option value="Ansiosa">Ansiosa</option>
+						<option value="Irritada">Irritada</option>
+					</select>
+				</label>
+				<fieldset class="intensity-group">
+					<legend>Intensidade</legend>
+					<label><input type="radio" name="intensidade" value="leve" required> Leve</label>
+					<label><input type="radio" name="intensidade" value="neutro"> Neutro</label>
+					<label><input type="radio" name="intensidade" value="elevada"> Elevada</label>
+					<label><input type="radio" name="intensidade" value="critica"> Crítica</label>
+				</fieldset>
+				<label>
+					<span>Observações</span>
+					<textarea id="observacoes" rows="3" placeholder="Descreva gatilhos ou vitórias"></textarea>
+				</label>
+				<button class="primary" type="submit">Salvar</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal" id="alarmeModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<form id="alarmeForm">
+				<input type="hidden" id="alarmeId" name="id">
+				<header class="modal-header">
+					<div class="modal-icon"><ion-icon name="alarm-outline"></ion-icon></div>
+					<h3 id="tituloAlarme">Novo Alarme</h3>
+					<p class="modal-subtitle">Configure um lembrete personalizado</p>
+				</header>
+				
+				<div class="form-section">
+					<label class="form-field">
+						<span class="field-label">
+							<span class="label-icon"><ion-icon name="pencil-outline"></ion-icon></span>
+							Título do lembrete
+						</span>
+						<input type="text" id="alarmeNome" name="alarmeNome" maxlength="60" placeholder="Ex: Tomar medicação, Fazer exercícios..." required>
+						<span class="field-hint">Seja específico para facilitar a identificação</span>
+					</label>
+				</div>
+
+				<div class="form-section">
+					<label class="form-field">
+						<span class="field-label">
+							<span class="label-icon"><ion-icon name="time-outline"></ion-icon></span>
+							Horário
+						</span>
+						<input type="time" id="alarmeHorario" name="alarmeHorario" required>
+						<span class="field-hint">Escolha o melhor horário para o lembrete</span>
+					</label>
+				</div>
+
+				<div class="form-section">
+					<fieldset class="days-fieldset">
+						<legend class="field-label">
+							<span class="label-icon"><ion-icon name="calendar-outline"></ion-icon></span>
+							Repetir nos dias
+						</legend>
+						<div class="days-selector">
+							<div class="quick-options">
+								<button type="button" class="quick-btn" data-days="1,2,3,4,5">Dias úteis</button>
+								<button type="button" class="quick-btn" data-days="0,6">Fins de semana</button>
+								<button type="button" class="quick-btn" data-days="0,1,2,3,4,5,6">Todos os dias</button>
+							</div>
+							<div class="days-grid">
+								<label class="day-option"><input type="checkbox" name="dias" value="1"><span>Seg</span></label>
+								<label class="day-option"><input type="checkbox" name="dias" value="2"><span>Ter</span></label>
+								<label class="day-option"><input type="checkbox" name="dias" value="3"><span>Qua</span></label>
+								<label class="day-option"><input type="checkbox" name="dias" value="4"><span>Qui</span></label>
+								<label class="day-option"><input type="checkbox" name="dias" value="5"><span>Sex</span></label>
+								<label class="day-option"><input type="checkbox" name="dias" value="6"><span>Sáb</span></label>
+								<label class="day-option"><input type="checkbox" name="dias" value="0"><span>Dom</span></label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="form-section">
+					<label class="form-field">
+						<span class="field-label">
+							<span class="label-icon"><ion-icon name="medical-outline"></ion-icon></span>
+							Observações
+							<span class="optional">(opcional)</span>
+						</span>
+						<textarea id="alarmeObs" name="alarmeObs" rows="3" maxlength="200" placeholder="Dosagem: 1 comprimido&#10;Com o café da manhã&#10;Não esquecer de tomar água"></textarea>
+						<span class="field-hint">Adicione detalhes importantes sobre o lembrete</span>
+					</label>
+				</div>
+
+				<div class="form-actions enhanced">
+					<button class="secondary outlined" type="button" id="cancelarAlarme">
+						<span>Cancelar</span>
+					</button>
+					<button class="primary enhanced" type="submit">
+						<span class="btn-icon"><ion-icon name="save-outline"></ion-icon></span>
+						<span>Salvar alarme</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal" id="perfilModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content perfil-modal">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<div class="perfil-header">
+				<div class="perfil-avatar">
+					<div class="avatar-large" id="avatarLarge">
+						<span class="avatar-initials">CD</span>
+						<img class="avatar-photo" id="avatarPhoto" style="display: none;" alt="Foto de perfil">
+					</div>
+					<button class="avatar-upload-btn" type="button" id="uploadAvatarBtn" title="Alterar foto">
+						<span><ion-icon name="camera-outline"></ion-icon></span>
+					</button>
+					<input type="file" id="avatarInput" accept="image/*" style="display: none;">
+				</div>
+				<div class="perfil-info">
+					<h2 id="perfilNome">Clara Dick</h2>
+					<p class="perfil-tipo">Paciente</p>
+				</div>
+			</div>
+			
+			<!-- Visualização do perfil -->
+			<div class="perfil-body" id="perfilView">
+				<div class="info-section">
+					<h3>Informações Pessoais</h3>
+					<div class="info-grid">
+						<div class="info-item">
+							<span class="info-label">ID da Conta</span>
+							<span class="info-value" id="perfilId">USR-2025-001247</span>
+							<button class="copy-btn" type="button" title="Copiar ID" onclick="copiarId()"><ion-icon name="copy-outline"></ion-icon></button>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Email</span>
+							<span class="info-value" id="perfilEmail">clara.dick@email.com</span>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Data de Nascimento</span>
+							<span class="info-value" id="perfilNascimento">15/03/1992</span>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Telefone</span>
+							<span class="info-value" id="perfilTelefone">(11) 99999-9999</span>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Desde</span>
+							<span class="info-value" id="perfilCadastro">Janeiro 2025</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="info-section">
+					<h3>Médico Responsável</h3>
+					<div class="medico-card">
+						<div class="medico-avatar-small">CS</div>
+						<div class="medico-info-perfil">
+							<h4>Dr. Carlos Silva</h4>
+							<p>Psiquiatra - CRM 12345</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Formulário de edição -->
+			<form class="perfil-body" id="perfilEdit" style="display: none;">
+				<div class="info-section">
+					<h3>Editar Informações Pessoais</h3>
+					<div class="form-section">
+						<label class="form-field">
+							<span class="field-label">Nome Completo</span>
+							<input type="text" id="editNome" name="nome" required>
+						</label>
+					</div>
+					<div class="form-section">
+						<label class="form-field">
+							<span class="field-label">Email</span>
+							<input type="email" id="editEmail" name="email" required>
+						</label>
+					</div>
+					<div class="form-section">
+						<label class="form-field">
+							<span class="field-label">Data de Nascimento <span class="optional">(opcional)</span></span>
+							<input type="date" id="editNascimento" name="nascimento">
+						</label>
+					</div>
+					<div class="form-section">
+						<label class="form-field">
+							<span class="field-label">Telefone <span class="optional">(opcional)</span></span>
+							<input type="tel" id="editTelefone" name="telefone" placeholder="(00) 00000-0000">
+						</label>
+					</div>
+				</div>
+			</form>
+
+			<div class="perfil-actions">
+				<button class="primary" type="button" id="editarPerfilBtn">Editar Perfil</button>
+				<div id="editActions" style="display: none; gap: 8px;">
+					<button class="secondary outlined" type="button" id="cancelarEdicaoBtn">Cancelar</button>
+					<button class="primary" type="button" id="salvarPerfilBtn">Salvar Alterações</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="../js/paciente-firebase.js"></script>
+	<script src="../js/paciente.js" defer></script>
+</body>
+</html>

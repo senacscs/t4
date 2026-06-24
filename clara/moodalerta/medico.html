@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MoodAlert · Painel Médico</title>
+	<link rel="stylesheet" href="css/medico.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<!-- Firebase App (the core Firebase SDK) -->
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+	<!-- Firebase Realtime Database -->
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+	<!-- Firebase Config -->
+	<script src="../js/firebase-config.js"></script>
+	<!-- Auth System -->
+	<script src="../js/auth.js"></script>
+	<!-- Database Operations -->
+	<script src="../js/database.js"></script>
+	<!-- Medico Firebase Integration -->
+	<script src="../js/medico-firebase.js"></script>
+	<!-- Medico UI -->
+	<script src="../js/medico.js" defer></script>
+</head>
+<body>
+	<div class="orb orb-one"></div>
+	<div class="orb orb-two"></div>
+
+	<div class="medico-layout">
+		<header class="topbar">
+			<button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+				<ion-icon name="menu-outline"></ion-icon>
+			</button>
+			<div class="user-chip" id="userChipMedico" role="button" tabindex="0" aria-label="Perfil do médico">
+				<div class="avatar" aria-hidden="true">CS</div>
+				<div>
+					<strong>Dr. Carlos Silva</strong>
+				</div>
+			</div>
+			<button type="button" class="primary ghost" id="btnSair">Sair</button>
+		</header>
+
+		<div class="layout">
+			<nav class="sidebar" aria-label="Menu do médico">
+				<button class="nav-btn active" type="button" data-target="dashboard" aria-pressed="true">Dashboard</button>
+				<button class="nav-btn" type="button" data-target="pacientes" aria-pressed="false">Pacientes</button>
+				<button class="nav-btn" type="button" data-target="acompanhar" aria-pressed="false">Acompanhar</button>
+				<button class="nav-btn" type="button" data-target="anotacoes" aria-pressed="false">Anotações</button>
+			</nav>
+
+			<main class="content" aria-live="polite">
+				<!-- DASHBOARD -->
+				<section class="panel" data-section="dashboard">
+					<header>
+						<div>
+							<p class="eyebrow">Painel Médico</p>
+							<h1>Dashboard</h1>
+						</div>
+					</header>
+					
+					<div class="dashboard-stats">
+					<div class="stat-card">
+						<div class="stat-icon"><ion-icon name="people-outline"></ion-icon></div>
+						<div class="stat-info">
+							<span class="stat-number">24</span>
+								<span class="stat-label">Pacientes Ativos</span>
+							</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-icon"><ion-icon name="document-text-outline"></ion-icon></div>
+						<div class="stat-info">
+							<span class="stat-number">156</span>
+								<span class="stat-label">Anotações</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="dashboard-grid">
+						<div class="dashboard-card">
+							<h3>Pacientes Recentes</h3>
+							<div class="pacientes-recentes" id="pacientesRecentes">
+								<div class="paciente-item">
+									<div class="paciente-avatar">CD</div>
+									<div class="paciente-info">
+										<h4>Clara Dick</h4>
+										<p>Último registro: há 2 horas</p>
+									</div>
+									<div class="paciente-status">
+										<span class="status-badge positivo">Estável</span>
+									</div>
+								</div>
+								<div class="paciente-item">
+									<div class="paciente-avatar">MA</div>
+									<div class="paciente-info">
+										<h4>Maria Alves</h4>
+										<p>Último registro: há 1 dia</p>
+									</div>
+									<div class="paciente-status">
+										<span class="status-badge atencao">Atenção</span>
+									</div>
+								</div>
+								<div class="paciente-item">
+									<div class="paciente-avatar">JS</div>
+									<div class="paciente-info">
+										<h4>João Santos</h4>
+										<p>Último registro: há 3 horas</p>
+									</div>
+									<div class="paciente-status">
+										<span class="status-badge positivo">Melhorando</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- PACIENTES -->
+				<section class="panel" data-section="pacientes">
+					<header>
+						<div>
+							<p class="eyebrow">Gestão</p>
+							<h1>Meus Pacientes</h1>
+						</div>
+						<button class="primary" onclick="abrirModalAdicionarPaciente()">
+							➕ Adicionar Paciente
+						</button>
+					</header>
+
+					<div class="pacientes-grid" id="pacientesGrid">
+						<div class="paciente-card" data-paciente="USR-2025-001247">
+							<div class="paciente-header">
+								<div class="paciente-avatar-grande">CD</div>
+								<div class="paciente-detalhes">
+									<h3>Clara Dick</h3>
+									<p>ID: USR-2025-001247</p>
+									<span class="paciente-desde">Paciente desde Jan 2025</span>
+								</div>
+							<div class="paciente-acoes">
+								<button class="btn-visualizar" onclick="visualizarPaciente('USR-2025-001247')">
+									<span><ion-icon name="eye-outline"></ion-icon></span>
+									Visualizar
+								</button>
+								</div>
+							</div>
+							<div class="paciente-resumo">
+								<div class="resumo-item">
+									<span class="resumo-label">Último registro:</span>
+									<span class="resumo-valor">há 2 horas</span>
+								</div>
+								<div class="resumo-item">
+									<span class="resumo-label">Humor atual:</span>
+									<span class="resumo-valor status-positivo">Neutro</span>
+								</div>
+								<div class="resumo-item">
+									<span class="resumo-label">Adesão:</span>
+									<span class="resumo-valor">92%</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="paciente-card" data-paciente="USR-2025-001248">
+							<div class="paciente-header">
+								<div class="paciente-avatar-grande">MA</div>
+								<div class="paciente-detalhes">
+									<h3>Maria Alves</h3>
+									<p>ID: USR-2025-001248</p>
+									<span class="paciente-desde">Paciente desde Fev 2025</span>
+								</div>
+							<div class="paciente-acoes">
+								<button class="btn-visualizar" onclick="visualizarPaciente('USR-2025-001248')">
+									<span><ion-icon name="eye-outline"></ion-icon></span>
+									Visualizar
+								</button>
+								</div>
+							</div>
+							<div class="paciente-resumo">
+								<div class="resumo-item">
+									<span class="resumo-label">Último registro:</span>
+									<span class="resumo-valor">há 1 dia</span>
+								</div>
+								<div class="resumo-item">
+									<span class="resumo-label">Humor atual:</span>
+									<span class="resumo-valor status-atencao">Triste</span>
+								</div>
+								<div class="resumo-item">
+									<span class="resumo-label">Adesão:</span>
+									<span class="resumo-valor">76%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ACOMPANHAR PACIENTE -->
+				<section class="panel" data-section="acompanhar">
+					<header>
+						<div>
+							<p class="eyebrow">Detalhes</p>
+							<h1>Acompanhar Paciente</h1>
+						</div>
+					</header>
+
+					<div class="busca-paciente">
+					<div class="busca-form">
+						<label for="idPaciente">ID do Paciente</label>
+						<div class="input-group">
+							<input type="text" id="idPaciente" placeholder="Ex: USR-2025-001247">
+							<button class="btn-buscar" onclick="buscarPaciente()">
+								<span><ion-icon name="search-outline"></ion-icon></span>
+								Buscar
+							</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="paciente-detalhado" id="pacienteDetalhado" style="display: none;">
+						<div class="detalhado-header">
+							<div class="paciente-info-completa">
+								<div class="paciente-avatar-grande" id="avatarDetalhado">CD</div>
+								<div class="info-principal">
+									<h3 id="nomeDetalhado">Clara Dick</h3>
+									<p id="idDetalhado">ID: USR-2025-001247</p>
+									<span id="desdeDetalhado">Paciente desde Janeiro 2025</span>
+								</div>
+							</div>
+					</div>
+
+				<div class="detalhado-tabs">
+					<button class="tab-btn active" data-tab="afetivograma"><ion-icon name="stats-chart-outline"></ion-icon> Afetivograma</button>
+					<button class="tab-btn" data-tab="diario"><ion-icon name="book-outline"></ion-icon> Diário</button>
+					<button class="tab-btn" data-tab="anotacoes-paciente"><ion-icon name="create-outline"></ion-icon> Anotações</button>
+				</div>						<div class="tab-content">
+						<!-- AFETIVOGRAMA -->
+							<div class="tab-panel active" data-panel="afetivograma">
+								<div class="afetivograma-container">
+									<div class="afetivograma-header">
+										<h4>Afetivograma - Novembro 2025</h4>
+										<div class="afetivo-legend">
+											<span class="legend-item leve">Leve</span>
+											<span class="legend-item neutro">Neutro</span>
+											<span class="legend-item elevada">Elevada</span>
+											<span class="legend-item critica">Crítica</span>
+										</div>
+									</div>
+									<div class="afetivo-grid" id="afetivoGridMedico">
+										<!-- Grid será preenchido via JavaScript -->
+									</div>
+								</div>
+							</div>
+
+							<!-- DIÁRIO -->
+							<div class="tab-panel" data-panel="diario">
+								<div class="diario-container">
+									<h4>Registros do Diário</h4>
+									<div class="diario-lista" id="diarioListaMedico">
+										<div class="diario-entrada">
+											<div class="entrada-header">
+												<div class="entrada-data">21/11/2025 - 14:30</div>
+												<div class="entrada-humor">
+													<span class="humor-badge neutro">Neutro</span>
+												</div>
+											</div>
+											<div class="entrada-conteudo">
+												<p>Hoje foi um dia tranquilo. Consegui fazer minhas atividades normais e me senti bem equilibrada. A medicação está funcionando.</p>
+											</div>
+										</div>
+										<div class="diario-entrada">
+											<div class="entrada-header">
+												<div class="entrada-data">20/11/2025 - 16:45</div>
+												<div class="entrada-humor">
+													<span class="humor-badge alegre">Alegre</span>
+												</div>
+											</div>
+											<div class="entrada-conteudo">
+												<p>Dia muito bom! Tive energia para fazer exercícios e sair com amigos. Me sinto otimista.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- ANOTAÇÕES -->
+							<div class="tab-panel" data-panel="anotacoes-paciente">
+								<div class="anotacoes-container">
+									<div class="anotacoes-header">
+									<h4>Anotações</h4>
+									<button class="btn-nova-anotacao" onclick="abrirModalAnotacao()">
+										<span><ion-icon name="create-outline"></ion-icon></span>
+										Nova Anotação
+									</button>
+									</div>
+									
+									<div class="anotacoes-tipos">
+										<div class="tipo-anotacao">
+											<h5>Anotações para o Paciente</h5>
+											<p>Visíveis para o paciente em sua interface</p>
+											<div class="anotacoes-lista" id="anotacoesPaciente">
+												<div class="anotacao-item paciente">
+													<div class="anotacao-header">
+														<span class="anotacao-data">21/11/2025</span>
+														<span class="anotacao-tipo">Orientação</span>
+													</div>
+													<div class="anotacao-conteudo">
+														Paciente demonstra boa evolução no controle emocional. Continuar com o registro diário e manter medicação.
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tipo-anotacao">
+											<h5>Anotações Privadas</h5>
+											<p>Visíveis apenas para você</p>
+											<div class="anotacoes-lista" id="anotacoesPrivadas">
+												<div class="anotacao-item privada">
+													<div class="anotacao-header">
+														<span class="anotacao-data">21/11/2025</span>
+														<span class="anotacao-tipo">Observação</span>
+													</div>
+													<div class="anotacao-conteudo">
+														Paciente relata melhora na qualidade do sono. Considerar ajuste na dosagem na próxima consulta.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ANOTAÇÕES GERAIS -->
+				<section class="panel" data-section="anotacoes">
+					<header>
+						<div>
+							<p class="eyebrow">Registros</p>
+							<h1>Anotações Gerais</h1>
+						</div>
+					</header>
+
+					<div class="anotacoes-gerais">
+						<div class="filtros-anotacoes">
+							<select id="filtroTipo">
+								<option value="todas">Todas as anotações</option>
+								<option value="paciente">Para paciente</option>
+								<option value="privada">Privadas</option>
+							</select>
+							<select id="filtroPaciente">
+								<option value="todos">Todos os pacientes</option>
+								<option value="USR-2025-001247">Clara Dick</option>
+								<option value="USR-2025-001248">Maria Alves</option>
+							</select>
+						</div>
+
+						<div class="anotacoes-lista-geral" id="anotacoesGeralLista">
+							<div class="anotacao-geral">
+								<div class="anotacao-cabecalho">
+									<div class="paciente-ref">
+										<div class="paciente-avatar-pequeno">CD</div>
+										<span>Clara Dick</span>
+									</div>
+									<div class="anotacao-meta">
+										<span class="anotacao-data">21/11/2025</span>
+										<span class="anotacao-tipo-badge paciente">Para Paciente</span>
+									</div>
+								</div>
+								<div class="anotacao-conteudo">
+									Paciente demonstra boa evolução no controle emocional. Continuar com o registro diário e manter medicação conforme prescrito.
+								</div>
+							</div>
+
+							<div class="anotacao-geral">
+								<div class="anotacao-cabecalho">
+									<div class="paciente-ref">
+										<div class="paciente-avatar-pequeno">MA</div>
+										<span>Maria Alves</span>
+									</div>
+									<div class="anotacao-meta">
+										<span class="anotacao-data">20/11/2025</span>
+										<span class="anotacao-tipo-badge privada">Privada</span>
+									</div>
+								</div>
+								<div class="anotacao-conteudo">
+									Necessário acompanhar mais de perto. Paciente apresenta resistência ao tratamento. Considerar terapia complementar.
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<!-- MODAL DE ANOTAÇÃO -->
+	<div class="modal" id="anotacaoModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content anotacao-modal">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<div class="modal-header">
+				<h3>Nova Anotação</h3>
+				<p>Adicione uma anotação para o paciente</p>
+			</div>
+			
+			<form id="anotacaoForm" class="anotacao-form">
+				<div class="form-field">
+					<label for="tipoAnotacao">Tipo de Anotação</label>
+					<select id="tipoAnotacao" required>
+						<option value="">Selecione o tipo</option>
+						<option value="orientacao">Orientação</option>
+						<option value="observacao">Observação</option>
+						<option value="recomendacao">Recomendação</option>
+						<option value="alerta">Alerta</option>
+					</select>
+				</div>
+
+				<div class="form-field">
+					<label for="visibilidadeAnotacao">Visibilidade</label>
+					<select id="visibilidadeAnotacao" required>
+						<option value="">Selecione a visibilidade</option>
+						<option value="paciente">Visível para o paciente</option>
+						<option value="privada">Apenas para mim (privada)</option>
+					</select>
+				</div>
+
+				<div class="form-field">
+					<label for="conteudoAnotacao">Conteúdo da Anotação</label>
+					<textarea id="conteudoAnotacao" rows="5" placeholder="Digite sua anotação aqui..." required></textarea>
+				</div>
+
+				<div class="form-actions">
+					<button type="button" class="secondary" onclick="fecharModalAnotacao()">Cancelar</button>
+					<button type="submit" class="primary">Salvar Anotação</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- MODAL DE PERFIL MÉDICO -->
+	<div class="modal" id="perfilMedicoModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content perfil-modal">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<div class="perfil-header">
+				<div class="perfil-avatar">
+					<div class="avatar-large">
+						<span class="avatar-initials">CS</span>
+						<img class="avatar-photo" id="avatarPhotoMedico" style="display: none;" alt="Foto de perfil">
+					</div>
+					<button class="avatar-upload-btn" type="button" title="Alterar foto" onclick="document.getElementById('avatarInputMedico').click()">
+						<span><ion-icon name="camera-outline"></ion-icon></span>
+					</button>
+					<input type="file" id="avatarInputMedico" accept="image/*" style="display: none;">
+				</div>
+				<div class="perfil-info">
+					<h2>Dr. Carlos Silva</h2>
+					<p class="perfil-tipo">Médico</p>
+				</div>
+			</div>
+			
+			<div class="perfil-body">
+				<div class="info-section" id="perfilVisualizacao">
+					<h3>Informações Pessoais</h3>
+					<div class="info-list">
+						<div class="info-item">
+							<span class="info-label">Email</span>
+							<span class="info-value" id="perfilMedicoEmail">medico@email.com</span>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Data de Nascimento</span>
+							<span class="info-value" id="perfilMedicoNascimento">Não informado</span>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Telefone</span>
+							<span class="info-value" id="perfilMedicoTelefone">Não informado</span>
+						</div>
+						<div class="info-item">
+							<span class="info-label">Desde</span>
+							<span class="info-value" id="perfilMedicoCadastro">Novembro de 2025</span>
+						</div>
+					</div>
+				</div>
+
+				<form id="perfilEdicaoForm" class="info-section" style="display: none;">
+					<h3>Editar Informações</h3>
+					<div class="form-field">
+						<label for="editEmail">Email</label>
+						<input type="email" id="editEmail" required>
+					</div>
+					<div class="form-field">
+						<label for="editNascimento">Data de Nascimento</label>
+						<input type="date" id="editNascimento">
+					</div>
+					<div class="form-field">
+						<label for="editTelefone">Telefone</label>
+						<input type="tel" id="editTelefone" placeholder="(00) 00000-0000">
+					</div>
+				</form>
+			</div>
+
+			<div class="perfil-actions">
+				<button class="primary" type="button" id="btnEditarPerfil" onclick="ativarEdicaoPerfil()">Editar Perfil</button>
+				<div id="acoesEdicao" style="display: none; gap: 1rem;">
+					<button class="secondary" type="button" onclick="cancelarEdicaoPerfil()">Cancelar</button>
+					<button class="primary" type="button" onclick="salvarPerfilMedico()">Salvar Alterações</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL DE ANOTAÇÃO -->
+	<div class="modal" id="anotacaoModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content anotacao-modal">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<div class="modal-header">
+				<h3>Nova Anotação</h3>
+				<p>Adicione uma anotação para o paciente</p>
+			</div>
+			
+			<form id="anotacaoForm" class="anotacao-form">
+				<div class="form-field">
+					<label for="tipoAnotacao">Tipo de Anotação</label>
+					<select id="tipoAnotacao" required>
+						<option value="">Selecione o tipo</option>
+						<option value="orientacao">Orientação</option>
+						<option value="observacao">Observação</option>
+						<option value="recomendacao">Recomendação</option>
+						<option value="alerta">Alerta</option>
+					</select>
+				</div>
+
+				<div class="form-field">
+					<label for="visibilidadeAnotacao">Visibilidade</label>
+					<select id="visibilidadeAnotacao" required>
+						<option value="">Selecione a visibilidade</option>
+						<option value="paciente">Visível para o paciente</option>
+						<option value="privada">Apenas para mim (privada)</option>
+					</select>
+				</div>
+
+				<div class="form-field">
+					<label for="conteudoAnotacao">Conteúdo da Anotação</label>
+					<textarea id="conteudoAnotacao" rows="5" placeholder="Digite sua anotação aqui..." required></textarea>
+				</div>
+
+				<div class="form-actions">
+					<button type="button" class="secondary" onclick="fecharModalAnotacao()">Cancelar</button>
+					<button type="submit" class="primary">Salvar Anotação</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- MODAL DE ADICIONAR PACIENTE -->
+	<div class="modal" id="adicionarPacienteModal" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="modal-content">
+			<button class="close-btn" type="button" aria-label="Fechar">&times;</button>
+			<div class="modal-header">
+				<h3>Adicionar Novo Paciente</h3>
+				<p>Vincule um paciente à sua conta médica</p>
+			</div>
+			
+			<form id="adicionarPacienteForm">
+				<div class="form-field">
+					<label for="idPacienteAdicionar">ID do Paciente</label>
+					<input type="text" id="idPacienteAdicionar" placeholder="Ex: USR-2025-001234" required>
+					<small>Digite o ID único do paciente para vinculá-lo</small>
+				</div>
+
+				<div class="form-actions">
+					<button type="button" class="secondary" onclick="fecharModalAdicionarPaciente()">Cancelar</button>
+					<button type="submit" class="primary">Adicionar Paciente</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
