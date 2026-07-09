@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo das Luzes</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #10172a, #1e3a8a);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 38px;
+    }
+
+    p {
+      color: #dbeafe;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    button, select {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button {
+      background: #facc15;
+      color: #1e293b;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #fde047;
+    }
+
+    select {
+      background: white;
+      color: #1e293b;
+    }
+
+    .info {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .board {
+      display: grid;
+      gap: 12px;
+      justify-content: center;
+      margin: 25px auto;
+    }
+
+    .cell {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: #334155;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+      transition: 0.2s;
+    }
+
+    .cell.on {
+      background: #facc15;
+      box-shadow: 0 0 25px #facc15;
+    }
+
+    .message {
+      font-size: 20px;
+      font-weight: bold;
+      color: #86efac;
+      min-height: 28px;
+    }
+
+    .rules {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 15px;
+      margin-top: 20px;
+      text-align: left;
+      color: #e0f2fe;
+    }
+
+    .rules h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      .cell {
+        width: 55px;
+        height: 55px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>💡 Jogo das Luzes</h1>
+    <p>Clique nas luzes para apagar todas.</p>
+
+    <div class="controls">
+      <select id="level">
+        <option value="2x3">Fácil - 2x3</option>
+        <option value="3x3" selected>Médio - 3x3</option>
+        <option value="5x5">Difícil - 5x5</option>
+      </select>
+
+      <button onclick="newGame()">Novo jogo</button>
+      <button onclick="restartGame()">Reiniciar</button>
+      <button onclick="showHint()">Dica</button>
+    </div>
+
+    <div class="info">
+      Jogadas: <span id="moves">0</span>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div id="message" class="message"></div>
+
+    <div class="rules">
+      <h3>Regras</h3>
+      <p>
+        Ao clicar em uma luz, ela muda de estado junto com as luzes vizinhas
+        na vertical e na horizontal.
+      </p>
+      <p>
+        O objetivo é deixar todas as luzes apagadas.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const board = document.getElementById("board");
+    const level = document.getElementById("level");
+    const movesText = document.getElementById("moves");
+    const message = document.getElementById("message");
+
+    let rows = 3;
+    let cols = 3;
+    let game = [];
+    let initialGame = [];
+    let moves = 0;
+
+    function createEmptyBoard() {
+      game = [];
+
+      for (let i = 0; i < rows; i++) {
+        game[i] = [];
+
+        for (let j = 0; j < cols; j++) {
+          game[i][j] = 0;
+        }
+      }
+    }
+
+    function copyBoard(boardToCopy) {
+      return boardToCopy.map(row => [...row]);
+    }
+
+    function toggleLight(row, col) {
+      const positions = [
+        [row, col],
+        [row - 1, col],
+        [row + 1, col],
+        [row, col - 1],
+        [row, col + 1]
+      ];
+
+      positions.forEach(([r, c]) => {
+        if (r >= 0 && r < rows && c >= 0 && c < cols) {
+          game[r][c] = game[r][c] === 1 ? 0 : 1;
+        }
+      });
+    }
+
+    function handleClick(row, col) {
+      toggleLight(row, col);
+      moves++;
+      updateBoard();
+      checkWin();
+    }
+
+    function updateBoard() {
+      board.innerHTML = "";
+      board.style.gridTemplateColumns = `repeat(${cols}, 70px)`;
+
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+          const cell = document.createElement("button");
+          cell.classList.add("cell");
+
+          if (game[i][j] === 1) {
+            cell.classList.add("on");
+          }
+
+          cell.onclick = () => handleClick(i, j);
+          board.appendChild(cell);
+        }
+      }
+
+      movesText.textContent = moves;
+    }
+
+    function newGame() {
+      const selectedLevel = level.value;
+
+      if (selectedLevel === "2x3") {
+        rows = 2;
+        cols = 3;
+      } else if (selectedLevel === "3x3") {
+        rows = 3;
+        cols = 3;
+      } else {
+        rows = 5;
+        cols = 5;
+      }
+
+      createEmptyBoard();
+
+      for (let i = 0; i < rows * cols; i++) {
+        const randomRow = Math.floor(Math.random() * rows);
+        const randomCol = Math.floor(Math.random() * cols);
+        toggleLight(randomRow, randomCol);
+      }
+
+      initialGame = copyBoard(game);
+      moves = 0;
+      message.textContent = "";
+      updateBoard();
+    }
+
+    function restartGame() {
+      game = copyBoard(initialGame);
+      moves = 0;
+      message.textContent = "";
+      updateBoard();
+    }
+
+    function checkWin() {
+      const won = game.every(row => row.every(cell => cell === 0));
+
+      if (won) {
+        message.textContent = `Parabéns! Você venceu em ${moves} jogadas!`;
+      }
+    }
+
+    function showHint() {
+      message.textContent =
+        "Dica: apertar o mesmo botão duas vezes anula a jogada. A ordem dos cliques não altera o resultado.";
+    }
+
+    level.addEventListener("change", newGame);
+
+    newGame();
+  </script>
+</body>
+</html>
