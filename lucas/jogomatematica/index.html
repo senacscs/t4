@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Apresenta o jogo luzes, que é resolvido usando álgebra linear">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Luzes</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<h1>Jogo das Luzes</h1>
+
+<p>Este jogo é conhecido como <b>lights out</b> e tem alguns <a href="http://mathworld.wolfram.com/LightsOutPuzzle.html">sites dedicados a ele</a>.</p>
+
+<h2>Regras</h2>
+<ul>
+<li>Ao clicar num botão, ele troca o estado (aceso/apagado) do botão e dos vizinhos na vertical e horizontal.
+<li><em>Objetivo</em>: apagar todas as luzes.
+</ul>
+
+<h2>Jogue</h2>
+
+<center>
+  <form id="lightsform" name="lightsform" >
+    <label for="tipo">Nível:</label>
+    <select id="tipo" name="tipo" onchange="preparaJogo()">
+      <option value="23" selected>Fácil (2&times;3)</option>
+      <option value="33">Médio (3&times;3)</option>
+      <option value="55">Difícil (5&times;5)</option>
+    </select>
+
+    <!-- populando o menu de acordo com o tipo-->
+    <script>
+     
+    </script>
+      
+    <label for="opcoes">Opções:</label>
+    <select id="opcoes" name="opcoes" onchange="novoJogo()"></select>
+
+    <button type="button" onClick="novoJogo()">Novo jogo</button> 
+
+    <button type="button" onClick="reiniciarJogo()">Reiniciar</button> 
+    
+    <button type="button" onClick="alert(solucaoString(vec))">Solução</button>
+
+    <button type="button" onClick="alert(dica())">Dica</button> 
+   
+    <div id="tabela23">
+      <table border="1" cellpadding="5">
+	<tr>
+	  <td><input type="checkbox" name="a23" id="a23"
+		     onClick="acaoBotao('a')"></td>
+	  <td><input type="checkbox" name="b23" id="b23"
+		     onClick="acaoBotao('b')"></td>
+	  <td><input type="checkbox" name="c23" id="c23"
+		     onClick="acaoBotao('c')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="d23" id="d23"
+		     onClick="acaoBotao('d')"></td>
+	  <td><input type="checkbox" name="e23" id="e23"
+		     onClick="acaoBotao('e')"></td>
+	  <td><input type="checkbox" name="f23" id="f23"
+		     onClick="acaoBotao('f')"></td>
+	</tr>
+      </table>
+    </div>
+
+    <div id="tabela33">
+      <table border="1" cellpadding="5">
+	<tr>
+	  <td><input type="checkbox" name="a33" id="a33"
+		     onClick="acaoBotao('a')"></td>
+	  <td><input type="checkbox" name="b33" id="b33"
+		     onClick="acaoBotao('b')"></td>
+	  <td><input type="checkbox" name="c33" id="c33"
+		     onClick="acaoBotao('c')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="d33" id="d33"
+		     onClick="acaoBotao('d')"></td>
+	  <td><input type="checkbox" name="e33" id="e33"
+		     onClick="acaoBotao('e')"></td>
+	  <td><input type="checkbox" name="f33" id="f33"
+		     onClick="acaoBotao('f')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="g33" id="g33"
+		     onClick="acaoBotao('g')"></td>
+	  <td><input type="checkbox" name="h33" id="h33"
+		     onClick="acaoBotao('h')"></td>
+	  <td><input type="checkbox" name="i33" id="i33"
+		     onClick="acaoBotao('i')"></td>
+	</tr>
+      </table>
+    </div>
+
+    <div id="tabela55">
+      <table border="1" cellpadding="5">
+	<tr>
+	  <td><input type="checkbox" name="a55" id="a55"
+		     onClick="acaoBotao('a')"></td>
+	  <td><input type="checkbox" name="b55" id="b55"
+		     onClick="acaoBotao('b')"></td>
+	  <td><input type="checkbox" name="c55" id="c55"
+		     onClick="acaoBotao('c')"></td>
+	  <td><input type="checkbox" name="d55" id="d55"
+		     onClick="acaoBotao('d')"></td>
+	  <td><input type="checkbox" name="e55" id="e55"
+		     onClick="acaoBotao('e')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="f55" id="f55"
+		     onClick="acaoBotao('f')"></td>
+	  <td><input type="checkbox" name="g55" id="g55"
+		     onClick="acaoBotao('g')"></td>
+	  <td><input type="checkbox" name="h55" id="h55"
+		     onClick="acaoBotao('h')"></td>
+	  <td><input type="checkbox" name="i55" id="i55"
+		     onClick="acaoBotao('i')"></td>
+	  <td><input type="checkbox" name="j55" id="j55"
+		     onClick="acaoBotao('j')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="k55" id="k55"
+		     onClick="acaoBotao('k')"></td>
+	  <td><input type="checkbox" name="l55" id="l55"
+		     onClick="acaoBotao('l')"></td>
+	  <td><input type="checkbox" name="m55" id="m55"
+		     onClick="acaoBotao('m')"></td>
+	  <td><input type="checkbox" name="n55" id="n55"
+		     onClick="acaoBotao('n')"></td>
+	  <td><input type="checkbox" name="o55" id="o55"
+		     onClick="acaoBotao('o')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="p55" id="p55"
+		     onClick="acaoBotao('p')"></td>
+	  <td><input type="checkbox" name="q55" id="q55"
+		     onClick="acaoBotao('q')"></td>
+	  <td><input type="checkbox" name="r55" id="r55"
+		     onClick="acaoBotao('r')"></td>
+	  <td><input type="checkbox" name="s55" id="s55"
+		     onClick="acaoBotao('s')"></td>
+	  <td><input type="checkbox" name="t55" id="t55"
+		     onClick="acaoBotao('t')"></td>
+	</tr>
+	<tr>
+	  <td><input type="checkbox" name="u55" id="u55"
+		     onClick="acaoBotao('u')"></td>
+	  <td><input type="checkbox" name="v55" id="v55"
+		     onClick="acaoBotao('v')"></td>
+	  <td><input type="checkbox" name="w55" id="w55"
+		     onClick="acaoBotao('w')"></td>
+	  <td><input type="checkbox" name="x55" id="x55"
+		     onClick="acaoBotao('x')"></td>
+	  <td><input type="checkbox" name="y55" id="y55"
+		     onClick="acaoBotao('y')"></td>
+	</tr>
+      </table>
+    </div>
+    
+    <script>
+      // chama uma vez
+      preparaJogo();
+    </script>
+   
+</form>
+    
+</center>
+
+      
+
+
+
+</body>
+
+</html>
