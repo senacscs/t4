@@ -58,7 +58,7 @@ let animacaoRega = null;
 let cursorY = 130;
 let velocidadeCursor = 0;
 let zonaY = 60;
-let velocidadeZona = 0.9;
+let velocidadeZona = 0.6;
 let progressoRega = 35;
 let segurando = false;
 
@@ -727,7 +727,7 @@ function iniciarMiniGameRega() {
   cursorY = 130;
   velocidadeCursor = 0;
   zonaY = 60;
-  velocidadeZona = 0.9;
+  velocidadeZona = 0.6;
   progressoRega = 35;
   segurando = false;
 
@@ -748,12 +748,12 @@ function loopRega() {
   if (!cursor || !zona) return;
 
   if (segurando) {
-    velocidadeCursor -= 0.16;
+    velocidadeCursor -= 0.11;
   } else {
-    velocidadeCursor += 0.14;
+    velocidadeCursor += 0.10;
   }
 
-  velocidadeCursor *= 0.93;
+  velocidadeCursor *= 0.90;
   cursorY += velocidadeCursor;
 
   if (cursorY < 0) {
@@ -770,12 +770,12 @@ function loopRega() {
 
   if (zonaY <= 0) {
     zonaY = 0;
-    velocidadeZona = 0.9;
+    velocidadeZona = 0.4;
   }
 
   if (zonaY >= 125) {
     zonaY = 125;
-    velocidadeZona = -0.9;
+    velocidadeZona = -0.4;
   }
 
   cursor.style.top = cursorY + "px";
@@ -979,7 +979,7 @@ function iniciarMiniGamePraga() {
 
   miniPragaAtivo = true;
   pragasRestantes = 7;
-  tempoPraga = 30;
+  tempoPraga = 60;
 
   miniGame.classList.remove("hidden");
   area.innerHTML = "";
