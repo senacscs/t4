@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos para Todos – Turma 4 do Senac RS</title>
+    <meta name="description"
+        content="GameON: conexões que transformam por meio de jogos educativos e inclusivos da Turma 4 do Senac RS." />
+    <style>
+        /* ── Reset & Base ──────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --clr-bg: #f9fafb;
+            --clr-surface: #ffffff;
+            --clr-border: #e5e7eb;
+            --clr-primary: #2563eb;
+            --clr-primary-h: #1d4ed8;
+            --clr-text: #111827;
+            --clr-muted: #6b7280;
+            --clr-accent: #dbeafe;
+            --radius: 1rem;
+            --shadow: 0 4px 24px rgba(0, 0, 0, .08);
+            --shadow-hover: 0 8px 36px rgba(37, 99, 235, .18);
+            --btn-shadow: 0 1px 0 rgba(17, 24, 39, .04), 0 4px 12px rgba(17, 24, 39, .08);
+            --btn-shadow-hover: 0 2px 0 rgba(17, 24, 39, .05), 0 8px 18px rgba(37, 99, 235, .16);
+            --transition: .22s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--clr-bg);
+            color: var(--clr-text);
+            min-height: 100vh;
+            font-size: 16.5px;
+            line-height: 1.5;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* ── Skip link (acessibilidade) ────────────────── */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            background: var(--clr-primary);
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: top var(--transition);
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        /* ── Header ────────────────────────────────────── */
+        header {
+            background:
+                radial-gradient(circle at 82% 12%, rgba(37, 99, 235, .18), transparent 33%),
+                radial-gradient(circle at 100% 0%, rgba(17, 24, 39, .08), transparent 36%),
+                linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-inner {
+            padding: 3.8rem 3rem 2.8rem;
+            position: relative;
+            width: min(96vw, 1680px);
+            max-width: none;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(320px, 1fr) auto;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .header-deco {
+            position: relative;
+            justify-self: end;
+            font-size: clamp(11rem, 24vw, 22rem);
+            line-height: 1;
+            transform: rotate(8deg) translateY(-2%);
+            opacity: .88;
+            filter: grayscale(0.12) drop-shadow(0 16px 36px rgba(28, 35, 68, .2));
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        .header-wave {
+            display: block;
+            width: 100%;
+            height: 36px;
+        }
+
+        .header-content {
+            max-width: 680px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-kicker {
+            display: inline-block;
+            margin-bottom: .95rem;
+            padding: .35rem .75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(37, 99, 235, .2);
+            background: rgba(255, 255, 255, .75);
+            color: #1d4ed8;
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-size: clamp(2.7rem, 6.5vw, 4.9rem);
+            font-weight: 900;
+            line-height: .9;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: -.03em;
+            color: var(--clr-text);
+            text-shadow: 0 2px 0 rgba(255, 255, 255, .7);
+        }
+
+        .h1-em {
+            color: var(--clr-primary);
+        }
+
+        .header-subtitle {
+            display: block;
+            margin-top: .45rem;
+            font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+            line-height: 1.12;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            text-transform: none;
+            color: #0f172a;
+        }
+
+        /* ── Acessibilidade no header ─────────────────── */
+        .a11y-header {
+            display: flex;
+            gap: .5rem;
+            margin-top: 1.35rem;
+        }
+
+        .a11y-btn {
+            padding: .46rem 1.05rem;
+            border-radius: .55rem;
+            border: 1.5px solid #d1d5db;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            font-size: .88rem;
+            font-weight: 700;
+            color: var(--clr-muted);
+            cursor: pointer;
+            box-shadow: var(--btn-shadow);
+            transition: all var(--transition);
+        }
+
+        .a11y-btn:hover,
+        .a11y-btn:focus-visible {
+            border-color: var(--clr-primary);
+            color: var(--clr-primary);
+            box-shadow: var(--btn-shadow-hover);
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        .a11y-btn.active {
+            background: var(--clr-primary);
+            border-color: var(--clr-primary);
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, .26);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ── Main grid ─────────────────────────────────── */
+        main {
+            width: min(96vw, 1680px);
+            max-width: none;
+            margin: 0 auto;
+            padding: 2.8rem 3rem 4rem;
+        }
+
+        .catalog-layout {
+            display: block;
+        }
+
+        .filters-panel {
+            margin-bottom: 2rem;
+        }
+
+        .content-panel {
+            min-width: 0;
+        }
+
+        .games-intro {
+            font-size: 2rem;
+            color: var(--clr-muted);
+            margin: 0 0 1.05rem;
+            font-weight: 700;
+            letter-spacing: .01em;
+            opacity: .7;
+        }
+
+        .section-label {
+            font-size: .88rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--clr-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+
+        /* ── Card ──────────────────────────────────────── */
+        .card {
+            background: var(--clr-surface);
+            border: 1.5px solid var(--clr-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+        }
+
+        .card:hover,
+        .card:focus-within {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--clr-primary);
+        }
+
+        .card-banner {
+            height: 7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.2rem;
+            border-bottom: 1.5px solid var(--clr-border);
+        }
+
+        /* Cores únicas por card */
+        .card:nth-child(1) .card-banner {
+            background: #eff6ff;
+        }
+
+        .card:nth-child(2) .card-banner {
+            background: #f0fdf4;
+        }
+
+        .card:nth-child(3) .card-banner {
+            background: #fff7ed;
+        }
+
+        .card:nth-child(4) .card-banner {
+            background: #fdf4ff;
+        }
+
+        .card:nth-child(5) .card-banner {
+            background: #fefce8;
+        }
+
+        .card:nth-child(6) .card-banner {
+            background: #f0fdfa;
+        }
+
+        .card:nth-child(7) .card-banner {
+            background: #fff1f2;
+        }
+
+        .card:nth-child(8) .card-banner {
+            background: #f8fafc;
+        }
+
+        .card-body {
+            padding: 1.1rem 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: .45rem;
+        }
+
+        .card-num {
+            font-size: .7rem;
+            font-weight: 700;
+            color: var(--clr-primary);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--clr-text);
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: .97rem;
+            color: var(--clr-muted);
+            line-height: 1.55;
+            flex: 1;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .35rem;
+            margin-top: .2rem;
+        }
+
+        .tag {
+            font-size: .78rem;
+            font-weight: 600;
+            padding: .24rem .64rem;
+            border-radius: 999px;
+            background: var(--clr-accent);
+            color: var(--clr-primary);
+        }
+
+        .card-footer {
+            padding: .9rem 1.2rem;
+            border-top: 1px solid var(--clr-border);
+        }
+
+        .btn-play {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(180deg, var(--clr-primary) 0%, var(--clr-primary-h) 100%);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: .72rem 1rem;
+            border-radius: .7rem;
+            text-decoration: none;
+            border: none;
+            box-shadow: 0 10px 18px rgba(37, 99, 235, .24);
+            cursor: pointer;
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .btn-play:hover,
+        .btn-play:focus-visible {
+            background: linear-gradient(180deg, #1d4ed8 0%, #1e40af 100%);
+            transform: translateY(-1px) scale(1.01);
+            outline: none;
+        }
+
+        .btn-play:active {
+            transform: scale(.98);
+        }
+
+        /* ── Footer ────────────────────────────────────── */
+        footer {
+            background: #111827;
+            padding: 1.75rem 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            display: block;
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.01em;
+        }
+
+        .footer-meta {
+            display: block;
+            margin-top: .25rem;
+            font-size: .86rem;
+            color: rgba(255, 255, 255, .4);
+        }
+
+        .footer-tagline {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .35);
+        }
+
+        /* ── Alto contraste ────────────────────────────── */
+        body.high-contrast {
+            --clr-bg: #000;
+            --clr-surface: #111;
+            --clr-border: #555;
+            --clr-text: #fff;
+            --clr-muted: #ccc;
+            --clr-accent: #1e3a5f;
+            --clr-primary: #60a5fa;
+            --clr-primary-h: #93c5fd;
+        }
+
+        /* ── Filtro de tags ───────────────────────────── */
+        .filter-section {
+            margin-bottom: 2rem;
+        }
+
+        .filter-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--clr-text);
+            margin-bottom: .8rem;
+        }
+
+        @media (min-width: 980px) {
+            .catalog-layout {
+                display: grid;
+                grid-template-columns: 280px minmax(0, 1fr);
+                gap: 2.25rem;
+                align-items: start;
+            }
+
+            .filters-panel {
+                margin-bottom: 0;
+                position: sticky;
+                top: 1.2rem;
+            }
+
+            .filter-section {
+                margin-bottom: 0;
+                padding: 1rem;
+                border: 1.5px solid var(--clr-border);
+                border-radius: .9rem;
+                background: var(--clr-surface);
+                box-shadow: 0 6px 20px rgba(17, 24, 39, .06);
+            }
+
+            .filter-row {
+                gap: .45rem;
+            }
+
+            .games-intro {
+                margin: 0 0 1.25rem;
+            }
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem;
+        }
+
+        .filter-pill {
+            font-size: .84rem;
+            font-weight: 700;
+            padding: .4rem .98rem;
+            border-radius: 999px;
+            border: 1.5px solid #d1d5db;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+            color: var(--clr-muted);
+            cursor: pointer;
+            box-shadow: 0 1px 0 rgba(17, 24, 39, .04);
+            transition: all var(--transition);
+            white-space: nowrap;
+        }
+
+        .filter-pill:hover,
+        .filter-pill:focus-visible {
+            border-color: var(--clr-primary);
+            color: var(--clr-primary);
+            background: #eff6ff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, .16);
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        .filter-pill.active {
+            background: #111827;
+            border-color: #111827;
+            color: #fff;
+            box-shadow: 0 8px 18px rgba(17, 24, 39, .24);
+        }
+
+        .filter-count-line {
+            font-size: .86rem;
+            color: var(--clr-muted);
+            margin-top: .65rem;
+        }
+
+        .card[hidden] {
+            display: none;
+        }
+
+        /* ── Responsividade ────────────────────────────── */
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                width: 100%;
+                padding: 2.3rem 1rem 3.2rem;
+            }
+
+            .header-inner {
+                padding: 2.4rem 1.5rem 2rem;
+                width: 100%;
+                grid-template-columns: 1fr;
+                gap: .7rem;
+            }
+
+            header h1 {
+                font-size: clamp(2.6rem, 14vw, 3.9rem);
+            }
+
+            .header-kicker {
+                margin-bottom: .8rem;
+            }
+
+            .header-deco {
+                justify-self: center;
+                font-size: clamp(7rem, 44vw, 10rem);
+                transform: rotate(6deg);
+            }
+
+            .a11y-header {
+                flex-wrap: wrap;
+                row-gap: .55rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── Header ──────────────────────────────────────── -->
+    <header role="banner">
+        <div class="header-inner">
+            <div class="header-content">
+                <p class="header-kicker">Turma 4 | Senac RS</p>
+                <h1>Game<span class="h1-em">ON</span><span class="header-subtitle">Conexões que transformam</span></h1>
+                <div class="a11y-header" role="toolbar" aria-label="Opções de acessibilidade">
+                    <button class="a11y-btn" id="btn-contrast" aria-pressed="false">◑ Alto contraste</button>
+                    <button class="a11y-btn" id="btn-audiodesc" aria-pressed="false">🔊 Audiodescrição</button>
+                </div>
+            </div>
+            <span class="header-deco" aria-hidden="true">🎮</span>
+        </div>
+        <svg class="header-wave" viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            aria-hidden="true">
+            <path d="M0,18 C240,36 480,0 720,18 C960,36 1200,0 1440,18 L1440,36 L0,36 Z" fill="#f9fafb" />
+        </svg>
+    </header>
+
+    <span role="status" aria-live="polite" id="ad-live" class="sr-only"></span>
+
+    <!-- ── Jogos ────────────────────────────────────────── -->
+    <main>
+        <div class="catalog-layout">
+            <aside class="filters-panel" aria-label="Filtros de jogos">
+                <div class="filter-section">
+                    <h2 class="filter-title">Temáticas</h2>
+                    <div class="filter-row" id="filter-row" role="group" aria-label="Filtrar jogos por categoria"></div>
+                    <p id="filter-count" aria-live="polite" aria-atomic="true" class="filter-count-line"></p>
+                </div>
+            </aside>
+
+            <section class="content-panel" id="jogos" aria-label="Lista de jogos">
+                <p class="games-intro">Explore os jogos.</p>
+                <div class="grid" id="games-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ── Footer ──────────────────────────────────────── -->
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <span class="footer-title">Jogos para Todos</span>
+                <span class="footer-meta">Turma 4 &bull; Senac RS &bull; 2026</span>
+            </div>
+            <span class="footer-tagline">Feito para aprender jogando</span>
+        </div>
+    </footer>
+
+    <script>
+        // ── Dados (JSON simples)
+        const gamesData = [
+            {
+                id: 1,
+                number: '01',
+                title: 'RUSH',
+                description: 'Aprenda sobre os hábitos dos animais e da ciência; também treine sua memória e pratique a física enquanto se diverte jogando minijogos.',
+                emoji: '🎪',
+                tags: ['Física', 'Química', 'Biologia', 'Desafio'],
+                href: 'https://projetoapae.vercel.app/'
+            },
+            {
+                id: 2,
+                number: '02',
+                title: 'Rola Bola',
+                description: 'Ajude a bola a chegar na caixa verde, enquanto move formas geométricas para evitar que a gravidade a puxe para baixo.',
+                emoji: '🎯',
+                tags: ['Física', 'Geometria', 'Coordenação', 'Desafio'],
+                href: 'https://theocarpes.github.io/RolaBola/'
+            },
+            {
+                id: 3,
+                number: '03',
+                title: 'AnimalMind',
+                description: 'Desbrave o mundo animal e aprenda sobre ele em um jogo que adivinha o animal pelas suas características.',
+                emoji: '🦊',
+                tags: ['Animais', 'Adivinhação', 'Curiosidades', 'Biologia'],
+                href: 'https://animalmind.lovable.app/'
+            },
+            {
+                id: 4,
+                number: '04',
+                title: 'Jardim dos Guardiões',
+                description: 'Cultive seu jardim enquanto enfrenta pragas e vence minijogos que testam sua coordenação e atenção. Aprenda sobre plantas e ecossistemas.',
+                emoji: '🌱',
+                tags: ['Biologia', 'Coordenação', 'Natureza', 'Desafio'],
+                href: 'https://senacscs.github.io/t4/mohr/jogoapae/'
+            },
+            {
+                id: 5,
+                number: '05',
+                title: 'Alquimia',
+                description: 'Desvende os mistérios da alquimia combinando elementos e criando novas substâncias. Um jogo que mistura química, lógica e criatividade.',
+                emoji: '⚗️',
+                tags: ['Química', 'Lógica', 'Criatividade', 'Adivinhação'],
+                href: 'https://alquimiagod.lovable.app/'
+            },
+            {
+                id: 6,
+                number: '06',
+                title: 'LimpaMar',
+                description: 'Mergulhe em uma aventura para limpar o mar devorando o lixo enquanto tenta não ser devorado pelos tubarões.',
+                emoji: '🦈',
+                tags: ['Animais', 'Natureza', 'Desafio', 'Biologia'],
+                href: 'https://limpamar.vercel.app/'
+            },
+            {
+                id: 7,
+                number: '07',
+                title: 'Massa Mia',
+                description: 'Aprenda a fazer pizzas deliciosas enquanto treina sua coordenação e atenção. Um jogo divertido que mistura culinária e habilidades motoras.',
+                emoji: '🍕',
+                tags: ['Biologia', 'Coordenação', 'Química', 'Desafio'],
+                href: 'https://pizza-massa-mia.lovable.app/'
+            },
+            {
+                id: 8,
+                number: '08',
+                title: 'Flappy World',
+                description: 'Controle uma passarinho para passar por obstaculos enquanto experimneta a física que o puxa para baixo.',
+                emoji: '🐦',
+                tags: ['Física', 'Coordenação', 'Desafio'],
+                href: 'https://flappy-world.netlify.app/'
+            }
+        ];
+
+        const allTags = [...new Set(gamesData.flatMap(game => game.tags))];
+        const filtersData = ['Todos', ...allTags];
+
+        const filterRow = document.getElementById('filter-row');
+        const gamesGrid = document.getElementById('games-grid');
+        const filterCount = document.getElementById('filter-count');
+
+        // ── Alto contraste
+        const btnContrast = document.getElementById('btn-contrast');
+        btnContrast.addEventListener('click', function () {
+            document.body.classList.toggle('high-contrast');
+            const on = document.body.classList.contains('high-contrast');
+            this.setAttribute('aria-pressed', String(on));
+            this.classList.toggle('active', on);
+        });
+
+        // ── Audiodescrição
+        const synth = window.speechSynthesis;
+        let audiodescOn = false;
+
+        document.getElementById('btn-audiodesc').addEventListener('click', function () {
+            audiodescOn = !audiodescOn;
+            this.setAttribute('aria-pressed', String(audiodescOn));
+            this.classList.toggle('active', audiodescOn);
+            if (!audiodescOn) synth.cancel();
+            document.getElementById('ad-live').textContent =
+                audiodescOn ? 'Audiodescrição ativada' : 'Audiodescrição desativada';
+        });
+
+        function speakCard(card) {
+            if (!audiodescOn) return;
+            synth.cancel();
+            const title = card.querySelector('.card-title')?.textContent.trim() ?? '';
+            const desc = card.querySelector('.card-desc')?.textContent.trim() ?? '';
+            const tags = [...card.querySelectorAll('.tag')].map(t => t.textContent.trim()).join(', ');
+            const utter = new SpeechSynthesisUtterance(`${title}. ${desc} Categorias: ${tags}.`);
+            utter.lang = 'pt-BR';
+            synth.speak(utter);
+        }
+
+        let activeFilter = '';
+
+        function renderFilters() {
+            filterRow.innerHTML = filtersData.map((label, index) => {
+                const tagValue = label === 'Todos' ? '' : label;
+                const pressed = index === 0 ? 'true' : 'false';
+                const activeClass = index === 0 ? ' active' : '';
+                return `<button class="filter-pill${activeClass}" data-tag="${tagValue}" aria-pressed="${pressed}">${label}</button>`;
+            }).join('');
+
+            filterRow.querySelectorAll('.filter-pill').forEach(pill => {
+                pill.addEventListener('click', function () {
+                    const tag = this.dataset.tag;
+                    if (activeFilter === tag) return;
+                    activeFilter = tag;
+                    renderGames();
+
+                    filterRow.querySelectorAll('.filter-pill').forEach(p => {
+                        p.classList.remove('active');
+                        p.setAttribute('aria-pressed', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-pressed', 'true');
+                });
+            });
+        }
+
+        function renderGames() {
+            const visibleGames = activeFilter
+                ? gamesData.filter(game => game.tags.includes(activeFilter))
+                : gamesData;
+
+            gamesGrid.innerHTML = visibleGames.map(game => `
+                <article class="card" aria-label="Jogo ${game.number}: ${game.title}">
+                    <div class="card-banner" aria-hidden="true">${game.emoji}</div>
+                    <div class="card-body">
+                        <span class="card-num">Jogo ${game.number}</span>
+                        <h2 class="card-title">${game.title}</h2>
+                        <p class="card-desc">${game.description}</p>
+                        <div class="card-tags">
+                            ${game.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${game.href}" class="btn-play" aria-label="Jogar ${game.title}">▶ Jogar</a>
+                    </div>
+                </article>
+            `).join('');
+
+            gamesGrid.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', () => speakCard(card));
+                card.addEventListener('focusin', () => speakCard(card));
+            });
+
+            filterCount.textContent = `${visibleGames.length} jogo${visibleGames.length !== 1 ? 's' : ''} disponíveis`;
+        }
+
+        renderFilters();
+        renderGames();
+    </script>
+
+</body>
+
+</html>
