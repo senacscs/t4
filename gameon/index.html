@@ -112,6 +112,10 @@
             height: 36px;
         }
 
+        .header-wave path {
+            fill: var(--clr-bg);
+        }
+
         .header-content {
             max-width: 680px;
             position: relative;
@@ -435,6 +439,90 @@
             --clr-accent: #1e3a5f;
             --clr-primary: #60a5fa;
             --clr-primary-h: #93c5fd;
+        }
+
+        body.high-contrast header {
+            background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+            border-bottom: 1px solid #444;
+        }
+
+        body.high-contrast header h1 {
+            color: var(--clr-text);
+            text-shadow: none;
+        }
+
+        body.high-contrast .header-subtitle {
+            color: var(--clr-text);
+        }
+
+        body.high-contrast .header-kicker {
+            background: #111;
+            color: #9ec5ff;
+            border-color: #3b82f6;
+        }
+
+        body.high-contrast .header-deco {
+            opacity: .55;
+            filter: grayscale(1) brightness(1.15);
+        }
+
+        body.high-contrast .a11y-btn {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #666;
+            box-shadow: none;
+        }
+
+        body.high-contrast .a11y-btn:hover,
+        body.high-contrast .a11y-btn:focus-visible {
+            background: #232323;
+            color: #9ec5ff;
+            border-color: #60a5fa;
+        }
+
+        body.high-contrast .filter-section {
+            background: #050505;
+            border-color: #6b7280;
+            box-shadow: none;
+        }
+
+        body.high-contrast .filter-title,
+        body.high-contrast .filter-count-line {
+            color: #fff;
+        }
+
+        body.high-contrast .filter-pill {
+            background: #111;
+            color: #fff;
+            border-color: #8a8a8a;
+            box-shadow: none;
+        }
+
+        body.high-contrast .filter-pill:hover,
+        body.high-contrast .filter-pill:focus-visible {
+            background: #1f2937;
+            color: #9ec5ff;
+            border-color: #60a5fa;
+        }
+
+        body.high-contrast .filter-pill.active {
+            background: #60a5fa;
+            color: #000;
+            border-color: #93c5fd;
+        }
+
+        body.high-contrast .btn-play {
+            background: #ffd400;
+            color: #000;
+            border: 2px solid #fff;
+            box-shadow: none;
+        }
+
+        body.high-contrast .btn-play:hover,
+        body.high-contrast .btn-play:focus-visible {
+            background: #ffe45c;
+            color: #000;
+            border-color: #fff;
         }
 
         /* ── Filtro de tags ───────────────────────────── */
