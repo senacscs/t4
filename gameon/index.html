@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GameON – Turma 4 do Senac RS</title>
+    <title>Jogos para Todos – Turma 4 do Senac RS</title>
     <meta name="description"
         content="GameON: conexões que transformam." />
     <style>
@@ -657,6 +657,24 @@
                 padding: 1.5rem;
             }
         }
+        
+.senac-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.3rem;
+    padding: 0.2rem;
+}
+
+.senac-logo img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+    transform: scale(1.7);
+}
+
     </style>
 </head>
 
@@ -692,6 +710,11 @@
                     <div class="filter-row" id="filter-row" role="group" aria-label="Filtrar jogos por categoria"></div>
                     <p id="filter-count" aria-live="polite" aria-atomic="true" class="filter-count-line"></p>
                 </div>
+                
+<div class="senac-logo">
+    <img src="img/image.png" alt="Logo do Senac">
+</div>
+
             </aside>
 
             <section class="content-panel" id="jogos" aria-label="Lista de jogos">
