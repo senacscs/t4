@@ -1,178 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
-    <title>Minha Index</title>
-    <link rel="shortcut icon" href="icone_INDEX-removebg-preview.png">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Enzo Bossardi com sites e projetos de HTML, CSS e JavaScript.">
+  <title>Enzo Bossardi | Portfólio</title>
+  <link rel="shortcut icon" href="icone_INDEX-removebg-preview.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  <header>
-    <h1><a href="#sites">Enzo Bossardi</a></h1>
-      <!--Inicio do mouse-->
-      <div class="scroll-downs">
-        <div class="mousey">
-          <div class="scroller"></div>
-        </div>
-      </div>
-      <!--fim do mouse-->
+
+  <!-- Barra superior -->
+  <header class="topo">
+    <a class="topo__nome" href="#inicio">Enzo Bossardi</a>
+    <nav class="topo__menu" aria-label="Principal">
+      <a href="https://enzobossardi208.github.io/EnzoBossardi/">Meu Site</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#curriculo">Currículo</a>
+    </nav>
   </header>
 
-  <!--Conteúdo do site-->
-<div class="sites">
-  <section class="content" id="sites">
+  <main>
+    <!-- Abertura -->
+    <section class="hero" id="inicio">
+      <h1>Enzo Bossardi</h1>
+      <p class="hero__sub">Sites e projetos de HTML, CSS e JavaScript feitos em aula, em cursos e por diversão.</p>
 
-    <a href="/olamundo/index.html" target="_blank">
-      <div class="blocos-olamundo">
-          <h2>Olá Mundo</h2>
+      <a class="mouse" href="#projetos" aria-label="Rolar para os projetos">
+        <span class="mouse__corpo"><span class="mouse__bolinha"></span></span>
+      </a>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projetos" id="projetos">
+      <h2 class="secao__titulo">Projetos</h2>
+
+      <div class="grade">
+
+        <a class="card" href="olamundo/index.html" target="_blank" rel="noopener">
+          <span class="card__tag">Aula</span>
+          <h3>Olá Mundo</h3>
           <p>Primeiro site desenvolvido em aula.</p>
-        </div>
+        </a>
+
+        <a class="card" href="indicacoesdehtml/index.html" target="_blank" rel="noopener">
+          <span class="card__tag">Aula</span>
+          <h3>Indicações HTML</h3>
+          <p>Site de indicações de HTML.</p>
+        </a>
+
+        <a class="card" href="indicacoescss/" target="_blank" rel="noopener">
+          <span class="card__tag">Aula</span>
+          <h3>Indicações CSS</h3>
+          <p>Site de indicações de CSS, desenvolvido em aula.</p>
+        </a>
+
+        <a class="card" href="projeto/" target="_blank" rel="noopener">
+          <span class="card__tag">Projeto Integrador</span>
+          <h3>Projeto</h3>
+          <p>Site do projeto de Desenvolvimento Sustentável, desenvolvido na aula de Projeto Integrador.</p>
+        </a>
+
+        <a class="card" href="projeto2/" target="_blank" rel="noopener">
+          <span class="card__tag">Projeto Integrador</span>
+          <h3>Projeto 2</h3>
+          <p>Atualização do site do projeto de PI, iniciado do zero.</p>
+        </a>
+
+        <a class="card" href="responsaveis/" target="_blank" rel="noopener">
+          <span class="card__tag">Aula</span>
+          <h3>Responsáveis</h3>
+          <p>Site desenvolvido em aula, juntamente dos pais.</p>
+        </a>
+
+        <a class="card" href="oficina/oficina.html" target="_blank" rel="noopener">
+          <span class="card__tag">Aula</span>
+          <h3>Oficina</h3>
+          <p>Site desenvolvido em aula, com intuito de se divertir e testar novos códigos.</p>
+        </a>
+
+        <a class="card" href="teste_ods/" target="_blank" rel="noopener">
+          <span class="card__tag">Técnico</span>
+          <h3>Teste ODS</h3>
+          <p>Site desenvolvido em uma aula de técnico em que tivemos que construir o site de um colega.</p>
+        </a>
+
+        <a class="card" href="jogo1/" target="_blank" rel="noopener">
+          <span class="card__tag">Jogo</span>
+          <h3>Jogo 1</h3>
+          <p>Jogo desenvolvido em um site com o tema de escape room.</p>
+        </a>
+
+        <a class="card" href="imersao1/" target="_blank" rel="noopener">
+          <span class="card__tag">Curso</span>
+          <h3>Imersão: Alura</h3>
+          <p>Site desenvolvido no curso EAD da Alura, onde tivemos que construir um site de pesquisa.</p>
+        </a>
+
+        <a class="card" href="autocuidado/" target="_blank" rel="noopener">
+          <span class="card__tag">Técnico</span>
+          <h3>Autocuidado</h3>
+          <p>Site desenvolvido em uma aula de PV e Técnico, para apresentar os tipos de autocuidado e como cuidar de si mesmo.</p>
+        </a>
+
+        <a class="card" href="tecnologiamat/" target="_blank" rel="noopener">
+          <span class="card__tag">Técnico</span>
+          <h3>Tecnologiamat</h3>
+          <p>Site que apresenta e explica a forma como uma inteligência artificial funciona e trabalha.</p>
+        </a>
+
+        <a class="card" href="pontedavinci/" target="_blank" rel="noopener">
+          <span class="card__tag">Matemática</span>
+          <h3>Ponte Da Vinci</h3>
+          <p>Site desenvolvido na aula de matemática com técnico, para apresentar e demonstrar a ponte criada por Da Vinci.</p>
+        </a>
+
+        <a class="card" href="biblioteca_de_poemas/" target="_blank" rel="noopener">
+          <span class="card__tag">Pessoal</span>
+          <h3>Poemas</h3>
+          <p>Biblioteca de poemas em desenvolvimento, com o objetivo de armazenar diversos poemas.</p>
+        </a>
+
+        <a class="card" href="triangulos/" target="_blank" rel="noopener">
+          <span class="card__tag">Técnico</span>
+          <h3>Triângulos</h3>
+          <p>Site feito na aula de técnico, com o objetivo de testar formas geométricas para fazer um desenho.</p>
+        </a>
+
+        <a class="card" href="portugoljs/index.html" target="_blank" rel="noopener">
+          <span class="card__tag">JavaScript</span>
+          <h3>PortugolJs</h3>
+          <p>Site feito para armazenar todos os sites com JavaScript feitos.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Currículo -->
+    <section class="curriculo" id="curriculo">
+      <h2 class="secao__titulo">Currículo</h2>
+
+      <a class="curriculo__link" href="currículo/curriculo.html" target="_blank" rel="noopener">
+        <img src="Print%20Curriculo.png" alt="Print do meu currículo" loading="lazy">
+        <span class="curriculo__texto">Acesse meu currículo</span>
       </a>
+    </section>
+  </main>
 
-     <a href="indicacoesdehtml/index.html" target="_blank">
-      <div class="blocos-indicacoes-html"> 
-        <h2>Indicações html</h2>
-        <p>Site de indicações de html.</p>
-      </div>
-    </a>
+  <footer class="rodape">
+    <p>Enzo Bossardi</p>
+  </footer>
 
-    <a href="/indicacoescss/" target="_blank">
-      <div class="blocos-indicacoes-css">
-        <h2>Indicações css</h2>
-        <p>Site de indicações de css, desenvolvido em aula.</p>
-      </div>
-    </a>
+  <!-- Cursor personalizado -->
+  <span class="curzr-hover btn btn-previous"></span>
+  <span class="curzr-hover btn btn-next"></span>
 
-    <a href="/projeto/" target="_blank">
-      <div class="blocos-projeto">
-        <h2>Projeto</h2>
-        <p>Site do projeto de Desenvolvimento Sustentável, desenvolvido na aula de <br> Projeto Integrador.</p>
-      </div>
-    </a>
+  <div class="curzr-arrow-pointer" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path class="inner" d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z" fill="#F2F5F8" />
+      <path class="outer" d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z" fill="#111920" />
+    </svg>
+  </div>
 
-    <a href="responsaveis/" target="_blank">
-      <div class="blocos-responsaveis">
-        <h2>Responsáveis</h2>
-        <p>Site desenvolvido em aula, juntamente dos pais.</p>
-      </div>
-    </a>
+  <div class="curzr-big-circle" hidden>
+    <div class="circle"></div>
+    <div class="dot"></div>
+  </div>
 
-    <a href="oficina/oficina.html" target="_blank">
-    <div class="blocos-oficina">
-      <h2>Oficina</h2>
-      <p>Site desenvolvido em aula, com intuito de <br> se divertir e testas novos códigos.</p>
-    </div>
-  </a>
+  <div class="curzr-ring-dot" hidden>
+    <div class="curzr-dot"></div>
+  </div>
 
-  <a href="teste_ods/" target="_blank">
-    <div class="blocos-teste-ods">
-      <h2>Teste ods</h2>
-      <p>Site desenvolvido em uma aula de técnico <br> em que tivempos que construir o site de um colega.</p>
-    </div>
-  </a>
+  <div class="curzr-circle-and-dot" hidden></div>
+  <div class="curzr-glitch-effect" hidden></div>
 
-  <a href="jogo1/" target="_blank">
-    <div class="blocos-jogo1">
-      <h2>Jogo 1</h2>
-      <p>Jogo desenvolvido em um site com o tema <br> de escape room.</p>
-    </div>
-  </a>  
-
-  <a href="imersao1/" target="_blank">
-    <div class="blocos-imersao1">
-      <h2>Imersão: Alura</h2>
-      <p>Site desenvolvido no curso EAD da Alura, onde tivemos que construir um site de pesquisa.</p>
-    </div>
-
-      <a href="currículo/curriculo.html" target="_blank">
-        <div class="fundo-curriculo">
-        <h3>Acesse meu currículo:</h3>
-        <img src="Print Curriculo.png" alt="Print do meu currículo">
-      </a>
-    </div>
-
-    <a href="autocuidado/" target="_blank">
-    <div class="blocos-autocuidado">
-      <h2>Autocuidado</h2>
-      <p>Site desenvolvido em uma aula de PV e Técnico. Para apresentar os tipos de autocuidado e a forma de como cuidar de si mesmo</p>
-    </div>
-  </a>
-
-  <a href="tecnologiamat/" target="_blank">
-    <div class="blocos-tecnologiamat">
-      <h2>Tecnologiamat</h2>
-      <p>Site desenvolvido com intuito de <br> apresentar e explicar a forma que uma inteligência artificial funciona e trabalha.</p>
-    </div>
-  </a>
-
-  <a href="pontedavinci/" target="_blank">
-    <div class="blocos-davinci">
-      <h2>Ponte Da Vinci</h2>
-      <p>Site desenvolvido na aula de matemática <br> com técnico, para apresentar e demonstrar <br> a ponte criada por Da Vinci.</p>
-    </div>
-  </a>
-
-  <a href="biblioteca_de_poemas/" target="_blank">
-    <div class="blocos-biblioteca-poemas">
-      <h2>Poemas</h2>
-      <p>Biblioteca de poemas, estou desenvolvendo com o objetivo de armazenar diversos poemas.</p>
-    </div>
-  </a>
-
-  <a href="triangulos/" target="_blank">
-    <div class="blocos-triangulos">
-      <h2>Triângulos</h2>
-      <p>Site feito na aula de técnico, com o objetivo de testar as formas geometricas para fazer um desenho.</p>
-    </div>
-  </a>
-
-  <a href="projeto2/" target="_blank">
-    <div class="blocos-projeto-2">
-      <h2>Projeto-2</h2>
-      <p>Atualização do site do projeto de PI, <br> iniciado do zero.</p>
-    </div>
-  </a>
-
-  <a href="portugoljs/index.html" target="_blank">
-    <div class="blocos-portugoljs">
-      <h2>PortugolJs</h2>
-      <p>Site feito para armazenar todos os sites <br> com javascript feitos.</p>
-    </div>
-  </a>
-
-  </section>
-</div>
-  <!--Fim do Conteúdo-->
- 
-    <!--Começo do Cursor-->      
-        <span class="curzr-hover btn btn-previous">
-        </span>
-        <span class="curzr-hover btn btn-next">
-
-      <div class="curzr-arrow-pointer" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <path class="inner" d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z" fill="#F2F5F8" />
-          <path class="outer" d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z" fill="#111920" />
-        </svg>
-      </div>
-      
-      <div class="curzr-big-circle" hidden>
-        <div class="circle"></div>
-        <div class="dot"></div>
-      </div>
-      
-      <div class="curzr-ring-dot" hidden>
-        <div class="curzr-dot"></div>
-      </div>
-      
-      <div class="curzr-circle-and-dot" hidden></div>
-      
-      <div class="curzr-glitch-effect" hidden></div>
-          </svg>
-      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-     <script src="cursor.js"></script>
-      <!--Fim do Cursor-->
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="cursor.js"></script>
 </body>
 </html>
