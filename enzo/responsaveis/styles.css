@@ -1,107 +1,182 @@
+/* ---------- Variáveis ---------- */
+:root {
+  --papel: #fbf8f6;
+  --cartao: rgba(255, 255, 255, 0.92);
+  --tinta: #2b2226;
+  --tinta-suave: #5d4f55;
+  --vinho: #8c2f4b;
+  --vinho-escuro: #5e1d32;
+  --raio: 24px;
+  --largura-max: 1040px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-    background-image: url("fundobrancopais.jpg");
-    background-size: 1260px;
+  margin: 0;
+  background-color: var(--papel);
+  background-image: url("fundobrancopais.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--tinta);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
 }
 
-h1 {
-    text-align: center;
-    position: relative;
-    top: 15px;
-    color: white;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-hr {
-    color: black;
-    border-color: black;
-    position: relative;
-    bottom: 35px;
-    width: 1400px;
-    right: 15px;
+h1, h2, p {
+  margin: 0;
 }
 
-.container {
-    background-image: url("cabecariositepais.jpg");
-    width: 1260px;
-    position: relative;
-    right: 20px;
-    height: 70px;
-    bottom: 25px;
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  padding: 1.5rem 1rem;
+  background-color: var(--vinho-escuro);
+  background-image:
+    linear-gradient(rgba(94, 29, 50, 0.55), rgba(94, 29, 50, 0.55)),
+    url("cabecariositepais.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid var(--vinho);
 }
 
-.imagem1 {
-    width: 450px;
-    position: relative;
-    margin-right: 400px;
-    margin-left: 400px;
-    border-radius: 50px;
-    bottom: 180px;
-    right: 390px;
+.cabecalho h1 {
+  color: #fff;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-.texto1 {
-    border-radius: 10px;
-    max-width: 100%;
-    background-color: gray;
-    width: 600px;
-    position: relative;
-    left: 500px;
-    text-align: center;
-    top: 50px;
+/* ---------- Página ---------- */
+.pagina {
+  width: min(100% - 2rem, var(--largura-max));
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) 0 clamp(3rem, 8vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 3.5rem);
 }
 
-.imagem2 {
-    width: 500px;
-    border-radius: 50px;
-    position: relative;
-    left: 700px;
-    bottom: 300px;
+/* ---------- Blocos de texto + foto ---------- */
+.bloco {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 420px);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: center;
 }
 
-.texto2 {
-    position: relative;
-    text-align: center;
-    margin-left: 600px;
-    right: 550px;
-    background-color: gray;
-    border-radius: 10px;
-    width: 600px;
-    bottom: 90px;
+.bloco--invertido {
+  grid-template-columns: minmax(0, 420px) 1fr;
 }
 
-.texto3 {
-    background-color: gray;
-    border-radius: 10px;
-    margin-right: 200px;
-    margin-left: 200px;
-    position: relative;
-    text-align: center;
-    bottom: 280px;
+.bloco--invertido .foto {
+  order: -1;
 }
 
+.bloco--unico {
+  grid-template-columns: 1fr;
+  max-width: 68ch;
+  margin-inline: auto;
+  gap: 1.25rem;
+}
+
+.texto {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--cartao);
+  border-radius: var(--raio);
+  box-shadow: 0 10px 30px rgba(94, 29, 50, 0.12);
+}
+
+.texto--abertura {
+  font-size: 1.2rem;
+  border-left: 6px solid var(--vinho);
+}
+
+.foto {
+  width: 100%;
+  border-radius: var(--raio);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  background: #e9e1e4;
+}
+
+/* ---------- Música ---------- */
 .musica {
-    position: relative;
-    bottom: 370px;
-    width: 500px;
-    height: 200px;
-    left: 350px;
+  width: min(100%, 520px);
+  margin-inline: auto;
 }
 
-.fotopaissenac {
-    width: 400px;
-    border-radius: 50px;
-    position: relative;
-    bottom: 90px;
-    right: 100px;
+.musica iframe {
+  display: block;
+  border: 0;
+  border-radius: 12px;
 }
 
-.texto4 {
-    background-color: gray;
-    border-radius: 10px;
-    text-align: center;
-    margin-right: 500px;
-    margin-left: 100px;
-    position: relative;
-    left: 200px;
-    bottom: 113px;
+/* ---------- Recado para o Enzo ---------- */
+.bloco--recado {
+  grid-template-columns: minmax(0, 360px) 1fr;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--vinho-escuro);
+  color: #fff;
+  border-radius: var(--raio);
+  box-shadow: 0 14px 36px rgba(94, 29, 50, 0.35);
+}
+
+.recado {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recado h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+}
+
+.recado__assinatura {
+  font-style: italic;
+  color: #f1d9e0;
+}
+
+.recado__final {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ---------- Celular e tablet ---------- */
+@media (max-width: 760px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .bloco,
+  .bloco--invertido,
+  .bloco--recado {
+    grid-template-columns: 1fr;
+  }
+
+  /* A foto aparece depois do texto em todos os blocos no celular */
+  .bloco--invertido .foto {
+    order: 0;
+  }
+
+  .foto {
+    max-width: 440px;
+    margin-inline: auto;
+  }
 }
