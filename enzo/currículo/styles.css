@@ -1,0 +1,57 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 100px;
+    left: 0;
+    right: 0;
+    background-color: rgb(199, 199, 199);
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 10px;
+    border: 0.3rem solid black;
+    box-shadow: 0px 4px 12px black;
+}
+
+section {
+    margin-left: 100px;
+}
+
+hr {
+    background-color: black;
+    border-color: black;
+    height: 1px;
+    width: 50%;
+
+}
+
+li {
+    list-style: decimal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a {
+    display: inline-block;
+    color: black;
+    transition: transform 0.2s ease;
+    margin-left: 10px;
+}
+
+a:hover {
+    color: blue;
+    transform: scale(1.05);
+}
