@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seu Nome</title>
+    <link rel="shortcut icon" href="images/seu-nome-site-portugoljs.png" type="image/x-icon">
+    <script>
+      function mostrarNome() {
+        const nome = document.getElementById("nome").value;
+        document.getElementById("resultado").textContent = `Olá, ${nome}!`;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" />
+    <button onclick="mostrarNome()">Exibir</button>
+    <p id="resultado"></p>
+  </body>
+</html>

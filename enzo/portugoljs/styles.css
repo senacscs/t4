@@ -1,0 +1,117 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #555;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 570px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 0.2rem solid white;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.cards {
+    background-color: #333;
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   /* 4 por fileira */
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    min-width: 0;
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    border: 0.2rem solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.menu a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px black;
+}
+
+.menu a img {
+    width: 100%;
+    height: 200px;            /* mesma altura para todas */
+    object-fit: contain;      /* imagem inteira, centralizada */
+}
+
+.menu a span {
+    margin-top: auto;         /* texto sempre embaixo, alinhado */
+    padding-top: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+    .menu { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .menu { grid-template-columns: 1fr; }
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(184, 182, 182);
+    color: black;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    border-top: 5px solid grey;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: blue;
+    font-weight: bold;
+    transition: all 1s;
+}

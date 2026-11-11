@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prioridades</title>
+    <link rel="shortcut icon" href="images/prioridade-site-portugoljs.png" type="image/x-icon">
+    <script>
+      let resultado;
+
+      resultado = 5 + 4 * 2;
+      document.getElementById("resultado").textContent +=
+        `Operação: 5 + 4 * 2 = ${resultado} <br>`;
+
+      resultado = (5 + 4) * 2;
+      document.getElementById("resultado").textContent +=
+        `Operação: (5 + 4) * 2 = ${resultado} <br>`;
+
+      resultado = 1 + (2 / 3) * 4;
+      document.getElementById("resultado").textContent +=
+        `Operação: 1 + 2 / 3 * 4 = ${resultado} <br>`;
+
+      resultado = (1 + 2) / (3 * 4);
+      document.getElementById("resultado").textContent +=
+        `Operação: (1 + 2) / (3 * 4) = ${resultado}`;
+    </script>
+  </head>
+  <body>
+    <p id="resultado"></p>
+  </body>
+</html>

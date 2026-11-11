@@ -1,0 +1,51 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trocas Variáveis</title>
+    <link rel="shortcut icon" href="images/trocas-de-variaveis-site-portugoljs.png" type="image/x-icon">
+    <script>
+      const campoA = document.getElementById("a");
+      const campoB = document.getElementById("b");
+      const botao = document.getElementById("executar");
+      const resultado = document.getElementById("resultado");
+
+      function trocarVariaveis() {
+        let a = campoA.value;
+        let b = campoB.value;
+
+        if (a === "" || b === "") {
+          resultado.textContent = "Preencha os dois valores.";
+          return;
+        }
+
+        // troca usando uma variável auxiliar
+        let auxiliar = a;
+        a = b;
+        b = auxiliar;
+
+        resultado.textContent = "Depois da troca: A = " + a + " e B = " + b;
+      }
+
+      botao.addEventListener("click", trocarVariaveis);
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Trocas Variáveis</h1>
+
+      <label for="a">Informe um valor para a variável A:</label>
+      <input type="number" id="a" />
+
+      <hr />
+
+      <label for="b">Informe um valor para a variável B:</label>
+      <input type="number" id="b" />
+
+      <br />
+      <button id="executar">Executar</button>
+
+      <p id="resultado"></p>
+    </main>
+  </body>
+</html>

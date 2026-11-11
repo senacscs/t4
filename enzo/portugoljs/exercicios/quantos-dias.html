@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantos Dias</title>
+    <link rel="shortcut icon" href="images/quantos-dias-site-portugol.png" type="image/x-icon">
+    <script>
+      function calcularDias() {
+        // Obter o ano informado pelo usuário
+        const anoAtual = parseFloat(document.getElementById("ano").value);
+
+        // Calcular a quantidade de anos bissextos
+        const qtdAnosBissextos = Math.floor(anoAtual / 4);
+
+        // Calcular o número total de dias
+        const dias = (anoAtual - 1) * 365 + qtdAnosBissextos;
+
+        // Resultado
+        document.getElementById("resultado").textContent =
+          `Já se passaram ${dias} dias desde 01/01/0001`;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="ano">Informe o ano atual:</label>
+    <input type="number" id="ano" />
+    <button onclick="calcularDias()">Calcular</button>
+    <p id="resultado"></p>
+  </body>
+</html>

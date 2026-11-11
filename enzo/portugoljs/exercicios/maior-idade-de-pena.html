@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maior Idade de Pena</title>
+    <link rel="shortcut icon" href="images/maior-idade-de-pena-site-portugoljs.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function calcularAnos() {
+        const MAIORIDADE = 18;
+
+        // Obtém a idade digitada pelo usuário
+        const idade = parseInt(document.getElementById("idade").value);
+
+        // Calcula os anos faltantes
+        const anosFaltantes = MAIORIDADE - idade;
+
+        // Exibe o resultado
+        if (anosFaltantes > 0) {
+          document.getElementById("resultado").textContent =
+            `Falta(m) ${anosFaltantes} ano(s) para você atingir a maioridade.`;
+        } else {
+          document.getElementById("resultado").textContent =
+            "Você já atingiu a maioridade.";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="corpo">
+      <label for="idade" class="digite-idade">Digite sua idade:</label>
+      <input type="number" id="idade" placeholder="Digite sua idade..." />
+      <button onclick="calcularAnos()">Calcular</button>
+      <p id="resultado"></p>
+    </div>
+  </body>
+</html>
