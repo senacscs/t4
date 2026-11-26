@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/paciente.css">
+	<script src="../js/tema.js"></script>
 	<title>MoodAlert · Paciente</title>
 	<!-- Firebase App (the core Firebase SDK) -->
 	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -313,6 +314,14 @@
 			
 			<!-- Visualização do perfil -->
 			<div class="perfil-body" id="perfilView">
+				<div class="info-section">
+					<h3>Aparência</h3>
+					<div class="tema-escolha" role="group" aria-label="Tema">
+						<button type="button" data-tema-opcao="light"><ion-icon name="sunny-outline"></ion-icon> Claro</button>
+						<button type="button" data-tema-opcao="dark"><ion-icon name="moon-outline"></ion-icon> Escuro</button>
+					</div>
+				</div>
+
 				<div class="info-section">
 					<h3>Informações Pessoais</h3>
 					<div class="info-grid">

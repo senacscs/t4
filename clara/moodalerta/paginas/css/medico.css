@@ -2,13 +2,13 @@
 :root {
     --bg-dark: #051f1a;
     --bg: #082923;
-    --panel: rgba(7, 35, 29, 0.92);
+    --panel: rgba(var(--surface-rgb), 0.92);
     --panel-light: rgba(250, 255, 251, 0.07);
     --primary: #0c6b44;
     --primary-light: #34aa7c;
     --accent: #f2f7f4;
-    --muted: rgba(242, 247, 244, 0.7);
-    --border: rgba(255, 255, 255, 0.08);
+    --muted: rgba(var(--text-rgb), 0.7);
+    --border: rgba(var(--ink-rgb), 0.08);
     --radius: 18px;
     --shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
     
@@ -26,7 +26,7 @@
     
     --text-primary: var(--accent);
     --text-secondary: var(--muted);
-    --text-muted: rgba(242, 247, 244, 0.5);
+    --text-muted: rgba(var(--text-rgb), 0.5);
     --text-color: var(--accent);
     
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
@@ -44,14 +44,14 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(5, 31, 26, 0.3);
+    background: rgba(var(--surface-rgb), 0.3);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     border-radius: 10px;
-    border: 2px solid rgba(5, 31, 26, 0.3);
+    border: 2px solid rgba(var(--surface-rgb), 0.3);
     transition: background 0.3s ease;
 }
 
@@ -65,13 +65,13 @@
 }
 
 ::-webkit-scrollbar-corner {
-    background: rgba(5, 31, 26, 0.3);
+    background: rgba(var(--surface-rgb), 0.3);
 }
 
 /* Para Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--primary) rgba(5, 31, 26, 0.3);
+    scrollbar-color: var(--primary) rgba(var(--surface-rgb), 0.3);
 }
 
 /* ===== RESET E BASE ===== */
@@ -193,8 +193,8 @@ textarea {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.25);
+    background: rgba(var(--ink-rgb), 0.15);
+    border: 2px solid rgba(var(--ink-rgb), 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,7 +230,7 @@ textarea {
 .sidebar {
     padding: 24px;
     border-radius: var(--radius);
-    background: rgba(3, 23, 19, 0.95);
+    background: rgba(var(--surface-rgb), 0.95);
     border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
@@ -244,7 +244,7 @@ textarea {
     border-radius: 14px;
     padding: 14px;
     text-align: left;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(var(--ink-rgb), 0.03);
     color: var(--accent);
     font-weight: 600;
     cursor: pointer;
@@ -252,7 +252,7 @@ textarea {
 }
 
 .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--ink-rgb), 0.05);
 }
 
 .nav-btn.active {
@@ -360,7 +360,7 @@ textarea {
 }
 
 .stat-card {
-    background: rgba(8, 35, 28, 0.98);
+    background: rgba(var(--surface-rgb), 0.98);
     padding: 1.5rem;
     border-radius: var(--radius);
     border: 1px solid rgba(52, 170, 124, 0.3);
@@ -1343,7 +1343,7 @@ textarea {
 }
 
 .primary.ghost:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--ink-rgb), 0.05);
     border-color: var(--primary);
 }
 
@@ -1642,7 +1642,7 @@ textarea {
         width: 250px;
         height: calc(100vh - 60px);
         z-index: 999;
-        background: rgba(3, 23, 19, 0.98);
+        background: rgba(var(--surface-rgb), 0.98);
         border-right: 1px solid var(--border);
         transition: left 0.3s ease;
         padding: 20px;
@@ -2217,17 +2217,17 @@ textarea {
 
 /* ===== MELHORIAS DE CONTRASTE ===== */
 .dashboard-card {
-    background: rgba(8, 35, 28, 0.98) !important;
+    background: rgba(var(--surface-rgb), 0.98) !important;
     border: 1px solid rgba(52, 170, 124, 0.3) !important;
 }
 
 .paciente-card {
-    background: rgba(8, 35, 28, 0.98) !important;
+    background: rgba(var(--surface-rgb), 0.98) !important;
     border: 1px solid rgba(52, 170, 124, 0.3) !important;
 }
 
 .modal-content {
-    background: rgba(5, 30, 26, 0.98) !important;
+    background: rgba(var(--surface-rgb), 0.98) !important;
     border: 1px solid rgba(52, 170, 124, 0.3) !important;
 }
 
@@ -2237,9 +2237,9 @@ input[type="date"],
 input[type="tel"],
 select,
 textarea {
-    background: rgba(8, 35, 28, 0.95) !important;
+    background: rgba(var(--surface-rgb), 0.95) !important;
     border: 1px solid rgba(52, 170, 124, 0.3) !important;
-    color: #ffffff !important;
+    color: var(--accent) !important;
 }
 
 input:focus,
@@ -2255,24 +2255,177 @@ textarea:focus {
 }
 
 .info-label {
-    color: rgba(242, 247, 244, 0.9) !important;
+    color: rgba(var(--text-rgb), 0.9) !important;
 }
 
 .info-value {
-    color: #ffffff !important;
+    color: var(--accent) !important;
 }
 
 .topbar {
-    background: rgba(7, 35, 29, 0.98) !important;
+    background: rgba(var(--surface-rgb), 0.98) !important;
     border: 1px solid rgba(52, 170, 124, 0.25) !important;
 }
 
 .sidebar {
-    background: rgba(3, 23, 19, 0.98) !important;
+    background: rgba(var(--surface-rgb), 0.98) !important;
     border: 1px solid rgba(52, 170, 124, 0.2) !important;
 }
 
 .panel {
-    background: rgba(7, 35, 29, 0.95) !important;
+    background: rgba(var(--surface-rgb), 0.95) !important;
     border: 1px solid rgba(52, 170, 124, 0.25) !important;
+}/* ===== Temas (claro é o padrão, ver js/tema.js) ===== */
+:root {
+    --ink-rgb: 255, 255, 255;
+    --text-rgb: 242, 247, 244;
+    --surface-rgb: 7, 35, 29;
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --ink-rgb: 12, 60, 45;
+    --text-rgb: 13, 42, 34;
+    --surface-rgb: 255, 255, 255;
+    --bg-dark: #e3f1ea;
+    --bg: #f5faf7;
+    --panel: rgba(255, 255, 255, 0.94);
+    --panel-light: rgba(255, 255, 255, 0.85);
+    --primary: #0c6b44;
+    --primary-light: #1e9365;
+    --primary-dark: #08502f;
+    --accent: #0d2a22;
+    --muted: rgba(13, 42, 34, 0.68);
+    --border: rgba(12, 60, 45, 0.12);
+    --shadow: 0 18px 45px rgba(12, 60, 45, 0.1);
+}
+
+/* Seletor de tema (perfil) */
+.tema-escolha {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 5px;
+    border-radius: 999px;
+    background: rgba(var(--ink-rgb), 0.06);
+    border: 1px solid var(--border);
+}
+
+.tema-escolha button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tema-escolha button.active {
+    background: linear-gradient(120deg, var(--primary), var(--primary-light));
+    color: #fff;
+}
+
+:root[data-theme="light"] {
+    --text-muted: rgba(13, 42, 34, 0.5);
+    --shadow-md: 0 4px 10px rgba(12, 60, 45, 0.08), 0 2px 4px rgba(12, 60, 45, 0.05);
+}
+/* ===== Acabamento: foco, ícones e mini animações ===== */
+@keyframes ma-sobe {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes ma-abre {
+    from { opacity: 0; transform: translateY(12px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+}
+
+button:focus { outline: none; }
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+button ion-icon {
+    vertical-align: -0.15em;
+}
+
+.primary {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(12, 107, 68, 0.25);
+    filter: brightness(1.05);
+}
+
+.primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.modal[aria-hidden="false"] .modal-content {
+    animation: ma-abre 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.tema-escolha button {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.panel.active,
+.tab-content.active { animation: ma-sobe 0.3s ease both; }
+
+.empty-icon ion-icon { font-size: inherit; color: var(--primary-light); }
+.alerta-icon { display: grid; place-items: center; color: var(--primary-light); }
+.alerta-icon--aviso { color: var(--warning, #f59e0b); }
+.alarme-toggle { display: inline-grid; place-items: center; font-size: 1.3rem; color: var(--muted); }
+.alarme-toggle.ativo { color: var(--primary-light); }
+
+/* Botão de fechar dos modais: visível em qualquer fundo */
+.close-btn {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(var(--ink-rgb), 0.08);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-size: 1.4rem;
+    line-height: 1;
+    z-index: 10;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(var(--ink-rgb), 0.16);
+    transform: rotate(90deg);
+}
+
+.perfil-modal .close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #fff;
+}
+
+.perfil-modal .close-btn:hover {
+    background: rgba(255, 255, 255, 0.32);
 }
