@@ -227,7 +227,7 @@ function renderizarListaPacientes() {
                 </div>
                 <div class="paciente-acoes">
                     <button class="btn-visualizar" onclick="visualizarPacienteFirebase('${paciente.id}')">
-                        <span>👁️</span>
+                        <ion-icon name="eye-outline"></ion-icon>
                         Visualizar
                     </button>
                 </div>
@@ -689,7 +689,7 @@ async function carregarAlertas() {
                 alerta.style.cursor = 'pointer';
                 alerta.onclick = () => visualizarPacienteFirebase(paciente.id);
                 alerta.innerHTML = `
-                    <div class="alerta-icon">⚠️</div>
+                    <div class="alerta-icon alerta-icon--aviso"><ion-icon name="warning-outline"></ion-icon></div>
                     <div class="alerta-info">
                         <h4>${paciente.nome} - Humor baixo</h4>
                         <p>Registrou tristeza nos últimos dias</p>
@@ -717,7 +717,7 @@ async function carregarAlertas() {
                 alerta.style.cursor = 'pointer';
                 alerta.onclick = () => visualizarPacienteFirebase(paciente.id);
                 alerta.innerHTML = `
-                    <div class="alerta-icon">📊</div>
+                    <div class="alerta-icon"><ion-icon name="stats-chart-outline"></ion-icon></div>
                     <div class="alerta-info">
                         <h4>${paciente.nome} - Melhora significativa</h4>
                         <p>Registros positivos na última semana</p>

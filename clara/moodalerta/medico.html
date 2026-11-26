@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MoodAlert · Painel Médico</title>
 	<link rel="stylesheet" href="css/medico.css">
+	<script src="../js/tema.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -123,7 +124,7 @@
 							<h1>Meus Pacientes</h1>
 						</div>
 						<button class="primary" onclick="abrirModalAdicionarPaciente()">
-							➕ Adicionar Paciente
+							<ion-icon name="person-add-outline"></ion-icon> Adicionar Paciente
 						</button>
 					</header>
 
@@ -476,6 +477,14 @@
 							<span class="info-label">Desde</span>
 							<span class="info-value" id="perfilMedicoCadastro">Novembro de 2025</span>
 						</div>
+					</div>
+				</div>
+
+				<div class="info-section">
+					<h3>Aparência</h3>
+					<div class="tema-escolha" role="group" aria-label="Tema">
+						<button type="button" data-tema-opcao="light"><ion-icon name="sunny-outline"></ion-icon> Claro</button>
+						<button type="button" data-tema-opcao="dark"><ion-icon name="moon-outline"></ion-icon> Escuro</button>
 					</div>
 				</div>
 

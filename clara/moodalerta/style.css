@@ -2,13 +2,13 @@
 :root {
     --bg-dark: #051f1a;
     --bg: #082923;
-    --panel: rgba(7, 35, 29, 0.9);
+    --panel: rgba(var(--surface-rgb), 0.9);
     --panel-light: rgba(250, 255, 251, 0.06);
     --primary: #0c6b44;
     --primary-light: #34aa7c;
     --accent: #f2f7f4;
-    --muted: rgba(242, 247, 244, 0.7);
-    --border: rgba(255, 255, 255, 0.08);
+    --muted: rgba(var(--text-rgb), 0.7);
+    --border: rgba(var(--ink-rgb), 0.08);
     --radius: 20px;
     --shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
 }
@@ -164,7 +164,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(var(--ink-rgb), 0.04);
     padding: 6px;
     border-radius: 999px;
 }
@@ -181,7 +181,7 @@ textarea {
 
 .tab-switch button.active {
     background: linear-gradient(120deg, var(--primary), var(--primary-light));
-    color: #032016;
+    color: #fff;
 }
 
 .form-area {
@@ -190,7 +190,7 @@ textarea {
     overflow-y: auto;
     padding-right: 8px;
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-light) rgba(255, 255, 255, 0.05);
+    scrollbar-color: var(--primary-light) rgba(var(--ink-rgb), 0.05);
 }
 
 .form-area::-webkit-scrollbar {
@@ -198,7 +198,7 @@ textarea {
 }
 
 .form-area::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(var(--ink-rgb), 0.04);
     border-radius: 999px;
 }
 
@@ -227,8 +227,8 @@ label span {
     width: 100%;
     padding: 14px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background: rgba(6, 29, 24, 0.8);
+    border: 1px solid rgba(var(--ink-rgb), 0.18);
+    background: rgba(var(--surface-rgb), 0.8);
     color: var(--accent);
 }
 
@@ -263,7 +263,7 @@ label span {
     padding: 14px;
     border-radius: 14px;
     background: linear-gradient(120deg, var(--primary), var(--primary-light));
-    color: #03170f;
+    color: #fff;
     font-weight: 800;
     font-size: 1rem;
     cursor: pointer;
@@ -271,7 +271,7 @@ label span {
 
 .primary.ghost {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(var(--ink-rgb), 0.2);
     color: var(--accent);
 }
 
@@ -291,8 +291,8 @@ label span {
     flex: 1;
     border-radius: 16px;
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(var(--ink-rgb), 0.16);
+    background: rgba(var(--ink-rgb), 0.04);
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -313,7 +313,7 @@ label span {
     margin-top: 32px;
     padding: 16px 18px;
     border-radius: var(--radius);
-    background: rgba(5, 30, 26, 0.85);
+    background: rgba(var(--surface-rgb), 0.85);
     border: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
@@ -351,4 +351,177 @@ label span {
     .form-area {
         max-height: none;
     }
+}
+/* ===== Temas (claro é o padrão, ver js/tema.js) ===== */
+:root {
+    --ink-rgb: 255, 255, 255;
+    --text-rgb: 242, 247, 244;
+    --surface-rgb: 7, 35, 29;
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --ink-rgb: 12, 60, 45;
+    --text-rgb: 13, 42, 34;
+    --surface-rgb: 255, 255, 255;
+    --bg-dark: #e3f1ea;
+    --bg: #f5faf7;
+    --panel: rgba(255, 255, 255, 0.94);
+    --panel-light: rgba(255, 255, 255, 0.85);
+    --primary: #0c6b44;
+    --primary-light: #1e9365;
+    --accent: #0d2a22;
+    --muted: rgba(13, 42, 34, 0.68);
+    --border: rgba(12, 60, 45, 0.12);
+    --shadow: 0 18px 45px rgba(12, 60, 45, 0.1);
+}
+
+/* Seletor de tema (perfil) */
+.tema-escolha {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 5px;
+    border-radius: 999px;
+    background: rgba(var(--ink-rgb), 0.06);
+    border: 1px solid var(--border);
+}
+
+.tema-escolha button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tema-escolha button.active {
+    background: linear-gradient(120deg, var(--primary), var(--primary-light));
+    color: #fff;
+}
+
+:root[data-theme="light"] .orb { opacity: 0.22; }
+
+/* Botão discreto de tema no login */
+.tema-toggle {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: rgba(var(--surface-rgb), 0.5);
+    color: var(--muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.tema-toggle:hover,
+.tema-toggle:focus-visible {
+    opacity: 1;
+    color: var(--primary-light);
+}
+/* ===== Acabamento: foco, ícones e mini animações ===== */
+@keyframes ma-sobe {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes ma-abre {
+    from { opacity: 0; transform: translateY(12px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+}
+
+button:focus { outline: none; }
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+button ion-icon {
+    vertical-align: -0.15em;
+}
+
+.primary {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(12, 107, 68, 0.25);
+    filter: brightness(1.05);
+}
+
+.primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.modal[aria-hidden="false"] .modal-content {
+    animation: ma-abre 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.tema-escolha button {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.brand-panel { animation: ma-sobe 0.5s ease both; }
+.glass-card { animation: ma-sobe 0.5s 0.08s ease both; }
+.benefits li { animation: ma-sobe 0.45s ease both; transition: transform 0.2s ease, border-color 0.2s ease; }
+.benefits li:nth-child(2) { animation-delay: 0.08s; }
+.benefits li:nth-child(3) { animation-delay: 0.16s; }
+.benefits li:hover { transform: translateY(-3px); border-color: rgba(52, 170, 124, 0.35); }
+
+.tab-switch button { transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease; }
+.tab-switch button.active { box-shadow: 0 6px 16px rgba(12, 107, 68, 0.25); }
+.tab-switch button:not(.active):hover { color: var(--accent); }
+
+#formEntrar:not(.hidden),
+#formCadastrar:not(.hidden) { animation: ma-sobe 0.3s ease both; }
+
+.form-area input { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.form-area input:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(52, 170, 124, 0.18);
+}
+
+.form-extra a:hover { text-decoration: underline; }
+
+.primary.ghost:hover { box-shadow: none; background: rgba(52, 170, 124, 0.1); }
+
+/* Ajustes de layout */
+.benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.benefits li:last-child { grid-column: 1 / -1; }
+.form-area { padding-right: 0; scrollbar-gutter: stable both-edges; margin: 0 -6px; }
+.form-area::-webkit-scrollbar { width: 6px; }
+
+@media (max-width: 560px) {
+    .benefits { grid-template-columns: 1fr; }
+    .glass-card { padding: 28px 22px; min-height: 0; }
+    .card-head { flex-wrap: wrap; }
+    .tema-toggle { top: 12px; right: 12px; }
 }

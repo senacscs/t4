@@ -555,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const toggle = document.createElement('button');
             toggle.className = `alarme-toggle ${alarme.ativo ? 'ativo' : ''}`;
-            toggle.innerHTML = alarme.ativo ? '🔔' : '🔕';
+            toggle.innerHTML = alarme.ativo ? '<ion-icon name="notifications-outline"></ion-icon>' : '<ion-icon name="notifications-off-outline"></ion-icon>';
             toggle.title = alarme.ativo ? 'Desativar alarme' : 'Ativar alarme';
             toggle.addEventListener('click', () => toggleAlarme(alarme.id));
             
@@ -724,7 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (anotacoesMedicas.length === 0) {
             anotacoesList.innerHTML = `
                 <div class="empty-state">
-                    <div class="empty-icon">📋</div>
+                    <div class="empty-icon"><ion-icon name="clipboard-outline"></ion-icon></div>
                     <h3>Nenhuma anotação médica ainda</h3>
                     <p class="muted-text">Quando seu médico enviar orientações ou observações importantes, elas aparecerão aqui.</p>
                 </div>
