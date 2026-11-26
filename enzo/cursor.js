@@ -829,3 +829,12 @@ window.addEventListener('scroll', function() {
   }
 });
 
+/* Botão Light/Darkmode*/
+const btnTema = document.getElementById("btn-tema");
+
+  btnTema.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    const modoClaroAtivo = document.body.classList.contains("light-mode");
+    btnTema.textContent = modoClaroAtivo ? "🌙 Dark" : "☀️ Light";
+  });
+
