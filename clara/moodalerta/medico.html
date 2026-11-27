@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f6b4a">
+    <title>MoodAlert · Painel médico</title>
+    <link rel="icon" href="assets/img/icone.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/ui.js"></script>
+</head>
+<body class="app-page">
+    <header class="appbar">
+        <div class="appbar-inner">
+            <a class="brand" href="medico.html" aria-label="MoodAlert, início">
+                <span class="brand-mark"><ion-icon name="pulse"></ion-icon></span>
+                <span>MoodAlert</span>
+            </a>
+            <nav class="nav" aria-label="Menu do médico">
+                <button class="nav-btn" type="button" data-target="painel"><ion-icon name="grid-outline"></ion-icon><span>Painel</span></button>
+                <button class="nav-btn" type="button" data-target="pacientes"><ion-icon name="people-outline"></ion-icon><span>Pacientes</span></button>
+                <button class="nav-btn" type="button" data-target="acompanhar"><ion-icon name="pulse-outline"></ion-icon><span>Acompanhar</span></button>
+            </nav>
+            <div class="appbar-right">
+                <button type="button" class="icon-btn" data-tema-toggle title="Usar tema escuro" aria-label="Usar tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
+                <div class="user-chip" id="userChip" role="button" tabindex="0" aria-label="Abrir meu perfil">
+                    <span class="avatar" id="userAvatar" aria-hidden="true"></span>
+                    <span class="chip-text">
+                        <strong id="userNome">Carregando…</strong>
+                        <small>Médico</small>
+                    </span>
+                </div>
+                <button type="button" class="icon-btn" id="btnSair" title="Sair" aria-label="Sair"><ion-icon name="log-out-outline"></ion-icon></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- PAINEL -->
+        <section class="panel" data-section="painel" aria-labelledby="tituloPainel">
+            <div class="panel-head">
+                <div>
+                    <p class="eyebrow" id="saudacao"></p>
+                    <h1 id="tituloPainel">Painel</h1>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-ghost" type="button" id="btnAtualizar"><ion-icon name="refresh-outline"></ion-icon> Atualizar</button>
+                </div>
+            </div>
+
+            <div class="stats card">
+                <div class="stat"><span class="stat-label">Pacientes ativos</span><span class="stat-number" id="statPacientes">–</span></div>
+                <div class="stat"><span class="stat-label">Registraram hoje</span><span class="stat-number" id="statHoje">–</span></div>
+                <div class="stat"><span class="stat-label">Anotações feitas</span><span class="stat-number" id="statAnotacoes">–</span></div>
+                <div class="stat alerta"><span class="stat-label">Alertas (7 dias)</span><span class="stat-number" id="statAlertas">–</span></div>
+            </div>
+
+            <div class="layout-side">
+                <div class="card table-card">
+                    <div class="card-title"><h2>Pacientes por atividade recente</h2></div>
+                    <div class="table-head painel-cols" aria-hidden="true">
+                        <span>Paciente</span><span>Últimos 14 dias</span><span>Situação</span>
+                    </div>
+                    <div class="list" id="listaRecentes"></div>
+                </div>
+                <aside class="side">
+                    <section class="side-box">
+                        <h3>Alertas</h3>
+                        <div class="list" id="listaAlertas"></div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+
+        <!-- PACIENTES -->
+        <section class="panel" data-section="pacientes" aria-labelledby="tituloPacientes" hidden>
+            <div class="panel-head">
+                <div>
+                    <h1 id="tituloPacientes">Pacientes</h1>
+                    <p class="muted">Pacientes vinculados à sua conta.</p>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-primary" type="button" id="btnAdicionar"><ion-icon name="person-add-outline"></ion-icon> Adicionar paciente</button>
+                </div>
+            </div>
+            <div class="card table-card">
+                <div class="table-toolbar">
+                    <label class="search-box"><ion-icon name="search-outline"></ion-icon><input type="search" class="input" id="filtroNome" placeholder="Buscar pelo nome" aria-label="Buscar paciente pelo nome"></label>
+                </div>
+                <div class="table-head pac-cols" aria-hidden="true">
+                    <span>Paciente</span><span>Últimos 14 dias</span><span>Último humor</span><span>Atividade</span><span>Anotações</span><span>Situação</span><span></span>
+                </div>
+                <div class="list" id="gradePacientes"></div>
+            </div>
+        </section>
+
+        <!-- ACOMPANHAR -->
+        <section class="panel" data-section="acompanhar" aria-labelledby="tituloAcompanhar" hidden>
+            <div class="panel-head">
+                <div>
+                    <h1 id="tituloAcompanhar">Acompanhar paciente</h1>
+                    <p class="muted">Afetivograma, diário e anotações de um paciente.</p>
+                </div>
+            </div>
+
+            <div class="picker">
+                <label class="field">
+                    <span>Paciente</span>
+                    <select id="selecionarPaciente">
+                        <option value="">Selecione um paciente</option>
+                    </select>
+                </label>
+                <form class="field" id="formBuscar">
+                    <span>Buscar pelo código</span>
+                    <div class="input-group">
+                        <input type="text" class="input" name="codigo" placeholder="Ex.: K7P-Q3M" autocomplete="off" aria-label="Código do paciente">
+                        <button class="btn btn-ghost" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="detalhe" hidden>
+                <div class="card patient-banner" id="bannerPaciente"></div>
+
+                <div class="tabs" role="tablist" aria-label="Dados do paciente">
+                    <button class="tab active" type="button" role="tab" data-tab="afetivo" aria-selected="true">Afetivograma</button>
+                    <button class="tab" type="button" role="tab" data-tab="diario" aria-selected="false">Diário</button>
+                    <button class="tab" type="button" role="tab" data-tab="notas" aria-selected="false">Anotações</button>
+                </div>
+
+                <div class="tab-panels">
+                    <div class="card cal-card" data-tab-panel="afetivo" id="calendarioPaciente" role="tabpanel"></div>
+                    <div data-tab-panel="diario" role="tabpanel" hidden>
+                        <div class="list" id="diarioPaciente"></div>
+                    </div>
+                    <div data-tab-panel="notas" role="tabpanel" hidden>
+                        <div class="grid-2">
+                            <div class="card">
+                                <div class="card-title">
+                                    <h3>Visíveis ao paciente</h3>
+                                </div>
+                                <div class="list" id="notasPublicas"></div>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">
+                                    <h3>Privadas</h3>
+                                </div>
+                                <div class="list" id="notasPrivadas"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="detalheVazio">
+                <div class="empty">
+                    <div class="empty-icon"><ion-icon name="person-outline"></ion-icon></div>
+                    <h3>Nenhum paciente selecionado</h3>
+                    <p>Escolha um paciente na lista ou busque pelo código.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal: nova anotação -->
+    <div class="modal" id="modalAnotacao" role="dialog" aria-modal="true" aria-labelledby="tituloModalAnotacao" aria-hidden="true">
+        <div class="modal-content">
+            <button type="button" class="icon-btn modal-close" data-fechar aria-label="Fechar"><ion-icon name="close"></ion-icon></button>
+            <div class="modal-head">
+                <div class="modal-icon"><ion-icon name="create-outline"></ion-icon></div>
+                <div>
+                    <h3 id="tituloModalAnotacao">Nova anotação</h3>
+                    <p id="subtituloAnotacao">Para o paciente</p>
+                </div>
+            </div>
+            <form class="form-stack" id="formAnotacao" novalidate>
+                <div class="form-alert" data-alerta hidden><ion-icon name="alert-circle"></ion-icon><span></span></div>
+                <div class="form-grid">
+                    <label class="field">
+                        <span>Tipo</span>
+                        <select name="tipo" required>
+                            <option value="orientacao">Orientação</option>
+                            <option value="observacao">Observação</option>
+                            <option value="recomendacao">Recomendação</option>
+                            <option value="alerta">Alerta</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span>Prioridade</span>
+                        <select name="prioridade">
+                            <option value="baixa">Baixa</option>
+                            <option value="media" selected>Média</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </label>
+                </div>
+                <fieldset>
+                    <legend class="field-label">Visibilidade</legend>
+                    <div class="choice-group">
+                        <label class="choice"><input type="radio" name="visibilidade" value="paciente" checked><span><ion-icon name="eye-outline"></ion-icon> Paciente vê</span></label>
+                        <label class="choice"><input type="radio" name="visibilidade" value="privada"><span><ion-icon name="lock-closed-outline"></ion-icon> Privada</span></label>
+                    </div>
+                </fieldset>
+                <label class="field">
+                    <span>Conteúdo</span>
+                    <textarea name="conteudo" rows="6" maxlength="2000" placeholder="Escreva a anotação…" required></textarea>
+                    <small class="char-count" id="contadorAnotacao">0/2000</small>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" data-fechar>Cancelar</button>
+                    <button type="submit" class="btn btn-primary"><ion-icon name="save-outline"></ion-icon> Salvar anotação</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: adicionar paciente -->
+    <div class="modal" id="modalAdicionar" role="dialog" aria-modal="true" aria-labelledby="tituloModalAdicionar" aria-hidden="true">
+        <div class="modal-content">
+            <button type="button" class="icon-btn modal-close" data-fechar aria-label="Fechar"><ion-icon name="close"></ion-icon></button>
+            <div class="modal-head">
+                <div class="modal-icon"><ion-icon name="person-add-outline"></ion-icon></div>
+                <div>
+                    <h3 id="tituloModalAdicionar">Adicionar paciente</h3>
+                    <p>Digite o código que aparece no perfil do paciente.</p>
+                </div>
+            </div>
+            <form class="form-stack" id="formAdicionar" novalidate>
+                <div class="form-alert" data-alerta hidden><ion-icon name="alert-circle"></ion-icon><span></span></div>
+                <label class="field">
+                    <span>Código do paciente</span>
+                    <input type="text" name="codigo" placeholder="Ex.: K7P-Q3M" autocomplete="off" required class="input-code">
+                    <small>O ID completo da conta também funciona.</small>
+                </label>
+                <div id="previaPaciente"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" data-fechar>Cancelar</button>
+                    <button type="submit" class="btn btn-primary"><ion-icon name="person-add-outline"></ion-icon> Adicionar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/seguranca.js"></script>
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/afetivograma.js"></script>
+    <script src="assets/js/perfil.js"></script>
+    <script src="assets/js/medico.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

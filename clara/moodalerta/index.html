@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="MoodAlert: monitoramento de transtorno bipolar com afetivograma, diário, alarmes e acompanhamento médico.">
+    <meta name="theme-color" content="#0f6b4a">
+    <title>MoodAlert · Entrar</title>
+    <link rel="icon" href="assets/img/icone.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/js/ui.js"></script>
+</head>
+<body class="login-page">
+    <main class="login">
+        <div class="login-card">
+            <!-- Lado da marca -->
+            <section class="login-brand" aria-labelledby="titulo-marca">
+                <!-- Decoração: textura de pontos, brilhos e ondas de humor -->
+                <div class="brand-deco" aria-hidden="true">
+                    <span class="brand-glow g1"></span>
+                    <span class="brand-glow g2"></span>
+                    <svg class="brand-waves" viewBox="0 0 600 160" preserveAspectRatio="none">
+                        <path class="w1" d="M0 90 C 75 40, 150 40, 225 90 S 375 140, 450 90 S 600 40, 675 90 S 825 140, 900 90 S 1050 40, 1125 90 S 1275 140, 1350 90" />
+                        <path class="w2" d="M0 110 C 100 70, 200 70, 300 110 S 500 150, 600 110 S 800 70, 900 110 S 1100 150, 1200 110" />
+                    </svg>
+                </div>
+
+                <div class="brand-row">
+                    <span class="brand-mark"><ion-icon name="pulse"></ion-icon></span>
+                    <span>MoodAlert</span>
+                </div>
+
+                <div class="brand-copy">
+                    <p class="eyebrow">Monitoramento de bipolaridade</p>
+                    <h1 id="titulo-marca">Registro diário de humor com acompanhamento médico.</h1>
+                    <p class="lead">O paciente registra como se sente e o médico acompanha a evolução em tempo real.</p>
+                    <ul class="brand-feats">
+                        <li><ion-icon name="calendar-outline"></ion-icon>Afetivograma mensal</li>
+                        <li><ion-icon name="book-outline"></ion-icon>Diário privado</li>
+                        <li><ion-icon name="alarm-outline"></ion-icon>Lembretes de medicação</li>
+                    </ul>
+                </div>
+
+                <!-- Prévia ilustrativa do afetivograma (montada pelo login.js com o mês atual) -->
+                <div class="cal-wrap" aria-hidden="true">
+                <div class="float-chip c1"><span class="dot leve"></span><div><small>Hoje, 08:40</small><b>Humor registrado</b></div></div>
+                <div class="float-chip c2"><ion-icon name="pulse"></ion-icon><div><small>Médico</small><b>Acompanhando</b></div></div>
+                <div class="cal-card">
+                    <div class="cal-card-head">
+                        <div>
+                            <small>Afetivograma</small>
+                            <strong id="previewMes">Este mês</strong>
+                        </div>
+                        <span class="cal-badge" id="previewBadge">0 dias registrados</span>
+                    </div>
+                    <div class="cal-mini" id="previewGrid"></div>
+                    <div class="cal-legend">
+                        <span class="leve">Leve</span>
+                        <span class="neutro">Neutro</span>
+                        <span class="elevada">Elevada</span>
+                        <span class="critica">Crítica</span>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Lado do formulário -->
+            <section class="login-form">
+                <button type="button" class="icon-btn tema-toggle" data-tema-toggle title="Usar tema escuro" aria-label="Usar tema escuro">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+
+                <header class="form-head">
+                    <h2 id="tituloCartao">Entre na plataforma</h2>
+                    <p id="subtituloCartao">Que bom ter você de volta.</p>
+                </header>
+
+                <div class="tab-switch" role="tablist" aria-label="Acesso" data-aba="entrar">
+                    <span class="tab-indicator" aria-hidden="true"></span>
+                    <button type="button" role="tab" id="abaEntrar" class="active" aria-selected="true" aria-controls="formEntrar">Entrar</button>
+                    <button type="button" role="tab" id="abaCadastrar" aria-selected="false" aria-controls="formCadastrar" tabindex="-1">Cadastrar</button>
+                </div>
+
+                <div class="forms">
+                    <!-- Entrar -->
+                    <form class="auth-form" id="formEntrar" role="tabpanel" aria-labelledby="abaEntrar" novalidate>
+                        <div class="form-alert" data-alerta hidden><ion-icon name="alert-circle"></ion-icon><span></span></div>
+                        <label class="field">
+                            <span>E-mail</span>
+                            <div class="input-wrap">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <input type="email" name="email" placeholder="nome@email.com" autocomplete="email" required>
+                            </div>
+                        </label>
+                        <label class="field">
+                            <span class="field-row">Senha <button type="button" class="link-btn" id="esqueciSenha">Esqueci a senha</button></span>
+                            <div class="input-wrap">
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                <input type="password" name="senha" placeholder="Sua senha" autocomplete="current-password" required>
+                                <button type="button" class="password-toggle" aria-label="Mostrar senha"><ion-icon name="eye-outline"></ion-icon></button>
+                            </div>
+                        </label>
+                        <button type="submit" class="btn btn-primary btn-cta">Acessar <ion-icon name="arrow-forward"></ion-icon></button>
+
+                        <div class="login-note">
+                            <ion-icon name="shield-checkmark-outline"></ion-icon>
+                            <p>Sua senha é guardada só como código criptografado. Nem o seu médico consegue vê-la.</p>
+                        </div>
+
+                        <p class="switch-hint">Ainda não tem conta? <button type="button" class="link-btn" data-ir="cadastrar">Cadastre-se</button></p>
+                    </form>
+
+                    <!-- Cadastrar -->
+                    <form class="auth-form inativo" id="formCadastrar" role="tabpanel" aria-labelledby="abaCadastrar" inert novalidate>
+                        <div class="form-alert" data-alerta hidden><ion-icon name="alert-circle"></ion-icon><span></span></div>
+                        <div class="role-picker" role="radiogroup" aria-label="Tipo de conta">
+                            <label class="role">
+                                <input type="radio" name="tipo" value="paciente" checked>
+                                <span><ion-icon name="happy-outline"></ion-icon><b>Sou paciente</b></span>
+                            </label>
+                            <label class="role">
+                                <input type="radio" name="tipo" value="medico">
+                                <span><ion-icon name="medkit-outline"></ion-icon><b>Sou médico</b></span>
+                            </label>
+                        </div>
+                        <label class="field">
+                            <span>Nome completo</span>
+                            <div class="input-wrap">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" required minlength="3" maxlength="80">
+                            </div>
+                        </label>
+                        <div class="form-grid">
+                            <label class="field">
+                                <span>E-mail</span>
+                                <div class="input-wrap">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="email" name="email" placeholder="nome@email.com" autocomplete="email" required>
+                                </div>
+                            </label>
+                            <div class="slot-extra" data-tipo="paciente">
+                                <label class="field extra-paciente">
+                                    <span>Nascimento <span class="optional">(opcional)</span></span>
+                                    <div class="input-wrap">
+                                        <ion-icon name="calendar-outline"></ion-icon>
+                                        <input type="date" name="nascimento">
+                                    </div>
+                                </label>
+                                <label class="field extra-medico">
+                                    <span>CRM <span class="optional">(opcional)</span></span>
+                                    <div class="input-wrap">
+                                        <ion-icon name="id-card-outline"></ion-icon>
+                                        <input type="text" name="crm" placeholder="123456/SC" maxlength="20" tabindex="-1">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <label class="field">
+                                <span>Senha</span>
+                                <div class="input-wrap">
+                                    <ion-icon name="lock-closed-outline"></ion-icon>
+                                    <input type="password" name="senha" placeholder="8+ caracteres" autocomplete="new-password" required minlength="8">
+                                    <button type="button" class="password-toggle" aria-label="Mostrar senha"><ion-icon name="eye-outline"></ion-icon></button>
+                                </div>
+                            </label>
+                            <label class="field">
+                                <span>Confirmar senha</span>
+                                <div class="input-wrap">
+                                    <ion-icon name="checkmark-done-outline"></ion-icon>
+                                    <input type="password" name="confirmar" placeholder="Repita a senha" autocomplete="new-password" required>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="strength" data-nivel="0" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="strength-label"></span></div>
+                        <button type="submit" class="btn btn-primary btn-cta">Criar conta <ion-icon name="arrow-forward"></ion-icon></button>
+                        <p class="switch-hint">Já tem conta? <button type="button" class="link-btn" data-ir="entrar">Entrar</button></p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Esqueci a senha -->
+    <div class="modal" id="modalSenha" role="dialog" aria-modal="true" aria-labelledby="tituloModalSenha" aria-hidden="true">
+        <div class="modal-content">
+            <button type="button" class="icon-btn modal-close" data-fechar aria-label="Fechar"><ion-icon name="close"></ion-icon></button>
+            <div class="modal-head">
+                <div class="modal-icon"><ion-icon name="key-outline"></ion-icon></div>
+                <div>
+                    <h3 id="tituloModalSenha">Esqueceu a senha?</h3>
+                    <p>Por segurança, ninguém consegue ver a sua senha: ela fica guardada só como um código criptografado.</p>
+                </div>
+            </div>
+            <p class="muted">Para recuperar o acesso, fale com o seu médico ou com o responsável pela plataforma. Depois de entrar, você pode trocar a senha em <strong>Perfil → Trocar senha</strong>.</p>
+            <div class="modal-actions" style="margin-top:1.4rem">
+                <button type="button" class="btn btn-primary" data-fechar>Entendi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/seguranca.js"></script>
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

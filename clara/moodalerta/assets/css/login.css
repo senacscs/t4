@@ -1,0 +1,993 @@
+/* =========================================================
+   MoodAlert · Tela de login (design v4)
+   Um cartão único e centralizado: marca à esquerda,
+   formulário à direita. Nada muda de lugar ao trocar a aba.
+   ========================================================= */
+
+.login-page {
+    /* fundo e bolhas vêm do base.css (mesmo efeito da versão original) */
+}
+
+.login {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 2rem 1.25rem;
+}
+
+.login-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    width: min(100%, 68rem);
+    border: 1px solid var(--glass-line);
+    border-radius: var(--radius-xl);
+    background: var(--glass-strong);
+    backdrop-filter: blur(18px) saturate(1.2);
+    -webkit-backdrop-filter: blur(18px) saturate(1.2);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: surgir 0.5s var(--ease) both;
+}
+
+/* ==================== Lado da marca ==================== */
+.login-brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+    color: #e9f6f0;
+    background: #0c4a35;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.brand-copy .eyebrow {
+    color: rgba(233, 246, 240, 0.7);
+    font-size: 0.86rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.brand-copy h1 {
+    margin-top: 0.85rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #fff;
+    max-width: 22ch;
+}
+
+.brand-copy .lead {
+    margin-top: 1rem;
+    max-width: 40ch;
+    color: rgba(233, 246, 240, 0.78);
+    font-size: 1rem;
+}
+
+/* ---------- Prévia do afetivograma ---------- */
+.cal-card {
+    margin-top: auto;
+    padding: 1.15rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cal-card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.cal-card-head small {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(233, 246, 240, 0.6);
+}
+
+.cal-card-head strong {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.cal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 1.65rem;
+    padding: 0 0.65rem;
+    border-radius: 999px;
+    background: rgba(127, 224, 184, 0.14);
+    color: #9ff0cd;
+    font-size: 0.74rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.cal-mini {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.35rem;
+}
+
+.cal-mini .sem {
+    padding-bottom: 0.15rem;
+    text-align: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: rgba(233, 246, 240, 0.45);
+}
+
+.cal-mini i {
+    display: grid;
+    place-items: center;
+    height: 1.9rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(233, 246, 240, 0.55);
+    font-size: 0.72rem;
+    font-style: normal;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    animation: surgir 0.4s var(--ease) both;
+}
+
+.cal-mini i.vazio {
+    background: none;
+}
+
+.cal-mini i.leve { background: rgba(var(--leve), 0.85); color: #fff; }
+.cal-mini i.neutro { background: rgba(170, 186, 179, 0.45); color: #fff; }
+.cal-mini i.elevada { background: rgba(var(--elevada), 0.9); color: #2b1d00; }
+.cal-mini i.critica { background: rgba(var(--critica), 0.9); color: #fff; }
+
+.cal-mini i.hoje {
+    box-shadow: 0 0 0 2px #06281d, 0 0 0 3.5px #9ff0cd;
+}
+
+.cal-mini i.futuro {
+    background: none;
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    color: rgba(233, 246, 240, 0.3);
+}
+
+.cal-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-top: 0.9rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: rgba(233, 246, 240, 0.7);
+}
+
+.cal-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cal-legend span::before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 3px;
+}
+
+.cal-legend .leve::before { background: rgb(var(--leve)); }
+.cal-legend .neutro::before { background: rgb(170, 186, 179); }
+.cal-legend .elevada::before { background: rgb(var(--elevada)); }
+.cal-legend .critica::before { background: rgb(var(--critica)); }
+
+/* ==================== Lado do formulário ==================== */
+.login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2.75rem;
+}
+
+.tema-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.form-head {
+    padding-right: 3rem;
+}
+
+.form-head h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.form-head p {
+    margin-top: 0.3rem;
+    color: var(--muted);
+}
+
+/* ---------- Abas com indicador deslizante ---------- */
+.tab-switch {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1.6rem 0 1.5rem;
+    padding: 0.3rem;
+    border-radius: 8px;
+    background: var(--surface-3);
+}
+
+.tab-indicator {
+    position: absolute;
+    top: 0.3rem;
+    bottom: 0.3rem;
+    left: 0.3rem;
+    width: calc(50% - 0.3rem);
+    border-radius: 7px;
+    background: var(--surface);
+    box-shadow: 0 1px 2px rgba(15, 31, 25, 0.08), 0 4px 12px rgba(15, 31, 25, 0.08);
+    transition: transform 0.32s var(--ease);
+}
+
+:root[data-theme="dark"] .tab-indicator {
+    background: var(--line-2);
+}
+
+.tab-switch[data-aba="cadastrar"] .tab-indicator {
+    transform: translateX(100%);
+}
+
+.tab-switch button {
+    position: relative;
+    z-index: 1;
+    height: 2.5rem;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.tab-switch button.active {
+    color: var(--text);
+}
+
+/* ---------- Formulários: os dois ocupam a mesma célula ---------- */
+.forms {
+    display: grid;
+    flex: 1;
+}
+
+.auth-form {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: opacity 0.2s ease;
+}
+
+.auth-form.inativo {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* O aviso de erro cobre o título do cartão: não empurra nada. */
+.auth-form .form-alert {
+    position: absolute;
+    z-index: 2;
+    top: 2.35rem;
+    left: 2.75rem;
+    right: 2.75rem;
+    min-height: 3.6rem;
+    background: var(--surface);
+    background-image: linear-gradient(rgba(var(--critica), 0.08), rgba(var(--critica), 0.08));
+    box-shadow: var(--shadow-sm);
+    animation: surgir 0.2s ease;
+}
+
+.auth-form .form-alert.ok {
+    background-image: linear-gradient(rgba(var(--leve), 0.1), rgba(var(--leve), 0.1));
+}
+
+/* ---------- Campos com ícone ---------- */
+.field-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field-row .link-btn {
+    font-size: 0.8rem;
+}
+
+.input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 2.95rem;
+    padding: 0 0.9rem;
+    border: 1px solid var(--line-2);
+    border-radius: 8px;
+    background: var(--surface);
+    transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.input-wrap:hover {
+    border-color: var(--muted);
+}
+
+.input-wrap:focus-within {
+    border-color: var(--brand-500);
+    box-shadow: 0 0 0 4px var(--focus);
+}
+
+.input-wrap > ion-icon {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.input-wrap:focus-within > ion-icon {
+    color: var(--brand-500);
+}
+
+.field .input-wrap input:not([type="radio"]):not([type="checkbox"]) {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    border: none !important;
+    background: transparent;
+    box-shadow: none !important;
+    font-size: 0.95rem;
+}
+
+.input-wrap input:focus {
+    outline: none;
+}
+
+.input-wrap input[type="date"] {
+    cursor: pointer;
+}
+
+.input-wrap input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+}
+
+.password-toggle {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: -0.45rem;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.password-toggle:hover {
+    background: var(--surface-3);
+    color: var(--text);
+}
+
+/* ---------- Tipo de conta ---------- */
+.role-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.role {
+    position: relative;
+}
+
+.role input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.role span {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 3rem;
+    padding: 0 0.9rem;
+    border: 1px solid var(--line-2);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-2);
+    cursor: pointer;
+    transition: all 0.18s;
+}
+
+.role span ion-icon {
+    font-size: 1.25rem;
+    color: var(--muted);
+    transition: color 0.18s;
+}
+
+.role b {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.role span:hover {
+    border-color: var(--muted);
+}
+
+.role input:checked + span {
+    border-color: var(--brand-500);
+    background: var(--brand-50);
+    color: var(--text);
+    box-shadow: inset 0 0 0 1px var(--brand-500);
+}
+
+.role input:checked + span ion-icon {
+    color: var(--brand-500);
+}
+
+.role input:focus-visible + span {
+    box-shadow: 0 0 0 3px var(--focus);
+}
+
+/* ---------- Campo extra: nascimento (paciente) ou CRM (médico) no mesmo lugar ---------- */
+.slot-extra {
+    display: grid;
+}
+
+.slot-extra > .field {
+    grid-area: 1 / 1;
+    transition: opacity 0.18s ease;
+}
+
+.slot-extra .extra-medico,
+.slot-extra[data-tipo="medico"] .extra-paciente {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slot-extra[data-tipo="medico"] .extra-medico {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ---------- Força da senha ---------- */
+.strength {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: -0.35rem;
+}
+
+.strength i {
+    height: 4px;
+    border-radius: 99px;
+    background: var(--line);
+    transition: background 0.25s;
+}
+
+.strength-label {
+    min-width: 4.5rem;
+    text-align: right;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.strength[data-nivel="1"] i:nth-child(-n+1) { background: rgb(var(--critica)); }
+.strength[data-nivel="2"] i:nth-child(-n+2) { background: rgb(var(--elevada)); }
+.strength[data-nivel="3"] i:nth-child(-n+3) { background: rgb(var(--leve)); }
+.strength[data-nivel="4"] i:nth-child(-n+4) { background: var(--brand); }
+
+.strength[data-nivel="1"] .strength-label::after { content: 'Fraca'; color: var(--danger); }
+.strength[data-nivel="2"] .strength-label::after { content: 'Razoável'; color: var(--warning); }
+.strength[data-nivel="3"] .strength-label::after { content: 'Boa'; color: var(--success); }
+.strength[data-nivel="4"] .strength-label::after { content: 'Forte'; color: var(--success); }
+
+/* ---------- Botão e rodapé do formulário ---------- */
+.btn-cta {
+    height: 3.05rem;
+    margin-top: 0.25rem;
+    font-size: 0.98rem;
+}
+
+.btn-cta ion-icon {
+    transition: transform 0.2s var(--ease);
+}
+
+
+
+.login-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 0.84rem;
+}
+
+.login-note ion-icon {
+    margin-top: 0.1rem;
+    color: var(--brand-500);
+    font-size: 1.15rem;
+}
+
+.switch-hint {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ==================== Responsivo ==================== */
+@media (max-width: 960px) {
+    .login-card {
+        grid-template-columns: 1fr;
+        width: min(100%, 32rem);
+    }
+
+    .login-brand {
+        gap: 1.25rem;
+        padding: 1.75rem 1.75rem 1.9rem;
+    }
+
+    .brand-copy h1 {
+        font-size: 1.75rem;
+    }
+
+    .brand-copy .lead {
+        font-size: 0.94rem;
+    }
+
+    .cal-card {
+        display: none;
+    }
+
+    .login-form {
+        padding: 1.9rem 1.75rem 2rem;
+    }
+
+    .auth-form .form-alert {
+        top: 1.75rem;
+        left: 1.75rem;
+        right: 1.75rem;
+    }
+
+    .tema-toggle {
+        top: 1.6rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .login {
+        padding: 0;
+        place-items: stretch;
+    }
+
+    .login-card {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+
+    .login-brand {
+        padding: 1.5rem 1.25rem 1.75rem;
+    }
+
+    .brand-copy h1 {
+        font-size: 1.5rem;
+    }
+
+    .login-form {
+        margin-top: -1rem;
+        padding: 1.6rem 1.25rem calc(1.75rem + env(safe-area-inset-bottom));
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        background: var(--surface);
+    }
+
+    .auth-form .form-alert {
+        top: 1.5rem;
+        left: 1.25rem;
+        right: 1.25rem;
+    }
+
+    .tema-toggle {
+        top: 1.4rem;
+        right: 1.25rem;
+    }
+
+    .form-head h2 {
+        font-size: 1.35rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================== Enfeites (rodada 11) ==================== */
+.login-brand {
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(120% 80% at 0% 0%, #13684a 0%, transparent 60%),
+        radial-gradient(90% 70% at 100% 100%, #0a3d2c 0%, transparent 70%),
+        #0c4a35;
+}
+
+.brand-deco {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* textura de pontos que some para baixo */
+.brand-deco::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1.3px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 75%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 75%);
+}
+
+.brand-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.55;
+    animation: brilhoFlutua 14s ease-in-out infinite alternate;
+}
+
+.brand-glow.g1 {
+    width: 18rem;
+    height: 18rem;
+    top: -6rem;
+    right: -5rem;
+    background: #2fbf86;
+}
+
+.brand-glow.g2 {
+    width: 14rem;
+    height: 14rem;
+    bottom: 4rem;
+    left: -6rem;
+    background: #1d8f8a;
+    animation-duration: 18s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes brilhoFlutua {
+    to { transform: translate(-2.5rem, 2rem) scale(1.15); }
+}
+
+.brand-waves {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 9rem;
+    animation: ondas 22s linear infinite;
+}
+
+.brand-waves path {
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+
+.brand-waves .w1 { stroke: rgba(255, 255, 255, 0.14); }
+.brand-waves .w2 { stroke: rgba(126, 231, 186, 0.18); stroke-dasharray: 4 8; }
+
+@keyframes ondas {
+    to { transform: translateX(-50%); }
+}
+
+.brand-mark {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    position: relative;
+}
+
+.brand-mark::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 10px;
+    border: 1px solid rgba(126, 231, 186, 0.45);
+    animation: pulsoMarca 2.8s ease-out infinite;
+}
+
+@keyframes pulsoMarca {
+    0% { transform: scale(0.85); opacity: 0.9; }
+    100% { transform: scale(1.35); opacity: 0; }
+}
+
+.brand-copy > * {
+    animation: subirLeve 0.6s var(--ease) both;
+}
+.brand-copy > :nth-child(2) { animation-delay: 0.08s; }
+.brand-copy > :nth-child(3) { animation-delay: 0.16s; }
+.brand-copy > :nth-child(4) { animation-delay: 0.24s; }
+
+.brand-feats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.4rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.brand-feats li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.38rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(233, 246, 240, 0.92);
+    font-size: 0.8rem;
+    font-weight: 500;
+    backdrop-filter: blur(6px);
+}
+
+.brand-feats ion-icon {
+    color: #7ee7ba;
+    font-size: 0.95rem;
+}
+
+/* prévia com cartões flutuando por cima */
+.cal-wrap {
+    position: relative;
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+.cal-wrap .cal-card {
+    margin-top: 0;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.45);
+    animation: subirLeve 0.7s var(--ease) 0.3s both;
+}
+
+.float-chip {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.85rem 0.55rem 0.65rem;
+    border-radius: 12px;
+    background: #fff;
+    color: #12352a;
+    box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.5);
+    animation: chipEntra 0.6s cubic-bezier(0.2, 1.2, 0.35, 1) both, chipFlutua 5s ease-in-out infinite alternate;
+}
+
+.float-chip small {
+    display: block;
+    color: #5d7a70;
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+
+.float-chip b {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.float-chip .dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: rgb(var(--leve));
+    box-shadow: 0 0 0 4px rgba(var(--leve), 0.2);
+}
+
+.float-chip ion-icon {
+    display: grid;
+    padding: 0.3rem;
+    border-radius: 8px;
+    background: #e3f5ec;
+    color: #0f6b4a;
+    font-size: 1rem;
+}
+
+.float-chip.c1 {
+    top: -0.4rem;
+    right: 1.25rem;
+    animation-delay: 0.7s, 0s;
+}
+
+.float-chip.c2 {
+    bottom: 2.6rem;
+    right: -0.9rem;
+    animation-delay: 0.9s, 1.2s;
+}
+
+@keyframes chipEntra {
+    from { opacity: 0; transform: translateY(12px) scale(0.9); }
+}
+
+@keyframes chipFlutua {
+    from { translate: 0 0; }
+    to { translate: 0 -6px; }
+}
+
+/* dias da prévia aparecem em cascata */
+.cal-mini i {
+    animation: diaPop 0.35s cubic-bezier(0.2, 1.3, 0.4, 1) both;
+}
+.cal-mini i:nth-child(7n+1) { animation-delay: 0.45s; }
+.cal-mini i:nth-child(7n+2) { animation-delay: 0.5s; }
+.cal-mini i:nth-child(7n+3) { animation-delay: 0.55s; }
+.cal-mini i:nth-child(7n+4) { animation-delay: 0.6s; }
+.cal-mini i:nth-child(7n+5) { animation-delay: 0.65s; }
+.cal-mini i:nth-child(7n+6) { animation-delay: 0.7s; }
+.cal-mini i:nth-child(7n)   { animation-delay: 0.75s; }
+
+@keyframes diaPop {
+    from { opacity: 0; transform: scale(0.6); }
+}
+
+.cal-mini i.hoje {
+    animation: diaPop 0.35s cubic-bezier(0.2, 1.3, 0.4, 1) 0.8s both, hojePulsa 2.4s ease-in-out 1.2s infinite;
+}
+
+@keyframes hojePulsa {
+    50% { box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25); }
+}
+
+/* lado do formulário */
+.form-head h2,
+.form-head p,
+.tab-switch {
+    animation: subirLeve 0.5s var(--ease) both;
+}
+.form-head p { animation-delay: 0.06s; }
+.tab-switch { animation-delay: 0.12s; }
+
+.btn-cta {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 22px -12px rgba(15, 107, 74, 0.8);
+}
+
+.btn-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.btn-cta:hover::after {
+    left: 130%;
+}
+
+.btn-cta:hover ion-icon {
+    transform: translateX(3px);
+}
+
+@media (max-width: 960px) {
+    .cal-wrap { display: none; }
+    .brand-feats { margin-top: 1rem; }
+    .brand-waves { height: 6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-glow, .brand-waves, .brand-mark::after, .float-chip, .cal-mini i.hoje { animation: none !important; }
+}
+
+/* ==================== Ajustes (rodada 12) ==================== */
+.brand-row { font-size: 1.4rem; }
+.brand-mark { width: 2.6rem; height: 2.6rem; font-size: 1.4rem; }
+
+/* sem animações piscantes */
+.brand-mark::after { display: none; }
+.cal-mini i.hoje { animation: diaPop 0.35s cubic-bezier(0.2, 1.3, 0.4, 1) 0.8s both; }
+
+/* encontro verde/branco com curva invertida */
+.login-card { background: #0c4a35; }
+.login-form {
+    z-index: 1;
+    margin-left: -1.75rem;
+    border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+    background: var(--surface);
+    box-shadow: -12px 0 30px -18px rgba(0, 0, 0, 0.35);
+}
+.login-brand { padding-right: calc(2.5rem + 1.75rem); }
+
+/* verde do modo escuro: mais fechado e menos saturado */
+:root[data-theme="dark"] .login-card { background: #0b2a21; }
+:root[data-theme="dark"] .login-brand {
+    background:
+        radial-gradient(120% 80% at 0% 0%, #164a3a 0%, transparent 60%),
+        radial-gradient(90% 70% at 100% 100%, #071c16 0%, transparent 70%),
+        #0b2a21;
+}
+:root[data-theme="dark"] .brand-glow { opacity: 0.22; }
+:root[data-theme="dark"] .brand-deco::before { opacity: 0.6; }
+:root[data-theme="dark"] .login-form { box-shadow: -12px 0 30px -18px rgba(0, 0, 0, 0.7); }
+
+@media (max-width: 960px) {
+    .login-form { margin-left: 0; margin-top: -1.5rem; border-radius: var(--radius-xl) var(--radius-xl) 0 0; box-shadow: 0 -12px 30px -18px rgba(0, 0, 0, 0.35); }
+    .login-brand { padding-right: 1.75rem; padding-bottom: 3rem; }
+}
+@media (max-width: 560px) {
+    .login-form { margin-top: -1rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+    .login-brand { padding-right: 1.25rem; }
+}
+.login-card { border: none; }
+.login-form { border-radius: var(--radius-xl); }
+@media (max-width: 960px) { .login-form { border-radius: var(--radius-xl) var(--radius-xl) 0 0; } }
+.login-card, :root[data-theme="dark"] .login-card { background: transparent; box-shadow: none; overflow: visible; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.login-brand { border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); }
+.login-form { box-shadow: var(--shadow-lg), -12px 0 30px -18px rgba(0, 0, 0, 0.35); }
+@media (max-width: 560px) { .login-brand { border-radius: 0; box-shadow: none; } .login-form { box-shadow: none; } }
+
+/* ==================== Ajustes (rodada 13): menos altura no PC ==================== */
+.float-chip { display: none; }
+.cal-wrap { padding-top: 0; }
+@media (min-width: 961px) {
+    .brand-copy .lead { display: none; }
+    .login-brand { gap: 1.5rem; padding-top: 2rem; padding-bottom: 2rem; }
+    .login-form { padding-top: 2rem; padding-bottom: 2rem; }
+    .brand-copy h1 { margin-top: 0.6rem; }
+    .brand-feats { margin-top: 1.1rem; }
+    .cal-mini { gap: 0.35rem; }
+    .cal-mini i { height: 1.75rem; }
+}

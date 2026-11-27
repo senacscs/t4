@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f6b4a">
+    <title>MoodAlert · Paciente</title>
+    <link rel="icon" href="assets/img/icone.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/ui.js"></script>
+</head>
+<body class="app-page">
+    <header class="appbar">
+        <div class="appbar-inner">
+            <a class="brand" href="paciente.html" aria-label="MoodAlert, início">
+                <span class="brand-mark"><ion-icon name="pulse"></ion-icon></span>
+                <span>MoodAlert</span>
+            </a>
+            <nav class="nav" aria-label="Menu do paciente">
+                <button class="nav-btn" type="button" data-target="afetivograma"><ion-icon name="calendar-clear-outline"></ion-icon><span>Afetivograma</span></button>
+                <button class="nav-btn" type="button" data-target="diario"><ion-icon name="book-outline"></ion-icon><span>Diário</span></button>
+                <button class="nav-btn" type="button" data-target="alarmes"><ion-icon name="alarm-outline"></ion-icon><span>Alarmes</span></button>
+                <button class="nav-btn" type="button" data-target="anotacoes"><ion-icon name="document-text-outline"></ion-icon><span>Anotações</span><span class="nav-count" id="contadorAnotacoes" hidden></span></button>
+            </nav>
+            <div class="appbar-right">
+                <button type="button" class="icon-btn" data-tema-toggle title="Usar tema escuro" aria-label="Usar tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
+                <div class="user-chip" id="userChip" role="button" tabindex="0" aria-label="Abrir meu perfil">
+                    <span class="avatar" id="userAvatar" aria-hidden="true"></span>
+                    <span class="chip-text">
+                        <strong id="userNome">Carregando…</strong>
+                        <small>Paciente</small>
+                    </span>
+                </div>
+                <button type="button" class="icon-btn" id="btnSair" title="Sair" aria-label="Sair"><ion-icon name="log-out-outline"></ion-icon></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content" id="conteudo">
+        <!-- AFETIVOGRAMA -->
+        <section class="panel" data-section="afetivograma" aria-labelledby="tituloAfetivo">
+            <div class="panel-head">
+                <div>
+                    <p class="eyebrow" id="saudacao"></p>
+                    <h1 id="tituloAfetivo">Afetivograma</h1>
+                </div>
+                <div class="panel-actions">
+                    <button type="button" class="btn btn-primary" id="btnRegistrarHoje"><span id="hojeBotao">Registrar hoje</span></button>
+                </div>
+            </div>
+
+            <div class="layout-side">
+                <div class="card cal-card" id="calendario"></div>
+                <aside class="side">
+                    <section class="side-box" id="hojeCard">
+                        <h3>Hoje</h3>
+                        <strong class="today-status" id="hojeTitulo"><span class="status-dot vazio" aria-hidden="true"></span>Carregando…</strong>
+                        <p class="today-meta" id="hojeTexto"></p>
+                        <div class="quick-emotions" id="hojeRapido" hidden>
+                            <span class="quick-title">Como você está agora?</span>
+                            <div class="quick-list" id="hojeOpcoes"></div>
+                        </div>
+                    </section>
+                    <section class="side-box">
+                        <h3>Resumo do mês</h3>
+                        <dl class="summary-list" id="resumoMes"></dl>
+                    </section>
+                    <section class="side-box">
+                        <h3>Código de paciente</h3>
+                        <p class="code-big" id="sidebarCodigo">—</p>
+                        <p class="side-note">Informe este código ao seu médico para que ele acompanhe seus registros.</p>
+                    </section>
+                </aside>
+            </div>
+        </section>
+
+        <!-- DIÁRIO -->
+        <section class="panel" data-section="diario" aria-labelledby="tituloDiario" hidden>
+            <div class="panel-head">
+                <div>
+                    <h1 id="tituloDiario">Diário</h1>
+                    <p class="muted">Texto livre sobre o seu dia. Cada dia mostra também o humor registrado no afetivograma.</p>
+                </div>
+            </div>
+
+            <div class="layout-side">
+                <div class="stack">
+                    <form class="card diario-form" id="formDiario" novalidate>
+                        <label class="field">
+                            <span>Novo registro</span>
+                            <textarea name="texto" id="diarioTexto" maxlength="1200" placeholder="Como foi o seu dia? O que você sentiu? Aconteceu algo marcante?" required></textarea>
+                        </label>
+                        <div class="form-row">
+                            <span class="char-count" id="diarioContador">0/1200</span>
+                            <button class="btn btn-primary" type="submit">Salvar registro</button>
+                        </div>
+                    </form>
+
+                    <div class="list boxed" id="listaDiario" aria-live="polite"></div>
+                </div>
+
+                <aside class="side">
+                    <section class="side-box">
+                        <h3>Buscar</h3>
+                        <label class="search-box"><ion-icon name="search-outline"></ion-icon><input type="search" class="input" id="buscaDiario" placeholder="Palavra ou frase" aria-label="Buscar no diário"></label>
+                        <span class="count-pill" id="diarioTotal" hidden></span>
+                    </section>
+                    <section class="side-box">
+                        <h3>Resumo</h3>
+                        <dl class="summary-list" id="diarioResumo"></dl>
+                    </section>
+                    <section class="side-box">
+                        <h3>Privacidade</h3>
+                        <p class="side-note">O diário é visível para você e para o médico que acompanha você.</p>
+                    </section>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ALARMES -->
+        <section class="panel" data-section="alarmes" aria-labelledby="tituloAlarmes" hidden>
+            <div class="panel-head">
+                <div>
+                    <h1 id="tituloAlarmes">Alarmes</h1>
+                    <p class="muted">Lembretes de medicação e rotina. Tocam enquanto o MoodAlert estiver aberto.</p>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-primary" type="button" id="btnNovoAlarme"><ion-icon name="add"></ion-icon> Novo alarme</button>
+                </div>
+            </div>
+            <div class="notify-banner" id="bannerNotificacao" hidden>
+                <ion-icon name="notifications-outline"></ion-icon>
+                <p>Permita as notificações para receber o aviso mesmo com o MoodAlert em outra aba.</p>
+                <button type="button" class="btn btn-ghost btn-sm" id="btnPermitirNotificacao">Permitir notificações</button>
+            </div>
+            <div class="next-alarm" id="proximoAlarme" hidden></div>
+            <div class="list" id="listaAlarmes" aria-live="polite"></div>
+        </section>
+
+        <!-- ANOTAÇÕES -->
+        <section class="panel" data-section="anotacoes" aria-labelledby="tituloAnotacoes" hidden>
+            <div class="panel-head">
+                <div>
+                    <h1 id="tituloAnotacoes">Anotações médicas</h1>
+                    <p class="muted">Orientações que o seu médico compartilhou com você.</p>
+                </div>
+            </div>
+
+            <div class="layout-side">
+                <div class="list boxed" id="listaAnotacoes" aria-live="polite"></div>
+                <aside class="side">
+                    <section class="side-box">
+                        <h3>Seu médico</h3>
+                        <div id="cardMedico"></div>
+                    </section>
+                    <section class="side-box">
+                        <h3>Resumo</h3>
+                        <dl class="summary-list" id="notasResumo"></dl>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal: registrar dia -->
+    <div class="modal" id="modalDia" role="dialog" aria-modal="true" aria-labelledby="tituloDia" aria-hidden="true">
+        <div class="modal-content">
+            <button type="button" class="icon-btn modal-close" data-fechar aria-label="Fechar"><ion-icon name="close"></ion-icon></button>
+            <div class="modal-head">
+                <div class="modal-icon"><ion-icon name="happy-outline"></ion-icon></div>
+                <div>
+                    <h3 id="tituloDia">Dia</h3>
+                    <p>Como você se sentiu?</p>
+                </div>
+            </div>
+            <form class="form-stack" id="formDia" novalidate>
+                <div class="form-alert" data-alerta hidden><ion-icon name="alert-circle"></ion-icon><span></span></div>
+                <fieldset>
+                    <legend class="field-label">Emoção principal</legend>
+                    <div class="choice-group emotion-group" id="opcoesEmocao"></div>
+                </fieldset>
+                <fieldset class="intensity-group">
+                    <legend class="field-label">Intensidade</legend>
+                    <div class="choice-group">
+                        <label class="choice leve"><input type="radio" name="intensidade" value="leve"><span>Leve</span></label>
+                        <label class="choice neutro"><input type="radio" name="intensidade" value="neutro"><span>Neutro</span></label>
+                        <label class="choice elevada"><input type="radio" name="intensidade" value="elevada"><span>Elevada</span></label>
+                        <label class="choice critica"><input type="radio" name="intensidade" value="critica"><span>Crítica</span></label>
+                    </div>
+                </fieldset>
+                <label class="field">
+                    <span>Observações <span class="optional">(opcional)</span></span>
+                    <textarea name="observacoes" rows="3" maxlength="300" placeholder="Descreva gatilhos, conquistas ou o que marcou o dia"></textarea>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-danger" id="btnApagarDia" hidden><ion-icon name="trash-outline"></ion-icon> Apagar</button>
+                    <button type="button" class="btn btn-ghost" data-fechar>Cancelar</button>
+                    <button type="submit" class="btn btn-primary"><ion-icon name="save-outline"></ion-icon> Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: alarme -->
+    <div class="modal" id="modalAlarme" role="dialog" aria-modal="true" aria-labelledby="tituloAlarme" aria-hidden="true">
+        <div class="modal-content">
+            <button type="button" class="icon-btn modal-close" data-fechar aria-label="Fechar"><ion-icon name="close"></ion-icon></button>
+            <div class="modal-head">
+                <div class="modal-icon"><ion-icon name="alarm-outline"></ion-icon></div>
+                <div>
+                    <h3 id="tituloAlarme">Novo alarme</h3>
+                    <p>Configure um lembrete personalizado.</p>
+                </div>
+            </div>
+            <form class="form-stack" id="formAlarme" novalidate>
+                <div class="form-alert" data-alerta hidden><ion-icon name="alert-circle"></ion-icon><span></span></div>
+                <div class="form-grid">
+                    <label class="field">
+                        <span>Título do lembrete</span>
+                        <input type="text" name="nome" maxlength="60" placeholder="Ex.: Tomar medicação" required>
+                    </label>
+                    <label class="field">
+                        <span>Horário</span>
+                        <input type="time" name="horario" required>
+                    </label>
+                </div>
+                <fieldset>
+                    <legend class="field-label">Repetir nos dias</legend>
+                    <div class="quick-days">
+                        <button type="button" class="chip-btn" data-dias="1,2,3,4,5">Dias úteis</button>
+                        <button type="button" class="chip-btn" data-dias="0,6">Fins de semana</button>
+                        <button type="button" class="chip-btn" data-dias="0,1,2,3,4,5,6">Todos os dias</button>
+                    </div>
+                    <div class="days-picker">
+                        <label class="choice"><input type="checkbox" name="dias" value="0"><span>Dom</span></label>
+                        <label class="choice"><input type="checkbox" name="dias" value="1"><span>Seg</span></label>
+                        <label class="choice"><input type="checkbox" name="dias" value="2"><span>Ter</span></label>
+                        <label class="choice"><input type="checkbox" name="dias" value="3"><span>Qua</span></label>
+                        <label class="choice"><input type="checkbox" name="dias" value="4"><span>Qui</span></label>
+                        <label class="choice"><input type="checkbox" name="dias" value="5"><span>Sex</span></label>
+                        <label class="choice"><input type="checkbox" name="dias" value="6"><span>Sáb</span></label>
+                    </div>
+                </fieldset>
+                <label class="field">
+                    <span>Observações <span class="optional">(opcional)</span></span>
+                    <textarea name="observacoes" rows="3" maxlength="200" placeholder="Ex.: 1 comprimido com o café da manhã"></textarea>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" data-fechar>Cancelar</button>
+                    <button type="submit" class="btn btn-primary"><ion-icon name="save-outline"></ion-icon> Salvar alarme</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/seguranca.js"></script>
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/afetivograma.js"></script>
+    <script src="assets/js/perfil.js"></script>
+    <script src="assets/js/paciente.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
